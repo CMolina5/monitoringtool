@@ -1,0 +1,671 @@
+<!-----MODAL----->
+
+<!--FHE UPDATE MODAL-->
+<div class="modal fade" role="dialog" tabindex="-1" id="editprogramfhemodal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form method="POST" id="fhe_editprogram">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Program (FHE)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group"><label>Degree Program</label><input id="program_name" class="form-control degree-program-font" type="text" disabled=""></div>
+                    <hr>
+                    <div class="form-group"><label>Total FHE Beneficiaries</label></div>
+                    <div class="form-group"><label>1st Term</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name='total_fhe_1st_male' id='total_fhe_1st_male' class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name='total_fhe_1st_female' id='total_fhe_1st_female' class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <div class="form-group"><label>2nd Term</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name='total_fhe_2nd_male' id='total_fhe_2nd_male' class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name='total_fhe_2nd_female' id='total_fhe_2nd_female' class="form-control" type="number" min="0" min=0></div>
+                        </div>
+                    </div>
+
+                <?php
+                    if($ac_calendar=='Trimester' OR $ac_calendar=='Trimester with Summer'){
+                    echo"
+                    <div class='form-group'><label>3rd Term</label>
+                        <div class='form-row'>
+                            <div class='col-xl-6'><label>Male</label><input name='total_fhe_3rd_male' id='total_fhe_3rd_male' class='form-control' type='number'></div>
+                            <div class='col-xl-6'><label>Female</label><input name='total_fhe_3rd_female' id='total_fhe_3rd_female' class='form-control' type='number'></div>
+                        </div>
+                    </div>";
+                    }
+                    if($ac_calendar=='Semester with Summer' OR $ac_calendar=='Trimester with Summer'){
+                    echo"
+                    <div class='form-group'><label>Summer/Midyear</label>
+                        <div class='form-row'>
+                            <div class='col-xl-6'><label>Male</label><input name='total_fhe_summer_midyear_male' id='total_fhe_summer_midyear_male' class='form-control' type='number'></div>
+                            <div class='col-xl-6'><label>Female</label><input name='total_fhe_summer_midyear_female' id='total_fhe_summer_midyear_female' class='form-control' type='number'></div>
+                        </div>
+                    </div>";
+                    }
+                ?>
+
+                    <hr>
+                    <div class="form-group"><label>No. of FHE beneficiaries who graduated</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name='total_fhe_graduated_male' id='total_fhe_graduated_male' class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name='total_fhe_graduated_female' id='total_fhe_graduated_female' class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group"><label>No. of FHE beneficiaries who exceeded the maximum residency rule</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name='total_fhe_exceeded_mrr_male' id='total_fhe_exceeded_mrr_male' class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name='total_fhe_exceeded_mrr_female' id='total_fhe_exceeded_mrr_female' class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--EDIT TES PROGRAMS-->
+<div class="modal fade" role="dialog" tabindex="-1" id="editprogramtes">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Edit Program (TES)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group"><label>Degree Program</label><input class="form-control degree-program-font" type="text" disabled=""></div>
+                    <hr>
+                    <div class="form-group"><label>No. of TES Grantees who exceeded the maximum residency rule</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
+        </div>
+    </div>
+</div>
+
+<!--Add Program TES-->
+<div class="modal fade" role="dialog" tabindex="-1" id="add_program_tes_modal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div id="add_program_tes_modal_body" class="modal-content">
+            <form method="POST" id="add_program_tes_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Program (TES)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group"><label>Degree Program</label>
+                        <select name="tes_program_name" id="tes_program_name" class="form-control degree-program-font" required>
+                            <option selected disabled value="">--- Select Degree Program ---</option>
+                                <?php
+                                $sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tes_exceeded_mrr_male IS NULL OR total_tes_exceeded_mrr_female IS NULL)";
+                                $result = mysqli_query($conn, $sql);
+                                $resultCheck = mysqli_num_rows($result);
+
+                                if ($resultCheck > 0) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $uid = $row['uid'];
+                                        $program_name = $row['program_name'];
+                                        echo "<option value='$uid'>$program_name</option>";
+                                    }
+                                }
+                                ?>
+                        </select>
+                    </div>
+                    <hr>
+                    <div class="form-group"><label>No. of TES Grantees who exceeded the maximum residency rule</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name="total_tes_mrr_male" id="total_tes_mrr_male" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name="total_tes_mrr_female" id="total_tes_mrr_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Add TES Category-->
+<div class="modal fade" role="dialog" tabindex="-1" id="add_tes_category_modal">
+    <div class="modal-dialog" role="document">
+        <div id="add_tes_category_modal_body" class="modal-content">
+            <form method="POST" id="add_tes_category_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add TES Category</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group"><label>TES Category</label>
+                    <select id="tes_category" name="tes_category" class="form-control" required>
+                           
+                            <option selected disabled value="">--- Select TES Category ---</option>
+                                <?php
+                                $tes_category_array=array("ESGPPA", "4PS-SWDI", "LISTAHANAN", "PNSL");
+                                $tes_category= [];
+
+                                $sql = "SELECT * FROM tbl_tes_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
+                                $result = mysqli_query($conn, $sql);
+                                $resultCheck = mysqli_num_rows($result);
+
+                                if ($resultCheck > 0) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $tes_category[] = $row['tes_category'];
+                                    }
+                                    $tes_category_diff = array_diff($tes_category_array, $tes_category);
+                                    foreach($tes_category_diff as $value){
+                                        echo"
+                                        <option value=".$value.">".$value."</option>
+                                    >";
+                                    }
+                                    if(empty($tes_category_diff)){
+                                        echo"
+                                        <option selected disabled value=''>ALL CATEGORY HAS BEEN USED</option>
+                                    >";
+                                    }
+                                }else{
+                                    foreach($tes_category_array as $value){
+                                        echo"
+                                        <option value=".$value.">".$value."</option>
+                                    >";
+                                    }
+                                }
+                                
+                                ?>
+                            
+                        </select></div>
+                    <hr>
+                    <div class="form-group"><label>Total Grantees</label>
+                        <div class="form-row">
+                            <div class="col"><label>1st Semester</label><input id="total_tes_1st" name="total_tes_1st" class="form-control" type="number" min="0"></div>
+                            <div class="col"><label>2nd Semester</label><input id="total_tes_2nd" name="total_tes_2nd" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <div class="form-group"><label>Persons with Disability (PWDs)</label>
+                        <div class="form-row">
+                            <div class="col"><label>1st Semester</label><input id="total_pwd_1st" name="total_pwd_1st" class="form-control" type="number" min="0"></div>
+                            <div class="col"><label>2nd Semester</label><input id="total_pwd_2nd" name="total_pwd_2nd" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <div class="form-group"><label>Indigenous People (IP)</label>
+                        <div class="form-row">
+                            <div class="col"><label>1st Semester</label><input id="total_ip_1st" name="total_ip_1st" class="form-control" type="number" min="0"></div>
+                            <div class="col"><label>2nd Semester</label><input id="total_ip_2nd" name="total_ip_2nd" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <div class="form-group"><label>With Board Exams</label>
+                        <div class="form-row">
+                            <div class="col"><label>1st Semester</label><input id="total_with_board_1st" name="total_with_board_1st" class="form-control" type="number" min="0"></div>
+                            <div class="col"><label>2nd Semester</label><input id="total_with_board_2nd" name="total_with_board_2nd" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Edit TES Category-->
+<div class="modal fade" role="dialog" tabindex="-1" id="edit_tes_category_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id="edit_tes_category_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit TES Category</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group"><label>TES Category</label><input id="tes_category_1" name="tes_category_1" class="form-control" type="text" disabled=""></div>
+                    <hr>
+                    <div class="form-group"><label>Total Grantees</label>
+                        <div class="form-row">
+                            <div class="col"><label>1st Semester</label><input id="total_tes_1st_1" name="total_tes_1st_1" class="form-control" type="number" min="0"></div>
+                            <div class="col"><label>2nd Semester</label><input id="total_tes_2nd_1" name="total_tes_2nd_1" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <div class="form-group"><label>Persons with Disability (PWDs)</label>
+                        <div class="form-row">
+                            <div class="col"><label>1st Semester</label><input id="total_pwd_1st_1" name="total_pwd_1st_1" class="form-control" type="number" min="0"></div>
+                            <div class="col"><label>2nd Semester</label><input id="total_pwd_2nd_1" name="total_pwd_2nd_1" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <div class="form-group"><label>Indigenous People (IP)</label>
+                        <div class="form-row">
+                            <div class="col"><label>1st Semester</label><input id="total_ip_1st_1" name="total_ip_1st_1" class="form-control" type="number" min="0"></div>
+                            <div class="col"><label>2nd Semester</label><input id="total_ip_2nd_1" name="total_ip_2nd_1" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <div class="form-group"><label>With Board Exams</label>
+                        <div class="form-row">
+                            <div class="col"><label>1st Semester</label><input id="total_with_board_1st_1" name="total_with_board_1st_1" class="form-control" type="number" min="0"></div>
+                            <div class="col"><label>2nd Semester</label><input id="total_with_board_2nd_1" name="total_with_board_2nd_1" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Edit TES Program-->
+<div class="modal fade" role="dialog" tabindex="-1" id="edit_program_tes_modal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form method="POST" id="edit_program_tes_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Program (TES)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group"><label>Degree Program</label><input name="tes_program_name_1" id="tes_program_name_1" class="form-control degree-program-font" type="text" disabled=""></div>
+                    <hr>
+                    <div class="form-group"><label>No. of TES Grantees who exceeded the maximum residency rule</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name="total_tes_mrr_male_1" id="total_tes_mrr_male_1" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name="total_tes_mrr_female_1" id="total_tes_mrr_female_1" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Add Program TDP-->
+<div class="modal fade" role="dialog" tabindex="-1" id="add_program_tdp_modal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div id="add_program_tdp_modal_body" class="modal-content">
+        <form method="POST" id="add_program_tdp_form">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Program (TDP)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                    <div class="form-group"><label>Degree Program</label>
+                        <select name="tdp_program_name" id="tdp_program_name" class="form-control degree-program-font" required>
+                            <option selected disabled value="">--- Select Degree Program ---</option>
+                                <?php
+                                $sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_graduated_male IS NULL OR total_tdp_graduated_female IS NULL) AND (total_tdp_exceeded_mrr_male IS NULL OR total_tdp_exceeded_mrr_female IS NULL)";
+                                $result = mysqli_query($conn, $sql);
+                                $resultCheck = mysqli_num_rows($result);
+
+                                if ($resultCheck > 0) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $uid = $row['uid'];
+                                        $program_name = $row['program_name'];
+                                        echo "<option value='$uid'>$program_name</option>";
+                                    }
+                                }
+                                ?>
+                        </select>
+                    </div>
+                    <hr>
+                    <div class="form-group"><label>Total TDP Grantees</label></div>
+                    <div class="form-group"><label>1st Semester</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name="total_tdp_1st_male" id="total_tdp_1st_male" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name="total_tdp_1st_female" id="total_tdp_1st_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <div class="form-group"><label>2nd Semester</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name="total_tdp_2nd_male" id="total_tdp_2nd_male" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name="total_tdp_2nd_female" id="total_tdp_2nd_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group"><label>No. of TDP Grantees who graduated</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name="total_tdp_graduated_male" id="total_tdp_graduated_male" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name="total_tdp_graduated_female" id="total_tdp_graduated_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group"><label>No. of TDP Grantees who exceeded the maximum residency rule</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name="total_tdp_exceeded_mrr_male" id="total_tdp_exceeded_mrr_male" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name="total_tdp_exceeded_mrr_female" id="total_tdp_exceeded_mrr_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+            </div>
+            <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+        </form>
+        </div>
+    </div>
+</div>
+
+<!--Edit Program TDP-->
+<div class="modal fade" role="dialog" tabindex="-1" id="edit_program_tdp_modal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+        <form method="POST" id="edit_program_tdp_form">
+            <div class="modal-header">
+                <h4 class="modal-title">Edit Program (TDP)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                    <div class="form-group"><label>Degree Program</label><input name="tdp_program_name_1" id="tdp_program_name_1" class="form-control degree-program-font" type="text" disabled=""></div>
+                    <hr>
+                    <div class="form-group"><label>Total TDP Grantees</label></div>
+                    <div class="form-group"><label>1st Semester</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name="total_tdp_1st_male_1" id="total_tdp_1st_male_1" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name="total_tdp_1st_female_1" id="total_tdp_1st_female_1" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <div class="form-group"><label>2nd Semester</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name="total_tdp_2nd_male_1" id="total_tdp_2nd_male_1" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name="total_tdp_2nd_female_1" id="total_tdp_2nd_female_1" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group"><label>No. of TDP Grantees who graduated</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name="total_tdp_graduated_male_1" id="total_tdp_graduated_male_1" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name="total_tdp_graduated_female_1" id="total_tdp_graduated_female_1" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group"><label>No. of TDP Grantees who exceeded the maximum residency rule</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name="total_tdp_exceeded_mrr_male_1" id="total_tdp_exceeded_mrr_male_1" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name="total_tdp_exceeded_mrr_female_1" id="total_tdp_exceeded_mrr_female_1" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>    
+            </div>
+            <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Add FHE Dropouts-->
+<div class="modal fade" role="dialog" tabindex="-1" id="add_dropouts_fhe">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id='add_dropouts_fhe_form'>
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Reason for Dropouts (FHE)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group"><label>Reason for Dropping</label>
+                    <select id="fhe_drop_reason" name="fhe_drop_reason" class="form-control" required>    
+                        <option selected disabled value="">Select Reason for Dropping</option> 
+                        <option value="Academic Difficulty">Academic Difficulty</option>
+                        <option value="Employment/Looking for Work">Employment/Looking for Work</option>
+                        <option value="Financial Concerns">Financial Concerns</option>
+                        <option value="Pregnancy/Marriage/Family Issues">Pregnancy/Marriage/Family Issues</option>
+                        <option value="Health/Illness/Disability">Health/Illness/Disability</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    </div>
+                    <div class="form-group"><label>If other reason please specify:</label><input id="fhe_drop_other" name="fhe_drop_other" class="form-control" type="text"></div>
+                    <hr>
+                    <div class="form-group"><label>No. of Dropouts</label></div>
+                    <div class="form-group"><label>1st Term</label><input id="fhe_drop_1st" name="fhe_drop_1st" class="form-control" type="number" min="0"></div>
+                    <div class="form-group"><label>2nd Term</label><input id="fhe_drop_2nd" name="fhe_drop_2nd" class="form-control" type="number" min="0"></div>
+
+                    <?php
+                    if($ac_calendar=='Trimester' OR $ac_calendar=='Trimester with Summer'){
+                    echo"
+                    <div class='form-group'><label>3rd Term</label><input id='fhe_drop_3rd' name='fhe_drop_3rd' class='form-control' type='number'></div>";
+                    }
+                    
+                    if($ac_calendar=='Semester with Summer' OR $ac_calendar=='Trimester with Summer'){
+                    echo"
+                    <div class='form-group'><label>Summer/Midyear</label><input id='fhe_drop_summer_midyear' name='fhe_drop_summer_midyear' class='form-control' type='number'></div>";
+                    }
+                    ?>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light" type="button" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Edit FHE Dropouts-->
+<div class="modal fade" role="dialog" tabindex="-1" id="edit_dropouts_fhe_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id="edit_dropouts_fhe_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Reason for Dropouts (FHE)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group"><label>Reason for Dropping</label><input id="fhe_drop_reason_edit" name="fhe_drop_reason_edit" class="form-control" type="text" disabled=""></div>
+                    <hr>
+                    <div class="form-group"><label>No. of Dropouts</label></div>
+                    <div class="form-group"><label>1st Term</label><input id="fhe_drop_1st_edit" name="fhe_drop_1st_edit" class="form-control" type="number" min="0"></div>
+                    <div class="form-group"><label>2nd Term</label><input id="fhe_drop_2nd_edit" name="fhe_drop_2nd_edit" class="form-control" type="number" min="0"></div>
+                    <?php
+                    if($ac_calendar=='Trimester' OR $ac_calendar=='Trimester with Summer'){
+                    echo"
+                    <div class='form-group'><label>3rd Term</label><input id='fhe_drop_3rd_edit' name='fhe_drop_3rd_edit' class='form-control' type='number'></div>";
+                    }
+                    if($ac_calendar=='Semester with Summer' OR $ac_calendar=='Trimester with Summer'){
+                    echo"
+                    <div class='form-group'><label>Summer/Midyear</label><input id='fhe_drop_summer_midyear_edit' name='fhe_drop_summer_midyear_edit' class='form-control' type='number'></div>";
+                    }
+                    ?>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Add TES Dropouts-->
+<div class="modal fade" role="dialog" tabindex="-1" id="add_dropouts_tes_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id="add_dropouts_tes_form">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Reason for Dropouts (TES)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">                
+                    <div class="form-group"><label>Reason for Dropping</label>
+                    <select id="tes_drop_reason" name="tes_drop_reason" class="form-control" required>    
+                        <option selected disabled value="">Select Reason for Dropping</option> 
+                        <option value="Academic Difficulty">Academic Difficulty</option>
+                        <option value="Employment/Looking for Work">Employment/Looking for Work</option>
+                        <option value="Financial Concerns">Financial Concerns</option>
+                        <option value="Pregnancy/Marriage/Family Issues">Pregnancy/Marriage/Family Issues</option>
+                        <option value="Health/Illness/Disability">Health/Illness/Disability</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    </div>
+                    <div class="form-group"><label>If other reason please specify:</label><input id="tes_drop_other" name="tes_drop_other" class="form-control" type="text"></div>
+                    <hr>
+                    <div class="form-group"><label>No. of Dropouts</label></div>
+                    <div class="form-group"><label>1st Semester</label><input id="tes_drop_1st" name="tes_drop_1st" class="form-control" type="number" min="0"></div>
+                    <div class="form-group"><label>2nd Semester</label><input id="tes_drop_2nd" name="tes_drop_2nd" class="form-control" type="number" min="0"></div>                
+            </div>
+            <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Edit TES Dropouts-->
+<div class="modal fade" role="dialog" tabindex="-1" id="edit_dropouts_tes_modal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form method="POST" id="edit_dropouts_tes_form">
+            <div class="modal-header">
+                <h4 class="modal-title">Edit Reason for Dropouts (TES)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                    <div class="form-group"><label>Reason for Dropping</label><input id="tes_drop_reason_1" name="tes_drop_reason_1" class="form-control" type="text" disabled=""></div>
+                    <hr>
+                    <div class="form-group"><label>No. of Dropouts</label></div>
+                    <div class="form-group"><label>1st Semester</label><input id="tes_drop_1st_1" name="tes_drop_1st_1" class="form-control" type="number" min="0"></div>
+                    <div class="form-group"><label>2nd Semester</label><input id="tes_drop_2nd_1" name="tes_drop_2nd_1" class="form-control" type="number" min="0"></div>
+            </div>
+            <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Add TDP Dropouts-->
+<div class="modal fade" role="dialog" tabindex="-1" id="add_dropouts_tdp_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <form method="POST" id="add_dropouts_tdp_form">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Reason for Dropouts (TDP)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">           
+                    <div class="form-group"><label>Reason for Dropping</label>
+                    <select id="tdp_drop_reason" name="tdp_drop_reason" class="form-control">    
+                        <option selected disabled value="">Select Reason for Dropping</option> 
+                        <option value="Academic Difficulty">Academic Difficulty</option>
+                        <option value="Employment/Looking for Work">Employment/Looking for Work</option>
+                        <option value="Financial Concerns">Financial Concerns</option>
+                        <option value="Pregnancy/Marriage/Family Issues">Pregnancy/Marriage/Family Issues</option>
+                        <option value="Health/Illness/Disability">Health/Illness/Disability</option>
+                        <option value="Others">Others</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label>If other reason please specify:</label><input id="tdp_drop_other" name="tdp_drop_other" class="form-control" type="text"></div>
+                    <hr>
+                    <div class="form-group"><label>No. of Dropouts</label></div>
+                    <div class="form-group"><label>1st Semester</label><input id="tdp_drop_1st" name="tdp_drop_1st" class="form-control" type="number" min="0"></div>
+                    <div class="form-group"><label>2nd Semester</label><input id="tdp_drop_2nd" name="tdp_drop_2nd" class="form-control" type="number" min="0"></div>
+            </div>
+            <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Edit TDP Dropouts-->
+<div class="modal fade" role="dialog" tabindex="-1" id="edit_dropouts_tdp_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <form method="POST" id="edit_dropouts_tdp_form">
+            <div class="modal-header">
+                <h4 class="modal-title">Edit Reason for Dropouts (TDP)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">               
+                    <div class="form-group"><label>Reason for Dropping</label><input id="tdp_drop_reason_1" name="tdp_drop_reason_1" class="form-control" type="text" disabled=""></div>
+                    <hr>
+                    <div class="form-group"><label>No. of Dropouts</label></div>
+                    <div class="form-group"><label>1st Semester</label><input id="tdp_drop_1st_1" name="tdp_drop_1st_1" class="form-control" type="number" min="0"></div>
+                    <div class="form-group"><label>2nd Semester</label><input id="tdp_drop_2nd_1" name="tdp_drop_2nd_1" class="form-control" type="number" min="0"></div> 
+            </div>
+            <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Remove fhe dropouts modal-->
+<div role="dialog" tabindex="-1" class="modal fade show" id="remove_fhe_dropouts_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id="remove_fhe_dropouts_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Remove Data Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to remove this data?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-danger" type="submit">Confirm</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Remove tes category modal-->
+<div role="dialog" tabindex="-1" class="modal fade show" id="remove_tes_category_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id="remove_tes_category_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Remove Data Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to remove this data?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-danger" type="submit">Confirm</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Remove tes program modal-->
+<div role="dialog" tabindex="-1" class="modal fade show" id="remove_tes_program_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id="remove_tes_program_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Remove Data Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to remove this data?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-danger" type="submit">Confirm</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Remove tes dropouts modal-->
+<div role="dialog" tabindex="-1" class="modal fade show" id="remove_tes_dropouts_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id="remove_tes_dropouts_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Remove Data Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to remove this data?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-danger" type="submit">Confirm</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Remove tdp program modal-->
+<div role="dialog" tabindex="-1" class="modal fade show" id="remove_tdp_program_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id="remove_tdp_program_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Remove Data Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to remove this data?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-danger" type="submit">Confirm</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Remove tdp dropouts modal-->
+<div role="dialog" tabindex="-1" class="modal fade show" id="remove_tdp_dropouts_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id="remove_tdp_dropouts_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Remove Data Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to remove this data?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-danger" type="submit">Confirm</button></div>
+            </form>
+        </div>
+    </div>
+</div>
