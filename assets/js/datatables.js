@@ -9,7 +9,7 @@ $(document).ready(function () {
     $('#tbl_other_stufaps').DataTable({
         "order": [[0, "desc"]],
         orderCellsTop: true,
-        fixedHeader: true
+        fixedHeader: true,
     });
 
     //tbl_list_of_forms
@@ -22,6 +22,8 @@ $(document).ready(function () {
     //tbl_list_programs_fhe
     $('#tbl_programs_fhe').DataTable({
         "order": [[0, "desc"]],
+        "lengthChange": false,
+        "pageLength": 5,
         orderCellsTop: true,
         fixedHeader: true
     });
