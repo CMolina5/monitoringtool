@@ -95,4 +95,26 @@ $(document).ready(function () {
         });
     });
 
+      //add new other stufap info
+      $('#addstufap').on('submit', function (event) {
+        event.preventDefault();
+        $.ajax({
+            url: "includes/heiprofile/inc_add_other_stufap.php",
+            method: "POST",
+            data: $('#add_other_stufap').serialize(),
+            success: function (data) {
+                
+                $('#tbl_stufaps').html(data);
+                $('#add_other_stufap')[0].reset();
+                $('#addstufap').modal('hide');
+
+                $('#tbl_other_stufaps').DataTable({
+                    "order": [[0, "desc"]],
+                    orderCellsTop: true,
+                    fixedHeader: true
+                });            
+            }
+        });
+    });
+
 });//end tag

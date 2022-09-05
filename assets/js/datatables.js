@@ -6,6 +6,12 @@ $(document).ready(function () {
         fixedHeader: true
     });
 
+    $('#tbl_other_stufaps').DataTable({
+        "order": [[0, "desc"]],
+        orderCellsTop: true,
+        fixedHeader: true
+    });
+
     //tbl_list_of_forms
     $('#tbl_list_of_forms').DataTable({
         "order": [[0, "desc"]],

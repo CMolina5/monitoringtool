@@ -184,6 +184,7 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
             </div>
             <div class="card card-style">
+                <div class="form-group"><label class="label-parts">I.B PROGRAM ADMINISTRATION</label></div>
                 <div class="form-group"><label>Name of the Head of HEI</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user icons-input"></i></span></div><input name="hei_head_name" class="form-control" type="text" placeholder="Firstname   Middlename   Lastname" value="<?php echo $hei_head_name ?>" required="">
@@ -337,7 +338,7 @@ include 'includes/heiprofile/inc_template.php'
             
             ?>
             <div class="card card-style">
-                <div class="form-group"><label class="label-parts">I.B DEMOGRAPHIC INFORMATION</label></div>
+                <div class="form-group"><label class="label-parts">I.C DEMOGRAPHIC INFORMATION</label></div>
                 <div class="form-group"><label>Enrollment Period</label>
                     <div id='enrollment_date' class="form-row">
                     <?php
@@ -1053,12 +1054,24 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
             </div>
             <div class="card card-style">
-                <div class="form-group"><label class="label-parts">I.C PROGRAM OFFERINGS</label><label style="font-style: italic;">Please list all bachelor's degree programs offered for the Academic Year. Indicate the Government Recognition and Certificate of Program Compliance Nos. for each program.</label>
+                <div class="form-group"><label class="label-parts">I.D PROGRAM OFFERINGS</label><label style="font-style: italic;">Please list all bachelor's degree programs offered for the Academic Year. Indicate the Government Recognition and Certificate of Program Compliance Nos. for each program.</label>
                     <p class="text-right"><button class="btn btn-success" data-toggle="modal" id="btn-add-program" type="button" data-target="#addprogram">ADD PROGRAM</button></p>
                     <div id="tbl_programs" class="table table-responsive tbl-style">
                         
                                 <?php
                                 include 'includes/heiprofile/inc_degree_programs.php';
+                                ?>
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="card card-style">
+                <div class="form-group"><label class="label-parts">I.E OTHER LOCALLY-AND-NATIONALLY-FUNDED STUFAPS</label><label style="font-style: italic;">List of all locally-and-nationally-funded StuFAPs availed in the institution, and number of beneficiaries per year level</label>
+                    <p class="text-right"><button class="btn btn-success" data-toggle="modal" id="btn-add-stufap" type="button" data-target="#addstufap">ADD STUFAP</button></p>
+                    <div id="tbl_stufaps" class="table table-responsive tbl-style">
+                        
+                                <?php
+                                include 'includes/heiprofile/inc_other_stufaps.php';
                                 ?>
                             
                     </div>

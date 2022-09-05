@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 include_once 'includes/db_connection.php';
 ?>
@@ -216,9 +217,9 @@ include_once 'includes/db_connection.php';
         <div class="modal-content">
             <form method="POST" id="removeform_modal_form">
                 <div class="modal-header">
-                    <h4 class="modal-title">Remove Program Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <h4 class="modal-title">Delete Form Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
                 <div class="modal-body">
-                    <p>Are you sure you want to remove this Form?</p>
+                    <p>Are you sure you want to delete this Form?</p>
                 </div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-danger" type="submit">Confirm</button></div>
             </form>
