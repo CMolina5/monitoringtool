@@ -119,14 +119,62 @@ if ($resultCheck > 0) {
         $copc_no = $row['copc_no'];
         $in_the_portal = $row['in_the_portal'];
 
-        $total_fhe_1st_male = $row['total_fhe_1st_male'];
-        $total_fhe_1st_female = $row['total_fhe_1st_female'];
-        $total_fhe_2nd_male = $row['total_fhe_2nd_male'];
-        $total_fhe_2nd_female = $row['total_fhe_2nd_female'];
-        $total_fhe_3rd_male = $row['total_fhe_3rd_male'];
-        $total_fhe_3rd_female = $row['total_fhe_3rd_female'];
-        $total_fhe_summer_midyear_male = $row['total_fhe_summer_midyear_male'];
-        $total_fhe_summer_midyear_female = $row['total_fhe_summer_midyear_female'];
+        //1st Sem
+        $total_fhe_1sem_1yr_male = $row['total_fhe_1sem_1yr_male'];
+        $total_fhe_1sem_1yr_female = $row['total_fhe_1sem_1yr_female'];
+        $total_fhe_1sem_2yr_male = $row['total_fhe_1sem_2yr_male'];
+        $total_fhe_1sem_2yr_female = $row['total_fhe_1sem_2yr_female'];
+        $total_fhe_1sem_3yr_male = $row['total_fhe_1sem_3yr_male'];
+        $total_fhe_1sem_3yr_female = $row['total_fhe_1sem_3yr_female'];
+        $total_fhe_1sem_4yr_male = $row['total_fhe_1sem_4yr_male'];
+        $total_fhe_1sem_4yr_female = $row['total_fhe_1sem_4yr_female'];
+        $total_fhe_1sem_5yr_male = $row['total_fhe_1sem_5yr_male'];
+        $total_fhe_1sem_5yr_female = $row['total_fhe_1sem_5yr_female'];
+        $total_fhe_1sem_6yr_male = $row['total_fhe_1sem_6yr_male'];
+        $total_fhe_1sem_6yr_female = $row['total_fhe_1sem_6yr_female'];
+        
+        //2nd Sem
+        $total_fhe_2sem_1yr_male = $row['total_fhe_2sem_1yr_male'];
+        $total_fhe_2sem_1yr_female = $row['total_fhe_2sem_1yr_female'];
+        $total_fhe_2sem_2yr_male = $row['total_fhe_2sem_2yr_male'];
+        $total_fhe_2sem_2yr_female = $row['total_fhe_2sem_2yr_female'];
+        $total_fhe_2sem_3yr_male = $row['total_fhe_2sem_3yr_male'];
+        $total_fhe_2sem_3yr_female = $row['total_fhe_2sem_3yr_female'];
+        $total_fhe_2sem_4yr_male = $row['total_fhe_2sem_4yr_male'];
+        $total_fhe_2sem_4yr_female = $row['total_fhe_2sem_4yr_female'];
+        $total_fhe_2sem_5yr_male = $row['total_fhe_2sem_5yr_male'];
+        $total_fhe_2sem_5yr_female = $row['total_fhe_2sem_5yr_female'];
+        $total_fhe_2sem_6yr_male = $row['total_fhe_2sem_6yr_male'];
+        $total_fhe_2sem_6yr_female = $row['total_fhe_2sem_6yr_female'];
+
+        //3rd Sem
+        $total_fhe_3sem_1yr_male = $row['total_fhe_3sem_1yr_male'];
+        $total_fhe_3sem_1yr_female = $row['total_fhe_3sem_1yr_female'];
+        $total_fhe_3sem_2yr_male = $row['total_fhe_3sem_2yr_male'];
+        $total_fhe_3sem_2yr_female = $row['total_fhe_3sem_2yr_female'];
+        $total_fhe_3sem_3yr_male = $row['total_fhe_3sem_3yr_male'];
+        $total_fhe_3sem_3yr_female = $row['total_fhe_3sem_3yr_female'];
+        $total_fhe_3sem_4yr_male = $row['total_fhe_3sem_4yr_male'];
+        $total_fhe_3sem_4yr_female = $row['total_fhe_3sem_4yr_female'];
+        $total_fhe_3sem_5yr_male = $row['total_fhe_3sem_5yr_male'];
+        $total_fhe_3sem_5yr_female = $row['total_fhe_3sem_5yr_female'];
+        $total_fhe_3sem_6yr_male = $row['total_fhe_3sem_6yr_male'];
+        $total_fhe_3sem_6yr_female = $row['total_fhe_3sem_6yr_female'];
+
+        //Summer Midyear Sem
+        $total_fhe_sum_mid_1yr_male = $row['total_fhe_sum_mid_1yr_male'];
+        $total_fhe_sum_mid_1yr_female = $row['total_fhe_sum_mid_1yr_female'];
+        $total_fhe_sum_mid_2yr_male = $row['total_fhe_sum_mid_2yr_male'];
+        $total_fhe_sum_mid_2yr_female = $row['total_fhe_sum_mid_2yr_female'];
+        $total_fhe_sum_mid_3yr_male = $row['total_fhe_sum_mid_3yr_male'];
+        $total_fhe_sum_mid_3yr_female = $row['total_fhe_sum_mid_3yr_female'];
+        $total_fhe_sum_mid_4yr_male = $row['total_fhe_sum_mid_4yr_male'];
+        $total_fhe_sum_mid_4yr_female = $row['total_fhe_sum_mid_4yr_female'];
+        $total_fhe_sum_mid_5yr_male = $row['total_fhe_sum_mid_5yr_male'];
+        $total_fhe_sum_mid_5yr_female = $row['total_fhe_sum_mid_5yr_female'];
+        $total_fhe_sum_mid_6yr_male = $row['total_fhe_sum_mid_6yr_male'];
+        $total_fhe_sum_mid_6yr_female = $row['total_fhe_sum_mid_6yr_female'];
+
         $total_fhe_graduated_male = $row['total_fhe_graduated_male'];
         $total_fhe_graduated_female = $row['total_fhe_graduated_female'];
         $total_fhe_exceeded_mrr_male = $row['total_fhe_exceeded_mrr_male'];
@@ -136,57 +184,57 @@ if ($resultCheck > 0) {
         <td class='text-left'>$program_name</td>
         <td class='text-center'><button class='btn btn-info edit_data_fhe' data-bs-tooltip='' type='button' title='Edit' name='edit' value='edit' id='$uid'><i class='far fa-edit'></i></button></td>
         
-        <td class='text-center'>$total_fhe_1st_male</td>
-        <td class='text-center'>$total_fhe_1st_female</td>
-        <td class='text-center'>$total_fhe_1st_male</td>
-        <td class='text-center'>$total_fhe_1st_female</td>
-        <td class='text-center'>$total_fhe_2nd_male</td>
-        <td class='text-center'>$total_fhe_2nd_female</td>
-        <td class='text-center'>$total_fhe_3rd_male</td>
-        <td class='text-center'>$total_fhe_3rd_female</td>
-        <td class='text-center'>$total_fhe_summer_midyear_male</td>
-        <td class='text-center'>$total_fhe_summer_midyear_female</td>
-        <td class='text-center'>$total_fhe_summer_midyear_male</td>
-        <td class='text-center'>$total_fhe_summer_midyear_female</td>
+        <td class='text-center'>$total_fhe_1sem_1yr_male</td>
+        <td class='text-center'>$total_fhe_1sem_1yr_female</td>
+        <td class='text-center'>$total_fhe_1sem_2yr_male</td>
+        <td class='text-center'>$total_fhe_1sem_2yr_female</td>
+        <td class='text-center'>$total_fhe_1sem_3yr_male</td>
+        <td class='text-center'>$total_fhe_1sem_3yr_female</td>
+        <td class='text-center'>$total_fhe_1sem_4yr_male</td>
+        <td class='text-center'>$total_fhe_1sem_4yr_female</td>
+        <td class='text-center'>$total_fhe_1sem_5yr_male</td>
+        <td class='text-center'>$total_fhe_1sem_5yr_female</td>
+        <td class='text-center'>$total_fhe_1sem_6yr_male</td>
+        <td class='text-center'>$total_fhe_1sem_6yr_female</td>
+       
+        <td class='text-center'>$total_fhe_2sem_1yr_male</td>
+        <td class='text-center'>$total_fhe_2sem_1yr_female</td>
+        <td class='text-center'>$total_fhe_2sem_2yr_male</td>
+        <td class='text-center'>$total_fhe_2sem_2yr_female</td>
+        <td class='text-center'>$total_fhe_2sem_3yr_male</td>
+        <td class='text-center'>$total_fhe_2sem_3yr_female</td>
+        <td class='text-center'>$total_fhe_2sem_4yr_male</td>
+        <td class='text-center'>$total_fhe_2sem_4yr_female</td>
+        <td class='text-center'>$total_fhe_2sem_5yr_male</td>
+        <td class='text-center'>$total_fhe_2sem_5yr_female</td>
+        <td class='text-center'>$total_fhe_2sem_6yr_male</td>
+        <td class='text-center'>$total_fhe_2sem_6yr_female</td>
 
-        <td class='text-center'>$total_fhe_1st_male</td>
-        <td class='text-center'>$total_fhe_1st_female</td>
-        <td class='text-center'>$total_fhe_1st_male</td>
-        <td class='text-center'>$total_fhe_1st_female</td>
-        <td class='text-center'>$total_fhe_2nd_male</td>
-        <td class='text-center'>$total_fhe_2nd_female</td>
-        <td class='text-center'>$total_fhe_3rd_male</td>
-        <td class='text-center'>$total_fhe_3rd_female</td>
-        <td class='text-center'>$total_fhe_summer_midyear_male</td>
-        <td class='text-center'>$total_fhe_summer_midyear_female</td>
-        <td class='text-center'>$total_fhe_summer_midyear_male</td>
-        <td class='text-center'>$total_fhe_summer_midyear_female</td>
+        <td class='text-center'>$total_fhe_3sem_1yr_male</td>
+        <td class='text-center'>$total_fhe_3sem_1yr_female</td>
+        <td class='text-center'>$total_fhe_3sem_2yr_male</td>
+        <td class='text-center'>$total_fhe_3sem_2yr_female</td>
+        <td class='text-center'>$total_fhe_3sem_3yr_male</td>
+        <td class='text-center'>$total_fhe_3sem_3yr_female</td>
+        <td class='text-center'>$total_fhe_3sem_4yr_male</td>
+        <td class='text-center'>$total_fhe_3sem_4yr_female</td>
+        <td class='text-center'>$total_fhe_3sem_5yr_male</td>
+        <td class='text-center'>$total_fhe_3sem_5yr_female</td>
+        <td class='text-center'>$total_fhe_3sem_6yr_male</td>
+        <td class='text-center'>$total_fhe_3sem_6yr_female</td>
 
-        <td class='text-center'>$total_fhe_1st_male</td>
-        <td class='text-center'>$total_fhe_1st_female</td>
-        <td class='text-center'>$total_fhe_1st_male</td>
-        <td class='text-center'>$total_fhe_1st_female</td>
-        <td class='text-center'>$total_fhe_2nd_male</td>
-        <td class='text-center'>$total_fhe_2nd_female</td>
-        <td class='text-center'>$total_fhe_3rd_male</td>
-        <td class='text-center'>$total_fhe_3rd_female</td>
-        <td class='text-center'>$total_fhe_summer_midyear_male</td>
-        <td class='text-center'>$total_fhe_summer_midyear_female</td>
-        <td class='text-center'>$total_fhe_summer_midyear_male</td>
-        <td class='text-center'>$total_fhe_summer_midyear_female</td>
-
-        <td class='text-center'>$total_fhe_1st_male</td>
-        <td class='text-center'>$total_fhe_1st_female</td>
-        <td class='text-center'>$total_fhe_1st_male</td>
-        <td class='text-center'>$total_fhe_1st_female</td>
-        <td class='text-center'>$total_fhe_2nd_male</td>
-        <td class='text-center'>$total_fhe_2nd_female</td>
-        <td class='text-center'>$total_fhe_3rd_male</td>
-        <td class='text-center'>$total_fhe_3rd_female</td>
-        <td class='text-center'>$total_fhe_summer_midyear_male</td>
-        <td class='text-center'>$total_fhe_summer_midyear_female</td>
-        <td class='text-center'>$total_fhe_summer_midyear_male</td>
-        <td class='text-center'>$total_fhe_summer_midyear_female</td>
+        <td class='text-center'>$total_fhe_sum_mid_1yr_male</td>
+        <td class='text-center'>$total_fhe_sum_mid_1yr_female</td>
+        <td class='text-center'>$total_fhe_sum_mid_2yr_male</td>
+        <td class='text-center'>$total_fhe_sum_mid_2yr_female</td>
+        <td class='text-center'>$total_fhe_sum_mid_3yr_male</td>
+        <td class='text-center'>$total_fhe_sum_mid_3yr_female</td>
+        <td class='text-center'>$total_fhe_sum_mid_4yr_male</td>
+        <td class='text-center'>$total_fhe_sum_mid_4yr_female</td>
+        <td class='text-center'>$total_fhe_sum_mid_5yr_male</td>
+        <td class='text-center'>$total_fhe_sum_mid_5yr_female</td>
+        <td class='text-center'>$total_fhe_sum_mid_6yr_male</td>
+        <td class='text-center'>$total_fhe_sum_mid_6yr_female</td>
 
         <td class='text-center'>$total_fhe_graduated_male</td>
         <td class='text-center'>$total_fhe_graduated_female</td>

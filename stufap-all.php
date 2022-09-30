@@ -298,6 +298,7 @@ include 'includes/stufap/inc_template.php';
                     echo"</div>
                 </div>
             </div>
+            
             <div id='fhe_dropouts_div' class='card card-style-table fhe_dropouts_div' style='display : none'>
                 <div class='form-group'>
                 <label>No. of FHE Beneficiaries Who Dropped</label><label style='font-style: italic;'>Determine the no. of dropouts per semester/term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label>

@@ -11,14 +11,63 @@ $(document).ready(function () {
             dataType: "json",
             success: function (data) {
                 $('#program_name').val(data.program_name);
-                $('#total_fhe_1st_male').val(data.total_fhe_1st_male);
-                $('#total_fhe_1st_female').val(data.total_fhe_1st_female);
-                $('#total_fhe_2nd_male').val(data.total_fhe_2nd_male);
-                $('#total_fhe_2nd_female').val(data.total_fhe_2nd_female);
-                $('#total_fhe_3rd_male').val(data.total_fhe_3rd_male);
-                $('#total_fhe_3rd_female').val(data.total_fhe_3rd_female);
-                $('#total_fhe_summer_midyear_male').val(data.total_fhe_summer_midyear_male);
-                $('#total_fhe_summer_midyear_female').val(data.total_fhe_summer_midyear_female);
+
+                //1st Semester
+                $('#total_fhe_1sem_1yr_male').val(data.total_fhe_1sem_1yr_male);
+                $('#total_fhe_1sem_1yr_female').val(data.total_fhe_1sem_1yr_female);
+                $('#total_fhe_1sem_2yr_male').val(data.total_fhe_1sem_2yr_male);
+                $('#total_fhe_1sem_2yr_female').val(data.total_fhe_1sem_2yr_female);
+                $('#total_fhe_1sem_3yr_male').val(data.total_fhe_1sem_3yr_male);
+                $('#total_fhe_1sem_3yr_female').val(data.total_fhe_1sem_3yr_female);
+                $('#total_fhe_1sem_4yr_male').val(data.total_fhe_1sem_4yr_male);
+                $('#total_fhe_1sem_4yr_female').val(data.total_fhe_1sem_4yr_female);
+                $('#total_fhe_1sem_5yr_male').val(data.total_fhe_1sem_5yr_male);
+                $('#total_fhe_1sem_5yr_female').val(data.total_fhe_1sem_5yr_female);
+                $('#total_fhe_1sem_6yr_male').val(data.total_fhe_1sem_6yr_male);
+                $('#total_fhe_1sem_6yr_female').val(data.total_fhe_1sem_6yr_female);
+               
+                //2nd Semester
+                $('#total_fhe_2sem_1yr_male').val(data.total_fhe_2sem_1yr_male);
+                $('#total_fhe_2sem_1yr_female').val(data.total_fhe_2sem_1yr_female);
+                $('#total_fhe_2sem_2yr_male').val(data.total_fhe_2sem_2yr_male);
+                $('#total_fhe_2sem_2yr_female').val(data.total_fhe_2sem_2yr_female);
+                $('#total_fhe_2sem_3yr_male').val(data.total_fhe_2sem_3yr_male);
+                $('#total_fhe_2sem_3yr_female').val(data.total_fhe_2sem_3yr_female);
+                $('#total_fhe_2sem_4yr_male').val(data.total_fhe_2sem_4yr_male);
+                $('#total_fhe_2sem_4yr_female').val(data.total_fhe_2sem_4yr_female);
+                $('#total_fhe_2sem_5yr_male').val(data.total_fhe_2sem_5yr_male);
+                $('#total_fhe_2sem_5yr_female').val(data.total_fhe_2sem_5yr_female);
+                $('#total_fhe_2sem_6yr_male').val(data.total_fhe_2sem_6yr_male);
+                $('#total_fhe_2sem_6yr_female').val(data.total_fhe_2sem_6yr_female);
+
+                //3rd Semester
+                $('#total_fhe_3sem_1yr_male').val(data.total_fhe_3sem_1yr_male);
+                $('#total_fhe_3sem_1yr_female').val(data.total_fhe_3sem_1yr_female);
+                $('#total_fhe_3sem_2yr_male').val(data.total_fhe_3sem_2yr_male);
+                $('#total_fhe_3sem_2yr_female').val(data.total_fhe_3sem_2yr_female);
+                $('#total_fhe_3sem_3yr_male').val(data.total_fhe_3sem_3yr_male);
+                $('#total_fhe_3sem_3yr_female').val(data.total_fhe_3sem_3yr_female);
+                $('#total_fhe_3sem_4yr_male').val(data.total_fhe_3sem_4yr_male);
+                $('#total_fhe_3sem_4yr_female').val(data.total_fhe_3sem_4yr_female);
+                $('#total_fhe_3sem_5yr_male').val(data.total_fhe_3sem_5yr_male);
+                $('#total_fhe_3sem_5yr_female').val(data.total_fhe_3sem_5yr_female);
+                $('#total_fhe_3sem_6yr_male').val(data.total_fhe_3sem_6yr_male);
+                $('#total_fhe_3sem_6yr_female').val(data.total_fhe_3sem_6yr_female);
+
+                //Summer Midyear Semester
+                $('#total_fhe_sum_mid_1yr_male').val(data.total_fhe_sum_mid_1yr_male);
+                $('#total_fhe_sum_mid_1yr_female').val(data.total_fhe_sum_mid_1yr_female);
+                $('#total_fhe_sum_mid_2yr_male').val(data.total_fhe_sum_mid_2yr_male);
+                $('#total_fhe_sum_mid_2yr_female').val(data.total_fhe_sum_mid_2yr_female);
+                $('#total_fhe_sum_mid_3yr_male').val(data.total_fhe_sum_mid_3yr_male);
+                $('#total_fhe_sum_mid_3yr_female').val(data.total_fhe_sum_mid_3yr_female);
+                $('#total_fhe_sum_mid_4yr_male').val(data.total_fhe_sum_mid_4yr_male);
+                $('#total_fhe_sum_mid_4yr_female').val(data.total_fhe_sum_mid_4yr_female);
+                $('#total_fhe_sum_mid_5yr_male').val(data.total_fhe_sum_mid_5yr_male);
+                $('#total_fhe_sum_mid_5yr_female').val(data.total_fhe_sum_mid_5yr_female);
+                $('#total_fhe_sum_mid_6yr_male').val(data.total_fhe_sum_mid_6yr_male);
+                $('#total_fhe_sum_mid_6yr_female').val(data.total_fhe_sum_mid_6yr_female);
+
                 $('#total_fhe_graduated_male').val(data.total_fhe_graduated_male);
                 $('#total_fhe_graduated_female').val(data.total_fhe_graduated_female);
                 $('#total_fhe_exceeded_mrr_male').val(data.total_fhe_exceeded_mrr_male);
@@ -42,6 +91,8 @@ $(document).ready(function () {
 
                 $('#tbl_programs_fhe').DataTable({
                     "order": [[0, "desc"]],
+                    "lengthChange": false,
+                    "pageLength": 5,
                     orderCellsTop: true,
                     fixedHeader: true
                 })

@@ -19,5 +19,5 @@ if (!$result) {
     echo mysqli_error($conn);
     die();
 } else {
-    include "./inc_stufaps.php";
+    include "./inc_other_stufaps.php";
 }
