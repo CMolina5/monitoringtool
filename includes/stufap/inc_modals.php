@@ -850,6 +850,13 @@
                             <div class="col-xl-6"><label>Female</label><input name="total_tes_mrr_female" id="total_tes_mrr_female" class="form-control" type="number" min="0"></div>
                         </div>
                     </div>
+
+                    <div class="form-group"><label>Estimated No. of Graduating Students</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name="total_tes_est_grad_male" id="total_tes_est_grad_male" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name="total_tes_est_grad_female" id="total_tes_est_grad_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
             </form>
@@ -907,27 +914,121 @@
                     </div>
                     <hr>
                     <div class="form-group"><label>Total Grantees</label>
+                        <div class="form-group"><label>1st Term</label>
                         <div class="form-row">
-                            <div class="col"><label>1st Semester</label><input id="total_tes_1st" name="total_tes_1st" class="form-control" type="number" min="0"></div>
-                            <div class="col"><label>2nd Semester</label><input id="total_tes_2nd" name="total_tes_2nd" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_tes_1st_male" name="total_tes_1st_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_tes_1st_female" name="total_tes_1st_female" class="form-control" type="number" min="0"></div>
                         </div>
+                        </div>
+                        <div class="form-group"><label>2nd Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_tes_2nd_male" name="total_tes_2nd_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_tes_2nd_female" name="total_tes_2nd_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>3rd Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_tes_3rd_male" name="total_tes_3rd_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_tes_3rd_female" name="total_tes_3rd_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>Summer/Midyear</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_tes_summer_midyear_male" name="total_tes_summer_midyear_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_tes_summer_midyear_female" name="total_tes_summer_midyear_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+                        
                     </div>
                     <div class="form-group"><label>Persons with Disability (PWDs)</label>
+                        <div class="form-group"><label>1st Term</label>
                         <div class="form-row">
-                            <div class="col"><label>1st Semester</label><input id="total_pwd_1st" name="total_pwd_1st" class="form-control" type="number" min="0"></div>
-                            <div class="col"><label>2nd Semester</label><input id="total_pwd_2nd" name="total_pwd_2nd" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_pwd_1st_male" name="total_pwd_1st_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_pwd_1st_female" name="total_pwd_1st_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>2nd Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_pwd_2nd_male" name="total_pwd_2nd_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_pwd_2nd_female" name="total_pwd_2nd_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>3rd Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_pwd_3rd_male" name="total_pwd_3rd_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_pwd_3rd_female" name="total_pwd_3rd_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>Summer/Midyear</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_pwd_summer_midyear_male" name="total_pwd_summer_midyear_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_pwd_summer_midyear_female" name="total_pwd_summer_midyear_female" class="form-control" type="number" min="0"></div>
+                        </div>
                         </div>
                     </div>
                     <div class="form-group"><label>Indigenous People (IP)</label>
+
+                        <div class="form-group"><label>1st Term</label>
                         <div class="form-row">
-                            <div class="col"><label>1st Semester</label><input id="total_ip_1st" name="total_ip_1st" class="form-control" type="number" min="0"></div>
-                            <div class="col"><label>2nd Semester</label><input id="total_ip_2nd" name="total_ip_2nd" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_ip_1st_male" name="total_ip_1st_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_ip_1st_female" name="total_ip_1st_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>2nd Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_ip_2nd_male" name="total_ip_2nd_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_ip_2nd_female" name="total_ip_2nd_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>3rd Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_ip_3rd_male" name="total_ip_3rd_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_ip_3rd_female" name="total_ip_3rd_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>Summer/Midyear</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_ip_summer_midyear_male" name="total_ip_summer_midyear_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_ip_summer_midyear_female" name="total_ip_summer_midyear_female" class="form-control" type="number" min="0"></div>
+                        </div>
                         </div>
                     </div>
                     <div class="form-group"><label>With Board Exams</label>
+
+                        <div class="form-group"><label>1st Term</label>
                         <div class="form-row">
-                            <div class="col"><label>1st Semester</label><input id="total_with_board_1st" name="total_with_board_1st" class="form-control" type="number" min="0"></div>
-                            <div class="col"><label>2nd Semester</label><input id="total_with_board_2nd" name="total_with_board_2nd" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_with_board_1st_male" name="total_with_board_1st_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_with_board_1st_female" name="total_with_board_1st_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>2nd Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_with_board_2nd_male" name="total_with_board_2nd_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_with_board_2nd_female" name="total_with_board_2nd_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>3rd Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_with_board_3rd_male" name="total_with_board_3rd_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_with_board_3rd_female" name="total_with_board_3rd_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>Summer/Midyear</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_with_board_summer_midyear_male" name="total_with_board_summer_midyear_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_with_board_summer_midyear_female" name="total_with_board_summer_midyear_female" class="form-control" type="number" min="0"></div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -996,6 +1097,13 @@
                             <div class="col-xl-6"><label>Female</label><input name="total_tes_mrr_female_1" id="total_tes_mrr_female_1" class="form-control" type="number" min="0"></div>
                         </div>
                     </div>
+
+                    <div class="form-group"><label>Estimated No. of Graduating Students</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><label>Male</label><input name="total_tes_est_grad_male_1" id="total_tes_est_grad_male_1" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><label>Female</label><input name="total_tes_est_grad_female_1" id="total_tes_est_grad_female_1" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
             </form>
@@ -1032,18 +1140,50 @@
                     </div>
                     <hr>
                     <div class="form-group"><label>Total TDP Grantees</label></div>
-                    <div class="form-group"><label>1st Semester</label>
+                    <div class="form-group"><label>1st Term</label>
+                    <div class="form-group"><label>1st Year</label>
                         <div class="form-row">
-                            <div class="col-xl-6"><label>Male</label><input name="total_tdp_1st_male" id="total_tdp_1st_male" class="form-control" type="number" min="0"></div>
-                            <div class="col-xl-6"><label>Female</label><input name="total_tdp_1st_female" id="total_tdp_1st_female" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><input name="total_tdp_1sem_1yr_male" id="total_tdp_1sem_1yr_male" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><input name="total_tdp_1sem_1yr_female" id="total_tdp_1sem_1yr_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+                        <div class="form-group"><label>2nd Year</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><input name="total_tdp_1sem_2yr_male" id="total_tdp_1sem_2yr_male" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><input name="total_tdp_1sem_2yr_female" id="total_tdp_1sem_2yr_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>3rd Year</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><input name="total_tdp_1sem_3yr_male" id="total_tdp_1sem_3yr_male" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><input name="total_tdp_1sem_3yr_female" id="total_tdp_1sem_3yr_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>4th Year</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><input name="total_tdp_1sem_4yr_male" id="total_tdp_1sem_4yr_male" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><input name="total_tdp_1sem_4yr_female" id="total_tdp_1sem_4yr_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>5th Year</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><input name="total_tdp_1sem_5yr_male" id="total_tdp_1sem_5yr_male" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><input name="total_tdp_1sem_5yr_female" id="total_tdp_1sem_5yr_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                        </div>
+
+                        <div class="form-group"><label>6th Year</label>
+                        <div class="form-row">
+                            <div class="col-xl-6"><input name="total_tdp_1sem_6yr_male" id="total_tdp_1sem_6yr_male" class="form-control" type="number" min="0"></div>
+                            <div class="col-xl-6"><input name="total_tdp_1sem_6yr_female" id="total_tdp_1sem_6yr_female" class="form-control" type="number" min="0"></div>
                         </div>
                     </div>
-                    <div class="form-group"><label>2nd Semester</label>
-                        <div class="form-row">
-                            <div class="col-xl-6"><label>Male</label><input name="total_tdp_2nd_male" id="total_tdp_2nd_male" class="form-control" type="number" min="0"></div>
-                            <div class="col-xl-6"><label>Female</label><input name="total_tdp_2nd_female" id="total_tdp_2nd_female" class="form-control" type="number" min="0"></div>
-                        </div>
-                    </div>
+                    
+
+
                     <hr>
                     <div class="form-group"><label>No. of TDP Grantees who graduated</label>
                         <div class="form-row">
