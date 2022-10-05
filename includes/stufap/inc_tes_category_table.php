@@ -8,20 +8,70 @@ echo "
 <table id='tbl_tes_category' class='table-bordered tbl-style stripe' style='width: 100%;'>
     <thead>
         <tr>
-            <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>TES CATEGORY</th>
-            <th class='text-center' colspan='4' style='background-color: #3C70AB; color:#ffff;'>1ST SEMESTER</th>
-            <th class='text-center' colspan='4' style='background-color: #3C70AB; color:#ffff;'>2ND SEMESTER</th>
-            <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>ACTIONS</th>
+            <th class='text-center' rowspan='3' style='background-color: #3C70AB; color:#ffff;'>TES CATEGORY</th>
+            <th class='text-center' colspan='8' style='background-color: #3C70AB; color:#ffff;'>1ST TERM</th>
+            <th class='text-center' colspan='8' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
+            <th class='text-center' colspan='8' style='background-color: #3C70AB; color:#ffff;'>3RD TERM</th>
+            <th class='text-center' colspan='8' style='background-color: #3C70AB; color:#ffff;'>SUMMER/MIDYEAR</th>
+            <th class='text-center' rowspan='3' style='background-color: #3C70AB; color:#ffff;'>ACTIONS</th>
         </tr>
         <tr>
-            <th class='text-center' style='background-color: #668EBD;'>TOTAL GRANTEES</th>
-            <th class='text-center' style='background-color: #668EBD;'>PWD</th>
-            <th class='text-center' style='background-color: #668EBD;'>IP</th>
-            <th class='text-center' style='background-color: #668EBD;'>WITH BOARD EXAM</th>
-            <th class='text-center' style='background-color: #668EBD;'>TOTAL GRANTEES</th>
-            <th class='text-center' style='background-color: #668EBD;'>PWD</th>
-            <th class='text-center' style='background-color: #668EBD;'>IP</th>
-            <th class='text-center' style='background-color: #668EBD;'>WITH BOARD EXAM</th>
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>TOTAL GRANTEES</th>
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>PWD</th>
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>IP</th>
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>WITH BOARD EXAM</th>
+            
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>TOTAL GRANTEES</th>
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>PWD</th>
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>IP</th>
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>WITH BOARD EXAM</th>
+
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>TOTAL GRANTEES</th>
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>PWD</th>
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>IP</th>
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>WITH BOARD EXAM</th>
+
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>TOTAL GRANTEES</th>
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>PWD</th>
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>IP</th>
+            <th class='text-center' colspan='2' style='background-color: #668EBD;'>WITH BOARD EXAM</th>
+        </tr>
+        <tr>
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+         
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>
+            <th class='text-center' style='background-color: #8AB7EB;'>FEMALE</th>
         </tr>
     </thead>
     <tbody>";
@@ -39,7 +89,6 @@ if ($resultCheck > 0) {
         $total_pwd_2nd = $row['total_pwd_2nd'];
         $total_ip_2nd = $row['total_ip_2nd'];
         $total_with_board_2nd = $row['total_with_board_2nd'];
-
 
         echo "<tr>
         <td class='text-center'>$tes_category</td>

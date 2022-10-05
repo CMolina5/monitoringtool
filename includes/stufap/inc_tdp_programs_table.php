@@ -31,23 +31,23 @@ echo "
 </thead>
 <tbody>";
 
-// if ($resultCheck > 0) {
-//     while ($row = mysqli_fetch_assoc($result)) {
-//         $uid = $row['uid'];
-//         $ac_year = $row['ac_year'];
-//         $program_name = $row['program_name'];
-        // $total_tdp_1st_male=$row['total_tdp_1st_male'];
-        // $total_tdp_1st_female=$row['total_tdp_1st_female'];
-        // $total_tdp_2nd_male=$row['total_tdp_2nd_male'];
-        // $total_tdp_2nd_female=$row['total_tdp_2nd_female'];
-        // $total_tdp_graduated_male=$row['total_tdp_graduated_male'];
-        // $total_tdp_graduated_female=$row['total_tdp_graduated_female'];
-        // $total_tdp_exceeded_mrr_male=$row['total_tdp_exceeded_mrr_male'];
-        // $total_tdp_exceeded_mrr_female=$row['total_tdp_exceeded_mrr_female'];
+if ($resultCheck > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $uid = $row['uid'];
+        $ac_year = $row['ac_year'];
+        $program_name = $row['program_name'];
+        $total_tdp_1st_male=$row['total_tdp_1st_male'];
+        $total_tdp_1st_female=$row['total_tdp_1st_female'];
+        $total_tdp_2nd_male=$row['total_tdp_2nd_male'];
+        $total_tdp_2nd_female=$row['total_tdp_2nd_female'];
+        $total_tdp_graduated_male=$row['total_tdp_graduated_male'];
+        $total_tdp_graduated_female=$row['total_tdp_graduated_female'];
+        $total_tdp_exceeded_mrr_male=$row['total_tdp_exceeded_mrr_male'];
+        $total_tdp_exceeded_mrr_female=$row['total_tdp_exceeded_mrr_female'];
         
     echo"
         <tr>
-            <td class='text-left' style='width: 35%;'>$</td>
+            <td class='text-left' style='width: 35%;'></td>
             <td class='text-center' style='width: 5%;'></td>
             <td class='text-center' style='width: 5%;'></td>
             <td class='text-center' style='width: 5%;'></td>
@@ -61,8 +61,8 @@ echo "
                 <button class='btn btn-danger btn-table-margin remove_program_tdp' data-bs-tooltip='' type='button' title='Remove' name='remove' value='remove' id=''><i class='fas fa-trash'></i></button>
             </td>
         </tr>";
-//     }
-// }
+    }
+}
 echo"</tbody>
 </table>
 ";

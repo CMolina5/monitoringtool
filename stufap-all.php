@@ -26,6 +26,16 @@ include 'includes/stufap/inc_template.php';
                 </div>
             </div>
             <div class='card card-style-table'>
+                <div class='form-group'>
+                    <p class='text-right'><button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_fhe_category_modal'>ADD FHE category</button></p>
+                    <div id='tbl_fhe_category_div' class='table table-responsive tbl-style'>";
+                
+                        include 'includes/stufap/inc_fhe_category_table.php';
+            
+                    echo"</div>
+                 </div>
+            </div>
+            <div class='card card-style-table'>
                 <div class='form-group'><label>No. of FHE Beneficiaries Who Opted Out of FHE</label>
                     <div class='form-row'>";
 
@@ -298,6 +308,24 @@ include 'includes/stufap/inc_template.php';
                     echo"</div>
                 </div>
             </div>
+
+            <div class='card card-style-table'>
+                    <div class='form-group'>
+                        <div class='form-row'>
+                            <div class='col-12 col-md-3 col-xl-12'>
+                                <div class='custom-control custom-checkbox'>
+                                    <input class='custom-control-input fhe_dropouts' type='checkbox' id='fhe_dropouts' name='fhe_dropouts'";
+                                    
+                                    if($program=='FHE'){
+                                        echo"checked disabled";
+                                    }
+
+                                    echo"><label class='custom-control-label' for='fhe_dropouts'>With students who dropped out under Free Higher Education?</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
             
             <div id='fhe_dropouts_div' class='card card-style-table fhe_dropouts_div' style='display : none'>
                 <div class='form-group'>
@@ -324,13 +352,14 @@ include 'includes/stufap/inc_template.php';
                 <label class='label-parts'>II.B TERTIARY EDUCATION SUBSIDY</label>
                 </div>
                 <div class='form-group'>
+                <label>Total No. of TES Applicants</label>
                 <div class='form-row'>
                 <div class='col-12 col-md-6 col-xl-6'>
-                <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div><input id='total_tes_applicant' name='total_tes_applicant' class='form-control' type='number' min='0' value='$total_tes_applicant_male'>
+                <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div><input id='total_tes_applicant_male' name='total_tes_applicant_male' class='form-control' type='number' min='0' value='$total_tes_applicant_male'>
                 </div>
                 </div>
                 <div class='col-12 col-md-6 col-xl-6'>
-                <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div><input id='total_tes_applicant' name='total_tes_applicant' class='form-control' type='number' min='0' value='$total_tes_applicant_female'>
+                <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div><input id='total_tes_applicant_female' name='total_tes_applicant_female' class='form-control' type='number' min='0' value='$total_tes_applicant_female'>
                 </div>
                 </div>
                 </div>

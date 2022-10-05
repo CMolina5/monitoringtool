@@ -27,6 +27,41 @@ $(document).ready(function () {
         orderCellsTop: true,
         fixedHeader: true
     });
+      
+        // $('#tbl_programs_fhe').Tabledit({
+        //     editButton: false,
+        //     deleteButton: false,
+        //  columns:{
+        //     identifier: [0, 'id'],
+        //   editable:[[2, 'first_name']]
+        //  }
+        // });
+
+        $('#tbl_programs_fhe').editable({
+            mode: 'inline',
+            container: 'body',
+            selector: 'td.beneficiaries',
+            // title: 'Total Beneficiaries',
+            url: "includes/stufap/inc_stufap_fhe_update_degree_programs.php",
+            type: "POST",
+            min: 0,
+            placeholder: 'No. of Beneficiaries',
+            showbuttons: false,
+            defaultValue: 0,
+            //dataType: 'json',
+            validate: function(value){
+             if($.trim(value) == '')
+             {
+              return 'This field is required';
+             }
+            }
+           });
+
+        $('#tbl_fhe_category').DataTable({
+            "order": [[0, "desc"]],
+            orderCellsTop: true,
+            fixedHeader: true
+        });
 
     //tbl_fhe_dropouts
     $('#tbl_fhe_dropouts').DataTable({
@@ -96,9 +131,61 @@ $(document).ready(function () {
                 total4
             );
 
+            // Total over all pages
+            total5 = api
+                .column( 5 )
+                .data()
+                .reduce( function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0 );
+
             // Update footer
             $( api.column( 5 ).footer() ).html(
-                'GRAND TOTAL:   '+ (total+total2+total3+total4) +''
+                total5
+            );
+
+            // Total over all pages
+            total6 = api
+                .column( 6 )
+                .data()
+                .reduce( function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0 );
+
+            // Update footer
+            $( api.column( 6 ).footer() ).html(
+                total6
+            );
+
+            // Total over all pages
+            total7 = api
+                .column( 7 )
+                .data()
+                .reduce( function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0 );
+
+            // Update footer
+            $( api.column( 7 ).footer() ).html(
+                total7
+            );
+
+            // Total over all pages
+            total8 = api
+                .column( 8 )
+                .data()
+                .reduce( function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0 );
+
+            // Update footer
+            $( api.column( 8 ).footer() ).html(
+                total8
+            );
+            
+            // Update footer
+            $( api.column( 9 ).footer() ).html(
+                'GRAND TOTAL:   '+ (total+total2+total3+total4+total5+total6+total7+total8) +''
             );
 
             

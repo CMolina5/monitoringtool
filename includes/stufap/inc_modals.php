@@ -706,6 +706,92 @@
     </div>
 </div>
 
+
+<!--Add FHE Category-->
+<div class="modal fade" role="dialog" tabindex="-1" id="add_fhe_category_modal">
+    <div class="modal-dialog" role="document">
+        <div id="add_fhe_category_modal_body" class="modal-content">
+            <form method="POST" id="add_fhe_category_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add FHE Category</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group"><label>FHE Category</label>
+                        <select id="fhe_category" name="fhe_category" class="form-control" required>
+
+                            <option selected disabled value="">--- Select FHE Category ---</option>
+                            <?php
+                            $fhe_category_array = array("4PS-SWDI", "LISTAHANAN");
+                            $fhe_category = [];
+
+                            $sql = "SELECT * FROM tbl_fhe_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
+                            $result = mysqli_query($conn, $sql);
+                            $resultCheck = mysqli_num_rows($result);
+
+                            if ($resultCheck > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    $fhe_category[] = $row['fhe_category'];
+                                }
+                                $fhe_category_diff = array_diff($fhe_category_array, $fhe_category);
+                                foreach ($fhe_category_diff as $value) {
+                                    echo "
+                                        <option value=" . $value . ">" . $value . "</option>
+                                    >";
+                                }
+                                if (empty($fhe_category_diff)) {
+                                    echo "
+                                        <option selected disabled value=''>ALL CATEGORY HAS BEEN USED</option>
+                                    >";
+                                }
+                            } else {
+                                foreach ($fhe_category_array as $value) {
+                                    echo "
+                                        <option value=" . $value . ">" . $value . "</option>
+                                    >";
+                                }
+                            }
+
+                            ?>
+
+                        </select>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label>1st Semester</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_fhe_1st_male" name="total_fhe_1st_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_fhe_1st_female" name="total_fhe_1st_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>2nd Semester</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_fhe_2nd_male" name="total_fhe_2nd_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_fhe_2nd_female" name="total_fhe_2nd_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>3rd Semester</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_fhe_3rd_male" name="total_fhe_3rd_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_fhe_3rd_female" name="total_fhe_3rd_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Summer/Midyear</label>
+                        <div class="form-row">
+                            <div class="col"><input id="total_fhe_sum_mid_male" name="total_fhe_sum_mid_male" class="form-control" type="number" min="0"></div>
+                            <div class="col"><input id="total_fhe_sum_mid_female" name="total_fhe_sum_mid_female" class="form-control" type="number" min="0"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
 <!--EDIT TES PROGRAMS-->
 <div class="modal fade" role="dialog" tabindex="-1" id="editprogramtes">
     <div class="modal-dialog" role="document">
@@ -1047,18 +1133,46 @@
                     <div class="form-group"><label>If other reason please specify:</label><input id="fhe_drop_other" name="fhe_drop_other" class="form-control" type="text"></div>
                     <hr>
                     <div class="form-group"><label>No. of Dropouts</label></div>
-                    <div class="form-group"><label>1st Term</label><input id="fhe_drop_1st" name="fhe_drop_1st" class="form-control" type="number" min="0"></div>
-                    <div class="form-group"><label>2nd Term</label><input id="fhe_drop_2nd" name="fhe_drop_2nd" class="form-control" type="number" min="0"></div>
+
+                    <div class="form-group">
+                        <label>1st Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="fhe_drop_1st_male" name="fhe_drop_1st_male" class="form-control" type="number" min="0"/></div>
+                            <div class="col"><input id="fhe_drop_1st_female" name="fhe_drop_1st_female" class="form-control" type="number" min="0"/></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>2nd Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="fhe_drop_2nd_male" name="fhe_drop_2nd_male" class="form-control" type="number" min="0"/></div>
+                            <div class="col"><input id="fhe_drop_2nd_female" name="fhe_drop_2nd_female" class="form-control" type="number" min="0"/></div>
+                        </div>
+                    </div>
 
                     <?php
                     if ($ac_calendar == 'Trimester' or $ac_calendar == 'Trimester with Summer') {
-                        echo "
-                    <div class='form-group'><label>3rd Term</label><input id='fhe_drop_3rd' name='fhe_drop_3rd' class='form-control' type='number'></div>";
+                        echo '
+                        <div class="form-group">
+                        <label>3rd Term</label>
+                            <div class="form-row">
+                                <div class="col"><input id="fhe_drop_3rd_male" name="fhe_drop_3rd_male" class="form-control" type="number" min="0"/></div>
+                                <div class="col"><input id="fhe_drop_3rd_female" name="fhe_drop_3rd_female" class="form-control" type="number" min="0"/></div>
+                            </div>
+                        </div>
+                    ';
                     }
 
                     if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Summer') {
-                        echo "
-                    <div class='form-group'><label>Summer/Midyear</label><input id='fhe_drop_summer_midyear' name='fhe_drop_summer_midyear' class='form-control' type='number'></div>";
+                        echo'
+                        <div class="form-group">
+                        <label>Summer/Midyear</label>
+                            <div class="form-row">
+                                <div class="col"><input id="fhe_drop_summer_midyear_male" name="fhe_drop_summer_midyear_male" class="form-control" type="number" min="0"/></div>
+                                <div class="col"><input id="fhe_drop_summer_midyear_female" name="fhe_drop_summer_midyear_female" class="form-control" type="number" min="0"/></div>
+                            </div>
+                        </div>
+                    ';
                     }
                     ?>
                 </div>

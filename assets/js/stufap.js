@@ -25,7 +25,7 @@ $(document).ready(function () {
                 $('#total_fhe_1sem_5yr_female').val(data.total_fhe_1sem_5yr_female);
                 $('#total_fhe_1sem_6yr_male').val(data.total_fhe_1sem_6yr_male);
                 $('#total_fhe_1sem_6yr_female').val(data.total_fhe_1sem_6yr_female);
-               
+
                 //2nd Semester
                 $('#total_fhe_2sem_1yr_male').val(data.total_fhe_2sem_1yr_male);
                 $('#total_fhe_2sem_1yr_female').val(data.total_fhe_2sem_1yr_female);
@@ -93,6 +93,30 @@ $(document).ready(function () {
                     "order": [[0, "desc"]],
                     "lengthChange": false,
                     "pageLength": 5,
+                    orderCellsTop: true,
+                    fixedHeader: true
+                })
+
+            }
+        });
+    });
+
+    //FHE Category Part
+    //add fhe category to the table
+    $('#add_fhe_category_modal').on('submit', function (event) {//modal id
+        event.preventDefault();
+        $.ajax({
+            url: "includes/stufap/inc_fhe_add_category.php",//php file
+            method: "POST",
+            data: $('#add_fhe_category_form').serialize(),//modal form id
+            success: function (data) {
+                $('#tbl_fhe_category_div').html(data);//table div id
+                $('#add_fhe_category_form')[0].reset();//modal form id
+                $('#add_fhe_category_modal_body').load(' #add_fhe_category_modal_body');//modal content id
+                $('#add_fhe_category_modal').modal('hide');//modal id
+
+                $('#tbl_fhe_category').DataTable({//datatable id
+                    "order": [[0, "desc"]],
                     orderCellsTop: true,
                     fixedHeader: true
                 })
@@ -181,11 +205,62 @@ $(document).ready(function () {
                             total4
                         );
 
+                        // Total over all pages
+                        total5 = api
+                            .column(5)
+                            .data()
+                            .reduce(function (a, b) {
+                                return intVal(a) + intVal(b);
+                            }, 0);
+
                         // Update footer
                         $(api.column(5).footer()).html(
-                            'GRAND TOTAL:   ' + (total + total2 + total3 + total4) + ''
+                            total5
                         );
 
+                        // Total over all pages
+                        total6 = api
+                            .column(6)
+                            .data()
+                            .reduce(function (a, b) {
+                                return intVal(a) + intVal(b);
+                            }, 0);
+
+                        // Update footer
+                        $(api.column(6).footer()).html(
+                            total6
+                        );
+
+                        // Total over all pages
+                        total7 = api
+                            .column(7)
+                            .data()
+                            .reduce(function (a, b) {
+                                return intVal(a) + intVal(b);
+                            }, 0);
+
+                        // Update footer
+                        $(api.column(7).footer()).html(
+                            total7
+                        );
+
+                        // Total over all pages
+                        total8 = api
+                            .column(8)
+                            .data()
+                            .reduce(function (a, b) {
+                                return intVal(a) + intVal(b);
+                            }, 0);
+
+                        // Update footer
+                        $(api.column(8).footer()).html(
+                            total8
+                        );
+
+                        // Update footer
+                        $(api.column(9).footer()).html(
+                            'GRAND TOTAL:   ' + (total + total2 + total3 + total4 + total5 + total6 + total7 + total8) + ''
+                        );
 
                     }
                 })
@@ -279,23 +354,75 @@ $(document).ready(function () {
                             total3
                         );
 
-                        // Total over all pages
-                        total4 = api
-                            .column(4)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
+                         // Total over all pages
+                         total4 = api
+                         .column(4)
+                         .data()
+                         .reduce(function (a, b) {
+                             return intVal(a) + intVal(b);
+                         }, 0);
 
-                        // Update footer
-                        $(api.column(4).footer()).html(
-                            total4
-                        );
+                     // Update footer
+                     $(api.column(4).footer()).html(
+                         total4
+                     );
 
-                        // Update footer
-                        $(api.column(5).footer()).html(
-                            'GRAND TOTAL:   ' + (total + total2 + total3 + total4) + ''
-                        );
+                     // Total over all pages
+                     total5 = api
+                         .column(5)
+                         .data()
+                         .reduce(function (a, b) {
+                             return intVal(a) + intVal(b);
+                         }, 0);
+
+                     // Update footer
+                     $(api.column(5).footer()).html(
+                         total5
+                     );
+
+                     // Total over all pages
+                     total6 = api
+                         .column(6)
+                         .data()
+                         .reduce(function (a, b) {
+                             return intVal(a) + intVal(b);
+                         }, 0);
+
+                     // Update footer
+                     $(api.column(6).footer()).html(
+                         total6
+                     );
+
+                     // Total over all pages
+                     total7 = api
+                         .column(7)
+                         .data()
+                         .reduce(function (a, b) {
+                             return intVal(a) + intVal(b);
+                         }, 0);
+
+                     // Update footer
+                     $(api.column(7).footer()).html(
+                         total7
+                     );
+
+                     // Total over all pages
+                     total8 = api
+                         .column(8)
+                         .data()
+                         .reduce(function (a, b) {
+                             return intVal(a) + intVal(b);
+                         }, 0);
+
+                     // Update footer
+                     $(api.column(8).footer()).html(
+                         total8
+                     );
+
+                     // Update footer
+                     $(api.column(9).footer()).html(
+                         'GRAND TOTAL:   ' + (total + total2 + total3 + total4 + total5 + total6 + total7 + total8) + ''
+                     );
 
 
                     }
@@ -386,23 +513,76 @@ $(document).ready(function () {
                             total3
                         );
 
-                        // Total over all pages
-                        total4 = api
-                            .column(4)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
+                         // Total over all pages
+                         total4 = api
+                         .column(4)
+                         .data()
+                         .reduce(function (a, b) {
+                             return intVal(a) + intVal(b);
+                         }, 0);
 
-                        // Update footer
-                        $(api.column(4).footer()).html(
-                            total4
-                        );
+                     // Update footer
+                     $(api.column(4).footer()).html(
+                         total4
+                     );
 
-                        // Update footer
-                        $(api.column(5).footer()).html(
-                            'GRAND TOTAL:   ' + (total + total2 + total3 + total4) + ''
-                        );
+                     // Total over all pages
+                     total5 = api
+                         .column(5)
+                         .data()
+                         .reduce(function (a, b) {
+                             return intVal(a) + intVal(b);
+                         }, 0);
+
+                     // Update footer
+                     $(api.column(5).footer()).html(
+                         total5
+                     );
+
+                     // Total over all pages
+                     total6 = api
+                         .column(6)
+                         .data()
+                         .reduce(function (a, b) {
+                             return intVal(a) + intVal(b);
+                         }, 0);
+
+                     // Update footer
+                     $(api.column(6).footer()).html(
+                         total6
+                     );
+
+                     // Total over all pages
+                     total7 = api
+                         .column(7)
+                         .data()
+                         .reduce(function (a, b) {
+                             return intVal(a) + intVal(b);
+                         }, 0);
+
+                     // Update footer
+                     $(api.column(7).footer()).html(
+                         total7
+                     );
+
+                     // Total over all pages
+                     total8 = api
+                         .column(8)
+                         .data()
+                         .reduce(function (a, b) {
+                             return intVal(a) + intVal(b);
+                         }, 0);
+
+                     // Update footer
+                     $(api.column(8).footer()).html(
+                         total8
+                     );
+
+                     // Update footer
+                     $(api.column(9).footer()).html(
+                         'GRAND TOTAL:   ' + (total + total2 + total3 + total4 + total5 + total6 + total7 + total8) + ''
+                     );
+
 
 
                     }
@@ -411,7 +591,7 @@ $(document).ready(function () {
             }
         });
     });
-/*--------------------------------------------------------------------------------------------*/
+    /*--------------------------------------------------------------------------------------------*/
     //TES Category Part
     //add tes category to the table
     $('#add_tes_category_modal').on('submit', function (event) {//modal id
@@ -517,7 +697,7 @@ $(document).ready(function () {
             }
         });
     });
-/*--------------------------------------------------------------------------------------------*/
+    /*--------------------------------------------------------------------------------------------*/
     //TES Program Part
     //add tes program to the table**
     $('#add_program_tes_modal').on('submit', function (event) {//modal id
@@ -849,7 +1029,7 @@ $(document).ready(function () {
             }
         });
     });
-/*--------------------------------------------------------------------------------------------*/
+    /*--------------------------------------------------------------------------------------------*/
     //TDP Program Part
     //add tdp program to the table**
     $('#add_program_tdp_modal').on('submit', function (event) {//modal id
@@ -955,7 +1135,7 @@ $(document).ready(function () {
         });
     });
 
-/*--------------------------------------------------------------------------------------------*/
+    /*--------------------------------------------------------------------------------------------*/
     //tdp dropouts part
     //add reason for tdp dropouts
     $('#add_dropouts_tdp_modal').on('submit', function (event) {//modal id
