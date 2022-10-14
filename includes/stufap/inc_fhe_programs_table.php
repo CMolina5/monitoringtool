@@ -5,11 +5,10 @@ $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 
 echo "
-<table id='tbl_programs_fhe' class='table-bordered tbl-style stripe' style='width: 100%;'>
+<table id='tbl_programs_fhe' class='table-bordered tbl-style stripe' style='width: 100%; display'>
 <thead>
     <tr>
         <th class='text-center' rowspan='4' colspan='1' style='background-color: #3C70AB; color:#ffff;'>DEGREE PROGRAM</th>
-        <th class='text-center' rowspan='4' style='background-color: #3C70AB; color:#ffff;'>ACTIONS</th>
         <th class='text-center' colspan='48' style='background-color: #3C70AB; color:#ffff;'>TOTAL FHE BENEFICIARIES</th>
         <th class='text-center' rowspan='3' colspan='2' style='background-color: #3C70AB; color:#ffff;'>NO. OF FHE BENEFICIARIES WHO GRADUATED</th>
         <th class='text-center' rowspan='3' colspan='2' style='background-color: #3C70AB; color:#ffff;'>NO. FHE BENEFICIARIES WHO EXCEEDED THE MAXIMUM RESIDENCY RULE</th>
@@ -182,7 +181,6 @@ if ($resultCheck > 0) {
 
         echo "<tr>
         <td class='text-left'>$program_name</td>
-        <td class='text-center'><button class='btn btn-info edit_data_fhe' data-bs-tooltip='' type='button' title='Edit' name='edit' value='edit' id='$uid'><i class='far fa-edit'></i></button></td>
         
         <td data-name='total_fhe_1sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1sem_1yr_male</td>
         <td data-name='total_fhe_1sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1sem_1yr_female</td>

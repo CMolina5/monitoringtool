@@ -423,3 +423,7 @@ hr.star-dark {
   font-size: 12px;
 }
 
+.table-select{
+  width: 100px;
+  height: 25px;
+}

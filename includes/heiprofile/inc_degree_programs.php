@@ -14,7 +14,6 @@ echo "
                 <th class='text-center' style='width: 15%;'>GOVERNMENT RECOGNITION NO.</th>
                 <th class='text-center' style='width: 15%;'>CERTIFICATE OF PROGRAM COMPLIANCE NO.</th>
                 <th class='d-none' style='width: 15%;'>IN THE TES PORTAL</th>
-                <th class='text-center' style='width: 15%;'>ACTIONS</th>
             </tr>
         </thead>
         <tbody>
@@ -33,14 +32,11 @@ if ($resultCheck > 0) {
         echo "
         <tr>
             <td class='d-none'>$uid</td>
-            <td class='text-center'>$program_code</td>
-            <td class='text-left'>".strtoUpper($program_name)."</td>
-            <td class='text-center'>$gr_no</td>
-            <td class='text-center'>$copc_no</td>
+            <td data-name='program_code' class='degree_programs text-center' data-type='text' data-pk='$uid'>$program_code</td>
+            <td data-name='program_name' class='degree_programs text-left' data-type='text' data-pk='$uid'>".strtoUpper($program_name)."</td>
+            <td data-name='gr_no' class='degree_programs text-center' data-type='text' data-pk='$uid'>$gr_no</td>
+            <td data-name='copc_no' class='degree_programs text-center' data-type='text' data-pk='$uid'>$copc_no</td>
             <td class='d-none'>".strtoUpper($in_the_portal)."</td>
-            <td class='text-center'>
-            <button class='btn btn-info btn-table-margin edit_data' type='button' title='Edit' name='edit' value='edit' id='$uid'><i class='far fa-edit'></i></button>
-            <button class='btn btn-danger btn-table-margin remove_data' data-toggle='tooltip' data-bs-tooltip='' type='button' title='Remove' name='remove' value='remove' id='$uid'><i class='fas fa-trash'></i></button></td>
         </tr>
             ";
     }
@@ -62,14 +58,11 @@ if ($resultCheck > 0) {
             echo "
             <tr>
                 <td class='d-none'>$uid</td>
-                <td class='text-center'>$program_code</td>
-                <td class='text-left'>".strtoUpper($program_name)."</td>
-                <td class='text-center'>$gr_no</td>
-                <td class='text-center'>$copc_no</td>
+                <td data-name='program_code' class='degree_programs text-center' data-type='text' data-pk='$uid'>$program_code</td>
+                <td data-name='program_name' class='degree_programs text-left' data-type='text' data-pk='$uid'>".strtoUpper($program_name)."</td>
+                <td data-name='gr_no' class='degree_programs text-center' data-type='text' data-pk='$uid'>$gr_no</td>
+                <td data-name='copc_no' class='degree_programs text-center' data-type='text' data-pk='$uid'>$copc_no</td>
                 <td class='d-none'>".strtoUpper($in_the_portal)."</td>
-                <td class='text-center'>
-                <button class='btn btn-info btn-table-margin edit_data' type='button' title='Edit' name='edit' value='edit' id='$uid'><i class='far fa-edit'></i></button>
-                <button class='btn btn-danger btn-table-margin remove_data' data-toggle='tooltip' data-bs-tooltip='' type='button' title='Remove' name='remove' value='remove' id='$uid'><i class='fas fa-trash'></i></button></td>
             </tr>
                 ";
         }

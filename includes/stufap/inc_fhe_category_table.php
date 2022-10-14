@@ -13,7 +13,6 @@ echo "
             <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
             <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>3RD TERM</th>
             <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>SUMMER/MIDYEAR</th>
-            <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>ACTIONS</th>
         </tr>
         <tr>
             <th class='text-center' style='background-color: #668EBD;'>MALE</th>
@@ -43,20 +42,16 @@ if ($resultCheck > 0) {
         $total_fhe_sum_mid_female = $row['total_fhe_sum_mid_female'];
        
         echo "<tr>
-        <td class='text-center'>$fhe_category</td>
-        <td class='text-center'>$total_fhe_1st_male</td>
-        <td class='text-center'>$total_fhe_1st_female</td>
-        <td class='text-center'>$total_fhe_2nd_male</td>
-        <td class='text-center'>$total_fhe_2nd_female</td>
-        <td class='text-center'>$total_fhe_3rd_male</td>
-        <td class='text-center'>$total_fhe_3rd_female</td>
-        <td class='text-center'>$total_fhe_sum_mid_male</td>
-        <td class='text-center'>$total_fhe_sum_mid_female</td>
-        <td class='text-center' style='width: 10%;'>
-        <button class='btn btn-info edit_tes_category' data-bs-tooltip='' type='button' title='Edit' name='edit' value='edit' id='$uid'><i class='far fa-edit'></i></button>
-        <button class='btn btn-danger btn-table-margin remove_tes_category' data-bs-tooltip='' type='button' title='Remove' name='remove' value='remove' id='$uid'><i class='fas fa-trash'></i></button>
-        </td>
-    </tr>";
+        <td>$fhe_category</td>
+        <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_male</td>
+        <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_female</td>
+        <td data-name='total_fhe_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_male</td>
+        <td data-name='total_fhe_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_female</td>
+        <td data-name='total_fhe_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_3rd_male</td>
+        <td data-name='total_fhe_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_3rd_female</td>
+        <td data-name='total_fhe_sum_mid_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_sum_mid_male</td>
+        <td data-name='total_fhe_sum_mid_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_sum_mid_female</td>
+        </tr>";
     }
 }
 echo "</tbody>

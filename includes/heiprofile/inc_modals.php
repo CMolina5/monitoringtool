@@ -31,7 +31,7 @@
 </div>
 
 <!---MODAL FOR EDITING PROGRAM--->
-<div class="modal fade" role="dialog" tabindex="-1" id="editprogram">
+<!-- <div class="modal fade" role="dialog" tabindex="-1" id="editprogram">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <form method="POST" id="edit_degree_program">
@@ -48,7 +48,7 @@
             </form>
         </div>
     </div>
-</div>
+</div> -->
 
 <!---MODAL FOR REMOVING PROGRAM--->
 <div role="dialog" tabindex="-1" class="modal fade show" id="removeprogram">

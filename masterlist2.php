@@ -1,16 +1,6 @@
 <?php
-
-session_start();
 require('assets/fpdf182/mc_table.php');
-include_once 'includes/db_connection.php';
-include 'includes/masterlist/inc_template.php';
-include 'includes/heiprofile/inc_template.php';
-include 'includes/stufap/inc_template.php';
-include 'includes/compliance/inc_template.php';
-include 'includes/experience/inc_template.php';
 header("Content-type: application/pdf; charset=utf-8");
-
-
 
 class PDF extends PDF_MC_Table
 {
@@ -2455,14 +2445,11 @@ $pdf->Cell(161, 5, 'Data Privacy Act of 2012.', 'R', 0, 'L', true);
 $pdf->Ln();
 $pdf->Cell(20, 3, '', 'LB', 0, 'L', true);
 $pdf->Cell(316, 3, '', 'RB', 0, 'L', true);
-$pdf->Ln();
-$pdf->addPage();
+
+
 
 //Signatory Part
-$pdf->SetFont('Arial', 'I', 8);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 5, 'By signing this accomplished monitoring tool, we attest to the veracity and completeness of the information provided for the specified Academic Year.', 0, 0, 'L', true);
+$pdf->addPage();
 $pdf->SetFont('Arial', 'B', 9);
 $pdf->SetTextColor(0, 0, 0);
 $pdf->SetFillColor(255, 255, 255);
@@ -2523,14 +2510,6 @@ $pdf->Cell(63.33, 5, 'Date:', 0, 0, 'L', true);
 $pdf->Cell(63.33, 5, '', 0, 0, 'L', true);
 $pdf->Ln();
 $pdf->Ln();
-$pdf->Ln();
-$pdf->Ln();
-
-
-$pdf->SetFont('Arial', 'I', 8);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 5, 'By signing and submitting this accomplished monitoring tool, I hereby certify to the veracity and completeness of the information provided for the specified Academic Year.', 0, 0, 'L', true);
 $pdf->Ln();
 $pdf->Ln();
 $pdf->SetFont('Arial', 'B', 10);

@@ -12,7 +12,7 @@ echo "
         <th class='text-center' rowspan='2' colspan='1' style='background-color: #3C70AB; color:#ffff;'>NAME OF STUFAP</th>
         <th class='text-center' rowspan='2' colspan='1' style='background-color: #3C70AB; color:#ffff;'>TYPE OF FUNDING</th>
         <th class='text-center' colspan='6' style='background-color: #3C70AB; color:#ffff;'>YEAR LEVEL</th>
-        <th class='text-center' rowspan='2' colspan='1' style='background-color: #3C70AB; color:#ffff;'>ACTIONS</th>
+      
     </tr>
     <tr>
         <th class='text-center' style='background-color: #668EBD;'>1ST</th>
@@ -41,17 +41,15 @@ if ($resultCheck > 0) {
         echo "
         <tr>
             <td class='d-none'>$uid</td>
-            <td class='text-left'>".strtoUpper($stufap_name)."</td>
-            <td class='text-center'>$stufap_type</td>
-            <td class='text-center'>$total_stufap_1st</td>
-            <td class='text-center'>$total_stufap_2nd</td>
-            <td class='text-center'>$total_stufap_3rd</td>
-            <td class='text-center'>$total_stufap_4th</td>
-            <td class='text-center'>$total_stufap_5th</td>
-            <td class='text-center'>$total_stufap_6th</td>
-            <td class='text-center'>
-            <button class='btn btn-info btn-table-margin edit_data' type='button' title='Edit' name='edit' value='edit' id='$uid'><i class='far fa-edit'></i></button>
-            <button class='btn btn-danger btn-table-margin remove_data' data-toggle='tooltip' data-bs-tooltip='' type='button' title='Remove' name='remove' value='remove' id='$uid'><i class='fas fa-trash'></i></button></td>
+            <td data-name='stufap_name' class='other_stufap_name text-center' data-type='text' data-pk='$uid'>".strtoUpper($stufap_name)."</td>
+            <td data-name='stufap_type' class='select_type text-center' data-type='select' data-inputclass='table-select' data-pk='$uid'>$stufap_type</td>
+            <td data-name='total_stufap_1st' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_stufap_1st</td>
+            <td data-name='total_stufap_2nd' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_stufap_2nd</td>
+            <td data-name='total_stufap_3rd' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_stufap_3rd</td>
+            <td data-name='total_stufap_4th' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_stufap_4th</td>
+            <td data-name='total_stufap_5th' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_stufap_5th</td>
+            <td data-name='total_stufap_6th' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_stufap_6th</td>
+           
         </tr>
             ";
     }

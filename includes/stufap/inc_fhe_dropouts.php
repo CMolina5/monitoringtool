@@ -13,7 +13,6 @@ echo "
             <th class='text-center' colspan='2'>2ND TERM</th>
             <th class='text-center' colspan='2'>3RD TERM</th>
             <th class='text-center' colspan='2'>SUMMER/MIDYEAR</th>
-            <th class='text-center' rowspan='2'>ACTIONS</th>
         </tr>
         <tr>
             <th class='text-center'>MALE</th>
@@ -41,44 +40,25 @@ if ($resultCheck > 0) {
         $total_dropout_2nd_female = $row['total_dropout_2nd_female'];
         $total_dropout_3rd_male = $row['total_dropout_3rd_male'];
         $total_dropout_3rd_female = $row['total_dropout_3rd_female'];
-        $total_dropout_sum_mid_male = $row['total_dropout_summer_midterm_male'];
-        $total_dropout_sum_mid_female = $row['total_dropout_summer_midterm_female'];
+        $total_dropout_sum_mid_male = $row['total_dropout_sum_mid_male'];
+        $total_dropout_sum_mid_female = $row['total_dropout_sum_mid_female'];
        
         echo "
         <tr>
-            <td class='text-center'>".strtoUpper($reason)."</td>
-            <td class='text-center'>$total_dropout_1st_male</td>
-            <td class='text-center'>$total_dropout_1st_female</td>
-            <td class='text-center'>$total_dropout_2nd_male</td>
-            <td class='text-center'>$total_dropout_2nd_female</td>
-            <td class='text-center'>$total_dropout_3rd_male</td>
-            <td class='text-center'>$total_dropout_3rd_female</td>
-            <td class='text-center'>$total_dropout_sum_mid_male</td>
-            <td class='text-center'>$total_dropout_sum_mid_female</td>
-            
-            <td class='text-center'>
-            <button class='btn btn-info edit_dropouts_fhe' data-bs-tooltip='' type='button' title='Edit' name='edit' value='edit' id='$uid'><i class='far fa-edit'></i></button>
-            <button class='btn btn-danger btn-table-margin remove_dropouts_fhe' data-bs-tooltip='' type='button' title='Remove' name='remove' value='remove' id='$uid'><i class='fas fa-trash'></i></button>
-            </td>
+            <td>".strtoUpper($reason)."</td>
+            <td data-name='total_dropout_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_1st_male</td>
+            <td data-name='total_dropout_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_1st_female</td>
+            <td data-name='total_dropout_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_2nd_male</td>
+            <td data-name='total_dropout_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_2nd_female</td>
+            <td data-name='total_dropout_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_3rd_male</td>
+            <td data-name='total_dropout_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_3rd_female</td>
+            <td data-name='total_dropout_sum_mid_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_sum_mid_male</td>
+            <td data-name='total_dropout_sum_mid_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_sum_mid_female</td>
         </tr>
             ";
     }
 }
 echo"
-<tfoot>
-            <tr>
-                <th class='text-center'>TOTAL:</th>
-                <th class='text-center'></th>
-                <th class='text-center'></th>
-                <th class='text-center'></th>
-                <th class='text-center'></th>
-                <th class='text-center'></th>
-                <th class='text-center'></th>
-                <th class='text-center'></th>
-                <th class='text-center'></th>
-                <th class='text-center'></th>
-            </tr>
-        </tfoot>
     </tbody>
 </table>
 ";

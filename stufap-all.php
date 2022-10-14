@@ -340,6 +340,7 @@ include 'includes/stufap/inc_template.php';
                     echo"</div>
                 </div>
             </div>
+            
         </div>";
         }
         ?>

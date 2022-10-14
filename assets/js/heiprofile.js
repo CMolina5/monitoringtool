@@ -16,7 +16,27 @@ $(document).ready(function () {
                     "order": [[0, "desc"]],
                     orderCellsTop: true,
                     fixedHeader: true
-                })
+                });
+
+                $('#tbl_program_offerings').editable({
+                    mode: 'inline',
+                    container: 'body',
+                    selector: 'td.degree_programs',
+                    // title: 'Total Beneficiaries',
+                    url: "includes/heiprofile/inc_update_degree_programs.php",
+                    type: "POST",
+                    // min: 0,
+                    // placeholder: 'No. of Beneficiaries',
+                    // showbuttons: false,
+                    // defaultValue: 0,
+                    toggle: 'dblclick',
+                    //dataType: 'json',
+                    validate: function (value) {
+                        if ($.trim(value) == '') {
+                            return 'This field is required';
+                        }
+                    }
+                });
             }
         });
     });
@@ -112,9 +132,76 @@ $(document).ready(function () {
                     "order": [[0, "desc"]],
                     orderCellsTop: true,
                     fixedHeader: true
-                });            
+                });  
+                
+                $('#tbl_other_stufaps').editable({
+                    mode: 'inline',
+                    container: 'body',
+                    selector: 'td.other_stufap_name',
+                    // title: 'Total Beneficiaries',
+                    url: "includes/heiprofile/inc_update_other_stufap.php",
+                    type: "POST",
+                    // min: 0,
+                    // placeholder: 'No. of Beneficiaries',
+                    // showbuttons: false,
+                    // defaultValue: 0,
+                    toggle: 'dblclick',
+                    //dataType: 'json',
+                    validate: function (value) {
+                        if ($.trim(value) == '') {
+                            return 'This field is required';
+                        }
+                    }
+                });
+            
+                $('#tbl_other_stufaps').editable({
+                    mode: 'inline',
+                    container: 'body',
+                    selector: 'td.select_type',
+                    // title: 'Total Beneficiaries',
+                    url: "includes/heiprofile/inc_update_other_stufap.php",
+                    type: "POST",
+                    // value : 'Local',
+                    source: [
+                        {value: 'Local', text: 'Local'},
+                        {value: 'National', text: 'National'},
+                     ],
+                    // min: 0,
+                    // placeholder: 'No. of Beneficiaries',
+                    // showbuttons: false,
+                    // defaultValue: 0,
+                    toggle: 'dblclick',
+                    //dataType: 'json',
+                    validate: function (value) {
+                        if ($.trim(value) == '') {
+                            return 'This field is required';
+                        }
+                    }
+                });
+            
+                $('#tbl_other_stufaps').editable({
+                    mode: 'inline',
+                    container: 'body',
+                    selector: 'td.beneficiaries',
+                    // title: 'Total Beneficiaries',
+                    url: "includes/heiprofile/inc_update_other_stufap.php",
+                    type: "POST",
+                    // value : 'Local',
+                    min: 0,
+                    placeholder: 'No. of Beneficiaries',
+                    // showbuttons: false,
+                    defaultValue: 0,
+                    toggle: 'dblclick',
+                    //dataType: 'json',
+                    validate: function (value) {
+                        if ($.trim(value) == '') {
+                            return 'This field is required';
+                        }
+                    }
+                });
             }
         });
     });
 
 });//end tag
+
