@@ -312,7 +312,7 @@ include 'includes/stufap/inc_template.php';
             <div class='card card-style-table'>
                     <div class='form-group'>
                         <div class='form-row'>
-                            <div class='col-12 col-md-3 col-xl-12'>
+                            <div class='col-12 col-md-3 col-xl-6'>
                                 <div class='custom-control custom-checkbox'>
                                     <input class='custom-control-input fhe_dropouts' type='checkbox' id='fhe_dropouts' name='fhe_dropouts'";
                                     
@@ -321,6 +321,18 @@ include 'includes/stufap/inc_template.php';
                                     }
 
                                     echo"><label class='custom-control-label' for='fhe_dropouts'>With students who dropped out under Free Higher Education?</label>
+                                </div>
+                            </div>
+
+                            <div class='col-12 col-md-3 col-xl-6'>
+                                <div class='custom-control custom-checkbox'>
+                                    <input class='custom-control-input fhe_loa' type='checkbox' id='fhe_loa' name='fhe_loa'";
+                                    
+                                    if($program4=='FHE'){
+                                        echo"checked disabled";
+                                    }
+
+                                    echo"><label class='custom-control-label' for='fhe_loa'>With students who filed LOA under Free Higher Education?</label>
                                 </div>
                             </div>
                         </div>
@@ -336,6 +348,20 @@ include 'includes/stufap/inc_template.php';
                     <div id='tbl_fhe_dropouts_div' class='table table-responsive tbl-style'>";
                         
                         include 'includes/stufap/inc_fhe_dropouts.php';
+                    
+                    echo"</div>
+                </div>
+            </div>
+
+            <div id='fhe_loa_div' class='card card-style-table fhe_loa_div' style='display : none'>
+                <div class='form-group'>
+                <label>No. of FHE Beneficiaries under LOA</label><label style='font-style: italic;'>Determine the no. of with loa per semester/term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label>
+                </div>
+                <div class='form-group'>
+                    <p class='text-right'><button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_loa_fhe'>Add reason for loa</button></p>
+                    <div id='tbl_fhe_loa_div' class='table table-responsive tbl-style'>";
+                        
+                        include 'includes/stufap/inc_fhe_loa.php';
                     
                     echo"</div>
                 </div>
@@ -387,7 +413,7 @@ include 'includes/stufap/inc_template.php';
             <div class='card card-style-table'>
                     <div class='form-group'>
                         <div class='form-row'>
-                            <div class='col-12 col-md-3 col-xl-12'>
+                            <div class='col-12 col-md-3 col-xl-6'>
                                 <div class='custom-control custom-checkbox'>
                                     <input class='custom-control-input tes_dropouts' type='checkbox' id='tes_dropouts' name='tes_dropouts'";
                                     
@@ -396,6 +422,17 @@ include 'includes/stufap/inc_template.php';
                                     }
 
                                     echo"><label class='custom-control-label' for='tes_dropouts'>With students who dropped out under Tertiary Education Subsidy?</label>
+                                </div>
+                            </div>
+                            <div class='col-12 col-md-3 col-xl-6'>
+                                <div class='custom-control custom-checkbox'>
+                                    <input class='custom-control-input tes_loa' type='checkbox' id='tes_loa' name='tes_loa'";
+                                    
+                                    if($program5=='TES'){
+                                        echo"checked disabled";
+                                    }
+
+                                    echo"><label class='custom-control-label' for='tes_loa'>With students who filed LOA under Tertiary Education Subsidy?</label>
                                 </div>
                             </div>
                         </div>
@@ -412,6 +449,21 @@ include 'includes/stufap/inc_template.php';
                     echo"</div>
                 </div>
             </div>
+
+            <div id='tes_loa_div' class='card card-style-table tes_loa_div' style='display : none'>
+                <div class='form-group'>
+                <label>No. of TES Grantees under LOA</label><label style='font-style: italic;'>Determine the no. of with loa per semester/term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label>
+                </div>
+                <div class='form-group'>
+                    <p class='text-right'><button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_loa_tes'>Add reason for loa</button></p>
+                    <div id='tbl_tes_loa_div' class='table table-responsive tbl-style'>";
+                        
+                        include 'includes/stufap/inc_tes_loa.php';
+                    
+                    echo"</div>
+                </div>
+            </div>
+            
         </div>";
         }
         ?>
@@ -433,7 +485,7 @@ include 'includes/stufap/inc_template.php';
             <div class='card card-style-table'>
                 <div class='form-group'>
                 <div class='form-row'>
-                    <div class='col-12 col-md-3 col-xl-12'>
+                    <div class='col-12 col-md-3 col-xl-6'>
                         <div class='custom-control custom-checkbox'>
                             <input class='custom-control-input tdp_dropouts' type='checkbox' id='tdp_dropouts' name='tdp_dropouts'";
                             
@@ -442,6 +494,18 @@ include 'includes/stufap/inc_template.php';
                             }
 
                             echo"><label class='custom-control-label' for='tdp_dropouts'>With students who dropped out under Tulong Dunong Program?</label>
+                        </div>
+                    </div>
+
+                    <div class='col-12 col-md-3 col-xl-6'>
+                        <div class='custom-control custom-checkbox'>
+                            <input class='custom-control-input tdp_loa' type='checkbox' id='tdp_loa' name='tdp_loa'";
+                            
+                            if($program6=='TDP'){
+                                echo"checked disabled";
+                            }
+
+                            echo"><label class='custom-control-label' for='tdp_loa'>With students who filed LOA under Tulong Dunong Program?</label>
                         </div>
                     </div>
                 </div>
@@ -458,6 +522,21 @@ include 'includes/stufap/inc_template.php';
                     echo"</div>
                 </div>
             </div>
+
+            <div id='tdp_loa_div' class='card card-style-table tdp_loa_div' style='display : none'>
+                <div class='form-group'>
+                <label>No. of TDP Grantees under LOA</label><label style='font-style: italic;'>Determine the no. of with loa per semester/term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label>
+                </div>
+                <div class='form-group'>
+                    <p class='text-right'><button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_loa_tdp'>Add reason for loa</button></p>
+                    <div id='tbl_tdp_loa_div' class='table table-responsive tbl-style'>";
+                        
+                        include 'includes/stufap/inc_tdp_loa.php';
+                    
+                    echo"</div>
+                </div>
+            </div>
+
         </div>";
         }
         ?>

@@ -37,7 +37,7 @@ if ($resultCheck > 0) {
         $tdp_focal_email_add = $row['tdp_focal_email_add'];
         $tdp_focal_alt_email_add = $row['tdp_focal_alt_email_add'];
         $tdp_focal_contact_no = $row['tdp_focal_contact_no'];
-        $tdp_focal_alt_contact_no = $row['tdp_focal_alt_contact_no'];
+        $tdp_focal_alt_contact_no = $row['tdp_focal_alt_contact_no']; 
     }
 } else {
     $hei_email = "";

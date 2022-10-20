@@ -103,3 +103,39 @@ if ($resultCheck5 > 0) {
 }else{
     $program3 = '';
 }
+
+$sql6 = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE'";
+$result6 = mysqli_query($conn, $sql6);
+$resultCheck6 = mysqli_num_rows($result6);
+
+if ($resultCheck6 > 0) {
+    while ($row6 = mysqli_fetch_assoc($result6)) {
+        $program4 = $row6['program'];
+    }
+}else{
+    $program4 = '';
+}
+
+$sql7 = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES'";
+$result7 = mysqli_query($conn, $sql7);
+$resultCheck7 = mysqli_num_rows($result7);
+
+if ($resultCheck7 > 0) {
+    while ($row7 = mysqli_fetch_assoc($result7)) {
+        $program5 = $row7['program'];
+    }
+}else{
+    $program5 = '';
+}
+
+$sql8 = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP'";
+$result8 = mysqli_query($conn, $sql8);
+$resultCheck8 = mysqli_num_rows($result8);
+
+if ($resultCheck8 > 0) {
+    while ($row8 = mysqli_fetch_assoc($result8)) {
+        $program6 = $row8['program'];
+    }
+}else{
+    $program6 = '';
+}

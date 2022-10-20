@@ -122,6 +122,237 @@
     </div>
 </div>
 
+<!--Add FHE LOA-->
+<div class="modal fade" role="dialog" tabindex="-1" id="add_loa_fhe">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id='add_loa_fhe_form'>
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Reason for LOA (FHE)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group"><label>Reason for LOA</label>
+                        <select id="fhe_loa_reason" name="fhe_loa_reason" class="form-control" required>
+                            <option selected disabled value="">Select Reason for Dropping</option>
+                            <option value="Academic Difficulty">Academic Difficulty</option>
+                            <option value="Employment/Looking for Work">Employment/Looking for Work</option>
+                            <option value="Financial Concerns">Financial Concerns</option>
+                            <option value="Pregnancy/Marriage/Family Issues">Pregnancy/Marriage/Family Issues</option>
+                            <option value="Health/Illness/Disability">Health/Illness/Disability</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>If other reason please specify:</label><input id="fhe_loa_other" name="fhe_loa_other" class="form-control" type="text">
+                    </div>
+                    <hr>
+                    <div class="form-group"><label>No. of Dropouts</label></div>
+
+                    <div class="form-group">
+                        <label>1st Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="fhe_loa_1st_male" name="fhe_loa_1st_male" class="form-control" type="number" min="0" /></div>
+                            <div class="col"><input id="fhe_loa_1st_female" name="fhe_loa_1st_female" class="form-control" type="number" min="0" /></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>2nd Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="fhe_loa_2nd_male" name="fhe_loa_2nd_male" class="form-control" type="number" min="0" /></div>
+                            <div class="col"><input id="fhe_loa_2nd_female" name="fhe_loa_2nd_female" class="form-control" type="number" min="0" /></div>
+                        </div>
+                    </div>
+
+                    <?php
+                    if ($ac_calendar == 'Trimester' or $ac_calendar == 'Trimester with Summer') {
+                        echo '
+                        <div class="form-group">
+                        <label>3rd Term</label>
+                            <div class="form-row">
+                                <div class="col"><input id="fhe_loa_3rd_male" name="fhe_loa_3rd_male" class="form-control" type="number" min="0"/></div>
+                                <div class="col"><input id="fhe_loa_3rd_female" name="fhe_loa_3rd_female" class="form-control" type="number" min="0"/></div>
+                            </div>
+                        </div>
+                    ';
+                    }
+
+                    if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Summer') {
+                        echo '
+                        <div class="form-group">
+                        <label>Summer/Midyear</label>
+                            <div class="form-row">
+                                <div class="col"><input id="fhe_loa_summer_midyear_male" name="fhe_loa_summer_midyear_male" class="form-control" type="number" min="0"/></div>
+                                <div class="col"><input id="fhe_loa_summer_midyear_female" name="fhe_loa_summer_midyear_female" class="form-control" type="number" min="0"/></div>
+                            </div>
+                        </div>
+                    ';
+                    }
+                    ?>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light" type="button" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!--Add TES LOA-->
+<div class="modal fade" role="dialog" tabindex="-1" id="add_loa_tes">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id='add_loa_tes_form'>
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Reason for LOA (TES)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group"><label>Reason for LOA</label>
+                        <select id="tes_loa_reason" name="tes_loa_reason" class="form-control" required>
+                            <option selected disabled value="">Select Reason for Dropping</option>
+                            <option value="Academic Difficulty">Academic Difficulty</option>
+                            <option value="Employment/Looking for Work">Employment/Looking for Work</option>
+                            <option value="Financial Concerns">Financial Concerns</option>
+                            <option value="Pregnancy/Marriage/Family Issues">Pregnancy/Marriage/Family Issues</option>
+                            <option value="Health/Illness/Disability">Health/Illness/Disability</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>If other reason please specify:</label><input id="tes_loa_other" name="tes_loa_other" class="form-control" type="text">
+                    </div>
+                    <hr>
+                    <div class="form-group"><label>No. of Dropouts</label></div>
+
+                    <div class="form-group">
+                        <label>1st Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="tes_loa_1st_male" name="tes_loa_1st_male" class="form-control" type="number" min="0" /></div>
+                            <div class="col"><input id="tes_loa_1st_female" name="tes_loa_1st_female" class="form-control" type="number" min="0" /></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>2nd Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="tes_loa_2nd_male" name="tes_loa_2nd_male" class="form-control" type="number" min="0" /></div>
+                            <div class="col"><input id="tes_loa_2nd_female" name="tes_loa_2nd_female" class="form-control" type="number" min="0" /></div>
+                        </div>
+                    </div>
+
+                    <?php
+                    if ($ac_calendar == 'Trimester' or $ac_calendar == 'Trimester with Summer') {
+                        echo '
+                        <div class="form-group">
+                        <label>3rd Term</label>
+                            <div class="form-row">
+                                <div class="col"><input id="tes_loa_3rd_male" name="tes_loa_3rd_male" class="form-control" type="number" min="0"/></div>
+                                <div class="col"><input id="tes_loa_3rd_female" name="tes_loa_3rd_female" class="form-control" type="number" min="0"/></div>
+                            </div>
+                        </div>
+                    ';
+                    }
+
+                    if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Summer') {
+                        echo '
+                        <div class="form-group">
+                        <label>Summer/Midyear</label>
+                            <div class="form-row">
+                                <div class="col"><input id="tes_loa_summer_midyear_male" name="tes_loa_summer_midyear_male" class="form-control" type="number" min="0"/></div>
+                                <div class="col"><input id="tes_loa_summer_midyear_female" name="tes_loa_summer_midyear_female" class="form-control" type="number" min="0"/></div>
+                            </div>
+                        </div>
+                    ';
+                    }
+                    ?>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light" type="button" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Add TDP LOA-->
+<div class="modal fade" role="dialog" tabindex="-1" id="add_loa_tdp">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id='add_loa_tdp_form'>
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Reason for LOA (TDP)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group"><label>Reason for LOA</label>
+                        <select id="tdp_loa_reason" name="tdp_loa_reason" class="form-control" required>
+                            <option selected disabled value="">Select Reason for Dropping</option>
+                            <option value="Academic Difficulty">Academic Difficulty</option>
+                            <option value="Employment/Looking for Work">Employment/Looking for Work</option>
+                            <option value="Financial Concerns">Financial Concerns</option>
+                            <option value="Pregnancy/Marriage/Family Issues">Pregnancy/Marriage/Family Issues</option>
+                            <option value="Health/Illness/Disability">Health/Illness/Disability</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>If other reason please specify:</label><input id="tdp_loa_other" name="tdp_loa_other" class="form-control" type="text">
+                    </div>
+                    <hr>
+                    <div class="form-group"><label>No. of Dropouts</label></div>
+
+                    <div class="form-group">
+                        <label>1st Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="tdp_loa_1st_male" name="tdp_loa_1st_male" class="form-control" type="number" min="0" /></div>
+                            <div class="col"><input id="tdp_loa_1st_female" name="tdp_loa_1st_female" class="form-control" type="number" min="0" /></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>2nd Term</label>
+                        <div class="form-row">
+                            <div class="col"><input id="tdp_loa_2nd_male" name="tdp_loa_2nd_male" class="form-control" type="number" min="0" /></div>
+                            <div class="col"><input id="tdp_loa_2nd_female" name="tdp_loa_2nd_female" class="form-control" type="number" min="0" /></div>
+                        </div>
+                    </div>
+
+                    <?php
+                    if ($ac_calendar == 'Trimester' or $ac_calendar == 'Trimester with Summer') {
+                        echo '
+                        <div class="form-group">
+                        <label>3rd Term</label>
+                            <div class="form-row">
+                                <div class="col"><input id="tdp_loa_3rd_male" name="tdp_loa_3rd_male" class="form-control" type="number" min="0"/></div>
+                                <div class="col"><input id="tdp_loa_3rd_female" name="tdp_loa_3rd_female" class="form-control" type="number" min="0"/></div>
+                            </div>
+                        </div>
+                    ';
+                    }
+
+                    if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Summer') {
+                        echo '
+                        <div class="form-group">
+                        <label>Summer/Midyear</label>
+                            <div class="form-row">
+                                <div class="col"><input id="tdp_loa_summer_midyear_male" name="tdp_loa_summer_midyear_male" class="form-control" type="number" min="0"/></div>
+                                <div class="col"><input id="tdp_loa_summer_midyear_female" name="tdp_loa_summer_midyear_female" class="form-control" type="number" min="0"/></div>
+                            </div>
+                        </div>
+                    ';
+                    }
+                    ?>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light" type="button" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <!--Edit FHE Dropouts-->
 <div class="modal fade" role="dialog" tabindex="-1" id="edit_dropouts_fhe_modal">

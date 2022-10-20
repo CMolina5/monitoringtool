@@ -160,7 +160,7 @@ $cnt = 1;
                             </div>
                         </li>
                         <li class="list-group-item border-white">
-                            <div class="form-group"><label><?php echo"".$cnt++."" ?>. Submitted reports regarding the implementation of FHE, TES, and/or TDP as required</label>
+                            <div class="form-group"><label><?php echo"".$cnt++."" ?>. Submitted reports on time regarding the implementation of FHE, TES, and/or TDP as required </label>
                                 <div class="form-row">
                                     <div class="col-12 col-md-6 col-xl-3">
                                         <div class="custom-control custom-radio"><input class="custom-control-input" type="radio" id="formCheck-13" name="answer6" 
@@ -187,7 +187,7 @@ $cnt = 1;
                     <?php
                         if($fhe=='yes'){
                             echo"<li class='list-group-item border-white'>
-                            <div class='form-group'><label>".$cnt++.". Submitted to the UniFAST the list of qualified students and FHE beneficiaries</label>
+                            <div class='form-group'><label>".$cnt++.". Submitted to the UniFAST the list of qualified students and FHE beneficiaries on time</label>
                                 <div class='form-row'>
                                     <div class='col-12 col-md-6 col-xl-3'>
                                         <div class='custom-control custom-radio'><input class='custom-control-input' type='radio' id='formCheck-15' name='answer7'"; 
@@ -318,7 +318,7 @@ $cnt = 1;
                     
 
                         echo'<li class="list-group-item border-white">
-                            <div class="form-group"><label>'.$cnt++.'. Disseminated information to qualified TES grantees</label>
+                            <div class="form-group"><label>'.$cnt++.'. Disseminated continously information to qualified TES grantees</label>
                                 <div class="form-row">
                                     <div class="col-12 col-md-6 col-xl-3">
                                         <div class="custom-control custom-radio"><input class="custom-control-input" type="radio" id="formCheck-25" name="answer12"'; 

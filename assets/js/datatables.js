@@ -198,6 +198,87 @@ $(document).ready(function () {
         }
     });
 
+     //tbl_fhe_loa
+     $('#tbl_fhe_loa').DataTable({
+        "order": [[0, "desc"]],
+        orderCellsTop: true,
+        fixedHeader: true
+    });
+
+    $('#tbl_fhe_loa').editable({
+        mode: 'inline',
+        container: 'body',
+        selector: 'td.beneficiaries',
+        // title: 'Total Beneficiaries',
+        url: "includes/stufap/inc_fhe_update_loa.php",
+        type: "POST",
+        min: 0,
+        placeholder: 'No. of Beneficiaries',
+        // showbuttons: false,
+        defaultValue: 0,
+        toggle: 'dblclick',
+        //dataType: 'json',
+        validate: function (value) {
+            if ($.trim(value) == '') {
+                return 'This field is required';
+            }
+        }
+    });
+
+    //tbl_tes_loa
+    $('#tbl_tes_loa').DataTable({
+        "order": [[0, "desc"]],
+        orderCellsTop: true,
+        fixedHeader: true
+    });
+
+    $('#tbl_tes_loa').editable({
+        mode: 'inline',
+        container: 'body',
+        selector: 'td.beneficiaries',
+        // title: 'Total Beneficiaries',
+        url: "includes/stufap/inc_tes_update_loa.php",
+        type: "POST",
+        min: 0,
+        placeholder: 'No. of Beneficiaries',
+        // showbuttons: false,
+        defaultValue: 0,
+        toggle: 'dblclick',
+        //dataType: 'json',
+        validate: function (value) {
+            if ($.trim(value) == '') {
+                return 'This field is required';
+            }
+        }
+    });
+
+    //tbl_tdp_loa
+    $('#tbl_tdp_loa').DataTable({
+        "order": [[0, "desc"]],
+        orderCellsTop: true,
+        fixedHeader: true
+    });
+
+    $('#tbl_tdp_loa').editable({
+        mode: 'inline',
+        container: 'body',
+        selector: 'td.beneficiaries',
+        // title: 'Total Beneficiaries',
+        url: "includes/stufap/inc_tdp_update_loa.php",
+        type: "POST",
+        min: 0,
+        placeholder: 'No. of Beneficiaries',
+        // showbuttons: false,
+        defaultValue: 0,
+        toggle: 'dblclick',
+        //dataType: 'json',
+        validate: function (value) {
+            if ($.trim(value) == '') {
+                return 'This field is required';
+            }
+        }
+    });
+
     //tbl_tes_category
     $('#tbl_tes_category').DataTable({
         "order": [[0, "desc"]],

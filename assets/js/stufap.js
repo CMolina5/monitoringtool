@@ -188,6 +188,135 @@ $(document).ready(function () {
         });
     });
 
+    //FHE Add LOA
+    //add reason for loa to the table
+    $('#add_loa_fhe').on('submit', function (event) {//modal id
+        event.preventDefault();
+        $.ajax({
+            url: "includes/stufap/inc_fhe_add_loa.php",//php file
+            method: "POST",
+            data: $('#add_loa_fhe_form').serialize(),//modal form id
+            success: function (data) {
+                $('#tbl_fhe_loa_div').html(data);//table div id
+                $('#add_loa_fhe_form')[0].reset();//modal form id
+                $('#add_loa_fhe').modal('hide');//modal id
+
+                $('#tbl_fhe_loa').DataTable({//datatable id
+                    "order": [[0, "desc"]],
+                    orderCellsTop: true,
+                    fixedHeader: true
+                })
+
+                $('#tbl_fhe_loa').editable({
+                    mode: 'inline',
+                    container: 'body',
+                    selector: 'td.beneficiaries',
+                    // title: 'Total Beneficiaries',
+                    url: "includes/stufap/inc_fhe_update_loa.php",
+                    type: "POST",
+                    min: 0,
+                    placeholder: 'No. of Beneficiaries',
+                    // showbuttons: false,
+                    defaultValue: 0,
+                    toggle: 'dblclick',
+                    //dataType: 'json',
+                    validate: function (value) {
+                        if ($.trim(value) == '') {
+                            return 'This field is required';
+                        }
+                    }
+                });
+
+            }
+        });
+    });
+
+    //TES Add LOA
+    //add reason for loa to the table
+    $('#add_loa_tes').on('submit', function (event) {//modal id
+        event.preventDefault();
+        $.ajax({
+            url: "includes/stufap/inc_tes_add_loa.php",//php file
+            method: "POST",
+            data: $('#add_loa_tes_form').serialize(),//modal form id
+            success: function (data) {
+                $('#tbl_tes_loa_div').html(data);//table div id
+                $('#add_loa_tes_form')[0].reset();//modal form id
+                $('#add_loa_tes').modal('hide');//modal id
+
+                $('#tbl_tes_loa').DataTable({//datatable id
+                    "order": [[0, "desc"]],
+                    orderCellsTop: true,
+                    fixedHeader: true
+                })
+
+                $('#tbl_tes_loa').editable({
+                    mode: 'inline',
+                    container: 'body',
+                    selector: 'td.beneficiaries',
+                    // title: 'Total Beneficiaries',
+                    url: "includes/stufap/inc_tes_update_loa.php",
+                    type: "POST",
+                    min: 0,
+                    placeholder: 'No. of Beneficiaries',
+                    // showbuttons: false,
+                    defaultValue: 0,
+                    toggle: 'dblclick',
+                    //dataType: 'json',
+                    validate: function (value) {
+                        if ($.trim(value) == '') {
+                            return 'This field is required';
+                        }
+                    }
+                });
+
+            }
+        });
+    });
+
+    //TDP Add LOA
+    //add reason for loa to the table
+    $('#add_loa_tdp').on('submit', function (event) {//modal id
+        event.preventDefault();
+        $.ajax({
+            url: "includes/stufap/inc_tdp_add_loa.php",//php file
+            method: "POST",
+            data: $('#add_loa_tdp_form').serialize(),//modal form id
+            success: function (data) {
+                $('#tbl_tdp_loa_div').html(data);//table div id
+                $('#add_loa_tdp_form')[0].reset();//modal form id
+                $('#add_loa_tdp').modal('hide');//modal id
+
+                $('#tbl_tdp_loa').DataTable({//datatable id
+                    "order": [[0, "desc"]],
+                    orderCellsTop: true,
+                    fixedHeader: true
+                })
+
+                $('#tbl_tdp_loa').editable({
+                    mode: 'inline',
+                    container: 'body',
+                    selector: 'td.beneficiaries',
+                    // title: 'Total Beneficiaries',
+                    url: "includes/stufap/inc_tdp_update_loa.php",
+                    type: "POST",
+                    min: 0,
+                    placeholder: 'No. of Beneficiaries',
+                    // showbuttons: false,
+                    defaultValue: 0,
+                    toggle: 'dblclick',
+                    //dataType: 'json',
+                    validate: function (value) {
+                        if ($.trim(value) == '') {
+                            return 'This field is required';
+                        }
+                    }
+                });
+
+            }
+        });
+    });
+
     //select degree program from table and display to modal
     $(document).on('click', '.edit_dropouts_fhe', function () {
         var uid = $(this).attr("id");
