@@ -8,6 +8,7 @@ echo "
 <table id='tbl_tes_category' class='table-bordered tbl-style stripe' style='width: 100%;'>
     <thead>
         <tr>
+            <th class='text-center' rowspan='3' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_tes_category_checkbox'></th>
             <th class='text-center' rowspan='3' style='background-color: #3C70AB; color:#ffff;'>TES CATEGORY</th>
             <th class='text-center' colspan='8' style='background-color: #3C70AB; color:#ffff;'>1ST TERM</th>
             <th class='text-center' colspan='8' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
@@ -118,6 +119,7 @@ if ($resultCheck > 0) {
         $total_with_board_summer_midyear_female = $row['total_with_board_summer_midyear_female'];
 
         echo "<tr>
+        <td class='text-center'><input type='checkbox' id='$uid' name='tes_category_checkbox' value='$uid'></td>
         <td>$tes_category</td>
         <td data-name='total_tes_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_1st_male</td>
         <td data-name='total_tes_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_1st_female</td>

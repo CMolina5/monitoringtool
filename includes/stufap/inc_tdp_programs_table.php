@@ -8,6 +8,7 @@ echo "
 <table id='tbl_programs_tdp' class='table-bordered tbl-style stripe' style='width: 100%;'>
 <thead>
     <tr>
+        <th class='text-center' rowspan='4' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_tdp_programs_checkbox'></th>
         <th class='text-center' rowspan='4' style='background-color: #3C70AB; color:#ffff;'>DEGREE PROGRAM</th>
         <th class='text-center' colspan='48' style='background-color: #3C70AB; color:#ffff;'>TOTAL TDP GRANTEES</th>
         <th class='text-center' rowspan='3' colspan='2' style='background-color: #3C70AB; color:#ffff;'>NO. OF TDP GRANTEES WHO GRADUATED</th>
@@ -175,6 +176,7 @@ if ($resultCheck > 0) {
         
     echo"
         <tr>
+            <td class='text-center'><input type='checkbox' id='$uid' name='tdp_programs_checkbox' value='$uid'></td>
             <td class='text-left'>$program_name</td>
 
             <td data-name='total_tdp_1sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_1yr_male</td>

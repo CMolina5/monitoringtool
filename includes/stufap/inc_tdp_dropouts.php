@@ -8,6 +8,7 @@ echo "
 <table id='tbl_tdp_dropouts' class='table-bordered tbl-style stripe' style='width: 100%;'>
 <thead>
 <tr>
+    <th class='text-center' rowspan='2'><input type='checkbox' name='main_tdp_dropouts_checkbox'></th>
     <th class='text-center' rowspan='2'>REASONS FOR DROPPING</th>
     <th class='text-center' colspan='2'>1ST TERM</th>
     <th class='text-center' colspan='2'>2ND TERM</th>
@@ -45,6 +46,7 @@ if ($resultCheck > 0) {
        
         echo "
         <tr>
+            <td class='text-center'><input type='checkbox' id='$uid' name='tdp_dropouts_checkbox' value='$uid'></td>
             <td>".strtoUpper($reason)."</td>
             <td data-name='total_dropout_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_1st_male</td>
             <td data-name='total_dropout_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_1st_female</td>

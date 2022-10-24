@@ -67,6 +67,23 @@
     </div>
 </div>
 
+<!---MODAL FOR REMOVING OTHER FUNDED STUFAPS--->
+<div role="dialog" tabindex="-1" class="modal fade show" id="removestufap">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id="remove_other_stufap">
+                <div class="modal-header">
+                    <h4 class="modal-title">Remove Other Funded StuFAP Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to remove this StuFAP?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-danger" type="submit">Confirm</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!---MODAL FOR ADDING NEW STUFAPS--->
 <div class="modal fade" role="dialog" tabindex="-1" id="addstufap">
     <div class="modal-dialog modal-lg" role="document">

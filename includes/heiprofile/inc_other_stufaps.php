@@ -8,9 +8,9 @@ echo "
 <table id='tbl_other_stufaps' class='table-bordered tbl-style stripe' style='width: 100%;'>
 <thead>
     <tr>
-        <th class='d-none' rowspan='2' colspan='1' style='background-color: #3C70AB; color:#ffff;'>uid</th>
-        <th class='text-center' rowspan='2' colspan='1' style='background-color: #3C70AB; color:#ffff;'>NAME OF STUFAP</th>
-        <th class='text-center' rowspan='2' colspan='1' style='background-color: #3C70AB; color:#ffff;'>TYPE OF FUNDING</th>
+        <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_other_stufap_checkbox'></th>
+        <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>NAME OF STUFAP</th>
+        <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>TYPE OF FUNDING</th>
         <th class='text-center' colspan='6' style='background-color: #3C70AB; color:#ffff;'>YEAR LEVEL</th>
       
     </tr>
@@ -40,7 +40,7 @@ if ($resultCheck > 0) {
 
         echo "
         <tr>
-            <td class='d-none'>$uid</td>
+            <td class='text-center'><input type='checkbox' id='$uid' name='other_stufap_checkbox' value='$uid'></td>
             <td data-name='stufap_name' class='other_stufap_name text-center' data-type='text' data-pk='$uid'>".strtoUpper($stufap_name)."</td>
             <td data-name='stufap_type' class='select_type text-center' data-type='select' data-inputclass='table-select' data-pk='$uid'>$stufap_type</td>
             <td data-name='total_stufap_1st' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_stufap_1st</td>

@@ -18,7 +18,7 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class="form-group"><label>Name of Higher Education Institution (HEI)</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-school icons-input"></i></span></div><input name="hei_name" class="form-control" type="text" value="<?php echo $_SESSION['hei_name']; ?>" readonly>
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-school icons-input"></i></span></div><input name="hei_name" class="form-control" type="text" value="<?php echo utf8_encode($_SESSION['hei_name']); ?>" readonly>
                     </div>
                 </div>
                 <div class="form-group"><label>Type of HEI</label>
@@ -147,7 +147,7 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class="form-group"><label>HEI Address</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-map-marked-alt icons-input"></i></span></div><input name="hei_address" class="form-control" type="text" value="<?php echo $_SESSION['hei_address']; ?>" readonly>
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-map-marked-alt icons-input"></i></span></div><input name="hei_address" class="form-control" type="text" value="<?php echo utf8_encode($_SESSION['hei_address']); ?>" readonly>
                     </div>
                 </div>
                 <div class="form-group">
@@ -155,12 +155,12 @@ include 'includes/heiprofile/inc_template.php'
                     <input name="hei_region_nir" class="form-control" type="text" required="" value="<?php echo $_SESSION['hei_region_nir']; ?>" readonly>
                 </div>
                 <div class="form-group">
-                <label>Province</label><label>Province</label>
-                    <input name="hei_prov_name" class="form-control" type="text" required="" value="<?php echo $_SESSION['hei_prov_name']; ?>" readonly>
+                <label>Province</label>
+                    <input name="hei_prov_name" class="form-control" type="text" required="" value="<?php echo utf8_encode($_SESSION['hei_prov_name']); ?>" readonly>
                 </div>
                 <div class="form-group"><label>Official Email Address</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="material-icons icons-input">email</i></span></div><input name="hei_email_add" class="form-control" type="email" value="<?php echo $hei_email ?>" required="">
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="material-icons icons-input">email</i></span></div><input name="hei_email_add" class="form-control" type="email" value="<?php echo utf8_encode($hei_email) ?>" required="">
                         <div class="input-group-prepend"></div>
                     </div>
                 </div>
@@ -187,7 +187,7 @@ include 'includes/heiprofile/inc_template.php'
                 <div class="form-group"><label class="label-parts">I.B PROGRAM ADMINISTRATION</label></div>
                 <div class="form-group"><label>Name of the Head of HEI</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user icons-input"></i></span></div><input name="hei_head_name" class="form-control" type="text" placeholder="Firstname   Middlename   Lastname" value="<?php echo $hei_head_name ?>" required="">
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user icons-input"></i></span></div><input name="hei_head_name" class="form-control" type="text" placeholder="Firstname   Middlename   Lastname" value="<?php echo utf8_encode($hei_head_name) ?>" required="">
                     </div>
                 </div>
                 <div class="form-group"><label>Full Designation</label><label class="text-danger" title="required">&nbsp;*</label>
@@ -225,7 +225,7 @@ include 'includes/heiprofile/inc_template.php'
                 echo"<div class='card card-style'>
                 <div class='form-group'><label>Name of Personnel In-charge of FHE</label><label class='text-danger' title='required'>&nbsp;*</label>
                     <div class='input-group'>
-                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='fhe_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='$fhe_focal_name' required=''>
+                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='fhe_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='".utf8_encode($fhe_focal_name)."' required=''>
                     </div>
                 </div>
                 <div class='form-group'><label>Full Designation</label><label class='text-danger' title='required'>&nbsp;*</label>
@@ -263,7 +263,7 @@ include 'includes/heiprofile/inc_template.php'
                 echo"<div class='card card-style'>
                 <div class='form-group'><label>Name of TES Focal Person</label><label class='text-danger' title='required'>&nbsp;*</label>
                     <div class='input-group'>
-                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='tes_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='$tes_focal_name' required=''>
+                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='tes_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='".utf8_encode($tes_focal_name)."' required=''>
                     </div>
                 </div>
                 <div class='form-group'><label>Full Designation</label><label class='text-danger' title='required'>&nbsp;*</label>
@@ -301,7 +301,7 @@ include 'includes/heiprofile/inc_template.php'
                     echo"<div class='card card-style'>
                     <div class='form-group'><label>Name of Personnel In-charge of TDP</label><label class='text-danger' title='required'>&nbsp;*</label>
                         <div class='input-group'>
-                            <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='tdp_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='$tdp_focal_name' required=''>
+                            <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='tdp_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='".utf8_encode($tdp_focal_name)."' required=''>
                         </div>
                     </div>
                     <div class='form-group'><label>Full Designation</label><label class='text-danger' title='required'>&nbsp;*</label>
@@ -1055,7 +1055,18 @@ include 'includes/heiprofile/inc_template.php'
             </div>
             <div class="card card-style">
                 <div class="form-group"><label class="label-parts">I.D PROGRAM OFFERINGS</label><label style="font-style: italic;">Please list all bachelor's degree programs offered for the Academic Year. Indicate the Government Recognition and Certificate of Program Compliance Nos. for each program.</label>
-                    <p class="text-right"><button class="btn btn-success" data-toggle="modal" id="btn-add-program" type="button" data-target="#addprogram">ADD PROGRAM</button></p>
+                    
+                    <div class="form-row text-right">
+                    <div class="col">
+                    <p class="text-right">
+                        <div role="group" class="btn-group">
+                            <button class="btn btn-success" data-toggle="modal" id="btn-add-program" type="button" data-target="#addprogram">ADD PROGRAM</button>
+                            <button class="btn btn-danger d-none" data-toggle="modal" id="btn-delete-program" name="btn-delete-program" type="button" data-target="#removeprogram">REMOVE PROGRAM</button>
+                        </div>
+                    </p>
+                    </div>
+                    </div>
+
                     <div id="tbl_programs" class="table table-responsive tbl-style">
                         
                                 <?php
@@ -1067,7 +1078,18 @@ include 'includes/heiprofile/inc_template.php'
             </div>
             <div class="card card-style">
                 <div class="form-group"><label class="label-parts">I.E OTHER LOCALLY-AND-NATIONALLY-FUNDED STUFAPS</label><label style="font-style: italic;">List of all locally-and-nationally-funded StuFAPs availed in the institution, and number of beneficiaries per year level</label>
-                    <p class="text-right"><button class="btn btn-success" data-toggle="modal" id="btn-add-stufap" type="button" data-target="#addstufap">ADD STUFAP</button></p>
+
+                    <div class="form-row text-right">
+                    <div class="col">
+                    <p class="text-right">
+                        <div role="group" class="btn-group">
+                            <button class="btn btn-success" data-toggle="modal" id="btn-add-stufap" type="button" data-target="#addstufap">ADD STUFAP</button>
+                            <button class="btn btn-danger d-none" data-toggle="modal" id="btn-delete-other-stufap" name="btn-delete-other-stufap" type="button" data-target="#removestufap">REMOVE STUFAP</button>
+                        </div>
+                    </p>
+                    </div>
+                    </div>
+
                     <div id="tbl_stufaps" class="table table-responsive tbl-style">
                         
                                 <?php

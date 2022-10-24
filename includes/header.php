@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once 'includes/db_connection.php';
+header('Content-Type: text/html; charset="UTF-8"');
 ?>
 
 <!DOCTYPE html>
@@ -10,10 +11,6 @@ include_once 'includes/db_connection.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>UniFAST Monitoring Tool</title>
-    <link rel="icon" type="image/png" sizes="1024x1021" href="assets/img/UnifastLogo.png">
-    <link rel="icon" type="image/png" sizes="1024x1021" href="assets/img/UnifastLogo.png">
-    <link rel="icon" type="image/png" sizes="1024x1021" href="assets/img/UnifastLogo.png">
-    <link rel="icon" type="image/png" sizes="1024x1021" href="assets/img/UnifastLogo.png">
     <link rel="icon" type="image/png" sizes="1024x1021" href="assets/img/UnifastLogo.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">

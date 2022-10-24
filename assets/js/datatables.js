@@ -1,10 +1,14 @@
 //tbl_program_offerings
 $(document).ready(function () {
     $('#tbl_program_offerings').DataTable({
-        "order": [[0, "desc"]],
+        "order": [[1, "desc"]],
         "lengthChange": false,
         orderCellsTop: true,
-        fixedHeader: true
+        fixedHeader: true,
+        "columnDefs": [ {
+            "targets": 0,
+            "orderable": false
+            } ]
     });
 
     $('#tbl_program_offerings').editable({
@@ -31,6 +35,10 @@ $(document).ready(function () {
         "order": [[0, "desc"]],
         orderCellsTop: true,
         fixedHeader: true,
+         "columnDefs": [ {
+            "targets": 0,
+            "orderable": false
+            } ]
     });
 
     $('#tbl_other_stufaps').editable({
