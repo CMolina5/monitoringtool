@@ -2,10 +2,17 @@
 session_start();
 include_once '../db_connection.php';
 
-$uid=mysqli_real_escape_string($conn, $_SESSION['dropouts_id']);
+$uid= $_POST['uid'];
 
-$sql = "DELETE FROM tbl_drop_outs
-WHERE uid='$uid' ";
-$result = mysqli_query($conn, $sql);
-
-include "./inc_tes_dropouts.php";
+foreach ($uid as $id){
+    $sql = "DELETE FROM tbl_drop_outs
+   WHERE uid =".$id;
+    $result = mysqli_query($conn, $sql);
+}
+   
+if (!$result) {
+    echo mysqli_error($conn);
+    die();
+} else {
+    include "./inc_tes_dropouts.php";
+}

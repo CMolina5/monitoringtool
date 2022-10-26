@@ -118,7 +118,11 @@ $(document).ready(function () {
                 $('#tbl_fhe_category').DataTable({//datatable id
                     "order": [[0, "desc"]],
                     orderCellsTop: true,
-                    fixedHeader: true
+                    fixedHeader: true,
+                    "columnDefs": [{
+                        "targets": 0,
+                        "orderable": false
+                    }]
                 })
 
                 $('#tbl_fhe_category').editable({
@@ -139,7 +143,7 @@ $(document).ready(function () {
                             return 'This field is required';
                         }
                     }
-                });            
+                });
 
             }
         });
@@ -402,75 +406,75 @@ $(document).ready(function () {
                             total3
                         );
 
-                         // Total over all pages
-                         total4 = api
-                         .column(4)
-                         .data()
-                         .reduce(function (a, b) {
-                             return intVal(a) + intVal(b);
-                         }, 0);
+                        // Total over all pages
+                        total4 = api
+                            .column(4)
+                            .data()
+                            .reduce(function (a, b) {
+                                return intVal(a) + intVal(b);
+                            }, 0);
 
-                     // Update footer
-                     $(api.column(4).footer()).html(
-                         total4
-                     );
+                        // Update footer
+                        $(api.column(4).footer()).html(
+                            total4
+                        );
 
-                     // Total over all pages
-                     total5 = api
-                         .column(5)
-                         .data()
-                         .reduce(function (a, b) {
-                             return intVal(a) + intVal(b);
-                         }, 0);
+                        // Total over all pages
+                        total5 = api
+                            .column(5)
+                            .data()
+                            .reduce(function (a, b) {
+                                return intVal(a) + intVal(b);
+                            }, 0);
 
-                     // Update footer
-                     $(api.column(5).footer()).html(
-                         total5
-                     );
+                        // Update footer
+                        $(api.column(5).footer()).html(
+                            total5
+                        );
 
-                     // Total over all pages
-                     total6 = api
-                         .column(6)
-                         .data()
-                         .reduce(function (a, b) {
-                             return intVal(a) + intVal(b);
-                         }, 0);
+                        // Total over all pages
+                        total6 = api
+                            .column(6)
+                            .data()
+                            .reduce(function (a, b) {
+                                return intVal(a) + intVal(b);
+                            }, 0);
 
-                     // Update footer
-                     $(api.column(6).footer()).html(
-                         total6
-                     );
+                        // Update footer
+                        $(api.column(6).footer()).html(
+                            total6
+                        );
 
-                     // Total over all pages
-                     total7 = api
-                         .column(7)
-                         .data()
-                         .reduce(function (a, b) {
-                             return intVal(a) + intVal(b);
-                         }, 0);
+                        // Total over all pages
+                        total7 = api
+                            .column(7)
+                            .data()
+                            .reduce(function (a, b) {
+                                return intVal(a) + intVal(b);
+                            }, 0);
 
-                     // Update footer
-                     $(api.column(7).footer()).html(
-                         total7
-                     );
+                        // Update footer
+                        $(api.column(7).footer()).html(
+                            total7
+                        );
 
-                     // Total over all pages
-                     total8 = api
-                         .column(8)
-                         .data()
-                         .reduce(function (a, b) {
-                             return intVal(a) + intVal(b);
-                         }, 0);
+                        // Total over all pages
+                        total8 = api
+                            .column(8)
+                            .data()
+                            .reduce(function (a, b) {
+                                return intVal(a) + intVal(b);
+                            }, 0);
 
-                     // Update footer
-                     $(api.column(8).footer()).html(
-                         total8
-                     );
+                        // Update footer
+                        $(api.column(8).footer()).html(
+                            total8
+                        );
 
-                     // Update footer
-                     $(api.column(9).footer()).html(
-                         'GRAND TOTAL:   ' + (total + total2 + total3 + total4 + total5 + total6 + total7 + total8) + ''
-                     );
+                        // Update footer
+                        $(api.column(9).footer()).html(
+                            'GRAND TOTAL:   ' + (total + total2 + total3 + total4 + total5 + total6 + total7 + total8) + ''
+                        );
 
 
                     }
@@ -482,163 +486,20 @@ $(document).ready(function () {
 
     //Remove reason for dropouts
     //remove data from the degree program table
-    $(document).on('click', '.remove_dropouts_fhe', function () {
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/stufap/inc_select_dropouts_reason.php",
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#remove_fhe_dropouts_modal').modal('show')
-            }
-        })
-    });
-
-    //delete degree program to the table
-    $('#remove_fhe_dropouts_modal').on('submit', function (event) {
-        event.preventDefault();
-        $.ajax({
-            url: "includes/stufap/inc_fhe_remove_dropouts.php",
-            method: "POST",
-            data: $('#remove_fhe_dropouts_form').serialize(),
-            success: function (data) {
-                $('#tbl_fhe_dropouts_div').html(data);
-                $('#remove_fhe_dropouts_form')[0].reset();
-                $('#remove_fhe_dropouts_modal').modal('hide');
-
-                $('#tbl_fhe_dropouts').DataTable({
-                    "order": [[0, "desc"]],
-                    orderCellsTop: true,
-                    fixedHeader: true,
-                    "footerCallback": function (row, data, start, end, display) {
-                        var api = this.api();
-
-                        // Remove the formatting to get integer data for summation
-                        var intVal = function (i) {
-                            return typeof i === 'string' ?
-                                i.replace(/[\$,]/g, '') * 1 :
-                                typeof i === 'number' ?
-                                    i : 0;
-                        };
-
-                        // Total over all pages
-                        total = api
-                            .column(1)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(1).footer()).html(
-                            total
-                        );
-
-                        // Total over all pages
-                        total2 = api
-                            .column(2)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(2).footer()).html(
-                            total2
-                        );
-
-                        // Total over all pages
-                        total3 = api
-                            .column(3)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(3).footer()).html(
-                            total3
-                        );
-
-                         // Total over all pages
-                         total4 = api
-                         .column(4)
-                         .data()
-                         .reduce(function (a, b) {
-                             return intVal(a) + intVal(b);
-                         }, 0);
-
-                     // Update footer
-                     $(api.column(4).footer()).html(
-                         total4
-                     );
-
-                     // Total over all pages
-                     total5 = api
-                         .column(5)
-                         .data()
-                         .reduce(function (a, b) {
-                             return intVal(a) + intVal(b);
-                         }, 0);
-
-                     // Update footer
-                     $(api.column(5).footer()).html(
-                         total5
-                     );
-
-                     // Total over all pages
-                     total6 = api
-                         .column(6)
-                         .data()
-                         .reduce(function (a, b) {
-                             return intVal(a) + intVal(b);
-                         }, 0);
-
-                     // Update footer
-                     $(api.column(6).footer()).html(
-                         total6
-                     );
-
-                     // Total over all pages
-                     total7 = api
-                         .column(7)
-                         .data()
-                         .reduce(function (a, b) {
-                             return intVal(a) + intVal(b);
-                         }, 0);
-
-                     // Update footer
-                     $(api.column(7).footer()).html(
-                         total7
-                     );
-
-                     // Total over all pages
-                     total8 = api
-                         .column(8)
-                         .data()
-                         .reduce(function (a, b) {
-                             return intVal(a) + intVal(b);
-                         }, 0);
-
-                     // Update footer
-                     $(api.column(8).footer()).html(
-                         total8
-                     );
-
-                     // Update footer
-                     $(api.column(9).footer()).html(
-                         'GRAND TOTAL:   ' + (total + total2 + total3 + total4 + total5 + total6 + total7 + total8) + ''
-                     );
+    // $(document).on('click', '.remove_dropouts_fhe', function () {
+    //     var uid = $(this).attr("id");
+    //     $.ajax({
+    //         url: "includes/stufap/inc_select_dropouts_reason.php",
+    //         method: "POST",
+    //         data: { uid: uid },
+    //         dataType: "json",
+    //         success: function (data) {
+    //             $('#remove_fhe_dropouts_modal').modal('show')
+    //         }
+    //     })
+    // });
 
 
-
-                    }
-                })
-
-            }
-        });
-    });
     /*--------------------------------------------------------------------------------------------*/
     //TES Category Part
     //add tes category to the table
@@ -744,27 +605,6 @@ $(document).ready(function () {
         })
     });
 
-    //delete tes category to the table**
-    $('#remove_tes_category_modal').on('submit', function (event) {
-        event.preventDefault();
-        $.ajax({
-            url: "includes/stufap/inc_tes_remove_category.php",
-            method: "POST",
-            data: $('#remove_tes_category_form').serialize(),
-            success: function (data) {
-                $('#tbl_tes_category_div').html(data);
-                $('#remove_tes_category_form')[0].reset();
-                $('#add_tes_category_modal_body').load(' #add_tes_category_modal_body');//modal content id
-                $('#remove_tes_category_modal').modal('hide');
-
-                $('#tbl_tes_category').DataTable({
-                    "order": [[0, "desc"]],
-                    orderCellsTop: true,
-                    fixedHeader: true
-                })
-            }
-        });
-    });
     /*--------------------------------------------------------------------------------------------*/
     //TES Program Part
     //add tes program to the table**
@@ -1052,47 +892,6 @@ $(document).ready(function () {
         })
     });
 
-    //delete reason for drop out to the table tes**
-    $('#remove_tes_dropouts_modal').on('submit', function (event) {
-        event.preventDefault();
-        $.ajax({
-            url: "includes/stufap/inc_tes_remove_dropouts.php",
-            method: "POST",
-            data: $('#remove_tes_dropouts_form').serialize(),
-            success: function (data) {
-                $('#tbl_tes_dropouts_div').html(data);
-                $('#remove_tes_dropouts_form')[0].reset();
-                $('#remove_tes_dropouts_modal').modal('hide');
-
-                $('#tbl_tes_dropouts').DataTable({
-                    "order": [[0, "desc"]],
-                    orderCellsTop: true,
-                    fixedHeader: true
-                });
-
-                $('#tbl_tes_dropouts').editable({
-                    mode: 'inline',
-                    container: 'body',
-                    selector: 'td.beneficiaries',
-                    // title: 'Total Beneficiaries',
-                    url: "includes/stufap/inc_tes_update_dropouts.php",
-                    type: "POST",
-                    min: 0,
-                    placeholder: 'No. of Beneficiaries',
-                    // showbuttons: false,
-                    defaultValue: 0,
-                    toggle: 'dblclick',
-                    //dataType: 'json',
-                    validate: function (value) {
-                        if ($.trim(value) == '') {
-                            return 'This field is required';
-                        }
-                    }
-                });
-
-            }
-        });
-    });
     /*--------------------------------------------------------------------------------------------*/
     //TDP Program Part
     //add tdp program to the table**
@@ -1327,82 +1126,433 @@ $(document).ready(function () {
         });
     });
 
-    //Remove reason for dropouts
-    //remove data from the tbl_tdp_dropouts**
-    $(document).on('click', '.remove_dropouts_tdp', function () {
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/stufap/inc_select_dropouts_reason.php",
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#remove_tdp_dropouts_modal').modal('show')
-            }
-        })
-    });
 
-    //delete reason for drop out to the table tes**
-    $('#remove_tdp_dropouts_modal').on('submit', function (event) {
+    //delete fhe category to the table
+    $('#remove_fhe_category_modal').on('submit', function (event) {
         event.preventDefault();
+        var checkedCategory = [];
+        $($('input[name="fhe_category_checkbox"]:checked')).each(function () {
+            checkedCategory.push($(this).val());
+        });
+        let uid = checkedCategory;
         $.ajax({
-            url: "includes/stufap/inc_tdp_remove_dropouts.php",
-            method: "POST",
-            data: $('#remove_tdp_dropouts_form').serialize(),
+            url: "includes/stufap/inc_fhe_remove_category.php",
+            type: "POST",
+            data: {
+                uid: uid
+            },
+            // dataType: "json",
             success: function (data) {
-                $('#tbl_tdp_dropouts_div').html(data);
-                $('#remove_tdp_dropouts_form')[0].reset();
-                $('#remove_tdp_dropouts_modal').modal('hide');
+                $('#tbl_fhe_category_div').html(data);
 
-                $('#tbl_tdp_dropouts').DataTable({
-                    "order": [[0, "desc"]],
+                $('#tbl_fhe_category').DataTable({
+                    "order": [[1, "desc"]],
                     orderCellsTop: true,
                     fixedHeader: true,
-                    "footerCallback": function (row, data, start, end, display) {
-                        var api = this.api();
+                    "columnDefs": [{
+                        "targets": 0,
+                        "orderable": false
+                    }]
+                });
 
-                        // Remove the formatting to get integer data for summation
-                        var intVal = function (i) {
-                            return typeof i === 'string' ?
-                                i.replace(/[\$,]/g, '') * 1 :
-                                typeof i === 'number' ?
-                                    i : 0;
-                        };
-
-                        // Total over all pages
-                        total = api
-                            .column(1)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(1).footer()).html(
-                            total
-                        );
-
-                        // Total over all pages
-                        total2 = api
-                            .column(2)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(2).footer()).html(
-                            total2
-                        );
-
-                        // Update footer
-                        $(api.column(3).footer()).html(
-                            'GRAND TOTAL:   ' + (total + total2) + ''
-                        );
+                $('#tbl_fhe_category').editable({
+                    mode: 'inline',
+                    container: 'body',
+                    selector: 'td.beneficiaries',
+                    // title: 'Total Beneficiaries',
+                    url: "includes/stufap/inc_stufap_fhe_update_category.php",
+                    type: "POST",
+                    min: 0,
+                    placeholder: 'No. of Beneficiaries',
+                    // showbuttons: false,
+                    defaultValue: 0,
+                    toggle: 'dblclick',
+                    //dataType: 'json',
+                    validate: function (value) {
+                        if ($.trim(value) == '') {
+                            return 'This field is required';
+                        }
                     }
-                })
+                });
+                $('#btn-delete-fhe-category').addClass('d-none');
+                $('#add_fhe_category_form')[0].reset();//modal form id
+                $('#add_fhe_category_modal_body').load(' #add_fhe_category_modal_body');//modal content id
+                $('#remove_fhe_category_modal').modal('hide')
             }
         });
     });
+
+    //delete fhe dropouts to the table
+    $('#remove_fhe_dropouts_modal').on('submit', function (event) {
+        event.preventDefault();
+        var checkedDropouts = [];
+        $($('input[name="fhe_dropouts_checkbox"]:checked')).each(function () {
+            checkedDropouts.push($(this).val());
+        });
+        let uid = checkedDropouts;
+        $.ajax({
+            url: "includes/stufap/inc_fhe_remove_dropouts.php",
+            type: "POST",
+            data: {
+                uid: uid
+            },
+            // dataType: "json",
+            success: function (data) {
+                $('#tbl_fhe_dropouts_div').html(data);
+
+                $('#tbl_fhe_dropouts').DataTable({
+                    "order": [[1, "desc"]],
+                    orderCellsTop: true,
+                    fixedHeader: true,
+                    "columnDefs": [{
+                        "targets": 0,
+                        "orderable": false
+                    }]
+                });
+
+                $('#tbl_fhe_dropouts').editable({
+                    mode: 'inline',
+                    container: 'body',
+                    selector: 'td.beneficiaries',
+                    // title: 'Total Beneficiaries',
+                    url: "includes/stufap/inc_fhe_update_dropouts.php",
+                    type: "POST",
+                    min: 0,
+                    placeholder: 'No. of Beneficiaries',
+                    // showbuttons: false,
+                    defaultValue: 0,
+                    toggle: 'dblclick',
+                    //dataType: 'json',
+                    validate: function (value) {
+                        if ($.trim(value) == '') {
+                            return 'This field is required';
+                        }
+                    }
+                });
+                $('#btn-delete-fhe-dropouts').addClass('d-none');
+                $('#remove_fhe_dropouts_modal').modal('hide')
+            }
+        });
+    });
+
+//delete fhe loa to the table
+$('#remove_fhe_loa_modal').on('submit', function (event) {
+    event.preventDefault();
+    var checkedLoa = [];
+    $($('input[name="fhe_loa_checkbox"]:checked')).each(function () {
+        checkedLoa.push($(this).val());
+    });
+    let uid = checkedLoa;
+    $.ajax({
+        url: "includes/stufap/inc_fhe_remove_loa.php",
+        type: "POST",
+        data: {
+            uid: uid
+        },
+        // dataType: "json",
+        success: function (data) {
+            $('#tbl_fhe_loa_div').html(data);
+
+            $('#tbl_fhe_loa').DataTable({
+                "order": [[1, "desc"]],
+                orderCellsTop: true,
+                fixedHeader: true,
+                "columnDefs": [{
+                    "targets": 0,
+                    "orderable": false
+                }]
+            });
+
+            $('#tbl_fhe_loa').editable({
+                mode: 'inline',
+                container: 'body',
+                selector: 'td.beneficiaries',
+                // title: 'Total Beneficiaries',
+                url: "includes/stufap/inc_fhe_update_loa.php",
+                type: "POST",
+                min: 0,
+                placeholder: 'No. of Beneficiaries',
+                // showbuttons: false,
+                defaultValue: 0,
+                toggle: 'dblclick',
+                //dataType: 'json',
+                validate: function (value) {
+                    if ($.trim(value) == '') {
+                        return 'This field is required';
+                    }
+                }
+            });
+            $('#btn-delete-fhe-loa').addClass('d-none');
+            $('#remove_fhe_loa_modal').modal('hide')
+        }
+    });
+});
+
+//delete tes category to the table
+$('#remove_tes_category_modal').on('submit', function (event) {
+    event.preventDefault();
+    var checkedCategory = [];
+    $($('input[name="tes_category_checkbox"]:checked')).each(function () {
+        checkedCategory.push($(this).val());
+    });
+    let uid = checkedCategory;
+    $.ajax({
+        url: "includes/stufap/inc_tes_remove_category.php",
+        type: "POST",
+        data: {
+            uid: uid
+        },
+        // dataType: "json",
+        success: function (data) {
+            $('#tbl_tes_category_div').html(data);
+
+            $('#tbl_tes_category').DataTable({
+                "order": [[1, "desc"]],
+                orderCellsTop: true,
+                fixedHeader: true,
+                "columnDefs": [{
+                    "targets": 0,
+                    "orderable": false
+                }]
+            });
+
+            $('#tbl_tes_category').editable({
+                mode: 'inline',
+                container: 'body',
+                selector: 'td.beneficiaries',
+                // title: 'Total Beneficiaries',
+                url: "includes/stufap/inc_stufap_tes_update_category.php",
+                type: "POST",
+                min: 0,
+                placeholder: 'No. of Beneficiaries',
+                // showbuttons: false,
+                defaultValue: 0,
+                toggle: 'dblclick',
+                //dataType: 'json',
+                validate: function (value) {
+                    if ($.trim(value) == '') {
+                        return 'This field is required';
+                    }
+                }
+            });
+            $('#btn-delete-tes-category').addClass('d-none');
+            $('#add_tes_category_form')[0].reset();//modal form id
+            $('#add_tes_category_modal_body').load(' #add_tes_category_modal_body');//modal content id
+            $('#remove_tes_category_modal').modal('hide')
+        }
+    });
+});
+
+  //delete tes dropouts to the table
+  $('#remove_tes_dropouts_modal').on('submit', function (event) {
+    event.preventDefault();
+    var checkedDropouts = [];
+    $($('input[name="tes_dropouts_checkbox"]:checked')).each(function () {
+        checkedDropouts.push($(this).val());
+    });
+    let uid = checkedDropouts;
+    $.ajax({
+        url: "includes/stufap/inc_tes_remove_dropouts.php",
+        type: "POST",
+        data: {
+            uid: uid
+        },
+        // dataType: "json",
+        success: function (data) {
+            $('#tbl_tes_dropouts_div').html(data);
+
+            $('#tbl_tes_dropouts').DataTable({
+                "order": [[1, "desc"]],
+                orderCellsTop: true,
+                fixedHeader: true,
+                "columnDefs": [{
+                    "targets": 0,
+                    "orderable": false
+                }]
+            });
+
+            $('#tbl_tes_dropouts').editable({
+                mode: 'inline',
+                container: 'body',
+                selector: 'td.beneficiaries',
+                // title: 'Total Beneficiaries',
+                url: "includes/stufap/inc_tes_update_dropouts.php",
+                type: "POST",
+                min: 0,
+                placeholder: 'No. of Beneficiaries',
+                // showbuttons: false,
+                defaultValue: 0,
+                toggle: 'dblclick',
+                //dataType: 'json',
+                validate: function (value) {
+                    if ($.trim(value) == '') {
+                        return 'This field is required';
+                    }
+                }
+            });
+            $('#btn-delete-tes-dropouts').addClass('d-none');
+            $('#remove_tes_dropouts_modal').modal('hide')
+        }
+    });
+});
+
+//delete tes loa to the table
+$('#remove_tes_loa_modal').on('submit', function (event) {
+event.preventDefault();
+var checkedLoa = [];
+$($('input[name="tes_loa_checkbox"]:checked')).each(function () {
+    checkedLoa.push($(this).val());
+});
+let uid = checkedLoa;
+$.ajax({
+    url: "includes/stufap/inc_tes_remove_loa.php",
+    type: "POST",
+    data: {
+        uid: uid
+    },
+    // dataType: "json",
+    success: function (data) {
+        $('#tbl_tes_loa_div').html(data);
+
+        $('#tbl_tes_loa').DataTable({
+            "order": [[1, "desc"]],
+            orderCellsTop: true,
+            fixedHeader: true,
+            "columnDefs": [{
+                "targets": 0,
+                "orderable": false
+            }]
+        });
+
+        $('#tbl_tes_loa').editable({
+            mode: 'inline',
+            container: 'body',
+            selector: 'td.beneficiaries',
+            // title: 'Total Beneficiaries',
+            url: "includes/stufap/inc_tes_update_loa.php",
+            type: "POST",
+            min: 0,
+            placeholder: 'No. of Beneficiaries',
+            // showbuttons: false,
+            defaultValue: 0,
+            toggle: 'dblclick',
+            //dataType: 'json',
+            validate: function (value) {
+                if ($.trim(value) == '') {
+                    return 'This field is required';
+                }
+            }
+        });
+        $('#btn-delete-tes-loa').addClass('d-none');
+        $('#remove_tes_loa_modal').modal('hide')
+    }
+});
+});
+
+//delete tdp dropouts to the table
+$('#remove_tdp_dropouts_modal').on('submit', function (event) {
+    event.preventDefault();
+    var checkedDropouts = [];
+    $($('input[name="tdp_dropouts_checkbox"]:checked')).each(function () {
+        checkedDropouts.push($(this).val());
+    });
+    let uid = checkedDropouts;
+    $.ajax({
+        url: "includes/stufap/inc_tdp_remove_dropouts.php",
+        type: "POST",
+        data: {
+            uid: uid
+        },
+        // dataType: "json",
+        success: function (data) {
+            $('#tbl_tdp_dropouts_div').html(data);
+
+            $('#tbl_tdp_dropouts').DataTable({
+                "order": [[1, "desc"]],
+                orderCellsTop: true,
+                fixedHeader: true,
+                "columnDefs": [{
+                    "targets": 0,
+                    "orderable": false
+                }]
+            });
+
+            $('#tbl_tdp_dropouts').editable({
+                mode: 'inline',
+                container: 'body',
+                selector: 'td.beneficiaries',
+                // title: 'Total Beneficiaries',
+                url: "includes/stufap/inc_tdp_update_dropouts.php",
+                type: "POST",
+                min: 0,
+                placeholder: 'No. of Beneficiaries',
+                // showbuttons: false,
+                defaultValue: 0,
+                toggle: 'dblclick',
+                //dataType: 'json',
+                validate: function (value) {
+                    if ($.trim(value) == '') {
+                        return 'This field is required';
+                    }
+                }
+            });
+            $('#btn-delete-tdp-dropouts').addClass('d-none');
+            $('#remove_tdp_dropouts_modal').modal('hide')
+        }
+    });
+});
+
+//delete tdp loa to the table
+$('#remove_tdp_loa_modal').on('submit', function (event) {
+event.preventDefault();
+var checkedLoa = [];
+$($('input[name="tdp_loa_checkbox"]:checked')).each(function () {
+    checkedLoa.push($(this).val());
+});
+let uid = checkedLoa;
+$.ajax({
+    url: "includes/stufap/inc_tdp_remove_loa.php",
+    type: "POST",
+    data: {
+        uid: uid
+    },
+    // dataType: "json",
+    success: function (data) {
+        $('#tbl_tdp_loa_div').html(data);
+
+        $('#tbl_tdp_loa').DataTable({
+            "order": [[1, "desc"]],
+            orderCellsTop: true,
+            fixedHeader: true,
+            "columnDefs": [{
+                "targets": 0,
+                "orderable": false
+            }]
+        });
+
+        $('#tbl_tdp_loa').editable({
+            mode: 'inline',
+            container: 'body',
+            selector: 'td.beneficiaries',
+            // title: 'Total Beneficiaries',
+            url: "includes/stufap/inc_tdp_update_loa.php",
+            type: "POST",
+            min: 0,
+            placeholder: 'No. of Beneficiaries',
+            // showbuttons: false,
+            defaultValue: 0,
+            toggle: 'dblclick',
+            //dataType: 'json',
+            validate: function (value) {
+                if ($.trim(value) == '') {
+                    return 'This field is required';
+                }
+            }
+        });
+        $('#btn-delete-tdp-loa').addClass('d-none');
+        $('#remove_tdp_loa_modal').modal('hide')
+    }
+});
+});
 
 });//end tag

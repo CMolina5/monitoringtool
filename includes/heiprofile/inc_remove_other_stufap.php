@@ -4,7 +4,6 @@ include_once '../db_connection.php';
 
 $uid= $_POST['uid'];
 
-
 foreach ($uid as $id){
     $sql = "DELETE FROM tbl_hei_other_funded_stufaps
     WHERE uid =".$id;

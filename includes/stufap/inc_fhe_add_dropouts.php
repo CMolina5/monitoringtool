@@ -79,7 +79,7 @@ if ($resultCheck > 0) {
         }
         
         if ($fhe_drop_reason == 'Others' && !empty($fhe_drop_other)) {
-            $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_3rd_male, total_dropout_3rd_female, total_dropout_summer_midterm_male, total_dropout_summer_midterm_female)
+            $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_3rd_male, total_dropout_3rd_female, total_dropout_sum_mid_male, total_dropout_sum_mid_female)
             VALUES ('$ac_year', '$hei_psg_region', '$hei_uii', '$hei_name', '$program', '$fhe_drop_other', '$fhe_drop_1st_male', '$fhe_drop_1st_female', '$fhe_drop_2nd_male','$fhe_drop_2nd_female', '$fhe_drop_3rd_male', '$fhe_drop_3rd_female', '$fhe_drop_summer_midyear_male', '$fhe_drop_summer_midyear_female')";
             $result = mysqli_query($conn, $sql);
         } else if ($fhe_drop_reason == 'Others' && empty($fhe_drop_other)) {
@@ -87,7 +87,7 @@ if ($resultCheck > 0) {
             alert('Please specify reason for dropping.')
             </script>";
         } else {
-            $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_3rd_male, total_dropout_3rd_female, total_dropout_summer_midterm_male, total_dropout_summer_midterm_female)
+            $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_3rd_male, total_dropout_3rd_female, total_dropout_sum_mid_male, total_dropout_sum_mid_female)
             VALUES ('$ac_year', '$hei_psg_region', '$hei_uii', '$hei_name', '$program', '$fhe_drop_reason', '$fhe_drop_1st_male', '$fhe_drop_1st_female', '$fhe_drop_2nd_male','$fhe_drop_2nd_female', '$fhe_drop_3rd_male', '$fhe_drop_3rd_female', '$fhe_drop_summer_midyear_male', '$fhe_drop_summer_midyear_female')";
             $result = mysqli_query($conn, $sql);
         }
@@ -101,7 +101,7 @@ if ($resultCheck > 0) {
             $fhe_drop_summer_midyear_female=0;
         }
         if ($fhe_drop_reason == 'Others' && !empty($fhe_drop_other)) {
-            $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_summer_midterm_male, total_dropout_summer_midterm_female)
+            $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_sum_mid_male, total_dropout_sum_mid_female)
             VALUES ('$ac_year', '$hei_psg_region', '$hei_uii', '$hei_name', '$program', '$fhe_drop_other', '$fhe_drop_1st_male', '$fhe_drop_1st_female', '$fhe_drop_2nd_male','$fhe_drop_2nd_female', '$fhe_drop_summer_midyear_male', '$fhe_drop_summer_midyear_female')";
             $result = mysqli_query($conn, $sql);
         } else if ($fhe_drop_reason == 'Others' && empty($fhe_drop_other)) {
@@ -109,7 +109,7 @@ if ($resultCheck > 0) {
             alert('Please specify reason for dropping.')
             </script>";
         } else {
-            $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_summer_midterm_male, total_dropout_summer_midterm_female)
+            $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_sum_mid_male, total_dropout_sum_mid_female)
             VALUES ('$ac_year', '$hei_psg_region', '$hei_uii', '$hei_name', '$program', '$fhe_drop_reason', '$fhe_drop_1st_male', '$fhe_drop_1st_female', '$fhe_drop_2nd_male','$fhe_drop_2nd_female', '$fhe_drop_summer_midyear_male', '$fhe_drop_summer_midyear_female')";
             $result = mysqli_query($conn, $sql);
         }

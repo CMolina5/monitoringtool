@@ -27,7 +27,18 @@ include 'includes/stufap/inc_template.php';
             </div>
             <div class='card card-style-table'>
                 <div class='form-group'>
-                    <p class='text-right'><button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_fhe_category_modal'>ADD FHE category</button></p>
+
+                    <div class='form-row text-right'>
+                    <div class='col'>
+                    <p class='text-right'>
+                        <div role='group' class='btn-group'>
+                        <button class='btn btn-success' id='btn-add-fhe-category' type='button' data-toggle='modal' data-target='#add_fhe_category_modal'>ADD FHE CATEGORY</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-fhe-category' name='btn-delete-fhe-category' type='button' data-target='#remove_fhe_category_modal'>REMOVE CATEGORY</button>
+                        </div>
+                    </p>
+                    </div>
+                    </div>
+
                     <div id='tbl_fhe_category_div' class='table table-responsive tbl-style'>";
                 
                         include 'includes/stufap/inc_fhe_category_table.php';
@@ -344,7 +355,18 @@ include 'includes/stufap/inc_template.php';
                 <label>No. of FHE Beneficiaries Who Dropped</label><label style='font-style: italic;'>Determine the no. of dropouts per semester/term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label>
                 </div>
                 <div class='form-group'>
-                    <p class='text-right'><button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_dropouts_fhe'>Add reason for dropping</button></p>
+
+                    <div class='form-row text-right'>
+                    <div class='col'>
+                    <p class='text-right'>
+                        <div role='group' class='btn-group'>
+                        <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_dropouts_fhe'>Add reason for dropping</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-fhe-dropouts' name='btn-delete-fhe-dropouts' type='button' data-target='#remove_fhe_dropouts_modal'>REMOVE DROP OUTS</button>
+                        </div>
+                    </p>
+                    </div>
+                    </div>
+
                     <div id='tbl_fhe_dropouts_div' class='table table-responsive tbl-style'>";
                         
                         include 'includes/stufap/inc_fhe_dropouts.php';
@@ -358,7 +380,18 @@ include 'includes/stufap/inc_template.php';
                 <label>No. of FHE Beneficiaries under LOA</label><label style='font-style: italic;'>Determine the no. of with loa per semester/term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label>
                 </div>
                 <div class='form-group'>
-                    <p class='text-right'><button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_loa_fhe'>Add reason for loa</button></p>
+                   
+                    <div class='form-row text-right'>
+                    <div class='col'>
+                    <p class='text-right'>
+                        <div role='group' class='btn-group'>
+                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_loa_fhe'>Add reason for loa</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-fhe-loa' name='btn-delete-fhe-loa' type='button' data-target='#remove_fhe_loa_modal'>REMOVE LOA</button>
+                        </div>
+                    </p>
+                    </div>
+                    </div>
+
                     <div id='tbl_fhe_loa_div' class='table table-responsive tbl-style'>";
                         
                         include 'includes/stufap/inc_fhe_loa.php';
@@ -392,7 +425,18 @@ include 'includes/stufap/inc_template.php';
                 </div>
                 </div>
                 <div class='form-group'>
-                    <p class='text-right'><button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_tes_category_modal'>ADD tes category</button></p>
+
+                    <div class='form-row text-right'>
+                    <div class='col'>
+                    <p class='text-right'>
+                        <div role='group' class='btn-group'>
+                        <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_tes_category_modal'>ADD TES CATEGORY</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tes-category' name='btn-delete-tes-category' type='button' data-target='#remove_tes_category_modal'>REMOVE CATEGORY</button>
+                        </div>
+                    </p>
+                    </div>
+                    </div>
+
                     <div id='tbl_tes_category_div' class='table table-responsive tbl-style'>";
                         
                         include 'includes/stufap/inc_tes_category_table.php';
@@ -401,7 +445,19 @@ include 'includes/stufap/inc_template.php';
                 </div>
             </div>
             <div class='card card-style-table'>
-                <p class='text-right'><button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_program_tes_modal'>ADD PROGRAM</button></p>
+                <p class='text-right'></p>
+
+                <div class='form-row text-right'>
+                <div class='col'>
+                <p class='text-right'>
+                    <div role='group' class='btn-group'>
+                        <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_program_tes_modal'>ADD PROGRAM</button>
+                        <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tes-programs' name='btn-delete-tes-programs' type='button' data-target='#remove_tes_programs_modal'>REMOVE CATEGORY</button>
+                    </div>
+                </p>
+                </div>
+                </div>
+
                 <div class='form-group'>
                     <div id='tbl_programs_tes_div' class='table table-responsive tbl-style'>";
                         
@@ -441,7 +497,18 @@ include 'includes/stufap/inc_template.php';
             echo"<div id='tes_dropouts_div' class='card card-style-table tes_dropouts_div' style='display : none'><label>Total No. TES Grantees Who Dropped</label>
                 <div class='form-group'><label style='font-style: italic;'>Determine the no. of dropouts per semester/ term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label></div>
                 <div class='form-group'>
-                    <p class='text-right'><button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_dropouts_tes_modal'>ADD reason for dropping</button></p>
+
+                    <div class='form-row text-right'>
+                    <div class='col'>
+                    <p class='text-right'>
+                        <div role='group' class='btn-group'>
+                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_dropouts_tes_modal'>ADD REASON FOR DROPPING</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tes-dropouts' name='btn-delete-tes-dropouts' type='button' data-target='#remove_tes_dropouts_modal'>REMOVE DROP OUTS</button>
+                        </div>
+                    </p>
+                    </div>
+                    </div>
+
                     <div id='tbl_tes_dropouts_div' class='table table-responsive tbl-style'>";
                         
                         include 'includes/stufap/inc_tes_dropouts.php';
@@ -455,7 +522,18 @@ include 'includes/stufap/inc_template.php';
                 <label>No. of TES Grantees under LOA</label><label style='font-style: italic;'>Determine the no. of with loa per semester/term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label>
                 </div>
                 <div class='form-group'>
-                    <p class='text-right'><button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_loa_tes'>Add reason for loa</button></p>
+
+                    <div class='form-row text-right'>
+                    <div class='col'>
+                    <p class='text-right'>
+                        <div role='group' class='btn-group'>
+                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_loa_tes'>ADD REASON FOR LOA</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tes-loa' name='btn-delete-tes-loa' type='button' data-target='#remove_tes_loa_modal'>REMOVE DROP OUTS</button>
+                        </div>
+                    </p>
+                    </div>
+                    </div>
+
                     <div id='tbl_tes_loa_div' class='table table-responsive tbl-style'>";
                         
                         include 'includes/stufap/inc_tes_loa.php';
@@ -514,7 +592,18 @@ include 'includes/stufap/inc_template.php';
             <div id='tdp_dropouts_div' class='card card-style-table tdp_dropouts_div' style='display : none'>
                 <div class='form-group'><label>Total No. TDP Grantees Who Dropped</label><label style='font-style: italic;'>Determine the no. of dropouts per semester/ term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label></div>
                 <div class='form-group'>
-                    <p class='text-right'><button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_dropouts_tdp_modal'>ADD reason for&nbsp; dropping</button></p>
+
+                    <div class='form-row text-right'>
+                    <div class='col'>
+                    <p class='text-right'>
+                        <div role='group' class='btn-group'>
+                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_dropouts_tdp_modal'>ADD REASON FOR DROPPING</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tdp-dropouts' name='btn-delete-tdp-dropouts' type='button' data-target='#remove_tdp_dropouts_modal'>REMOVE DROP OUTS</button>
+                        </div>
+                    </p>
+                    </div>
+                    </div>
+
                     <div id='tbl_tdp_dropouts_div' class='table table-responsive tbl-style'>";
                         
                             include 'includes/stufap/inc_tdp_dropouts.php';
@@ -528,7 +617,20 @@ include 'includes/stufap/inc_template.php';
                 <label>No. of TDP Grantees under LOA</label><label style='font-style: italic;'>Determine the no. of with loa per semester/term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label>
                 </div>
                 <div class='form-group'>
-                    <p class='text-right'><button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_loa_tdp'>Add reason for loa</button></p>
+                
+                    <p class='text-right'></p>
+
+                    <div class='form-row text-right'>
+                    <div class='col'>
+                    <p class='text-right'>
+                        <div role='group' class='btn-group'>
+                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_loa_tdp'>ADD REASON FOR LOA</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tdp-loa' name='btn-delete-tdp-loa' type='button' data-target='#remove_tdp_loa_modal'>REMOVE DROP OUTS</button>
+                        </div>
+                    </p>
+                    </div>
+                    </div>
+
                     <div id='tbl_tdp_loa_div' class='table table-responsive tbl-style'>";
                         
                         include 'includes/stufap/inc_tdp_loa.php';

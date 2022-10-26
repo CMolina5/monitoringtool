@@ -154,9 +154,13 @@ $(document).ready(function () {
     });
 
     $('#tbl_fhe_category').DataTable({
-        "order": [[0, "desc"]],
+        "order": [[1, "desc"]],
         orderCellsTop: true,
-        fixedHeader: true
+        fixedHeader: true,
+        "columnDefs": [ {
+            "targets": 0,
+            "orderable": false
+            } ]
     });
 
     $('#tbl_fhe_category').editable({
@@ -181,9 +185,13 @@ $(document).ready(function () {
 
     //tbl_fhe_dropouts
     $('#tbl_fhe_dropouts').DataTable({
-        "order": [[0, "desc"]],
+        "order": [[1, "desc"]],
         orderCellsTop: true,
-        fixedHeader: true
+        fixedHeader: true,
+        "columnDefs": [ {
+            "targets": 0,
+            "orderable": false
+            } ]
     });
 
     $('#tbl_fhe_dropouts').editable({
@@ -208,9 +216,13 @@ $(document).ready(function () {
 
      //tbl_fhe_loa
      $('#tbl_fhe_loa').DataTable({
-        "order": [[0, "desc"]],
+        "order": [[1, "desc"]],
         orderCellsTop: true,
-        fixedHeader: true
+        fixedHeader: true,
+        "columnDefs": [ {
+            "targets": 0,
+            "orderable": false
+            } ]
     });
 
     $('#tbl_fhe_loa').editable({
@@ -235,9 +247,13 @@ $(document).ready(function () {
 
     //tbl_tes_loa
     $('#tbl_tes_loa').DataTable({
-        "order": [[0, "desc"]],
+        "order": [[1, "desc"]],
         orderCellsTop: true,
-        fixedHeader: true
+        fixedHeader: true,
+        "columnDefs": [ {
+            "targets": 0,
+            "orderable": false
+            } ]
     });
 
     $('#tbl_tes_loa').editable({
@@ -262,9 +278,13 @@ $(document).ready(function () {
 
     //tbl_tdp_loa
     $('#tbl_tdp_loa').DataTable({
-        "order": [[0, "desc"]],
+        "order": [[1, "desc"]],
         orderCellsTop: true,
-        fixedHeader: true
+        fixedHeader: true,
+        "columnDefs": [ {
+            "targets": 0,
+            "orderable": false
+            } ]
     });
 
     $('#tbl_tdp_loa').editable({
@@ -289,9 +309,13 @@ $(document).ready(function () {
 
     //tbl_tes_category
     $('#tbl_tes_category').DataTable({
-        "order": [[0, "desc"]],
+        "order": [[1, "desc"]],
         orderCellsTop: true,
-        fixedHeader: true
+        fixedHeader: true,
+        "columnDefs": [ {
+            "targets": 0,
+            "orderable": false
+            } ]
     });
 
     $('#tbl_tes_category').editable({
@@ -343,9 +367,13 @@ $(document).ready(function () {
 
     //tbl_tes_dropouts
     $('#tbl_tes_dropouts').DataTable({
-        "order": [[0, "desc"]],
+        "order": [[1, "desc"]],
         orderCellsTop: true,
-        fixedHeader: true
+        fixedHeader: true,
+        "columnDefs": [ {
+            "targets": 0,
+            "orderable": false
+            } ]
     });
 
     $('#tbl_tes_dropouts').editable({
@@ -399,9 +427,13 @@ $(document).ready(function () {
 
     //tbl_tdp_dropouts
     $('#tbl_tdp_dropouts').DataTable({
-        "order": [[0, "desc"]],
+        "order": [[1, "desc"]],
         orderCellsTop: true,
-        fixedHeader: true
+        fixedHeader: true,
+        "columnDefs": [ {
+            "targets": 0,
+            "orderable": false
+            } ]
     });
 
     $('#tbl_tdp_dropouts').editable({

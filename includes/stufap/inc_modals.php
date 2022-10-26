@@ -586,6 +586,23 @@
     </div>
 </div>
 
+<!--Remove fhe LOA modal-->
+<div role="dialog" tabindex="-1" class="modal fade show" id="remove_fhe_loa_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id="remove_fhe_loa_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Remove Data Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to remove this data?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-danger" type="submit">Confirm</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!--Remove tes category modal-->
 <div role="dialog" tabindex="-1" class="modal fade show" id="remove_tes_category_modal">
     <div class="modal-dialog" role="document">
@@ -608,6 +625,23 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <form method="POST" id="remove_tes_program_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Remove Data Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to remove this data?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-danger" type="submit">Confirm</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Remove tes LOA modal-->
+<div role="dialog" tabindex="-1" class="modal fade show" id="remove_tes_loa_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id="remove_tes_loa_form">
                 <div class="modal-header">
                     <h4 class="modal-title">Remove Data Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
@@ -671,6 +705,39 @@
     </div>
 </div>
 
+<!--Remove tdp loa modal-->
+<div role="dialog" tabindex="-1" class="modal fade show" id="remove_tdp_loa_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id="remove_tdp_loa_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Remove Data Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to remove this data?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-danger" type="submit">Confirm</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Remove fhe category modal-->
+<div role="dialog" tabindex="-1" class="modal fade show" id="remove_fhe_category_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" id="remove_fhe_category_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Remove Data Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to remove this data?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Cancel</button><button class="btn btn-danger" type="submit">Confirm</button></div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <!--Add FHE Category-->
 <div class="modal fade" role="dialog" tabindex="-1" id="add_fhe_category_modal">
