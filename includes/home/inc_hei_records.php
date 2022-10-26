@@ -69,7 +69,7 @@ echo"<table id='tbl_list_of_forms' class='table table-bordered tbl-style stripe'
                     }else{
                         echo"<button class='btn btn-primary btn-table-margin view_record' type='button' title='Edit Form' name='edit_form' value='edit_form' id='$uid'><i class='fas fa-file-signature'></i></button>";
                     }
-                    if($status=='ongoing' OR $status=='Saved'){
+                    if($status=='Ongoing' OR $status=='Saved'){
                         echo"<button class='btn btn-info btn-table-margin edit_record' type='button' title='Edit Form Structure' name='edit' value='edit' id='$uid'><i class='far fa-edit'></i></button>
                         <button class='btn btn-danger btn-table-margin remove_record' type='button' title='Remove' name='remove' value'remove' id='$uid'><i class='fas fa-trash'></i></button>";
                     }

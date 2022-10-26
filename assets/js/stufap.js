@@ -690,43 +690,6 @@ $(document).ready(function () {
         });
     });
 
-    //Remove tes program
-    //select data from the tes program
-    $(document).on('click', '.remove_program_tes', function () {
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/stufap/inc_select_tes_program.php",
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#remove_tes_program_modal').modal('show');
-            }
-        })
-    });
-
-    //delete tes program to the table
-    $('#remove_tes_program_modal').on('submit', function (event) {
-        event.preventDefault();
-        $.ajax({
-            url: "includes/stufap/inc_tes_update_program_3.php",
-            method: "POST",
-            data: $('#remove_tes_program_form').serialize(),
-            success: function (data) {
-                $('#tbl_programs_tes_div').html(data);
-                $('#remove_tes_program_form')[0].reset();
-                $('#add_program_tes_modal_body').load(' #add_program_tes_modal_body');//modal id
-                $('#remove_tes_program_modal').modal('hide');
-
-                $('#tbl_programs_tes').DataTable({
-                    "order": [[0, "desc"]],
-                    orderCellsTop: true,
-                    fixedHeader: true
-                })
-            }
-        });
-    });
-
     //tes dropouts part
     //add reason for tes dropouts**
     $('#add_dropouts_tes_modal').on('submit', function (event) {//modal id
@@ -965,42 +928,6 @@ $(document).ready(function () {
         });
     });
 
-    //Remove tdp program
-    //select data from the tdp program
-    $(document).on('click', '.remove_program_tdp', function () {
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/stufap/inc_select_tes_program.php",
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#remove_tdp_program_modal').modal('show');
-            }
-        })
-    });
-
-    //delete tdp program to the table
-    $('#remove_tdp_program_modal').on('submit', function (event) {
-        event.preventDefault();
-        $.ajax({
-            url: "includes/stufap/inc_tdp_update_program_3.php",
-            method: "POST",
-            data: $('#remove_tdp_program_form').serialize(),
-            success: function (data) {
-                $('#tbl_programs_tdp_div').html(data);
-                $('#remove_tdp_program_form')[0].reset();
-                $('#add_program_tdp_modal_body').load(' #add_program_tdp_modal_body');//modal content id
-                $('#remove_tdp_program_modal').modal('hide');
-
-                $('#tbl_programs_tdp').DataTable({
-                    "order": [[0, "desc"]],
-                    orderCellsTop: true,
-                    fixedHeader: true
-                })
-            }
-        });
-    });
 
     /*--------------------------------------------------------------------------------------------*/
     //tdp dropouts part
@@ -1062,70 +989,6 @@ $(document).ready(function () {
             }
         })
     });
-
-    //update dropouts to the table tdp
-    $('#edit_dropouts_tdp_modal').on('submit', function (event) {
-        event.preventDefault();
-        $.ajax({
-            url: "includes/stufap/inc_tdp_update_dropouts.php",
-            method: "POST",
-            data: $('#edit_dropouts_tdp_form').serialize(),
-            success: function (data) {
-                $('#tbl_tdp_dropouts_div').html(data);
-                $('#edit_dropouts_tdp_form')[0].reset();
-                $('#edit_dropouts_tdp_modal').modal('hide');
-
-                $('#tbl_tdp_dropouts').DataTable({
-                    "order": [[0, "desc"]],
-                    orderCellsTop: true,
-                    fixedHeader: true,
-                    "footerCallback": function (row, data, start, end, display) {
-                        var api = this.api();
-
-                        // Remove the formatting to get integer data for summation
-                        var intVal = function (i) {
-                            return typeof i === 'string' ?
-                                i.replace(/[\$,]/g, '') * 1 :
-                                typeof i === 'number' ?
-                                    i : 0;
-                        };
-
-                        // Total over all pages
-                        total = api
-                            .column(1)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(1).footer()).html(
-                            total
-                        );
-
-                        // Total over all pages
-                        total2 = api
-                            .column(2)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(2).footer()).html(
-                            total2
-                        );
-
-                        // Update footer
-                        $(api.column(3).footer()).html(
-                            'GRAND TOTAL:   ' + (total + total2) + ''
-                        );
-                    }
-                })
-            }
-        });
-    });
-
 
     //delete fhe category to the table
     $('#remove_fhe_category_modal').on('submit', function (event) {
@@ -1553,6 +1416,116 @@ $.ajax({
         $('#remove_tdp_loa_modal').modal('hide')
     }
 });
+});
+
+//delete tes program to the table
+$('#remove_tes_program_modal').on('submit', function (event) {
+    event.preventDefault();
+    var checkedCategory = [];
+    $($('input[name="tes_programs_checkbox"]:checked')).each(function () {
+        checkedCategory.push($(this).val());
+    });
+    let uid = checkedCategory;
+    $.ajax({
+        url: "includes/stufap/inc_tes_update_program_3.php",
+        type: "POST",
+        data: {
+            uid: uid
+        },
+        // dataType: "json",
+        success: function (data) {
+            $('#tbl_programs_tes_div').html(data);
+
+            $('#tbl_programs_tes').DataTable({
+                "order": [[1, "desc"]],
+                orderCellsTop: true,
+                fixedHeader: true,
+                "columnDefs": [{
+                    "targets": 0,
+                    "orderable": false
+                }]
+            });
+
+            $('#tbl_programs_tes').editable({
+                mode: 'inline',
+                container: 'body',
+                selector: 'td.beneficiaries',
+                // title: 'Total Beneficiaries',
+                url: "includes/stufap/inc_stufap_tes_update_program.php",
+                type: "POST",
+                min: 0,
+                placeholder: 'No. of Beneficiaries',
+                // showbuttons: false,
+                defaultValue: 0,
+                toggle: 'dblclick',
+                //dataType: 'json',
+                validate: function (value) {
+                    if ($.trim(value) == '') {
+                        return 'This field is required';
+                    }
+                }
+            });
+            $('#btn-delete-tes-programs').addClass('d-none');
+            $('#add_program_tes_form')[0].reset();//modal form id
+            $('#add_program_tes_modal_body').load(' #add_program_tes_modal_body');//modal content id
+            $('#remove_tes_program_modal').modal('hide')
+        }
+    });
+});
+
+//delete tes program to the table
+$('#remove_tdp_program_modal').on('submit', function (event) {
+    event.preventDefault();
+    var checkedCategory = [];
+    $($('input[name="tdp_programs_checkbox"]:checked')).each(function () {
+        checkedCategory.push($(this).val());
+    });
+    let uid = checkedCategory;
+    $.ajax({
+        url: "includes/stufap/inc_tdp_update_program_3.php",
+        type: "POST",
+        data: {
+            uid: uid
+        },
+        // dataType: "json",
+        success: function (data) {
+            $('#tbl_programs_tdp_div').html(data);
+
+            $('#tbl_programs_tdp').DataTable({
+                "order": [[1, "desc"]],
+                orderCellsTop: true,
+                fixedHeader: true,
+                "columnDefs": [{
+                    "targets": 0,
+                    "orderable": false
+                }]
+            });
+
+            $('#tbl_programs_tdp').editable({
+                mode: 'inline',
+                container: 'body',
+                selector: 'td.beneficiaries',
+                // title: 'Total Beneficiaries',
+                url: "includes/stufap/inc_stufap_tdp_update_program.php",
+                type: "POST",
+                min: 0,
+                placeholder: 'No. of Beneficiaries',
+                // showbuttons: false,
+                defaultValue: 0,
+                toggle: 'dblclick',
+                //dataType: 'json',
+                validate: function (value) {
+                    if ($.trim(value) == '') {
+                        return 'This field is required';
+                    }
+                }
+            });
+            $('#btn-delete-tdp-programs').addClass('d-none');
+            $('#add_program_tdp_form')[0].reset();//modal form id
+            $('#add_program_tdp_modal_body').load(' #add_program_tdp_modal_body');//modal content id
+            $('#remove_tdp_program_modal').modal('hide')
+        }
+    });
 });
 
 });//end tag

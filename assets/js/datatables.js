@@ -32,7 +32,7 @@ $(document).ready(function () {
     });
 
     $('#tbl_other_stufaps').DataTable({
-        "order": [[0, "desc"]],
+        "order": [[1, "desc"]],
         orderCellsTop: true,
         fixedHeader: true,
          "columnDefs": [ {
@@ -340,9 +340,13 @@ $(document).ready(function () {
 
     //tbl_programs_tes
     $('#tbl_programs_tes').DataTable({
-        "order": [[0, "desc"]],
+        "order": [[1, "desc"]],
         orderCellsTop: true,
-        fixedHeader: true
+        fixedHeader: true,
+        "columnDefs": [{
+            "targets": 0,
+            "orderable": false
+        }]
     });
 
     $('#tbl_programs_tes').editable({
@@ -398,11 +402,15 @@ $(document).ready(function () {
 
     //tbl_programs_tdp
     $('#tbl_programs_tdp').DataTable({
-        "order": [[0, "desc"]],
+        "order": [[1, "desc"]],
         "lengthChange": false,
         "pageLength": 5,
         orderCellsTop: true,
-        fixedHeader: true
+        fixedHeader: true,         
+        "columnDefs": [{
+            "targets": 0,
+            "orderable": false
+        }]
     });
 
     $('#tbl_programs_tdp').editable({

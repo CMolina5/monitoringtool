@@ -389,4 +389,72 @@ $(document).on('click', 'input[name=main_tdp_loa_checkbox]', function () {
     btnDeleteTDPLoa();
 });
 
+//Multiple Select for TES Program
+function btnDeleteTESPrograms() {
+    if ($('input[name="tes_programs_checkbox"]:checked').length > 0) {
+        $('#btn-delete-tes-programs').html('');
+        $('#btn-delete-tes-programs').append('REMOVE DEGREE PROGRAM (' + $('input[name="tes_programs_checkbox"]:checked').length + ')').removeClass('d-none');
+    } else {
+        $('#btn-delete-tes-programs').addClass('d-none');
+    }
+}
+
+//all checkbox in a page is checked
+$(document).on('change', 'input[name="tes_programs_checkbox"]', function () {
+    if ($('input[name="tes_programs_checkbox"]').length == $('input[name="tes_programs_checkbox"]:checked').length) {
+        $('input[name="main_tes_programs_checkbox"]').prop('checked', true);
+    } else {
+        $('input[name="main_tes_programs_checkbox"]').prop('checked', false);
+    }
+    btnDeleteTESPrograms();
+});
+
+//Main check box is checked
+$(document).on('click', 'input[name=main_tes_programs_checkbox]', function () {
+    if (this.checked) {
+        $('input[name="tes_programs_checkbox"]').each(function () {
+            this.checked = true;
+        });
+    } else {
+        $('input[name="tes_programs_checkbox"]').each(function () {
+            this.checked = false;
+        });
+    }
+    btnDeleteTESPrograms();
+});
+
+//Multiple Select for TDP Program
+function btnDeleteTDPPrograms() {
+    if ($('input[name="tdp_programs_checkbox"]:checked').length > 0) {
+        $('#btn-delete-tdp-programs').html('');
+        $('#btn-delete-tdp-programs').append('REMOVE DEGREE PROGRAM (' + $('input[name="tdp_programs_checkbox"]:checked').length + ')').removeClass('d-none');
+    } else {
+        $('#btn-delete-tdp-programs').addClass('d-none');
+    }
+}
+
+//all checkbox in a page is checked
+$(document).on('change', 'input[name="tdp_programs_checkbox"]', function () {
+    if ($('input[name="tdp_programs_checkbox"]').length == $('input[name="tdp_programs_checkbox"]:checked').length) {
+        $('input[name="main_tdp_programs_checkbox"]').prop('checked', true);
+    } else {
+        $('input[name="main_tdp_programs_checkbox"]').prop('checked', false);
+    }
+    btnDeleteTDPPrograms();
+});
+
+//Main check box is checked
+$(document).on('click', 'input[name=main_tdp_programs_checkbox]', function () {
+    if (this.checked) {
+        $('input[name="tdp_programs_checkbox"]').each(function () {
+            this.checked = true;
+        });
+    } else {
+        $('input[name="tdp_programs_checkbox"]').each(function () {
+            this.checked = false;
+        });
+    }
+    btnDeleteTDPPrograms();
+});
+
 });
