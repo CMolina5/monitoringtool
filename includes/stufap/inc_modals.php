@@ -931,7 +931,7 @@
 
 <!--Add TES Category-->
 <div class="modal fade" role="dialog" tabindex="-1" id="add_tes_category_modal">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-xl" role="document">
         <div id="add_tes_category_modal_body" class="modal-content">
             <form method="POST" id="add_tes_category_form">
                 <div class="modal-header">
