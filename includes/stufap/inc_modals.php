@@ -797,8 +797,8 @@
                                 </div>
                             </div>
 
-                            <div class="col"> 
-                                <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div><<input id="total_fhe_1st_female" name="total_fhe_1st_female" class="form-control" type="number" min="0" placeholder="0">
+                            <div class="col">
+                                <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div><input id="total_fhe_1st_female" name="total_fhe_1st_female" class="form-control" type="number" min="0" placeholder="0">
                                 </div>
                             </div>
                         </div>
