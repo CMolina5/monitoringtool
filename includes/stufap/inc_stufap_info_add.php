@@ -804,8 +804,8 @@ if ($resultCheck > 0) {
         hei_psg_region, 
         hei_uii, 
         hei_name, 
-        total_tes_applicant,
-        total_tes_applicant_male)
+        total_tes_applicant_male,
+        total_tes_applicant_female)
         VALUES ('$ac_year', 
         '$hei_psg_region', 
         '$hei_uii', 
