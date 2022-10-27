@@ -94,7 +94,7 @@ if (isset($_POST['save_hei_profile'])) {
         $fhe_focal_designation="";
     }
     if(empty($fhe_focal_email_add)){
-        $tes_focal_email_add="";
+        $fhe_focal_email_add="";
     }
     if(empty($fhe_focal_alt_email_add)){
         $fhe_focal_alt_email_add="";
