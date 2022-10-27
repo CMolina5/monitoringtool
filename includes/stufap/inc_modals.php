@@ -984,6 +984,26 @@
                                 <div class="col"><input id="total_tes_1st_male" name="total_tes_1st_male" class="form-control" type="number" min="0"></div>
                                 <div class="col"><input id="total_tes_1st_female" name="total_tes_1st_female" class="form-control" type="number" min="0"></div>
                             </div>
+                            <div class="form-row">
+                                <div class="col"><input id="total_tes_1st_male" name="total_tes_1st_male" class="form-control" type="number" min="0"></div>
+                                <div class="col"><input id="total_tes_1st_female" name="total_tes_1st_female" class="form-control" type="number" min="0"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col"><input id="total_tes_1st_male" name="total_tes_1st_male" class="form-control" type="number" min="0"></div>
+                                <div class="col"><input id="total_tes_1st_female" name="total_tes_1st_female" class="form-control" type="number" min="0"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col"><input id="total_tes_1st_male" name="total_tes_1st_male" class="form-control" type="number" min="0"></div>
+                                <div class="col"><input id="total_tes_1st_female" name="total_tes_1st_female" class="form-control" type="number" min="0"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col"><input id="total_tes_1st_male" name="total_tes_1st_male" class="form-control" type="number" min="0"></div>
+                                <div class="col"><input id="total_tes_1st_female" name="total_tes_1st_female" class="form-control" type="number" min="0"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col"><input id="total_tes_1st_male" name="total_tes_1st_male" class="form-control" type="number" min="0"></div>
+                                <div class="col"><input id="total_tes_1st_female" name="total_tes_1st_female" class="form-control" type="number" min="0"></div>
+                            </div>
                         </div>
                         <div class="form-group"><label>2nd Term</label>
                             <div class="form-row">
