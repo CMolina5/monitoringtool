@@ -198,9 +198,9 @@
 
         <!--1st Part-->
         <form id="hei-profile-final">
-        <div class="card card-style-out">
+            <div class="card card-style-out">
             <div class="card card-style-part">
-                <h6 class="text-center header-1">PART I. HIGHER EDUCATION INSTITUTION PROFILE</h6>
+            <h6 class="text-center header-1">PART I. HIGHER EDUCATION INSTITUTION PROFILE</h6>
             </div>
             <div class="card card-style">
                 <div class="form-group"><label class="label-parts">I.A BASIC INFORMATION</label></div>
@@ -1292,17 +1292,6 @@
                     </div>
                 </div>
             </div>
-            <div class="card card-style">
-                <div class="form-group text-right">
-                <div class="form-row">
-                        <div class="col text-center"><a class="btn btn-info" role="button" id="btn-prev" href="home.php"><i class="fas fa-home"></i>&nbsp; &nbsp;Home</a></div>
-                        <div class="col text-center"><button class="btn btn-primary" id="btn-next" type="submit" name="save_hei_profile">SAVE AND PROCEED&nbsp; &nbsp;<i class="fas fa-forward"></i>
-                    </button></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
             <?php
             if($form_status=='ongoing' OR $form_status=='Saved'){
                 echo'<div class="card card-style">
