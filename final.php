@@ -1914,7 +1914,7 @@
                     <div id="finalize_div" class="form-group text-right">
                         <div class="form-row">
                             <?php
-                            if($form_status=='Ongoing' OR $form_status=='Saved'){
+                            if($form_status=='ongoing' OR $form_status=='Saved'){
                             echo'<div class="col text-center">
                                 <a class="btn btn-primary save_form" role="button" id="btn-next" href="includes/final/save.php">Save&nbsp; &nbsp;<i class="fas fa-save"></i></a>
                             </div>
