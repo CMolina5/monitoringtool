@@ -820,16 +820,30 @@
                     <div class="form-group">
                         <label>3rd Semester</label>
                         <div class="form-row">
-                            <div class="col"><input id="total_fhe_3rd_male" name="total_fhe_3rd_male" class="form-control" type="number" min="0"></div>
-                            <div class="col"><input id="total_fhe_3rd_female" name="total_fhe_3rd_female" class="form-control" type="number" min="0"></div>
+                            <div class="col">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div><input id="total_fhe_3rd_male" name="total_fhe_3rd_male" class="form-control" type="number" min="0" placeholder="0">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div><input id="total_fhe_3rd_female" name="total_fhe_3rd_female" class="form-control" type="number" min="0" placeholder="0">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label>Summer/Midyear</label>
                         <div class="form-row">
-                            <div class="col"><input id="total_fhe_sum_mid_male" name="total_fhe_sum_mid_male" class="form-control" type="number" min="0"></div>
-                            <div class="col"><input id="total_fhe_sum_mid_female" name="total_fhe_sum_mid_female" class="form-control" type="number" min="0"></div>
+                            <div class="col">
+                            
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div><input id="total_fhe_sum_mid_male" name="total_fhe_sum_mid_male" class="form-control" type="number" min="0" placeholder="0">
+                                </div>
+                            </div>
+                            <div class="col">
+
+                                <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div><input id="total_fhe_sum_mid_female" name="total_fhe_sum_mid_female" class="form-control" type="number" min="0" placeholder="0">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
