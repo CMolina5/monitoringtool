@@ -982,7 +982,7 @@
 
                         <div class="form-group"><label>1st Term</label>
                             <div class="form-row">
-
+                                <div class="form-group">
                                     <div class="col">
                                         <div class="form-group">
                                             <div class="form-row">
@@ -995,7 +995,8 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    </div>
+                                    <div class="form-row">
                                     <div class="col">
                                         <div class="form-group">
                                             <div class="form-row">
@@ -1008,7 +1009,7 @@
                                             </div>
                                         </div>
                                     </div>
-                
+                                </div>
                             </div>
                         </div>
                     
