@@ -130,6 +130,9 @@ $(document).ready(function () {
         scrollY:        false,
         scrollCollapse: true,
         // scroller:       true
+        fixedColumns:   {
+            left: 1,
+        }
     });
 
     // $('#tbl_programs_fhe').Tabledit({
