@@ -4,6 +4,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="assets/js/freelancer.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/scroller/2.0.7/js/dataTables.scroller.min.js"></script> 
     <script type="text/javascript" src="assets/js/datatables.js"></script>
     <script type="text/javascript" src="assets/js/final.js"></script>
     <script type="text/javascript" src="assets/js/heiprofile.js"></script>

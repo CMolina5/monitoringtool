@@ -5,6 +5,10 @@ $(document).ready(function () {
         "lengthChange": false,
         orderCellsTop: true,
         fixedHeader: true,
+        "deferRender": true,
+        scrollX:        200,
+        scrollCollapse: true,
+        scroller:       true,
         "columnDefs": [ {
             "targets": 0,
             "orderable": false
