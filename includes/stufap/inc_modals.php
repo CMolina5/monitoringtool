@@ -2089,18 +2089,33 @@
                         </div>
                     </div>
                 <hr>
-
                         <div class="form-group"><label>No. of TDP Grantees who graduated</label>
                             <div class="form-row">
-                                <div class="col-xl-6"><label>Male</label><input name="total_tdp_graduated_male" id="total_tdp_graduated_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><label>Female</label><input name="total_tdp_graduated_female" id="total_tdp_graduated_female" class="form-control" type="number" min="0"></div>
+                                <div class="col-xl-6">
+                                    <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                        <input name="total_tdp_graduated_male" id="total_tdp_graduated_male" class="form-control" type="number" min="0">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                        <input name="total_tdp_graduated_female" id="total_tdp_graduated_female" class="form-control" type="number" min="0">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <hr>
                         <div class="form-group"><label>No. of TDP Grantees who exceeded the maximum residency rule</label>
                             <div class="form-row">
-                                <div class="col-xl-6"><label>Male</label><input name="total_tdp_exceeded_mrr_male" id="total_tdp_exceeded_mrr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><label>Female</label><input name="total_tdp_exceeded_mrr_female" id="total_tdp_exceeded_mrr_female" class="form-control" type="number" min="0"></div>
+                                <div class="col-xl-6">
+                                    <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                        <input name="total_tdp_exceeded_mrr_male" id="total_tdp_exceeded_mrr_male" class="form-control" type="number" min="0">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                        <input name="total_tdp_exceeded_mrr_female" id="total_tdp_exceeded_mrr_female" class="form-control" type="number" min="0">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                 </div>
