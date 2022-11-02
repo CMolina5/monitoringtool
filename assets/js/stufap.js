@@ -711,170 +711,6 @@ $(document).ready(function () {
         });
     });
 
-    //tes dropouts part
-    //add reason for tes dropouts**
-    $('#add_dropouts_tes_modal').on('submit', function (event) {//modal id
-        event.preventDefault();
-        $.ajax({
-            url: "includes/stufap/inc_tes_add_dropouts.php",//php file
-            method: "POST",
-            data: $('#add_dropouts_tes_form').serialize(),//modal form id
-            success: function (data) {
-                $('#tbl_tes_dropouts_div').html(data);//table div id
-                $('#add_dropouts_tes_form')[0].reset();//modal form id
-                $('#add_dropouts_tes_modal').modal('hide');//modal id
-
-                $('#tbl_tes_dropouts').DataTable({//datatable id
-                    "order": [[1, "desc"]],
-                    orderCellsTop: true,
-                    fixedHeader: true,
-                    "footerCallback": function (row, data, start, end, display) {
-                        var api = this.api();
-
-                        // Remove the formatting to get integer data for summation
-                        var intVal = function (i) {
-                            return typeof i === 'string' ?
-                                i.replace(/[\$,]/g, '') * 1 :
-                                typeof i === 'number' ?
-                                    i : 0;
-                        };
-
-                        // Total over all pages
-                        total = api
-                            .column(1)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(1).footer()).html(
-                            total
-                        );
-
-                        // Total over all pages
-                        total2 = api
-                            .column(2)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(2).footer()).html(
-                            total2
-                        );
-
-                        // Update footer
-                        $(api.column(3).footer()).html(
-                            'GRAND TOTAL:   ' + (total + total2) + ''
-                        );
-
-
-                    }
-                })
-
-            }
-        });
-    });
-
-    //select reason for dropouts from table tes and display to modal**
-    $(document).on('click', '.edit_dropouts_tes', function () {
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/stufap/inc_select_dropouts_reason.php",
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#tes_drop_reason_1').val(data.reason);
-                $('#tes_drop_1st_1').val(data.total_dropout_1st);
-                $('#tes_drop_2nd_1').val(data.total_dropout_2nd);
-                $('#edit_dropouts_tes_modal').modal('show')
-            }
-        })
-    });
-
-    //update dropouts to the table tes**
-    $('#edit_dropouts_tes_modal').on('submit', function (event) {
-        event.preventDefault();
-        $.ajax({
-            url: "includes/stufap/inc_tes_update_dropouts.php",
-            method: "POST",
-            data: $('#edit_dropouts_tes_form').serialize(),
-            success: function (data) {
-                $('#tbl_tes_dropouts_div').html(data);
-                $('#edit_dropouts_tes_form')[0].reset();
-                $('#edit_dropouts_tes_modal').modal('hide');
-
-                $('#tbl_tes_dropouts').DataTable({
-                    "order": [[1, "desc"]],
-                    orderCellsTop: true,
-                    fixedHeader: true,
-                    "footerCallback": function (row, data, start, end, display) {
-                        var api = this.api();
-
-                        // Remove the formatting to get integer data for summation
-                        var intVal = function (i) {
-                            return typeof i === 'string' ?
-                                i.replace(/[\$,]/g, '') * 1 :
-                                typeof i === 'number' ?
-                                    i : 0;
-                        };
-
-                        // Total over all pages
-                        total = api
-                            .column(1)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(1).footer()).html(
-                            total
-                        );
-
-                        // Total over all pages
-                        total2 = api
-                            .column(2)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(2).footer()).html(
-                            total2
-                        );
-
-                        // Update footer
-                        $(api.column(3).footer()).html(
-                            'GRAND TOTAL:   ' + (total + total2) + ''
-                        );
-
-
-                    }
-                })
-
-            }
-        });
-    });
-
-    //Remove reason for dropouts
-    //remove data from the tbl_tes_dropouts table**
-    $(document).on('click', '.remove_dropouts_tes', function () {
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/stufap/inc_select_dropouts_reason.php",
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#remove_tes_dropouts_modal').modal('show')
-            }
-        })
-    });
 
     /*--------------------------------------------------------------------------------------------*/
     //TDP Program Part
@@ -911,52 +747,6 @@ $(document).ready(function () {
                     }
                 })
 
-            }
-        });
-    });
-
-    //select tdp program from table and display to modal
-    $(document).on('click', '.edit_program_tdp', function () {//button class
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/stufap/inc_select_tes_program.php",//php file
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#tdp_program_name_1').val(data.program_name);//$('#input id').val(data.column name in the database);
-                $('#total_tdp_1st_male_1').val(data.total_tdp_1st_male);
-                $('#total_tdp_1st_female_1').val(data.total_tdp_1st_female);
-                $('#total_tdp_2nd_male_1').val(data.total_tdp_2nd_male);
-                $('#total_tdp_2nd_female_1').val(data.total_tdp_2nd_female);
-                $('#total_tdp_graduated_male_1').val(data.total_tdp_graduated_male);
-                $('#total_tdp_graduated_female_1').val(data.total_tdp_graduated_female);
-                $('#total_tdp_exceeded_mrr_male_1').val(data.total_tdp_exceeded_mrr_male);
-                $('#total_tdp_exceeded_mrr_female_1').val(data.total_tdp_exceeded_mrr_female);
-                $('#edit_program_tdp_modal').modal('show');//modal id
-            }
-        })
-    });
-
-    //update tdp program to the table tdp
-    $('#edit_program_tdp_modal').on('submit', function (event) {//modal id
-        event.preventDefault();
-        $.ajax({
-            url: "includes/stufap/inc_tdp_update_program_2.php",//php file
-            method: "POST",
-            data: $('#edit_program_tdp_form').serialize(),//modal form id
-            success: function (data) {
-                $('#tbl_programs_tdp_div').html(data);//table div id
-                $('#edit_program_tdp_form')[0].reset();//modal form id
-                $('#edit_program_tdp_modal').modal('hide');//modal id
-
-                $('#tbl_programs_tdp').DataTable({//datatable id
-                    "order": [[0, "desc"]],
-                    "lengthChange": false,
-                    "pageLength": 5,
-                    orderCellsTop: true,
-                    fixedHeader: true
-                })
             }
         });
     });
@@ -1009,7 +799,9 @@ $(document).ready(function () {
             }
         });
     });
-
+    
+    //tes dropouts part
+    //add reason for tes dropouts
     $('#add_dropouts_tes_modal').on('submit', function (event) {//modal id
         event.preventDefault();
         $.ajax({
@@ -1053,23 +845,6 @@ $(document).ready(function () {
 
             }
         });
-    });
-
-    //select reason for dropouts from table tdp and display to modal**
-    $(document).on('click', '.edit_dropouts_tdp', function () {
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/stufap/inc_select_dropouts_reason.php",
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#tdp_drop_reason_1').val(data.reason);
-                $('#tdp_drop_1st_1').val(data.total_dropout_1st);
-                $('#tdp_drop_2nd_1').val(data.total_dropout_2nd);
-                $('#edit_dropouts_tdp_modal').modal('show')
-            }
-        })
     });
 
     //delete fhe category to the table
