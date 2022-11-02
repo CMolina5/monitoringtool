@@ -126,10 +126,10 @@ $(document).ready(function () {
         orderCellsTop: true,
         fixedHeader: true,
         "deferRender": true,
-        scrollX:        200,
-        scrollY:        false,
+        scrollX: 200,
+        scrollY: false,
         scrollCollapse: true,
-        // scroller:       true
+        // scroller: true,
         fixedColumns:   {
             left: 1
         }
@@ -326,7 +326,15 @@ $(document).ready(function () {
         "columnDefs": [ {
             "targets": 0,
             "orderable": false
-            } ]
+            } ],
+        "deferRender": true,
+        scrollX: 200,
+        scrollY: false,
+        scrollCollapse: true,
+        // scroller: true,
+        fixedColumns:   {
+            left: 1
+        }
     });
 
     $('#tbl_tes_category').editable({
@@ -421,7 +429,15 @@ $(document).ready(function () {
         "columnDefs": [{
             "targets": 0,
             "orderable": false
-        }]
+        }],
+        "deferRender": true,
+        scrollX: 200,
+        scrollY: false,
+        scrollCollapse: true,
+        // scroller: true,
+        fixedColumns:   {
+            left: 1
+        }
     });
 
     $('#tbl_programs_tdp').editable({

@@ -123,6 +123,7 @@ $(document).ready(function () {
                         "targets": 0,
                         "orderable": false
                     }]
+
                 })
 
                 $('#tbl_fhe_category').editable({
@@ -516,9 +517,21 @@ $(document).ready(function () {
                 $('#add_tes_category_modal').modal('hide');//modal id
 
                 $('#tbl_tes_category').DataTable({//datatable id
-                    "order": [[0, "desc"]],
+                    "order": [[1, "desc"]],
                     orderCellsTop: true,
-                    fixedHeader: true
+                    fixedHeader: true,
+                    "columnDefs": [ {
+                        "targets": 0,
+                        "orderable": false
+                        } ],
+                    "deferRender": true,
+                    scrollX: 200,
+                    scrollY: false,
+                    scrollCollapse: true,
+                    // scroller: true,
+                    fixedColumns:   {
+                        left: 1
+                    }
                 })
 
                 $('#tbl_tes_category').editable({
@@ -871,11 +884,23 @@ $(document).ready(function () {
                 $('#add_program_tdp_modal').modal('hide');//modal id
 
                 $('#tbl_programs_tdp').DataTable({//datatable id
-                    "order": [[0, "desc"]],
+                    "order": [[1, "desc"]],
                     "lengthChange": false,
                     "pageLength": 5,
                     orderCellsTop: true,
-                    fixedHeader: true
+                    fixedHeader: true,         
+                    "columnDefs": [{
+                        "targets": 0,
+                        "orderable": false
+                    }],
+                    "deferRender": true,
+                    scrollX: 200,
+                    scrollY: false,
+                    scrollCollapse: true,
+                    // scroller: true,
+                    fixedColumns:   {
+                        left: 1
+                    }
                 })
 
             }
