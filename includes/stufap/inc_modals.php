@@ -202,7 +202,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <hr>
                     <?php
                     if ($ac_calendar == 'Trimester' or $ac_calendar == 'Trimester with Summer') {
                         echo '
@@ -219,6 +219,7 @@
                             </div>
                         </div>
                         </div>
+                        <hr>
                     ';
                     }
 
