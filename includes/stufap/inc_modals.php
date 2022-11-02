@@ -979,6 +979,23 @@
                     </div>
                     <hr>
                     <div class="form-group"><label>Total Grantees</label>
+
+                    <div class="form-row">
+                        <div class="col text-center border-right"><label class="col-form-label">1st Term</label></div>
+                        <div class="col text-center border-right"><label class="col-form-label">2nd Term</label></div>
+                        <div class="col text-center border-right"><label class="col-form-label">3rd Term</label></div>
+                        <div class="col text-center"><label class="col-form-label">Summer/Midyear</label></div>
+                    </div>
+
+                        <div class="form-group"><label>1st Term</label>
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col"><input id="total_tes_1st_male" name="total_tes_1st_male" class="form-control" type="number" min="0"></div>
+                                    <div class="col"><input id="total_tes_1st_female" name="total_tes_1st_female" class="form-control" type="number" min="0"></div>
+                                </div>
+                            </div>
+                        </div>
+                    
                         <div class="form-group"><label>1st Term</label>
                         <div class="form-group">
                             <div class="form-row">
@@ -987,6 +1004,7 @@
                             </div>
                         </div>
                         </div>
+
                         <div class="form-group"><label>2nd Term</label>
                             <div class="form-row">
                                 <div class="col"><input id="total_tes_2nd_male" name="total_tes_2nd_male" class="form-control" type="number" min="0"></div>
