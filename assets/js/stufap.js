@@ -164,7 +164,7 @@ $(document).ready(function () {
                 $('#add_dropouts_fhe').modal('hide');//modal id
 
                 $('#tbl_fhe_dropouts').DataTable({//datatable id
-                    "order": [[0, "desc"]],
+                    "order": [[1, "desc"]],
                     orderCellsTop: true,
                     fixedHeader: true
                 })
@@ -207,7 +207,7 @@ $(document).ready(function () {
                 $('#add_loa_fhe').modal('hide');//modal id
 
                 $('#tbl_fhe_loa').DataTable({//datatable id
-                    "order": [[0, "desc"]],
+                    "order": [[1, "desc"]],
                     orderCellsTop: true,
                     fixedHeader: true
                 })
@@ -250,7 +250,7 @@ $(document).ready(function () {
                 $('#add_loa_tes').modal('hide');//modal id
 
                 $('#tbl_tes_loa').DataTable({//datatable id
-                    "order": [[0, "desc"]],
+                    "order": [[1, "desc"]],
                     orderCellsTop: true,
                     fixedHeader: true
                 })
@@ -293,7 +293,7 @@ $(document).ready(function () {
                 $('#add_loa_tdp').modal('hide');//modal id
 
                 $('#tbl_tdp_loa').DataTable({//datatable id
-                    "order": [[0, "desc"]],
+                    "order": [[1, "desc"]],
                     orderCellsTop: true,
                     fixedHeader: true
                 })
@@ -717,7 +717,7 @@ $(document).ready(function () {
                 $('#add_dropouts_tes_modal').modal('hide');//modal id
 
                 $('#tbl_tes_dropouts').DataTable({//datatable id
-                    "order": [[0, "desc"]],
+                    "order": [[1, "desc"]],
                     orderCellsTop: true,
                     fixedHeader: true,
                     "footerCallback": function (row, data, start, end, display) {
@@ -800,7 +800,7 @@ $(document).ready(function () {
                 $('#edit_dropouts_tes_modal').modal('hide');
 
                 $('#tbl_tes_dropouts').DataTable({
-                    "order": [[0, "desc"]],
+                    "order": [[1, "desc"]],
                     orderCellsTop: true,
                     fixedHeader: true,
                     "footerCallback": function (row, data, start, end, display) {
@@ -969,7 +969,7 @@ $(document).ready(function () {
                 $('#add_dropouts_tdp_modal').modal('hide');//modal id
 
                 $('#tbl_tdp_dropouts').DataTable({//datatable id
-                    "order": [[0, "desc"]],
+                    "order": [[1, "desc"]],
                     orderCellsTop: true,
                     fixedHeader: true
                 })
