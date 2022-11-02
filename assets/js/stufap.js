@@ -530,7 +530,7 @@ $(document).ready(function () {
                     scrollCollapse: true,
                     // scroller: true,
                     fixedColumns:   {
-                        left: 1
+                        left: 2
                     }
                 })
 
@@ -899,7 +899,7 @@ $(document).ready(function () {
                     scrollCollapse: true,
                     // scroller: true,
                     fixedColumns:   {
-                        left: 1
+                        left: 2
                     }
                 })
 
