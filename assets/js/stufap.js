@@ -1,106 +1,5 @@
 $(document).ready(function () {
     //STUFAP PART
-    //FHE Part
-    //select degree program from table and display to modal
-    $(document).on('click', '.edit_data_fhe', function () {
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/stufap/inc_stufap_select_degree_programs.php",
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#program_name').val(data.program_name);
-
-                //1st Semester
-                $('#total_fhe_1sem_1yr_male').val(data.total_fhe_1sem_1yr_male);
-                $('#total_fhe_1sem_1yr_female').val(data.total_fhe_1sem_1yr_female);
-                $('#total_fhe_1sem_2yr_male').val(data.total_fhe_1sem_2yr_male);
-                $('#total_fhe_1sem_2yr_female').val(data.total_fhe_1sem_2yr_female);
-                $('#total_fhe_1sem_3yr_male').val(data.total_fhe_1sem_3yr_male);
-                $('#total_fhe_1sem_3yr_female').val(data.total_fhe_1sem_3yr_female);
-                $('#total_fhe_1sem_4yr_male').val(data.total_fhe_1sem_4yr_male);
-                $('#total_fhe_1sem_4yr_female').val(data.total_fhe_1sem_4yr_female);
-                $('#total_fhe_1sem_5yr_male').val(data.total_fhe_1sem_5yr_male);
-                $('#total_fhe_1sem_5yr_female').val(data.total_fhe_1sem_5yr_female);
-                $('#total_fhe_1sem_6yr_male').val(data.total_fhe_1sem_6yr_male);
-                $('#total_fhe_1sem_6yr_female').val(data.total_fhe_1sem_6yr_female);
-
-                //2nd Semester
-                $('#total_fhe_2sem_1yr_male').val(data.total_fhe_2sem_1yr_male);
-                $('#total_fhe_2sem_1yr_female').val(data.total_fhe_2sem_1yr_female);
-                $('#total_fhe_2sem_2yr_male').val(data.total_fhe_2sem_2yr_male);
-                $('#total_fhe_2sem_2yr_female').val(data.total_fhe_2sem_2yr_female);
-                $('#total_fhe_2sem_3yr_male').val(data.total_fhe_2sem_3yr_male);
-                $('#total_fhe_2sem_3yr_female').val(data.total_fhe_2sem_3yr_female);
-                $('#total_fhe_2sem_4yr_male').val(data.total_fhe_2sem_4yr_male);
-                $('#total_fhe_2sem_4yr_female').val(data.total_fhe_2sem_4yr_female);
-                $('#total_fhe_2sem_5yr_male').val(data.total_fhe_2sem_5yr_male);
-                $('#total_fhe_2sem_5yr_female').val(data.total_fhe_2sem_5yr_female);
-                $('#total_fhe_2sem_6yr_male').val(data.total_fhe_2sem_6yr_male);
-                $('#total_fhe_2sem_6yr_female').val(data.total_fhe_2sem_6yr_female);
-
-                //3rd Semester
-                $('#total_fhe_3sem_1yr_male').val(data.total_fhe_3sem_1yr_male);
-                $('#total_fhe_3sem_1yr_female').val(data.total_fhe_3sem_1yr_female);
-                $('#total_fhe_3sem_2yr_male').val(data.total_fhe_3sem_2yr_male);
-                $('#total_fhe_3sem_2yr_female').val(data.total_fhe_3sem_2yr_female);
-                $('#total_fhe_3sem_3yr_male').val(data.total_fhe_3sem_3yr_male);
-                $('#total_fhe_3sem_3yr_female').val(data.total_fhe_3sem_3yr_female);
-                $('#total_fhe_3sem_4yr_male').val(data.total_fhe_3sem_4yr_male);
-                $('#total_fhe_3sem_4yr_female').val(data.total_fhe_3sem_4yr_female);
-                $('#total_fhe_3sem_5yr_male').val(data.total_fhe_3sem_5yr_male);
-                $('#total_fhe_3sem_5yr_female').val(data.total_fhe_3sem_5yr_female);
-                $('#total_fhe_3sem_6yr_male').val(data.total_fhe_3sem_6yr_male);
-                $('#total_fhe_3sem_6yr_female').val(data.total_fhe_3sem_6yr_female);
-
-                //Summer Midyear Semester
-                $('#total_fhe_sum_mid_1yr_male').val(data.total_fhe_sum_mid_1yr_male);
-                $('#total_fhe_sum_mid_1yr_female').val(data.total_fhe_sum_mid_1yr_female);
-                $('#total_fhe_sum_mid_2yr_male').val(data.total_fhe_sum_mid_2yr_male);
-                $('#total_fhe_sum_mid_2yr_female').val(data.total_fhe_sum_mid_2yr_female);
-                $('#total_fhe_sum_mid_3yr_male').val(data.total_fhe_sum_mid_3yr_male);
-                $('#total_fhe_sum_mid_3yr_female').val(data.total_fhe_sum_mid_3yr_female);
-                $('#total_fhe_sum_mid_4yr_male').val(data.total_fhe_sum_mid_4yr_male);
-                $('#total_fhe_sum_mid_4yr_female').val(data.total_fhe_sum_mid_4yr_female);
-                $('#total_fhe_sum_mid_5yr_male').val(data.total_fhe_sum_mid_5yr_male);
-                $('#total_fhe_sum_mid_5yr_female').val(data.total_fhe_sum_mid_5yr_female);
-                $('#total_fhe_sum_mid_6yr_male').val(data.total_fhe_sum_mid_6yr_male);
-                $('#total_fhe_sum_mid_6yr_female').val(data.total_fhe_sum_mid_6yr_female);
-
-                $('#total_fhe_graduated_male').val(data.total_fhe_graduated_male);
-                $('#total_fhe_graduated_female').val(data.total_fhe_graduated_female);
-                $('#total_fhe_exceeded_mrr_male').val(data.total_fhe_exceeded_mrr_male);
-                $('#total_fhe_exceeded_mrr_female').val(data.total_fhe_exceeded_mrr_female);
-                $('#editprogramfhemodal').modal('show')
-            }
-        })
-    });
-
-    //update degree program to the table fhe
-    $('#editprogramfhemodal').on('submit', function (event) {
-        event.preventDefault();
-        $.ajax({
-            url: "includes/stufap/inc_stufap_fhe_update_degree_programs.php",
-            method: "POST",
-            data: $('#fhe_editprogram').serialize(),
-            success: function (data) {
-                $('#tbl_programs_fhe_div').html(data);
-                $('#fhe_editprogram')[0].reset();
-                $('#editprogramfhemodal').modal('hide');
-
-                $('#tbl_programs_fhe').DataTable({
-                    "order": [[0, "desc"]],
-                    "lengthChange": false,
-                    "pageLength": 5,
-                    orderCellsTop: true,
-                    fixedHeader: true
-                })
-
-            }
-        });
-    });
-
     //FHE Category Part
     //add fhe category to the table
     $('#add_fhe_category_modal').on('submit', function (event) {//modal id
@@ -260,7 +159,11 @@ $(document).ready(function () {
                 $('#tbl_tes_loa').DataTable({//datatable id
                     "order": [[1, "desc"]],
                     orderCellsTop: true,
-                    fixedHeader: true
+                    fixedHeader: true,
+                    "columnDefs": [ {
+                        "targets": 0,
+                        "orderable": false
+                        } ]
                 })
 
                 $('#tbl_tes_loa').editable({
@@ -303,7 +206,11 @@ $(document).ready(function () {
                 $('#tbl_tdp_loa').DataTable({//datatable id
                     "order": [[1, "desc"]],
                     orderCellsTop: true,
-                    fixedHeader: true
+                    fixedHeader: true,
+                    "columnDefs": [ {
+                        "targets": 0,
+                        "orderable": false
+                        } ]
                 })
 
                 $('#tbl_tdp_loa').editable({
@@ -329,184 +236,6 @@ $(document).ready(function () {
             }
         });
     });
-
-    //select degree program from table and display to modal
-    $(document).on('click', '.edit_dropouts_fhe', function () {
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/stufap/inc_select_dropouts_reason.php",
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#fhe_drop_reason_edit').val(data.reason);
-                $('#fhe_drop_1st_edit').val(data.total_dropout_1st);
-                $('#fhe_drop_2nd_edit').val(data.total_dropout_2nd);
-                $('#fhe_drop_3rd_edit').val(data.total_dropout_3rd);
-                $('#fhe_drop_summer_midyear_edit').val(data.total_dropout_summer_midterm);
-                $('#edit_dropouts_fhe_modal').modal('show')
-            }
-        })
-    });
-
-    //update degree program to the table fhe
-    $('#edit_dropouts_fhe_modal').on('submit', function (event) {
-        event.preventDefault();
-        $.ajax({
-            url: "includes/stufap/inc_fhe_update_dropouts.php",
-            method: "POST",
-            data: $('#edit_dropouts_fhe_form').serialize(),
-            success: function (data) {
-                $('#tbl_fhe_dropouts_div').html(data);
-                $('#edit_dropouts_fhe_form')[0].reset();
-                $('#edit_dropouts_fhe_modal').modal('hide');
-
-                $('#tbl_fhe_dropouts').DataTable({
-                    "order": [[0, "desc"]],
-                    orderCellsTop: true,
-                    fixedHeader: true,
-                    "footerCallback": function (row, data, start, end, display) {
-                        var api = this.api();
-
-                        // Remove the formatting to get integer data for summation
-                        var intVal = function (i) {
-                            return typeof i === 'string' ?
-                                i.replace(/[\$,]/g, '') * 1 :
-                                typeof i === 'number' ?
-                                    i : 0;
-                        };
-
-                        // Total over all pages
-                        total = api
-                            .column(1)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(1).footer()).html(
-                            total
-                        );
-
-                        // Total over all pages
-                        total2 = api
-                            .column(2)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(2).footer()).html(
-                            total2
-                        );
-
-                        // Total over all pages
-                        total3 = api
-                            .column(3)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(3).footer()).html(
-                            total3
-                        );
-
-                        // Total over all pages
-                        total4 = api
-                            .column(4)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(4).footer()).html(
-                            total4
-                        );
-
-                        // Total over all pages
-                        total5 = api
-                            .column(5)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(5).footer()).html(
-                            total5
-                        );
-
-                        // Total over all pages
-                        total6 = api
-                            .column(6)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(6).footer()).html(
-                            total6
-                        );
-
-                        // Total over all pages
-                        total7 = api
-                            .column(7)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(7).footer()).html(
-                            total7
-                        );
-
-                        // Total over all pages
-                        total8 = api
-                            .column(8)
-                            .data()
-                            .reduce(function (a, b) {
-                                return intVal(a) + intVal(b);
-                            }, 0);
-
-                        // Update footer
-                        $(api.column(8).footer()).html(
-                            total8
-                        );
-
-                        // Update footer
-                        $(api.column(9).footer()).html(
-                            'GRAND TOTAL:   ' + (total + total2 + total3 + total4 + total5 + total6 + total7 + total8) + ''
-                        );
-
-
-                    }
-                })
-
-            }
-        });
-    });
-
-    //Remove reason for dropouts
-    //remove data from the degree program table
-    // $(document).on('click', '.remove_dropouts_fhe', function () {
-    //     var uid = $(this).attr("id");
-    //     $.ajax({
-    //         url: "includes/stufap/inc_select_dropouts_reason.php",
-    //         method: "POST",
-    //         data: { uid: uid },
-    //         dataType: "json",
-    //         success: function (data) {
-    //             $('#remove_fhe_dropouts_modal').modal('show')
-    //         }
-    //     })
-    // });
 
 
     /*--------------------------------------------------------------------------------------------*/
@@ -566,66 +295,6 @@ $(document).ready(function () {
         });
     });
 
-    //select tes category from table and display to modal
-    $(document).on('click', '.edit_tes_category', function () {//button class
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/stufap/inc_select_tes_category.php",//php file
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#tes_category_1').val(data.tes_category);//$('#input id').val(data.column name in the database);
-                $('#total_tes_1st_1').val(data.total_tes_1st);
-                $('#total_tes_2nd_1').val(data.total_tes_2nd);
-                $('#total_pwd_1st_1').val(data.total_pwd_1st);
-                $('#total_pwd_2nd_1').val(data.total_pwd_2nd);
-                $('#total_ip_1st_1').val(data.total_ip_1st);
-                $('#total_ip_2nd_1').val(data.total_ip_2nd);
-                $('#total_with_board_1st_1').val(data.total_with_board_1st);
-                $('#total_with_board_2nd_1').val(data.total_with_board_2nd);
-                $('#edit_tes_category_modal').modal('show');//modal id
-            }
-        })
-    });
-
-    //update tes category to the table tes
-    $('#edit_tes_category_modal').on('submit', function (event) {//modal id
-        event.preventDefault();
-        $.ajax({
-            url: "includes/stufap/inc_tes_update_category.php",//php file
-            method: "POST",
-            data: $('#edit_tes_category_form').serialize(),//modal form id
-            success: function (data) {
-                $('#tbl_tes_category_div').html(data);//table div id
-                $('#edit_tes_category_form')[0].reset();//modal form id
-                $('#edit_tes_category_modal').modal('hide');//modal id
-
-                $('#tbl_tes_category').DataTable({//datatable id
-                    "order": [[0, "desc"]],
-                    orderCellsTop: true,
-                    fixedHeader: true
-                })
-
-            }
-        });
-    });
-
-    //Remove tes category
-    //select data from the tes category
-    $(document).on('click', '.remove_tes_category', function () {
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/stufap/inc_select_tes_category.php",
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#remove_tes_category_modal').modal('show');
-            }
-        })
-    });
-
     /*--------------------------------------------------------------------------------------------*/
     //TES Program Part
     //add tes program to the table**
@@ -644,28 +313,15 @@ $(document).ready(function () {
                 $('#tbl_programs_tes').DataTable({//datatable id
                     "order": [[0, "desc"]],
                     orderCellsTop: true,
-                    fixedHeader: true
+                    fixedHeader: true,
+                    "columnDefs": [ {
+                        "targets": 0,
+                        "orderable": false
+                        } ]
                 })
 
             }
         });
-    });
-
-    //select tes program from table and display to modal
-    $(document).on('click', '.edit_program_tes', function () {//button class
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/stufap/inc_select_tes_program.php",//php file
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#tes_program_name_1').val(data.program_name);//$('#input id').val(data.column name in the database);
-                $('#total_tes_mrr_male_1').val(data.total_tes_exceeded_mrr_male);
-                $('#total_tes_mrr_female_1').val(data.total_tes_exceeded_mrr_female);
-                $('#edit_program_tes_modal').modal('show');//modal id
-            }
-        })
     });
 
     //update tes program to the table tes
@@ -684,7 +340,11 @@ $(document).ready(function () {
                 $('#tbl_programs_tes').DataTable({//datatable id
                     "order": [[0, "desc"]],
                     orderCellsTop: true,
-                    fixedHeader: true
+                    fixedHeader: true,
+                    "columnDefs": [ {
+                        "targets": 0,
+                        "orderable": false
+                        } ]
                 })
 
                 $('#tbl_programs_tes').editable({
