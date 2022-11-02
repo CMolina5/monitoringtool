@@ -311,7 +311,7 @@ $(document).ready(function () {
                 $('#add_program_tes_modal').modal('hide');//modal id
 
                 $('#tbl_programs_tes').DataTable({//datatable id
-                    "order": [[0, "desc"]],
+                    "order": [[1, "desc"]],
                     orderCellsTop: true,
                     fixedHeader: true,
                     "columnDefs": [ {
@@ -338,7 +338,7 @@ $(document).ready(function () {
                 $('#edit_program_tes_modal').modal('hide');//modal id
 
                 $('#tbl_programs_tes').DataTable({//datatable id
-                    "order": [[0, "desc"]],
+                    "order": [[1, "desc"]],
                     orderCellsTop: true,
                     fixedHeader: true,
                     "columnDefs": [ {
