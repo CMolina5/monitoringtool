@@ -996,7 +996,16 @@
                                     <input id="total_tes_1st_male" name="total_tes_1st_male" class="form-control" type="number" min="0">
                                 </div>
                             </div>
-                            <div class="col border-right"><input id="total_tes_1st_female" name="total_tes_1st_female" class="form-control" type="number" min="0"></div>
+                            <div class="col">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text icon-container">
+                                            <i class='fas fa-female' style='font-size:20px; color:#9a0694'></i>
+                                        </span>
+                                    </div>
+                                    <input id="total_tes_1st_female" name="total_tes_1st_female" class="form-control" type="number" min="0">
+                                </div>
+                            </div>
                             <div class="col"><input id="total_tes_2nd_male" name="total_tes_2nd_male" class="form-control" type="number" min="0"></div>
                             <div class="col border-right"><input id="total_tes_2nd_female" name="total_tes_2nd_female" class="form-control" type="number" min="0"></div>
                             <div class="col"><input id="total_tes_3rd_male" name="total_tes_3rd_male" class="form-control" type="number" min="0"></div>
