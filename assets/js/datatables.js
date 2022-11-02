@@ -127,7 +127,7 @@ $(document).ready(function () {
         fixedHeader: true,
         // "deferRender": true,
         scrollX:        200,
-        scrollCollapse: true,
+        // scrollCollapse: true,
         scroller:       true
     });
 
