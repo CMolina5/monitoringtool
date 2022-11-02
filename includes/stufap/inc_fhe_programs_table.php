@@ -180,7 +180,7 @@ if ($resultCheck > 0) {
         $total_fhe_exceeded_mrr_female = $row['total_fhe_exceeded_mrr_female'];
 
         echo "<tr>
-        <td class='text-left'>$program_name</td>
+        <td class='text-left' style='width=30%;'>$program_name</td>
         
         <td data-name='total_fhe_1sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1sem_1yr_male</td>
         <td data-name='total_fhe_1sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1sem_1yr_female</td>
