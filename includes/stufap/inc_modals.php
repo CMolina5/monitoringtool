@@ -987,7 +987,7 @@
                         </div>
                         <div class="form-row">
 
-                            <div class="col">
+                            <div class="col" data-toggle="tooltip" title="male">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text icon-container">
