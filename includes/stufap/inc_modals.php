@@ -1073,7 +1073,6 @@
                         </div>
                     </div>
                     <hr>
-
                     <div class="form-group"><label>Persons with Disability (PWDs)</label>
                         <div class="form-row">
                             <div class="col text-center border-right"><label class="col-form-label">1st Term</label></div>
@@ -1168,7 +1167,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <hr>
                     <div class="form-group"><label>Indigenous People (IP)</label>
                         <div class="form-row">
                             <div class="col text-center border-right"><label class="col-form-label">1st Term</label></div>
@@ -1263,7 +1262,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <hr>
                     <div class="form-group"><label>With Board Exams</label>
                         <div class="form-row">
                             <div class="col text-center border-right"><label class="col-form-label">1st Term</label></div>
