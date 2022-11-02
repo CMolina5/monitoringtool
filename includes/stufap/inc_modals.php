@@ -905,7 +905,7 @@
 </div>
 
 <!--Remove fhe category modal-->
-<div role="dialog" tabindex="-1" class="modal fade show" id="Termgory_modal">
+<div role="dialog" tabindex="-1" class="modal fade show" id="remove_fhe_category_modal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <form method="POST" id="remove_fhe_category_form">
