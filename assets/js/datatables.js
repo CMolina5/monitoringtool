@@ -128,7 +128,7 @@ $(document).ready(function () {
         "deferRender": true,
         scrollX:        200,
         scrollY:        false,
-        // scrollCollapse: true,
+        scrollCollapse: true,
         // scroller:       true
     });
 
