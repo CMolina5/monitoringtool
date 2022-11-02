@@ -1529,7 +1529,7 @@
                     </div>
                     <hr>
                     <div class="form-group"><label>Total TDP Grantees</label>
-                    <div class="form-group"><label>1st Semester</label>
+                    <div class="form-group"><label>1st Term</label>
                         <div class="form-row">
                             <div class="col text-center border-right"><label class="col-form-label">1st Year</label></div>
                             <div class="col text-center border-right"><label class="col-form-label">2nd Year</label></div>
@@ -1669,141 +1669,426 @@
                         </div>
                     </div>
                 <hr>
-
-                        <div class="form-group"><label>2nd Term</label>
-                        <div class="form-group"><label>1st Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_2sem_1yr_male" id="total_tdp_2sem_1yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_2sem_1yr_female" id="total_tdp_2sem_1yr_female" class="form-control" type="number" min="0"></div>
-                            </div>
+                <div class="form-group"><label>2nd Term</label>
+                        <div class="form-row">
+                            <div class="col text-center border-right"><label class="col-form-label">1st Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">2nd Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">3rd Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">4th Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">5th Year</label></div>
+                            <div class="col text-center"><label class="col-form-label">6th Year</label></div>
                         </div>
-                        <div class="form-group"><label>2nd Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_2sem_2yr_male" id="total_tdp_2sem_2yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_2sem_2yr_female" id="total_tdp_2sem_2yr_female" class="form-control" type="number" min="0"></div>
-                            </div>
-                        </div>
+                        <div class="form-row">
 
-                        <div class="form-group"><label>3rd Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_2sem_3yr_male" id="total_tdp_2sem_3yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_2sem_3yr_female" id="total_tdp_2sem_3yr_female" class="form-control" type="number" min="0"></div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_2sem_1yr_male" id="total_tdp_2sem_1yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_2sem_1yr_female" id="total_tdp_2sem_1yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_2sem_2yr_male" id="total_tdp_2sem_2yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_2sem_2yr_female" id="total_tdp_2sem_2yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <div class="form-group"><label>4th Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_2sem_4yr_male" id="total_tdp_2sem_4yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_2sem_4yr_female" id="total_tdp_2sem_4yr_female" class="form-control" type="number" min="0"></div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_2sem_3yr_male" id="total_tdp_2sem_3yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_2sem_3yr_female" id="total_tdp_2sem_3yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group"><label>5th Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_2sem_5yr_male" id="total_tdp_2sem_5yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_2sem_5yr_female" id="total_tdp_2sem_5yr_female" class="form-control" type="number" min="0"></div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_2sem_4yr_male" id="total_tdp_2sem_4yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_2sem_4yr_female" id="total_tdp_2sem_4yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group"><label>6th Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_2sem_6yr_male" id="total_tdp_2sem_6yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_2sem_6yr_female" id="total_tdp_2sem_6yr_female" class="form-control" type="number" min="0"></div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_2sem_5yr_male" id="total_tdp_2sem_5yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_2sem_5yr_female" id="total_tdp_2sem_5yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            
+                            <div class="col">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_2sem_6yr_male" id="total_tdp_2sem_6yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_2sem_6yr_female" id="total_tdp_2sem_6yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          
                         </div>
                     </div>
-
-                        <hr>
-
-                        <div class="form-group"><label>3rd Term</label>
-                        <div class="form-group"><label>1st Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_3sem_1yr_male" id="total_tdp_3sem_1yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_3sem_1yr_female" id="total_tdp_3sem_1yr_female" class="form-control" type="number" min="0"></div>
-                            </div>
+                <hr>
+                <div class="form-group"><label>3rd Term</label>
+                        <div class="form-row">
+                            <div class="col text-center border-right"><label class="col-form-label">1st Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">2nd Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">3rd Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">4th Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">5th Year</label></div>
+                            <div class="col text-center"><label class="col-form-label">6th Year</label></div>
                         </div>
-                        <div class="form-group"><label>2nd Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_3sem_2yr_male" id="total_tdp_3sem_2yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_3sem_2yr_female" id="total_tdp_3sem_2yr_female" class="form-control" type="number" min="0"></div>
-                            </div>
-                        </div>
+                        <div class="form-row">
 
-                        <div class="form-group"><label>3rd Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_3sem_3yr_male" id="total_tdp_3sem_3yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_3sem_3yr_female" id="total_tdp_3sem_3yr_female" class="form-control" type="number" min="0"></div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_3sem_1yr_male" id="total_tdp_3sem_1yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_3sem_1yr_female" id="total_tdp_3sem_1yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_3sem_2yr_male" id="total_tdp_3sem_2yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_3sem_2yr_female" id="total_tdp_3sem_2yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <div class="form-group"><label>4th Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_3sem_4yr_male" id="total_tdp_3sem_4yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_3sem_4yr_female" id="total_tdp_3sem_4yr_female" class="form-control" type="number" min="0"></div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_3sem_3yr_male" id="total_tdp_3sem_3yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_3sem_3yr_female" id="total_tdp_3sem_3yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group"><label>5th Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_3sem_5yr_male" id="total_tdp_3sem_5yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_3sem_5yr_female" id="total_tdp_3sem_5yr_female" class="form-control" type="number" min="0"></div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_3sem_4yr_male" id="total_tdp_3sem_4yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_3sem_4yr_female" id="total_tdp_3sem_4yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group"><label>6th Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_3sem_6yr_male" id="total_tdp_3sem_6yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_3sem_6yr_female" id="total_tdp_3sem_6yr_female" class="form-control" type="number" min="0"></div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_3sem_5yr_male" id="total_tdp_3sem_5yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_3sem_5yr_female" id="total_tdp_3sem_5yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            
+                            <div class="col">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_3sem_6yr_male" id="total_tdp_3sem_6yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_3sem_6yr_female" id="total_tdp_3sem_6yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          
                         </div>
                     </div>
-
-                        <hr>
-
-                        <div class="form-group"><label>Summer/Midyear</label>
-                        <div class="form-group"><label>1st Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_sum_mid_1yr_male" id="total_tdp_sum_mid_1yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_sum_mid_1yr_female" id="total_tdp_sum_mid_1yr_female" class="form-control" type="number" min="0"></div>
-                            </div>
+                <hr>
+                <div class="form-group"><label>Summer/Midyear</label>
+                        <div class="form-row">
+                            <div class="col text-center border-right"><label class="col-form-label">1st Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">2nd Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">3rd Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">4th Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">5th Year</label></div>
+                            <div class="col text-center"><label class="col-form-label">6th Year</label></div>
                         </div>
-                        <div class="form-group"><label>2nd Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_sum_mid_2yr_male" id="total_tdp_sum_mid_2yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_sum_mid_2yr_female" id="total_tdp_sum_mid_2yr_female" class="form-control" type="number" min="0"></div>
-                            </div>
-                        </div>
+                        <div class="form-row">
 
-                        <div class="form-group"><label>3rd Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_sum_mid_3yr_male" id="total_tdp_sum_mid_3yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_sum_mid_3yr_female" id="total_tdp_sum_mid_3yr_female" class="form-control" type="number" min="0"></div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_sum_mid_1yr_male" id="total_tdp_sum_mid_1yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_sum_mid_1yr_female" id="total_tdp_sum_mid_1yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_sum_mid_2yr_male" id="total_tdp_sum_mid_2yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_sum_mid_2yr_female" id="total_tdp_sum_mid_2yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <div class="form-group"><label>4th Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_sum_mid_4yr_male" id="total_tdp_sum_mid_4yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_sum_mid_4yr_female" id="total_tdp_sum_mid_4yr_female" class="form-control" type="number" min="0"></div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_sum_mid_3yr_male" id="total_tdp_sum_mid_3yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_sum_mid_3yr_female" id="total_tdp_sum_mid_3yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group"><label>5th Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_sum_mid_5yr_male" id="total_tdp_sum_mid_5yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_sum_mid_5yr_female" id="total_tdp_sum_mid_5yr_female" class="form-control" type="number" min="0"></div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_sum_mid_4yr_male" id="total_tdp_sum_mid_4yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_sum_mid_4yr_female" id="total_tdp_sum_mid_4yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group"><label>6th Year</label>
-                            <div class="form-row">
-                                <div class="col-xl-6"><input name="total_tdp_sum_mid_6yr_male" id="total_tdp_sum_mid_6yr_male" class="form-control" type="number" min="0"></div>
-                                <div class="col-xl-6"><input name="total_tdp_sum_mid_6yr_female" id="total_tdp_sum_mid_6yr_female" class="form-control" type="number" min="0"></div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_sum_mid_5yr_male" id="total_tdp_sum_mid_5yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_sum_mid_5yr_female" id="total_tdp_sum_mid_5yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            
+                            <div class="col">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input name="total_tdp_sum_mid_6yr_male" id="total_tdp_sum_mid_6yr_male" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input name="total_tdp_sum_mid_6yr_female" id="total_tdp_sum_mid_6yr_female" class="form-control" type="number" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          
                         </div>
                     </div>
-
-                        <hr>
+                <hr>
 
                         <div class="form-group"><label>No. of TDP Grantees who graduated</label>
                             <div class="form-row">
