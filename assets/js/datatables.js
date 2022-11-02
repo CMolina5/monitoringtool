@@ -131,7 +131,7 @@ $(document).ready(function () {
         scrollCollapse: true,
         // scroller:       true
         fixedColumns:   {
-            left: 1,
+            left: 1
         }
     });
 
