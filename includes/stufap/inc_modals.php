@@ -996,7 +996,7 @@
                                     <input id="total_tes_1st_male" name="total_tes_1st_male" class="form-control" type="number" min="0">
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col border-right">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text icon-container">
