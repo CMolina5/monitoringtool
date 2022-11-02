@@ -961,15 +961,27 @@
                     <hr>
                     <div class="form-group"><label>No. of TES Grantees who exceeded the maximum residency rule</label>
                         <div class="form-row">
-                            <div class="col-xl-6"><label>Male</label><input name="total_tes_mrr_male" id="total_tes_mrr_male" class="form-control" type="number" min="0"></div>
-                            <div class="col-xl-6"><label>Female</label><input name="total_tes_mrr_female" id="total_tes_mrr_female" class="form-control" type="number" min="0"></div>
+                            <div class="col" data-toggle="tooltip" title="male">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-male" style="font-size:20px; color:#1a5676"></i></span></div><input name="total_tes_mrr_male" id="total_tes_mrr_male" class="form-control" type="number" min="0">
+                                    </div>
+                            </div>
+                                <div class="col" data-toggle="tooltip" title="female">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-female" style="font-size:20px; color:#9a0694"></i></span></div><label>Female</label><input name="total_tes_mrr_female" id="total_tes_mrr_female" class="form-control" type="number" min="0">
+                                    </div>
+                            </div>
                         </div>
                     </div>
-
+                    <hr>
                     <div class="form-group"><label>Estimated No. of Graduating Students</label>
                         <div class="form-row">
-                            <div class="col-xl-6"><label>Male</label><input name="total_tes_est_grad_male" id="total_tes_est_grad_male" class="form-control" type="number" min="0"></div>
-                            <div class="col-xl-6"><label>Female</label><input name="total_tes_est_grad_female" id="total_tes_est_grad_female" class="form-control" type="number" min="0"></div>
+                            <div class="col" data-toggle="tooltip" title="male">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-male" style="font-size:20px; color:#1a5676"></i></span></div><input name="total_tes_est_grad_male" id="total_tes_est_grad_male" class="form-control" type="number" min="0">
+                                </div>
+                            </div>
+                                <div class="col" data-toggle="tooltip" title="female">
+                                    <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-female" style="font-size:20px; color:#9a0694"></i></span></div><label>Female</label><input name="total_tes_est_grad_female" id="total_tes_est_grad_female" class="form-control" type="number" min="0">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
