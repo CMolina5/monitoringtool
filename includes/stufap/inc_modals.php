@@ -802,7 +802,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <hr>
                     <div class="form-group">
                         <label>2nd Semester</label>
                         <div class="form-row">
@@ -816,7 +816,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <hr>
                     <div class="form-group">
                         <label>3rd Semester</label>
                         <div class="form-row">
@@ -830,7 +830,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <hr>
                     <div class="form-group">
                         <label>Summer/Midyear</label>
                         <div class="form-row">
