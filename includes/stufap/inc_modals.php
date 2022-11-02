@@ -1529,6 +1529,119 @@
                     </div>
                     <hr>
                     <div class="form-group"><label>Total TDP Grantees</label>
+                    <div class="form-group"><label>1st Semester</label>
+                        <div class="form-row">
+                            <div class="col text-center border-right"><label class="col-form-label">1st Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">2nd Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">3rd Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">4th Year</label></div>
+                            <div class="col text-center border-right"><label class="col-form-label">5th Year</label></div>
+                            <div class="col text-center"><label class="col-form-label">6th Year</label></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                            <input type="number" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                            <input type="number" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="number" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="number" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="number" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="number" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="number" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="number" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col border-right">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="number" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="number" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="number" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="number" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="form-group"><label>1st Term</label>
                         <div class="form-group"><label>1st Year</label>
                             <div class="form-row">
