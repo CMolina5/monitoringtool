@@ -125,7 +125,7 @@ $(document).ready(function () {
         "pageLength": 5,
         orderCellsTop: true,
         fixedHeader: true,
-        "deferRender": true,
+        // "deferRender": true,
         scrollX:        200,
         scrollCollapse: true,
         scroller:       true
