@@ -70,7 +70,6 @@
                     </div>
                     <hr>
                     <div class="form-group"><label>No. of Dropouts</label></div>
-
                     <div class="form-group">
                         <label>1st Term</label>
                         <div class="form-row">
@@ -179,16 +178,28 @@
                     <div class="form-group">
                         <label>1st Term</label>
                         <div class="form-row">
-                            <div class="col"><input id="fhe_loa_1st_male" name="fhe_loa_1st_male" class="form-control" type="number" min="0" /></div>
-                            <div class="col"><input id="fhe_loa_1st_female" name="fhe_loa_1st_female" class="form-control" type="number" min="0" /></div>
+                            <div class="col" data-toggle="tooltip" title="male">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div><input id="fhe_loa_1st_male" name="fhe_loa_1st_male" class="form-control" type="number" min="0" />
+                                </div>
+                            </div>
+                            <div class="col" data-toggle="tooltip" title="female">
+                                <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div><input id="fhe_loa_1st_female" name="fhe_loa_1st_female" class="form-control" type="number" min="0" />
+                                </div>
+                            </div>
                         </div>
                     </div>
-
+                    <hr>
                     <div class="form-group">
                         <label>2nd Term</label>
                         <div class="form-row">
-                            <div class="col"><input id="fhe_loa_2nd_male" name="fhe_loa_2nd_male" class="form-control" type="number" min="0" /></div>
-                            <div class="col"><input id="fhe_loa_2nd_female" name="fhe_loa_2nd_female" class="form-control" type="number" min="0" /></div>
+                            <div class="col" data-toggle="tooltip" title="male">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-male" style="font-size:20px; color:#1a5676"></i></span></div><input id="fhe_loa_2nd_male" name="fhe_loa_2nd_male" class="form-control" type="number" min="0" />
+                                </div>
+                            </div>
+                            <div class="col" data-toggle="tooltip" title="female">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-female" style="font-size:20px; color:#9a0694"></i></span></div><input id="fhe_loa_2nd_female" name="fhe_loa_2nd_female" class="form-control" type="number" min="0" />
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -197,10 +208,16 @@
                         echo '
                         <div class="form-group">
                         <label>3rd Term</label>
-                            <div class="form-row">
-                                <div class="col"><input id="fhe_loa_3rd_male" name="fhe_loa_3rd_male" class="form-control" type="number" min="0"/></div>
-                                <div class="col"><input id="fhe_loa_3rd_female" name="fhe_loa_3rd_female" class="form-control" type="number" min="0"/></div>
+                        <div class="form-row">
+                            <div class="col" data-toggle="tooltip" title="male">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-male" style="font-size:20px; color:#1a5676"></i></span></div><input id="fhe_loa_3rd_male" name="fhe_loa_3rd_male" class="form-control" type="number" min="0" />
+                                </div>
                             </div>
+                            <div class="col" data-toggle="tooltip" title="female">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-female" style="font-size:20px; color:#9a0694"></i></span></div><input id="fhe_loa_3rd_female" name="fhe_loa_3rd_female" class="form-control" type="number" min="0" />
+                                </div>
+                            </div>
+                        </div>
                         </div>
                     ';
                     }
@@ -210,8 +227,14 @@
                         <div class="form-group">
                         <label>Summer/Midyear</label>
                             <div class="form-row">
-                                <div class="col"><input id="fhe_loa_summer_midyear_male" name="fhe_loa_summer_midyear_male" class="form-control" type="number" min="0"/></div>
-                                <div class="col"><input id="fhe_loa_summer_midyear_female" name="fhe_loa_summer_midyear_female" class="form-control" type="number" min="0"/></div>
+                                <div class="col" data-toggle="tooltip" title="male">
+                                    <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-male" style="font-size:20px; color:#1a5676"></i></span></div><input id="fhe_loa_summer_midyear_male" name="fhe_loa_summer_midyear_male" class="form-control" type="number" min="0" />
+                                    </div>
+                                </div>
+                                <div class="col" data-toggle="tooltip" title="female">
+                                    <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-female" style="font-size:20px; color:#9a0694"></i></span></div><input id="fhe_loa_summer_midyear_female" name="fhe_loa_summer_midyear_female" class="form-control" type="number" min="0" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     ';
