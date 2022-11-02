@@ -1645,7 +1645,7 @@
                                 </div>
                             </div>
                             
-                            <div class="col border">
+                            <div class="col">
                                 <div class="form-group">
                                     <div class="form-row">
                                         <div class="col">
