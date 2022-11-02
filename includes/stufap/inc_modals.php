@@ -78,7 +78,6 @@
                                 <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div><input id="fhe_drop_1st_male" name="fhe_drop_1st_male" class="form-control" type="number" min="0" />
                                 </div>
                             </div>
-
                             <div class="col" data-toggle="tooltip" title="female">
                                 <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div><input id="fhe_drop_1st_female" name="fhe_drop_1st_female" class="form-control" type="number" min="0" />
                                 </div>
@@ -86,14 +85,6 @@
                         </div>
                     </div>
                     <hr>
-
-                    <div class="form-group">
-                        <label>1st Term</label>
-                        <div class="form-row">
-                            <div class="col"></div>
-                            <div class="col"></div>
-                        </div>
-                    </div>
 
                     <div class="form-group">
                         <label>2nd Term</label>
