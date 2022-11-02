@@ -5,7 +5,7 @@ $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 
 echo "
-<table id='tbl_programs_fhe' class='table-bordered tbl-style stripe' style='width: 100%; display'>
+<table id='tbl_programs_fhe' class='table-bordered tbl-style stripe table-sm' style='width: 100%; display'>
 <thead>
     <tr>
         <th class='text-center' rowspan='4' colspan='1' style='background-color: #3C70AB; color:#ffff;'>DEGREE PROGRAM</th>
