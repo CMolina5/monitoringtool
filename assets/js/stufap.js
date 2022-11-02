@@ -320,6 +320,26 @@ $(document).ready(function () {
                         } ]
                 })
 
+                $('#tbl_programs_tes').editable({
+                    mode: 'inline',
+                    container: 'body',
+                    selector: 'td.beneficiaries',
+                    // title: 'Total Beneficiaries',
+                    url: "includes/stufap/inc_tes_update_program_2.php",
+                    type: "POST",
+                    min: 0,
+                    placeholder: 'No. of Beneficiaries',
+                    // showbuttons: false,
+                    defaultValue: 0,
+                    toggle: 'dblclick',
+                    //dataType: 'json',
+                    validate: function (value) {
+                        if ($.trim(value) == '') {
+                            return 'This field is required';
+                        }
+                    }
+                });
+
             }
         });
     });
