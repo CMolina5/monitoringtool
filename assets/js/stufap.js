@@ -427,6 +427,26 @@ $(document).ready(function () {
                     }
                 })
 
+                $('#tbl_programs_tdp').editable({
+                    mode: 'inline',
+                    container: 'body',
+                    selector: 'td.beneficiaries',
+                    // title: 'Total Beneficiaries',
+                    url: "includes/stufap/inc_tdp_update_program_2.php",
+                    type: "POST",
+                    min: 0,
+                    placeholder: 'No. of Beneficiaries',
+                    // showbuttons: false,
+                    defaultValue: 0,
+                    toggle: 'dblclick',
+                    //dataType: 'json',
+                    validate: function (value) {
+                        if ($.trim(value) == '') {
+                            return 'This field is required';
+                        }
+                    }
+                });
+
             }
         });
     });
