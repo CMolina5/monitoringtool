@@ -966,7 +966,7 @@
                                     </div>
                             </div>
                                 <div class="col" data-toggle="tooltip" title="female">
-                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-female" style="font-size:20px; color:#9a0694"></i></span></div><label>Female</label><input name="total_tes_mrr_female" id="total_tes_mrr_female" class="form-control" type="number" min="0">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-female" style="font-size:20px; color:#9a0694"></i></span></div><input name="total_tes_mrr_female" id="total_tes_mrr_female" class="form-control" type="number" min="0">
                                     </div>
                             </div>
                         </div>
@@ -979,7 +979,7 @@
                                 </div>
                             </div>
                                 <div class="col" data-toggle="tooltip" title="female">
-                                    <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-female" style="font-size:20px; color:#9a0694"></i></span></div><label>Female</label><input name="total_tes_est_grad_female" id="total_tes_est_grad_female" class="form-control" type="number" min="0">
+                                    <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-female" style="font-size:20px; color:#9a0694"></i></span></div><input name="total_tes_est_grad_female" id="total_tes_est_grad_female" class="form-control" type="number" min="0">
                                 </div>
                             </div>
                         </div>
