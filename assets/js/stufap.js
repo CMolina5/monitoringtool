@@ -166,7 +166,11 @@ $(document).ready(function () {
                 $('#tbl_fhe_dropouts').DataTable({//datatable id
                     "order": [[1, "desc"]],
                     orderCellsTop: true,
-                    fixedHeader: true
+                    fixedHeader: true,
+                    "columnDefs": [ {
+                        "targets": 0,
+                        "orderable": false
+                        } ]
                 })
 
                 $('#tbl_fhe_dropouts').editable({
@@ -209,7 +213,11 @@ $(document).ready(function () {
                 $('#tbl_fhe_loa').DataTable({//datatable id
                     "order": [[1, "desc"]],
                     orderCellsTop: true,
-                    fixedHeader: true
+                    fixedHeader: true,
+                    "columnDefs": [ {
+                        "targets": 0,
+                        "orderable": false
+                        } ]
                 })
 
                 $('#tbl_fhe_loa').editable({
@@ -971,7 +979,11 @@ $(document).ready(function () {
                 $('#tbl_tdp_dropouts').DataTable({//datatable id
                     "order": [[1, "desc"]],
                     orderCellsTop: true,
-                    fixedHeader: true
+                    fixedHeader: true,
+                    "columnDefs": [ {
+                        "targets": 0,
+                        "orderable": false
+                        } ]
                 })
 
                 $('#tbl_tdp_dropouts').editable({
@@ -980,6 +992,51 @@ $(document).ready(function () {
                     selector: 'td.beneficiaries',
                     // title: 'Total Beneficiaries',
                     url: "includes/stufap/inc_tdp_update_dropouts.php",
+                    type: "POST",
+                    min: 0,
+                    placeholder: 'No. of Beneficiaries',
+                    // showbuttons: false,
+                    defaultValue: 0,
+                    toggle: 'dblclick',
+                    //dataType: 'json',
+                    validate: function (value) {
+                        if ($.trim(value) == '') {
+                            return 'This field is required';
+                        }
+                    }
+                });
+
+            }
+        });
+    });
+
+    $('#add_dropouts_tes_modal').on('submit', function (event) {//modal id
+        event.preventDefault();
+        $.ajax({
+            url: "includes/stufap/inc_tes_add_dropouts.php",//php file
+            method: "POST",
+            data: $('#add_dropouts_tes_form').serialize(),//modal form id
+            success: function (data) {
+                $('#tbl_tes_dropouts_div').html(data);//table div id
+                $('#add_dropouts_tes_form')[0].reset();//modal form id
+                $('#add_dropouts_tes_modal').modal('hide');//modal id
+
+                $('#tbl_tes_dropouts').DataTable({//datatable id
+                    "order": [[1, "desc"]],
+                    orderCellsTop: true,
+                    fixedHeader: true,
+                    "columnDefs": [ {
+                        "targets": 0,
+                        "orderable": false
+                        } ]
+                })
+
+                $('#tbl_tes_dropouts').editable({
+                    mode: 'inline',
+                    container: 'body',
+                    selector: 'td.beneficiaries',
+                    // title: 'Total Beneficiaries',
+                    url: "includes/stufap/inc_tes_update_dropouts.php",
                     type: "POST",
                     min: 0,
                     placeholder: 'No. of Beneficiaries',
