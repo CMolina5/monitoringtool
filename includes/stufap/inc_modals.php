@@ -987,14 +987,14 @@
                         </div>
                         <div class="form-row">
 
-                            <div class="col" data-toggle="tooltip" title="male">
+                            <div class="col">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text icon-container">
                                             <i class='fas fa-male' style='font-size:20px; color:#1a5676'></i>
                                         </span>
                                     </div>
-                                    <input id="total_tes_1st_male" name="total_tes_1st_male" class="form-control" type="number" min="0">
+                                    <input id="total_tes_1st_male" name="total_tes_1st_male" class="form-control" type="number" min="0" data-toggle="tooltip" title="male">
                                 </div>
                             </div>
                             <div class="col border-right">
