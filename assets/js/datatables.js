@@ -128,8 +128,8 @@ $(document).ready(function () {
         "deferRender": true,
         scrollX:        200,
         scrollY:        false,
-        scrollCollapse: true,
-        scroller:       true
+        // scrollCollapse: true,
+        // scroller:       true
     });
 
     // $('#tbl_programs_fhe').Tabledit({
