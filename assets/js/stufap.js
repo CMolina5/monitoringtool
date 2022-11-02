@@ -15,7 +15,7 @@ $(document).ready(function () {
                 $('#add_fhe_category_modal').modal('hide');//modal id
 
                 $('#tbl_fhe_category').DataTable({//datatable id
-                    "order": [[0, "desc"]],
+                    "order": [[1, "desc"]],
                     orderCellsTop: true,
                     fixedHeader: true,
                     "columnDefs": [{
