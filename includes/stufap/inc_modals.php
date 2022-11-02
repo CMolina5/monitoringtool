@@ -89,33 +89,54 @@
                     <div class="form-group">
                         <label>2nd Term</label>
                         <div class="form-row">
-                            <div class="col"><input id="fhe_drop_2nd_male" name="fhe_drop_2nd_male" class="form-control" type="number" min="0" /></div>
-                            <div class="col"><input id="fhe_drop_2nd_female" name="fhe_drop_2nd_female" class="form-control" type="number" min="0" /></div>
+                            <div class="col" data-toggle="tooltip" title="male">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div><input id="fhe_drop_2nd_male" name="fhe_drop_2nd_male" class="form-control" type="number" min="0" />
+                                </div>
+                            </div>
+                            <div class="col" data-toggle="tooltip" title="female">
+                                <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div><input id="fhe_drop_2nd_female" name="fhe_drop_2nd_female" class="form-control" type="number" min="0" />
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <hr>
 
+                   
                     <?php
                     if ($ac_calendar == 'Trimester' or $ac_calendar == 'Trimester with Summer') {
                         echo '
                         <div class="form-group">
-                        <label>3rd Term</label>
-                            <div class="form-row">
-                                <div class="col"><input id="fhe_drop_3rd_male" name="fhe_drop_3rd_male" class="form-control" type="number" min="0"/></div>
-                                <div class="col"><input id="fhe_drop_3rd_female" name="fhe_drop_3rd_female" class="form-control" type="number" min="0"/></div>
+                        <label>2nd Term</label>
+                        <div class="form-row">
+                            <div class="col" data-toggle="tooltip" title="male">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-male" style="font-size:20px; color:#1a5676"></i></span></div><input id="fhe_drop_3rd_male" name="fhe_drop_3rd_male" class="form-control" type="number" min="0" />
+                                </div>
+                            </div>
+                            <div class="col" data-toggle="tooltip" title="female">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-female" style="font-size:20px; color:#9a0694"></i></span></div><input id="fhe_drop_3rd_female" name="fhe_drop_3rd_female" class="form-control" type="number" min="0" />
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <hr>
                     ';
                     }
 
                     if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Summer') {
                         echo '
                         <div class="form-group">
-                        <label>Summer/Midyear</label>
-                            <div class="form-row">
-                                <div class="col"><input id="fhe_drop_summer_midyear_male" name="fhe_drop_summer_midyear_male" class="form-control" type="number" min="0"/></div>
-                                <div class="col"><input id="fhe_drop_summer_midyear_female" name="fhe_drop_summer_midyear_female" class="form-control" type="number" min="0"/></div>
+                        <label>2nd Term</label>
+                        <div class="form-row">
+                            <div class="col" data-toggle="tooltip" title="male">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-male" style="font-size:20px; color:#1a5676"></i></span></div><input id="fhe_drop_summer_midyear_male" name="fhe_drop_summer_midyear_male" class="form-control" type="number" min="0" />
+                                </div>
+                            </div>
+                            <div class="col" data-toggle="tooltip" title="female">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-female" style="font-size:20px; color:#9a0694"></i></span></div><input id="fhe_drop_summer_midyear_female" name="fhe_drop_summer_midyear_female" class="form-control" type="number" min="0" />
+                                </div>
                             </div>
                         </div>
+                    </div>
                     ';
                     }
                     ?>
@@ -730,7 +751,7 @@
 </div>
 
 <!--Remove fhe category modal-->
-<div role="dialog" tabindex="-1" class="modal fade show" id="remove_fhe_category_modal">
+<div role="dialog" tabindex="-1" class="modal fade show" id="Termgory_modal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <form method="POST" id="remove_fhe_category_form">
@@ -796,7 +817,7 @@
                     </div>
                     <hr>
                     <div class="form-group">
-                        <label>1st Semester</label>
+                        <label>1st Term</label>
                         <div class="form-row">
                             <div class="col" data-toggle="tooltip" title="male">
                                 <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div><input id="total_fhe_1st_male" name="total_fhe_1st_male" class="form-control" type="number" min="0" placeholder="0">
@@ -811,7 +832,7 @@
                     </div>
                     <hr>
                     <div class="form-group">
-                        <label>2nd Semester</label>
+                        <label>2nd Term</label>
                         <div class="form-row">
                             <div class="col" data-toggle="tooltip" title="male">
                                 <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div><input id="total_fhe_2nd_male" name="total_fhe_2nd_male" class="form-control" type="number" min="0" placeholder="0">
@@ -825,7 +846,7 @@
                     </div>
                     <hr>
                     <div class="form-group">
-                        <label>3rd Semester</label>
+                        <label>3rd Term</label>
                         <div class="form-row" data-toggle="tooltip" title="male">
                             <div class="col">
                                 <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div><input id="total_fhe_3rd_male" name="total_fhe_3rd_male" class="form-control" type="number" min="0" placeholder="0">
