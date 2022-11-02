@@ -395,29 +395,52 @@
                     <div class="form-group">
                         <label>1st Term</label>
                         <div class="form-row">
-                            <div class="col"><input id="tdp_loa_1st_male" name="tdp_loa_1st_male" class="form-control" type="number" min="0" /></div>
-                            <div class="col"><input id="tdp_loa_1st_female" name="tdp_loa_1st_female" class="form-control" type="number" min="0" /></div>
+                            <div class="col" data-toggle="tooltip" title="male">
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div><input id="tdp_loa_1st_male" name="tdp_loa_1st_male" class="form-control" type="number" min="0" />
+                                </div>
+                            </div>
+                            <div class="col" data-toggle="tooltip" title="female">
+                                <div class='input-group'>
+                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div><input id="tdp_loa_1st_female" name="tdp_loa_1st_female" class="form-control" type="number" min="0" />
+                                </div>
+                            </div>
                         </div>
                     </div>
-
+                    <hr>
                     <div class="form-group">
                         <label>2nd Term</label>
                         <div class="form-row">
-                            <div class="col"><input id="tdp_loa_2nd_male" name="tdp_loa_2nd_male" class="form-control" type="number" min="0" /></div>
-                            <div class="col"><input id="tdp_loa_2nd_female" name="tdp_loa_2nd_female" class="form-control" type="number" min="0" /></div>
+                            <div class="col" data-toggle="tooltip" title="male">
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-male" style="font-size:20px; color:#1a5676"></i></span></div><input id="tdp_loa_2nd_male" name="tdp_loa_2nd_male" class="form-control" type="number" min="0" />
+                                </div>
+                            </div>
+                            <div class="col" data-toggle="tooltip" title="female">
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-female" style="font-size:20px; color:#9a0694"></i></span></div><input id="tdp_loa_2nd_female" name="tdp_loa_2nd_female" class="form-control" type="number" min="0" />
+                                </div>
+                            </div>
                         </div>
                     </div>
-
+                    <hr>
                     <?php
                     if ($ac_calendar == 'Trimester' or $ac_calendar == 'Trimester with Summer') {
                         echo '
                         <div class="form-group">
                         <label>3rd Term</label>
-                            <div class="form-row">
-                                <div class="col"><input id="tdp_loa_3rd_male" name="tdp_loa_3rd_male" class="form-control" type="number" min="0"/></div>
-                                <div class="col"><input id="tdp_loa_3rd_female" name="tdp_loa_3rd_female" class="form-control" type="number" min="0"/></div>
+                        <div class="form-row">
+                            <div class="col" data-toggle="tooltip" title="male">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-male" style="font-size:20px; color:#1a5676"></i></span></div><input id="tdp_loa_3rd_male" name="tdp_loa_3rd_male" class="form-control" type="number" min="0" />
+                                </div>
+                            </div>
+                            <div class="col" data-toggle="tooltip" title="female">
+                                <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-female" style="font-size:20px; color:#9a0694"></i></span></div><input id="tdp_loa_3rd_female" name="tdp_loa_3rd_female" class="form-control" type="number" min="0" />
+                                </div>
                             </div>
                         </div>
+                        </div>
+                        <hr>
                     ';
                     }
 
@@ -426,8 +449,14 @@
                         <div class="form-group">
                         <label>Summer/Midyear</label>
                             <div class="form-row">
-                                <div class="col"><input id="tdp_loa_summer_midyear_male" name="tdp_loa_summer_midyear_male" class="form-control" type="number" min="0"/></div>
-                                <div class="col"><input id="tdp_loa_summer_midyear_female" name="tdp_loa_summer_midyear_female" class="form-control" type="number" min="0"/></div>
+                                <div class="col" data-toggle="tooltip" title="male">
+                                    <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-male" style="font-size:20px; color:#1a5676"></i></span></div><input id="tdp_loa_summer_midyear_male" name="tdp_loa_summer_midyear_male" class="form-control" type="number" min="0" />
+                                    </div>
+                                </div>
+                                <div class="col" data-toggle="tooltip" title="female">
+                                    <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-female" style="font-size:20px; color:#9a0694"></i></span></div><input id="tdp_loa_summer_midyear_female" name="tdp_loa_summer_midyear_female" class="form-control" type="number" min="0" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     ';
@@ -536,7 +565,7 @@
                     if ($ac_calendar == 'Trimester' or $ac_calendar == 'Trimester with Summer') {
                         echo '
                         <div class="form-group">
-                        <label>2nd Term</label>
+                        <label>3rd Term</label>
                         <div class="form-row">
                             <div class="col" data-toggle="tooltip" title="male">
                                 <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-male" style="font-size:20px; color:#1a5676"></i></span></div><input id="tes_drop_3rd_male" name="tes_drop_3rd_male" class="form-control" type="number" min="0" />
@@ -555,7 +584,7 @@
                     if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Summer') {
                         echo '
                         <div class="form-group">
-                        <label>2nd Term</label>
+                        <label>Summer/Midyear</label>
                         <div class="form-row">
                             <div class="col" data-toggle="tooltip" title="male">
                                 <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-male" style="font-size:20px; color:#1a5676"></i></span></div><input id="tes_drop_summer_midyear_male" name="tes_drop_summer_midyear_male" class="form-control" type="number" min="0" />
@@ -660,7 +689,7 @@
                     if ($ac_calendar == 'Trimester' or $ac_calendar == 'Trimester with Summer') {
                         echo '
                         <div class="form-group">
-                        <label>2nd Term</label>
+                        <label>3rd Term</label>
                         <div class="form-row">
                             <div class="col" data-toggle="tooltip" title="male">
                                 <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-male" style="font-size:20px; color:#1a5676"></i></span></div><input id="tdp_drop_3rd_male" name="tdp_drop_3rd_male" class="form-control" type="number" min="0" />
@@ -679,7 +708,7 @@
                     if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Summer') {
                         echo '
                         <div class="form-group">
-                        <label>2nd Term</label>
+                        <label>Summer/Midyear</label>
                         <div class="form-row">
                             <div class="col" data-toggle="tooltip" title="male">
                                 <div class="input-group"><div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fas fa-male" style="font-size:20px; color:#1a5676"></i></span></div><input id="tdp_drop_summer_midyear_male" name="tdp_drop_summer_midyear_male" class="form-control" type="number" min="0" />
