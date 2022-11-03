@@ -163,7 +163,7 @@ include 'includes/heiprofile/inc_template.php'
                         <div class="input-group-prepend"><span class="input-group-text"><i class="material-icons icons-input">email</i></span></div><input name="hei_email_add" class="form-control" type="email" value="<?php echo utf8_encode($hei_email) ?>" required="">
                         <div class="input-group-prepend"></div>
                         <div class="invalid-feedback">
-                            Invalid Email.
+                            Please enter a valid email address.
                         </div>
                     </div>
                 </div>
@@ -172,7 +172,7 @@ include 'includes/heiprofile/inc_template.php'
                         <div class="input-group-prepend"><span class="input-group-text"><i class="material-icons icons-input">email</i></span></div><input name="hei_alt_email_add" class="form-control" type="email" value="<?php echo $hei_alt_email ?>">
                         <div class="input-group-prepend"></div>
                         <div class="invalid-feedback">
-                            Invalid Email.
+                            Please enter a valid email address.
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@ include 'includes/heiprofile/inc_template.php'
                         <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-phone-alt icons-input"></i></span></div><input name="hei_contact_no" class="form-control" type="tel" pattern="^(09|\+639)\d{9}$" value="<?php echo $hei_contact_no ?>" required="" placeholder="Format: (09/+639)(9 digit phone number)">
                         <div class="input-group-prepend"></div>
                         <div class="invalid-feedback">
-                            Invalid Contact Number.
+                            Please enter a valid contact number.
                         </div>
                     </div>
                 </div>
@@ -189,6 +189,9 @@ include 'includes/heiprofile/inc_template.php'
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-phone-alt icons-input"></i></span></div><input name="hei_alt_contact_no" class="form-control" type="tel" pattern="^(09|\+639)\d{9}$" placeholder="Format: (09/+639)(9 digit phone number)" value="<?php echo $hei_alt_contact_no ?>" >
                         <div class="input-group-prepend"></div>
+                        <div class="invalid-feedback">
+                            Please enter a valid contact number.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -198,34 +201,52 @@ include 'includes/heiprofile/inc_template.php'
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user icons-input"></i></span></div><input name="hei_head_name" class="form-control" type="text" placeholder="Firstname   Middlename   Lastname" value="<?php echo utf8_encode($hei_head_name) ?>" required="">
                     </div>
+                    <div class="invalid-feedback">
+                        Please enter the name of HEI head/president.
+                    </div>
                 </div>
                 <div class="form-group"><label>Full Designation</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-suitcase icons-input"></i></span></div><input name="hei_head_designation" class="form-control" type="text" value="<?php echo $hei_head_designation ?>" required="">
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter designation.
                     </div>
                 </div>
                 <div class="form-group"><label>Email Address</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text"><i class="material-icons icons-input">email</i></span></div><input name="hei_head_email" class="form-control" type="email" value="<?php echo $hei_head_email_add ?>" required="">
                         <div class="input-group-prepend"></div>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
                     </div>
                 </div>
                 <div class="form-group"><label>Alternative Email Address</label>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text"><i class="material-icons icons-input">email</i></span></div><input name="hei_head_alt_email" class="form-control" type="email" value="<?php echo $hei_head_alt_email_add ?>">
                         <div class="input-group-prepend"></div>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
                     </div>
                 </div>
                 <div class="form-group"><label>Contact Number</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-phone-alt icons-input"></i></span></div><input name="hei_head_contact_no" class="form-control" type="tel" pattern="^(09|\+639)\d{9}$" value="<?php echo $hei_head_contact_no ?>" required="" placeholder="Format: (09/+639)(9 digit phone number)">
                         <div class="input-group-prepend"></div>
+                        <div class="invalid-feedback">
+                            Please enter a valid contact number.
+                        </div>
                     </div>
                 </div>
                 <div class="form-group"><label>Alternative Contact Number</label>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-phone-alt icons-input"></i></span></div><input name="hei_head_alt_contact_no" class="form-control" type="tel" pattern="^(09|\+639)\d{9}$" value="<?php echo $hei_head_alt_contact_no ?>" placeholder="Format: (09/+639)(9 digit phone number)">
                         <div class="input-group-prepend"></div>
+                        <div class="invalid-feedback">
+                            Please enter a valid contact number.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -236,34 +257,52 @@ include 'includes/heiprofile/inc_template.php'
                     <div class='input-group'>
                         <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='fhe_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='".utf8_encode($fhe_focal_name)."' required=''>
                     </div>
+                    <div class='invalid-feedback'>
+                            Please enter the name of personnel in-charge of FHE.
+                    </div>
                 </div>
                 <div class='form-group'><label>Full Designation</label><label class='text-danger' title='required'>&nbsp;*</label>
                     <div class='input-group'>
                         <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-suitcase icons-input'></i></span></div><input name='fhe_focal_designation' class='form-control' type='text' value='$fhe_focal_designation'>
+                    </div>
+                    <div class='invalid-feedback'>
+                            Please enter designation.
                     </div>
                 </div>
                 <div class='form-group'><label>Email Address</label><label class='text-danger' title='required'>&nbsp;*</label>
                     <div class='input-group'>
                         <div class='input-group-prepend'><span class='input-group-text'><i class='material-icons icons-input'>email</i></span></div><input name='fhe_focal_email' class='form-control' type='email' value='$fhe_focal_email_add' required=''>
                         <div class='input-group-prepend'></div>
+                        <div class='invalid-feedback'>
+                            Please enter a valid email address.
+                        </div>
                     </div>
                 </div>
                 <div class='form-group'><label>Alternative Email Address</label>
                     <div class='input-group'>
                         <div class='input-group-prepend'><span class='input-group-text'><i class='material-icons icons-input'>email</i></span></div><input name='fhe_focal_alt_email' class='form-control' type='email' value='$fhe_focal_alt_email_add'>
                         <div class='input-group-prepend'></div>
+                        <div class='invalid-feedback'>
+                            Please enter a valid email address.
+                        </div>
                     </div>
                 </div>
                 <div class='form-group'><label>Contact Number</label><label class='text-danger' title='required'>&nbsp;*</label>
                     <div class='input-group'>
                         <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='fhe_focal_contact_no' class='form-control' type='tel' pattern='^(09|\+639)\d{9}$' placeholder='Format: (09/+639)(9 digit phone number)' value='$fhe_focal_contact_no' required=''>
                         <div class='input-group-prepend'></div>
+                        <div class='invalid-feedback'>
+                            Please enter a valid contact number.
+                        </div>
                     </div>
                 </div>
                 <div class='form-group'><label>Alternative Contact Number</label>
                     <div class='input-group'>
                         <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='fhe_focal_alt_contact_no' class='form-control' type='tel' pattern='^(09|\+639)\d{9}$' placeholder='Format: (09/+639)(9 digit phone number)' value='$fhe_focal_alt_contact_no'>
                         <div class='input-group-prepend'></div>
+                        <div class='invalid-feedback'>
+                            Please enter a valid contact number.
+                        </div>
                     </div>
                 </div>
                 </div>";
@@ -274,34 +313,52 @@ include 'includes/heiprofile/inc_template.php'
                     <div class='input-group'>
                         <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='tes_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='".utf8_encode($tes_focal_name)."' required=''>
                     </div>
+                    <div class='invalid-feedback'>
+                        Please enter the name of TES focal person.
+                    </div>
                 </div>
                 <div class='form-group'><label>Full Designation</label><label class='text-danger' title='required'>&nbsp;*</label>
                     <div class='input-group'>
                         <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-suitcase icons-input'></i></span></div><input name='tes_focal_designation' class='form-control' type='text' value='$tes_focal_designation' required=''>
+                    </div>
+                    <div class='invalid-feedback'>
+                        Please enter deisgnation.
                     </div>
                 </div>
                 <div class='form-group'><label>Email Address</label><label class='text-danger' title='required'>&nbsp;*</label>
                     <div class='input-group'>
                         <div class='input-group-prepend'><span class='input-group-text'><i class='material-icons icons-input'>email</i></span></div><input name='tes_focal_email' class='form-control' type='email' value='$tes_focal_email_add' required=''>
                         <div class='input-group-prepend'></div>
+                        <div class='invalid-feedback'>
+                            Please enter a valid email address.
+                        </div>
                     </div>
                 </div>
                 <div class='form-group'><label>Alternative Email Address</label>
                     <div class='input-group'>
                         <div class='input-group-prepend'><span class='input-group-text'><i class='material-icons icons-input'>email</i></span></div><input name='tes_focal_alt_email' class='form-control' type='email' value='$tes_focal_alt_email_add'>
                         <div class='input-group-prepend'></div>
+                        <div class='invalid-feedback'>
+                            Please enter a valid email address.
+                        </div>
                     </div>
                 </div>
                 <div class='form-group'><label>Contact Number</label><label class='text-danger' title='required'>&nbsp;*</label>
                     <div class='input-group'>
                         <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='tes_focal_contact_no' class='form-control' type='tel' pattern='^(09|\+639)\d{9}$' placeholder='Format: (09/+639)(9 digit phone number)' value='$tes_focal_contact_no' required=''>
                         <div class='input-group-prepend'></div>
+                        <div class='invalid-feedback'>
+                            Please enter a valid contact number.
+                        </div>
                     </div>
                 </div>
                 <div class='form-group'><label>Alternative Contact Number</label>
                     <div class='input-group'>
                         <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='tes_focal_alt_contact_no' class='form-control' type='tel' pattern='^(09|\+639)\d{9}$' placeholder='Format: (09/+639)(9 digit phone number)' value='$tes_focal_alt_contact_no'>
                         <div class='input-group-prepend'></div>
+                        <div class='invalid-feedback'>
+                            Please enter a valid contact number.
+                        </div>
                     </div>
                 </div>
                 </div>";
@@ -312,34 +369,52 @@ include 'includes/heiprofile/inc_template.php'
                         <div class='input-group'>
                             <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='tdp_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='".utf8_encode($tdp_focal_name)."' required=''>
                         </div>
+                        <div class='invalid-feedback'>
+                            Please enter the name of personnel in-charge of TDP.
+                        </div>
                     </div>
                     <div class='form-group'><label>Full Designation</label><label class='text-danger' title='required'>&nbsp;*</label>
                         <div class='input-group'>
                             <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-suitcase icons-input'></i></span></div><input name='tdp_focal_designation' class='form-control' type='text' value='$tdp_focal_designation' required=''>
+                        </div>
+                        <div class='invalid-feedback'>
+                            Please enter designation.
                         </div>
                     </div>
                     <div class='form-group'><label>Email Address</label><label class='text-danger' title='required'>&nbsp;*</label>
                         <div class='input-group'>
                             <div class='input-group-prepend'><span class='input-group-text'><i class='material-icons icons-input'>email</i></span></div><input name='tdp_focal_email' class='form-control' type='email' value='$tdp_focal_email_add' required=''>
                             <div class='input-group-prepend'></div>
+                            <div class='invalid-feedback'>
+                                Please enter a valid email address.
+                            </div>
                         </div>
                     </div>
                     <div class='form-group'><label>Alternative Email Address</label>
                         <div class='input-group'>
                             <div class='input-group-prepend'><span class='input-group-text'><i class='material-icons icons-input'>email</i></span></div><input name='tdp_focal_alt_email' class='form-control' type='email' value='$tdp_focal_alt_email_add'>
                             <div class='input-group-prepend'></div>
+                            <div class='invalid-feedback'>
+                                Please enter a valid email address.
+                            </div>
                         </div>
                     </div>
                     <div class='form-group'><label>Contact Number</label><label class='text-danger' title='required'>&nbsp;*</label>
                         <div class='input-group'>
                             <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='tdp_focal_contact_no' class='form-control' type='tel' pattern='^(09|\+639)\d{9}$' placeholder='Format: (09/+639)(9 digit phone number)' value='$tdp_focal_contact_no' required=''>
                             <div class='input-group-prepend'></div>
+                            <div class='invalid-feedback'>
+                                Please enter a valid contact number.
+                            </div>
                         </div>
                     </div>
                     <div class='form-group'><label>Alternative Contact Number</label>
                         <div class='input-group'>
                             <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='tdp_focal_alt_contact_no' class='form-control' type='tel' pattern='^(09|\+639)\d{9}$' placeholder='Format: (09/+639)(9 digit phone number)' value='$tdp_focal_alt_contact_no'>
                             <div class='input-group-prepend'></div>
+                            <div class='invalid-feedback'>
+                                Please enter a valid contact number.
+                            </div>
                         </div>
                     </div>
                 </div>";
