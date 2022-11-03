@@ -377,7 +377,7 @@ include 'includes/stufap/inc_template.php';
 
             <div id='fhe_loa_div' class='card card-style-table fhe_loa_div' style='display : none'>
                 <div class='form-group'>
-                <label>No. of FHE Beneficiaries under LOA</label><label style='font-style: italic;'>Determine the no. of with loa per semester/term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label>
+                <label>No. of FHE Beneficiaries under LOA</label><label style='font-style: italic;'>Determine the no. of beneficiaries with loa per semester/term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label>
                 </div>
                 <div class='form-group'>
                    
@@ -518,7 +518,7 @@ include 'includes/stufap/inc_template.php';
 
             <div id='tes_loa_div' class='card card-style-table tes_loa_div' style='display : none'>
                 <div class='form-group'>
-                <label>No. of TES Grantees under LOA</label><label style='font-style: italic;'>Determine the no. of with loa per semester/term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label>
+                <label>No. of TES Grantees under LOA</label><label style='font-style: italic;'>Determine the no. of beneficiaries with loa per semester/term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label>
                 </div>
                 <div class='form-group'>
 
@@ -624,7 +624,7 @@ include 'includes/stufap/inc_template.php';
 
             <div id='tdp_loa_div' class='card card-style-table tdp_loa_div' style='display : none'>
                 <div class='form-group'>
-                <label>No. of TDP Grantees under LOA</label><label style='font-style: italic;'>Determine the no. of with loa per semester/term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label>
+                <label>No. of TDP Grantees under LOA</label><label style='font-style: italic;'>Determine the no. of beneficiaries with loa per semester/term attended for each of the reasons listed below. For reasons not mentioned in the list, additional rows may be added.</label>
                 </div>
                 <div class='form-group'>
                 
