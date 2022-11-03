@@ -68,7 +68,7 @@ $(document).ready(function () {
                 $('#total_fhe_graduated_female').val(data.total_fhe_graduated_female);
                 $('#total_fhe_exceeded_mrr_male').val(data.total_fhe_exceeded_mrr_male);
                 $('#total_fhe_exceeded_mrr_female').val(data.total_fhe_exceeded_mrr_female);
-                $('#editprogramfhemodal').modal('show')
+                $('#add_program_fhe_modal').modal('show')
             }
         })
     });
