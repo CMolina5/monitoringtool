@@ -6,6 +6,7 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/scroller/2.0.7/js/dataTables.scroller.min.js"></script> 
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/fixedcolumns/4.1.0/js/dataTables.fixedColumns.min.js"></script> 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="assets/js/datatables.js"></script>
     <script type="text/javascript" src="assets/js/final.js"></script>
     <script type="text/javascript" src="assets/js/heiprofile.js"></script>
