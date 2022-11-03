@@ -160,11 +160,11 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class="form-group"><label>Official Email Address</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="material-icons icons-input">email</i></span></div><input name="hei_email_add" class="form-control" type="email" value="<?php echo utf8_encode($hei_email) ?>" required="">
-                        <div class="input-group-prepend"></div>
-                        <div class="invalid-feedback">
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="material-icons icons-input">email</i></span></div><input name="hei_email_add" class="form-control" type="email" value="<?php echo utf8_encode($hei_email) ?>" required=""><div class="invalid-feedback">
                             Invalid Email.
                         </div>
+                        <div class="input-group-prepend"></div>
+                        
                     </div>
                 </div>
                 <div class="form-group"><label>Alternative Email Address</label>
