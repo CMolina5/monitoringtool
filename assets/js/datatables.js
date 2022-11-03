@@ -128,7 +128,11 @@ $(document).ready(function () {
         // scroller: true,
         fixedColumns:   {
             left: 1
-        }
+        },
+        "columnDefs": [ {
+            "targets": 54,
+            "orderable": false
+            } ]
     });
 
     // $('#tbl_programs_fhe').Tabledit({
