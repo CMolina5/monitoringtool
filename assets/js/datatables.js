@@ -150,7 +150,7 @@ $(document).ready(function () {
         container: 'body',
         selector: 'td.beneficiaries',
         // title: 'Total Beneficiaries',
-        url: "includes/stufap/inc_stufap_fhe_update_degree_programs.php",
+        url: "includes/stufap/inc_stufap_fhe_update_degree_programs_1.php",
         type: "POST",
         min: 0,
         placeholder: 'No. of Beneficiaries',

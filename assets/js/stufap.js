@@ -74,7 +74,7 @@ $(document).ready(function () {
     });
 
     //update degree program to the table fhe
-    $('#editprogramfhemodal').on('submit', function (event) {
+    $('#add_program_fhe_modal').on('submit', function (event) {
         event.preventDefault();
         $.ajax({
             url: "includes/stufap/inc_stufap_fhe_update_degree_programs.php",
@@ -82,15 +82,29 @@ $(document).ready(function () {
             data: $('#fhe_editprogram').serialize(),
             success: function (data) {
                 $('#tbl_programs_fhe_div').html(data);
-                $('#fhe_editprogram')[0].reset();
-                $('#editprogramfhemodal').modal('hide');
+                $('#add_program_fhe_form')[0].reset();
+                $('#add_program_fhe_modal').modal('hide');
 
                 $('#tbl_programs_fhe').DataTable({
                     "order": [[0, "desc"]],
+                    "lengthChange": false,
+                    "pageLength": 5,
                     orderCellsTop: true,
-                    fixedHeader: true
+                    fixedHeader: true,
+                    "deferRender": true,
+                    scrollX: 200,
+                    scrollY: false,
+                    scrollCollapse: true,
+                    // scroller: true,
+                    fixedColumns:   {
+                        left: 1,
+                        right: 1
+                    },
+                    "columnDefs": [ {
+                        "targets": 53,
+                        "orderable": false
+                    } ]
                 })
-
             }
         });
     });

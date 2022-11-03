@@ -2327,7 +2327,7 @@
         <div id="add_program_fhe_modal_body" class="modal-content">
             <form method="POST" id="add_program_fhe_form">
                 <div class="modal-header">
-                    <h4 class="modal-title">Add Program (FHE)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Edit Program (FHE)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
