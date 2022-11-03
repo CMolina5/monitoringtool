@@ -130,7 +130,7 @@ $(document).ready(function () {
             left: 1
         },
         "columnDefs": [ {
-            "targets": 1,
+            "targets": 53,
             "orderable": false
             } ]
     });
