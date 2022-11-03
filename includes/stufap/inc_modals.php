@@ -2332,7 +2332,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Degree Program</label>
-                        <input id="program_name" class="form-control degree-program-font" type="text" disabled="">
+                        <input id="program_name" class="form-control" type="text" disabled="">
                     </div>
                     <hr>
                     <div class="form-group"><label>Total FHE Grantees</label>
