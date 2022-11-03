@@ -127,7 +127,8 @@ $(document).ready(function () {
         scrollCollapse: true,
         // scroller: true,
         fixedColumns:   {
-            left: [1,53]
+            left: 1,
+            right: 53
         },
         "columnDefs": [ {
             "targets": 53,
