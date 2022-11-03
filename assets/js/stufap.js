@@ -1,5 +1,100 @@
 $(document).ready(function () {
     //STUFAP PART
+
+    //select degree program from table and display to modal
+    $(document).on('click', '.edit_data_fhe', function () {
+        var uid = $(this).attr("id");
+        $.ajax({
+            url: "includes/stufap/inc_stufap_select_degree_programs.php",
+            method: "POST",
+            data: { uid: uid },
+            dataType: "json",
+            success: function (data) {
+                $('#program_name').val(data.program_name);
+
+                $('#total_fhe_1sem_1yr_male').val(data.total_fhe_1sem_1yr_male);
+                $('#total_fhe_1sem_1yr_female').val(data.total_fhe_1sem_1yr_female);
+                $('#total_fhe_1sem_2yr_male').val(data.total_fhe_1sem_2yr_male);
+                $('#total_fhe_1sem_2yr_female').val(data.total_fhe_1sem_2yr_female);
+                $('#total_fhe_1sem_3yr_male').val(data.total_fhe_1sem_3yr_male);
+                $('#total_fhe_1sem_3yr_female').val(data.total_fhe_1sem_3yr_female);
+                $('#total_fhe_1sem_4yr_male').val(data.total_fhe_1sem_4yr_male);
+                $('#total_fhe_1sem_4yr_female').val(data.total_fhe_1sem_4yr_female);
+                $('#total_fhe_1sem_5yr_male').val(data.total_fhe_1sem_5yr_male);
+                $('#total_fhe_1sem_5yr_female').val(data.total_fhe_1sem_5yr_female);
+                $('#total_fhe_1sem_6yr_male').val(data.total_fhe_1sem_6yr_male);
+                $('#total_fhe_1sem_6yr_female').val(data.total_fhe_1sem_6yr_female);
+                
+                $('#total_fhe_2sem_1yr_male').val(data.total_fhe_2sem_1yr_male);
+                $('#total_fhe_2sem_1yr_female').val(data.total_fhe_2sem_1yr_female);
+                $('#total_fhe_2sem_2yr_male').val(data.total_fhe_2sem_2yr_male);
+                $('#total_fhe_2sem_2yr_female').val(data.total_fhe_2sem_2yr_female);
+                $('#total_fhe_2sem_3yr_male').val(data.total_fhe_2sem_3yr_male);
+                $('#total_fhe_2sem_3yr_female').val(data.total_fhe_2sem_3yr_female);
+                $('#total_fhe_2sem_4yr_male').val(data.total_fhe_2sem_4yr_male);
+                $('#total_fhe_2sem_4yr_female').val(data.total_fhe_2sem_4yr_female);
+                $('#total_fhe_2sem_5yr_male').val(data.total_fhe_2sem_5yr_male);
+                $('#total_fhe_2sem_5yr_female').val(data.total_fhe_2sem_5yr_female);
+                $('#total_fhe_2sem_6yr_male').val(data.total_fhe_2sem_6yr_male);
+                $('#total_fhe_2sem_6yr_female').val(data.total_fhe_2sem_6yr_female);
+
+                $('#total_fhe_3sem_1yr_male').val(data.total_fhe_3sem_1yr_male);
+                $('#total_fhe_3sem_1yr_female').val(data.total_fhe_3sem_1yr_female);
+                $('#total_fhe_3sem_2yr_male').val(data.total_fhe_3sem_2yr_male);
+                $('#total_fhe_3sem_2yr_female').val(data.total_fhe_3sem_2yr_female);
+                $('#total_fhe_3sem_3yr_male').val(data.total_fhe_3sem_3yr_male);
+                $('#total_fhe_3sem_3yr_female').val(data.total_fhe_3sem_3yr_female);
+                $('#total_fhe_3sem_4yr_male').val(data.total_fhe_3sem_4yr_male);
+                $('#total_fhe_3sem_4yr_female').val(data.total_fhe_3sem_4yr_female);
+                $('#total_fhe_3sem_5yr_male').val(data.total_fhe_3sem_5yr_male);
+                $('#total_fhe_3sem_5yr_female').val(data.total_fhe_3sem_5yr_female);
+                $('#total_fhe_3sem_6yr_male').val(data.total_fhe_3sem_6yr_male);
+                $('#total_fhe_3sem_6yr_female').val(data.total_fhe_3sem_6yr_female);
+
+                $('#total_fhe_sum_mid_1yr_male').val(data.total_fhe_sum_mid_1yr_male);
+                $('#total_fhe_sum_mid_1yr_female').val(data.total_fhe_sum_mid_1yr_female);
+                $('#total_fhe_sum_mid_2yr_male').val(data.total_fhe_sum_mid_2yr_male);
+                $('#total_fhe_sum_mid_2yr_female').val(data.total_fhe_sum_mid_2yr_female);
+                $('#total_fhe_sum_mid_3yr_male').val(data.total_fhe_sum_mid_3yr_male);
+                $('#total_fhe_sum_mid_3yr_female').val(data.total_fhe_sum_mid_3yr_female);
+                $('#total_fhe_sum_mid_4yr_male').val(data.total_fhe_sum_mid_4yr_male);
+                $('#total_fhe_sum_mid_4yr_female').val(data.total_fhe_sum_mid_4yr_female);
+                $('#total_fhe_sum_mid_5yr_male').val(data.total_fhe_sum_mid_5yr_male);
+                $('#total_fhe_sum_mid_5yr_female').val(data.total_fhe_sum_mid_5yr_female);
+                $('#total_fhe_sum_mid_6yr_male').val(data.total_fhe_sum_mid_6yr_male);
+                $('#total_fhe_sum_mid_6yr_female').val(data.total_fhe_sum_mid_6yr_female);
+
+                $('#total_fhe_graduated_male').val(data.total_fhe_graduated_male);
+                $('#total_fhe_graduated_female').val(data.total_fhe_graduated_female);
+                $('#total_fhe_exceeded_mrr_male').val(data.total_fhe_exceeded_mrr_male);
+                $('#total_fhe_exceeded_mrr_female').val(data.total_fhe_exceeded_mrr_female);
+                $('#editprogramfhemodal').modal('show')
+            }
+        })
+    });
+
+    //update degree program to the table fhe
+    $('#editprogramfhemodal').on('submit', function (event) {
+        event.preventDefault();
+        $.ajax({
+            url: "includes/stufap/inc_stufap_fhe_update_degree_programs.php",
+            method: "POST",
+            data: $('#fhe_editprogram').serialize(),
+            success: function (data) {
+                $('#tbl_programs_fhe_div').html(data);
+                $('#fhe_editprogram')[0].reset();
+                $('#editprogramfhemodal').modal('hide');
+
+                $('#tbl_programs_fhe').DataTable({
+                    "order": [[0, "desc"]],
+                    orderCellsTop: true,
+                    fixedHeader: true
+                })
+
+            }
+        });
+    });
+
     //FHE Category Part
     //add fhe category to the table
     $('#add_fhe_category_modal').on('submit', function (event) {//modal id
