@@ -45,23 +45,6 @@ $(document).ready(function () {
         });
     });
 
-    //select degree program from table and display to modal
-    $(document).on('click', '.edit_data', function () {
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/heiprofile/inc_select_degree_programs.php",
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#program_code1').val(data.program_code);
-                $('#program_name1').val(data.program_name);
-                $('#gr_no1').val(data.gr_no);
-                $('#copc_no1').val(data.copc_no);
-                $('#editprogram').modal('show')
-            }
-        })
-    })
 
     //update degree program to the table
     $('#editprogram').on('submit', function (event) {
@@ -82,20 +65,6 @@ $(document).ready(function () {
                 })
             }
         });
-    });
-
-    //remove data from the degree program table
-    $(document).on('click', '.remove_data', function () {
-        var uid = $(this).attr("id");
-        $.ajax({
-            url: "includes/heiprofile/inc_select_degree_programs.php",
-            method: "POST",
-            data: { uid: uid },
-            dataType: "json",
-            success: function (data) {
-                $('#removeprogram').modal('show')
-            }
-        })
     });
 
     //delete degree program to the table
@@ -165,9 +134,13 @@ $(document).ready(function () {
                 $('#addstufap').modal('hide');
 
                 $('#tbl_other_stufaps').DataTable({
-                    "order": [[0, "desc"]],
+                    "order": [[1, "desc"]],
                     orderCellsTop: true,
-                    fixedHeader: true
+                    fixedHeader: true,
+                    "columnDefs": [ {
+                        "targets": 0,
+                        "orderable": false
+                        } ]
                 });
 
                 $('#tbl_other_stufaps').editable({
