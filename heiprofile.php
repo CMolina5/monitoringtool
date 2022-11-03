@@ -171,12 +171,18 @@ include 'includes/heiprofile/inc_template.php'
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text"><i class="material-icons icons-input">email</i></span></div><input name="hei_alt_email_add" class="form-control" type="email" value="<?php echo $hei_alt_email ?>">
                         <div class="input-group-prepend"></div>
+                        <div class="invalid-feedback">
+                            Invalid Email.
+                        </div>
                     </div>
                 </div>
                 <div class="form-group"><label>Contact Number</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-phone-alt icons-input"></i></span></div><input name="hei_contact_no" class="form-control" type="tel" pattern="^(09|\+639)\d{9}$" value="<?php echo $hei_contact_no ?>" required="" placeholder="Format: (09/+639)(9 digit phone number)">
                         <div class="input-group-prepend"></div>
+                        <div class="invalid-feedback">
+                            Invalid Contact Number.
+                        </div>
                     </div>
                 </div>
                 <div class="form-group"><label>Alternative Contact Number</label>
