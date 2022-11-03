@@ -1217,39 +1217,6 @@ include 'includes/heiprofile/inc_template.php'
       }, false)
     })
 })()
-
-$(function () {
-            $("#btn-next").click(function (e) {
-                e.preventDefault();
-
-               if($('#hei_head_designation').val() === ""){
-                   return swal({
-                     title:"Field cannot be empty",
-                     type:"danger"
-                  })
-               }
-                
-                // swal({
-                //     title: "Ok ?",
-                //     text: "text",
-                //     type: "info",
-                //     showCancelButton: true,
-                //     cancelButtonClass: 'btn-secondary waves-effect',
-                //     confirmButtonClass: 'btn-success waves-effect waves-light',
-                //     confirmButtonText: "Yes",
-                //     closeOnConfirm: false,
-
-                // })
-                //     .then(val => {
-                //         if (!val) return null;
-                //         swal("Saved!", "Your record has been saved.", "success")
-                //             .then((confirm) => {
-
-                //                 $("#CreateForm").submit();
-                //             })
-                //     });
-            });
-})
 </script>
 
 <?php
