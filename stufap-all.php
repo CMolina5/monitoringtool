@@ -427,14 +427,14 @@ include 'includes/stufap/inc_template.php';
                 <div class='form-group'>
 
                     <div class='form-row text-right'>
-                    <div class='col'>
-                    <p class='text-right'>
-                        <div role='group' class='btn-group'>
-                        <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_tes_category_modal'>ADD TES CATEGORY</button>
-                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tes-category' name='btn-delete-tes-category' type='button' data-target='#remove_tes_category_modal'>REMOVE CATEGORY</button>
+                        <div class='col'>
+                            <p class='text-right'>
+                                <div role='group' class='btn-group'>
+                                    <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_tes_category_modal'>ADD TES CATEGORY</button>
+                                    <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tes-category' name='btn-delete-tes-category' type='button' data-target='#remove_tes_category_modal'>REMOVE CATEGORY</button>
+                                </div>
+                            </p>
                         </div>
-                    </p>
-                    </div>
                     </div>
 
                     <div id='tbl_tes_category_div' class='table table-responsive tbl-style'>";
@@ -447,14 +447,14 @@ include 'includes/stufap/inc_template.php';
             <div class='card card-style-table'>
 
                 <div class='form-row text-right'>
-                <div class='col'>
-                <p class='text-right'>
-                    <div role='group' class='btn-group'>
-                        <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_program_tes_modal'>ADD PROGRAM</button>
-                        <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tes-programs' name='btn-delete-tes-programs' type='button' data-target='#remove_tes_program_modal'>REMOVE DEGREE PROGRAM</button>
+                    <div class='col'>
+                        <p class='text-right'>
+                            <div role='group' class='btn-group'>
+                                <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_program_tes_modal'>ADD PROGRAM</button>
+                                <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tes-programs' name='btn-delete-tes-programs' type='button' data-target='#remove_tes_program_modal'>REMOVE DEGREE PROGRAM</button>
+                            </div>
+                        </p>
                     </div>
-                </p>
-                </div>
                 </div>
 
                 <div class='form-group'>

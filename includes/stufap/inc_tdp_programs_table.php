@@ -21,33 +21,33 @@ echo "
         <th class='text-center' colspan='12' style='background-color: #668EBD;'>SUMMER/MIDYEAR</th>
     </tr>
     <tr>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>1ST</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>2ND</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>3RD</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>4TH</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>5TH</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>6TH</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>1ST YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>2ND YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>3RD YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>4TH YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>5TH YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>6TH YEAR</th>
 
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>1ST</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>2ND</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>3RD</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>4TH</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>5TH</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>6TH</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>1ST YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>2ND YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>3RD YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>4TH YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>5TH YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>6TH YEAR</th>
 
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>1ST</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>2ND</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>3RD</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>4TH</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>5TH</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>6TH</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>1ST YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>2ND YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>3RD YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>4TH YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>5TH YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>6TH YEAR</th>
 
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>1ST</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>2ND</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>3RD</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>4TH</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>5TH</th>
-        <th class='text-center' colspan='2' style='background-color: #668EBD;'>6TH</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>1ST YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>2ND YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>3RD YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>4TH YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>5TH YEAR</th>
+        <th class='text-center' colspan='2' style='background-color: #668EBD;'>6TH YEAR</th>
     </tr>
     <tr>
         <th class='text-center' style='background-color: #8AB7EB;'>MALE</th>

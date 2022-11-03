@@ -1079,7 +1079,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group"><label>Degree Program</label>
-                        <select name="tes_program_name" id="tes_program_name" class="form-control degree-program-font" required>
+                        <select name="tes_program_name" id="tes_program_name" class="form-control" required>
                             <option selected disabled value="">--- Select Degree Program ---</option>
                             <?php
                             $sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tes_exceeded_mrr_male = 0 OR total_tes_exceeded_mrr_female = 0)";
