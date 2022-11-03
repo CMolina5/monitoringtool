@@ -1222,13 +1222,7 @@ if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Su
                         event.stopPropagation()
                     }
                     form.classList.add('was-validated')
-                }, 
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...you missed something',
-                    text: 'Please check the above required fields before proceeding.'
-                    }),
-                    false)
+                }, false)
             })
     })()
 </script>
