@@ -95,11 +95,11 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Name of StuFAP</label>
-                        <input class="form-control" type="text" name="stufap_name" id="stufap_name">
+                        <input class="form-control" type="text" name="stufap_name" id="stufap_name" required>
                     </div>
                     <div class="form-group">
                         <label>Type of StuFAP</label>
-                        <select name="stufap_type" id="stufap_type" class="form-control">
+                        <select name="stufap_type" id="stufap_type" class="form-control" required>
                                 <option disabled selected>-- Select Type of StuFAP Funding --</option>
                                 <option value="Local">Local</option>
                                 <option value="National">National</option>
