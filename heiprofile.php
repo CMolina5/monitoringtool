@@ -4,7 +4,7 @@ include 'includes/heiprofile/inc_template.php'
 ?>
 
 <div id="hei-profile" class="contact-clean hei-profile">
-    <form method="POST" action="includes/heiprofile/inc_add_hei_profile.php" novalidate>
+    <form method="POST" action="includes/heiprofile/inc_add_hei_profile.php" class="needs-validation" novalidate>
         <div class="card card-style-out">
             <div class="card card-style-part">
                 <h6 class="text-center header-1">PART I. HIGHER EDUCATION INSTITUTION PROFILE</h6>
@@ -1115,6 +1115,28 @@ include 'includes/heiprofile/inc_template.php'
     </form>
 </div>
 
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
 <?php
 include 'includes/heiprofile/inc_modals.php';
 include 'includes/footer.php';
