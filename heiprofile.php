@@ -207,7 +207,7 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class="form-group"><label>Full Designation</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-suitcase icons-input"></i></span></div><input name="hei_head_designation" class="form-control" type="text" value="<?php echo $hei_head_designation ?>" required>
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-suitcase icons-input"></i></span></div><input id= "hei_head_designation" name="hei_head_designation" class="form-control" type="text" value="<?php echo $hei_head_designation ?>" required>
                     </div>
                     <div class="invalid-feedback">
                         Please enter designation.
@@ -1217,7 +1217,41 @@ include 'includes/heiprofile/inc_template.php'
       }, false)
     })
 })()
+
+$(function () {
+            $("#btn-next").click(function (e) {
+                e.preventDefault();
+
+               if($('#hei_head_designation').val() === ""){
+                   return swal({
+                     title:"Field cannot be empty",
+                     type:"danger"
+                  })
+               }
+                
+                // swal({
+                //     title: "Ok ?",
+                //     text: "text",
+                //     type: "info",
+                //     showCancelButton: true,
+                //     cancelButtonClass: 'btn-secondary waves-effect',
+                //     confirmButtonClass: 'btn-success waves-effect waves-light',
+                //     confirmButtonText: "Yes",
+                //     closeOnConfirm: false,
+
+                // })
+                //     .then(val => {
+                //         if (!val) return null;
+                //         swal("Saved!", "Your record has been saved.", "success")
+                //             .then((confirm) => {
+
+                //                 $("#CreateForm").submit();
+                //             })
+                //     });
+            });
+})
 </script>
+
 <?php
 include 'includes/heiprofile/inc_modals.php';
 include 'includes/footer.php';
