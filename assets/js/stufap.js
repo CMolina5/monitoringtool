@@ -79,7 +79,7 @@ $(document).ready(function () {
         $.ajax({
             url: "includes/stufap/inc_stufap_fhe_update_degree_programs.php",
             method: "POST",
-            data: $('#fhe_editprogram').serialize(),
+            data: $('#add_program_fhe_form').serialize(),
             success: function (data) {
                 $('#tbl_programs_fhe_div').html(data);
                 $('#add_program_fhe_form')[0].reset();
