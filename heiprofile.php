@@ -151,7 +151,7 @@ include 'includes/heiprofile/inc_template.php'
                     <label>Province</label>
                     <input name="hei_prov_name" class="form-control" type="text" required="" value="<?php echo utf8_encode($_SESSION['hei_prov_name']); ?>" readonly>
                 </div>
-                <div class="form-group"><label>Official Email Address</label><label class="text-danger" title="required">&nbsp;*</label>
+                <div class="form-group has-validation"><label>Official Email Address</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text"><i class="material-icons icons-input">email</i></span></div><input name="hei_email_add" class="form-control" type="email" value="<?php echo utf8_encode($hei_email) ?>" required="">
                         <div class="input-group-prepend"></div>
