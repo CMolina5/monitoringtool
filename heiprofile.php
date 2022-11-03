@@ -4,7 +4,7 @@ include 'includes/heiprofile/inc_template.php'
 ?>
 
 <div id="hei-profile" class="contact-clean hei-profile">
-    <form method="POST" action="includes/heiprofile/inc_add_hei_profile.php" class="needs-validation" novalidate>
+    <form method="POST" action="includes/heiprofile/inc_add_hei_profile.php" class="needs-validation" >
         <div class="card card-style-out">
             <div class="card card-style-part">
                 <h6 class="text-center header-1">PART I. HIGHER EDUCATION INSTITUTION PROFILE</h6>
