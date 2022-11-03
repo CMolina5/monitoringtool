@@ -128,7 +128,7 @@ $(document).ready(function () {
         // scroller: true,
         fixedColumns:   {
             left: 1,
-            right: 53
+            right: 1
         },
         "columnDefs": [ {
             "targets": 53,
