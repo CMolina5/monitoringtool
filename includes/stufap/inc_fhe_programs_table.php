@@ -12,7 +12,7 @@ echo "
         <th class='text-center' colspan='48' style='background-color: #3C70AB; color:#ffff;'>TOTAL FHE BENEFICIARIES</th>
         <th class='text-center' rowspan='3' colspan='2' style='background-color: #3C70AB; color:#ffff;'>NO. OF FHE BENEFICIARIES WHO GRADUATED</th>
         <th class='text-center' rowspan='3' colspan='2' style='background-color: #3C70AB; color:#ffff;'>NO. FHE BENEFICIARIES WHO EXCEEDED THE MAXIMUM RESIDENCY RULE</th>
-        <th class='text-center' rowspan='3' style='background-color: #3C70AB; color:#ffff;'>ACTIONS</th>
+        <th class='text-center' rowspan='4' style='background-color: #3C70AB; color:#ffff;'>ACTIONS</th>
     </tr>
     <tr>
         <th class='text-center' colspan='12' style='background-color: #668EBD;'>1ST TERM</th>
