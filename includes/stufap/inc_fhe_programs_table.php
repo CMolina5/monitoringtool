@@ -12,6 +12,7 @@ echo "
         <th class='text-center' colspan='48' style='background-color: #3C70AB; color:#ffff;'>TOTAL FHE BENEFICIARIES</th>
         <th class='text-center' rowspan='3' colspan='2' style='background-color: #3C70AB; color:#ffff;'>NO. OF FHE BENEFICIARIES WHO GRADUATED</th>
         <th class='text-center' rowspan='3' colspan='2' style='background-color: #3C70AB; color:#ffff;'>NO. FHE BENEFICIARIES WHO EXCEEDED THE MAXIMUM RESIDENCY RULE</th>
+        <th class='text-center' rowspan='3' style='background-color: #3C70AB; color:#ffff;'>ACTIONS</th>
     </tr>
     <tr>
         <th class='text-center' colspan='12' style='background-color: #668EBD;'>1ST TERM</th>
@@ -238,6 +239,7 @@ if ($resultCheck > 0) {
         <td data-name='total_fhe_graduated_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_graduated_female</td>
         <td data-name='total_fhe_exceeded_mrr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_exceeded_mrr_male</td>
         <td data-name='total_fhe_exceeded_mrr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_exceeded_mrr_female</td>
+        <td class='text-center'><button class='btn btn-info edit_data_fhe' data-bs-tooltip='' type='button' title='Edit' name='edit' value='edit' id='$uid'><i class='far fa-edit'></i></button></td>
     </tr>";
     }
 }

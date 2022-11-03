@@ -2319,3 +2319,663 @@
         </div>
     </div>
 </div>
+
+
+<!--Edit Program FHE-->
+<div class="modal fade" role="dialog" tabindex="-1" id="add_program_tdp_modal">
+    <div class="modal-dialog modal-xl" role="document">
+        <div id="add_program_tdp_modal_body" class="modal-content">
+            <form method="POST" id="add_program_tdp_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Program (TDP)</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group"><label>Total TDP Grantees</label>
+                        <div class="form-group"><label>1st Term</label>
+                            <div class="form-row">
+                                <div class="col text-center border-right"><label class="col-form-label">1st Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">2nd Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">3rd Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">4th Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">5th Year</label></div>
+                                <div class="col text-center"><label class="col-form-label">6th Year</label></div>
+                            </div>
+                            <div class="form-row">
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_1sem_1yr_male" id="total_tdp_1sem_1yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_1sem_1yr_female" id="total_tdp_1sem_1yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_1sem_2yr_male" id="total_tdp_1sem_2yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_1sem_2yr_female" id="total_tdp_1sem_2yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_1sem_3yr_male" id="total_tdp_1sem_3yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_1sem_3yr_female" id="total_tdp_1sem_3yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_1sem_4yr_male" id="total_tdp_1sem_4yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_1sem_4yr_female" id="total_tdp_1sem_4yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_1sem_5yr_male" id="total_tdp_1sem_5yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_1sem_5yr_female" id="total_tdp_1sem_5yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_1sem_6yr_male" id="total_tdp_1sem_6yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_1sem_6yr_female" id="total_tdp_1sem_6yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group"><label>2nd Term</label>
+                            <div class="form-row">
+                                <div class="col text-center border-right"><label class="col-form-label">1st Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">2nd Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">3rd Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">4th Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">5th Year</label></div>
+                                <div class="col text-center"><label class="col-form-label">6th Year</label></div>
+                            </div>
+                            <div class="form-row">
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_2sem_1yr_male" id="total_tdp_2sem_1yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_2sem_1yr_female" id="total_tdp_2sem_1yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_2sem_2yr_male" id="total_tdp_2sem_2yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_2sem_2yr_female" id="total_tdp_2sem_2yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_2sem_3yr_male" id="total_tdp_2sem_3yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_2sem_3yr_female" id="total_tdp_2sem_3yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_2sem_4yr_male" id="total_tdp_2sem_4yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_2sem_4yr_female" id="total_tdp_2sem_4yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_2sem_5yr_male" id="total_tdp_2sem_5yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_2sem_5yr_female" id="total_tdp_2sem_5yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_2sem_6yr_male" id="total_tdp_2sem_6yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_2sem_6yr_female" id="total_tdp_2sem_6yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group"><label>3rd Term</label>
+                            <div class="form-row">
+                                <div class="col text-center border-right"><label class="col-form-label">1st Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">2nd Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">3rd Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">4th Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">5th Year</label></div>
+                                <div class="col text-center"><label class="col-form-label">6th Year</label></div>
+                            </div>
+                            <div class="form-row">
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_3sem_1yr_male" id="total_tdp_3sem_1yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_3sem_1yr_female" id="total_tdp_3sem_1yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_3sem_2yr_male" id="total_tdp_3sem_2yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_3sem_2yr_female" id="total_tdp_3sem_2yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_3sem_3yr_male" id="total_tdp_3sem_3yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_3sem_3yr_female" id="total_tdp_3sem_3yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_3sem_4yr_male" id="total_tdp_3sem_4yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_3sem_4yr_female" id="total_tdp_3sem_4yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_3sem_5yr_male" id="total_tdp_3sem_5yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_3sem_5yr_female" id="total_tdp_3sem_5yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_3sem_6yr_male" id="total_tdp_3sem_6yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_3sem_6yr_female" id="total_tdp_3sem_6yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group"><label>Summer/Midyear</label>
+                            <div class="form-row">
+                                <div class="col text-center border-right"><label class="col-form-label">1st Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">2nd Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">3rd Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">4th Year</label></div>
+                                <div class="col text-center border-right"><label class="col-form-label">5th Year</label></div>
+                                <div class="col text-center"><label class="col-form-label">6th Year</label></div>
+                            </div>
+                            <div class="form-row">
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_sum_mid_1yr_male" id="total_tdp_sum_mid_1yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_sum_mid_1yr_female" id="total_tdp_sum_mid_1yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_sum_mid_2yr_male" id="total_tdp_sum_mid_2yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_sum_mid_2yr_female" id="total_tdp_sum_mid_2yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_sum_mid_3yr_male" id="total_tdp_sum_mid_3yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_sum_mid_3yr_female" id="total_tdp_sum_mid_3yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_sum_mid_4yr_male" id="total_tdp_sum_mid_4yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_sum_mid_4yr_female" id="total_tdp_sum_mid_4yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col border-right">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_sum_mid_5yr_male" id="total_tdp_sum_mid_5yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_sum_mid_5yr_female" id="total_tdp_sum_mid_5yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="male">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                                    <input name="total_tdp_sum_mid_6yr_male" id="total_tdp_sum_mid_6yr_male" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col" data-toggle="tooltip" title="female">
+                                                <div class='input-group'>
+                                                    <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                                    <input name="total_tdp_sum_mid_6yr_female" id="total_tdp_sum_mid_6yr_female" class="form-control" type="number" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group"><label>No. of TDP Grantees who graduated</label>
+                            <div class="form-row">
+                                <div class="col-xl-6" data-toggle="tooltip" title="male">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                        <input name="total_tdp_graduated_male" id="total_tdp_graduated_male" class="form-control" type="number" min="0">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6" data-toggle="tooltip" title="female">
+                                    <div class='input-group'>
+                                        <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                        <input name="total_tdp_graduated_female" id="total_tdp_graduated_female" class="form-control" type="number" min="0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group"><label>No. of TDP Grantees who exceeded the maximum residency rule</label>
+                            <div class="form-row">
+                                <div class="col-xl-6" data-toggle="tooltip" title="male">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"><span class="input-group-text icon-container"><i class='fas fa-male' style='font-size:20px; color:#1a5676'></i></span></div>
+                                        <input name="total_tdp_exceeded_mrr_male" id="total_tdp_exceeded_mrr_male" class="form-control" type="number" min="0">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6" data-toggle="tooltip" title="female">
+                                    <div class='input-group'>
+                                        <div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fas fa-female' style='font-size:20px; color:#9a0694'></i></span></div>
+                                        <input name="total_tdp_exceeded_mrr_female" id="total_tdp_exceeded_mrr_female" class="form-control" type="number" min="0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+</div>
