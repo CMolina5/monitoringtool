@@ -13,9 +13,13 @@ $(document).ready(function () {
                 $('#addprogram').modal('hide');
 
                 $('#tbl_program_offerings').DataTable({
-                    "order": [[0, "desc"]],
+                    "order": [[2, "desc"]],
                     orderCellsTop: true,
-                    fixedHeader: true
+                    fixedHeader: true,
+                    "columnDefs": [ {
+                        "targets": 0,
+                        "orderable": false
+                        } ]
                 });
 
                 $('#tbl_program_offerings').editable({

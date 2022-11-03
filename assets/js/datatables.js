@@ -1,7 +1,7 @@
 //tbl_program_offerings
 $(document).ready(function () {
     $('#tbl_program_offerings').DataTable({
-        "order": [[1, "desc"]],
+        "order": [[2, "desc"]],
         "lengthChange": false,
         orderCellsTop: true,
         fixedHeader: true,

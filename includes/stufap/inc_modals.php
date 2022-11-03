@@ -953,9 +953,9 @@
                                     >";
                                 }
                                 if (empty($fhe_category_diff)) {
-                                    echo "
-                                        <option selected disabled value=''>ALL CATEGORY HAS BEEN USED</option>
-                                    >";
+                                    echo' 
+                                        <option selected disabled value="">ALL CATEGORY HAS BEEN USED</option>
+                                    >';
                                 }
                             } else {
                                 foreach ($fhe_category_array as $value) {
@@ -966,8 +966,8 @@
                             }
 
                             ?>
-
                         </select>
+                        
                     </div>
                     <hr>
                     <div class="form-group">
