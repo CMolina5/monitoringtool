@@ -9,11 +9,11 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Program Code</label>
-                        <input class="form-control" type="text" name="program_code" id="program_code">
+                        <input class="form-control" type="text" name="program_code" id="program_code" required>
                     </div>
                     <div class="form-group">
                         <label>Degree Program</label>
-                        <input class="form-control" type="text" placeholder="Ex. Bachelor in Elementary Education" name="program_name" id="program_name">
+                        <input class="form-control" type="text" placeholder="Ex. Bachelor in Elementary Education" name="program_name" id="program_name" required>
                     </div>
                     <div class="form-group">
                         <label>Government Recognition No.</label>
