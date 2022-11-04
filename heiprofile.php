@@ -431,7 +431,7 @@ include 'includes/heiprofile/inc_template.php'
                         ?>
                         <label>1st Term</label><label class='text-danger' title='required'>&nbsp;*</label>
                         <div class="input-group">
-                            <div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fa fa-calendar-o"></i></span></div><input class="form-control date-size" id="picker" name="enrollment_1st" type="text" placeholder="MM/DD/YYYY-MM/DD/YYYY" value="<?php echo $enrollment_period_1st ?>" required="">
+                            <div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fa fa-calendar-o"></i></span></div><input class="form-control date-size" id="picker" name="enrollment_1st" type="text" placeholder="MM/DD/YYYY-MM/DD/YYYY" value="<?php echo $enrollment_period_1st ?>" required="" onkeydown="return false;">
 
                         </div>
                     </div>
