@@ -431,7 +431,7 @@ include 'includes/heiprofile/inc_template.php'
                         ?>
                         <label>1st Term</label><label class='text-danger' title='required'>&nbsp;*</label>
                         <div class="input-group">
-                            <div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fa fa-calendar-o"></i></span></div><input class="form-control date-size" id="picker" name="enrollment_1st" type="text" placeholder="MM/DD/YYYY-MM/DD/YYYY" value="<?php echo $enrollment_period_1st ?>" readonly required="">
+                            <div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fa fa-calendar-o"></i></span></div><input class="form-control date-size" id="picker" name="enrollment_1st" type="text" placeholder="MM/DD/YYYY-MM/DD/YYYY" value="<?php echo $enrollment_period_1st ?>" required="">
 
                         </div>
                     </div>
@@ -466,7 +466,7 @@ include 'includes/heiprofile/inc_template.php'
                     ?>
                     <label>2nd Term</label><label class='text-danger' title='required'>&nbsp;*</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fa fa-calendar-o"></i></span></div><input class="form-control date-size" id="picker2" name="enrollment_2nd" type="text" placeholder='MM/DD/YYYY-MM/DD/YYYY' value="<?php echo $enrollment_period_2nd ?>" readonly required="">
+                        <div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fa fa-calendar-o"></i></span></div><input class="form-control date-size" id="picker2" name="enrollment_2nd" type="text" placeholder='MM/DD/YYYY-MM/DD/YYYY' value="<?php echo $enrollment_period_2nd ?>" required="">
                     </div>
                 </div>
                 <script>
@@ -501,7 +501,7 @@ include 'includes/heiprofile/inc_template.php'
                                 <div class='col-12 col-md-3 col-xl-6'>";
                     echo "
                             <label>3rd Term</label><label class='text-danger' title='required'>&nbsp;*</label>
-                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fa fa-calendar-o'></i></span></div><input class='form-control date-size' id='picker3' name='enrollment_3rd' type='text' placeholder='MM/DD/YYYY-MM/DD/YYYY' value='$enrollment_period_3rd' readonly required=''>
+                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fa fa-calendar-o'></i></span></div><input class='form-control date-size' id='picker3' name='enrollment_3rd' type='text' placeholder='MM/DD/YYYY-MM/DD/YYYY' value='$enrollment_period_3rd' required=''>
                             </div>
                         </div>
                         <script>
@@ -536,7 +536,7 @@ include 'includes/heiprofile/inc_template.php'
                                 <div class='col-12 col-md-3 col-xl-6'>";
                     echo "
                             <label>Summer/Midyear</label><label class='text-danger' title='required'>&nbsp;*</label>
-                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fa fa-calendar-o'></i></span></div><input class='form-control date-size' id='picker4' name='enrollment_summer_midyear' type='text' placeholder='MM/DD/YYYY-MM/DD/YYYY' value='$enrollment_period_summer_midyear' readonly required=''>
+                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fa fa-calendar-o'></i></span></div><input class='form-control date-size' id='picker4' name='enrollment_summer_midyear' type='text' placeholder='MM/DD/YYYY-MM/DD/YYYY' value='$enrollment_period_summer_midyear' required=''>
                             </div>
                         </div>
                         <script>
