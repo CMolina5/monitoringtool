@@ -224,8 +224,8 @@ if ($resultCheck > 0) {
             $total_fhe_vol_cont_2nd_male, 
             $total_fhe_vol_cont_3rd_male, 
             $total_fhe_vol_cont_summer_midyear_male,
-            $total_fhe_opt_out_1st_female, 
-            $total_fhe_opt_out_2nd_female, 
+            $total_fhe_opt_out_1st_female,
+            $total_fhe_opt_out_2nd_female,
             $total_fhe_opt_out_3rd_female, 
             $total_fhe_opt_out_summer_midyear_female, 
             $total_fhe_vol_cont_1st_female, 
@@ -610,14 +610,13 @@ if ($resultCheck > 0) {
             $total_tes_applicant_female)";
         } else if ($ac_calendar == 'Semester') {
             $sql = "INSERT INTO tbl_stufap_info (ac_year, 
-            hei_psg_region, 
-            hei_uii, 
+            hei_psg_region, hei_uii, 
             hei_name, 
             total_fhe_opt_out_1st_male, 
             total_fhe_opt_out_2nd_male, 
             total_fhe_vol_cont_1st_male, 
             total_fhe_vol_cont_2nd_male, 
-            total_tes_applicant_male
+            total_tes_applicant_male,
             
             total_fhe_opt_out_1st_female, 
             total_fhe_opt_out_2nd_female, 
