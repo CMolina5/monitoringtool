@@ -105,6 +105,27 @@ $(document).ready(function () {
                         "orderable": false
                     } ]
                 })
+
+                $('#tbl_programs_fhe').editable({
+                    mode: 'inline',
+                    container: 'body',
+                    selector: 'td.beneficiaries',
+                    // title: 'Total Beneficiaries',
+                    url: "includes/stufap/inc_stufap_fhe_update_degree_programs_1.php",
+                    type: "POST",
+                    min: 0,
+                    placeholder: 'No. of Beneficiaries',
+                    // showbuttons: false,
+                    toggle: 'dblclick',
+                    defaultValue: 0,
+                    //dataType: 'json',
+                    validate: function (value) {
+                        if ($.trim(value) == '') {
+                            return 'This field is required';
+                        }
+                    }
+                });
+                
             }
         });
     });
