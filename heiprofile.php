@@ -577,7 +577,7 @@ include 'includes/heiprofile/inc_template.php'
                 ?>
                 <label>1st Term</label><label class='text-danger' title='required'>&nbsp;*</label>
                 <div class="input-group">
-                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fa fa-calendar-o"></i></span></div><input class="form-control date-size" id="picker5" name="opening_1st" type="text" placeholder='MM/DD/YYYY' value="<?php echo  $opening_of_classes_1st ?>" readonly required="">
+                    <div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fa fa-calendar-o"></i></span></div><input class="form-control date-size" id="picker5" name="opening_1st" type="text" placeholder='MM/DD/YYYY' value="<?php echo  $opening_of_classes_1st ?>" required="">
                 </div>
                 <script>
                     $('#picker5').daterangepicker({
@@ -612,7 +612,7 @@ include 'includes/heiprofile/inc_template.php'
             ?>
             <label>2nd Term</label><label class='text-danger' title='required'>&nbsp;*</label>
             <div class="input-group">
-                <div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fa fa-calendar-o"></i></span></div><input class="form-control date-size" id="picker6" name="opening_2nd" type="text" placeholder='MM/DD/YYYY' value="<?php echo  $opening_of_classes_2nd ?>" readonly required="">
+                <div class="input-group-prepend"><span class="input-group-text icon-container"><i class="fa fa-calendar-o"></i></span></div><input class="form-control date-size" id="picker6" name="opening_2nd" type="text" placeholder='MM/DD/YYYY' value="<?php echo  $opening_of_classes_2nd ?>" required="">
             </div>
             <script>
                 $('#picker6').daterangepicker({
@@ -647,7 +647,7 @@ include 'includes/heiprofile/inc_template.php'
                                 <div class='col-12 col-md-3 col-xl-6'>";
             echo "
                             <label>3rd Term</label><label class='text-danger' title='required'>&nbsp;*</label>
-                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fa fa-calendar-o'></i></span></div><input class='form-control date-size' id='picker7' name='opening_3rd' type='text' placeholder='MM/DD/YYYY' value='$opening_of_classes_3rd' readonly required=''>
+                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fa fa-calendar-o'></i></span></div><input class='form-control date-size' id='picker7' name='opening_3rd' type='text' placeholder='MM/DD/YYYY' value='$opening_of_classes_3rd' required=''>
                             </div>
                             <script>
                                 $('#picker7').daterangepicker({
@@ -682,7 +682,7 @@ include 'includes/heiprofile/inc_template.php'
                                 <div class='col-12 col-md-3 col-xl-6'>";
             echo "
                             <label>Summer/Midyear</label><label class='text-danger' title='required'>&nbsp;*</label>
-                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fa fa-calendar-o'></i></span></div><input class='form-control date-size' id='picker8' name='opening_summer_midyear' type='text' placeholder='MM/DD/YYYY' value='$opening_of_classes_summer_midyear' readonly required=''>   
+                            <div class='input-group'><div class='input-group-prepend'><span class='input-group-text icon-container'><i class='fa fa-calendar-o'></i></span></div><input class='form-control date-size' id='picker8' name='opening_summer_midyear' type='text' placeholder='MM/DD/YYYY' value='$opening_of_classes_summer_midyear' required=''>   
                             </div>
                             <script>
                                 $('#picker8').daterangepicker({
