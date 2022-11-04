@@ -100,7 +100,7 @@
                     <div class="form-group">
                         <label>Type of StuFAP</label>
                         <select name="stufap_type" id="stufap_type" class="form-control" required>
-                                <option disabled selected>-- Select Type of StuFAP Funding --</option>
+                                <option disabled value="" selected>-- Select Type of StuFAP Funding --</option>
                                 <option value="Local">Local</option>
                                 <option value="National">National</option>
                         </select>
