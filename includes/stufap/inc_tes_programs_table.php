@@ -8,7 +8,7 @@ echo "
 <table id='tbl_programs_tes' class='table-bordered tbl-style stripe' style='width: 100%;'>
 <thead>
     <tr>
-        <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_tes_programs_checkbox'></th>
+        <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;' data-toggle='tooltip' title='Select All'><input type='checkbox' name='main_tes_programs_checkbox'></th>
         <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>DEGREE PROGRAM</th>
         <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>NO. TES GRANTEES WHO EXCEEDED THE MAXIMUM RESIDENCY RULE</th>
         <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>ESTIMATED NO. OF GRADUATING STUDENTS</th>
@@ -34,7 +34,7 @@ if ($resultCheck > 0) {
         
     echo"
         <tr>
-            <td class='text-center'><input type='checkbox' id='$uid' name='tes_programs_checkbox' value='$uid'></td>
+            <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tes_programs_checkbox' value='$uid'></td>
             <td class='text-left'>$program_name</td>
             <td data-name='total_tes_exceeded_mrr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_exceeded_mrr_male</td>
             <td data-name='total_tes_exceeded_mrr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_exceeded_mrr_female</td>

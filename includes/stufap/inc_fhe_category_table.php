@@ -9,7 +9,7 @@ if ($ac_calendar == 'Trimester with Summer') {
 <table id='tbl_fhe_category' class='table-bordered tbl-style stripe' style='width: 100%;'>
     <thead>
         <tr>
-            <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_fhe_category_checkbox'></th>
+            <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;' data-toggle='tooltip' title='Select All'><input type='checkbox' name='main_fhe_category_checkbox'></th>
             <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>FHE CATEGORY</th>
             <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>1ST TERM</th>
             <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
@@ -44,7 +44,7 @@ if ($ac_calendar == 'Trimester with Summer') {
             $total_fhe_sum_mid_female = $row['total_fhe_sum_mid_female'];
 
             echo "<tr>
-        <td class='text-center'><input type='checkbox' id='$uid' name='fhe_category_checkbox' value='$uid'></td>
+        <td class='text-center'><input type='checkbox' id='$uid' name='fhe_category_checkbox' value='$uid' data-toggle='tooltip' title='Select'></td>
         <td>$fhe_category</td>
         <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_male</td>
         <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_female</td>
@@ -65,7 +65,7 @@ if ($ac_calendar == 'Trimester with Summer') {
     <table id='tbl_fhe_category' class='table-bordered tbl-style stripe' style='width: 100%;'>
         <thead>
             <tr>
-                <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_fhe_category_checkbox'></th>
+                <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;' data-toggle='tooltip' title='Select All'><input type='checkbox' name='main_fhe_category_checkbox'></th>
                 <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>FHE CATEGORY</th>
                 <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>1ST TERM</th>
                 <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
@@ -95,7 +95,7 @@ if ($ac_calendar == 'Trimester with Summer') {
             $total_fhe_3rd_female = $row['total_fhe_3rd_female'];
 
             echo "<tr>
-            <td class='text-center'><input type='checkbox' id='$uid' name='fhe_category_checkbox' value='$uid'></td>
+            <td class='text-center'><input type='checkbox' id='$uid' name='fhe_category_checkbox' value='$uid' data-toggle='tooltip' title='Select'></td>
             <td>$fhe_category</td>
             <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_male</td>
             <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_female</td>
@@ -114,7 +114,7 @@ if ($ac_calendar == 'Trimester with Summer') {
         <table id='tbl_fhe_category' class='table-bordered tbl-style stripe' style='width: 100%;'>
             <thead>
                 <tr>
-                    <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_fhe_category_checkbox'></th>
+                    <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;' data-toggle='tooltip' title='Select All'><input type='checkbox' name='main_fhe_category_checkbox'></th>
                     <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>FHE CATEGORY</th>
                     <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>1ST TERM</th>
                     <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
@@ -144,7 +144,7 @@ if ($ac_calendar == 'Trimester with Summer') {
             $total_fhe_sum_mid_female = $row['total_fhe_sum_mid_female'];
 
             echo "<tr>
-                <td class='text-center'><input type='checkbox' id='$uid' name='fhe_category_checkbox' value='$uid'></td>
+                <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='fhe_category_checkbox' value='$uid'></td>
                 <td>$fhe_category</td>
                 <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_male</td>
                 <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_female</td>
@@ -163,7 +163,7 @@ if ($ac_calendar == 'Trimester with Summer') {
     <table id='tbl_fhe_category' class='table-bordered tbl-style stripe' style='width: 100%;'>
         <thead>
             <tr>
-                <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_fhe_category_checkbox'></th>
+                <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;' data-toggle='tooltip' title='Select All'><input type='checkbox' name='main_fhe_category_checkbox'></th>
                 <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>FHE CATEGORY</th>
                 <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>1ST TERM</th>
                 <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
@@ -188,7 +188,7 @@ if ($ac_calendar == 'Trimester with Summer') {
             $total_fhe_2nd_female = $row['total_fhe_2nd_female'];
 
             echo "<tr>
-            <td class='text-center'><input type='checkbox' id='$uid' name='fhe_category_checkbox' value='$uid'></td>
+            <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='fhe_category_checkbox' value='$uid'></td>
             <td>$fhe_category</td>
             <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_male</td>
             <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_female</td>

@@ -31,7 +31,7 @@ if ($resultCheck > 0) {
 
         echo "
         <tr>
-            <td class='text-center'><input type='checkbox' id='$uid' name='degree_program_checkbox' value='$uid'></td>
+            <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='degree_program_checkbox' value='$uid'></td>
             <td data-name='program_code' class='degree_programs text-center' data-type='text' data-pk='$uid'>$program_code</td>
             <td data-name='program_name' class='degree_programs text-left' data-type='text' data-pk='$uid'>".strtoUpper($program_name)."</td>
             <td data-name='gr_no' class='degree_programs text-center' data-type='text' data-pk='$uid'>$gr_no</td>

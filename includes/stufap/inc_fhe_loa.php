@@ -9,7 +9,7 @@ if ($ac_calendar == 'Trimester with Summer') {
 <table id='tbl_fhe_loa' class='table-bordered tbl-style stripe' style='width: 100%;'>
     <thead>
         <tr>
-            <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_fhe_loa_checkbox'></th>
+            <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;' data-toggle='tooltip' title='Select All'><input type='checkbox' name='main_fhe_loa_checkbox'></th>
             <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>REASONS FOR LOA</th>
             <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>1ST TERM</th>
             <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
@@ -47,7 +47,7 @@ if ($ac_calendar == 'Trimester with Summer') {
 
             echo "
         <tr>
-            <td class='text-center'><input type='checkbox' id='$uid' name='fhe_loa_checkbox' value='$uid'></td>
+            <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='fhe_loa_checkbox' value='$uid'></td>
             <td>" . strtoUpper($reason) . "</td>
             <td data-name='total_loa_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_male</td>
             <td data-name='total_loa_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_female</td>
@@ -70,7 +70,7 @@ if ($ac_calendar == 'Trimester with Summer') {
     <table id='tbl_fhe_loa' class='table-bordered tbl-style stripe' style='width: 100%;'>
         <thead>
             <tr>
-                <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_fhe_loa_checkbox'></th>
+                <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;' data-toggle='tooltip' title='Select All'><input type='checkbox' name='main_fhe_loa_checkbox'></th>
                 <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>REASONS FOR LOA</th>
                 <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>1ST TERM</th>
                 <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
@@ -103,7 +103,7 @@ if ($ac_calendar == 'Trimester with Summer') {
 
             echo "
             <tr>
-                <td class='text-center'><input type='checkbox' id='$uid' name='fhe_loa_checkbox' value='$uid'></td>
+                <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='fhe_loa_checkbox' value='$uid'></td>
                 <td>" . strtoUpper($reason) . "</td>
                 <td data-name='total_loa_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_male</td>
                 <td data-name='total_loa_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_female</td>
@@ -124,7 +124,7 @@ if ($ac_calendar == 'Trimester with Summer') {
         <table id='tbl_fhe_loa' class='table-bordered tbl-style stripe' style='width: 100%;'>
             <thead>
                 <tr>
-                    <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_fhe_loa_checkbox'></th>
+                    <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;' data-toggle='tooltip' title='Select All'><input type='checkbox' name='main_fhe_loa_checkbox'></th>
                     <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>REASONS FOR LOA</th>
                     <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>1ST TERM</th>
                     <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
@@ -152,7 +152,7 @@ if ($ac_calendar == 'Trimester with Summer') {
 
             echo "
                 <tr>
-                    <td class='text-center'><input type='checkbox' id='$uid' name='fhe_loa_checkbox' value='$uid'></td>
+                    <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='fhe_loa_checkbox' value='$uid'></td>
                     <td>" . strtoUpper($reason) . "</td>
                     <td data-name='total_loa_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_male</td>
                     <td data-name='total_loa_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_female</td>
