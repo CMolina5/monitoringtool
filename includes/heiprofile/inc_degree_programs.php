@@ -8,12 +8,12 @@ echo "
     <table id='tbl_program_offerings' class='table-bordered tbl-style stripe' style='width: 100%;'>
         <thead>
             <tr>
-                <th class='text-center'><input type='checkbox' name='main_checkbox'></th>
-                <th class='text-center'>PROGRAM CODE</th>
-                <th class='text-center'>DEGREE PROGRAM</th>
-                <th class='text-center'>GOVERNMENT RECOGNITION NO.</th>
-                <th class='text-center'>CERTIFICATE OF PROGRAM COMPLIANCE NO.</th>
-                <th class='d-none'>IN THE TES PORTAL</th>
+                <th class='text-center' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_checkbox'></th>
+                <th class='text-center' style='background-color: #3C70AB; color:#ffff;'>PROGRAM CODE</th>
+                <th class='text-center' style='background-color: #3C70AB; color:#ffff;'>DEGREE PROGRAM</th>
+                <th class='text-center' style='background-color: #3C70AB; color:#ffff;'>GOVERNMENT RECOGNITION NO.</th>
+                <th class='text-center' style='background-color: #3C70AB; color:#ffff;'>CERTIFICATE OF PROGRAM COMPLIANCE NO.</th>
+                <th class='d-none' style='background-color: #3C70AB; color:#ffff;'>IN THE TES PORTAL</th>
             </tr>
         </thead>
         <tbody>
