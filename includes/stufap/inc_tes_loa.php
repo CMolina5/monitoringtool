@@ -9,22 +9,22 @@ if ($ac_calendar == 'Trimester with Summer') {
 <table id='tbl_tes_loa' class='table-bordered tbl-style stripe' style='width: 100%;'>
     <thead>
         <tr>
-        <th class='text-center' rowspan='2'><input type='checkbox' name='main_tes_loa_checkbox'></th>
-            <th class='text-center' rowspan='2'>REASONS FOR LOA</th>
-            <th class='text-center' colspan='2'>1ST TERM</th>
-            <th class='text-center' colspan='2'>2ND TERM</th>
-            <th class='text-center' colspan='2'>3RD TERM</th>
-            <th class='text-center' colspan='2'>SUMMER/MIDYEAR</th>
+        <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_tes_loa_checkbox'></th>
+            <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>REASONS FOR LOA</th>
+            <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>1ST TERM</th>
+            <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
+            <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>3RD TERM</th>
+            <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>SUMMER/MIDYEAR</th>
         </tr>
         <tr>
-            <th class='text-center'>MALE</th>
-            <th class='text-center'>FEMALE</th>
-            <th class='text-center'>MALE</th>
-            <th class='text-center'>FEMALE</th>
-            <th class='text-center'>MALE</th>
-            <th class='text-center'>FEMALE</th>
-            <th class='text-center'>MALE</th>
-            <th class='text-center'>FEMALE</th>
+            <th class='text-center' style='background-color: #668EBD;'>MALE</th>
+            <th class='text-center' style='background-color: #668EBD;'>FEMALE</th>
+            <th class='text-center' style='background-color: #668EBD;'>MALE</th>
+            <th class='text-center' style='background-color: #668EBD;'>FEMALE</th>
+            <th class='text-center' style='background-color: #668EBD;'>MALE</th>
+            <th class='text-center' style='background-color: #668EBD;'>FEMALE</th>
+            <th class='text-center' style='background-color: #668EBD;'>MALE</th>
+            <th class='text-center' style='background-color: #668EBD;'>FEMALE</th>
         </tr>
     </thead>
     <tbody>
@@ -70,19 +70,19 @@ if ($ac_calendar == 'Trimester with Summer') {
     <table id='tbl_tes_loa' class='table-bordered tbl-style stripe' style='width: 100%;'>
         <thead>
             <tr>
-            <th class='text-center' rowspan='2'><input type='checkbox' name='main_tes_loa_checkbox'></th>
-                <th class='text-center' rowspan='2'>REASONS FOR LOA</th>
-                <th class='text-center' colspan='2'>1ST TERM</th>
-                <th class='text-center' colspan='2'>2ND TERM</th>
-                <th class='text-center' colspan='2'>3RD TERM</th>
+            <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_tes_loa_checkbox'></th>
+                <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>REASONS FOR LOA</th>
+                <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>1ST TERM</th>
+                <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
+                <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>3RD TERM</th>
             </tr>
             <tr>
-                <th class='text-center'>MALE</th>
-                <th class='text-center'>FEMALE</th>
-                <th class='text-center'>MALE</th>
-                <th class='text-center'>FEMALE</th>
-                <th class='text-center'>MALE</th>
-                <th class='text-center'>FEMALE</th>
+                <th class='text-center' style='background-color: #668EBD;'>MALE</th>
+                <th class='text-center' style='background-color: #668EBD;'>FEMALE</th>
+                <th class='text-center' style='background-color: #668EBD;'>MALE</th>
+                <th class='text-center' style='background-color: #668EBD;'>FEMALE</th>
+                <th class='text-center' style='background-color: #668EBD;'>MALE</th>
+                <th class='text-center' style='background-color: #668EBD;'>FEMALE</th>
             </tr>
         </thead>
         <tbody>
@@ -125,19 +125,19 @@ else if ($ac_calendar == 'Semester with Summer') {
         <table id='tbl_tes_loa' class='table-bordered tbl-style stripe' style='width: 100%;'>
             <thead>
                 <tr>
-                <th class='text-center' rowspan='2'><input type='checkbox' name='main_tes_loa_checkbox'></th>
-                    <th class='text-center' rowspan='2'>REASONS FOR LOA</th>
-                    <th class='text-center' colspan='2'>1ST TERM</th>
-                    <th class='text-center' colspan='2'>2ND TERM</th>
-                    <th class='text-center' colspan='2'>SUMMER/MIDYEAR</th>
+                <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_tes_loa_checkbox'></th>
+                    <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>REASONS FOR LOA</th>
+                    <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>1ST TERM</th>
+                    <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
+                    <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>SUMMER/MIDYEAR</th>
                 </tr>
                 <tr>
-                    <th class='text-center'>MALE</th>
-                    <th class='text-center'>FEMALE</th>
-                    <th class='text-center'>MALE</th>
-                    <th class='text-center'>FEMALE</th>
-                    <th class='text-center'>MALE</th>
-                    <th class='text-center'>FEMALE</th>
+                    <th class='text-center' style='background-color: #668EBD;'>MALE</th>
+                    <th class='text-center' style='background-color: #668EBD;'>FEMALE</th>
+                    <th class='text-center' style='background-color: #668EBD;'>MALE</th>
+                    <th class='text-center' style='background-color: #668EBD;'>FEMALE</th>
+                    <th class='text-center' style='background-color: #668EBD;'>MALE</th>
+                    <th class='text-center' style='background-color: #668EBD;'>FEMALE</th>
                 </tr>
             </thead>
             <tbody>
@@ -179,16 +179,16 @@ else if ($ac_calendar == 'Semester with Summer') {
             <table id='tbl_tes_loa' class='table-bordered tbl-style stripe' style='width: 100%;'>
                 <thead>
                     <tr>
-                    <th class='text-center' rowspan='2'><input type='checkbox' name='main_tes_loa_checkbox'></th>
-                        <th class='text-center' rowspan='2'>REASONS FOR LOA</th>
-                        <th class='text-center' colspan='2'>1ST TERM</th>
-                        <th class='text-center' colspan='2'>2ND TERM</th>
+                    <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_tes_loa_checkbox'></th>
+                        <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>REASONS FOR LOA</th>
+                        <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>1ST TERM</th>
+                        <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
                     </tr>
                     <tr>
-                        <th class='text-center'>MALE</th>
-                        <th class='text-center'>FEMALE</th>
-                        <th class='text-center'>MALE</th>
-                        <th class='text-center'>FEMALE</th>
+                        <th class='text-center' style='background-color: #668EBD;'>MALE</th>
+                        <th class='text-center' style='background-color: #668EBD;'>FEMALE</th>
+                        <th class='text-center' style='background-color: #668EBD;'>MALE</th>
+                        <th class='text-center' style='background-color: #668EBD;'>FEMALE</th>
                     </tr>
                 </thead>
                 <tbody>
