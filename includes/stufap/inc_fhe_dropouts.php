@@ -173,7 +173,7 @@ echo"
         </tbody>
     </table>
     ";
-}else{
+}else {
     echo "
     <table id='tbl_fhe_dropouts' class='table-bordered tbl-style stripe' style='width: 100%;'>
         <thead>
