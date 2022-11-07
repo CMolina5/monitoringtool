@@ -119,7 +119,7 @@ echo"
         </tbody>
     </table>
     ";
-}if ($ac_calendar == 'Semester with Summer') {
+}else if ($ac_calendar == 'Semester with Summer') {
     echo "
     <table id='tbl_fhe_dropouts' class='table-bordered tbl-style stripe' style='width: 100%;'>
         <thead>
