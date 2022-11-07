@@ -409,7 +409,7 @@ include 'includes/stufap/inc_template.php';
         echo"<div class='card card-style-out'>
             <div class='card card-style-table'>
                 <div class='form-group'>
-                <label class='label-parts'>II.B TERTIARY EDUCATION SUBSIDY</label>
+                    <label class='label-parts'>II.B TERTIARY EDUCATION SUBSIDY</label>
                 </div>
                 <div class='form-group'>
                 <label>Total No. of TES Applicants</label>
@@ -424,7 +424,7 @@ include 'includes/stufap/inc_template.php';
                 </div>
                 </div>
                 </div>
-              
+            </div> 
             <div class='card card-style-table'>
                 <div class='form-group'>
                 <label class='label-parts'>II.B TERTIARY EDUCATION SUBSIDY</label>
