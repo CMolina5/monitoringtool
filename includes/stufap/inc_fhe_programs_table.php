@@ -6,7 +6,7 @@ $resultCheck = mysqli_num_rows($result);
 
 if ($ac_calendar == 'Trimester with Summer') {
     echo "
-<table id='tbl_programs_fhe1' class='table-bordered tbl-style stripe table-sm' style='width: 100%; display'>
+<table id='tbl_programs_fhe' class='table-bordered tbl-style stripe table-sm' style='width: 100%; display'>
 <thead>
     <tr>
         <th class='text-center' rowspan='4' colspan='1' style='background-color: #3C70AB; color:#ffff;'>DEGREE PROGRAM</th>
@@ -249,7 +249,7 @@ if ($ac_calendar == 'Trimester with Summer') {
 ";
 } else if ($ac_calendar == 'Trimester') {
     echo "
-    <table id='tbl_programs_fhe2' class='table-bordered tbl-style stripe table-sm' style='width: 100%; display'>
+    <table id='tbl_programs_fhe' class='table-bordered tbl-style stripe table-sm' style='width: 100%; display'>
     <thead>
         <tr>
             <th class='text-center' rowspan='4' colspan='1' style='background-color: #3C70AB; color:#ffff;'>DEGREE PROGRAM</th>
@@ -444,7 +444,7 @@ if ($ac_calendar == 'Trimester with Summer') {
     ";
 } else if ($ac_calendar == 'Semester with Summer') {
     echo "
-        <table id='tbl_programs_fhe3' class='table-bordered tbl-style stripe table-sm' style='width: 100%; display'>
+        <table id='tbl_programs_fhe' class='table-bordered tbl-style stripe table-sm' style='width: 100%; display'>
         <thead>
             <tr>
                 <th class='text-center' rowspan='4' colspan='1' style='background-color: #3C70AB; color:#ffff;'>DEGREE PROGRAM</th>
