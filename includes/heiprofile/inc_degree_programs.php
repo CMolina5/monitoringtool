@@ -8,7 +8,7 @@ echo "
     <table id='tbl_program_offerings' class='table-bordered tbl-style stripe' style='width: 100%;'>
         <thead>
             <tr>
-                <th class='text-center' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_checkbox'></th>
+                <th class='text-center' style='background-color: #3C70AB; color:#ffff;' data-toggle='tooltip' title='Select All'><input type='checkbox' name='main_checkbox'></th>
                 <th class='text-center' style='background-color: #3C70AB; color:#ffff;'>PROGRAM CODE</th>
                 <th class='text-center' style='background-color: #3C70AB; color:#ffff;'>DEGREE PROGRAM</th>
                 <th class='text-center' style='background-color: #3C70AB; color:#ffff;'>GOVERNMENT RECOGNITION NO.</th>
