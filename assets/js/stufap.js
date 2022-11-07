@@ -99,7 +99,10 @@ $(document).ready(function () {
                     fixedColumns:   {
                         left: 1,
                         right: 1
-                    }
+                    },
+                    columnDefs: [
+                        { orderable: false, targets: -1 }
+                     ]
                 })
 
                 $('#tbl_programs_fhe').editable({
