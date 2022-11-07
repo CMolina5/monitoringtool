@@ -129,11 +129,7 @@ $(document).ready(function () {
         fixedColumns:   {
             left: 1,
             right: 1
-        },
-        "columnDefs": [ {
-            "targets": 53,
-            "orderable": false
-            } ]
+        }
     });
 
     // $('#tbl_programs_fhe').Tabledit({
