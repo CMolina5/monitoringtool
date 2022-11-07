@@ -15,7 +15,7 @@ include 'includes/stufap/inc_template.php';
             echo"
             <div class='card card-style-out'>
             <div class='card card-style-table'>
-                <div class='form-group'><label class='label-parts'>II.A FREE HIGHER EDUCATION</label><label>For each degree program, indicate the total number of FHE beneficiaries, number of FHE beneficiaries who graduated, and number of FHE beneficiaries who exceeded the maximum residency rule per semester/term, per year level, and per sex.</label></div>
+                <div class='form-group'><label class='label-parts'>II.A FREE HIGHER EDUCATION</label><label style='font-style: italic;'>For each degree program, indicate the total number of FHE beneficiaries, number of FHE beneficiaries who graduated, and number of FHE beneficiaries who exceeded the maximum residency rule per semester/term, per year level, and per sex.</label></div>
                 <div class='form-group'>
                     <div id='tbl_programs_fhe_div' class='table table-responsive tbl-style'>";
                         
@@ -27,7 +27,7 @@ include 'includes/stufap/inc_template.php';
             </div>
             <div class='card card-style-table'>
                 <div class='form-group'>
-                    <label>Indicate the number of FHE beneficiaries who are 4Ps-SWDI and/or Listahanan beneficiaries per semester/term and per sex.</label>
+                    <label style='font-style: italic;'>Indicate the number of FHE beneficiaries who are 4Ps-SWDI and/or Listahanan beneficiaries per semester/term and per sex.</label>
                     <div class='form-row text-right'>
                     <div class='col'>
                     <p class='text-right'>
@@ -183,7 +183,7 @@ include 'includes/stufap/inc_template.php';
                 </div>
             </div>
                 
-                <div class='form-group'><label>No. of FHE Beneficiaries Who Voluntarily Contributed for FHE</label>
+                <div class='form-group'><label >No. of FHE Beneficiaries Who Voluntarily Contributed for FHE</label>
                     <div class='form-row'>";
                     
                         if( $ac_calendar=='Trimester with Summer'){
@@ -425,7 +425,7 @@ include 'includes/stufap/inc_template.php';
                 </div>
                 </div>
                 <div class='form-group'>
-                    <label>Indicate the total number of TES grantees, grantees who are persons with disability, indigenous people, and those enrolled in programs with Board exams per TES category, per semester/term, and per sex.</label>
+                    <label style='font-style: italic;'>Indicate the total number of TES grantees, grantees who are persons with disability, indigenous people, and those enrolled in programs with Board exams per TES category, per semester/term, and per sex.</label>
                     <div class='form-row text-right'>
                         <div class='col'>
                             <p class='text-right'>
@@ -445,7 +445,7 @@ include 'includes/stufap/inc_template.php';
                 </div>
             </div>
             <div class='card card-style-table'>
-                <label>Indicate the number of TES grantees who exceeded the MRR and estimated number of graduating students per degree program and per sex.</label>
+                <label style='font-style: italic;'>Indicate the number of TES grantees who exceeded the MRR and estimated number of graduating students per degree program and per sex.</label>
                 <div class='form-row text-right'>
                     <div class='col'>
                         <p class='text-right'>
@@ -549,7 +549,7 @@ include 'includes/stufap/inc_template.php';
         if($tdp=='yes'){
         echo"<div class='card card-style-out'>
             <div class='card card-style-table'>
-                <div class='form-group'><label class='label-parts'>II.C TULONG DUNONG PROGRAM</label><label>Indicate the number of TES grantees who exceeded the MRR and estimated number of graduating students per degree program and per sex</label></div>
+                <div class='form-group'><label class='label-parts'>II.C TULONG DUNONG PROGRAM</label><label style='font-style: italic;'>Indicate the number of TES grantees who exceeded the MRR and estimated number of graduating students per degree program and per sex</label></div>
                 <div class='form-group'>
 
                     <div class='form-row text-right'>
