@@ -171,7 +171,7 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class="form-group"><label>Contact Number</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-phone-alt icons-input"></i></span></div><input name="hei_contact_no" class="form-control" type="tel" pattern="^(09)\d{9}$" value="<?php echo $hei_contact_no ?>" required="" placeholder="Format: (09)(9 digit phone number)">
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-phone-alt icons-input"></i></span></div><input name="hei_contact_no" class="form-control" type="tel" pattern="^(09)\d{9}$" value="<?php echo $hei_contact_no ?>" required="" placeholder="(09)(9 digit phone number)">
                         <div class="input-group-prepend"></div>
                         <div class="invalid-feedback">
                             Please enter a valid contact number.
@@ -180,7 +180,7 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class="form-group"><label>Alternative Contact Number</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-phone-alt icons-input"></i></span></div><input name="hei_alt_contact_no" class="form-control" type="tel" pattern="^(09)\d{9}$" placeholder="Format: (09)(9 digit phone number)" value="<?php echo $hei_alt_contact_no ?>">
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-phone-alt icons-input"></i></span></div><input name="hei_alt_contact_no" class="form-control" type="tel" pattern="^(09)\d{9}$" placeholder="(09)(9 digit phone number)" value="<?php echo $hei_alt_contact_no ?>">
                         <div class="input-group-prepend"></div>
                         <div class="invalid-feedback">
                             Please enter a valid contact number.
@@ -226,7 +226,7 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class="form-group"><label>Contact Number</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-phone-alt icons-input"></i></span></div><input name="hei_head_contact_no" class="form-control" type="tel" pattern="^(09)\d{9}$" value="<?php echo $hei_head_contact_no ?>" required="" placeholder="Format: (09)(9 digit phone number)">
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-phone-alt icons-input"></i></span></div><input name="hei_head_contact_no" class="form-control" type="tel" pattern="^(09)\d{9}$" value="<?php echo $hei_head_contact_no ?>" required="" placeholder="(09)(9 digit phone number)">
                         <div class="input-group-prepend"></div>
                         <div class="invalid-feedback">
                             Please enter a valid contact number.
@@ -235,7 +235,7 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class="form-group"><label>Alternative Contact Number</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-phone-alt icons-input"></i></span></div><input name="hei_head_alt_contact_no" class="form-control" type="tel" pattern="^(09)\d{9}$" value="<?php echo $hei_head_alt_contact_no ?>" placeholder="Format: (09)(9 digit phone number)">
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-phone-alt icons-input"></i></span></div><input name="hei_head_alt_contact_no" class="form-control" type="tel" pattern="^(09)\d{9}$" value="<?php echo $hei_head_alt_contact_no ?>" placeholder="(09)(9 digit phone number)">
                         <div class="input-group-prepend"></div>
                         <div class="invalid-feedback">
                             Please enter a valid contact number.
@@ -282,7 +282,7 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class='form-group'><label>Contact Number</label><label class='text-danger' title='required'>&nbsp;*</label>
                     <div class='input-group'>
-                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='fhe_focal_contact_no' class='form-control' type='tel' pattern='^(09)\d{9}$' placeholder='Format: (09)(9 digit phone number)' value='$fhe_focal_contact_no' required=''>
+                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='fhe_focal_contact_no' class='form-control' type='tel' pattern='^(09)\d{9}$' placeholder='(09)(9 digit phone number)' value='$fhe_focal_contact_no' required=''>
                         <div class='input-group-prepend'></div>
                         <div class='invalid-feedback'>
                             Please enter a valid contact number.
@@ -291,7 +291,7 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class='form-group'><label>Alternative Contact Number</label>
                     <div class='input-group'>
-                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='fhe_focal_alt_contact_no' class='form-control' type='tel' pattern='^(09)\d{9}$' placeholder='Format: (09)(9 digit phone number)' value='$fhe_focal_alt_contact_no'>
+                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='fhe_focal_alt_contact_no' class='form-control' type='tel' pattern='^(09)\d{9}$' placeholder='(09)(9 digit phone number)' value='$fhe_focal_alt_contact_no'>
                         <div class='input-group-prepend'></div>
                         <div class='invalid-feedback'>
                             Please enter a valid contact number.
@@ -338,7 +338,7 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class='form-group'><label>Contact Number</label><label class='text-danger' title='required'>&nbsp;*</label>
                     <div class='input-group'>
-                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='tes_focal_contact_no' class='form-control' type='tel' pattern='^(09)\d{9}$' placeholder='Format: (09)(9 digit phone number)' value='$tes_focal_contact_no' required=''>
+                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='tes_focal_contact_no' class='form-control' type='tel' pattern='^(09)\d{9}$' placeholder='(09)(9 digit phone number)' value='$tes_focal_contact_no' required=''>
                         <div class='input-group-prepend'></div>
                         <div class='invalid-feedback'>
                             Please enter a valid contact number.
@@ -347,7 +347,7 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class='form-group'><label>Alternative Contact Number</label>
                     <div class='input-group'>
-                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='tes_focal_alt_contact_no' class='form-control' type='tel' pattern='^(09)\d{9}$' placeholder='Format: (09)(9 digit phone number)' value='$tes_focal_alt_contact_no'>
+                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='tes_focal_alt_contact_no' class='form-control' type='tel' pattern='^(09)\d{9}$' placeholder='(09)(9 digit phone number)' value='$tes_focal_alt_contact_no'>
                         <div class='input-group-prepend'></div>
                         <div class='invalid-feedback'>
                             Please enter a valid contact number.
@@ -394,7 +394,7 @@ include 'includes/heiprofile/inc_template.php'
                     </div>
                     <div class='form-group'><label>Contact Number</label><label class='text-danger' title='required'>&nbsp;*</label>
                         <div class='input-group'>
-                            <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='tdp_focal_contact_no' class='form-control' type='tel' pattern='^(09)\d{9}$' placeholder='Format: (09)(9 digit phone number)' value='$tdp_focal_contact_no' required=''>
+                            <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='tdp_focal_contact_no' class='form-control' type='tel' pattern='^(09)\d{9}$' placeholder='(09)(9 digit phone number)' value='$tdp_focal_contact_no' required=''>
                             <div class='input-group-prepend'></div>
                             <div class='invalid-feedback'>
                                 Please enter a valid contact number.
@@ -403,7 +403,7 @@ include 'includes/heiprofile/inc_template.php'
                     </div>
                     <div class='form-group'><label>Alternative Contact Number</label>
                         <div class='input-group'>
-                            <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='tdp_focal_alt_contact_no' class='form-control' type='tel' pattern='^(09)\d{9}$' placeholder='Format: (09)(9 digit phone number)' value='$tdp_focal_alt_contact_no'>
+                            <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-phone-alt icons-input'></i></span></div><input name='tdp_focal_alt_contact_no' class='form-control' type='tel' pattern='^(09)\d{9}$' placeholder='(09)(9 digit phone number)' value='$tdp_focal_alt_contact_no'>
                             <div class='input-group-prepend'></div>
                             <div class='invalid-feedback'>
                                 Please enter a valid contact number.
@@ -1170,7 +1170,7 @@ if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Su
     </div>
 </div>
 <div class="card card-style">
-    <div class="form-group"><label class="label-parts">I.E OTHER LOCALLY-AND-NATIONALLY-FUNDED STUFAPS</label><label style="font-style: italic;">List of all locally-and-nationally-funded StuFAPs availed in the institution, and number of beneficiaries per year level</label>
+    <div class="form-group"><label class="label-parts">I.E OTHER LOCALLY-AND-NATIONALLY-FUNDED STUFAPS</label><label style="font-style: italic;">List all locally- and nationally-funded StuFAPs availed in the institution, if any. Indicate the corresponding number of beneficiaries per year level.</label>
 
         <div class="form-row text-right">
             <div class="col">
