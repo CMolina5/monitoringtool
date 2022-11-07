@@ -120,7 +120,7 @@ if ($ac_calendar == 'Trimester with Summer') {
     </table>
     ";
 }
-if ($ac_calendar == 'Semester with Summer') {
+else if ($ac_calendar == 'Semester with Summer') {
     echo "
         <table id='tbl_tes_loa' class='table-bordered tbl-style stripe' style='width: 100%;'>
             <thead>
