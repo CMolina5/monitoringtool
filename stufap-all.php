@@ -427,9 +427,6 @@ include 'includes/stufap/inc_template.php';
             </div> 
             <div class='card card-style-table'>
                 <div class='form-group'>
-                <label class='label-parts'>II.B TERTIARY EDUCATION SUBSIDY</label>
-                </div>
-                <div class='form-group'>
                     <label style='font-style: italic;'>Indicate the total number of TES grantees, grantees who are persons with disability, indigenous people, and those enrolled in programs with Board exams per TES category, per semester/term, and per sex.</label>
                     <div class='form-row text-right'>
                         <div class='col'>
