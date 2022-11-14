@@ -1345,7 +1345,7 @@
                                             <i class='fas fa-female' style='font-size:20px; color:#9a0694'></i>
                                         </span>
                                     </div>
-                                    <input id="total_pwd_3rd_female" name="total_tes_pwd_female" class="form-control" type="number" min="0">
+                                    <input id="total_pwd_3rd_female" name="total_pwd_3rd_female" class="form-control" type="number" min="0">
                                 </div>
                             </div>
 
@@ -1535,7 +1535,7 @@
                                             <i class='fas fa-female' style='font-size:20px; color:#9a0694'></i>
                                         </span>
                                     </div>
-                                    <input id="total_with_board_3rd_female" name="total_with_board_pwd_female" class="form-control" type="number" min="0">
+                                    <input id="total_with_board_3rd_female" name="total_with_board_3rd_female" class="form-control" type="number" min="0">
                                 </div>
                             </div>
 
