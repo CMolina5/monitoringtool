@@ -200,4 +200,5 @@ if ($ac_calendar == 'Trimester with Summer') {
     echo "</tbody>
     </table>
     ";
+    var_dump($ac_calendar);
 }
