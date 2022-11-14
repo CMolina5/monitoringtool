@@ -200,5 +200,5 @@ if ($ac_calendar == 'Trimester with Summer') {
     echo "</tbody>
     </table>
     ";
-    display($ac_calendar);
+    echo $ac_calendar;
 }
