@@ -2,7 +2,7 @@
 session_start();
 include_once 'includes/db_connection.php';
 if (!empty($_SESSION["hei_uii"])) {
-    header("Location:/index.php");
+    header("Location:./index.php");
 }
 header('Content-Type: text/html; charset="UTF-8"');
 ?>
