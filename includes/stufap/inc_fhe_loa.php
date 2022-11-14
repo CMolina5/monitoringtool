@@ -1,4 +1,5 @@
 <?php
+include 'inc_template.php';
 
 $sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE'";
 $result = mysqli_query($conn, $sql);

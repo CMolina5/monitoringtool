@@ -1,4 +1,5 @@
 <?php
+include 'inc_template.php';
 
 $sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
 $result = mysqli_query($conn, $sql);

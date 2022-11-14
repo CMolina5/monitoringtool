@@ -1,4 +1,5 @@
 <?php
+include 'inc_template.php';
 
 $sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_1sem_1yr_male > 0 OR total_tdp_1sem_1yr_female > 0 OR total_tdp_2sem_1yr_male > 0 OR total_tdp_2sem_1yr_female > 0)";
 $result = mysqli_query($conn, $sql);
