@@ -1440,7 +1440,7 @@
                                             <i class='fas fa-female' style='font-size:20px; color:#9a0694'></i>
                                         </span>
                                     </div>
-                                    <input id="total_ip_3rd_female" name="total_ip_pwd_female" class="form-control" type="number" min="0">
+                                    <input id="total_ip_3rd_female" name="total_ip_3rd_female" class="form-control" type="number" min="0">
                                 </div>
                             </div>
 
