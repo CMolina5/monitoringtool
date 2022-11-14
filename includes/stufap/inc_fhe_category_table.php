@@ -45,7 +45,7 @@ if ($ac_calendar == 'Trimester with Summer') {
 
             echo "<tr>
         <td class='text-center'><input type='checkbox' id='$uid' name='fhe_category_checkbox' value='$uid' data-toggle='tooltip' title='Select'></td>
-        <td>$fhe_category</td>
+        <td>$fhe_category.$ac_calendar</td>
         <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_male</td>
         <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_female</td>
         <td data-name='total_fhe_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_male</td>
@@ -200,5 +200,5 @@ if ($ac_calendar == 'Trimester with Summer') {
     echo "</tbody>
     </table>
     ";
-    echo $ac_calendar;
+
 }
