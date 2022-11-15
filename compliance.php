@@ -609,7 +609,7 @@ $cnt = 1;
                                 </div>
                             </div>
                         </li>";
-                    }
+                    
 
                         echo"<li class='list-group-item border-white'>
                             <div class='form-group'><label>".$cnt2++.". Released the full amount of the TES to the grantees who have fully paid the TOSF for the term<br></label>
@@ -635,7 +635,7 @@ $cnt = 1;
                                 </div>
                             </div>
                         </li>";
-
+                    }
 
                         echo"<li class='list-group-item border-white'>
                             <div class='form-group'><label>".$cnt2++.". Released to the grantees their share within two (2) weeks upon the receipt of fund transfer for TES<br></label>
