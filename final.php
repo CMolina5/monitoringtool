@@ -2676,7 +2676,9 @@
                             echo'<div class="col text-center">
                                 <a class="btn btn-primary save_form" role="button" id="btn-next" href="includes/final/save.php">Save&nbsp; &nbsp;<i class="fas fa-save"></i></a>
                             </div>
-                            
+                            <div class="col text-center">
+                                <a class="btn btn-primary save_form" role="button" id="btn-next" href="includes/final/save.php">Save&nbsp; &nbsp;<i class="fas fa-save"></i></a>
+                            </div>
                             <div class="col text-center">
                             <button class="btn btn-success finalize_form" id="btn-next" type="button">Finalize&nbsp; &nbsp;<i class="fas fa-file-signature"></i></button>
                             </div>';
