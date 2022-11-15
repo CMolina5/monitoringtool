@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if (empty($_SESSION["hei_uii"])) {
+        header("Location:./index.php");
+    }
     include_once 'includes/db_connection.php';
     include 'includes/final/inc_template.php';
     include 'includes/heiprofile/inc_template.php';
