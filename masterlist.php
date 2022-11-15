@@ -4,7 +4,6 @@ session_start();
 if (empty($_SESSION["hei_uii"])) {
     header("Location:./index.php");
 }
-header('Content-Type: text/html; charset="UTF-8"');
 require('assets/fpdf182/mc_table.php');
 include_once 'includes/db_connection.php';
 include 'includes/masterlist/inc_template.php';
