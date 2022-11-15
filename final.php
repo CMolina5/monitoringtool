@@ -2674,7 +2674,7 @@
                             <?php
                             if($form_status=='ongoing' OR $form_status=='Saved'){
                             echo'<div class="col text-center">
-                                <a class="btn btn-primary save_form" role="button" id="btn-next" href="includes/final/save.php">Save&nbsp; &nbsp;<i class="fas fa-save"></i></a>
+                            <a class="btn btn-info" role="button" id="btn-prev" href="home.php"><i class="fas fa-home"></i>&nbsp; &nbsp;Home</a>
                             </div>
                             <div class="col text-center">
                                 <a class="btn btn-primary save_form" role="button" id="btn-next" href="includes/final/save.php">Save&nbsp; &nbsp;<i class="fas fa-save"></i></a>
