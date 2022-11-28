@@ -1108,6 +1108,7 @@ if ($resultCheck > 0) {
      $pdf->SetFont('Arial', 'B', 9);
      $pdf->SetFillColor(255, 255, 255);
      $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
+     $pdf->SetFont('Arial', 'B', 10);
      $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_1yr_female, 1, 0, 'C', true);
      $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_2yr_female, 1, 0, 'C', true);
      $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_3yr_female, 1, 0, 'C', true);
