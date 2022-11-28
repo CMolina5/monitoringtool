@@ -1138,7 +1138,7 @@ if ($resultCheck > 0) {
 
      $pdf->Ln();
     //Grand Total
-     $pdf->SetFont('Arial', 'B', 9);
+     $pdf->SetFont('Arial', 'B', 10);
      $pdf->SetFillColor(255, 255, 255);
      $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
      $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_1yr_female + $grand_total_fhe_1sem_1yr_male, 1, 0, 'C', true);
