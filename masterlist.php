@@ -468,7 +468,7 @@ $pdf->Cell(80.25, 5, $total_undergraduate_3rd_male, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_undergraduate_summer_midyear_male, 1, 0, 'C', true);
 $pdf->Ln();
 
-$pdf->SetFont('Arial', 'B', 10);
+$pdf->SetFont('Arial', 'B', 9);
 $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
 $pdf->SetFont('Arial', '', 10);
 $pdf->Cell(80.25, 5, $total_undergraduate_1st_female, 1, 0, 'C', true);
@@ -479,7 +479,6 @@ $pdf->Ln();
 
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
-$pdf->SetFont('Arial', '', 10);
 $pdf->Cell(80.25, 5, $total_undergraduate_1st_male + $total_undergraduate_1st_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_undergraduate_2nd_male + $total_undergraduate_2nd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_undergraduate_3rd_male + $total_undergraduate_3rd_female, 1, 0, 'C', true);
