@@ -1242,17 +1242,18 @@ if ($resultCheck > 0) {
 
         $pdf->SetFillColor(236, 240, 241);
         $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
+        $pdf->SetFont('Arial', '', 10);
         $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(160.5, 5, '1', 1, 0, 'C', true);
-        $pdf->Cell(160.5, 5, '1', 1, 0, 'C', true);;
+        $pdf->Cell(160.5, 5, $total_fhe_graduated_male, 1, 0, 'C', true);
+        $pdf->Cell(160.5, 5, $total_fhe_exceeded_mrr_male, 1, 0, 'C', true);;
         $pdf->Ln();
         $pdf->SetFillColor(236, 240, 241);
         $pdf->SetFont('Arial', 'B', 9);
         $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFont('Arial', '', 10);
         $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(160.5, 5, '1', 1, 0, 'C', true);
-        $pdf->Cell(160.5, 5, '1', 1, 0, 'C', true);;
+        $pdf->Cell(160.5, 5, $total_fhe_graduated_female, 1, 0, 'C', true);
+        $pdf->Cell(160.5, 5, $total_fhe_exceeded_mrr_female, 1, 0, 'C', true);;
         $pdf->Ln();
     }
 }
