@@ -64,7 +64,7 @@ $pdf->AddPage();
 //Cell(width , height , text , border , end line , [align] )
 //table header
 //set font to arial, bold, 7pt
-$pdf->SetFont('Arial', 'B', 20);
+$pdf->SetFont('Arial', 'B', 15);
 $pdf->SetTextColor(0, 0, 0);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 5, strtoUpper($_SESSION['hei_name']), 0, 0, 'C', true);
@@ -114,7 +114,7 @@ if ($fhe == 'yes' and $tes == 'yes' and $tdp == 'yes') {
 $pdf->Ln();
 
 //PART I. HIGHER EDUCATION INSTITUTION PROFILE
-$pdf->SetFont('Arial', 'B', 16);
+$pdf->SetFont('Arial', 'B', 12);
 $pdf->SetWidths(array(168, 168));
 $pdf->SetAligns(array('L', 'L'));
 $pdf->SetFillColor(0, 0, 128);
@@ -213,20 +213,9 @@ $pdf->Cell(43, 5, 'Name of the Head of HEI:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
 $pdf->Cell(125, 5, $hei_head_name, 0, 0, 'L', true);
 $pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(46, 5, 'Alternative Email Address:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(122, 5, $hei_head_alt_email_add, 0, 0, 'L', true);
-$pdf->Ln();
-
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(29, 5, 'Full Designation:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
 $pdf->Cell(139, 5, $hei_head_designation, 0, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(22, 5, 'Contact No.:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(146, 5, $hei_head_contact_no, 0, 0, 'L', true);
 $pdf->Ln();
 
 $pdf->SetFillColor(236, 240, 241);
@@ -234,6 +223,17 @@ $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(27, 5, 'Email Address:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
 $pdf->Cell(141, 5, $hei_head_email_add, 0, 0, 'L', true);
+$pdf->SetFont('Arial', 'B', 10);
+$pdf->Cell(46, 5, 'Alternative Email Address:', 0, 0, 'L', true);
+$pdf->SetFont('Arial', '', 9);
+$pdf->Cell(122, 5, $hei_head_alt_email_add, 0, 0, 'L', true);
+$pdf->Ln();
+
+$pdf->SetFillColor(236, 240, 241);
+$pdf->SetFont('Arial', 'B', 10);
+$pdf->Cell(22, 5, 'Contact No.:', 0, 0, 'L', true);
+$pdf->SetFont('Arial', '', 9);
+$pdf->Cell(146, 5, $hei_head_contact_no, 0, 0, 'L', true);
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(42, 5, 'Alternative Contact No.:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
@@ -582,6 +582,11 @@ $pdf->Ln();
 $pdf->SetFont('Arial', 'I', 8);
 $pdf->SetTextColor(0, 0, 0);
 $pdf->SetFillColor(255, 255, 255);
+$pdf->Cell(336, 5, 'List of all locally- and nationally-funded StuFAPs availed in the institution, and number of beneficiaries per year level', 0, 0, 'L', true);
+
+$pdf->SetFont('Arial', 'I', 8);
+$pdf->SetTextColor(0, 0, 0);
+$pdf->SetFillColor(255, 255, 255);
 $pdf->MultiCell(336, 5, 'List of all bachelor degree programs offered for the Academic Year with the Government Recognition and Certificate of Program Compliance Nos. for each program', 0, 0, 'L', true);
 
 // $pdf->SetFont('Arial', 'B', 9);
@@ -679,7 +684,7 @@ if ($resultCheck > 0) {
 $pdf->AddPage();
 
 //Part2 STUFAP
-$pdf->SetFont('Arial', 'B', 16);
+$pdf->SetFont('Arial', 'B', 12);
 $pdf->SetFillColor(0, 0, 128);
 $pdf->SetTextColor(255, 255, 255);
 $pdf->Cell(336, 8, 'PART II. UNIFIED STUFAP PROFILE', 0, 0, 'C', true);
@@ -2015,7 +2020,7 @@ $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
 $pdf->AddPage();
 
 //PART3 COMPLIANCE TO GUIDELINES AND MOA
-$pdf->SetFont('Arial', 'B', 16);
+$pdf->SetFont('Arial', 'B', 12);
 $pdf->SetWidths(array(95, 95));
 $pdf->SetAligns(array('L', 'L'));
 $pdf->SetFillColor(0, 0, 128);
@@ -2178,7 +2183,7 @@ $pdf->Ln();
 //End
 $pdf->AddPage();
 //PART IV. UNIFAST EXPERIENCE
-$pdf->SetFont('Arial', 'B', 16);
+$pdf->SetFont('Arial', 'B', 12);
 $pdf->SetWidths(array(95, 95));
 $pdf->SetAligns(array('L', 'L'));
 $pdf->SetFillColor(0, 0, 128);
