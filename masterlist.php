@@ -582,7 +582,12 @@ $pdf->Ln();
 $pdf->SetFont('Arial', 'I', 8);
 $pdf->SetTextColor(0, 0, 0);
 $pdf->SetFillColor(255, 255, 255);
-$pdf->MultiCell(336, 5, 'List of all bachelor degree programs offered for the Academic Year with the Government Recognition and Certificate of Program Compliance Nos. for each program', 0, 0, 'L', true);
+$pdf->Cell(336, 5, 'List of all bachelor degree programs offered for the Academic Year with the Government Recognition and Certificate of Program Compliance Nos. for each program', 0, 0, 'L', true);
+
+// $pdf->SetFont('Arial', 'I', 8);
+// $pdf->SetTextColor(0, 0, 0);
+// $pdf->SetFillColor(255, 255, 255);
+// $pdf->MultiCell(336, 5, 'List of all bachelor degree programs offered for the Academic Year with the Government Recognition and Certificate of Program Compliance Nos. for each program', 0, 0, 'L', true);
 
 // $pdf->SetFont('Arial', 'B', 9);
 // $pdf->SetFillColor(236, 240, 241);
