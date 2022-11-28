@@ -408,6 +408,7 @@ $pdf->Cell(84, 5, '3RD TERM', 1, 0, 'C', true);
 $pdf->Cell(84, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
 $pdf->Ln();
 
+$pdf->SetFont('Arial', '', 10);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(84, 5, $enrollment_period_1st, 1, 0, 'C', true);
 $pdf->Cell(84, 5, $enrollment_period_2nd, 1, 0, 'C', true);
@@ -433,6 +434,7 @@ $pdf->Cell(84, 5, '3RD TERM', 1, 0, 'C', true);
 $pdf->Cell(84, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
 $pdf->Ln();
 
+$pdf->SetFont('Arial', '', 10);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(84, 5, $opening_of_classes_1st, 1, 0, 'C', true);
 $pdf->Cell(84, 5, $opening_of_classes_2nd, 1, 0, 'C', true);
@@ -506,21 +508,32 @@ $pdf->Ln();
 
 $pdf->SetFillColor(236, 240, 241);
 $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
+$pdf->SetFont('Arial', '', 10);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(80.25, 5, $total_foreign_1st_male, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_foreign_2nd_male, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_foreign_3rd_male, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_foreign_summer_midyear_male, 1, 0, 'C', true);
 $pdf->Ln();
+
 $pdf->SetFillColor(236, 240, 241);
 $pdf->SetFont('Arial', 'B', 9);
 $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
+$pdf->SetFont('Arial', '', 10);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(80.25, 5, $total_foreign_1st_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_foreign_2nd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_foreign_3rd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_foreign_summer_midyear_female, 1, 0, 'C', true);
+$pdf->Ln();
+
+$pdf->SetFont('Arial', 'B', 10);
+$pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+$pdf->Cell(80.25, 5, $total_foreign_1st_male + $total_foreign_1st_female, 1, 0, 'C', true);
+$pdf->Cell(80.25, 5, $total_foreign_2nd_male + $total_foreign_2nd_female, 1, 0, 'C', true);
+$pdf->Cell(80.25, 5, $total_foreign_3rd_male + $total_foreign_3rd_female, 1, 0, 'C', true);
+$pdf->Cell(80.25, 5, $total_foreign_summer_midyear_male + $total_foreign_summer_midyear_female, 1, 0, 'C', true);
+
 $pdf->Ln();
 $pdf->Ln();
 //end
@@ -542,21 +555,31 @@ $pdf->Ln();
 
 $pdf->SetFillColor(236, 240, 241);
 $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
+$pdf->SetFont('Arial', '', 10);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(80.25, 5, $total_second_courser_1st_male, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_second_courser_2nd_male, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_second_courser_3rd_male, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_second_courser_summer_midyear_male, 1, 0, 'C', true);
 $pdf->Ln();
+
 $pdf->SetFillColor(236, 240, 241);
 $pdf->SetFont('Arial', 'B', 9);
 $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
+$pdf->SetFont('Arial', '', 10);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(80.25, 5, $total_second_courser_1st_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_second_courser_2nd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_second_courser_3rd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_second_courser_summer_midyear_female, 1, 0, 'C', true);
+$pdf->Ln();
+
+$pdf->SetFont('Arial', 'B', 10);
+$pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+$pdf->Cell(80.25, 5, $total_secon_courser_1st_male + $total_secon_courser_1st_female, 1, 0, 'C', true);
+$pdf->Cell(80.25, 5, $total_secon_courser_2nd_male + $total_secon_courser_2nd_female, 1, 0, 'C', true);
+$pdf->Cell(80.25, 5, $total_secon_courser_3rd_male + $total_secon_courser_3rd_female, 1, 0, 'C', true);
+$pdf->Cell(80.25, 5, $total_secon_courser_summer_midyear_male + $total_secon_courser_summer_midyear_female, 1, 0, 'C', true);
 //end
 $pdf->addPage();
 //I.D PROGRAM OFFERINGS
