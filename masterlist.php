@@ -576,10 +576,10 @@ $pdf->Ln();
 
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
-$pdf->Cell(80.25, 5, $total_secon_courser_1st_male + $total_secon_courser_1st_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_secon_courser_2nd_male + $total_secon_courser_2nd_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_secon_courser_3rd_male + $total_secon_courser_3rd_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_secon_courser_summer_midyear_male + $total_secon_courser_summer_midyear_female, 1, 0, 'C', true);
+$pdf->Cell(80.25, 5, $total_second_courser_1st_male + $total_second_courser_1st_female, 1, 0, 'C', true);
+$pdf->Cell(80.25, 5, $total_second_courser_2nd_male + $total_second_courser_2nd_female, 1, 0, 'C', true);
+$pdf->Cell(80.25, 5, $total_second_courser_3rd_male + $total_second_courser_3rd_female, 1, 0, 'C', true);
+$pdf->Cell(80.25, 5, $total_second_courser_summer_midyear_male + $total_second_courser_summer_midyear_female, 1, 0, 'C', true);
 //end
 $pdf->addPage();
 //I.D PROGRAM OFFERINGS
