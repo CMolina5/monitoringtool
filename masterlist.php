@@ -686,6 +686,8 @@ if ($resultCheck > 0) {
 
         $pdf->row(array(strtoUpper($stufap_name), strtoUpper($stufap_type), $total_stufap_1st, $total_stufap_2nd, $total_stufap_3rd, $total_stufap_4th, $total_stufap_5th, $total_stufap_6th));
     }
+    $pdf->SetWidths(array(84, 42, 42, 42, 42, 42, 42));
+    $pdf->SetAligns(array('C', 'C', 'C', 'C', 'C', 'C', 'C'));
     $pdf->row(array('total', 'total', $grand_total_stufap_1st, $grand_total_stufap_2nd, $grand_total_stufap_3rd, $grand_total_stufap_4th, $grand_total_stufap_5th, $grand_total_stufap_6th));
 }
 
