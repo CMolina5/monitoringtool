@@ -584,6 +584,7 @@ $pdf->SetTextColor(0, 0, 0);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 5, 'List of all bachelor degree programs offered for the Academic Year with the Government Recognition and Certificate of Program Compliance Nos. for each program', 0, 0, 'L', true);
 $pdf->Ln();
+
 // $pdf->SetFont('Arial', 'I', 8);
 // $pdf->SetTextColor(0, 0, 0);
 // $pdf->SetFillColor(255, 255, 255);
@@ -660,7 +661,8 @@ $pdf->Ln();
 $pdf->SetFont('Arial', '', 10);
 $pdf->SetWidths(array(42, 42, 42, 42, 42, 42, 42, 42));
 $pdf->SetAligns(array('C', 'C', 'C', 'C', 'C', 'C', 'C', 'C'));
-$sql = "SELECT * FROM tbl_hei_other_funded_stufaps 
+$sql = "SELECT *, SUM(total_stufap_1st) AS grand_total_stufap_1st, SUM(total_stufap_2nd) AS grand_total_stufap_2nd, SUM(total_stufap_3rd) AS grand_total_stufap_3rd, SUM(total_stufap_4th) AS grand_total_stufap_4th, SUM(total_stufap_5th) AS grand_total_stufap_5th, SUM(total_stufap_6th) AS grand_total_stufap_6th 
+FROM tbl_hei_other_funded_stufaps 
 WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'
 ORDER BY stufap_name ASC";
 $result = mysqli_query($conn, $sql);
@@ -675,9 +677,16 @@ if ($resultCheck > 0) {
         $total_stufap_4th = $row['total_stufap_4th'];
         $total_stufap_5th = $row['total_stufap_5th'];
         $total_stufap_6th = $row['total_stufap_6th'];
+        $grand_total_stufap_1st = $row['grand_total_stufap_1st'];
+        $grand_total_stufap_2nd = $row['grand_total_stufap_2nd'];
+        $grand_total_stufap_3rd = $row['grand_total_stufap_3rd'];
+        $grand_total_stufap_4th = $row['grand_total_stufap_4th'];
+        $grand_total_stufap_5th = $row['grand_total_stufap_5th'];
+        $grand_total_stufap_6th = $row['grand_total_stufap_6th'];
 
         $pdf->row(array(strtoUpper($stufap_name), strtoUpper($stufap_type), $total_stufap_1st, $total_stufap_2nd, $total_stufap_3rd, $total_stufap_4th, $total_stufap_5th, $total_stufap_6th));
     }
+    $pdf->row(array('total', 'total', $grand_total_stufap_1st, $grand_total_stufap_2nd, $grand_total_stufap_3rd, $grand_total_stufap_4th, $grand_total_stufap_5th, $grand_total_stufap_6th));
 }
 
 //END
