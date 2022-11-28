@@ -796,12 +796,68 @@ $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
 $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
 $pdf->Ln();
 
-$sql = "SELECT * FROM tbl_degree_programs 
+$sql = "SELECT *, 
+SUM(total_fhe_1sem_1yr_male) AS grand_total_fhe_1sem_1yr_male, 
+SUM(total_fhe_1sem_1yr_female) AS grand_total_fhe_1sem_1yr_female, 
+SUM(total_fhe_1sem_2yr_male) AS grand_total_fhe_1sem_2yr_male, 
+SUM(total_fhe_1sem_2yr_female) AS grand_total_fhe_1sem_2yr_female,
+SUM(total_fhe_1sem_3yr_male) AS grand_total_fhe_1sem_3yr_male, 
+SUM(total_fhe_1sem_3yr_female) AS grand_total_fhe_1sem_3yr_female,
+SUM(total_fhe_1sem_4yr_male) AS grand_total_fhe_1sem_4yr_male, 
+SUM(total_fhe_1sem_4yr_female) AS grand_total_fhe_1sem_4yr_female,
+SUM(total_fhe_1sem_5yr_male) AS grand_total_fhe_1sem_5yr_male, 
+SUM(total_fhe_1sem_5yr_female) AS grand_total_fhe_1sem_5yr_female,
+SUM(total_fhe_1sem_6yr_male) AS grand_total_fhe_1sem_6yr_male, 
+SUM(total_fhe_1sem_6yr_female) AS grand_total_fhe_1sem_6yr_female,
+
+SUM(total_fhe_2sem_1yr_male) AS grand_total_fhe_2sem_1yr_male, 
+SUM(total_fhe_2sem_1yr_female) AS grand_total_fhe_2sem_1yr_female, 
+SUM(total_fhe_2sem_2yr_male) AS grand_total_fhe_2sem_2yr_male, 
+SUM(total_fhe_2sem_2yr_female) AS grand_total_fhe_2sem_2yr_female,
+SUM(total_fhe_2sem_3yr_male) AS grand_total_fhe_2sem_3yr_male, 
+SUM(total_fhe_2sem_3yr_female) AS grand_total_fhe_2sem_3yr_female,
+SUM(total_fhe_2sem_4yr_male) AS grand_total_fhe_2sem_4yr_male, 
+SUM(total_fhe_2sem_4yr_female) AS grand_total_fhe_2sem_4yr_female,
+SUM(total_fhe_2sem_5yr_male) AS grand_total_fhe_2sem_5yr_male, 
+SUM(total_fhe_2sem_5yr_female) AS grand_total_fhe_2sem_5yr_female,
+SUM(total_fhe_2sem_6yr_male) AS grand_total_fhe_2sem_6yr_male, 
+SUM(total_fhe_2sem_6yr_female) AS grand_total_fhe_2sem_6yr_female,
+
+SUM(total_fhe_3sem_1yr_male) AS grand_total_fhe_3sem_1yr_male, 
+SUM(total_fhe_3sem_1yr_female) AS grand_total_fhe_3sem_1yr_female, 
+SUM(total_fhe_3sem_2yr_male) AS grand_total_fhe_3sem_2yr_male, 
+SUM(total_fhe_3sem_2yr_female) AS grand_total_fhe_3sem_2yr_female,
+SUM(total_fhe_3sem_3yr_male) AS grand_total_fhe_3sem_3yr_male, 
+SUM(total_fhe_3sem_3yr_female) AS grand_total_fhe_3sem_3yr_female,
+SUM(total_fhe_3sem_4yr_male) AS grand_total_fhe_3sem_4yr_male, 
+SUM(total_fhe_3sem_4yr_female) AS grand_total_fhe_3sem_4yr_female,
+SUM(total_fhe_3sem_5yr_male) AS grand_total_fhe_3sem_5yr_male, 
+SUM(total_fhe_3sem_5yr_female) AS grand_total_fhe_3sem_5yr_female,
+SUM(total_fhe_3sem_6yr_male) AS grand_total_fhe_3sem_6yr_male, 
+SUM(total_fhe_3sem_6yr_female) AS grand_total_fhe_3sem_6yr_female,
+
+SUM(total_fhe_sum_mid_1yr_male) AS grand_total_fhe_sum_mid_1yr_male, 
+SUM(total_fhe_sum_mid_1yr_female) AS grand_total_fhe_sum_mid_1yr_female, 
+SUM(total_fhe_sum_mid_2yr_male) AS grand_total_fhe_sum_mid_2yr_male, 
+SUM(total_fhe_sum_mid_2yr_female) AS grand_total_fhe_sum_mid_2yr_female,
+SUM(total_fhe_sum_mid_3yr_male) AS grand_total_fhe_sum_mid_3yr_male, 
+SUM(total_fhe_sum_mid_3yr_female) AS grand_total_fhe_sum_mid_3yr_female,
+SUM(total_fhe_sum_mid_4yr_male) AS grand_total_fhe_sum_mid_4yr_male, 
+SUM(total_fhe_sum_mid_4yr_female) AS grand_total_fhe_sum_mid_4yr_female,
+SUM(total_fhe_sum_mid_5yr_male) AS grand_total_fhe_sum_mid_5yr_male, 
+SUM(total_fhe_sum_mid_5yr_female) AS grand_total_fhe_sum_mid_5yr_female,
+SUM(total_fhe_sum_mid_6yr_male) AS grand_total_fhe_sum_mid_6yr_male, 
+SUM(total_fhe_sum_mid_6yr_female) AS grand_total_fhe_sum_mid_6yr_female
+
+FROM tbl_degree_programs 
+
 WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND  (total_fhe_1sem_1yr_male != 0 AND total_fhe_1sem_1yr_female != 0 AND total_fhe_1sem_2yr_male != 0 AND total_fhe_1sem_2yr_female != 0 AND total_fhe_1sem_3yr_male != 0 AND total_fhe_1sem_3yr_female != 0 AND total_fhe_1sem_4yr_male != 0 AND total_fhe_1sem_4yr_female != 0 AND total_fhe_1sem_5yr_male != 0 AND total_fhe_1sem_5yr_female != 0 AND total_fhe_1sem_6yr_male != 0 AND total_fhe_1sem_6yr_female != 0 AND 
 total_fhe_2sem_1yr_male != 0 AND total_fhe_2sem_1yr_female != 0 AND total_fhe_2sem_2yr_male != 0 AND total_fhe_2sem_2yr_female != 0 AND total_fhe_2sem_3yr_male != 0 AND total_fhe_2sem_3yr_female != 0 AND total_fhe_2sem_4yr_male != 0 AND total_fhe_2sem_4yr_female != 0 AND total_fhe_2sem_5yr_male != 0 AND total_fhe_2sem_5yr_female != 0 AND total_fhe_2sem_6yr_male != 0 AND total_fhe_2sem_6yr_female != 0 AND
 total_fhe_3sem_1yr_male != 0 AND total_fhe_3sem_1yr_female != 0 AND total_fhe_3sem_2yr_male != 0 AND total_fhe_3sem_2yr_female != 0 AND total_fhe_3sem_3yr_male != 0 AND total_fhe_3sem_3yr_female != 0 AND total_fhe_3sem_4yr_male != 0 AND total_fhe_3sem_4yr_female != 0 AND total_fhe_3sem_5yr_male != 0 AND total_fhe_3sem_5yr_female != 0 AND total_fhe_3sem_6yr_male != 0 AND total_fhe_3sem_6yr_female != 0 AND
 total_fhe_sum_mid_1yr_male != 0 AND total_fhe_sum_mid_1yr_female != 0 AND total_fhe_sum_mid_2yr_male != 0 AND total_fhe_sum_mid_2yr_female != 0 AND total_fhe_sum_mid_3yr_male != 0 AND total_fhe_sum_mid_3yr_female != 0 AND total_fhe_sum_mid_4yr_male != 0 AND total_fhe_sum_mid_4yr_female != 0 AND total_fhe_sum_mid_5yr_male != 0 AND total_fhe_sum_mid_5yr_female != 0 AND total_fhe_sum_mid_6yr_male != 0 AND total_fhe_sum_mid_6yr_female != 0)
+
 ORDER BY program_name ASC";
+
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 if ($resultCheck > 0) {
@@ -867,6 +923,59 @@ if ($resultCheck > 0) {
         $total_fhe_sum_mid_5yr_female = $row['total_fhe_sum_mid_5yr_female'];
         $total_fhe_sum_mid_6yr_female = $row['total_fhe_sum_mid_6yr_female'];
 
+        //Grand Total
+        $grand_total_fhe_1sem_1yr_male = $row['grand_total_fhe_1sem_1yr_male'];
+        $grand_total_fhe_1sem_1yr_female = $row['grand_total_fhe_1sem_1yr_female'];
+        $grand_total_fhe_1sem_2yr_male = $row['grand_total_fhe_1sem_2yr_male'];
+        $grand_total_fhe_1sem_2yr_female = $row['grand_total_fhe_1sem_2yr_female'];
+        $grand_total_fhe_1sem_3yr_male = $row['grand_total_fhe_1sem_3yr_male'];
+        $grand_total_fhe_1sem_3yr_female = $row['grand_total_fhe_1sem_3yr_female'];
+        $grand_total_fhe_1sem_4yr_male = $row['grand_total_fhe_1sem_4yr_male'];
+        $grand_total_fhe_1sem_4yr_female = $row['grand_total_fhe_1sem_4yr_female'];
+        $grand_total_fhe_1sem_5yr_male = $row['grand_total_fhe_1sem_5yr_male'];
+        $grand_total_fhe_1sem_5yr_female = $row['grand_total_fhe_1sem_5yr_female'];
+        $grand_total_fhe_1sem_6yr_male = $row['grand_total_fhe_1sem_6yr_male'];
+        $grand_total_fhe_1sem_6yr_female = $row['grand_total_fhe_1sem_6yr_female'];
+
+        $grand_total_fhe_2sem_1yr_male = $row['grand_total_fhe_2sem_1yr_male'];
+        $grand_total_fhe_2sem_1yr_female = $row['grand_total_fhe_2sem_1yr_female'];
+        $grand_total_fhe_2sem_2yr_male = $row['grand_total_fhe_2sem_2yr_male'];
+        $grand_total_fhe_2sem_2yr_female = $row['grand_total_fhe_2sem_2yr_female'];
+        $grand_total_fhe_2sem_3yr_male = $row['grand_total_fhe_2sem_3yr_male'];
+        $grand_total_fhe_2sem_3yr_female = $row['grand_total_fhe_2sem_3yr_female'];
+        $grand_total_fhe_2sem_4yr_male = $row['grand_total_fhe_2sem_4yr_male'];
+        $grand_total_fhe_2sem_4yr_female = $row['grand_total_fhe_2sem_4yr_female'];
+        $grand_total_fhe_2sem_5yr_male = $row['grand_total_fhe_2sem_5yr_male'];
+        $grand_total_fhe_2sem_5yr_female = $row['grand_total_fhe_2sem_5yr_female'];
+        $grand_total_fhe_2sem_6yr_male = $row['grand_total_fhe_2sem_6yr_male'];
+        $grand_total_fhe_2sem_6yr_female = $row['grand_total_fhe_2sem_6yr_female'];
+
+        $grand_total_fhe_3sem_1yr_male = $row['grand_total_fhe_3sem_1yr_male'];
+        $grand_total_fhe_3sem_1yr_female = $row['grand_total_fhe_3sem_1yr_female'];
+        $grand_total_fhe_3sem_2yr_male = $row['grand_total_fhe_3sem_2yr_male'];
+        $grand_total_fhe_3sem_2yr_female = $row['grand_total_fhe_3sem_2yr_female'];
+        $grand_total_fhe_3sem_3yr_male = $row['grand_total_fhe_3sem_3yr_male'];
+        $grand_total_fhe_3sem_3yr_female = $row['grand_total_fhe_3sem_3yr_female'];
+        $grand_total_fhe_3sem_4yr_male = $row['grand_total_fhe_3sem_4yr_male'];
+        $grand_total_fhe_3sem_4yr_female = $row['grand_total_fhe_3sem_4yr_female'];
+        $grand_total_fhe_3sem_5yr_male = $row['grand_total_fhe_3sem_5yr_male'];
+        $grand_total_fhe_3sem_5yr_female = $row['grand_total_fhe_3sem_5yr_female'];
+        $grand_total_fhe_3sem_6yr_male = $row['grand_total_fhe_3sem_6yr_male'];
+        $grand_total_fhe_3sem_6yr_female = $row['grand_total_fhe_3sem_6yr_female'];
+
+        $grand_total_fhe_sum_mid_1yr_male = $row['grand_total_fhe_sum_mid_1yr_male'];
+        $grand_total_fhe_sum_mid_1yr_female = $row['grand_total_fhe_sum_mid_1yr_female'];
+        $grand_total_fhe_sum_mid_2yr_male = $row['grand_total_fhe_sum_mid_2yr_male'];
+        $grand_total_fhe_sum_mid_2yr_female = $row['grand_total_fhe_sum_mid_2yr_female'];
+        $grand_total_fhe_sum_mid_3yr_male = $row['grand_total_fhe_sum_mid_3yr_male'];
+        $grand_total_fhe_sum_mid_3yr_female = $row['grand_total_fhe_sum_mid_3yr_female'];
+        $grand_total_fhe_sum_mid_4yr_male = $row['grand_total_fhe_sum_mid_4yr_male'];
+        $grand_total_fhe_sum_mid_4yr_female = $row['grand_total_fhe_sum_mid_4yr_female'];
+        $grand_total_fhe_sum_mid_5yr_male = $row['grand_total_fhe_sum_mid_5yr_male'];
+        $grand_total_fhe_sum_mid_5yr_female = $row['grand_total_fhe_sum_mid_5yr_female'];
+        $grand_total_fhe_sum_mid_6yr_male = $row['grand_total_fhe_sum_mid_6yr_male'];
+        $grand_total_fhe_sum_mid_6yr_female = $row['grand_total_fhe_sum_mid_6yr_female'];
+
         //FIRST ROW
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetFillColor(214, 234, 248);
@@ -877,6 +986,7 @@ if ($resultCheck > 0) {
         $pdf->SetFillColor(255, 255, 255);
         $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
         //1st Term Male
+        $pdf->SetFont('Arial', '', 10);
         $pdf->Cell(13.375, 5, $total_fhe_1sem_1yr_male, 1, 0, 'C', true);
         $pdf->Cell(13.375, 5, $total_fhe_1sem_2yr_male, 1, 0, 'C', true);
         $pdf->Cell(13.375, 5, $total_fhe_1sem_3yr_male, 1, 0, 'C', true);
@@ -912,7 +1022,7 @@ if ($resultCheck > 0) {
         $pdf->SetFont('Arial', 'B', 9);
         $pdf->SetFillColor(255, 255, 255);
         $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFont('Arial', '', 10);
 
         $pdf->Cell(13.375, 5, $total_fhe_1sem_1yr_female, 1, 0, 'C', true);
         $pdf->Cell(13.375, 5, $total_fhe_1sem_2yr_female, 1, 0, 'C', true);
@@ -944,6 +1054,82 @@ if ($resultCheck > 0) {
 
         $pdf->Ln();
     }
+    //Grand Total
+     //FIRST ROW
+     $pdf->SetFont('Arial', 'B', 10);
+     $pdf->SetFillColor(214, 234, 248);
+     $pdf->Cell(336, 5, 'TOTAL', 1, 0, 'L', true);
+     $pdf->Ln();
+
+     $pdf->SetFont('Arial', 'B', 10);
+     $pdf->SetFillColor(255, 255, 255);
+     $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
+     //1st Term Male
+     $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_1yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_2yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_3yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_4yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_5yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_6yr_male, 1, 0, 'C', true);
+
+     //2nd Term Male
+     $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_1yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_2yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_3yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_4yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_5yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_6yr_male, 1, 0, 'C', true);
+
+     //3rd Term Male
+     $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_2yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_3yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_4yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_male, 1, 0, 'C', true);
+
+     //Summer Midyear Term Male
+     $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_2yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_3yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_4yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_5yr_male, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_male, 1, 0, 'C', true);
+     $pdf->Ln();
+
+     $pdf->SetFont('Arial', 'B', 9);
+     $pdf->SetFillColor(255, 255, 255);
+     $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_1yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_2yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_3yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_4yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_5yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_6yr_female, 1, 0, 'C', true);
+
+     $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_1yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_2yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_3yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_4yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_5yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_6yr_female, 1, 0, 'C', true);
+
+     $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_1yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_2yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_3yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_4yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_female, 1, 0, 'C', true);
+
+     $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_2yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_3yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_4yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_5yr_female, 1, 0, 'C', true);
+     $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_female, 1, 0, 'C', true);
+
+     $pdf->Ln();
+   
 }
 
 //END
