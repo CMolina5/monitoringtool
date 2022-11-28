@@ -766,7 +766,7 @@ $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
 $pdf->Ln();
 
 $sql = "SELECT * FROM tbl_degree_programs 
-WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND  (total_fhe_1sem_1yr_male != 0 AND total_fhe_1sem_1yr_female != 0)
+WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND  (total_fhe_1sem_1yr_male != 0 AND total_fhe_1sem_1yr_female != 0 AND total_fhe_1sem_2yr_male != 0 AND total_fhe_1sem_2yr_female != 0 AND total_fhe_1sem_3yr_male != 0 AND total_fhe_1sem_3yr_female != 0 AND total_fhe_1sem_4yr_male != 0 AND total_fhe_1sem_4yr_female != 0 AND total_fhe_1sem_5yr_male != 0 AND total_fhe_1sem_5yr_female != 0 AND total_fhe_1sem_6yr_male != 0 AND total_fhe_1sem_6yr_female != 0)
 ORDER BY program_name ASC";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
