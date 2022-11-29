@@ -13,8 +13,6 @@ include 'includes/compliance/inc_template.php';
 include 'includes/experience/inc_template.php';
 header("Content-type: application/pdf; charset=utf-8");
 
-
-
 class PDF extends PDF_MC_Table
 {
     function Header()
@@ -533,8 +531,8 @@ $pdf->Ln();
 
 $pdf->SetFillColor(236, 240, 241);
 $pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+$pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(80.25, 5, $total_foreign_1st_male + $total_foreign_1st_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_foreign_2nd_male + $total_foreign_2nd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_foreign_3rd_male + $total_foreign_3rd_female, 1, 0, 'C', true);
@@ -582,8 +580,8 @@ $pdf->Ln();
 
 $pdf->SetFillColor(236, 240, 241);
 $pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+$pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(80.25, 5, $total_second_courser_1st_male + $total_second_courser_1st_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_second_courser_2nd_male + $total_second_courser_2nd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_second_courser_3rd_male + $total_second_courser_3rd_female, 1, 0, 'C', true);
@@ -992,57 +990,57 @@ if ($resultCheck > 0) {
         $pdf->Ln();
     }
     $sql = "SELECT *, 
-SUM(total_fhe_1sem_1yr_male) AS grand_total_fhe_1sem_1yr_male, 
-SUM(total_fhe_1sem_1yr_female) AS grand_total_fhe_1sem_1yr_female, 
-SUM(total_fhe_1sem_2yr_male) AS grand_total_fhe_1sem_2yr_male, 
-SUM(total_fhe_1sem_2yr_female) AS grand_total_fhe_1sem_2yr_female,
-SUM(total_fhe_1sem_3yr_male) AS grand_total_fhe_1sem_3yr_male, 
-SUM(total_fhe_1sem_3yr_female) AS grand_total_fhe_1sem_3yr_female,
-SUM(total_fhe_1sem_4yr_male) AS grand_total_fhe_1sem_4yr_male, 
-SUM(total_fhe_1sem_4yr_female) AS grand_total_fhe_1sem_4yr_female,
-SUM(total_fhe_1sem_5yr_male) AS grand_total_fhe_1sem_5yr_male, 
-SUM(total_fhe_1sem_5yr_female) AS grand_total_fhe_1sem_5yr_female,
-SUM(total_fhe_1sem_6yr_male) AS grand_total_fhe_1sem_6yr_male, 
-SUM(total_fhe_1sem_6yr_female) AS grand_total_fhe_1sem_6yr_female,
+    SUM(total_fhe_1sem_1yr_male) AS grand_total_fhe_1sem_1yr_male, 
+    SUM(total_fhe_1sem_1yr_female) AS grand_total_fhe_1sem_1yr_female, 
+    SUM(total_fhe_1sem_2yr_male) AS grand_total_fhe_1sem_2yr_male, 
+    SUM(total_fhe_1sem_2yr_female) AS grand_total_fhe_1sem_2yr_female,
+    SUM(total_fhe_1sem_3yr_male) AS grand_total_fhe_1sem_3yr_male, 
+    SUM(total_fhe_1sem_3yr_female) AS grand_total_fhe_1sem_3yr_female,
+    SUM(total_fhe_1sem_4yr_male) AS grand_total_fhe_1sem_4yr_male, 
+    SUM(total_fhe_1sem_4yr_female) AS grand_total_fhe_1sem_4yr_female,
+    SUM(total_fhe_1sem_5yr_male) AS grand_total_fhe_1sem_5yr_male, 
+    SUM(total_fhe_1sem_5yr_female) AS grand_total_fhe_1sem_5yr_female,
+    SUM(total_fhe_1sem_6yr_male) AS grand_total_fhe_1sem_6yr_male, 
+    SUM(total_fhe_1sem_6yr_female) AS grand_total_fhe_1sem_6yr_female,
 
-SUM(total_fhe_2sem_1yr_male) AS grand_total_fhe_2sem_1yr_male, 
-SUM(total_fhe_2sem_1yr_female) AS grand_total_fhe_2sem_1yr_female, 
-SUM(total_fhe_2sem_2yr_male) AS grand_total_fhe_2sem_2yr_male, 
-SUM(total_fhe_2sem_2yr_female) AS grand_total_fhe_2sem_2yr_female,
-SUM(total_fhe_2sem_3yr_male) AS grand_total_fhe_2sem_3yr_male, 
-SUM(total_fhe_2sem_3yr_female) AS grand_total_fhe_2sem_3yr_female,
-SUM(total_fhe_2sem_4yr_male) AS grand_total_fhe_2sem_4yr_male, 
-SUM(total_fhe_2sem_4yr_female) AS grand_total_fhe_2sem_4yr_female,
-SUM(total_fhe_2sem_5yr_male) AS grand_total_fhe_2sem_5yr_male, 
-SUM(total_fhe_2sem_5yr_female) AS grand_total_fhe_2sem_5yr_female,
-SUM(total_fhe_2sem_6yr_male) AS grand_total_fhe_2sem_6yr_male, 
-SUM(total_fhe_2sem_6yr_female) AS grand_total_fhe_2sem_6yr_female,
+    SUM(total_fhe_2sem_1yr_male) AS grand_total_fhe_2sem_1yr_male, 
+    SUM(total_fhe_2sem_1yr_female) AS grand_total_fhe_2sem_1yr_female, 
+    SUM(total_fhe_2sem_2yr_male) AS grand_total_fhe_2sem_2yr_male, 
+    SUM(total_fhe_2sem_2yr_female) AS grand_total_fhe_2sem_2yr_female,
+    SUM(total_fhe_2sem_3yr_male) AS grand_total_fhe_2sem_3yr_male, 
+    SUM(total_fhe_2sem_3yr_female) AS grand_total_fhe_2sem_3yr_female,
+    SUM(total_fhe_2sem_4yr_male) AS grand_total_fhe_2sem_4yr_male, 
+    SUM(total_fhe_2sem_4yr_female) AS grand_total_fhe_2sem_4yr_female,
+    SUM(total_fhe_2sem_5yr_male) AS grand_total_fhe_2sem_5yr_male, 
+    SUM(total_fhe_2sem_5yr_female) AS grand_total_fhe_2sem_5yr_female,
+    SUM(total_fhe_2sem_6yr_male) AS grand_total_fhe_2sem_6yr_male, 
+    SUM(total_fhe_2sem_6yr_female) AS grand_total_fhe_2sem_6yr_female,
 
-SUM(total_fhe_3sem_1yr_male) AS grand_total_fhe_3sem_1yr_male, 
-SUM(total_fhe_3sem_1yr_female) AS grand_total_fhe_3sem_1yr_female, 
-SUM(total_fhe_3sem_2yr_male) AS grand_total_fhe_3sem_2yr_male, 
-SUM(total_fhe_3sem_2yr_female) AS grand_total_fhe_3sem_2yr_female,
-SUM(total_fhe_3sem_3yr_male) AS grand_total_fhe_3sem_3yr_male, 
-SUM(total_fhe_3sem_3yr_female) AS grand_total_fhe_3sem_3yr_female,
-SUM(total_fhe_3sem_4yr_male) AS grand_total_fhe_3sem_4yr_male, 
-SUM(total_fhe_3sem_4yr_female) AS grand_total_fhe_3sem_4yr_female,
-SUM(total_fhe_3sem_5yr_male) AS grand_total_fhe_3sem_5yr_male, 
-SUM(total_fhe_3sem_5yr_female) AS grand_total_fhe_3sem_5yr_female,
-SUM(total_fhe_3sem_6yr_male) AS grand_total_fhe_3sem_6yr_male, 
-SUM(total_fhe_3sem_6yr_female) AS grand_total_fhe_3sem_6yr_female,
+    SUM(total_fhe_3sem_1yr_male) AS grand_total_fhe_3sem_1yr_male, 
+    SUM(total_fhe_3sem_1yr_female) AS grand_total_fhe_3sem_1yr_female, 
+    SUM(total_fhe_3sem_2yr_male) AS grand_total_fhe_3sem_2yr_male, 
+    SUM(total_fhe_3sem_2yr_female) AS grand_total_fhe_3sem_2yr_female,
+    SUM(total_fhe_3sem_3yr_male) AS grand_total_fhe_3sem_3yr_male, 
+    SUM(total_fhe_3sem_3yr_female) AS grand_total_fhe_3sem_3yr_female,
+    SUM(total_fhe_3sem_4yr_male) AS grand_total_fhe_3sem_4yr_male, 
+    SUM(total_fhe_3sem_4yr_female) AS grand_total_fhe_3sem_4yr_female,
+    SUM(total_fhe_3sem_5yr_male) AS grand_total_fhe_3sem_5yr_male, 
+    SUM(total_fhe_3sem_5yr_female) AS grand_total_fhe_3sem_5yr_female,
+    SUM(total_fhe_3sem_6yr_male) AS grand_total_fhe_3sem_6yr_male, 
+    SUM(total_fhe_3sem_6yr_female) AS grand_total_fhe_3sem_6yr_female,
 
-SUM(total_fhe_sum_mid_1yr_male) AS grand_total_fhe_sum_mid_1yr_male, 
-SUM(total_fhe_sum_mid_1yr_female) AS grand_total_fhe_sum_mid_1yr_female, 
-SUM(total_fhe_sum_mid_2yr_male) AS grand_total_fhe_sum_mid_2yr_male, 
-SUM(total_fhe_sum_mid_2yr_female) AS grand_total_fhe_sum_mid_2yr_female,
-SUM(total_fhe_sum_mid_3yr_male) AS grand_total_fhe_sum_mid_3yr_male, 
-SUM(total_fhe_sum_mid_3yr_female) AS grand_total_fhe_sum_mid_3yr_female,
-SUM(total_fhe_sum_mid_4yr_male) AS grand_total_fhe_sum_mid_4yr_male, 
-SUM(total_fhe_sum_mid_4yr_female) AS grand_total_fhe_sum_mid_4yr_female,
-SUM(total_fhe_sum_mid_5yr_male) AS grand_total_fhe_sum_mid_5yr_male, 
-SUM(total_fhe_sum_mid_5yr_female) AS grand_total_fhe_sum_mid_5yr_female,
-SUM(total_fhe_sum_mid_6yr_male) AS grand_total_fhe_sum_mid_6yr_male, 
-SUM(total_fhe_sum_mid_6yr_female) AS grand_total_fhe_sum_mid_6yr_female
+     SUM(total_fhe_sum_mid_1yr_male) AS grand_total_fhe_sum_mid_1yr_male, 
+     SUM(total_fhe_sum_mid_1yr_female) AS grand_total_fhe_sum_mid_1yr_female, 
+     SUM(total_fhe_sum_mid_2yr_male) AS grand_total_fhe_sum_mid_2yr_male, 
+     SUM(total_fhe_sum_mid_2yr_female) AS grand_total_fhe_sum_mid_2yr_female,
+     SUM(total_fhe_sum_mid_3yr_male) AS grand_total_fhe_sum_mid_3yr_male, 
+     SUM(total_fhe_sum_mid_3yr_female) AS grand_total_fhe_sum_mid_3yr_female,
+     SUM(total_fhe_sum_mid_4yr_male) AS grand_total_fhe_sum_mid_4yr_male, 
+     SUM(total_fhe_sum_mid_4yr_female) AS grand_total_fhe_sum_mid_4yr_female,
+     SUM(total_fhe_sum_mid_5yr_male) AS grand_total_fhe_sum_mid_5yr_male, 
+     SUM(total_fhe_sum_mid_5yr_female) AS grand_total_fhe_sum_mid_5yr_female,
+     SUM(total_fhe_sum_mid_6yr_male) AS grand_total_fhe_sum_mid_6yr_male, 
+     SUM(total_fhe_sum_mid_6yr_female) AS grand_total_fhe_sum_mid_6yr_female
 
 FROM tbl_degree_programs 
 WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
@@ -3153,7 +3151,7 @@ $pdf->SetTextColor(0, 0, 0);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 5, '1. Best Practices in the Implementation of RA No. 10931 Programs', 0, 0, 'L', true);
 $pdf->Ln();
-$pdf->SetFont('Arial', 'B', 10);
+$pdf->SetFont('Arial', '', 10);
 $pdf->SetTextColor(0, 0, 0);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(26, 25, '', 0, 0, 'L', true);
@@ -3169,7 +3167,7 @@ $pdf->SetTextColor(0, 0, 0);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 5, '2. Challenges/Concerns in the Implementation of RA No. 10931', 0, 0, 'L', true);
 $pdf->Ln();
-$pdf->SetFont('Arial', 'B', 10);
+$pdf->SetFont('Arial', '', 10);
 $pdf->SetTextColor(0, 0, 0);
 $pdf->Cell(26, 25, '', 0, 0, 'L', true);
 $pdf->Cell(310, 25, $question_27, 0, 0, 'L', true);
@@ -3184,7 +3182,7 @@ $pdf->SetTextColor(0, 0, 0);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 5, '3. Recommendations for the Improvement of Program Implementation', 0, 0, 'L', true);
 $pdf->Ln();
-$pdf->SetFont('Arial', 'B', 10);
+$pdf->SetFont('Arial', '', 10);
 $pdf->SetTextColor(0, 0, 0);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(26, 25, '', 0, 0, 'L', true);
