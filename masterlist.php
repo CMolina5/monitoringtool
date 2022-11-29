@@ -1255,7 +1255,63 @@ if ($resultCheck > 0) {
         $pdf->Cell(160.5, 5, $total_fhe_graduated_female, 1, 0, 'C', true);
         $pdf->Cell(160.5, 5, $total_fhe_exceeded_mrr_female, 1, 0, 'C', true);;
         $pdf->Ln();
+
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+        $pdf->SetFont('Arial', '', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(160.5, 5, $total_fhe_graduated_male + $total_fhe_graduated_female, 1, 0, 'C', true);
+        $pdf->Cell(160.5, 5, $total_fhe_exceeded_mrr_male + $total_fhe_exceeded_mrr_female, 1, 0, 'C', true);;
+        $pdf->Ln();
     }
+    $sql = "SELECT *, 
+    SUM(total_fhe_graduated_male) AS grand_total_fhe_graduated_male,
+    SUM(total_fhe_graduated_female) AS grand_total_fhe_graduated_female,
+    SUM(total_fhe_exceeded_mrr_male) AS grand_total_fhe_exceeded_mrr_male,
+    SUM(total_fhe_exceeded_mrr_female) AS grand_total_fhe_exceeded_mrr_female
+    FROM tbl_degree_programs 
+    WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_fhe_graduated_male != 0 AND total_fhe_graduated_female != 0 AND total_fhe_exceeded_mrr_male != 0 AND total_fhe_exceeded_mrr_female != 0)
+    ORDER BY program_name ASC";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $grand_total_fhe_graduated_male = $row['grand_total_fhe_graduated_male'];
+            $grand_total_fhe_graduated_female = $row['grand_total_fhe_graduated_female'];
+            $grand_total_fhe_exceeded_mrr_male = $row['grand_total_fhe_exceeded_mrr_male'];
+            $grand_total_fhe_exceeded_mrr_female = $row['grand_total_fhe_exceeded_mrr_female'];
+        }
+    }
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(214, 234, 248);
+        $pdf->Cell(336, 5, 'GRAND TOTAL', 1, 0, 'L', true);
+        $pdf->Ln();
+
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
+        $pdf->SetFont('Arial', '', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(160.5, 5, $grand_total_fhe_graduated_male, 1, 0, 'C', true);
+        $pdf->Cell(160.5, 5, $grand_total_fhe_exceeded_mrr_male, 1, 0, 'C', true);;
+        $pdf->Ln();
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->SetFont('Arial', 'B', 9);
+        $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
+        $pdf->SetFont('Arial', '', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(160.5, 5, $grand_total_fhe_graduated_female, 1, 0, 'C', true);
+        $pdf->Cell(160.5, 5, $grand_total_fhe_exceeded_mrr_female, 1, 0, 'C', true);;
+        $pdf->Ln();
+
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+        $pdf->SetFont('Arial', '', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(160.5, 5, $grand_total_fhe_graduated_male + $grand_total_fhe_graduated_female, 1, 0, 'C', true);
+        $pdf->Cell(160.5, 5, $grand_total_fhe_exceeded_mrr_male + $grand_total_fhe_exceeded_mrr_female, 1, 0, 'C', true);;
+        $pdf->Ln();
 }
 
 $pdf->addPage();
