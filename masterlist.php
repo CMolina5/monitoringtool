@@ -1917,7 +1917,6 @@ if ($resultCheck > 0) {
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->SetFillColor(255, 255, 255);
     $pdf->Cell(20, 5, 'MALE', 1, 0, 'L', true);
-    $pdf->SetFont('Arial', '', 10);
     $pdf->Cell(19.75, 5, $grand_total_tes_1st_male, 1, 0, 'C', true);
     $pdf->Cell(19.75, 5, $grand_total_pwd_1st_male, 1, 0, 'C', true);
     $pdf->Cell(19.75, 5, $grand_total_ip_1st_male, 1, 0, 'C', true);
@@ -1941,7 +1940,6 @@ if ($resultCheck > 0) {
 
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'L', true);
-    $pdf->SetFont('Arial', '', 10);
     $pdf->Cell(19.75, 5, $grand_total_tes_1st_female, 1, 0, 'C', true);
     $pdf->Cell(19.75, 5, $grand_total_pwd_1st_female, 1, 0, 'C', true);
     $pdf->Cell(19.75, 5, $grand_total_ip_1st_female, 1, 0, 'C', true);
@@ -2024,7 +2022,7 @@ if ($resultCheck > 0) {
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetFillColor(255, 255, 255);
         $pdf->Cell(156, 5, $program_name_tes, 1, 0, 'L', true);
-
+        $pdf->SetFont('Arial', '', 10);
         $pdf->Cell(45, 5, $total_tes_exceeded_mrr_male, 1, 0, 'C', true);
         $pdf->Cell(45, 5, $total_tes_exceeded_mrr_female, 1, 0, 'C', true);
         $pdf->Cell(45, 5, $total_tes_est_grad_male, 1, 0, 'C', true);
@@ -2032,6 +2030,32 @@ if ($resultCheck > 0) {
         //END
         $pdf->Ln();
     }
+    $sql = "SELECT *,
+    SUM(total_tes_exceeded_mrr_male) AS grand_total_tes_exceeded_mrr_male,
+    SUM(total_tes_exceeded_mrr_female) AS grand_total_tes_exceeded_mrr_female,
+    SUM(total_tes_est_grad_male) AS grand_total_tes_est_grad_male,
+    SUM(total_tes_est_grad_female) AS grand_total_tes_est_grad_female
+
+    FROM tbl_degree_programs 
+    WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tes_exceeded_mrr_male > 0 OR total_tes_exceeded_mrr_female > 0) ";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $grand_total_tes_exceeded_mrr_male = $row['grand_total_tes_exceeded_mrr_male'];
+            $grand_total_tes_exceeded_mrr_female = $row['grand_total_tes_exceeded_mrr_female'];
+            $grand_total_tes_est_grad_male = $row['grand_total_tes_est_grad_male'];
+            $grand_total_tes_est_grad_female = $row['grand_total_tes_est_grad_female'];
+        }
+    }
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(156, 5, 'TOTAL', 1, 0, 'L', true);
+    
+        $pdf->Cell(45, 5, $grand_total_tes_exceeded_mrr_male, 1, 0, 'C', true);
+        $pdf->Cell(45, 5, $grand_total_tes_exceeded_mrr_female, 1, 0, 'C', true);
+        $pdf->Cell(45, 5, $grand_total_tes_est_grad_male, 1, 0, 'C', true);
+        $pdf->Cell(45, 5, $grand_total_tes_est_grad_female, 1, 0, 'C', true);
 }
 
 $pdf->addPage();
