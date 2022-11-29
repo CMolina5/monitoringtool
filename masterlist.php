@@ -2748,7 +2748,7 @@ if ($resultCheck > 0) {
         //FIRST ROW
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(156, 5, $program_name_tdp, 1, 0, 'L', true);
+        $pdf->Cell(156, 5, 'GRAND TOTAL', 1, 0, 'L', true);
         $pdf->SetFont('Arial', '', 10);
         $pdf->Cell(45, 5, $total_tdp_graduated_male, 1, 0, 'C', true);
         $pdf->Cell(45, 5, $total_tdp_graduated_female, 1, 0, 'C', true);
