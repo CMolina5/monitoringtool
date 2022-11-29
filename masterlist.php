@@ -2645,6 +2645,7 @@ if ($resultCheck > 0) {
         $pdf->SetFont('Arial', 'B', 9);
         $pdf->SetFillColor(255, 255, 255);
         $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
+        $pdf->SetFont('Arial', 'B', 10);
         $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_1yr_female, 1, 0, 'C', true);
         $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_2yr_female, 1, 0, 'C', true);
         $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_3yr_female, 1, 0, 'C', true);
@@ -2709,6 +2710,79 @@ if ($resultCheck > 0) {
         $pdf->Ln();
         //END
     }
+}
+$pdf->addPage();
+//No. of TDP Grantees Graduated and Exceeded the maximum MRR
+//DEGREE PROGRAM
+$pdf->SetFont('Arial', 'B', 10);
+$pdf->SetFillColor(236, 240, 241);
+$pdf->Cell(156, 10, 'DEGREE PROGRAM', 1, 0, 'C', true);
+$pdf->Cell(90, 5, 'GRADUATED GRANTEES', 1, 0, 'C', true);
+$pdf->Cell(90, 5, 'NO. OF TDP GRANTEES WHO EXCEEDED THE MRR', 1, 0, 'C', true);
+$pdf->Ln();
+$pdf->SetFont('Arial', 'B', 10);
+$pdf->SetFillColor(236, 240, 241);
+$pdf->Cell(156, 0, '', 0, 0, 'C', true);
+$pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
+$pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
+$pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
+$pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
+//END
+$pdf->Ln();
+
+$sql = "SELECT * 
+FROM tbl_degree_programs 
+WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_exceeded_mrr_male > 0 OR total_tdp_exceeded_mrr_female > 0) ";
+$result = mysqli_query($conn, $sql);
+$resultCheck = mysqli_num_rows($result);
+if ($resultCheck > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $uid = $row['uid'];
+        $ac_year = $row['ac_year'];
+        $program_name_tdp = $row['program_name'];
+        $total_tdp_exceeded_mrr_male = $row['total_tdp_exceeded_mrr_male'];
+        $total_tdp_exceeded_mrr_female = $row['total_tdp_exceeded_mrr_female'];
+        $total_tdp_graduated_male = $row['total_tdp_graduated_male'];
+        $total_tdp_graduated_female = $row['total_tdp_graduated_female'];
+
+        //FIRST ROW
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(156, 5, $program_name_tdp, 1, 0, 'L', true);
+        $pdf->SetFont('Arial', '', 10);
+        $pdf->Cell(45, 5, $total_tdp_graduated_male, 1, 0, 'C', true);
+        $pdf->Cell(45, 5, $total_tdp_graduated_female, 1, 0, 'C', true);
+        $pdf->Cell(45, 5, $total_tdp_exceeded_mrr_male, 1, 0, 'C', true);
+        $pdf->Cell(45, 5, $total_tdp_exceeded_mrr_female, 1, 0, 'C', true);
+        //END
+        $pdf->Ln();
+    }
+    $sql = "SELECT *,
+    SUM(total_tdp_exceeded_mrr_male) AS grand_total_tdp_exceeded_mrr_male,
+    SUM(total_tdp_exceeded_mrr_female) AS grand_total_tdp_exceeded_mrr_female,
+    SUM(total_tdp_graduated_male) AS grand_total_tdp_graduated_male,
+    SUM(total_tdp_graduated_female) AS grand_total_tdp_graduated_female
+
+    FROM tbl_degree_programs 
+    WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_exceeded_mrr_male > 0 OR total_tdp_exceeded_mrr_female > 0) ";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $grand_total_tdp_exceeded_mrr_male = $row['grand_total_tdp_exceeded_mrr_male'];
+            $grand_total_tdp_exceeded_mrr_female = $row['grand_total_tdp_exceeded_mrr_female'];
+            $grand_total_tdp_graduated_male = $row['grand_total_tdp_graduated_male'];
+            $grand_total_tdp_graduated_female = $row['grand_total_tdp_graduated_female'];
+        }
+    }
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(156, 5, 'TOTAL', 1, 0, 'L', true);
+    
+        $pdf->Cell(45, 5, $grand_total_tdp_graduated_male, 1, 0, 'C', true);
+        $pdf->Cell(45, 5, $grand_total_tdp_graduated_female, 1, 0, 'C', true);
+        $pdf->Cell(45, 5, $grand_total_tdp_exceeded_mrr_male, 1, 0, 'C', true);
+        $pdf->Cell(45, 5, $grand_total_tdp_exceeded_mrr_female, 1, 0, 'C', true);
 }
 
 $pdf->addPage();
