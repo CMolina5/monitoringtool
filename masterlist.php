@@ -2108,7 +2108,9 @@ if ($resultCheck > 0) {
 
         $pdf->SetFillColor(255, 255, 255);
         //FIRST ROW
+        $pdf->SetFont('Arial', 'B', 10);
         $pdf->Cell(176, 5, $reason, 1, 0, 'L', true);
+        $pdf->SetFont('Arial', '', 10);
         $pdf->Cell(20, 5, $total_dropout_1st_male, 1, 0, 'C', true);
         $pdf->Cell(20, 5, $total_dropout_1st_female, 1, 0, 'C', true);
         $pdf->Cell(20, 5, $total_dropout_2nd_male, 1, 0, 'C', true);
@@ -2141,6 +2143,7 @@ if ($resultCheck > 0) {
     }
 }
 $pdf->SetFillColor(255, 255, 255);
+$pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
 $pdf->Cell(20, 5, $total_1st_male, 1, 0, 'C', true);
 $pdf->Cell(20, 5, $total_1st_female, 1, 0, 'C', true);
@@ -2199,7 +2202,9 @@ if ($resultCheck > 0) {
 
         $pdf->SetFillColor(255, 255, 255);
         //FIRST ROW
+        $pdf->SetFont('Arial', 'B', 10);
         $pdf->Cell(176, 5, $reason, 1, 0, 'L', true);
+        $pdf->SetFont('Arial', '', 10);
         $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
         $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
         $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
@@ -2231,6 +2236,7 @@ if ($resultCheck > 0) {
     }
 }
 $pdf->SetFillColor(255, 255, 255);
+$pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
 $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
 $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
@@ -2382,7 +2388,7 @@ if ($resultCheck > 0) {
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetFillColor(255, 255, 255);
         $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
-
+        $pdf->SetFont('Arial', '', 10);
         $pdf->Cell(13.375, 5, $total_tdp_1sem_1yr_male, 1, 0, 'C', true);
         $pdf->Cell(13.375, 5, $total_tdp_1sem_2yr_male, 1, 0, 'C', true);
         $pdf->Cell(13.375, 5, $total_tdp_1sem_3yr_male, 1, 0, 'C', true);
@@ -2416,7 +2422,7 @@ if ($resultCheck > 0) {
         $pdf->SetFont('Arial', 'B', 9);
         $pdf->SetFillColor(255, 255, 255);
         $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFont('Arial', '', 10);
         $pdf->Cell(13.375, 5, $total_tdp_1sem_1yr_female, 1, 0, 'C', true);
         $pdf->Cell(13.375, 5, $total_tdp_1sem_2yr_female, 1, 0, 'C', true);
         $pdf->Cell(13.375, 5, $total_tdp_1sem_3yr_female, 1, 0, 'C', true);
@@ -2444,6 +2450,40 @@ if ($resultCheck > 0) {
         $pdf->Cell(13.375, 5, $total_tdp_sum_mid_4yr_female, 1, 0, 'C', true);
         $pdf->Cell(13.375, 5, $total_tdp_sum_mid_5yr_female, 1, 0, 'C', true);
         $pdf->Cell(13.375, 5, $total_tdp_sum_mid_6yr_female, 1, 0, 'C', true);
+
+        $pdf->Ln();
+
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+        $pdf->SetFont('Arial', '', 10);
+        $pdf->Cell(13.375, 5, $total_tdp_1sem_1yr_female + $total_tdp_1sem_1yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_1sem_2yr_female + $total_tdp_1sem_2yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_1sem_3yr_female + $total_tdp_1sem_3yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_1sem_4yr_female + $total_tdp_1sem_4yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_1sem_5yr_female + $total_tdp_1sem_5yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_1sem_6yr_female + $total_tdp_1sem_6yr_female, 1, 0, 'C', true);
+
+        $pdf->Cell(13.375, 5, $total_tdp_2sem_1yr_female + $total_tdp_2sem_1yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_2sem_2yr_female + $total_tdp_2sem_2yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_2sem_3yr_female + $total_tdp_2sem_3yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_2sem_4yr_female + $total_tdp_2sem_4yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_2sem_5yr_female + $total_tdp_2sem_5yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_2sem_6yr_female + $total_tdp_2sem_6yr_female, 1, 0, 'C', true);
+
+        $pdf->Cell(13.375, 5, $total_tdp_3sem_1yr_female + $total_tdp_3sem_1yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_3sem_2yr_female + $total_tdp_3sem_2yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_3sem_3yr_female + $total_tdp_3sem_3yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_3sem_4yr_female + $total_tdp_3sem_4yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_3sem_5yr_female + $total_tdp_3sem_5yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_3sem_6yr_female + $total_tdp_3sem_6yr_female, 1, 0, 'C', true);
+
+        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_1yr_female + $total_tdp_sum_mid_1yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_2yr_female + $total_tdp_sum_mid_2yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_3yr_female + $total_tdp_sum_mid_3yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_4yr_female + $total_tdp_sum_mid_4yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_5yr_female + $total_tdp_sum_mid_5yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_6yr_female + $total_tdp_sum_mid_6yr_female, 1, 0, 'C', true);
 
         $pdf->Ln();
         //END
