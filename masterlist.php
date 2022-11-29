@@ -531,7 +531,9 @@ $pdf->Cell(80.25, 5, $total_foreign_3rd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_foreign_summer_midyear_female, 1, 0, 'C', true);
 $pdf->Ln();
 
+$pdf->SetFillColor(236, 240, 241);
 $pdf->SetFont('Arial', 'B', 10);
+$pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
 $pdf->Cell(80.25, 5, $total_foreign_1st_male + $total_foreign_1st_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_foreign_2nd_male + $total_foreign_2nd_female, 1, 0, 'C', true);
@@ -578,7 +580,9 @@ $pdf->Cell(80.25, 5, $total_second_courser_3rd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_second_courser_summer_midyear_female, 1, 0, 'C', true);
 $pdf->Ln();
 
+$pdf->SetFillColor(236, 240, 241);
 $pdf->SetFont('Arial', 'B', 10);
+$pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
 $pdf->Cell(80.25, 5, $total_second_courser_1st_male + $total_second_courser_1st_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_second_courser_2nd_male + $total_second_courser_2nd_female, 1, 0, 'C', true);
@@ -1357,6 +1361,17 @@ $pdf->Cell(80.25, 5, $total_fhe_opt_out_1st_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_fhe_opt_out_2nd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_female, 1, 0, 'C', true);
+
+$pdf->SetFillColor(236, 240, 241);
+$pdf->SetFont('Arial', 'B', 9);
+$pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+$pdf->SetFont('Arial', 'B', 10);
+$pdf->SetFillColor(255, 255, 255);
+$pdf->Cell(80.25, 5, $total_fhe_opt_out_1st_male + $total_fhe_opt_out_1st_female, 1, 0, 'C', true);
+$pdf->Cell(80.25, 5, $total_fhe_opt_out_2nd_male + $total_fhe_opt_out_2nd_female, 1, 0, 'C', true);
+$pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_male + $total_fhe_opt_out_3rd_female, 1, 0, 'C', true);
+$pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_male + $total_fhe_opt_out_summer_midyear_female, 1, 0, 'C', true);
+$pdf->Ln();
 $pdf->Ln();
 $pdf->Ln();
 
