@@ -1361,6 +1361,7 @@ $pdf->Cell(80.25, 5, $total_fhe_opt_out_1st_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_fhe_opt_out_2nd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_female, 1, 0, 'C', true);
+$pdf->Ln();
 
 $pdf->SetFillColor(236, 240, 241);
 $pdf->SetFont('Arial', 'B', 9);
@@ -1371,7 +1372,6 @@ $pdf->Cell(80.25, 5, $total_fhe_opt_out_1st_male + $total_fhe_opt_out_1st_female
 $pdf->Cell(80.25, 5, $total_fhe_opt_out_2nd_male + $total_fhe_opt_out_2nd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_male + $total_fhe_opt_out_3rd_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_male + $total_fhe_opt_out_summer_midyear_female, 1, 0, 'C', true);
-$pdf->Ln();
 $pdf->Ln();
 $pdf->Ln();
 
