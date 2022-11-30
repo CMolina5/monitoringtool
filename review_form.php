@@ -162,10 +162,8 @@ $pdf->SetFont('Arial', '', 9);
 $pdf->Cell(127, 5, $hei_email, 0, 0, 'L', true);
 $pdf->Ln();
 
-if ($_SESSION['hei_it'] == 'Private HEI') {
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(95, 5, 'Private HEI located in city/municipality w/ no SUC/LUC?', 0, 0, 'L', true);
-}
 $pdf->SetFont('Arial', '', 9);
 $pdf->Cell(73, 5, 'N/A', 0, 0, 'L', true);
 $pdf->SetFont('Arial', 'B', 10);
@@ -252,7 +250,7 @@ $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
 $pdf->Ln();
 //END
-if($fhe=='yes'){
+
 //FHE
 $pdf->SetFillColor(236, 240, 241);
 $pdf->SetFont('Arial', 'B', 10);
@@ -285,13 +283,13 @@ $pdf->SetFont('Arial', '', 9);
 $pdf->Cell(126, 5, $fhe_focal_alt_contact_no, 0, 0, 'L', true);
 $pdf->Ln();
 //END
-}
+
 //SPACING
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
 $pdf->Ln();
 //END
-if($tes=='yes'){
+
 //TES
 $pdf->SetFillColor(236, 240, 241);
 $pdf->SetFont('Arial', 'B', 10);
@@ -324,13 +322,13 @@ $pdf->SetFont('Arial', '', 9);
 $pdf->Cell(126, 5, $tes_focal_alt_contact_no, 0, 0, 'L', true);
 $pdf->Ln();
 //END
-}
+
 //SPACING
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
 $pdf->Ln();
 //END
-if($tdp=='yes'){
+
 //TDP
 $pdf->SetFillColor(236, 240, 241);
 $pdf->SetFont('Arial', 'B', 10);
@@ -362,7 +360,6 @@ $pdf->Cell(42, 5, 'Alternative Contact No.:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
 $pdf->Cell(126, 5, $tdp_focal_alt_contact_no, 0, 0, 'L', true);
 $pdf->Ln();
-}
 //END
 $pdf->AddPage();
 
@@ -746,7 +743,7 @@ $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
 $pdf->Ln();
 //END
-if($fhe=='yes'){
+
 //II.A FREE HIGHER EDUCATION
 $pdf->SetFont('Arial', 'B', 11);
 $pdf->SetFillColor(192, 192, 192);
@@ -1618,9 +1615,8 @@ $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
 $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
 $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
 $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
-}
+
 //END
-if($tes=='yes'){
 $pdf->addPage();
 
 
@@ -2248,9 +2244,9 @@ $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
 $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
 $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
 $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
-}
+
 //END
-if($tdp=='yes'){
+
 $pdf->addPage();
 
 //I.C TULONG DUNONG PROGRAM
@@ -2969,7 +2965,7 @@ $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
 $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
 $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
 $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
-}
+
 //END
 $pdf->AddPage();
 
@@ -3040,7 +3036,7 @@ $pdf->Cell(321, 5, $cnt++ . '. Submitted to the UniFAST the list of qualified st
 $pdf->Cell(15, 5, $question_8, 1, 1, 'C', true);
 $pdf->Cell(321, 5, $cnt++ . '. Implemented a voluntary opt-out and/or voluntary contribution mechanism for FHE', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_9, 1, 1, 'C', true);
-if($_SESSION['hei_it']=='SUC' OR $_SESSION['hei_it']=='LUC'){
+
 $oldx = $pdf->GetX();
 $oldy = $pdf->GetY();
 $pdf->Cell(321, 5, $cnt++ . '. Submitted to the UniFAST on time the list of students who voluntarily opted out from FHE', 1, 0, 'L');
@@ -3060,7 +3056,7 @@ $pdf->SetXY($oldx + 159, $oldy);
 $pdf->Write(5, "(if applicable)");
 $pdf->SetTextColor(0, 0, 0);
 $pdf->Ln();
-}
+
 $pdf->Cell(321, 5, $cnt++ . '. Signed the TES Sharing Agreement between the HEI and TES grantees', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_12, 1, 1, 'C', true);
 $pdf->Cell(321, 5, $cnt++ . '. Disseminated continuously information to qualified TES grantees', 1, 0, 'L', true);
@@ -3080,7 +3076,7 @@ $pdf->Cell(15, 5, $question_19, 1, 1, 'C', true);
 $pdf->Ln();
 
 $pdf->addPage();
-if($tes=='yes'){
+
 $cnt2 = 1;
 
 $pdf->SetFont('Arial', 'B', 11);
@@ -3107,7 +3103,6 @@ $pdf->Cell(15, 5, $question_20, 1, 1, 'C', true);
 $pdf->Cell(321, 5, $cnt2++ . '. Released the amount intended for the TES grantees', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_21, 1, 1, 'C', true);
 
-if ($_SESSION['hei_it'] == 'Private HEI') {
 $pdf->SetFont('Arial', '', 10);
 $oldx = $pdf->GetX();
 $oldy = $pdf->GetY();
@@ -3128,16 +3123,14 @@ $pdf->SetXY($oldx + 212, $oldy);
 $pdf->Write(5, "(if applicable)");
 $pdf->SetTextColor(0, 0, 0);
 $pdf->Ln();
-}
+
 $pdf->SetFont('Arial', '', 10);
 $pdf->Cell(321, 5, $cnt2++ . '. Released the full amount of the TES to the grantees who have fully paid the TOSF for the term', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_24, 1, 1, 'C', true);
 $pdf->Cell(321, 5, $cnt2++ . '. Released to the grantees their share within two (2) weeks upon the receipt of fund transfer for TES', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_25, 1, 1, 'C', true);
 $pdf->Ln();
-}
 //End
-if($_SESSION['ac_year']=='2022-2023'){
 $pdf->AddPage();
 //PART IV. UNIFAST EXPERIENCE
 $pdf->SetFont('Arial', 'B', 12);
@@ -3194,7 +3187,7 @@ $pdf->SetTextColor(0, 0, 0);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(26, 25, '', 0, 0, 'L', true);
 $pdf->Cell(310, 25, $question_28, 0, 0, 'L', true);
-}
+
 $pdf->AddPage();
 
 //end of data rows
@@ -3254,36 +3247,36 @@ $pdf->Ln();
 $pdf->Cell(336, 5, 'Prepared by:', 0, 1, 'L', true);
 $pdf->Ln();
 $pdf->Ln();
-// if($fhe=='yes'){
+if($fhe=='yes'){
 $pdf->Cell(63.33, 5, strtoUpper($fhe_focal_name), 0, 0, 'L', true);
-// }
-// if($tes=='yes'){
+}
+if($tes=='yes'){
 $pdf->Cell(63.33, 5, strtoUpper($tes_focal_name), 0, 0, 'L', true);
-// }
-// if($tdp=='yes'){
+}
+if($tdp=='yes'){
 $pdf->Cell(63.33, 5, strtoUpper($tdp_focal_name), 0, 0, 'L', true);
-// }
+}
 $pdf->Ln();
 $pdf->SetFont('Arial', '', 9);
-// if($fhe=='yes'){
+if($fhe=='yes'){
 $pdf->Cell(63.33, 5, 'Personnel In-charge of FHE', 0, 0, 'L', true);
-// }
-// if($tes=='yes'){
+}
+if($tes=='yes'){
 $pdf->Cell(63.33, 5, 'TES Focal Person', 0, 0, 'L', true);
-// }
-// if($tdp=='yes'){
+}
+if($tdp=='yes'){
 $pdf->Cell(63.33, 5, 'Personnel In-charge of TDP', 0, 0, 'L', true);
-// }
+}
 $pdf->Ln();
-// if($fhe=='yes'){
+if($fhe=='yes'){
 $pdf->Cell(63.33, 5, 'Date:', 0, 0, 'L', true);
-// }
-// if($tes=='yes'){
+}
+if($tes=='yes'){
 $pdf->Cell(63.33, 5, 'Date:', 0, 0, 'L', true);
-// }
-// if($tdp=='yes'){
+}
+if($tdp=='yes'){
 $pdf->Cell(63.33, 5, 'Date:', 0, 0, 'L', true);
-// }
+}
 $pdf->Ln();
 $pdf->Ln();
 $pdf->SetFont('Arial', 'B', 10);
