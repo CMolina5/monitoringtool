@@ -431,3 +431,8 @@ hr.star-dark {
   width: 100px;
   height: 25px;
 }
+
+#review-form{
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
