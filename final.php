@@ -64,7 +64,7 @@
         <form id="hei-final">
             <div class="card card-style-out">
                 <?php
-                echo "<iframe src='assets/pdf/". $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . ".pdf' height='750px' width='100%' title='Iframe Example'></iframe>"
+                echo "<iframe src='assets/pdf/". $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . ".pdf' height='600px' width='100%' title='Iframe Example'></iframe>"
                 ?>
             </div>
         </form>
