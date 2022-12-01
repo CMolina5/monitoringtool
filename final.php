@@ -63,7 +63,7 @@
     <div class="contact-clean">
         <form id="hei-final">
         <?php
-            echo "<iframe src='assets/pdf/". $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . ".pdf' height='1000px' width='100%' title='Iframe Example'></iframe>"
+            echo "<iframe src='assets/pdf/". $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . ".pdf' height='800px' width='100%' title='Iframe Example'></iframe>"
         ?>
         </form>
     </div>
