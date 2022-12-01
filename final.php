@@ -53,7 +53,6 @@
                     }
                     
                     ?>
-
                 </ul>
             </div>
         </div>
@@ -62,13 +61,13 @@
     <!--Academic Year, School Calendar and Programs-->
     <div class="contact-clean">
         <form id="hei-final">
-            <div class="card card-style-out">
+
                 <?php
                 echo "<iframe src='assets/pdf/". $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . ".pdf' height='600px' width='100%'></iframe>"
                 ?>
-            </div>
+            
         </form>
-    <div>
+    </div>
 
 <?php
 include 'includes/footer.php';
