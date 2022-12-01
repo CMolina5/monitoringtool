@@ -432,10 +432,10 @@ hr.star-dark {
   height: 25px;
 }
 
-/* #review-form{
+#review-form{
   overflow-y: hidden; 
   overflow-x: hidden;
-} */
+}
 
 iframe {
   display: block;       /* iframes are inline by default */
