@@ -439,7 +439,7 @@ hr.star-dark {
 
 iframe {
   display: block;       /* iframes are inline by default */
-  background: #000;
+  background: rgb(247, 247, 247);
   border: none;         /* Reset default border */
   height: 100vh;        /* Viewport-relative units */
   width: 100%;
