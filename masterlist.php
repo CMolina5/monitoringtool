@@ -69,8 +69,6 @@ $pdf->SetAligns(array('L', 'L'));
 $pdf->SetFillColor(255, 0, 0);
 $pdf->SetTextColor(255, 255, 255);
 $pdf->Cell(336, 8, 'WARNING: FOR REVIEWING PURPOSES ONLY! DO NOT PRINT THIS PAGE!', 0, 0, 'C', true);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
 $pdf->Ln();
 
 $pdf->SetFont('Arial', 'B', 15);
