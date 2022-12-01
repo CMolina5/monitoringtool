@@ -20,7 +20,7 @@ class PDF extends PDF_MC_Table
         //logo
         $this->Image('assets/img/UniFAST_HEADER.jpg', 95, 2, -200);
         $this->SetFont('Arial', 'B', 8);
-        $this->Cell(336, 15, '', 0, 1);
+        $this->Cell(336, 10, '', 0, 1);
         $this->Ln();
     }
     function Footer()
