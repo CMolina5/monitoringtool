@@ -419,9 +419,9 @@ hr.star-dark {
   margin-bottom: 10px;
 }
 
-/* #hei-final {
-  padding-top: 25px;
-} */
+#hei-final {
+  padding-top: -25px;
+}
 
 .degree-program-font{
   font-size: 12px;
