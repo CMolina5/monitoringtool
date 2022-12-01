@@ -59,7 +59,7 @@
     </nav>
 
     <!--Academic Year, School Calendar and Programs-->
-    <div >
+    <div>
         <form id="hei-final">
 
                 <?php
@@ -67,7 +67,7 @@
                 ?>
             
         </form>
-    <div>
+    </div>
 
 <?php
 include 'includes/footer.php';
