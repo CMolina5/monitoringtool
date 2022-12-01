@@ -139,7 +139,7 @@
                                         echo "checked";
                                     } 
                                 ?>
-                                value="Trimester" disabled><label class="custom-control-label" for="trimester" va>Trimester</label></div>
+                                value="Trimester" disabled><label class="custom-control-label" for="trimester">Trimester</label></div>
                             </div>
                             <div class="col-12 col-md-3">
                                 <div class="custom-control custom-radio"><input class="custom-control-input" type="radio" id="trimesterwithsummer" name="ac_calendar" 
