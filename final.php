@@ -40,24 +40,7 @@
 </head>
 
 <body id="review-form">
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav">
-        <div class="container"><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="nav navbar-nav mx-auto">
-                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#hei-profile-final">HEI PROFILE</a></li>
-                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#stufap-all-final">unified stufap profile</a></li>
-                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#hei-compliance-final">compliance to guidelines and moa</a></li>
-                    <?php
-                    if($_SESSION['ac_year']=='2022-2023'){
-                        echo'<li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#hei-experience-final">unifast experience</a></li>';
-                    }
-                    
-                    ?>
 
-                </ul>
-            </div>
-        </div>
-    </nav>
 
     <!--Academic Year, School Calendar and Programs-->
     <div >
