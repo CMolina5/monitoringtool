@@ -48,6 +48,7 @@
                 <ul class="nav navbar-nav ml-auto">
                     <li role="presentation" class="nav-item mx-0 mx-lg-1"><button class="btn btn-primary" data-toggle="tooltip" type="button" title="Home"><i class="fas fa-home"></i></button></li>
                     <li role="presentation" class="nav-item mx-0 mx-lg-1"><button class="btn btn-primary" data-toggle="tooltip" type="button" title="Edit"><i class="far fa-edit"></i></button></li>
+                    <li role="presentation" class="nav-item mx-0 mx-lg-1"><button class="btn btn-primary" data-toggle="tooltip" type="button" title="Edit"><i class="far fa-save"></i></button></li>
                     <li role="presentation" class="nav-item mx-0 mx-lg-1"><button class="btn btn-primary" data-toggle="tooltip" type="button" title="Finalize"><i class="far fa-check-circle"></i></button></li>
                 </ul>
             </div>
