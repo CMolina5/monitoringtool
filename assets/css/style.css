@@ -444,3 +444,7 @@ iframe {
   height: 100vh;        /* Viewport-relative units */
   width: 100%;
 }
+
+.btn-final{
+  width: 50px;
+}
