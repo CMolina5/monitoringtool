@@ -60,7 +60,7 @@
     </nav>
 
     <!--Academic Year, School Calendar and Programs-->
-    <div class="contact-clean">
+    <div >
         <form id="hei-final">
 
                 <?php
