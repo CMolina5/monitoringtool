@@ -442,5 +442,5 @@ iframe {
   background: #000;
   border: none;         /* Reset default border */
   height: 100vh;        /* Viewport-relative units */
-  width: 100vw;
+  width: 100%;
 }
