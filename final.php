@@ -61,9 +61,9 @@
 
     <!--Academic Year, School Calendar and Programs-->
     <div class="contact-clean">
-        
-        <iframe src='' height="100vh" width="100%" title="Iframe Example"></iframe>
-        
+        <?php
+            echo "<iframe src='assets/pdf/". $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . ".pdf' height='100vh' width='100%' title='Iframe Example'></iframe>"
+        ?>
 
     </div>
 
