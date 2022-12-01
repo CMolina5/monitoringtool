@@ -3372,6 +3372,6 @@ $pdf->Cell(95, 5, 'Date:', 0, 0, 'L', true);
 $pdf->Output('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
 
 header('Content-type: application/pdf');
-header('Content-disposition: attachment; filename =' . $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
-readFIle($_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
+header('Content-disposition: attachment; filename ='."assets/pdf" . $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
+// readFIle($_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
 // unlink($_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
