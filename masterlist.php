@@ -3379,7 +3379,12 @@ $pdf->Ln();
 $pdf->Cell(95, 5, 'Date:', 0, 0, 'L', true);
 
 //end of data rows
-$pdf->Output('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
+if (file_exists('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf')){
+    unlink('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
+    $pdf->Output('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
+}else{
+    $pdf->Output('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
+}
 // $pdf->Output( $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'D');
 
 header("Location: final.php");
