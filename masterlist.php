@@ -3380,7 +3380,7 @@ $pdf->Cell(95, 5, 'Date:', 0, 0, 'L', true);
 
 //end of data rows
 if (file_exists('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf')){
-    unlink('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
+    unlink('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
     $pdf->Output('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
 }else{
     $pdf->Output('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
