@@ -62,7 +62,7 @@ if ($resultCheck > 0) {
             header("Location:../../experience.php");
             exit();
         }else{
-        header("Location:../../final.php");
+        header("Location:../../masterlist.php");
         exit();
         }
     }
