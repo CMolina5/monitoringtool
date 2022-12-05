@@ -3383,8 +3383,10 @@ $pdf->Cell(95, 5, 'Date:', 0, 0, 'L', true);
     if (file_exists('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf')){
         unlink('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
         $pdf->Output('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
+        header("Location: final.php");
     }else{
         $pdf->Output('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
+        header("Location: final.php");
     }
 // }
 
@@ -3433,8 +3435,6 @@ $pdf->Cell(95, 5, 'Date:', 0, 0, 'L', true);
 //     $pdf->Output('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
 // }
 // $pdf->Output( $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'D');
-
-header("Location: final.php");
 
 // header('Content-type: application/pdf');
 // header('Content-disposition: attachment; filename =' . $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
