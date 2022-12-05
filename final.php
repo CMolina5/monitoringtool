@@ -62,26 +62,7 @@ BODY {display:none;visibility:hidden;}
         <form id="hei-final">
 
                 <?php
-                
-                // if($_SESSION['ac_year'] == '2018-2019'){
                     echo "<iframe src='assets/pdf/".$_SESSION['ac_year']."/". $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . ".pdf' height='600px' width='100%'></iframe>";
-                // }
-                
-                // if($_SESSION['ac_year'] == '2019-2020'){
-                //     echo "<iframe src='assets/pdf/".$_SESSION['ac_year']."/". $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . ".pdf' height='600px' width='100%'></iframe>";
-                // }
-                
-                // if($_SESSION['ac_year'] == '2020-2021'){
-                //     echo "<iframe src='assets/pdf/".$_SESSION['ac_year']."/". $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . ".pdf' height='600px' width='100%'></iframe>";
-                // }
-                
-                // if($_SESSION['ac_year'] == '2021-2022'){
-                //     echo "<iframe src='assets/pdf/".$_SESSION['ac_year']."/". $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . ".pdf' height='600px' width='100%'></iframe>";
-                // }
-                
-                // if($_SESSION['ac_year'] == '2022-2023'){
-                //     echo "<iframe src='assets/pdf/".$_SESSION['ac_year']."/". $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . ".pdf' height='600px' width='100%'></iframe>";
-                // }
                 ?>
             
         </form>

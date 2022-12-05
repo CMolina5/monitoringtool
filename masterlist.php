@@ -3379,7 +3379,6 @@ $pdf->Ln();
 $pdf->Cell(95, 5, 'Date:', 0, 0, 'L', true);
 
 //end of data rows
-// if($_SESSION['ac_year'] == '2018-2019'){
     if (file_exists('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf')){
         unlink('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
         $pdf->Output('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
@@ -3388,53 +3387,6 @@ $pdf->Cell(95, 5, 'Date:', 0, 0, 'L', true);
         $pdf->Output('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
         header("Location: final.php");
     }
-// }
-
-// if($_SESSION['ac_year'] == '2019-2020'){
-//     if (file_exists('assets/pdf/2019-2020/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf')){
-//         unlink('assets/pdf/2019-2020/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
-//         $pdf->Output('assets/pdf/2019-2020/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
-//     }else{
-//         $pdf->Output('assets/pdf/2019-2020/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
-//     }
-// }
-
-// if($_SESSION['ac_year'] == '2020-2021'){
-//     if (file_exists('assets/pdf/2020-2021/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf')){
-//         unlink('assets/pdf/2020-2021/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
-//         $pdf->Output('assets/pdf/2020-2021/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
-//     }else{
-//         $pdf->Output('assets/pdf/2020-2021/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
-//     }
-// }
-
-// if($_SESSION['ac_year'] == '2021-2022'){
-//     if (file_exists('assets/pdf/2021-2022/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf')){
-//         unlink('assets/pdf/2021-2022/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
-//         $pdf->Output('assets/pdf/2021-2022/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
-//     }else{
-//         $pdf->Output('assets/pdf/2021-2022/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
-//     }
-// }
-
-// if($_SESSION['ac_year'] == '2022-2023'){
-//     if (file_exists('assets/pdf/2022-2023/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf')){
-//         unlink('assets/pdf/2022-2023/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
-//         $pdf->Output('assets/pdf/2022-2023/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
-//     }else{
-//         $pdf->Output('assets/pdf/2022-2023/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
-//     }
-// }
-
-
-
-// if (file_exists('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf')){
-//     unlink('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
-//     $pdf->Output('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
-// }else{
-//     $pdf->Output('assets/pdf/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
-// }
-// $pdf->Output( $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'D');
 
 // header('Content-type: application/pdf');
 // header('Content-disposition: attachment; filename =' . $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
