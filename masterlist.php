@@ -191,7 +191,7 @@ $pdf->Cell(144, 5, $_SESSION['hei_ct'], 0, 0, 'L', true);
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(23, 5, 'Contact No.:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
-$pdf->Cell(145, 5, $hei_head_contact_no, 0, 0, 'L', true);
+$pdf->Cell(145, 5, $hei_contact_no, 0, 0, 'L', true);
 $pdf->Ln();
 
 $pdf->SetFont('Arial', 'B', 10);
@@ -226,7 +226,7 @@ $pdf->Cell(144, 5, $_SESSION['hei_ct'], 0, 0, 'L', true);
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(23, 5, 'Contact No.:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
-$pdf->Cell(145, 5, $hei_head_contact_no, 0, 0, 'L', true);
+$pdf->Cell(145, 5, $hei_contact_no, 0, 0, 'L', true);
 $pdf->Ln();
 
 $pdf->SetFont('Arial', 'B', 10);
