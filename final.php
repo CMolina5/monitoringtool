@@ -51,7 +51,7 @@ BODY {display:none;visibility:hidden;}
                     <li role="presentation" class="nav-item mx-0 mx-lg-1"><a href="home.php" class="btn btn-primary btn-final" role="button" data-toggle="tooltip" type="button" title="Home"><i class="fas fa-home"></i></a></li>
                     <li role="presentation" class="nav-item mx-0 mx-lg-1"><a href="heiprofile.php" class="btn btn-primary btn-final" data-toggle="tooltip" type="button" title="Edit"><i class="far fa-edit"></i></a></li>
                     <li role="presentation" class="nav-item mx-0 mx-lg-1"><a href="includes/final/save.php" class="btn btn-primary btn-final" data-toggle="tooltip" type="button" title="Save"><i class="far fa-save"></i></a></li>
-                    <li role="presentation" class="nav-item mx-0 mx-lg-1"><button class="btn btn-primary btn-final finalize_form" data-toggle="tooltip" type="button" title="Finalize"><i class="far fa-check-circle"></i></button></li>
+                    <li role="presentation" class="nav-item mx-0 mx-lg-1"><button class="btn btn-primary btn-final finalize_form" data-toggle="modal" data-target="#notice_modal" type="button" title="Finalize"><i class="far fa-check-circle"></i></button></li>
                 </ul>
             </div>
         </div>
@@ -69,5 +69,6 @@ BODY {display:none;visibility:hidden;}
     </div>
 
 <?php
+include 'includes/final/inc_modals.php';
 include 'includes/footer.php';
 ?>
