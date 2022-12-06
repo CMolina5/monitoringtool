@@ -23,17 +23,17 @@ $(document).ready(function () {
         event.preventDefault(event);
         Swal.fire({
             title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            text: "You won't be able to edit this form once you submit it.",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            confirmButtonText: 'Yes, submit it!'
           }).then((result) => {
             if (result.isConfirmed) {
               Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
+                'Submitted!',
+                'Your submission is now being reviewed by the Regional Coordinator in-charge to your school.',
                 'success'
               )
             }
