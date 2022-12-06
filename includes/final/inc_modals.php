@@ -1,4 +1,4 @@
-<div role="dialog" tabindex="-1" class="modal fade show" id="notice_modal" style="display: block;">
+<div role="dialog" tabindex="-1" class="modal fade show" id="notice_modal">
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
