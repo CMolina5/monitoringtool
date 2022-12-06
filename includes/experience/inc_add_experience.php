@@ -19,7 +19,7 @@ if ($resultCheck > 0) {
         echo mysqli_error($conn);
         die();
     } else {
-        header("Location:../../final.php");
+        header("Location:../../masterlist.php");
         exit();
     }
 } else {
@@ -31,7 +31,7 @@ if ($resultCheck > 0) {
         echo mysqli_error($conn);
         die();
     } else {
-        header("Location:../../final.php");
+        header("Location:../../masterlist.php");
         exit();
     }
 }
