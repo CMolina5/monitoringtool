@@ -19,28 +19,28 @@ $(document).ready(function () {
         });
     });
 
-    // $('#notice_modal_form').on('submit', function (event) {
-    //     event.preventDefault(event);
-    //     Swal.fire({
-    //         title: 'Are you sure?',
-    //         text: "You won't be able to edit this form once you submit it.",
-    //         icon: 'warning',
-    //         showCancelButton: true,
-    //         confirmButtonColor: '#3085d6',
-    //         cancelButtonColor: '#d33',
-    //         confirmButtonText: 'Yes, submit it!'
-    //       }).then((result) => {
-    //         if (result.isConfirmed) {
-    //         //   Swal.fire(
-    //         //     'Submitted!',
-    //         //     'Your submission is now being reviewed by the Regional Coordinator in-charge to your school.',
-    //         //     'success'
-    //         //   )
-    //           $('#notice_modal').modal('hide');
-    //           $('#signatories_modal').modal('show');
-    //         }
-    //       }) 
-    // });
+    $('#notice_modal_form').on('submit', function (event) {
+        event.preventDefault(event);
+        // Swal.fire({
+        //     title: 'Are you sure?',
+        //     text: "You won't be able to edit this form once you submit it.",
+        //     icon: 'warning',
+        //     showCancelButton: true,
+        //     confirmButtonColor: '#3085d6',
+        //     cancelButtonColor: '#d33',
+        //     confirmButtonText: 'Yes, submit it!'
+        //   }).then((result) => {
+        //     if (result.isConfirmed) {
+            //   Swal.fire(
+            //     'Submitted!',
+            //     'Your submission is now being reviewed by the Regional Coordinator in-charge to your school.',
+            //     'success'
+            //   )
+              $('#notice_modal').modal('hide');
+              $('#signatories_modal').modal('show');
+        //     }
+        //   }) 
+    });
 
 
 

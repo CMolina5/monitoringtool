@@ -18,7 +18,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit" name="btn_notice" id="btn_notice" data-toggle="modal" data-target="#signatories_modal">I Agree</button>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit" name="btn_notice" id="btn_notice">I Agree</button>
                 </div>
             </form>
         </div>
