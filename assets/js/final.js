@@ -31,15 +31,18 @@ $(document).ready(function () {
             confirmButtonText: 'Yes, submit it!'
           }).then((result) => {
             if (result.isConfirmed) {
-              Swal.fire(
-                'Submitted!',
-                'Your submission is now being reviewed by the Regional Coordinator in-charge to your school.',
-                'success'
-              )
+            //   Swal.fire(
+            //     'Submitted!',
+            //     'Your submission is now being reviewed by the Regional Coordinator in-charge to your school.',
+            //     'success'
+            //   )
               $('#notice_modal').modal('hide');
+              $('#signatories_modal').modal('show');
             }
           }) 
     });
+
+
 
 
     $(document).on('click', '.deleteIcon', function(e) {

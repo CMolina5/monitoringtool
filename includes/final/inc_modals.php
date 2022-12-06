@@ -18,8 +18,85 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit" name="btn_notice" id="btn_notice">I Agree</button>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit" name="btn_notice" id="btn_notice" data-toggle="modal" data-target="#signatories_modal">I Agree</button>
                 </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div role="dialog" tabindex="-1" class="modal fade show" id="signatories_modal">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <form  method="POST" id="signatories_modal_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Signatories</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group"><label><strong>Prepared By:</strong></label></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-xl-4">
+                                <div class="form-group"><label>Personnel In-charge of FHE</label><input type="text" class="form-control" /></div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="form-group"><label>TES Focal Person<br /></label><input type="text" class="form-control" /></div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="form-group"><label>Personnel In-charge of TDP</label><input type="text" class="form-control" /></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group"><label><strong>Reviewed By:</strong></label></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group"><label>HEI Registrar</label><input type="text" class="form-control" /></div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group"><label>Finance Officer</label><input type="text" class="form-control" /></div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group"><label>UniFAST Regional Coordinator</label><input type="text" class="form-control" /></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group"><label><strong>Submitted By/ Conforme:</strong></label></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-xl-4">
+                                <div class="form-group"><label>HEI President/Authorized Representative</label><input type="text" class="form-control" /></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group"><label><strong>Officialy Received By:</strong></label></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-xl-4">
+                                <div class="form-group"><label>Chief Education Program Specialist</label><input class="form-control" type="text" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
             </form>
         </div>
     </div>
