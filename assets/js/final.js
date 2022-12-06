@@ -36,6 +36,7 @@ $(document).ready(function () {
                 'Your submission is now being reviewed by the Regional Coordinator in-charge to your school.',
                 'success'
               )
+              $('#notice_modal').modal('hide');
             }
           }) 
     });
