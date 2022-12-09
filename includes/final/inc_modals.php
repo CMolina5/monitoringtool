@@ -80,7 +80,7 @@
                             <div class="col-xl-4">
                                 <div class="form-group">
                                     <label>HEI President/Authorized Representative</label>
-                                    <input type="text" class="form-control" value=<?php echo $hei_head_name; ?> ></input>
+                                    <input type="text" class="form-control" value="<?php echo $hei_head_name; ?>" ></input>
                                 </div>
                             </div>
                         </div>
