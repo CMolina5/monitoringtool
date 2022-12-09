@@ -42,13 +42,13 @@
                         </div>
                         <div class="form-row">
                             <div class="col-xl-4">
-                                <div class="form-group"><label>Personnel In-charge of FHE</label><input type="text" class="form-control" /></div>
+                                <div class="form-group"><label>Personnel In-charge of FHE</label><input type="text" class="form-control" value="<?php echo strtoupper($fhe_focal_name); ?>" /></div>
                             </div>
                             <div class="col-xl-4">
-                                <div class="form-group"><label>TES Focal Person<br /></label><input type="text" class="form-control" /></div>
+                                <div class="form-group"><label>TES Focal Person</label><input type="text" class="form-control" value="<?php echo strtoupper($tes_focal_name); ?>" /></div>
                             </div>
                             <div class="col-xl-4">
-                                <div class="form-group"><label>Personnel In-charge of TDP</label><input type="text" class="form-control" /></div>
+                                <div class="form-group"><label>Personnel In-charge of TDP</label><input type="text" class="form-control" value="<?php echo strtoupper($tdp_focal_name); ?>" /></div>
                             </div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                             <div class="col-xl-4">
                                 <div class="form-group">
                                     <label>HEI President/Authorized Representative</label>
-                                    <input type="text" class="form-control" value="<?php echo $hei_head_name; ?>" ></input>
+                                    <input type="text" class="form-control" value="<?php echo strtoupper($hei_head_name); ?>" />
                                 </div>
                             </div>
                         </div>
