@@ -60,13 +60,13 @@
                         </div>
                         <div class="form-row">
                             <div class="col">
-                                <div class="form-group"><label>HEI Registrar</label><input type="text" class="form-control" /></div>
+                                <div class="form-group"><label>HEI Registrar</label><input type="text" class="form-control" placeholder="Enter Name of HEI Registrar"/></div>
                             </div>
                             <div class="col">
-                                <div class="form-group"><label>Finance Officer</label><input type="text" class="form-control" /></div>
+                                <div class="form-group"><label>Finance Officer</label><input type="text" class="form-control" placeholder="Enter Name of Finance Officer"/></div>
                             </div>
                             <div class="col">
-                                <div class="form-group"><label>UniFAST Regional Coordinator</label><input type="text" class="form-control" /></div>
+                                <div class="form-group"><label>UniFAST Regional Coordinator</label><input type="text" class="form-control" readonly/></div>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                         </div>
                         <div class="form-row">
                             <div class="col-xl-4">
-                                <div class="form-group"><label>Chief Education Program Specialist</label><input class="form-control" type="text" /></div>
+                                <div class="form-group"><label>Chief Education Program Specialist</label><input class="form-control" type="text" readonly/></div>
                             </div>
                         </div>
                     </div>

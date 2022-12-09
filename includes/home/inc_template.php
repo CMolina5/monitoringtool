@@ -11,5 +11,6 @@ if ($resultCheck > 0) {
         $tes=$row['tes'];   
         $tdp=$row['tdp'];
         $form_status=$row['form_status'];
+        $approved_by = $row['approved_by'];
     }
 }

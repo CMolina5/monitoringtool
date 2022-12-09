@@ -3173,10 +3173,10 @@ $pdf->SetXY($oldx + 212, $oldy);
 $pdf->Write(5, "(if applicable)");
 $pdf->SetTextColor(0, 0, 0);
 $pdf->Ln();
-}
 $pdf->SetFont('Arial', '', 10);
 $pdf->Cell(321, 5, $cnt2++ . '. Released the full amount of the TES to the grantees who have fully paid the TOSF for the term', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_24, 1, 1, 'C', true);
+}
 $pdf->Cell(321, 5, $cnt2++ . '. Released to the grantees their share within two (2) weeks upon the receipt of fund transfer for TES', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_25, 1, 1, 'C', true);
 $pdf->Ln();
