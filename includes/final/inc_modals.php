@@ -42,13 +42,13 @@
                         </div>
                         <div class="form-row">
                             <div class="col-xl-4">
-                                <div class="form-group text-uppercase"><label>Personnel In-charge of FHE</label><input type="text" class="form-control" value="<?php echo $fhe_focal_name; ?>" /></div>
+                                <div class="form-group"><label>Personnel In-charge of FHE</label><input type="text" class="form-control text-uppercase" value="<?php echo $fhe_focal_name; ?>" /></div>
                             </div>
                             <div class="col-xl-4">
-                                <div class="form-group text-uppercase"><label>TES Focal Person</label><input type="text" class="form-control" value="<?php echo $tes_focal_name; ?>" /></div>
+                                <div class="form-group"><label>TES Focal Person</label><input type="text" class="form-control text-uppercase" value="<?php echo $tes_focal_name; ?>" /></div>
                             </div>
                             <div class="col-xl-4">
-                                <div class="form-group text-uppercase"><label>Personnel In-charge of TDP</label><input type="text" class="form-control" value="<?php echo $tdp_focal_name; ?>" /></div>
+                                <div class="form-group"><label>Personnel In-charge of TDP</label><input type="text" class="form-control text-uppercase" value="<?php echo $tdp_focal_name; ?>" /></div>
                             </div>
                         </div>
                     </div>
@@ -60,13 +60,13 @@
                         </div>
                         <div class="form-row">
                             <div class="col">
-                                <div class="form-group text-uppercase"><label>HEI Registrar</label><input type="text" class="form-control" placeholder="Enter Name of HEI Registrar"/></div>
+                                <div class="form-group"><label>HEI Registrar</label><input type="text" class="form-control text-uppercase" placeholder="Enter Name of HEI Registrar"/></div>
                             </div>
                             <div class="col">
-                                <div class="form-group text-uppercase"><label>Finance Officer</label><input type="text" class="form-control" placeholder="Enter Name of Finance Officer"/></div>
+                                <div class="form-group"><label>Finance Officer</label><input type="text" class="form-control text-uppercase" placeholder="Enter Name of Finance Officer"/></div>
                             </div>
                             <div class="col">
-                                <div class="form-group text-uppercase"><label>UniFAST Regional Coordinator</label><input type="text" class="form-control" readonly/></div>
+                                <div class="form-group"><label>UniFAST Regional Coordinator</label><input type="text" class="form-control text-uppercase" readonly/></div>
                             </div>
                         </div>
                     </div>
