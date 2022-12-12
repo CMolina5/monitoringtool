@@ -33,7 +33,9 @@
                     <h4 class="modal-title">Signatories</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
-
+                <div class="form-group text-center">
+                        <h4 class="border-dark">Before submitting, please enter the name of the persons who prepared and  </h4>
+                    </div>
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
@@ -65,9 +67,9 @@
                             <div class="col">
                                 <div class="form-group"><label>Finance Officer</label><input type="text" class="form-control text-uppercase" placeholder="Enter Name of Finance Officer"/></div>
                             </div>
-                            <div class="col">
+                            <!-- <div class="col">
                                 <div class="form-group"><label>UniFAST Regional Coordinator</label><input type="text" class="form-control text-uppercase" readonly/></div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="form-group">
@@ -91,11 +93,11 @@
                                 <div class="form-group"><label><strong>Officialy Received By:</strong></label></div>
                             </div>
                         </div>
-                        <div class="form-row">
+                        <!-- <div class="form-row">
                             <div class="col-xl-4">
                                 <div class="form-group"><label>Chief Education Program Specialist</label><input class="form-control text-uppercase" type="text" readonly/></div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                 </div>
