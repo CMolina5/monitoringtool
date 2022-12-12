@@ -33,9 +33,6 @@
                     <h4 class="modal-title">Signatories</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
-                <div class="form-group text-center">
-                        <h4 class="border-dark">Before submitting, please enter the name of the persons who prepared and  </h4>
-                    </div>
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
@@ -101,7 +98,7 @@
                     </div> -->
 
                 </div>
-                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Submit</button></div>
             </form>
         </div>
     </div>
