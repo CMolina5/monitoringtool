@@ -28,7 +28,7 @@
 <div role="dialog" tabindex="-1" class="modal fade show" id="signatories_modal">
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
-            <form  method="POST" id="signatories_modal_form">
+            <form method="POST" id="signatories_modal_form">
                 <div class="modal-header">
                     <h4 class="modal-title">Signatories</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>

@@ -3290,6 +3290,11 @@ $pdf->Ln();
 $pdf->Cell(336, 5, 'Prepared by:', 0, 1, 'L', true);
 $pdf->Ln();
 $pdf->Ln();
+if(isset($_POST['fhe_focal_name'])){
+    $pdf->Cell(63.33, 5, strtoUpper($_POST['fhe_focal_name']), 0, 0, 'L', true); 
+}else{
+    $pdf->Cell(63.33, 5, strtoUpper("di gumana"), 0, 0, 'L', true);
+}
 // if($fhe=='yes'){
 $pdf->Cell(63.33, 5, strtoUpper($_POST['fhe_focal_name']), 0, 0, 'L', true);
 // }
