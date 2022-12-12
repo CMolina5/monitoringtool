@@ -3291,10 +3291,10 @@ $pdf->Cell(336, 5, 'Prepared by:', 0, 1, 'L', true);
 $pdf->Ln();
 $pdf->Ln();
 // if($fhe=='yes'){
-$pdf->Cell(63.33, 5, strtoUpper($fhe_focal_name), 0, 0, 'L', true);
+$pdf->Cell(63.33, 5, strtoUpper($_POST['fhe_focal_name']), 0, 0, 'L', true);
 // }
 // if($tes=='yes'){
-$pdf->Cell(63.33, 5, strtoUpper($tes_focal_name), 0, 0, 'L', true);
+$pdf->Cell(63.33, 5, strtoUpper("Hello"), 0, 0, 'L', true);
 // }
 // if($tdp=='yes'){
 $pdf->Cell(63.33, 5, strtoUpper($tdp_focal_name), 0, 0, 'L', true);

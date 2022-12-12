@@ -41,7 +41,7 @@
                         </div>
                         <div class="form-row">
                             <div class="col-xl-4">
-                                <div class="form-group"><label>Personnel In-charge of FHE</label><input type="text" class="form-control text-uppercase" value="<?php echo $fhe_focal_name; ?>" /></div>
+                                <div class="form-group"><label>Personnel In-charge of FHE</label><input name="fhe_focal_name" id="fhe_focal_name" type="text" class="form-control text-uppercase" value="<?php echo $fhe_focal_name; ?>" /></div>
                             </div>
                             <div class="col-xl-4">
                                 <div class="form-group"><label>TES Focal Person</label><input type="text" class="form-control text-uppercase" value="<?php echo $tes_focal_name; ?>" /></div>
