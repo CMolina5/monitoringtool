@@ -59,8 +59,6 @@ $(document).ready(function () {
                 type: 'POST',
                 data:  $('#signatories_modal_form').serialize(),
                 success: function(data) {
-                  console.log(data);
-                  alert($('#fhe_focal_name').val());
                   Swal.fire(
                     'Submitted!',
                     'Your submission is now being reviewed by the Regional Coordinator in-charge to your school.',
