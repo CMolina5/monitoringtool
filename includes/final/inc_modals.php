@@ -61,10 +61,10 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="col">
+                            <div class="col-xl-4">
                                 <div class="form-group"><label>HEI Registrar</label><input type="text" class="form-control text-uppercase" placeholder="Enter Name of HEI Registrar"/></div>
                             </div>
-                            <div class="col">
+                            <div class="col-xl-4">
                                 <div class="form-group"><label>Finance Officer</label><input type="text" class="form-control text-uppercase" placeholder="Enter Name of Finance Officer"/></div>
                             </div>
                             <!-- <div class="col">
