@@ -87,18 +87,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <div class="form-row">
                             <div class="col">
                                 <div class="form-group"><label><strong>Officialy Received By:</strong></label></div>
                             </div>
                         </div>
-                        <!-- <div class="form-row">
+                        <div class="form-row">
                             <div class="col-xl-4">
                                 <div class="form-group"><label>Chief Education Program Specialist</label><input class="form-control text-uppercase" type="text" readonly/></div>
                             </div>
-                        </div> -->
-                    </div>
+                        </div>
+                    </div> -->
 
                 </div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="submit">Save</button></div>
