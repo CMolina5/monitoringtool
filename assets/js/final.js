@@ -65,6 +65,7 @@ $(document).ready(function () {
                     'success'
                   )
                   $('#signatories_modal').modal('hide');
+                  location.reload();
                 }
               });
             }
