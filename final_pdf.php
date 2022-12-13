@@ -3374,9 +3374,19 @@ $pdf->Cell(95, 5, 'Date:', 0, 0, 'L', true);
         unlink('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
         $pdf->Output('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
         header("Refresh:0; url=final.php");
+
+        $sql = "UPDATE tbl_hei_records 
+        SET form_status='For Review of Regional Coordinator' 
+        WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
+        $result = mysqli_query($conn, $sql);
     }else{
         $pdf->Output('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
         header("Refresh:0; url=final.php");
+
+        $sql = "UPDATE tbl_hei_records 
+        SET form_status='For Review of Regional Coordinator' 
+        WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
+        $result = mysqli_query($conn, $sql);
     }
 
 // header('Content-type: application/pdf');
