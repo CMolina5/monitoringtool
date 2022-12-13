@@ -3373,10 +3373,10 @@ $pdf->Cell(95, 5, 'Date:', 0, 0, 'L', true);
     if (file_exists('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf')){
         unlink('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
         $pdf->Output('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
-        header("Location: final.php");
+        header("Refresh:0");
     }else{
         $pdf->Output('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
-        header("Location: final.php");
+        header("Refresh:0");
     }
 
 // header('Content-type: application/pdf');
