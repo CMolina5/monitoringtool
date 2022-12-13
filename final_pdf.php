@@ -3294,10 +3294,10 @@ $pdf->Ln();
 $pdf->Cell(63.33, 5, strtoUpper($_POST['fhe_focal_name']), 0, 0, 'L', true);
 // }
 // if($tes=='yes'){
-$pdf->Cell(63.33, 5, strtoUpper($_POST['fhe_focal_name']), 0, 0, 'L', true);
+$pdf->Cell(63.33, 5, strtoUpper($_POST['tes_focal_name']), 0, 0, 'L', true);
 // }
 // if($tdp=='yes'){
-$pdf->Cell(63.33, 5, strtoUpper($tdp_focal_name), 0, 0, 'L', true);
+$pdf->Cell(63.33, 5, strtoUpper($_POST['tdp_focal_name']), 0, 0, 'L', true);
 // }
 $pdf->Ln();
 $pdf->SetFont('Arial', '', 9);
@@ -3326,23 +3326,23 @@ $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(336, 5, 'Reviewed by:', 0, 1, 'L', true);
 $pdf->Ln();
 $pdf->Ln();
-$pdf->Cell(63.33, 5, strtoUpper('Name Here'), 0, 0, 'L', true);
-$pdf->Cell(63.33, 5, strtoUpper('Name Here'), 0, 0, 'L', true);
-$pdf->Cell(63.33, 5, '', 0, 0, 'L', true);
+$pdf->Cell(63.33, 5, strtoUpper($_POST['hei_registrar_name']), 0, 0, 'L', true);
+$pdf->Cell(63.33, 5, strtoUpper($_POST['finance_officer_name']), 0, 0, 'L', true);
+// $pdf->Cell(63.33, 5, '', 0, 0, 'L', true);
 $pdf->Ln();
 $pdf->SetFont('Arial', '', 10);
 $pdf->Cell(63.33, 5, 'HEI Registrar', 0, 0, 'L', true);
-$pdf->Cell(63.33, 5, 'UniFAST Regional Coordinator', 0, 0, 'L', true);
-$pdf->Cell(63.33, 5, '', 0, 0, 'L', true);
+$pdf->Cell(63.33, 5, 'Finance Officer', 0, 0, 'L', true);
+// $pdf->Cell(63.33, 5, 'Regional Coordinator', 0, 0, 'L', true);
 $pdf->Ln();
 $pdf->Cell(63.33, 5, 'Date:', 0, 0, 'L', true);
 $pdf->Cell(63.33, 5, 'Date:', 0, 0, 'L', true);
-$pdf->Cell(63.33, 5, '', 0, 0, 'L', true);
+// $pdf->Cell(63.33, 5, 'Date', 0, 0, 'L', true);
 $pdf->Ln();
 $pdf->Ln();
 $pdf->SetFont('Arial', 'I', 8);
 $pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
+$pdf->SetFillColor(255, 255, 255); 
 $pdf->Cell(336, 5, 'By signing and submitting this accomplished monitoring tool, I hereby certify to the veracity and completeness of the information provided for the specified Academic Year.', 0, 0, 'L', true);
 $pdf->Ln();
 $pdf->Ln();
@@ -3350,24 +3350,24 @@ $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(336, 5, 'Submitted by/Conforme:', 0, 1, 'L', true);
 $pdf->Ln();
 $pdf->Ln();
-$pdf->Cell(336, 5, strtoUpper($hei_head_name), 0, 0, 'L', true);
+$pdf->Cell(336, 5, strtoUpper($_POST['hei_president_name']), 0, 0, 'L', true);
 $pdf->Ln();
 $pdf->SetFont('Arial', '', 10);
 $pdf->Cell(336, 5, 'HEI President/Authorized Representative', 0, 0, 'L', true);
 $pdf->Ln();
 $pdf->Cell(95, 5, 'Date:', 0, 0, 'L', true);
-$pdf->Ln();
-$pdf->Ln();
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(336, 5, 'Officially Received By:', 0, 1, 'L', true);
-$pdf->Ln();
-$pdf->Ln();
-$pdf->Cell(95, 5, 'NAME OF CEPS HERE', 0, 0, 'L', true);
-$pdf->Ln();
-$pdf->SetFont('Arial', '', 10);
-$pdf->Cell(336, 5, 'Chief Education Program Specialist', 0, 0, 'L', true);
-$pdf->Ln();
-$pdf->Cell(95, 5, 'Date:', 0, 0, 'L', true);
+// $pdf->Ln();
+// $pdf->Ln();
+// $pdf->SetFont('Arial', 'B', 10);
+// $pdf->Cell(336, 5, 'Officially Received By:', 0, 1, 'L', true);
+// $pdf->Ln();
+// $pdf->Ln();
+// $pdf->Cell(95, 5, 'NAME OF CEPS HERE', 0, 0, 'L', true);
+// $pdf->Ln();
+// $pdf->SetFont('Arial', '', 10);
+// $pdf->Cell(336, 5, 'Chief Education Program Specialist', 0, 0, 'L', true);
+// $pdf->Ln();
+// $pdf->Cell(95, 5, 'Date:', 0, 0, 'L', true);
 
 //end of data rows
     if (file_exists('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf')){
