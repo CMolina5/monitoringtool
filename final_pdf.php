@@ -3282,7 +3282,7 @@ $pdf->SetFont('Arial', 'I', 8);
 $pdf->SetTextColor(0, 0, 0);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 5, 'By signing this accomplished monitoring tool, we attest to the veracity and completeness of the information provided for the specified Academic Year.', 0, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 9);
+$pdf->SetFont('Arial', 'B', 10);
 $pdf->SetTextColor(0, 0, 0);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Ln();
