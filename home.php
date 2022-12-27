@@ -61,7 +61,7 @@ include_once 'includes/db_connection.php';
                         ?>
                         <div id="tbl_list_of_forms_div" class="table-responsive tbl-style">
                             <?php
-                                include 'includes/home/inc_hei_records.php';
+                                include 'includes/home/inc_hei_records_new.php';
                             ?>
                         </div>
                     </div>
