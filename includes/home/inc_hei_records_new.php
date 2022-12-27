@@ -47,8 +47,8 @@ $resultCheck= mysqli_num_rows($result);
                 <div class="form-row" style="height: 99px;">
                     <div class="col">
                         <h3 class="text-primary">AY 2020-2021</h3>
-                        <h5 class="mb-2">Trimester with Semester</h5>
-                        <h6>FHE, TES, TDP</h6>
+                        <h6 class="mb-2">Trimester with Semester</h6>
+                        <p>FHE, TES, TDP</p>
                     </div>
                 </div>
                 <div class="form-row" style="height: 31px;">
