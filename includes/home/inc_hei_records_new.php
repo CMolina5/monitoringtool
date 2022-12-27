@@ -40,7 +40,6 @@ $resultCheck= mysqli_num_rows($result);
             <div class="card-body">
                 <div class="form-row">
                     <div class="col-9 col-sm-11 col-md-11 col-lg-11"><span class="badge badge-success">ONGOING</span>
-                        <p></p>
                     </div>
                     <div class="col-3 col-sm-1 col-md-1 col-lg-1 col-xl-1 text-right"><a class="text-muted" href="#"><i class="far fa-edit"></i></a></div>
                 </div>
