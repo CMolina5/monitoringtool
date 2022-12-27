@@ -38,7 +38,7 @@ $resultCheck= mysqli_num_rows($result);
             echo'
             <div class="card mt-2" style>
             <div class="card-body">
-                <div class="form-row">
+                <div class="form-row" style="font-size: 12px;">
                     <div class="col-9 col-sm-11 col-md-11 col-lg-11">
                         <span class="badge badge-success">ONGOING</span>
                     </div>
