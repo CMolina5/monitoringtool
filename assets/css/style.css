@@ -448,3 +448,7 @@ iframe {
 .btn-final{
   width: 75px;
 }
+
+badge {
+  font-size: 12px;
+}
