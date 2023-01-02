@@ -399,7 +399,7 @@ hr.star-dark {
 
 #home-page {
   padding-top: 120px;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 #btn-new-form {
