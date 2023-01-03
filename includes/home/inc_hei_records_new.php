@@ -48,7 +48,7 @@ $resultCheck= mysqli_num_rows($result);
                     <div class="col">
                         <h3 class="text-primary">'.$ac_year.'</h3>
                         <h6 class="mb-2">'.$ac_calendar.'</h6>
-                        <p>'.$fhe.', '.$tes.', '.$tdp.'</p>
+                        <p>'.$programs_covered.'</p>
                     </div>
                 </div>
                 <div class="form-row" style="height: 31px;">
