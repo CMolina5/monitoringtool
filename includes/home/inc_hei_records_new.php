@@ -40,15 +40,15 @@ $resultCheck= mysqli_num_rows($result);
             <div class="card-body">
                 <div class="form-row" style="font-size: 15px;">
                     <div class="col-9 col-sm-11 col-md-11 col-lg-11">
-                        <span class="badge badge-success">ONGOING</span>
+                        <span class="badge badge-success">'.$status.'</span>
                     </div>
                     <div class="col-3 col-sm-1 col-md-1 col-lg-1 col-xl-1 text-right"><a style="font-size: 15px;" class="text-muted" href="#"><i class="far fa-edit"></i></a></div>
                 </div>
                 <div class="form-row" style="height: 99px;">
                     <div class="col">
-                        <h3 class="text-primary">AY 2020-2021</h3>
-                        <h6 class="mb-2">Trimester with Semester</h6>
-                        <p>FHE, TES, TDP</p>
+                        <h3 class="text-primary">'.$ac_year.'</h3>
+                        <h6 class="mb-2">'.$ac_calendar.'</h6>
+                        <p>'.$fhe.', '.$tes.', '.$tdp.'</p>
                     </div>
                 </div>
                 <div class="form-row" style="height: 31px;">
