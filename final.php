@@ -51,7 +51,7 @@ BODY {display:none;visibility:hidden;}
                 <ul class="nav navbar-nav ml-auto">
                     <li role="presentation" class="nav-item mx-0 mx-lg-1"><a href="home.php" class="btn btn-primary btn-final" role="button" data-toggle="tooltip" type="button" title="Home"><i class="fas fa-home"></i></a></li>
                     <?php
-                    if($form_status !=='For Review of Regional Coordinator'){
+                    if($form_status !=='For Review of Regional Coordinator' && $form_status !=='Approved'){
                         echo'
                         <li role="presentation" class="nav-item mx-0 mx-lg-1"><a href="heiprofile.php" class="btn btn-primary btn-final" data-toggle="tooltip" type="button" title="Edit"><i class="far fa-edit"></i></a></li>
                         <li role="presentation" class="nav-item mx-0 mx-lg-1"><a href="includes/final/save.php" class="btn btn-primary btn-final" data-toggle="tooltip" type="button" title="Save"><i class="far fa-save"></i></a></li>
