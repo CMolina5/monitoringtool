@@ -43,7 +43,7 @@ $resultCheck= mysqli_num_rows($result);
                       <span class="badge badge-success">'.$status.'</span>
                     </div>
                     <div class="col-3 col-sm-1 col-md-1 col-lg-1 col-xl-1 text-right">
-                        <button style="font-size: 15px;" class="text-muted edit_record"  type="button" title="Edit Form Structure" name="edit" value="edit" id="'.$uid.'"><i class="far fa-edit"></i></button>
+                        <button style="font-size: 15px;" class="btn btn-outline btn-table-margin edit_record"  type="button" title="Edit Form Structure" name="edit" value="edit" id="'.$uid.'"><i class="far fa-edit"></i></button>
                     </div>
                 </div>
                 <div class="form-row" style="height: 99px;">
