@@ -58,7 +58,7 @@ $resultCheck= mysqli_num_rows($result);
                     }
     
                     if($status=='ongoing' OR $status=='Saved'){
-                        echo"<p class='text-right'><button class='btn btn-info btn-table-margin edit_record' type='button' title='Edit Form Structure' name='edit' value='edit' id='$uid'>VIEW</button></p>";
+                        echo"<p class='text-right'><button class='btn btn-info btn-table-margin edit_record' type='button' title='Edit Form Structure' name='edit' value='edit' id='$uid'>FILL-UP</button></p>";
                     }
                     echo'
                     </div>
