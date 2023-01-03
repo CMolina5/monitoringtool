@@ -58,7 +58,7 @@ $resultCheck= mysqli_num_rows($result);
                     if($status=='For Review of Regional Coordinator' OR $status=='Approved' OR $status=='Saved'){
                         echo"<p class='text-right'><button class='btn btn-primary btn-table-margin view_record_final' type='button' title='View Form' name='view_form' value='view_form' id='$uid'>VIEW</button><p>";
                     }else{
-                        echo"<button class='btn btn-primary btn-table-margin view_record' type='button' title='Edit Form' name='edit_form' value='edit_form' id='$uid'><i class='fas fa-file-signature'></i></button>";
+                        echo"<p class='text-right'><button class='btn btn-primary btn-table-margin view_record' type='button' title='Edit Form' name='edit_form' value='edit_form' id='$uid'>FILL-UP</button><p>";
                     }
                     echo'
                     </div>
