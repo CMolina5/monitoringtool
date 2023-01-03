@@ -40,7 +40,17 @@ $resultCheck= mysqli_num_rows($result);
             <div class="card-body">
                 <div class="form-row" style="font-size: 15px;">
                     <div class="col-9 col-sm-11 col-md-11 col-lg-11">
-                        <span class="badge badge-success">'.$status.'</span>
+                    ';
+                    if($status=='For Review of Regional Coordinator' OR $status=='Approved' OR $status=='Saved'){
+                        echo"<button class='btn btn-primary btn-table-margin view_record_final' type='button' title='View Form' name='view_form' value='view_form' id='$uid'><i class='fas fa-file-signature'></i></button>";
+                    }else{
+                        echo"<button class='btn btn-primary btn-table-margin view_record' type='button' title='Edit Form' name='edit_form' value='edit_form' id='$uid'><i class='fas fa-file-signature'></i></button>";
+                    }
+                    if($status=='ongoing' OR $status=='Saved'){
+                        echo"<button class='btn btn-info btn-table-margin edit_record' type='button' title='Edit Form Structure' name='edit' value='edit' id='$uid'><i class='far fa-edit'></i></button>
+                        <button class='btn btn-danger btn-table-margin remove_record' type='button' title='Remove' name='remove' value'remove' id='$uid'><i class='fas fa-trash'></i></button>";
+                    }
+                        echo'<span class="badge badge-success">'.$status.'</span>
                     </div>
                     <div class="col-3 col-sm-1 col-md-1 col-lg-1 col-xl-1 text-right"><a style="font-size: 15px;" class="text-muted" href="#"><i class="far fa-edit"></i></a></div>
                 </div>
