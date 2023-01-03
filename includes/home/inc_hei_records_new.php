@@ -51,8 +51,11 @@ $resultCheck= mysqli_num_rows($result);
                     }
                     echo'
                     </div>
-                    <div class="col-3 col-sm-1 col-md-1 col-lg-1 col-xl-1 text-right">
-                        <button style="font-size: 15px;" class="btn btn-outline btn-table-margin edit_record"  type="button" title="Edit Form Structure" name="edit" value="edit" id="'.$uid.'"><i class="far fa-edit"></i></button>
+                    <div class="col-3 col-sm-1 col-md-1 col-lg-1 col-xl-1 text-right">';
+                    if($status=='Saved' || $status=='ongoing'){
+                        echo'<button style="font-size: 15px;" class="btn btn-outline btn-table-margin edit_record"  type="button" title="Edit Form Structure" name="edit" value="edit" id="'.$uid.'"><i class="far fa-edit"></i></button>';
+                    }
+                    echo'
                     </div>
                 </div>
                 <div class="form-row" style="height: 99px;">
