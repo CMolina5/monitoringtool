@@ -54,15 +54,13 @@ $resultCheck= mysqli_num_rows($result);
                 <div class="form-row" style="height: 31px;">
                     <div class="col">';
                     if($status=='For Review of Regional Coordinator' OR $status=='Approved' OR $status=='Saved'){
-                        echo"<p class='text-right'><button class='btn btn-primary btn-table-margin view_record_final' type='button' title='View Form' name='view_form' value='view_form' id='$uid'><i class='fas fa-file-signature'></i></button><p>";
-                    }else{
-                        echo"<p class='text-right'><button class='btn btn-primary btn-table-margin view_record' type='button' title='Edit Form' name='edit_form' value='edit_form' id='$uid'><i class='fas fa-file-signature'></i></button><p>";
+                        echo"<p class='text-right'><button class='btn btn-primary btn-table-margin view_record_final' type='button' title='View Form' name='view_form' value='view_form' id='$uid'>VIEW</button><p>";
                     }
+    
                     if($status=='ongoing' OR $status=='Saved'){
-                        echo"<p class='text-right'><button class='btn btn-info btn-table-margin edit_record' type='button' title='Edit Form Structure' name='edit' value='edit' id='$uid'><i class='far fa-edit'></i></button></p>";
+                        echo"<p class='text-right'><button class='btn btn-info btn-table-margin edit_record' type='button' title='Edit Form Structure' name='edit' value='edit' id='$uid'>VIEW</button></p>";
                     }
                     echo'
-                       
                     </div>
                 </div>
             </div>
