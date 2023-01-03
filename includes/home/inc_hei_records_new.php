@@ -63,7 +63,7 @@ $resultCheck= mysqli_num_rows($result);
                         <button class='btn btn-danger btn-table-margin remove_record' type='button' title='Remove' name='remove' value'remove' id='$uid'><i class='fas fa-trash'></i></button>";
                     }
                     echo'
-                        <p class="text-right"><button class="btn btn-primary" id="btn-new-form" type="button">fill-up</button></p>
+                        
                     </div>
                 </div>
             </div>
