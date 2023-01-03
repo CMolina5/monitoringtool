@@ -39,8 +39,17 @@ $resultCheck= mysqli_num_rows($result);
             <div class="card mt-2" style>
             <div class="card-body">
                 <div class="form-row" style="font-size: 15px;">
-                    <div class="col-9 col-sm-11 col-md-11 col-lg-11">
-                      <span class="badge badge-success">'.$status.'</span>
+                    <div class="col-9 col-sm-11 col-md-11 col-lg-11">';
+                    if($status=='For Review of Regional Coordinator'){
+                        echo'<span class="badge badge-warning">For Review</span>';
+                    }else if($status=='Approved'){
+                        echo'<span class="badge badge-success">Approved</span>';
+                    }else if($status=='Saved'){
+                        echo'<span class="badge badge-info">Saved</span>';
+                    }else{
+                        echo'<span class="badge badge-secondary">Ongoing</span>';
+                    }
+                    echo'
                     </div>
                     <div class="col-3 col-sm-1 col-md-1 col-lg-1 col-xl-1 text-right">
                         <button style="font-size: 15px;" class="btn btn-outline btn-table-margin edit_record"  type="button" title="Edit Form Structure" name="edit" value="edit" id="'.$uid.'"><i class="far fa-edit"></i></button>
