@@ -97,7 +97,7 @@ include_once 'includes/db_connection.php';
                                     <div class="custom-control custom-radio"><input class="custom-control-input" type="radio" id="semwithsummer" name="ac_calendar" value="Semester with Summer" required=""><label class="custom-control-label" for="semwithsummer">Semester with Summer</label></div>
                                 </div>
                                 <div class="col-12 col-md-3">
-                                    <div class="custom-control custom-radio"><input class="custom-control-input" type="radio" id="trimester" name="ac_calendar" value="Trimester" required=""><label class="custom-control-label" for="trimester" va>Trimester</label></div>
+                                    <div class="custom-control custom-radio"><input class="custom-control-input" type="radio" id="trimester" name="ac_calendar" value="Trimester" required=""><label class="custom-control-label" for="trimester">Trimester</label></div>
                                 </div> 
                                 <div class="col-12 col-md-3">
                                     <div class="custom-control custom-radio"><input class="custom-control-input" type="radio" id="trimesterwithsummer" name="ac_calendar" value="Trimester with Summer" required=""><label class="custom-control-label" for="trimesterwithsummer">Trimester with Summer</label></div>

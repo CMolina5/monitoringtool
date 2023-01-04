@@ -23,5 +23,5 @@ if (!$result) {
     echo mysqli_error($conn);
     die();
 } else {
-    include "inc_hei_records.php";
+    include "inc_hei_records_new.php";
 }
