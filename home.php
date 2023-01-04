@@ -81,10 +81,10 @@ include_once 'includes/db_connection.php';
                         <div class="form-group"><label>Academic Year Covered</label>
                             <select name="ac_year" id="ac_year" class="form-control" required>
                                     <option selected disabled value="">Select Academic Year</option> 
-                                    <option value="2018-2019">2018-2019</option>
-                                    <option value="2019-2020">2019-2020</option>
-                                    <option value="2020-2021">2020-2021</option>
-                                    <option value="2021-2022">2021-2022</option>
+                                    <option value="2018-2019" disabled>2018-2019</option>
+                                    <option value="2019-2020" disabled>2019-2020</option>
+                                    <option value="2020-2021" disabled>2020-2021</option>
+                                    <option value="2021-2022" disabled>2021-2022</option>
                                     <option value="2022-2023">2022-2023</option>
                             </select>
                         </div>
