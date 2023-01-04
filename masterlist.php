@@ -1373,7 +1373,7 @@ $pdf->SetFont('Arial', 'B', 10);
 $pdf->SetFillColor(236, 240, 241);
 $pdf->SetTextColor(0, 0, 0);
 
-$pdf->Cell(336, 5, 'TOTAL TES GRANTEES', 1, 0, 'C', true);
+$pdf->Cell(336, 5, 'TOTAL NO. OF FHE GRANTEES WHO ARE UNDER 4PS-SWDI AND/OR LISTAHANAN BENEFICIARIES', 1, 0, 'C', true);
 $pdf->Ln();
 $pdf->Cell(20, 10, 'SEX', 1, 0, 'C', true);
 $pdf->Cell(79, 5, '1ST TERM', 1, 0, 'C', true);
