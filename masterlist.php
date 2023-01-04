@@ -1384,25 +1384,17 @@ $pdf->Cell(79, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
 $pdf->Ln();
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(20, 0, '', 0, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'TOTAL', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'PWD', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'IP', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'W/ BOARD', 1, 0, 'C', true);
+$pdf->Cell(39.5, 5, 'MALE', 1, 0, 'C', true);
+$pdf->Cell(39.5, 5, 'FEMALE', 1, 0, 'C', true);
 
-$pdf->Cell(19.75, 5, 'TOTAL', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'PWD', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'IP', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'W/ BOARD', 1, 0, 'C', true);
+$pdf->Cell(39.5, 5, 'MALE', 1, 0, 'C', true);
+$pdf->Cell(39.5, 5, 'FEMALE', 1, 0, 'C', true);
 
-$pdf->Cell(19.75, 5, 'TOTAL', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'PWD', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'IP', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'W/ BOARD', 1, 0, 'C', true);
+$pdf->Cell(39.5, 5, 'MALE', 1, 0, 'C', true);
+$pdf->Cell(39.5, 5, 'FEMALE', 1, 0, 'C', true);
 
-$pdf->Cell(19.75, 5, 'TOTAL', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'PWD', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'IP', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'W/ BOARD', 1, 0, 'C', true);
+$pdf->Cell(39.5, 5, 'MALE', 1, 0, 'C', true);
+$pdf->Cell(39.5, 5, 'FEMALE', 1, 0, 'C', true);
 $pdf->Ln();
 
 $sql = "SELECT * FROM tbl_tes_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
