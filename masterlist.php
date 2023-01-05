@@ -173,45 +173,45 @@ $pdf->Cell(127, 5, $hei_email, 0, 0, 'L', true);
 $pdf->Ln();
 
 if ($_SESSION['hei_it'] == 'Private HEI') {
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(95, 5, 'Private HEI located in city/municipality w/ no SUC/LUC?', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(73, 5, $_SESSION['hei_pnsl'], 0, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(95, 5, 'Private HEI located in city/municipality w/ no SUC/LUC?', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(73, 5, $_SESSION['hei_pnsl'], 0, 0, 'L', true);
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(47, 5, 'Alternative Email Address:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(121, 5, $hei_alt_email, 0, 0, 'L', true);
-$pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(47, 5, 'Alternative Email Address:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(121, 5, $hei_alt_email, 0, 0, 'L', true);
+    $pdf->Ln();
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(24, 5, 'HEI Campus:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(144, 5, $_SESSION['hei_ct'], 0, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(23, 5, 'Contact No.:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(145, 5, $hei_contact_no, 0, 0, 'L', true);
-$pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(24, 5, 'HEI Campus:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(144, 5, $_SESSION['hei_ct'], 0, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(23, 5, 'Contact No.:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(145, 5, $hei_contact_no, 0, 0, 'L', true);
+    $pdf->Ln();
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(24, 5, 'HEI Address:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(144, 5, $_SESSION['hei_address'], 0, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(42, 5, 'Alternative Contact No.:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(126, 5, $hei_alt_contact_no, 0, 0, 'L', true);
-$pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(24, 5, 'HEI Address:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(144, 5, $_SESSION['hei_address'], 0, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(42, 5, 'Alternative Contact No.:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(126, 5, $hei_alt_contact_no, 0, 0, 'L', true);
+    $pdf->Ln();
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(15, 5, 'Region:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(153, 5, $_SESSION['hei_region_nir'], 0, 0, 'L', true);
-$pdf->Cell(168, 5, '', 0, 0, 'L', true);
-$pdf->Ln();
-}else{
-    $pdf->Cell(168, 5, '', 0, 0, 'L', true);  
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(15, 5, 'Region:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(153, 5, $_SESSION['hei_region_nir'], 0, 0, 'L', true);
+    $pdf->Cell(168, 5, '', 0, 0, 'L', true);
+    $pdf->Ln();
+} else {
+    $pdf->Cell(168, 5, '', 0, 0, 'L', true);
 }
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(47, 5, 'Alternative Email Address:', 0, 0, 'L', true);
@@ -297,116 +297,116 @@ $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
 $pdf->Ln();
 //END
-if($fhe=='yes'){
-//FHE
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(63, 5, 'Name of Personnel In-charge of FHE:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(105, 5, $fhe_focal_name, 0, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(30, 5, 'Full Designation:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(138, 5, $fhe_focal_designation, 0, 0, 'L', true);
-$pdf->Ln();
+if ($fhe == 'yes') {
+    //FHE
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(63, 5, 'Name of Personnel In-charge of FHE:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(105, 5, $fhe_focal_name, 0, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(30, 5, 'Full Designation:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(138, 5, $fhe_focal_designation, 0, 0, 'L', true);
+    $pdf->Ln();
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(27, 5, 'Email Address:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(141, 5, $fhe_focal_email_add, 0, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(46, 5, 'Alternative Email Address:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(122, 5, $fhe_focal_alt_email_add, 0, 0, 'L', true);
-$pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(27, 5, 'Email Address:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(141, 5, $fhe_focal_email_add, 0, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(46, 5, 'Alternative Email Address:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(122, 5, $fhe_focal_alt_email_add, 0, 0, 'L', true);
+    $pdf->Ln();
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(22, 5, 'Contact No.:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(146, 5, $fhe_focal_contact_no, 0, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(42, 5, 'Alternative Contact No.:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(126, 5, $fhe_focal_alt_contact_no, 0, 0, 'L', true);
-$pdf->Ln();
-//END
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(22, 5, 'Contact No.:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(146, 5, $fhe_focal_contact_no, 0, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(42, 5, 'Alternative Contact No.:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(126, 5, $fhe_focal_alt_contact_no, 0, 0, 'L', true);
+    $pdf->Ln();
+    //END
 }
 //SPACING
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
 $pdf->Ln();
 //END
-if($tes=='yes'){
-//TES
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(47, 5, 'Name of TES Focal Person:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(121, 5, $tes_focal_name, 0, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(30, 5, 'Full Designation:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(138, 5, $tes_focal_designation, 0, 0, 'L', true);
-$pdf->Ln();
+if ($tes == 'yes') {
+    //TES
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(47, 5, 'Name of TES Focal Person:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(121, 5, $tes_focal_name, 0, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(30, 5, 'Full Designation:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(138, 5, $tes_focal_designation, 0, 0, 'L', true);
+    $pdf->Ln();
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(27, 5, 'Email Address:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(141, 5, $tes_focal_email_add, 0, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(46, 5, 'Alternative Email Address:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(122, 5, $tes_focal_alt_email_add, 0, 0, 'L', true);
-$pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(27, 5, 'Email Address:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(141, 5, $tes_focal_email_add, 0, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(46, 5, 'Alternative Email Address:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(122, 5, $tes_focal_alt_email_add, 0, 0, 'L', true);
+    $pdf->Ln();
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(22, 5, 'Contact No.:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(146, 5, $tes_focal_contact_no, 0, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(42, 5, 'Alternative Contact No.:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(126, 5, $tes_focal_alt_contact_no, 0, 0, 'L', true);
-$pdf->Ln();
-//END
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(22, 5, 'Contact No.:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(146, 5, $tes_focal_contact_no, 0, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(42, 5, 'Alternative Contact No.:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(126, 5, $tes_focal_alt_contact_no, 0, 0, 'L', true);
+    $pdf->Ln();
+    //END
 }
 //SPACING
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
 $pdf->Ln();
 //END
-if($tdp=='yes'){
-//TDP
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(63, 5, 'Name of Personnel In-charge of TDP:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(105, 5, $tdp_focal_name, 0, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(30, 5, 'Full Designation:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(138, 5, $tdp_focal_designation, 0, 0, 'L', true);
-$pdf->Ln();
+if ($tdp == 'yes') {
+    //TDP
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(63, 5, 'Name of Personnel In-charge of TDP:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(105, 5, $tdp_focal_name, 0, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(30, 5, 'Full Designation:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(138, 5, $tdp_focal_designation, 0, 0, 'L', true);
+    $pdf->Ln();
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(27, 5, 'Email Address:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(141, 5, $tdp_focal_email_add, 0, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(46, 5, 'Alternative Email Address:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(122, 5, $tdp_focal_alt_email_add, 0, 0, 'L', true);
-$pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(27, 5, 'Email Address:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(141, 5, $tdp_focal_email_add, 0, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(46, 5, 'Alternative Email Address:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(122, 5, $tdp_focal_alt_email_add, 0, 0, 'L', true);
+    $pdf->Ln();
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(22, 5, 'Contact No.:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(146, 5, $tdp_focal_contact_no, 0, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(42, 5, 'Alternative Contact No.:', 0, 0, 'L', true);
-$pdf->SetFont('Arial', '', 9);
-$pdf->Cell(126, 5, $tdp_focal_alt_contact_no, 0, 0, 'L', true);
-$pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(22, 5, 'Contact No.:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(146, 5, $tdp_focal_contact_no, 0, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(42, 5, 'Alternative Contact No.:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 9);
+    $pdf->Cell(126, 5, $tdp_focal_alt_contact_no, 0, 0, 'L', true);
+    $pdf->Ln();
 }
 //END
 $pdf->AddPage();
@@ -711,41 +711,6 @@ if ($resultCheck > 0) {
 $pdf->addPage();
 //End
 
-//I.E OTHER LOCALLY AND NATIONALLY-FUNDED STUFAPS
-$pdf->SetFont('Arial', 'B', 11);
-$pdf->SetFillColor(192, 192, 192);
-$pdf->Cell(336, 5, 'I.E OTHER LOCALLY- AND NATIONALLY-FUNDED STUFAPS', 0, 0, 'L', true);
-$pdf->Ln();
-//SPACING
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
-$pdf->Ln();
-//END
-$pdf->SetFont('Arial', 'I', 8);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 5, 'List of all locally- and nationally-funded StuFAPs availed in the institution, and number of beneficiaries per year level', 0, 0, 'L', true);
-$pdf->Ln();
-
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(42, 10, 'STUFAP', 1, 0, 'C', true);
-$pdf->Cell(42, 10, 'LOCAL/NATIONAL', 1, 0, 'C', true);
-$pdf->Cell(252, 5, 'YEAR LEVEL', 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->Cell(84, 0, '', 0, 0, 'C', true);
-$pdf->Cell(42, 5, '1ST', 1, 0, 'C', true);
-$pdf->Cell(42, 5, '2ND', 1, 0, 'C', true);
-$pdf->Cell(42, 5, '3RD', 1, 0, 'C', true);
-$pdf->Cell(42, 5, '4TH', 1, 0, 'C', true);
-$pdf->Cell(42, 5, '5TH', 1, 0, 'C', true);
-$pdf->Cell(42, 5, '6TH', 1, 0, 'C', true);
-$pdf->Ln();
-
-//Other StuFAPs
-$pdf->SetFont('Arial', '', 10);
-$pdf->SetWidths(array(42, 42, 42, 42, 42, 42, 42, 42));
-$pdf->SetAligns(array('C', 'C', 'C', 'C', 'C', 'C', 'C', 'C'));
 $sql = "SELECT *, SUM(total_stufap_1st) AS grand_total_stufap_1st, SUM(total_stufap_2nd) AS grand_total_stufap_2nd, SUM(total_stufap_3rd) AS grand_total_stufap_3rd, SUM(total_stufap_4th) AS grand_total_stufap_4th, SUM(total_stufap_5th) AS grand_total_stufap_5th, SUM(total_stufap_6th) AS grand_total_stufap_6th 
 FROM tbl_hei_other_funded_stufaps 
 WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'
@@ -753,6 +718,41 @@ ORDER BY stufap_name ASC";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 if ($resultCheck > 0) {
+    //I.E OTHER LOCALLY AND NATIONALLY-FUNDED STUFAPS
+    $pdf->SetFont('Arial', 'B', 11);
+    $pdf->SetFillColor(192, 192, 192);
+    $pdf->Cell(336, 5, 'I.E OTHER LOCALLY- AND NATIONALLY-FUNDED STUFAPS', 0, 0, 'L', true);
+    $pdf->Ln();
+    //SPACING
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
+    $pdf->Ln();
+    //END
+    $pdf->SetFont('Arial', 'I', 8);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 5, 'List of all locally- and nationally-funded StuFAPs availed in the institution, and number of beneficiaries per year level', 0, 0, 'L', true);
+    $pdf->Ln();
+
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(42, 10, 'STUFAP', 1, 0, 'C', true);
+    $pdf->Cell(42, 10, 'LOCAL/NATIONAL', 1, 0, 'C', true);
+    $pdf->Cell(252, 5, 'YEAR LEVEL', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->Cell(84, 0, '', 0, 0, 'C', true);
+    $pdf->Cell(42, 5, '1ST', 1, 0, 'C', true);
+    $pdf->Cell(42, 5, '2ND', 1, 0, 'C', true);
+    $pdf->Cell(42, 5, '3RD', 1, 0, 'C', true);
+    $pdf->Cell(42, 5, '4TH', 1, 0, 'C', true);
+    $pdf->Cell(42, 5, '5TH', 1, 0, 'C', true);
+    $pdf->Cell(42, 5, '6TH', 1, 0, 'C', true);
+    $pdf->Ln();
+
+    //Other StuFAPs
+    $pdf->SetFont('Arial', '', 10);
+    $pdf->SetWidths(array(42, 42, 42, 42, 42, 42, 42, 42));
+    $pdf->SetAligns(array('C', 'C', 'C', 'C', 'C', 'C', 'C', 'C'));
     while ($row = mysqli_fetch_assoc($result)) {
         $stufap_name = $row['stufap_name'];
         $stufap_type = $row['stufap_type'];
@@ -775,10 +775,11 @@ if ($resultCheck > 0) {
     $pdf->SetWidths(array(84, 42, 42, 42, 42, 42, 42));
     $pdf->SetAligns(array('C', 'C', 'C', 'C', 'C', 'C', 'C'));
     $pdf->row(array('TOTAL', $grand_total_stufap_1st, $grand_total_stufap_2nd, $grand_total_stufap_3rd, $grand_total_stufap_4th, $grand_total_stufap_5th, $grand_total_stufap_6th));
+
+    //END
+    $pdf->AddPage();
 }
 
-//END
-$pdf->AddPage();
 
 //Part2 STUFAP
 $pdf->SetFont('Arial', 'B', 12);
@@ -791,66 +792,66 @@ $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
 $pdf->Ln();
 //END
-if($fhe=='yes'){
-//II.A FREE HIGHER EDUCATION
-$pdf->SetFont('Arial', 'B', 11);
-$pdf->SetFillColor(192, 192, 192);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->Cell(336, 5, 'II.A FREE HIGHER EDUCATION', 0, 0, 'L', true);
-$pdf->Ln();
-//SPACING
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
-$pdf->Ln();
-//END
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(336, 5, 'TOTAL FHE BENEFICIARIES', 1, 1, 'C', true);
+if ($fhe == 'yes') {
+    //II.A FREE HIGHER EDUCATION
+    $pdf->SetFont('Arial', 'B', 11);
+    $pdf->SetFillColor(192, 192, 192);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->Cell(336, 5, 'II.A FREE HIGHER EDUCATION', 0, 0, 'L', true);
+    $pdf->Ln();
+    //SPACING
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
+    $pdf->Ln();
+    //END
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(336, 5, 'TOTAL FHE BENEFICIARIES', 1, 1, 'C', true);
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->Cell(15, 10, 'SEX', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->Cell(15, 10, 'SEX', 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
 
-$pdf->Ln();
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(15, 0, '', 0, 0, 'C', true);
-$pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-
-
-$pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-
-$pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(15, 0, '', 0, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
 
 
-$pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-$pdf->Ln();
+    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
 
-$sql = "SELECT *
+    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+
+
+    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+    $pdf->Ln();
+
+    $sql = "SELECT *
 FROM tbl_degree_programs 
 WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND  (total_fhe_1sem_1yr_male != 0 AND total_fhe_1sem_1yr_female != 0 AND total_fhe_1sem_2yr_male != 0 AND total_fhe_1sem_2yr_female != 0 AND total_fhe_1sem_3yr_male != 0 AND total_fhe_1sem_3yr_female != 0 AND total_fhe_1sem_4yr_male != 0 AND total_fhe_1sem_4yr_female != 0 AND total_fhe_1sem_5yr_male != 0 AND total_fhe_1sem_5yr_female != 0 AND total_fhe_1sem_6yr_male != 0 AND total_fhe_1sem_6yr_female != 0 AND 
 total_fhe_2sem_1yr_male != 0 AND total_fhe_2sem_1yr_female != 0 AND total_fhe_2sem_2yr_male != 0 AND total_fhe_2sem_2yr_female != 0 AND total_fhe_2sem_3yr_male != 0 AND total_fhe_2sem_3yr_female != 0 AND total_fhe_2sem_4yr_male != 0 AND total_fhe_2sem_4yr_female != 0 AND total_fhe_2sem_5yr_male != 0 AND total_fhe_2sem_5yr_female != 0 AND total_fhe_2sem_6yr_male != 0 AND total_fhe_2sem_6yr_female != 0 AND
@@ -859,185 +860,185 @@ total_fhe_sum_mid_1yr_male != 0 AND total_fhe_sum_mid_1yr_female != 0 AND total_
 
 ORDER BY program_name ASC";
 
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $program_name = $row['program_name'];
-        //1st Semester
-        $total_fhe_1sem_1yr_male = $row['total_fhe_1sem_1yr_male'];
-        $total_fhe_1sem_2yr_male = $row['total_fhe_1sem_2yr_male'];
-        $total_fhe_1sem_3yr_male = $row['total_fhe_1sem_3yr_male'];
-        $total_fhe_1sem_4yr_male = $row['total_fhe_1sem_4yr_male'];
-        $total_fhe_1sem_5yr_male = $row['total_fhe_1sem_5yr_male'];
-        $total_fhe_1sem_6yr_male = $row['total_fhe_1sem_6yr_male'];
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $program_name = $row['program_name'];
+            //1st Semester
+            $total_fhe_1sem_1yr_male = $row['total_fhe_1sem_1yr_male'];
+            $total_fhe_1sem_2yr_male = $row['total_fhe_1sem_2yr_male'];
+            $total_fhe_1sem_3yr_male = $row['total_fhe_1sem_3yr_male'];
+            $total_fhe_1sem_4yr_male = $row['total_fhe_1sem_4yr_male'];
+            $total_fhe_1sem_5yr_male = $row['total_fhe_1sem_5yr_male'];
+            $total_fhe_1sem_6yr_male = $row['total_fhe_1sem_6yr_male'];
 
-        $total_fhe_1sem_1yr_female = $row['total_fhe_1sem_1yr_female'];
-        $total_fhe_1sem_2yr_female = $row['total_fhe_1sem_2yr_female'];
-        $total_fhe_1sem_3yr_female = $row['total_fhe_1sem_3yr_female'];
-        $total_fhe_1sem_4yr_female = $row['total_fhe_1sem_4yr_female'];
-        $total_fhe_1sem_5yr_female = $row['total_fhe_1sem_5yr_female'];
-        $total_fhe_1sem_6yr_female = $row['total_fhe_1sem_6yr_female'];
+            $total_fhe_1sem_1yr_female = $row['total_fhe_1sem_1yr_female'];
+            $total_fhe_1sem_2yr_female = $row['total_fhe_1sem_2yr_female'];
+            $total_fhe_1sem_3yr_female = $row['total_fhe_1sem_3yr_female'];
+            $total_fhe_1sem_4yr_female = $row['total_fhe_1sem_4yr_female'];
+            $total_fhe_1sem_5yr_female = $row['total_fhe_1sem_5yr_female'];
+            $total_fhe_1sem_6yr_female = $row['total_fhe_1sem_6yr_female'];
 
-        //2nd Semester
-        $total_fhe_2sem_1yr_male = $row['total_fhe_2sem_1yr_male'];
-        $total_fhe_2sem_2yr_male = $row['total_fhe_2sem_2yr_male'];
-        $total_fhe_2sem_3yr_male = $row['total_fhe_2sem_3yr_male'];
-        $total_fhe_2sem_4yr_male = $row['total_fhe_2sem_4yr_male'];
-        $total_fhe_2sem_5yr_male = $row['total_fhe_2sem_5yr_male'];
-        $total_fhe_2sem_6yr_male = $row['total_fhe_2sem_6yr_male'];
+            //2nd Semester
+            $total_fhe_2sem_1yr_male = $row['total_fhe_2sem_1yr_male'];
+            $total_fhe_2sem_2yr_male = $row['total_fhe_2sem_2yr_male'];
+            $total_fhe_2sem_3yr_male = $row['total_fhe_2sem_3yr_male'];
+            $total_fhe_2sem_4yr_male = $row['total_fhe_2sem_4yr_male'];
+            $total_fhe_2sem_5yr_male = $row['total_fhe_2sem_5yr_male'];
+            $total_fhe_2sem_6yr_male = $row['total_fhe_2sem_6yr_male'];
 
-        $total_fhe_2sem_1yr_female = $row['total_fhe_2sem_1yr_female'];
-        $total_fhe_2sem_2yr_female = $row['total_fhe_2sem_2yr_female'];
-        $total_fhe_2sem_3yr_female = $row['total_fhe_2sem_3yr_female'];
-        $total_fhe_2sem_4yr_female = $row['total_fhe_2sem_4yr_female'];
-        $total_fhe_2sem_5yr_female = $row['total_fhe_2sem_5yr_female'];
-        $total_fhe_2sem_6yr_female = $row['total_fhe_2sem_6yr_female'];
+            $total_fhe_2sem_1yr_female = $row['total_fhe_2sem_1yr_female'];
+            $total_fhe_2sem_2yr_female = $row['total_fhe_2sem_2yr_female'];
+            $total_fhe_2sem_3yr_female = $row['total_fhe_2sem_3yr_female'];
+            $total_fhe_2sem_4yr_female = $row['total_fhe_2sem_4yr_female'];
+            $total_fhe_2sem_5yr_female = $row['total_fhe_2sem_5yr_female'];
+            $total_fhe_2sem_6yr_female = $row['total_fhe_2sem_6yr_female'];
 
-        //3rd Semester
-        $total_fhe_3sem_1yr_male = $row['total_fhe_3sem_1yr_male'];
-        $total_fhe_3sem_2yr_male = $row['total_fhe_3sem_2yr_male'];
-        $total_fhe_3sem_3yr_male = $row['total_fhe_3sem_3yr_male'];
-        $total_fhe_3sem_4yr_male = $row['total_fhe_3sem_4yr_male'];
-        $total_fhe_3sem_5yr_male = $row['total_fhe_3sem_5yr_male'];
-        $total_fhe_3sem_6yr_male = $row['total_fhe_3sem_6yr_male'];
+            //3rd Semester
+            $total_fhe_3sem_1yr_male = $row['total_fhe_3sem_1yr_male'];
+            $total_fhe_3sem_2yr_male = $row['total_fhe_3sem_2yr_male'];
+            $total_fhe_3sem_3yr_male = $row['total_fhe_3sem_3yr_male'];
+            $total_fhe_3sem_4yr_male = $row['total_fhe_3sem_4yr_male'];
+            $total_fhe_3sem_5yr_male = $row['total_fhe_3sem_5yr_male'];
+            $total_fhe_3sem_6yr_male = $row['total_fhe_3sem_6yr_male'];
 
-        $total_fhe_3sem_1yr_female = $row['total_fhe_3sem_1yr_female'];
-        $total_fhe_3sem_2yr_female = $row['total_fhe_3sem_2yr_female'];
-        $total_fhe_3sem_3yr_female = $row['total_fhe_3sem_3yr_female'];
-        $total_fhe_3sem_4yr_female = $row['total_fhe_3sem_4yr_female'];
-        $total_fhe_3sem_5yr_female = $row['total_fhe_3sem_5yr_female'];
-        $total_fhe_3sem_6yr_female = $row['total_fhe_3sem_6yr_female'];
+            $total_fhe_3sem_1yr_female = $row['total_fhe_3sem_1yr_female'];
+            $total_fhe_3sem_2yr_female = $row['total_fhe_3sem_2yr_female'];
+            $total_fhe_3sem_3yr_female = $row['total_fhe_3sem_3yr_female'];
+            $total_fhe_3sem_4yr_female = $row['total_fhe_3sem_4yr_female'];
+            $total_fhe_3sem_5yr_female = $row['total_fhe_3sem_5yr_female'];
+            $total_fhe_3sem_6yr_female = $row['total_fhe_3sem_6yr_female'];
 
-        //Summer Midyear
-        $total_fhe_sum_mid_1yr_male = $row['total_fhe_sum_mid_1yr_male'];
-        $total_fhe_sum_mid_2yr_male = $row['total_fhe_sum_mid_2yr_male'];
-        $total_fhe_sum_mid_3yr_male = $row['total_fhe_sum_mid_3yr_male'];
-        $total_fhe_sum_mid_4yr_male = $row['total_fhe_sum_mid_4yr_male'];
-        $total_fhe_sum_mid_5yr_male = $row['total_fhe_sum_mid_5yr_male'];
-        $total_fhe_sum_mid_6yr_male = $row['total_fhe_sum_mid_6yr_male'];
+            //Summer Midyear
+            $total_fhe_sum_mid_1yr_male = $row['total_fhe_sum_mid_1yr_male'];
+            $total_fhe_sum_mid_2yr_male = $row['total_fhe_sum_mid_2yr_male'];
+            $total_fhe_sum_mid_3yr_male = $row['total_fhe_sum_mid_3yr_male'];
+            $total_fhe_sum_mid_4yr_male = $row['total_fhe_sum_mid_4yr_male'];
+            $total_fhe_sum_mid_5yr_male = $row['total_fhe_sum_mid_5yr_male'];
+            $total_fhe_sum_mid_6yr_male = $row['total_fhe_sum_mid_6yr_male'];
 
-        $total_fhe_sum_mid_1yr_female = $row['total_fhe_sum_mid_1yr_female'];
-        $total_fhe_sum_mid_2yr_female = $row['total_fhe_sum_mid_2yr_female'];
-        $total_fhe_sum_mid_3yr_female = $row['total_fhe_sum_mid_3yr_female'];
-        $total_fhe_sum_mid_4yr_female = $row['total_fhe_sum_mid_4yr_female'];
-        $total_fhe_sum_mid_5yr_female = $row['total_fhe_sum_mid_5yr_female'];
-        $total_fhe_sum_mid_6yr_female = $row['total_fhe_sum_mid_6yr_female'];
+            $total_fhe_sum_mid_1yr_female = $row['total_fhe_sum_mid_1yr_female'];
+            $total_fhe_sum_mid_2yr_female = $row['total_fhe_sum_mid_2yr_female'];
+            $total_fhe_sum_mid_3yr_female = $row['total_fhe_sum_mid_3yr_female'];
+            $total_fhe_sum_mid_4yr_female = $row['total_fhe_sum_mid_4yr_female'];
+            $total_fhe_sum_mid_5yr_female = $row['total_fhe_sum_mid_5yr_female'];
+            $total_fhe_sum_mid_6yr_female = $row['total_fhe_sum_mid_6yr_female'];
 
-        //FIRST ROW
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(214, 234, 248);
-        $pdf->Cell(336, 5, strtoUpper($program_name), 1, 0, 'L', true);
-        $pdf->Ln();
+            //FIRST ROW
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(214, 234, 248);
+            $pdf->Cell(336, 5, strtoUpper($program_name), 1, 0, 'L', true);
+            $pdf->Ln();
 
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
-        //1st Term Male
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_6yr_male, 1, 0, 'C', true);
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
+            //1st Term Male
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_6yr_male, 1, 0, 'C', true);
 
-        //2nd Term Male
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_6yr_male, 1, 0, 'C', true);
+            //2nd Term Male
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_6yr_male, 1, 0, 'C', true);
 
-        //3rd Term Male
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_6yr_male, 1, 0, 'C', true);
+            //3rd Term Male
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_6yr_male, 1, 0, 'C', true);
 
-        //Summer Midyear Term Male
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_6yr_male, 1, 0, 'C', true);
-        $pdf->Ln();
+            //Summer Midyear Term Male
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_6yr_male, 1, 0, 'C', true);
+            $pdf->Ln();
 
-        $pdf->SetFont('Arial', 'B', 9);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
+            $pdf->SetFont('Arial', 'B', 9);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
 
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_6yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_6yr_female, 1, 0, 'C', true);
 
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_6yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_6yr_female, 1, 0, 'C', true);
 
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_6yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_6yr_female, 1, 0, 'C', true);
 
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_6yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_6yr_female, 1, 0, 'C', true);
 
-        $pdf->Ln();
+            $pdf->Ln();
 
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
 
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_1yr_male + $total_fhe_1sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_2yr_male + $total_fhe_1sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_3yr_male + $total_fhe_1sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_4yr_male + $total_fhe_1sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_5yr_male + $total_fhe_1sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_1sem_6yr_male + $total_fhe_1sem_6yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_1yr_male + $total_fhe_1sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_2yr_male + $total_fhe_1sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_3yr_male + $total_fhe_1sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_4yr_male + $total_fhe_1sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_5yr_male + $total_fhe_1sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_1sem_6yr_male + $total_fhe_1sem_6yr_female, 1, 0, 'C', true);
 
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_1yr_male + $total_fhe_2sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_2yr_male + $total_fhe_2sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_3yr_male + $total_fhe_2sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_4yr_male + $total_fhe_2sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_5yr_male + $total_fhe_2sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_2sem_6yr_male + $total_fhe_2sem_6yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_1yr_male + $total_fhe_2sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_2yr_male + $total_fhe_2sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_3yr_male + $total_fhe_2sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_4yr_male + $total_fhe_2sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_5yr_male + $total_fhe_2sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_2sem_6yr_male + $total_fhe_2sem_6yr_female, 1, 0, 'C', true);
 
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_1yr_male + $total_fhe_3sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_2yr_male + $total_fhe_3sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_3yr_male + $total_fhe_3sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_4yr_male + $total_fhe_3sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_5yr_male + $total_fhe_3sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_3sem_6yr_male + $total_fhe_3sem_6yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_1yr_male + $total_fhe_3sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_2yr_male + $total_fhe_3sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_3yr_male + $total_fhe_3sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_4yr_male + $total_fhe_3sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_5yr_male + $total_fhe_3sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_3sem_6yr_male + $total_fhe_3sem_6yr_female, 1, 0, 'C', true);
 
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_1yr_male + $total_fhe_sum_mid_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_2yr_male + $total_fhe_sum_mid_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_3yr_male + $total_fhe_sum_mid_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_4yr_male + $total_fhe_sum_mid_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_5yr_male + $total_fhe_sum_mid_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_fhe_sum_mid_6yr_male + $total_fhe_sum_mid_6yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_1yr_male + $total_fhe_sum_mid_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_2yr_male + $total_fhe_sum_mid_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_3yr_male + $total_fhe_sum_mid_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_4yr_male + $total_fhe_sum_mid_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_5yr_male + $total_fhe_sum_mid_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_6yr_male + $total_fhe_sum_mid_6yr_female, 1, 0, 'C', true);
 
-        $pdf->Ln();
-    }
-    $sql = "SELECT *, 
+            $pdf->Ln();
+        }
+        $sql = "SELECT *, 
     SUM(total_fhe_1sem_1yr_male) AS grand_total_fhe_1sem_1yr_male, 
     SUM(total_fhe_1sem_1yr_female) AS grand_total_fhe_1sem_1yr_female, 
     SUM(total_fhe_1sem_2yr_male) AS grand_total_fhe_1sem_2yr_male, 
@@ -1093,233 +1094,233 @@ if ($resultCheck > 0) {
 FROM tbl_degree_programs 
 WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
 
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                //Grand Total
+                $grand_total_fhe_1sem_1yr_male = $row['grand_total_fhe_1sem_1yr_male'];
+                $grand_total_fhe_1sem_1yr_female = $row['grand_total_fhe_1sem_1yr_female'];
+                $grand_total_fhe_1sem_2yr_male = $row['grand_total_fhe_1sem_2yr_male'];
+                $grand_total_fhe_1sem_2yr_female = $row['grand_total_fhe_1sem_2yr_female'];
+                $grand_total_fhe_1sem_3yr_male = $row['grand_total_fhe_1sem_3yr_male'];
+                $grand_total_fhe_1sem_3yr_female = $row['grand_total_fhe_1sem_3yr_female'];
+                $grand_total_fhe_1sem_4yr_male = $row['grand_total_fhe_1sem_4yr_male'];
+                $grand_total_fhe_1sem_4yr_female = $row['grand_total_fhe_1sem_4yr_female'];
+                $grand_total_fhe_1sem_5yr_male = $row['grand_total_fhe_1sem_5yr_male'];
+                $grand_total_fhe_1sem_5yr_female = $row['grand_total_fhe_1sem_5yr_female'];
+                $grand_total_fhe_1sem_6yr_male = $row['grand_total_fhe_1sem_6yr_male'];
+                $grand_total_fhe_1sem_6yr_female = $row['grand_total_fhe_1sem_6yr_female'];
+
+                $grand_total_fhe_2sem_1yr_male = $row['grand_total_fhe_2sem_1yr_male'];
+                $grand_total_fhe_2sem_1yr_female = $row['grand_total_fhe_2sem_1yr_female'];
+                $grand_total_fhe_2sem_2yr_male = $row['grand_total_fhe_2sem_2yr_male'];
+                $grand_total_fhe_2sem_2yr_female = $row['grand_total_fhe_2sem_2yr_female'];
+                $grand_total_fhe_2sem_3yr_male = $row['grand_total_fhe_2sem_3yr_male'];
+                $grand_total_fhe_2sem_3yr_female = $row['grand_total_fhe_2sem_3yr_female'];
+                $grand_total_fhe_2sem_4yr_male = $row['grand_total_fhe_2sem_4yr_male'];
+                $grand_total_fhe_2sem_4yr_female = $row['grand_total_fhe_2sem_4yr_female'];
+                $grand_total_fhe_2sem_5yr_male = $row['grand_total_fhe_2sem_5yr_male'];
+                $grand_total_fhe_2sem_5yr_female = $row['grand_total_fhe_2sem_5yr_female'];
+                $grand_total_fhe_2sem_6yr_male = $row['grand_total_fhe_2sem_6yr_male'];
+                $grand_total_fhe_2sem_6yr_female = $row['grand_total_fhe_2sem_6yr_female'];
+
+                $grand_total_fhe_3sem_1yr_male = $row['grand_total_fhe_3sem_1yr_male'];
+                $grand_total_fhe_3sem_1yr_female = $row['grand_total_fhe_3sem_1yr_female'];
+                $grand_total_fhe_3sem_2yr_male = $row['grand_total_fhe_3sem_2yr_male'];
+                $grand_total_fhe_3sem_2yr_female = $row['grand_total_fhe_3sem_2yr_female'];
+                $grand_total_fhe_3sem_3yr_male = $row['grand_total_fhe_3sem_3yr_male'];
+                $grand_total_fhe_3sem_3yr_female = $row['grand_total_fhe_3sem_3yr_female'];
+                $grand_total_fhe_3sem_4yr_male = $row['grand_total_fhe_3sem_4yr_male'];
+                $grand_total_fhe_3sem_4yr_female = $row['grand_total_fhe_3sem_4yr_female'];
+                $grand_total_fhe_3sem_5yr_male = $row['grand_total_fhe_3sem_5yr_male'];
+                $grand_total_fhe_3sem_5yr_female = $row['grand_total_fhe_3sem_5yr_female'];
+                $grand_total_fhe_3sem_6yr_male = $row['grand_total_fhe_3sem_6yr_male'];
+                $grand_total_fhe_3sem_6yr_female = $row['grand_total_fhe_3sem_6yr_female'];
+
+                $grand_total_fhe_sum_mid_1yr_male = $row['grand_total_fhe_sum_mid_1yr_male'];
+                $grand_total_fhe_sum_mid_1yr_female = $row['grand_total_fhe_sum_mid_1yr_female'];
+                $grand_total_fhe_sum_mid_2yr_male = $row['grand_total_fhe_sum_mid_2yr_male'];
+                $grand_total_fhe_sum_mid_2yr_female = $row['grand_total_fhe_sum_mid_2yr_female'];
+                $grand_total_fhe_sum_mid_3yr_male = $row['grand_total_fhe_sum_mid_3yr_male'];
+                $grand_total_fhe_sum_mid_3yr_female = $row['grand_total_fhe_sum_mid_3yr_female'];
+                $grand_total_fhe_sum_mid_4yr_male = $row['grand_total_fhe_sum_mid_4yr_male'];
+                $grand_total_fhe_sum_mid_4yr_female = $row['grand_total_fhe_sum_mid_4yr_female'];
+                $grand_total_fhe_sum_mid_5yr_male = $row['grand_total_fhe_sum_mid_5yr_male'];
+                $grand_total_fhe_sum_mid_5yr_female = $row['grand_total_fhe_sum_mid_5yr_female'];
+                $grand_total_fhe_sum_mid_6yr_male = $row['grand_total_fhe_sum_mid_6yr_male'];
+                $grand_total_fhe_sum_mid_6yr_female = $row['grand_total_fhe_sum_mid_6yr_female'];
+            }
+        }
+        //Grand Total
+        //FIRST ROW
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(214, 234, 248);
+        $pdf->Cell(336, 5, 'GRAND TOTAL', 1, 0, 'L', true);
+        $pdf->Ln();
+
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
+        //1st Term Male
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_1yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_2yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_3yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_4yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_5yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_6yr_male, 1, 0, 'C', true);
+
+        //2nd Term Male
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_1yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_2yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_3yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_4yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_5yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_6yr_male, 1, 0, 'C', true);
+
+        //3rd Term Male
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_2yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_3yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_4yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_male, 1, 0, 'C', true);
+
+        //Summer Midyear Term Male
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_2yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_3yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_4yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_5yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_male, 1, 0, 'C', true);
+        $pdf->Ln();
+
+        $pdf->SetFont('Arial', 'B', 9);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_1yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_2yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_3yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_4yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_5yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_6yr_female, 1, 0, 'C', true);
+
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_1yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_2yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_3yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_4yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_5yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_6yr_female, 1, 0, 'C', true);
+
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_1yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_2yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_3yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_4yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_female, 1, 0, 'C', true);
+
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_2yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_3yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_4yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_5yr_female, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_female, 1, 0, 'C', true);
+
+        $pdf->Ln();
+        //Grand Total
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_1yr_female + $grand_total_fhe_1sem_1yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_2yr_female + $grand_total_fhe_1sem_2yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_3yr_female + $grand_total_fhe_1sem_3yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_4yr_female + $grand_total_fhe_1sem_4yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_5yr_female + $grand_total_fhe_1sem_5yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_6yr_female + $grand_total_fhe_1sem_6yr_male, 1, 0, 'C', true);
+
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_1yr_female + $grand_total_fhe_2sem_1yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_2yr_female + $grand_total_fhe_2sem_2yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_3yr_female + $grand_total_fhe_2sem_3yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_4yr_female + $grand_total_fhe_2sem_4yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_5yr_female + $grand_total_fhe_2sem_5yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_6yr_female + $grand_total_fhe_2sem_6yr_male, 1, 0, 'C', true);
+
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_1yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_2yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_3yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_4yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_female + $grand_total_fhe_sum_mid_1yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_2yr_female + $grand_total_fhe_sum_mid_2yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_3yr_female + $grand_total_fhe_sum_mid_3yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_4yr_female + $grand_total_fhe_sum_mid_4yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_5yr_female + $grand_total_fhe_sum_mid_5yr_male, 1, 0, 'C', true);
+        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_female + $grand_total_fhe_sum_mid_6yr_male, 1, 0, 'C', true);
+
+        $pdf->Ln();
+    }
+
+    //END
+    $pdf->addPage();
+
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(336, 5, 'TOTAL FHE BENEFICIARIES', 1, 1, 'C', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->Cell(15, 5, 'SEX', 1, 0, 'C', true);
+    $pdf->Cell(160.5, 5, 'GRADUATED BENEFICIARIES', 1, 0, 'C', true);
+    $pdf->Cell(160.5, 5, 'EXCEEDED THE MAXIMUM RESIDENCY RULE', 1, 0, 'C', true);
+    $pdf->Ln();
+
+    $sql = "SELECT * FROM tbl_degree_programs 
+WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_fhe_graduated_male != 0 AND total_fhe_graduated_female != 0 AND total_fhe_exceeded_mrr_male != 0 AND total_fhe_exceeded_mrr_female != 0)
+ORDER BY program_name ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-            //Grand Total
-            $grand_total_fhe_1sem_1yr_male = $row['grand_total_fhe_1sem_1yr_male'];
-            $grand_total_fhe_1sem_1yr_female = $row['grand_total_fhe_1sem_1yr_female'];
-            $grand_total_fhe_1sem_2yr_male = $row['grand_total_fhe_1sem_2yr_male'];
-            $grand_total_fhe_1sem_2yr_female = $row['grand_total_fhe_1sem_2yr_female'];
-            $grand_total_fhe_1sem_3yr_male = $row['grand_total_fhe_1sem_3yr_male'];
-            $grand_total_fhe_1sem_3yr_female = $row['grand_total_fhe_1sem_3yr_female'];
-            $grand_total_fhe_1sem_4yr_male = $row['grand_total_fhe_1sem_4yr_male'];
-            $grand_total_fhe_1sem_4yr_female = $row['grand_total_fhe_1sem_4yr_female'];
-            $grand_total_fhe_1sem_5yr_male = $row['grand_total_fhe_1sem_5yr_male'];
-            $grand_total_fhe_1sem_5yr_female = $row['grand_total_fhe_1sem_5yr_female'];
-            $grand_total_fhe_1sem_6yr_male = $row['grand_total_fhe_1sem_6yr_male'];
-            $grand_total_fhe_1sem_6yr_female = $row['grand_total_fhe_1sem_6yr_female'];
+            $program_name = $row['program_name'];
+            $total_fhe_graduated_male = $row['total_fhe_graduated_male'];
+            $total_fhe_graduated_female = $row['total_fhe_graduated_female'];
+            $total_fhe_exceeded_mrr_male = $row['total_fhe_exceeded_mrr_male'];
+            $total_fhe_exceeded_mrr_female = $row['total_fhe_exceeded_mrr_female'];
 
-            $grand_total_fhe_2sem_1yr_male = $row['grand_total_fhe_2sem_1yr_male'];
-            $grand_total_fhe_2sem_1yr_female = $row['grand_total_fhe_2sem_1yr_female'];
-            $grand_total_fhe_2sem_2yr_male = $row['grand_total_fhe_2sem_2yr_male'];
-            $grand_total_fhe_2sem_2yr_female = $row['grand_total_fhe_2sem_2yr_female'];
-            $grand_total_fhe_2sem_3yr_male = $row['grand_total_fhe_2sem_3yr_male'];
-            $grand_total_fhe_2sem_3yr_female = $row['grand_total_fhe_2sem_3yr_female'];
-            $grand_total_fhe_2sem_4yr_male = $row['grand_total_fhe_2sem_4yr_male'];
-            $grand_total_fhe_2sem_4yr_female = $row['grand_total_fhe_2sem_4yr_female'];
-            $grand_total_fhe_2sem_5yr_male = $row['grand_total_fhe_2sem_5yr_male'];
-            $grand_total_fhe_2sem_5yr_female = $row['grand_total_fhe_2sem_5yr_female'];
-            $grand_total_fhe_2sem_6yr_male = $row['grand_total_fhe_2sem_6yr_male'];
-            $grand_total_fhe_2sem_6yr_female = $row['grand_total_fhe_2sem_6yr_female'];
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(214, 234, 248);
+            $pdf->Cell(336, 5, strtoUpper($program_name), 1, 0, 'L', true);
+            $pdf->Ln();
 
-            $grand_total_fhe_3sem_1yr_male = $row['grand_total_fhe_3sem_1yr_male'];
-            $grand_total_fhe_3sem_1yr_female = $row['grand_total_fhe_3sem_1yr_female'];
-            $grand_total_fhe_3sem_2yr_male = $row['grand_total_fhe_3sem_2yr_male'];
-            $grand_total_fhe_3sem_2yr_female = $row['grand_total_fhe_3sem_2yr_female'];
-            $grand_total_fhe_3sem_3yr_male = $row['grand_total_fhe_3sem_3yr_male'];
-            $grand_total_fhe_3sem_3yr_female = $row['grand_total_fhe_3sem_3yr_female'];
-            $grand_total_fhe_3sem_4yr_male = $row['grand_total_fhe_3sem_4yr_male'];
-            $grand_total_fhe_3sem_4yr_female = $row['grand_total_fhe_3sem_4yr_female'];
-            $grand_total_fhe_3sem_5yr_male = $row['grand_total_fhe_3sem_5yr_male'];
-            $grand_total_fhe_3sem_5yr_female = $row['grand_total_fhe_3sem_5yr_female'];
-            $grand_total_fhe_3sem_6yr_male = $row['grand_total_fhe_3sem_6yr_male'];
-            $grand_total_fhe_3sem_6yr_female = $row['grand_total_fhe_3sem_6yr_female'];
+            $pdf->SetFillColor(236, 240, 241);
+            $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(160.5, 5, $total_fhe_graduated_male, 1, 0, 'C', true);
+            $pdf->Cell(160.5, 5, $total_fhe_exceeded_mrr_male, 1, 0, 'C', true);;
+            $pdf->Ln();
+            $pdf->SetFillColor(236, 240, 241);
+            $pdf->SetFont('Arial', 'B', 9);
+            $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(160.5, 5, $total_fhe_graduated_female, 1, 0, 'C', true);
+            $pdf->Cell(160.5, 5, $total_fhe_exceeded_mrr_female, 1, 0, 'C', true);;
+            $pdf->Ln();
 
-            $grand_total_fhe_sum_mid_1yr_male = $row['grand_total_fhe_sum_mid_1yr_male'];
-            $grand_total_fhe_sum_mid_1yr_female = $row['grand_total_fhe_sum_mid_1yr_female'];
-            $grand_total_fhe_sum_mid_2yr_male = $row['grand_total_fhe_sum_mid_2yr_male'];
-            $grand_total_fhe_sum_mid_2yr_female = $row['grand_total_fhe_sum_mid_2yr_female'];
-            $grand_total_fhe_sum_mid_3yr_male = $row['grand_total_fhe_sum_mid_3yr_male'];
-            $grand_total_fhe_sum_mid_3yr_female = $row['grand_total_fhe_sum_mid_3yr_female'];
-            $grand_total_fhe_sum_mid_4yr_male = $row['grand_total_fhe_sum_mid_4yr_male'];
-            $grand_total_fhe_sum_mid_4yr_female = $row['grand_total_fhe_sum_mid_4yr_female'];
-            $grand_total_fhe_sum_mid_5yr_male = $row['grand_total_fhe_sum_mid_5yr_male'];
-            $grand_total_fhe_sum_mid_5yr_female = $row['grand_total_fhe_sum_mid_5yr_female'];
-            $grand_total_fhe_sum_mid_6yr_male = $row['grand_total_fhe_sum_mid_6yr_male'];
-            $grand_total_fhe_sum_mid_6yr_female = $row['grand_total_fhe_sum_mid_6yr_female'];
+            $pdf->SetFillColor(236, 240, 241);
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(160.5, 5, $total_fhe_graduated_male + $total_fhe_graduated_female, 1, 0, 'C', true);
+            $pdf->Cell(160.5, 5, $total_fhe_exceeded_mrr_male + $total_fhe_exceeded_mrr_female, 1, 0, 'C', true);;
+            $pdf->Ln();
         }
-    }
-    //Grand Total
-    //FIRST ROW
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(214, 234, 248);
-    $pdf->Cell(336, 5, 'GRAND TOTAL', 1, 0, 'L', true);
-    $pdf->Ln();
-
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
-    //1st Term Male
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_1yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_2yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_3yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_4yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_5yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_6yr_male, 1, 0, 'C', true);
-
-    //2nd Term Male
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_1yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_2yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_3yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_4yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_5yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_6yr_male, 1, 0, 'C', true);
-
-    //3rd Term Male
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_2yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_3yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_4yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_male, 1, 0, 'C', true);
-
-    //Summer Midyear Term Male
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_2yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_3yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_4yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_5yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_male, 1, 0, 'C', true);
-    $pdf->Ln();
-
-    $pdf->SetFont('Arial', 'B', 9);
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_1yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_2yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_3yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_4yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_5yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_6yr_female, 1, 0, 'C', true);
-
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_1yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_2yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_3yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_4yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_5yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_6yr_female, 1, 0, 'C', true);
-
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_1yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_2yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_3yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_4yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_female, 1, 0, 'C', true);
-
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_2yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_3yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_4yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_5yr_female, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_female, 1, 0, 'C', true);
-
-    $pdf->Ln();
-    //Grand Total
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_1yr_female + $grand_total_fhe_1sem_1yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_2yr_female + $grand_total_fhe_1sem_2yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_3yr_female + $grand_total_fhe_1sem_3yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_4yr_female + $grand_total_fhe_1sem_4yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_5yr_female + $grand_total_fhe_1sem_5yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_1sem_6yr_female + $grand_total_fhe_1sem_6yr_male, 1, 0, 'C', true);
-
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_1yr_female + $grand_total_fhe_2sem_1yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_2yr_female + $grand_total_fhe_2sem_2yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_3yr_female + $grand_total_fhe_2sem_3yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_4yr_female + $grand_total_fhe_2sem_4yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_5yr_female + $grand_total_fhe_2sem_5yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_6yr_female + $grand_total_fhe_2sem_6yr_male, 1, 0, 'C', true);
-
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_1yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_2yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_3yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_4yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_female + $grand_total_fhe_sum_mid_1yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_2yr_female + $grand_total_fhe_sum_mid_2yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_3yr_female + $grand_total_fhe_sum_mid_3yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_4yr_female + $grand_total_fhe_sum_mid_4yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_5yr_female + $grand_total_fhe_sum_mid_5yr_male, 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_female + $grand_total_fhe_sum_mid_6yr_male, 1, 0, 'C', true);
-
-    $pdf->Ln();
-}
-
-//END
-$pdf->addPage();
-
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(336, 5, 'TOTAL FHE BENEFICIARIES', 1, 1, 'C', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->Cell(15, 5, 'SEX', 1, 0, 'C', true);
-$pdf->Cell(160.5, 5, 'GRADUATED BENEFICIARIES', 1, 0, 'C', true);
-$pdf->Cell(160.5, 5, 'EXCEEDED THE MAXIMUM RESIDENCY RULE', 1, 0, 'C', true);
-$pdf->Ln();
-
-$sql = "SELECT * FROM tbl_degree_programs 
-WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_fhe_graduated_male != 0 AND total_fhe_graduated_female != 0 AND total_fhe_exceeded_mrr_male != 0 AND total_fhe_exceeded_mrr_female != 0)
-ORDER BY program_name ASC";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $program_name = $row['program_name'];
-        $total_fhe_graduated_male = $row['total_fhe_graduated_male'];
-        $total_fhe_graduated_female = $row['total_fhe_graduated_female'];
-        $total_fhe_exceeded_mrr_male = $row['total_fhe_exceeded_mrr_male'];
-        $total_fhe_exceeded_mrr_female = $row['total_fhe_exceeded_mrr_female'];
-
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(214, 234, 248);
-        $pdf->Cell(336, 5, strtoUpper($program_name), 1, 0, 'L', true);
-        $pdf->Ln();
-
-        $pdf->SetFillColor(236, 240, 241);
-        $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(160.5, 5, $total_fhe_graduated_male, 1, 0, 'C', true);
-        $pdf->Cell(160.5, 5, $total_fhe_exceeded_mrr_male, 1, 0, 'C', true);;
-        $pdf->Ln();
-        $pdf->SetFillColor(236, 240, 241);
-        $pdf->SetFont('Arial', 'B', 9);
-        $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(160.5, 5, $total_fhe_graduated_female, 1, 0, 'C', true);
-        $pdf->Cell(160.5, 5, $total_fhe_exceeded_mrr_female, 1, 0, 'C', true);;
-        $pdf->Ln();
-
-        $pdf->SetFillColor(236, 240, 241);
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(160.5, 5, $total_fhe_graduated_male + $total_fhe_graduated_female, 1, 0, 'C', true);
-        $pdf->Cell(160.5, 5, $total_fhe_exceeded_mrr_male + $total_fhe_exceeded_mrr_female, 1, 0, 'C', true);;
-        $pdf->Ln();
-    }
-    $sql = "SELECT *, 
+        $sql = "SELECT *, 
     SUM(total_fhe_graduated_male) AS grand_total_fhe_graduated_male,
     SUM(total_fhe_graduated_female) AS grand_total_fhe_graduated_female,
     SUM(total_fhe_exceeded_mrr_male) AS grand_total_fhe_exceeded_mrr_male,
@@ -1327,16 +1328,16 @@ if ($resultCheck > 0) {
     FROM tbl_degree_programs 
     WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_fhe_graduated_male != 0 AND total_fhe_graduated_female != 0 AND total_fhe_exceeded_mrr_male != 0 AND total_fhe_exceeded_mrr_female != 0)
     ORDER BY program_name ASC";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $grand_total_fhe_graduated_male = $row['grand_total_fhe_graduated_male'];
-            $grand_total_fhe_graduated_female = $row['grand_total_fhe_graduated_female'];
-            $grand_total_fhe_exceeded_mrr_male = $row['grand_total_fhe_exceeded_mrr_male'];
-            $grand_total_fhe_exceeded_mrr_female = $row['grand_total_fhe_exceeded_mrr_female'];
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $grand_total_fhe_graduated_male = $row['grand_total_fhe_graduated_male'];
+                $grand_total_fhe_graduated_female = $row['grand_total_fhe_graduated_female'];
+                $grand_total_fhe_exceeded_mrr_male = $row['grand_total_fhe_exceeded_mrr_male'];
+                $grand_total_fhe_exceeded_mrr_female = $row['grand_total_fhe_exceeded_mrr_female'];
+            }
         }
-    }
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetFillColor(214, 234, 248);
         $pdf->Cell(336, 5, 'GRAND TOTAL', 1, 0, 'L', true);
@@ -1364,82 +1365,82 @@ if ($resultCheck > 0) {
         $pdf->Cell(160.5, 5, $grand_total_fhe_graduated_male + $grand_total_fhe_graduated_female, 1, 0, 'C', true);
         $pdf->Cell(160.5, 5, $grand_total_fhe_exceeded_mrr_male + $grand_total_fhe_exceeded_mrr_female, 1, 0, 'C', true);;
         $pdf->Ln();
-}
-
-$pdf->addPage();
-
-//TES CATEGORY
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetTextColor(0, 0, 0);
-
-$pdf->Cell(336, 5, 'TOTAL NO. OF FHE GRANTEES WHO ARE UNDER 4PS-SWDI AND/OR LISTAHANAN BENEFICIARIES', 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->Cell(40, 10, 'FHE CATEGORY', 1, 0, 'C', true);
-$pdf->Cell(74, 5, '1ST TERM', 1, 0, 'C', true);
-$pdf->Cell(74, 5, '2ND TERM', 1, 0, 'C', true);
-$pdf->Cell(74, 5, '3RD TERM', 1, 0, 'C', true);
-$pdf->Cell(74, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-
-$pdf->Ln();
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(40, 0, '', 0, 0, 'C', true);
-$pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
-
-$pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
-
-$pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
-
-$pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Ln();
-
-$sql = "SELECT * FROM tbl_fhe_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $fhe_category = $row['fhe_category'];
-
-        //1st Semester
-        $total_fhe_1st_male = $row['total_fhe_1st_male'];
-        $total_fhe_1st_female = $row['total_fhe_1st_female'];
-       
-        //2nd Semester
-        $total_fhe_2nd_male = $row['total_fhe_2nd_male'];
-        $total_fhe_2nd_female = $row['total_fhe_2nd_female'];
-
-        //3rd Semester
-        $total_fhe_3rd_male = $row['total_fhe_3rd_male'];
-        $total_fhe_3rd_female = $row['total_fhe_3rd_female'];
-
-        //2nd Semester
-        $total_fhe_sum_mid_male = $row['total_fhe_sum_mid_male'];
-        $total_fhe_sum_mid_female = $row['total_fhe_sum_mid_female'];
-
-        //FIRST ROW
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(40, 5, $fhe_category, 1, 0, 'C', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(37, 5, $total_fhe_1st_male, 1, 0, 'C', true);
-        $pdf->Cell(37, 5, $total_fhe_1st_female, 1, 0, 'C', true);
-
-        $pdf->Cell(37, 5, $total_fhe_2nd_male, 1, 0, 'C', true);
-        $pdf->Cell(37, 5, $total_fhe_2nd_female, 1, 0, 'C', true);
-
-        $pdf->Cell(37, 5, $total_fhe_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(37, 5, $total_fhe_3rd_female, 1, 0, 'C', true);
-
-        $pdf->Cell(37, 5, $total_fhe_sum_mid_male, 1, 0, 'C', true);
-        $pdf->Cell(37, 5, $total_fhe_sum_mid_female, 1, 0, 'C', true);
-
-        $pdf->Ln();
     }
-    $sql = "SELECT *,
+
+    $pdf->addPage();
+
+    //TES CATEGORY
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetTextColor(0, 0, 0);
+
+    $pdf->Cell(336, 5, 'TOTAL NO. OF FHE GRANTEES WHO ARE UNDER 4PS-SWDI AND/OR LISTAHANAN BENEFICIARIES', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->Cell(40, 10, 'FHE CATEGORY', 1, 0, 'C', true);
+    $pdf->Cell(74, 5, '1ST TERM', 1, 0, 'C', true);
+    $pdf->Cell(74, 5, '2ND TERM', 1, 0, 'C', true);
+    $pdf->Cell(74, 5, '3RD TERM', 1, 0, 'C', true);
+    $pdf->Cell(74, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+
+    $pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(40, 0, '', 0, 0, 'C', true);
+    $pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
+
+    $pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
+
+    $pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
+
+    $pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Ln();
+
+    $sql = "SELECT * FROM tbl_fhe_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $fhe_category = $row['fhe_category'];
+
+            //1st Semester
+            $total_fhe_1st_male = $row['total_fhe_1st_male'];
+            $total_fhe_1st_female = $row['total_fhe_1st_female'];
+
+            //2nd Semester
+            $total_fhe_2nd_male = $row['total_fhe_2nd_male'];
+            $total_fhe_2nd_female = $row['total_fhe_2nd_female'];
+
+            //3rd Semester
+            $total_fhe_3rd_male = $row['total_fhe_3rd_male'];
+            $total_fhe_3rd_female = $row['total_fhe_3rd_female'];
+
+            //2nd Semester
+            $total_fhe_sum_mid_male = $row['total_fhe_sum_mid_male'];
+            $total_fhe_sum_mid_female = $row['total_fhe_sum_mid_female'];
+
+            //FIRST ROW
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(40, 5, $fhe_category, 1, 0, 'C', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->Cell(37, 5, $total_fhe_1st_male, 1, 0, 'C', true);
+            $pdf->Cell(37, 5, $total_fhe_1st_female, 1, 0, 'C', true);
+
+            $pdf->Cell(37, 5, $total_fhe_2nd_male, 1, 0, 'C', true);
+            $pdf->Cell(37, 5, $total_fhe_2nd_female, 1, 0, 'C', true);
+
+            $pdf->Cell(37, 5, $total_fhe_3rd_male, 1, 0, 'C', true);
+            $pdf->Cell(37, 5, $total_fhe_3rd_female, 1, 0, 'C', true);
+
+            $pdf->Cell(37, 5, $total_fhe_sum_mid_male, 1, 0, 'C', true);
+            $pdf->Cell(37, 5, $total_fhe_sum_mid_female, 1, 0, 'C', true);
+
+            $pdf->Ln();
+        }
+        $sql = "SELECT *,
     SUM(total_fhe_1st_male) AS grand_total_fhe_1st_male, 
     SUM(total_fhe_1st_female) AS grand_total_fhe_1st_female,
     SUM(total_fhe_2nd_male) AS grand_total_fhe_2nd_male, 
@@ -1450,544 +1451,542 @@ if ($resultCheck > 0) {
     SUM(total_fhe_sum_mid_female) AS grand_total_fhe_sum_mid_female
     FROM tbl_fhe_category 
     WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                //1st Semester
+                $grand_total_fhe_1st_male = $row['grand_total_fhe_1st_male'];
+                $grand_total_fhe_1st_female = $row['grand_total_fhe_1st_female'];
+
+                //2nd Semester
+                $grand_total_fhe_2nd_male = $row['grand_total_fhe_2nd_male'];
+                $grand_total_fhe_2nd_female = $row['grand_total_fhe_2nd_female'];
+
+                //3rd Semester
+                $grand_total_fhe_3rd_male = $row['grand_total_fhe_3rd_male'];
+                $grand_total_fhe_3rd_female = $row['grand_total_fhe_3rd_female'];
+
+                //Summer Midyear
+                $grand_total_fhe_sum_mid_male = $row['grand_total_fhe_sum_mid_male'];
+                $grand_total_fhe_sum_mid_female = $row['grand_total_fhe_sum_mid_female'];
+            }
+        }
+        //FIRST ROW
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(40, 5, 'TOTAL', 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $grand_total_fhe_1st_male, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $grand_total_fhe_1st_female, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $grand_total_fhe_2nd_male, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $grand_total_fhe_2nd_female, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $grand_total_fhe_3rd_male, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $grand_total_fhe_3rd_female, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $grand_total_fhe_sum_mid_male, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $grand_total_fhe_sum_mid_female, 1, 0, 'C', true);
+    }
+
+    $pdf->addPage();
+
+    // NO. OF FHE BENEFICIARIES WHO OPTED OUT OF FHE
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell($totalWidth, 5, 'NO. OF FHE BENEFICIARIES WHO OPTED OUT OF FHE', 0, 0, 'L', true);
+    $pdf->Ln();
+
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->Cell(15, 5, 'SEX', 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+    $pdf->Ln();
+
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetFont('Arial', 'B', 9);
+    $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 10);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(80.25, 5, $total_fhe_opt_out_1st_male, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_opt_out_2nd_male, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_male, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_male, 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetFont('Arial', 'B', 9);
+    $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 10);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(80.25, 5, $total_fhe_opt_out_1st_female, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_opt_out_2nd_female, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_female, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_female, 1, 0, 'C', true);
+    $pdf->Ln();
+
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(80.25, 5, $total_fhe_opt_out_1st_male + $total_fhe_opt_out_1st_female, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_opt_out_2nd_male + $total_fhe_opt_out_2nd_female, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_male + $total_fhe_opt_out_3rd_female, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_male + $total_fhe_opt_out_summer_midyear_female, 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->Ln();
+
+    //end
+
+    // NO. OF FHE BENEFICIARIES WHO VOLUNTARILY CONTRIBUTED FOR FHE
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell($totalWidth, 5, 'NO. OF FHE BENEFICIARIES WHO VOLUNTARILY CONTRIBUTED FOR FHE', 0, 0, 'L', true);
+    $pdf->Ln();
+
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->Cell(15, 5, 'SEX', 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+    $pdf->Ln();
+
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetFont('Arial', 'B', 9);
+    $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 10);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_1st_male, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_2nd_male, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_3rd_male, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_summer_midyear_male, 1, 0, 'C', true);
+    $pdf->Ln();
+
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetFont('Arial', 'B', 9);
+    $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
+    $pdf->SetFont('Arial', '', 10);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_1st_female, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_2nd_female, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_3rd_female, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_summer_midyear_female, 1, 0, 'C', true);
+    $pdf->Ln();
+
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_1st_male + $total_fhe_vol_cont_1st_female, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_2nd_male + $total_fhe_vol_cont_2nd_female, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_3rd_male + $total_fhe_vol_cont_3rd_female, 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_summer_midyear_male + $total_fhe_vol_cont_summer_midyear_female, 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->Ln();
+
+    //end
+
+
+    // REASONS FOR DROPPING
+
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(190, 5, 'NO. OF FHE BENEFICIARIES WHO DROPPED', 0, 0, 'L', true);
+    $pdf->Ln();
+
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetTextColor(0, 0, 0);
+
+    $pdf->Cell(176, 10, 'REASONS FOR DROPPING', 1, 0, 'C', true);
+
+    $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(176, 0, '', 0, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Ln();
+
+    $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE' ORDER BY reason ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-        //1st Semester
-        $grand_total_fhe_1st_male = $row['grand_total_fhe_1st_male'];
-        $grand_total_fhe_1st_female = $row['grand_total_fhe_1st_female'];
+            $reason = $row['reason'];
+            $total_dropout_1st_male = $row['total_dropout_1st_male'];
+            $total_dropout_1st_female = $row['total_dropout_1st_female'];
+            $total_dropout_2nd_male = $row['total_dropout_2nd_male'];
+            $total_dropout_2nd_female = $row['total_dropout_2nd_female'];
+            $total_dropout_3rd_male = $row['total_dropout_3rd_male'];
+            $total_dropout_3rd_female = $row['total_dropout_3rd_female'];
+            $total_dropout_sum_mid_male = $row['total_dropout_sum_mid_male'];
+            $total_dropout_sum_mid_female = $row['total_dropout_sum_mid_female'];
 
-        //2nd Semester
-        $grand_total_fhe_2nd_male = $row['grand_total_fhe_2nd_male'];
-        $grand_total_fhe_2nd_female = $row['grand_total_fhe_2nd_female'];
+            $pdf->SetFillColor(255, 255, 255);
+            //FIRST ROW
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->Cell(176, 5, $reason, 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->Cell(20, 5, $total_dropout_1st_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_1st_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_2nd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_3rd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_sum_mid_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_sum_mid_female, 1, 0, 'C', true);
 
-        //3rd Semester
-        $grand_total_fhe_3rd_male = $row['grand_total_fhe_3rd_male'];
-        $grand_total_fhe_3rd_female = $row['grand_total_fhe_3rd_female'];
-
-        //Summer Midyear
-        $grand_total_fhe_sum_mid_male = $row['grand_total_fhe_sum_mid_male'];
-        $grand_total_fhe_sum_mid_female = $row['grand_total_fhe_sum_mid_female'];
+            //END
+            $pdf->Ln();
         }
     }
-    //FIRST ROW
+
+    //END
+    $sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
+FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE'";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $total_1st_male = $row['total_1st_male'];
+            $total_1st_female = $row['total_1st_female'];
+            $total_2nd_male = $row['total_2nd_male'];
+            $total_2nd_female = $row['total_2nd_female'];
+            $total_3rd_male = $row['total_3rd_male'];
+            $total_3rd_female = $row['total_3rd_female'];
+            $total_sum_mid_male = $row['total_sum_mid_male'];
+            $total_sum_mid_female = $row['total_sum_mid_female'];
+        }
+    }
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
+    $pdf->Cell(20, 5, $total_1st_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_1st_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_2nd_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_2nd_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_3rd_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
+
+    //END
+    $pdf->Ln();
+    $pdf->Ln();
+
+    // REASONS FOR LEAVE OF ABSENCE (LOA)
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(40, 5, 'TOTAL', 1, 0, 'C', true);
-    $pdf->Cell(37, 5, $grand_total_fhe_1st_male, 1, 0, 'C', true);
-    $pdf->Cell(37, 5, $grand_total_fhe_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(37, 5, $grand_total_fhe_2nd_male, 1, 0, 'C', true);
-    $pdf->Cell(37, 5, $grand_total_fhe_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(37, 5, $grand_total_fhe_3rd_male, 1, 0, 'C', true);
-    $pdf->Cell(37, 5, $grand_total_fhe_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(37, 5, $grand_total_fhe_sum_mid_male, 1, 0, 'C', true);
-    $pdf->Cell(37, 5, $grand_total_fhe_sum_mid_female, 1, 0, 'C', true);
+    $pdf->Cell(190, 5, 'NO. OF FHE BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
+    $pdf->Ln();
 
-}
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->Cell(176, 10, 'REASONS FOR LEAVE OF ABSENCE (LOA)', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(176, 0, '', 0, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Ln();
 
-$pdf->addPage();
+    $sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE' ORDER BY reason ASC";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $reason = $row['reason'];
+            $total_loa_1st_male = $row['total_loa_1st_male'];
+            $total_loa_1st_female = $row['total_loa_1st_female'];
+            $total_loa_2nd_male = $row['total_loa_2nd_male'];
+            $total_loa_2nd_female = $row['total_loa_2nd_female'];
+            $total_loa_3rd_male = $row['total_loa_3rd_male'];
+            $total_loa_3rd_female = $row['total_loa_3rd_female'];
+            $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
+            $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
 
-// NO. OF FHE BENEFICIARIES WHO OPTED OUT OF FHE
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell($totalWidth, 5, 'NO. OF FHE BENEFICIARIES WHO OPTED OUT OF FHE', 0, 0, 'L', true);
-$pdf->Ln();
+            $pdf->SetFillColor(255, 255, 255);
+            //FIRST ROW
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->Cell(176, 5, $reason, 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->Cell(15, 5, 'SEX', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-$pdf->Ln();
-
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetFont('Arial', 'B', 9);
-$pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
-$pdf->SetFont('Arial', '', 10);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(80.25, 5, $total_fhe_opt_out_1st_male, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_opt_out_2nd_male, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_male, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_male, 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetFont('Arial', 'B', 9);
-$pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
-$pdf->SetFont('Arial', '', 10);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(80.25, 5, $total_fhe_opt_out_1st_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_opt_out_2nd_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_female, 1, 0, 'C', true);
-$pdf->Ln();
-
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(80.25, 5, $total_fhe_opt_out_1st_male + $total_fhe_opt_out_1st_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_opt_out_2nd_male + $total_fhe_opt_out_2nd_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_male + $total_fhe_opt_out_3rd_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_male + $total_fhe_opt_out_summer_midyear_female, 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->Ln();
-
-//end
-
-// NO. OF FHE BENEFICIARIES WHO VOLUNTARILY CONTRIBUTED FOR FHE
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell($totalWidth, 5, 'NO. OF FHE BENEFICIARIES WHO VOLUNTARILY CONTRIBUTED FOR FHE', 0, 0, 'L', true);
-$pdf->Ln();
-
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->Cell(15, 5, 'SEX', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-$pdf->Ln();
-
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetFont('Arial', 'B', 9);
-$pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
-$pdf->SetFont('Arial', '', 10);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(80.25, 5, $total_fhe_vol_cont_1st_male, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_vol_cont_2nd_male, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_vol_cont_3rd_male, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_vol_cont_summer_midyear_male, 1, 0, 'C', true);
-$pdf->Ln();
-
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetFont('Arial', 'B', 9);
-$pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
-$pdf->SetFont('Arial', '', 10);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(80.25, 5, $total_fhe_vol_cont_1st_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_vol_cont_2nd_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_vol_cont_3rd_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_vol_cont_summer_midyear_female, 1, 0, 'C', true);
-$pdf->Ln();
-
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(80.25, 5, $total_fhe_vol_cont_1st_male + $total_fhe_vol_cont_1st_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_vol_cont_2nd_male + $total_fhe_vol_cont_2nd_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_vol_cont_3rd_male + $total_fhe_vol_cont_3rd_female, 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, $total_fhe_vol_cont_summer_midyear_male + $total_fhe_vol_cont_summer_midyear_female, 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->Ln();
-
-//end
-
-
-// REASONS FOR DROPPING
-
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(190, 5, 'NO. OF FHE BENEFICIARIES WHO DROPPED', 0, 0, 'L', true);
-$pdf->Ln();
-
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetTextColor(0, 0, 0);
-
-$pdf->Cell(176, 10, 'REASONS FOR DROPPING', 1, 0, 'C', true);
-
-$pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(176, 0, '', 0, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Ln();
-
-$sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE' ORDER BY reason ASC";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $reason = $row['reason'];
-        $total_dropout_1st_male = $row['total_dropout_1st_male'];
-        $total_dropout_1st_female = $row['total_dropout_1st_female'];
-        $total_dropout_2nd_male = $row['total_dropout_2nd_male'];
-        $total_dropout_2nd_female = $row['total_dropout_2nd_female'];
-        $total_dropout_3rd_male = $row['total_dropout_3rd_male'];
-        $total_dropout_3rd_female = $row['total_dropout_3rd_female'];
-        $total_dropout_sum_mid_male = $row['total_dropout_sum_mid_male'];
-        $total_dropout_sum_mid_female = $row['total_dropout_sum_mid_female'];
-
-        $pdf->SetFillColor(255, 255, 255);
-        //FIRST ROW
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->Cell(176, 5, $reason, 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(20, 5, $total_dropout_1st_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_2nd_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_sum_mid_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_sum_mid_female, 1, 0, 'C', true);
-
-        //END
-        $pdf->Ln();
+            //END
+            $pdf->Ln();
+        }
     }
-}
 
-//END
-$sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
-FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE'";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $total_1st_male = $row['total_1st_male'];
-        $total_1st_female = $row['total_1st_female'];
-        $total_2nd_male = $row['total_2nd_male'];
-        $total_2nd_female = $row['total_2nd_female'];
-        $total_3rd_male = $row['total_3rd_male'];
-        $total_3rd_female = $row['total_3rd_female'];
-        $total_sum_mid_male = $row['total_sum_mid_male'];
-        $total_sum_mid_female = $row['total_sum_mid_female'];
-    }
-}
-$pdf->SetFillColor(255, 255, 255);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
-$pdf->Cell(20, 5, $total_1st_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_1st_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_2nd_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_2nd_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_3rd_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
-
-//END
-$pdf->Ln();
-$pdf->Ln();
-
-// REASONS FOR LEAVE OF ABSENCE (LOA)
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(190, 5, 'NO. OF FHE BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
-$pdf->Ln();
-
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->Cell(176, 10, 'REASONS FOR LEAVE OF ABSENCE (LOA)', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(176, 0, '', 0, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Ln();
-
-$sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE' ORDER BY reason ASC";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $reason = $row['reason'];
-        $total_loa_1st_male = $row['total_loa_1st_male'];
-        $total_loa_1st_female = $row['total_loa_1st_female'];
-        $total_loa_2nd_male = $row['total_loa_2nd_male'];
-        $total_loa_2nd_female = $row['total_loa_2nd_female'];
-        $total_loa_3rd_male = $row['total_loa_3rd_male'];
-        $total_loa_3rd_female = $row['total_loa_3rd_female'];
-        $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
-        $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
-
-        $pdf->SetFillColor(255, 255, 255);
-        //FIRST ROW
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->Cell(176, 5, $reason, 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
-
-        //END
-        $pdf->Ln();
-    }
-}
-
-$sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
+    $sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
 FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE'";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $total_loa_1st_male = $row['total_loa_1st_male'];
-        $total_loa_1st_female = $row['total_loa_1st_female'];
-        $total_loa_2nd_male = $row['total_loa_2nd_male'];
-        $total_loa_2nd_female = $row['total_loa_2nd_female'];
-        $total_loa_3rd_male = $row['total_loa_3rd_male'];
-        $total_loa_3rd_female = $row['total_loa_3rd_female'];
-        $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
-        $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $total_loa_1st_male = $row['total_loa_1st_male'];
+            $total_loa_1st_female = $row['total_loa_1st_female'];
+            $total_loa_2nd_male = $row['total_loa_2nd_male'];
+            $total_loa_2nd_female = $row['total_loa_2nd_female'];
+            $total_loa_3rd_male = $row['total_loa_3rd_male'];
+            $total_loa_3rd_female = $row['total_loa_3rd_female'];
+            $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
+            $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
+        }
     }
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
+    $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
 }
-$pdf->SetFillColor(255, 255, 255);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
-$pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
-}
 //END
-if($tes=='yes'){
-$pdf->addPage();
+if ($tes == 'yes') {
+    $pdf->addPage();
 
 
-//I.B TERTIARY EDUCATION SUBSIDY
-$pdf->SetFont('Arial', 'B', 11);
-$pdf->SetFillColor(192, 192, 192);
-$pdf->SetTextColor(0, 0, 0);
+    //I.B TERTIARY EDUCATION SUBSIDY
+    $pdf->SetFont('Arial', 'B', 11);
+    $pdf->SetFillColor(192, 192, 192);
+    $pdf->SetTextColor(0, 0, 0);
 
-$pdf->Cell(336, 5, 'II.B TERTIARY EDUCATION SUBSIDY', 0, 0, 'L', true);
-$pdf->Ln();
+    $pdf->Cell(336, 5, 'II.B TERTIARY EDUCATION SUBSIDY', 0, 0, 'L', true);
+    $pdf->Ln();
 
-//SPACING
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
-$pdf->Ln();
-//END
+    //SPACING
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
+    $pdf->Ln();
+    //END
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(65, 5, 'No. of Students Who Applied for TES:', 0, 0, 'L', true);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(65, 5, 'No. of Students Who Applied for TES:', 0, 0, 'L', true);
 
-$total_tes_applicant = $total_tes_applicant_male + $total_tes_applicant_female;
+    $total_tes_applicant = $total_tes_applicant_male + $total_tes_applicant_female;
 
-$pdf->Cell(311, 5, $total_tes_applicant, 0, 0, 'L', true);
-$pdf->Ln();
+    $pdf->Cell(311, 5, $total_tes_applicant, 0, 0, 'L', true);
+    $pdf->Ln();
 
-//SPACING
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
-$pdf->Ln();
-//END
+    //SPACING
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
+    $pdf->Ln();
+    //END
 
-//TES CATEGORY
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetTextColor(0, 0, 0);
+    //TES CATEGORY
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetTextColor(0, 0, 0);
 
-$pdf->Cell(336, 5, 'TOTAL TES GRANTEES', 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->Cell(20, 10, 'SEX', 1, 0, 'C', true);
-$pdf->Cell(79, 5, '1ST TERM', 1, 0, 'C', true);
-$pdf->Cell(79, 5, '2ND TERM', 1, 0, 'C', true);
-$pdf->Cell(79, 5, '3RD TERM', 1, 0, 'C', true);
-$pdf->Cell(79, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+    $pdf->Cell(336, 5, 'TOTAL TES GRANTEES', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->Cell(20, 10, 'SEX', 1, 0, 'C', true);
+    $pdf->Cell(79, 5, '1ST TERM', 1, 0, 'C', true);
+    $pdf->Cell(79, 5, '2ND TERM', 1, 0, 'C', true);
+    $pdf->Cell(79, 5, '3RD TERM', 1, 0, 'C', true);
+    $pdf->Cell(79, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
 
-$pdf->Ln();
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(20, 0, '', 0, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'TOTAL', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'PWD', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'IP', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'W/ BOARD', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(20, 0, '', 0, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'TOTAL', 1, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'PWD', 1, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'IP', 1, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'W/ BOARD', 1, 0, 'C', true);
 
-$pdf->Cell(19.75, 5, 'TOTAL', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'PWD', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'IP', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'W/ BOARD', 1, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'TOTAL', 1, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'PWD', 1, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'IP', 1, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'W/ BOARD', 1, 0, 'C', true);
 
-$pdf->Cell(19.75, 5, 'TOTAL', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'PWD', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'IP', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'W/ BOARD', 1, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'TOTAL', 1, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'PWD', 1, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'IP', 1, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'W/ BOARD', 1, 0, 'C', true);
 
-$pdf->Cell(19.75, 5, 'TOTAL', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'PWD', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'IP', 1, 0, 'C', true);
-$pdf->Cell(19.75, 5, 'W/ BOARD', 1, 0, 'C', true);
-$pdf->Ln();
+    $pdf->Cell(19.75, 5, 'TOTAL', 1, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'PWD', 1, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'IP', 1, 0, 'C', true);
+    $pdf->Cell(19.75, 5, 'W/ BOARD', 1, 0, 'C', true);
+    $pdf->Ln();
 
-$sql = "SELECT * FROM tbl_tes_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $tes_category = $row['tes_category'];
+    $sql = "SELECT * FROM tbl_tes_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $tes_category = $row['tes_category'];
 
-        //1st Semester
-        $total_tes_1st_male = $row['total_tes_1st_male'];
-        $total_pwd_1st_male = $row['total_pwd_1st_male'];
-        $total_ip_1st_male = $row['total_ip_1st_male'];
-        $total_with_board_1st_male = $row['total_with_board_1st_male'];
+            //1st Semester
+            $total_tes_1st_male = $row['total_tes_1st_male'];
+            $total_pwd_1st_male = $row['total_pwd_1st_male'];
+            $total_ip_1st_male = $row['total_ip_1st_male'];
+            $total_with_board_1st_male = $row['total_with_board_1st_male'];
 
-        $total_tes_1st_female = $row['total_tes_1st_female'];
-        $total_pwd_1st_female = $row['total_pwd_1st_female'];
-        $total_ip_1st_female = $row['total_ip_1st_female'];
-        $total_with_board_1st_female = $row['total_with_board_1st_female'];
+            $total_tes_1st_female = $row['total_tes_1st_female'];
+            $total_pwd_1st_female = $row['total_pwd_1st_female'];
+            $total_ip_1st_female = $row['total_ip_1st_female'];
+            $total_with_board_1st_female = $row['total_with_board_1st_female'];
 
-        //2nd Semester
-        $total_tes_2nd_male = $row['total_tes_2nd_male'];
-        $total_pwd_2nd_male = $row['total_pwd_2nd_male'];
-        $total_ip_2nd_male = $row['total_ip_2nd_male'];
-        $total_with_board_2nd_male = $row['total_with_board_2nd_male'];
+            //2nd Semester
+            $total_tes_2nd_male = $row['total_tes_2nd_male'];
+            $total_pwd_2nd_male = $row['total_pwd_2nd_male'];
+            $total_ip_2nd_male = $row['total_ip_2nd_male'];
+            $total_with_board_2nd_male = $row['total_with_board_2nd_male'];
 
-        $total_tes_2nd_female = $row['total_tes_2nd_female'];
-        $total_pwd_2nd_female = $row['total_pwd_2nd_female'];
-        $total_ip_2nd_female = $row['total_ip_2nd_female'];
-        $total_with_board_2nd_female = $row['total_with_board_2nd_female'];
+            $total_tes_2nd_female = $row['total_tes_2nd_female'];
+            $total_pwd_2nd_female = $row['total_pwd_2nd_female'];
+            $total_ip_2nd_female = $row['total_ip_2nd_female'];
+            $total_with_board_2nd_female = $row['total_with_board_2nd_female'];
 
-        //3rd Semester
-        $total_tes_3rd_male = $row['total_tes_3rd_male'];
-        $total_pwd_3rd_male = $row['total_pwd_3rd_male'];
-        $total_ip_3rd_male = $row['total_ip_3rd_male'];
-        $total_with_board_3rd_male = $row['total_with_board_3rd_male'];
+            //3rd Semester
+            $total_tes_3rd_male = $row['total_tes_3rd_male'];
+            $total_pwd_3rd_male = $row['total_pwd_3rd_male'];
+            $total_ip_3rd_male = $row['total_ip_3rd_male'];
+            $total_with_board_3rd_male = $row['total_with_board_3rd_male'];
 
-        $total_tes_3rd_female = $row['total_tes_3rd_female'];
-        $total_pwd_3rd_female = $row['total_pwd_3rd_female'];
-        $total_ip_3rd_female = $row['total_ip_3rd_female'];
-        $total_with_board_3rd_female = $row['total_with_board_3rd_female'];
+            $total_tes_3rd_female = $row['total_tes_3rd_female'];
+            $total_pwd_3rd_female = $row['total_pwd_3rd_female'];
+            $total_ip_3rd_female = $row['total_ip_3rd_female'];
+            $total_with_board_3rd_female = $row['total_with_board_3rd_female'];
 
-        //2nd Semester
-        $total_tes_summer_midyear_male = $row['total_tes_summer_midyear_male'];
-        $total_pwd_summer_midyear_male = $row['total_pwd_summer_midyear_male'];
-        $total_ip_summer_midyear_male = $row['total_ip_summer_midyear_male'];
-        $total_with_board_summer_midyear_male = $row['total_with_board_summer_midyear_male'];
+            //2nd Semester
+            $total_tes_summer_midyear_male = $row['total_tes_summer_midyear_male'];
+            $total_pwd_summer_midyear_male = $row['total_pwd_summer_midyear_male'];
+            $total_ip_summer_midyear_male = $row['total_ip_summer_midyear_male'];
+            $total_with_board_summer_midyear_male = $row['total_with_board_summer_midyear_male'];
 
-        $total_tes_summer_midyear_female = $row['total_tes_summer_midyear_female'];
-        $total_pwd_summer_midyear_female = $row['total_pwd_summer_midyear_female'];
-        $total_ip_summer_midyear_female = $row['total_ip_summer_midyear_female'];
-        $total_with_board_summer_midyear_female = $row['total_with_board_summer_midyear_female'];
+            $total_tes_summer_midyear_female = $row['total_tes_summer_midyear_female'];
+            $total_pwd_summer_midyear_female = $row['total_pwd_summer_midyear_female'];
+            $total_ip_summer_midyear_female = $row['total_ip_summer_midyear_female'];
+            $total_with_board_summer_midyear_female = $row['total_with_board_summer_midyear_female'];
 
-        //FIRST ROW
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(214, 234, 248);
-        $pdf->Cell(336, 5, $tes_category, 1, 0, 'L', true);
-        $pdf->Ln();
+            //FIRST ROW
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(214, 234, 248);
+            $pdf->Cell(336, 5, $tes_category, 1, 0, 'L', true);
+            $pdf->Ln();
 
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(20, 5, 'MALE', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(19.75, 5, $total_tes_1st_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_1st_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_1st_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_1st_male, 1, 0, 'C', true);
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(20, 5, 'MALE', 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->Cell(19.75, 5, $total_tes_1st_male, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_pwd_1st_male, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_ip_1st_male, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_with_board_1st_male, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_tes_2nd_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_2nd_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_2nd_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_2nd_male, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_tes_2nd_male, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_pwd_2nd_male, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_ip_2nd_male, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_with_board_2nd_male, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_tes_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_3rd_male, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_tes_3rd_male, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_pwd_3rd_male, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_ip_3rd_male, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_with_board_3rd_male, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_tes_summer_midyear_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_summer_midyear_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_summer_midyear_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_summer_midyear_male, 1, 0, 'C', true);
-        $pdf->Ln();
+            $pdf->Cell(19.75, 5, $total_tes_summer_midyear_male, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_pwd_summer_midyear_male, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_ip_summer_midyear_male, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_with_board_summer_midyear_male, 1, 0, 'C', true);
+            $pdf->Ln();
 
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(19.75, 5, $total_tes_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_1st_female, 1, 0, 'C', true);
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->Cell(19.75, 5, $total_tes_1st_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_pwd_1st_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_ip_1st_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_with_board_1st_female, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_tes_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_tes_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_pwd_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_ip_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_with_board_2nd_female, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_tes_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_tes_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_pwd_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_ip_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_with_board_3rd_female, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_tes_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Ln();
+            $pdf->Cell(19.75, 5, $total_tes_summer_midyear_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_pwd_summer_midyear_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_ip_summer_midyear_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_with_board_summer_midyear_female, 1, 0, 'C', true);
+            $pdf->Ln();
 
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(20, 5, 'TOTAL', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(19.75, 5, $total_tes_1st_male + $total_tes_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_1st_male + $total_pwd_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_1st_male + $total_ip_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_1st_male + $total_with_board_1st_female, 1, 0, 'C', true);
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(20, 5, 'TOTAL', 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->Cell(19.75, 5, $total_tes_1st_male + $total_tes_1st_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_pwd_1st_male + $total_pwd_1st_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_ip_1st_male + $total_ip_1st_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_with_board_1st_male + $total_with_board_1st_female, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_tes_2nd_male + $total_tes_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_2nd_male + $total_pwd_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_2nd_male + $total_ip_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_2nd_male + $total_with_board_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_tes_2nd_male + $total_tes_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_pwd_2nd_male + $total_pwd_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_ip_2nd_male + $total_ip_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_with_board_2nd_male + $total_with_board_2nd_female, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_tes_3rd_male + $total_tes_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_3rd_male + $total_pwd_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_3rd_male + $total_ip_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_3rd_male + $total_with_board_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_tes_3rd_male + $total_tes_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_pwd_3rd_male + $total_pwd_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_ip_3rd_male + $total_ip_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_with_board_3rd_male + $total_with_board_3rd_female, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_tes_summer_midyear_male + $total_tes_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_summer_midyear_male + $total_pwd_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_summer_midyear_male + $total_ip_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_summer_midyear_male + $total_with_board_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Ln();
-        
-    }
-    $sql = "SELECT *,
+            $pdf->Cell(19.75, 5, $total_tes_summer_midyear_male + $total_tes_summer_midyear_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_pwd_summer_midyear_male + $total_pwd_summer_midyear_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_ip_summer_midyear_male + $total_ip_summer_midyear_female, 1, 0, 'C', true);
+            $pdf->Cell(19.75, 5, $total_with_board_summer_midyear_male + $total_with_board_summer_midyear_female, 1, 0, 'C', true);
+            $pdf->Ln();
+        }
+        $sql = "SELECT *,
     SUM(total_tes_1st_male) AS grand_total_tes_1st_male, 
     SUM(total_tes_1st_female) AS grand_total_tes_1st_female,
     SUM(total_tes_2nd_male) AS grand_total_tes_2nd_male, 
@@ -2026,178 +2025,178 @@ if ($resultCheck > 0) {
     
     FROM tbl_tes_category 
     WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                //1st Semester
+                $grand_total_tes_1st_male = $row['grand_total_tes_1st_male'];
+                $grand_total_pwd_1st_male = $row['grand_total_pwd_1st_male'];
+                $grand_total_ip_1st_male = $row['grand_total_ip_1st_male'];
+                $grand_total_with_board_1st_male = $row['grand_total_with_board_1st_male'];
+
+                $grand_total_tes_1st_female = $row['grand_total_tes_1st_female'];
+                $grand_total_pwd_1st_female = $row['grand_total_pwd_1st_female'];
+                $grand_total_ip_1st_female = $row['grand_total_ip_1st_female'];
+                $grand_total_with_board_1st_female = $row['grand_total_with_board_1st_female'];
+
+                //2nd Semester
+                $grand_total_tes_2nd_male = $row['grand_total_tes_2nd_male'];
+                $grand_total_pwd_2nd_male = $row['grand_total_pwd_2nd_male'];
+                $grand_total_ip_2nd_male = $row['grand_total_ip_2nd_male'];
+                $grand_total_with_board_2nd_male = $row['grand_total_with_board_2nd_male'];
+
+                $grand_total_tes_2nd_female = $row['grand_total_tes_2nd_female'];
+                $grand_total_pwd_2nd_female = $row['grand_total_pwd_2nd_female'];
+                $grand_total_ip_2nd_female = $row['grand_total_ip_2nd_female'];
+                $grand_total_with_board_2nd_female = $row['grand_total_with_board_2nd_female'];
+
+                //3rd Semester
+                $grand_total_tes_3rd_male = $row['grand_total_tes_3rd_male'];
+                $grand_total_pwd_3rd_male = $row['grand_total_pwd_3rd_male'];
+                $grand_total_ip_3rd_male = $row['grand_total_ip_3rd_male'];
+                $grand_total_with_board_3rd_male = $row['grand_total_with_board_3rd_male'];
+
+                $grand_total_tes_3rd_female = $row['grand_total_tes_3rd_female'];
+                $grand_total_pwd_3rd_female = $row['grand_total_pwd_3rd_female'];
+                $grand_total_ip_3rd_female = $row['grand_total_ip_3rd_female'];
+                $grand_total_with_board_3rd_female = $row['grand_total_with_board_3rd_female'];
+
+                //2nd Semester
+                $grand_total_tes_summer_midyear_male = $row['grand_total_tes_summer_midyear_male'];
+                $grand_total_pwd_summer_midyear_male = $row['grand_total_pwd_summer_midyear_male'];
+                $grand_total_ip_summer_midyear_male = $row['grand_total_ip_summer_midyear_male'];
+                $grand_total_with_board_summer_midyear_male = $row['grand_total_with_board_summer_midyear_male'];
+
+                $grand_total_tes_summer_midyear_female = $row['grand_total_tes_summer_midyear_female'];
+                $grand_total_pwd_summer_midyear_female = $row['grand_total_pwd_summer_midyear_female'];
+                $grand_total_ip_summer_midyear_female = $row['grand_total_ip_summer_midyear_female'];
+                $grand_total_with_board_summer_midyear_female = $row['grand_total_with_board_summer_midyear_female'];
+            }
+        }
+        //FIRST ROW
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(214, 234, 248);
+        $pdf->Cell(336, 5, 'GRAND TOTAL', 1, 0, 'L', true);
+        $pdf->Ln();
+
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'L', true);
+        $pdf->Cell(19.75, 5, $grand_total_tes_1st_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_pwd_1st_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_ip_1st_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_with_board_1st_male, 1, 0, 'C', true);
+
+        $pdf->Cell(19.75, 5, $grand_total_tes_2nd_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_pwd_2nd_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_ip_2nd_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_with_board_2nd_male, 1, 0, 'C', true);
+
+        $pdf->Cell(19.75, 5, $grand_total_tes_3rd_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_pwd_3rd_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_ip_3rd_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_with_board_3rd_male, 1, 0, 'C', true);
+
+        $pdf->Cell(19.75, 5, $grand_total_tes_summer_midyear_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_pwd_summer_midyear_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_ip_summer_midyear_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_with_board_summer_midyear_male, 1, 0, 'C', true);
+        $pdf->Ln();
+
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'L', true);
+        $pdf->Cell(19.75, 5, $grand_total_tes_1st_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_pwd_1st_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_ip_1st_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_with_board_1st_female, 1, 0, 'C', true);
+
+        $pdf->Cell(19.75, 5, $grand_total_tes_2nd_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_pwd_2nd_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_ip_2nd_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_with_board_2nd_female, 1, 0, 'C', true);
+
+        $pdf->Cell(19.75, 5, $grand_total_tes_3rd_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_pwd_3rd_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_ip_3rd_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_with_board_3rd_female, 1, 0, 'C', true);
+
+        $pdf->Cell(19.75, 5, $grand_total_tes_summer_midyear_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_pwd_summer_midyear_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_ip_summer_midyear_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_with_board_summer_midyear_female, 1, 0, 'C', true);
+        $pdf->Ln();
+
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(20, 5, 'TOTAL', 1, 0, 'L', true);
+        $pdf->Cell(19.75, 5, $grand_total_tes_1st_male + $grand_total_tes_1st_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_pwd_1st_male + $grand_total_pwd_1st_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_ip_1st_male + $grand_total_ip_1st_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_with_board_1st_male + $grand_total_with_board_1st_female, 1, 0, 'C', true);
+
+        $pdf->Cell(19.75, 5, $grand_total_tes_2nd_male + $grand_total_tes_2nd_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_pwd_2nd_male + $grand_total_pwd_2nd_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_ip_2nd_male + $grand_total_ip_2nd_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_with_board_2nd_male + $grand_total_with_board_2nd_female, 1, 0, 'C', true);
+
+        $pdf->Cell(19.75, 5, $grand_total_tes_3rd_male + $grand_total_tes_3rd_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_pwd_3rd_male + $grand_total_pwd_3rd_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_ip_3rd_male + $grand_total_ip_3rd_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_with_board_3rd_male + $grand_total_with_board_3rd_female, 1, 0, 'C', true);
+
+        $pdf->Cell(19.75, 5, $grand_total_tes_summer_midyear_male + $grand_total_tes_summer_midyear_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_pwd_summer_midyear_male + $grand_total_pwd_summer_midyear_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_ip_summer_midyear_male + $grand_total_ip_summer_midyear_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $grand_total_with_board_summer_midyear_male + $grand_total_with_board_summer_midyear_female, 1, 0, 'C', true);
+        $pdf->Ln();
+    }
+
+    $pdf->addPage();
+
+    //DEGREE PROGRAM
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(156, 10, 'DEGREE PROGRAM', 1, 0, 'C', true);
+    $pdf->Cell(90, 5, 'NO. OF TES GRANTEES WHO EXCEEDED THE MRR', 1, 0, 'C', true);
+    $pdf->Cell(90, 5, 'ESTIMATED NUMBER OF GRADUATING STUDENTS', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(156, 0, '', 0, 0, 'C', true);
+    $pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
+    //END
+    $pdf->Ln();
+
+    $sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tes_exceeded_mrr_male > 0 OR total_tes_exceeded_mrr_female > 0) ";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-              //1st Semester
-        $grand_total_tes_1st_male = $row['grand_total_tes_1st_male'];
-        $grand_total_pwd_1st_male = $row['grand_total_pwd_1st_male'];
-        $grand_total_ip_1st_male = $row['grand_total_ip_1st_male'];
-        $grand_total_with_board_1st_male = $row['grand_total_with_board_1st_male'];
+            $uid = $row['uid'];
+            $ac_year = $row['ac_year'];
+            $program_name_tes = $row['program_name'];
+            $total_tes_exceeded_mrr_male = $row['total_tes_exceeded_mrr_male'];
+            $total_tes_exceeded_mrr_female = $row['total_tes_exceeded_mrr_female'];
+            $total_tes_est_grad_male = $row['total_tes_est_grad_male'];
+            $total_tes_est_grad_female = $row['total_tes_est_grad_female'];
 
-        $grand_total_tes_1st_female = $row['grand_total_tes_1st_female'];
-        $grand_total_pwd_1st_female = $row['grand_total_pwd_1st_female'];
-        $grand_total_ip_1st_female = $row['grand_total_ip_1st_female'];
-        $grand_total_with_board_1st_female = $row['grand_total_with_board_1st_female'];
-
-        //2nd Semester
-        $grand_total_tes_2nd_male = $row['grand_total_tes_2nd_male'];
-        $grand_total_pwd_2nd_male = $row['grand_total_pwd_2nd_male'];
-        $grand_total_ip_2nd_male = $row['grand_total_ip_2nd_male'];
-        $grand_total_with_board_2nd_male = $row['grand_total_with_board_2nd_male'];
-
-        $grand_total_tes_2nd_female = $row['grand_total_tes_2nd_female'];
-        $grand_total_pwd_2nd_female = $row['grand_total_pwd_2nd_female'];
-        $grand_total_ip_2nd_female = $row['grand_total_ip_2nd_female'];
-        $grand_total_with_board_2nd_female = $row['grand_total_with_board_2nd_female'];
-
-        //3rd Semester
-        $grand_total_tes_3rd_male = $row['grand_total_tes_3rd_male'];
-        $grand_total_pwd_3rd_male = $row['grand_total_pwd_3rd_male'];
-        $grand_total_ip_3rd_male = $row['grand_total_ip_3rd_male'];
-        $grand_total_with_board_3rd_male = $row['grand_total_with_board_3rd_male'];
-
-        $grand_total_tes_3rd_female = $row['grand_total_tes_3rd_female'];
-        $grand_total_pwd_3rd_female = $row['grand_total_pwd_3rd_female'];
-        $grand_total_ip_3rd_female = $row['grand_total_ip_3rd_female'];
-        $grand_total_with_board_3rd_female = $row['grand_total_with_board_3rd_female'];
-
-        //2nd Semester
-        $grand_total_tes_summer_midyear_male = $row['grand_total_tes_summer_midyear_male'];
-        $grand_total_pwd_summer_midyear_male = $row['grand_total_pwd_summer_midyear_male'];
-        $grand_total_ip_summer_midyear_male = $row['grand_total_ip_summer_midyear_male'];
-        $grand_total_with_board_summer_midyear_male = $row['grand_total_with_board_summer_midyear_male'];
-
-        $grand_total_tes_summer_midyear_female = $row['grand_total_tes_summer_midyear_female'];
-        $grand_total_pwd_summer_midyear_female = $row['grand_total_pwd_summer_midyear_female'];
-        $grand_total_ip_summer_midyear_female = $row['grand_total_ip_summer_midyear_female'];
-        $grand_total_with_board_summer_midyear_female = $row['grand_total_with_board_summer_midyear_female'];
+            //FIRST ROW
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(156, 5, $program_name_tes, 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->Cell(45, 5, $total_tes_exceeded_mrr_male, 1, 0, 'C', true);
+            $pdf->Cell(45, 5, $total_tes_exceeded_mrr_female, 1, 0, 'C', true);
+            $pdf->Cell(45, 5, $total_tes_est_grad_male, 1, 0, 'C', true);
+            $pdf->Cell(45, 5, $total_tes_est_grad_female, 1, 0, 'C', true);
+            //END
+            $pdf->Ln();
         }
-    }
-    //FIRST ROW
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(214, 234, 248);
-    $pdf->Cell(336, 5, 'GRAND TOTAL', 1, 0, 'L', true);
-    $pdf->Ln();
-
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'L', true);
-    $pdf->Cell(19.75, 5, $grand_total_tes_1st_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_1st_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_1st_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_1st_male, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_2nd_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_2nd_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_2nd_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_2nd_male, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_3rd_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_3rd_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_3rd_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_3rd_male, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_summer_midyear_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_summer_midyear_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_summer_midyear_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_summer_midyear_male, 1, 0, 'C', true);
-    $pdf->Ln();
-
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'L', true);
-    $pdf->Cell(19.75, 5, $grand_total_tes_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_1st_female, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_2nd_female, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_3rd_female, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Ln();
-
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(20, 5, 'TOTAL', 1, 0, 'L', true);
-    $pdf->Cell(19.75, 5, $grand_total_tes_1st_male + $grand_total_tes_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_1st_male + $grand_total_pwd_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_1st_male + $grand_total_ip_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_1st_male + $grand_total_with_board_1st_female, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_2nd_male + $grand_total_tes_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_2nd_male + $grand_total_pwd_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_2nd_male + $grand_total_ip_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_2nd_male + $grand_total_with_board_2nd_female, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_3rd_male + $grand_total_tes_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_3rd_male + $grand_total_pwd_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_3rd_male + $grand_total_ip_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_3rd_male + $grand_total_with_board_3rd_female, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_summer_midyear_male + $grand_total_tes_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_summer_midyear_male + $grand_total_pwd_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_summer_midyear_male + $grand_total_ip_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_summer_midyear_male + $grand_total_with_board_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Ln();
-}
-
-$pdf->addPage();
-
-//DEGREE PROGRAM
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(156, 10, 'DEGREE PROGRAM', 1, 0, 'C', true);
-$pdf->Cell(90, 5, 'NO. OF TES GRANTEES WHO EXCEEDED THE MRR', 1, 0, 'C', true);
-$pdf->Cell(90, 5, 'ESTIMATED NUMBER OF GRADUATING STUDENTS', 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(156, 0, '', 0, 0, 'C', true);
-$pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
-//END
-$pdf->Ln();
-
-$sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tes_exceeded_mrr_male > 0 OR total_tes_exceeded_mrr_female > 0) ";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $uid = $row['uid'];
-        $ac_year = $row['ac_year'];
-        $program_name_tes = $row['program_name'];
-        $total_tes_exceeded_mrr_male = $row['total_tes_exceeded_mrr_male'];
-        $total_tes_exceeded_mrr_female = $row['total_tes_exceeded_mrr_female'];
-        $total_tes_est_grad_male = $row['total_tes_est_grad_male'];
-        $total_tes_est_grad_female = $row['total_tes_est_grad_female'];
-
-        //FIRST ROW
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(156, 5, $program_name_tes, 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(45, 5, $total_tes_exceeded_mrr_male, 1, 0, 'C', true);
-        $pdf->Cell(45, 5, $total_tes_exceeded_mrr_female, 1, 0, 'C', true);
-        $pdf->Cell(45, 5, $total_tes_est_grad_male, 1, 0, 'C', true);
-        $pdf->Cell(45, 5, $total_tes_est_grad_female, 1, 0, 'C', true);
-        //END
-        $pdf->Ln();
-    }
-    $sql = "SELECT *,
+        $sql = "SELECT *,
     SUM(total_tes_exceeded_mrr_male) AS grand_total_tes_exceeded_mrr_male,
     SUM(total_tes_exceeded_mrr_female) AS grand_total_tes_exceeded_mrr_female,
     SUM(total_tes_est_grad_male) AS grand_total_tes_est_grad_male,
@@ -2205,457 +2204,457 @@ if ($resultCheck > 0) {
 
     FROM tbl_degree_programs 
     WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tes_exceeded_mrr_male > 0 OR total_tes_exceeded_mrr_female > 0) ";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $grand_total_tes_exceeded_mrr_male = $row['grand_total_tes_exceeded_mrr_male'];
-            $grand_total_tes_exceeded_mrr_female = $row['grand_total_tes_exceeded_mrr_female'];
-            $grand_total_tes_est_grad_male = $row['grand_total_tes_est_grad_male'];
-            $grand_total_tes_est_grad_female = $row['grand_total_tes_est_grad_female'];
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $grand_total_tes_exceeded_mrr_male = $row['grand_total_tes_exceeded_mrr_male'];
+                $grand_total_tes_exceeded_mrr_female = $row['grand_total_tes_exceeded_mrr_female'];
+                $grand_total_tes_est_grad_male = $row['grand_total_tes_est_grad_male'];
+                $grand_total_tes_est_grad_female = $row['grand_total_tes_est_grad_female'];
+            }
         }
-    }
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetFillColor(255, 255, 255);
         $pdf->Cell(156, 5, 'TOTAL', 1, 0, 'L', true);
-    
+
         $pdf->Cell(45, 5, $grand_total_tes_exceeded_mrr_male, 1, 0, 'C', true);
         $pdf->Cell(45, 5, $grand_total_tes_exceeded_mrr_female, 1, 0, 'C', true);
         $pdf->Cell(45, 5, $grand_total_tes_est_grad_male, 1, 0, 'C', true);
         $pdf->Cell(45, 5, $grand_total_tes_est_grad_female, 1, 0, 'C', true);
-}
-
-$pdf->addPage();
-
-// REASONS FOR DROPPING
-
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(190, 5, 'NO. OF TES BENEFICIARIES WHO DROPPED', 0, 0, 'L', true);
-$pdf->Ln();
-
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetTextColor(0, 0, 0);
-
-$pdf->Cell(176, 10, 'REASONS FOR DROPPING', 1, 0, 'C', true);
-
-$pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(176, 0, '', 0, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Ln();
-
-$sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES' ORDER BY reason ASC";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $reason = $row['reason'];
-        $total_dropout_1st_male = $row['total_dropout_1st_male'];
-        $total_dropout_1st_female = $row['total_dropout_1st_female'];
-        $total_dropout_2nd_male = $row['total_dropout_2nd_male'];
-        $total_dropout_2nd_female = $row['total_dropout_2nd_female'];
-        $total_dropout_3rd_male = $row['total_dropout_3rd_male'];
-        $total_dropout_3rd_female = $row['total_dropout_3rd_female'];
-        $total_dropout_sum_mid_male = $row['total_dropout_sum_mid_male'];
-        $total_dropout_sum_mid_female = $row['total_dropout_sum_mid_female'];
-
-        $pdf->SetFillColor(255, 255, 255);
-        //FIRST ROW
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->Cell(176, 5, $reason, 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(20, 5, $total_dropout_1st_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_2nd_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_sum_mid_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_sum_mid_female, 1, 0, 'C', true);
-
-        //END
-        $pdf->Ln();
     }
-}
 
-//END
-$sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
+    $pdf->addPage();
+
+    // REASONS FOR DROPPING
+
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(190, 5, 'NO. OF TES BENEFICIARIES WHO DROPPED', 0, 0, 'L', true);
+    $pdf->Ln();
+
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetTextColor(0, 0, 0);
+
+    $pdf->Cell(176, 10, 'REASONS FOR DROPPING', 1, 0, 'C', true);
+
+    $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(176, 0, '', 0, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Ln();
+
+    $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES' ORDER BY reason ASC";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $reason = $row['reason'];
+            $total_dropout_1st_male = $row['total_dropout_1st_male'];
+            $total_dropout_1st_female = $row['total_dropout_1st_female'];
+            $total_dropout_2nd_male = $row['total_dropout_2nd_male'];
+            $total_dropout_2nd_female = $row['total_dropout_2nd_female'];
+            $total_dropout_3rd_male = $row['total_dropout_3rd_male'];
+            $total_dropout_3rd_female = $row['total_dropout_3rd_female'];
+            $total_dropout_sum_mid_male = $row['total_dropout_sum_mid_male'];
+            $total_dropout_sum_mid_female = $row['total_dropout_sum_mid_female'];
+
+            $pdf->SetFillColor(255, 255, 255);
+            //FIRST ROW
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->Cell(176, 5, $reason, 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->Cell(20, 5, $total_dropout_1st_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_1st_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_2nd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_3rd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_sum_mid_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_sum_mid_female, 1, 0, 'C', true);
+
+            //END
+            $pdf->Ln();
+        }
+    }
+
+    //END
+    $sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
 FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES'";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $total_1st_male = $row['total_1st_male'];
-        $total_1st_female = $row['total_1st_female'];
-        $total_2nd_male = $row['total_2nd_male'];
-        $total_2nd_female = $row['total_2nd_female'];
-        $total_3rd_male = $row['total_3rd_male'];
-        $total_3rd_female = $row['total_3rd_female'];
-        $total_sum_mid_male = $row['total_sum_mid_male'];
-        $total_sum_mid_female = $row['total_sum_mid_female'];
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $total_1st_male = $row['total_1st_male'];
+            $total_1st_female = $row['total_1st_female'];
+            $total_2nd_male = $row['total_2nd_male'];
+            $total_2nd_female = $row['total_2nd_female'];
+            $total_3rd_male = $row['total_3rd_male'];
+            $total_3rd_female = $row['total_3rd_female'];
+            $total_sum_mid_male = $row['total_sum_mid_male'];
+            $total_sum_mid_female = $row['total_sum_mid_female'];
+        }
     }
-}
-$pdf->SetFillColor(255, 255, 255);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
-$pdf->Cell(20, 5, $total_1st_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_1st_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_2nd_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_2nd_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_3rd_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
+    $pdf->Cell(20, 5, $total_1st_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_1st_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_2nd_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_2nd_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_3rd_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
 
-//END
-$pdf->Ln();
-$pdf->Ln();
+    //END
+    $pdf->Ln();
+    $pdf->Ln();
 
-// REASONS FOR LEAVE OF ABSENCE (LOA)
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(190, 5, 'NO. OF TES BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
-$pdf->Ln();
+    // REASONS FOR LEAVE OF ABSENCE (LOA)
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(190, 5, 'NO. OF TES BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
+    $pdf->Ln();
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->Cell(176, 10, 'REASONS FOR LEAVE OF ABSENCE (LOA)', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(176, 0, '', 0, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->Cell(176, 10, 'REASONS FOR LEAVE OF ABSENCE (LOA)', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(176, 0, '', 0, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Ln();
 
-$sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES' ORDER BY reason ASC";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $reason = $row['reason'];
-        $total_loa_1st_male = $row['total_loa_1st_male'];
-        $total_loa_1st_female = $row['total_loa_1st_female'];
-        $total_loa_2nd_male = $row['total_loa_2nd_male'];
-        $total_loa_2nd_female = $row['total_loa_2nd_female'];
-        $total_loa_3rd_male = $row['total_loa_3rd_male'];
-        $total_loa_3rd_female = $row['total_loa_3rd_female'];
-        $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
-        $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
+    $sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES' ORDER BY reason ASC";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $reason = $row['reason'];
+            $total_loa_1st_male = $row['total_loa_1st_male'];
+            $total_loa_1st_female = $row['total_loa_1st_female'];
+            $total_loa_2nd_male = $row['total_loa_2nd_male'];
+            $total_loa_2nd_female = $row['total_loa_2nd_female'];
+            $total_loa_3rd_male = $row['total_loa_3rd_male'];
+            $total_loa_3rd_female = $row['total_loa_3rd_female'];
+            $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
+            $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
 
-        $pdf->SetFillColor(255, 255, 255);
-        //FIRST ROW
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->Cell(176, 5, $reason, 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
+            $pdf->SetFillColor(255, 255, 255);
+            //FIRST ROW
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->Cell(176, 5, $reason, 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
 
-        //END
-        $pdf->Ln();
+            //END
+            $pdf->Ln();
+        }
     }
-}
 
-$sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
+    $sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
 FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES'";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $total_loa_1st_male = $row['total_loa_1st_male'];
-        $total_loa_1st_female = $row['total_loa_1st_female'];
-        $total_loa_2nd_male = $row['total_loa_2nd_male'];
-        $total_loa_2nd_female = $row['total_loa_2nd_female'];
-        $total_loa_3rd_male = $row['total_loa_3rd_male'];
-        $total_loa_3rd_female = $row['total_loa_3rd_female'];
-        $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
-        $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $total_loa_1st_male = $row['total_loa_1st_male'];
+            $total_loa_1st_female = $row['total_loa_1st_female'];
+            $total_loa_2nd_male = $row['total_loa_2nd_male'];
+            $total_loa_2nd_female = $row['total_loa_2nd_female'];
+            $total_loa_3rd_male = $row['total_loa_3rd_male'];
+            $total_loa_3rd_female = $row['total_loa_3rd_female'];
+            $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
+            $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
+        }
     }
-}
-$pdf->SetFillColor(255, 255, 255);
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
-$pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
+    $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
 }
 //END
-if($tdp=='yes'){
-$pdf->addPage();
+if ($tdp == 'yes') {
+    $pdf->addPage();
 
-//I.C TULONG DUNONG PROGRAM
-$pdf->SetFont('Arial', 'B', 11);
-$pdf->SetFillColor(192, 192, 192);
-$pdf->SetTextColor(0, 0, 0);
+    //I.C TULONG DUNONG PROGRAM
+    $pdf->SetFont('Arial', 'B', 11);
+    $pdf->SetFillColor(192, 192, 192);
+    $pdf->SetTextColor(0, 0, 0);
 
-$pdf->Cell(336, 5, 'II.C TULONG DUNONG PROGRAM', 0, 0, 'L', true);
-$pdf->Ln();
-//SPACING
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
-$pdf->Ln();
-//END
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetTextColor(0, 0, 0);
+    $pdf->Cell(336, 5, 'II.C TULONG DUNONG PROGRAM', 0, 0, 'L', true);
+    $pdf->Ln();
+    //SPACING
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
+    $pdf->Ln();
+    //END
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetTextColor(0, 0, 0);
 
-$pdf->Cell(336, 5, 'TOTAL TDP GRANTEES', 1, 1, 'C', true);
+    $pdf->Cell(336, 5, 'TOTAL TDP GRANTEES', 1, 1, 'C', true);
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetTextColor(0, 0, 0);
 
-$pdf->Cell(15, 10, 'SEX', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+    $pdf->Cell(15, 10, 'SEX', 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
+    $pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
 
-$pdf->Ln();
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(15, 0, '', 0, 0, 'C', true);
-$pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-
-
-$pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-
-$pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->Cell(15, 0, '', 0, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
 
 
-$pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-$pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-$pdf->Ln();
+    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+
+    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
 
 
-$sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_1sem_1yr_male > 0 OR total_tdp_2sem_1yr_female > 0 OR total_tdp_2sem_1yr_male > 0 OR total_tdp_2sem_1yr_female > 0) ";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $uid = $row['uid'];
-        $ac_year = $row['ac_year'];
-        $program_name_tdp = $row['program_name'];
+    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+    $pdf->Ln();
 
-        $total_tdp_1sem_1yr_male = $row['total_tdp_1sem_1yr_male'];
-        $total_tdp_1sem_2yr_male = $row['total_tdp_1sem_2yr_male'];
-        $total_tdp_1sem_3yr_male = $row['total_tdp_1sem_3yr_male'];
-        $total_tdp_1sem_4yr_male = $row['total_tdp_1sem_4yr_male'];
-        $total_tdp_1sem_5yr_male = $row['total_tdp_1sem_5yr_male'];
-        $total_tdp_1sem_6yr_male = $row['total_tdp_1sem_6yr_male'];
 
-        $total_tdp_2sem_1yr_male = $row['total_tdp_2sem_1yr_male'];
-        $total_tdp_2sem_2yr_male = $row['total_tdp_2sem_2yr_male'];
-        $total_tdp_2sem_3yr_male = $row['total_tdp_2sem_3yr_male'];
-        $total_tdp_2sem_4yr_male = $row['total_tdp_2sem_4yr_male'];
-        $total_tdp_2sem_5yr_male = $row['total_tdp_2sem_5yr_male'];
-        $total_tdp_2sem_6yr_male = $row['total_tdp_2sem_6yr_male'];
+    $sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_1sem_1yr_male > 0 OR total_tdp_2sem_1yr_female > 0 OR total_tdp_2sem_1yr_male > 0 OR total_tdp_2sem_1yr_female > 0) ";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $uid = $row['uid'];
+            $ac_year = $row['ac_year'];
+            $program_name_tdp = $row['program_name'];
 
-        $total_tdp_3sem_1yr_male = $row['total_tdp_3sem_1yr_male'];
-        $total_tdp_3sem_2yr_male = $row['total_tdp_3sem_2yr_male'];
-        $total_tdp_3sem_3yr_male = $row['total_tdp_3sem_3yr_male'];
-        $total_tdp_3sem_4yr_male = $row['total_tdp_3sem_4yr_male'];
-        $total_tdp_3sem_5yr_male = $row['total_tdp_3sem_5yr_male'];
-        $total_tdp_3sem_6yr_male = $row['total_tdp_3sem_6yr_male'];
+            $total_tdp_1sem_1yr_male = $row['total_tdp_1sem_1yr_male'];
+            $total_tdp_1sem_2yr_male = $row['total_tdp_1sem_2yr_male'];
+            $total_tdp_1sem_3yr_male = $row['total_tdp_1sem_3yr_male'];
+            $total_tdp_1sem_4yr_male = $row['total_tdp_1sem_4yr_male'];
+            $total_tdp_1sem_5yr_male = $row['total_tdp_1sem_5yr_male'];
+            $total_tdp_1sem_6yr_male = $row['total_tdp_1sem_6yr_male'];
 
-        $total_tdp_sum_mid_1yr_male = $row['total_tdp_sum_mid_1yr_male'];
-        $total_tdp_sum_mid_2yr_male = $row['total_tdp_sum_mid_2yr_male'];
-        $total_tdp_sum_mid_3yr_male = $row['total_tdp_sum_mid_3yr_male'];
-        $total_tdp_sum_mid_4yr_male = $row['total_tdp_sum_mid_4yr_male'];
-        $total_tdp_sum_mid_5yr_male = $row['total_tdp_sum_mid_5yr_male'];
-        $total_tdp_sum_mid_6yr_male = $row['total_tdp_sum_mid_6yr_male'];
+            $total_tdp_2sem_1yr_male = $row['total_tdp_2sem_1yr_male'];
+            $total_tdp_2sem_2yr_male = $row['total_tdp_2sem_2yr_male'];
+            $total_tdp_2sem_3yr_male = $row['total_tdp_2sem_3yr_male'];
+            $total_tdp_2sem_4yr_male = $row['total_tdp_2sem_4yr_male'];
+            $total_tdp_2sem_5yr_male = $row['total_tdp_2sem_5yr_male'];
+            $total_tdp_2sem_6yr_male = $row['total_tdp_2sem_6yr_male'];
 
-        $total_tdp_1sem_1yr_female = $row['total_tdp_1sem_1yr_female'];
-        $total_tdp_1sem_2yr_female = $row['total_tdp_1sem_2yr_female'];
-        $total_tdp_1sem_3yr_female = $row['total_tdp_1sem_3yr_female'];
-        $total_tdp_1sem_4yr_female = $row['total_tdp_1sem_4yr_female'];
-        $total_tdp_1sem_5yr_female = $row['total_tdp_1sem_5yr_female'];
-        $total_tdp_1sem_6yr_female = $row['total_tdp_1sem_6yr_female'];
+            $total_tdp_3sem_1yr_male = $row['total_tdp_3sem_1yr_male'];
+            $total_tdp_3sem_2yr_male = $row['total_tdp_3sem_2yr_male'];
+            $total_tdp_3sem_3yr_male = $row['total_tdp_3sem_3yr_male'];
+            $total_tdp_3sem_4yr_male = $row['total_tdp_3sem_4yr_male'];
+            $total_tdp_3sem_5yr_male = $row['total_tdp_3sem_5yr_male'];
+            $total_tdp_3sem_6yr_male = $row['total_tdp_3sem_6yr_male'];
 
-        $total_tdp_2sem_1yr_female = $row['total_tdp_2sem_1yr_female'];
-        $total_tdp_2sem_2yr_female = $row['total_tdp_2sem_2yr_female'];
-        $total_tdp_2sem_3yr_female = $row['total_tdp_2sem_3yr_female'];
-        $total_tdp_2sem_4yr_female = $row['total_tdp_2sem_4yr_female'];
-        $total_tdp_2sem_5yr_female = $row['total_tdp_2sem_5yr_female'];
-        $total_tdp_2sem_6yr_female = $row['total_tdp_2sem_6yr_female'];
+            $total_tdp_sum_mid_1yr_male = $row['total_tdp_sum_mid_1yr_male'];
+            $total_tdp_sum_mid_2yr_male = $row['total_tdp_sum_mid_2yr_male'];
+            $total_tdp_sum_mid_3yr_male = $row['total_tdp_sum_mid_3yr_male'];
+            $total_tdp_sum_mid_4yr_male = $row['total_tdp_sum_mid_4yr_male'];
+            $total_tdp_sum_mid_5yr_male = $row['total_tdp_sum_mid_5yr_male'];
+            $total_tdp_sum_mid_6yr_male = $row['total_tdp_sum_mid_6yr_male'];
 
-        $total_tdp_3sem_1yr_female = $row['total_tdp_3sem_1yr_female'];
-        $total_tdp_3sem_2yr_female = $row['total_tdp_3sem_2yr_female'];
-        $total_tdp_3sem_3yr_female = $row['total_tdp_3sem_3yr_female'];
-        $total_tdp_3sem_4yr_female = $row['total_tdp_3sem_4yr_female'];
-        $total_tdp_3sem_5yr_female = $row['total_tdp_3sem_5yr_female'];
-        $total_tdp_3sem_6yr_female = $row['total_tdp_3sem_6yr_female'];
+            $total_tdp_1sem_1yr_female = $row['total_tdp_1sem_1yr_female'];
+            $total_tdp_1sem_2yr_female = $row['total_tdp_1sem_2yr_female'];
+            $total_tdp_1sem_3yr_female = $row['total_tdp_1sem_3yr_female'];
+            $total_tdp_1sem_4yr_female = $row['total_tdp_1sem_4yr_female'];
+            $total_tdp_1sem_5yr_female = $row['total_tdp_1sem_5yr_female'];
+            $total_tdp_1sem_6yr_female = $row['total_tdp_1sem_6yr_female'];
 
-        $total_tdp_sum_mid_1yr_female = $row['total_tdp_sum_mid_1yr_female'];
-        $total_tdp_sum_mid_2yr_female = $row['total_tdp_sum_mid_2yr_female'];
-        $total_tdp_sum_mid_3yr_female = $row['total_tdp_sum_mid_3yr_female'];
-        $total_tdp_sum_mid_4yr_female = $row['total_tdp_sum_mid_4yr_female'];
-        $total_tdp_sum_mid_5yr_female = $row['total_tdp_sum_mid_5yr_female'];
-        $total_tdp_sum_mid_6yr_female = $row['total_tdp_sum_mid_6yr_female'];
+            $total_tdp_2sem_1yr_female = $row['total_tdp_2sem_1yr_female'];
+            $total_tdp_2sem_2yr_female = $row['total_tdp_2sem_2yr_female'];
+            $total_tdp_2sem_3yr_female = $row['total_tdp_2sem_3yr_female'];
+            $total_tdp_2sem_4yr_female = $row['total_tdp_2sem_4yr_female'];
+            $total_tdp_2sem_5yr_female = $row['total_tdp_2sem_5yr_female'];
+            $total_tdp_2sem_6yr_female = $row['total_tdp_2sem_6yr_female'];
 
-        //FIRST ROW
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(214, 234, 248);
-        $pdf->Cell(336, 5, $program_name_tdp, 1, 0, 'L', true);
-        $pdf->Ln();
+            $total_tdp_3sem_1yr_female = $row['total_tdp_3sem_1yr_female'];
+            $total_tdp_3sem_2yr_female = $row['total_tdp_3sem_2yr_female'];
+            $total_tdp_3sem_3yr_female = $row['total_tdp_3sem_3yr_female'];
+            $total_tdp_3sem_4yr_female = $row['total_tdp_3sem_4yr_female'];
+            $total_tdp_3sem_5yr_female = $row['total_tdp_3sem_5yr_female'];
+            $total_tdp_3sem_6yr_female = $row['total_tdp_3sem_6yr_female'];
 
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_6yr_male, 1, 0, 'C', true);
+            $total_tdp_sum_mid_1yr_female = $row['total_tdp_sum_mid_1yr_female'];
+            $total_tdp_sum_mid_2yr_female = $row['total_tdp_sum_mid_2yr_female'];
+            $total_tdp_sum_mid_3yr_female = $row['total_tdp_sum_mid_3yr_female'];
+            $total_tdp_sum_mid_4yr_female = $row['total_tdp_sum_mid_4yr_female'];
+            $total_tdp_sum_mid_5yr_female = $row['total_tdp_sum_mid_5yr_female'];
+            $total_tdp_sum_mid_6yr_female = $row['total_tdp_sum_mid_6yr_female'];
 
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_6yr_male, 1, 0, 'C', true);
+            //FIRST ROW
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(214, 234, 248);
+            $pdf->Cell(336, 5, $program_name_tdp, 1, 0, 'L', true);
+            $pdf->Ln();
 
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_6yr_male, 1, 0, 'C', true);
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_6yr_male, 1, 0, 'C', true);
 
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_6yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_6yr_male, 1, 0, 'C', true);
 
-        $pdf->Ln();
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_6yr_male, 1, 0, 'C', true);
 
-        $pdf->SetFont('Arial', 'B', 9);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_6yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_6yr_male, 1, 0, 'C', true);
 
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_6yr_female, 1, 0, 'C', true);
+            $pdf->Ln();
 
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_6yr_female, 1, 0, 'C', true);
+            $pdf->SetFont('Arial', 'B', 9);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_6yr_female, 1, 0, 'C', true);
 
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_6yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_6yr_female, 1, 0, 'C', true);
 
-        $pdf->Ln();
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_6yr_female, 1, 0, 'C', true);
 
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_1yr_female + $total_tdp_1sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_2yr_female + $total_tdp_1sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_3yr_female + $total_tdp_1sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_4yr_female + $total_tdp_1sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_5yr_female + $total_tdp_1sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_1sem_6yr_female + $total_tdp_1sem_6yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_6yr_female, 1, 0, 'C', true);
 
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_1yr_female + $total_tdp_2sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_2yr_female + $total_tdp_2sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_3yr_female + $total_tdp_2sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_4yr_female + $total_tdp_2sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_5yr_female + $total_tdp_2sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_2sem_6yr_female + $total_tdp_2sem_6yr_female, 1, 0, 'C', true);
+            $pdf->Ln();
 
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_1yr_female + $total_tdp_3sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_2yr_female + $total_tdp_3sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_3yr_female + $total_tdp_3sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_4yr_female + $total_tdp_3sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_5yr_female + $total_tdp_3sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_3sem_6yr_female + $total_tdp_3sem_6yr_female, 1, 0, 'C', true);
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_1yr_female + $total_tdp_1sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_2yr_female + $total_tdp_1sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_3yr_female + $total_tdp_1sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_4yr_female + $total_tdp_1sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_5yr_female + $total_tdp_1sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_1sem_6yr_female + $total_tdp_1sem_6yr_female, 1, 0, 'C', true);
 
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_1yr_female + $total_tdp_sum_mid_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_2yr_female + $total_tdp_sum_mid_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_3yr_female + $total_tdp_sum_mid_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_4yr_female + $total_tdp_sum_mid_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_5yr_female + $total_tdp_sum_mid_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $total_tdp_sum_mid_6yr_female + $total_tdp_sum_mid_6yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_1yr_female + $total_tdp_2sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_2yr_female + $total_tdp_2sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_3yr_female + $total_tdp_2sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_4yr_female + $total_tdp_2sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_5yr_female + $total_tdp_2sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_2sem_6yr_female + $total_tdp_2sem_6yr_female, 1, 0, 'C', true);
 
-        $pdf->Ln();
-        //END
-    }
-    $sql = "SELECT *, 
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_1yr_female + $total_tdp_3sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_2yr_female + $total_tdp_3sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_3yr_female + $total_tdp_3sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_4yr_female + $total_tdp_3sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_5yr_female + $total_tdp_3sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_3sem_6yr_female + $total_tdp_3sem_6yr_female, 1, 0, 'C', true);
+
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_1yr_female + $total_tdp_sum_mid_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_2yr_female + $total_tdp_sum_mid_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_3yr_female + $total_tdp_sum_mid_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_4yr_female + $total_tdp_sum_mid_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_5yr_female + $total_tdp_sum_mid_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $total_tdp_sum_mid_6yr_female + $total_tdp_sum_mid_6yr_female, 1, 0, 'C', true);
+
+            $pdf->Ln();
+            //END
+        }
+        $sql = "SELECT *, 
     SUM($total_tdp_1sem_1yr_male) AS grand_total_tdp_1sem_1yr_male,
     SUM($total_tdp_1sem_1yr_female) AS grand_total_tdp_1sem_1yr_female,
     SUM($total_tdp_1sem_2yr_male) AS grand_total_tdp_1sem_2yr_male,
@@ -2710,221 +2709,221 @@ if ($resultCheck > 0) {
 
     FROM tbl_degree_programs 
     WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_1sem_1yr_male > 0 OR total_tdp_2sem_1yr_female > 0 OR total_tdp_2sem_1yr_male > 0 OR total_tdp_2sem_1yr_female > 0) ";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $grand_total_tdp_1sem_1yr_male = $row['grand_total_tdp_1sem_1yr_male'];
+                $grand_total_tdp_1sem_2yr_male = $row['grand_total_tdp_1sem_2yr_male'];
+                $grand_total_tdp_1sem_3yr_male = $row['grand_total_tdp_1sem_3yr_male'];
+                $grand_total_tdp_1sem_4yr_male = $row['grand_total_tdp_1sem_4yr_male'];
+                $grand_total_tdp_1sem_5yr_male = $row['grand_total_tdp_1sem_5yr_male'];
+                $grand_total_tdp_1sem_6yr_male = $row['grand_total_tdp_1sem_6yr_male'];
+
+                $grand_total_tdp_2sem_1yr_male = $row['grand_total_tdp_2sem_1yr_male'];
+                $grand_total_tdp_2sem_2yr_male = $row['grand_total_tdp_2sem_2yr_male'];
+                $grand_total_tdp_2sem_3yr_male = $row['grand_total_tdp_2sem_3yr_male'];
+                $grand_total_tdp_2sem_4yr_male = $row['grand_total_tdp_2sem_4yr_male'];
+                $grand_total_tdp_2sem_5yr_male = $row['grand_total_tdp_2sem_5yr_male'];
+                $grand_total_tdp_2sem_6yr_male = $row['grand_total_tdp_2sem_6yr_male'];
+
+                $grand_total_tdp_3sem_1yr_male = $row['grand_total_tdp_3sem_1yr_male'];
+                $grand_total_tdp_3sem_2yr_male = $row['grand_total_tdp_3sem_2yr_male'];
+                $grand_total_tdp_3sem_3yr_male = $row['grand_total_tdp_3sem_3yr_male'];
+                $grand_total_tdp_3sem_4yr_male = $row['grand_total_tdp_3sem_4yr_male'];
+                $grand_total_tdp_3sem_5yr_male = $row['grand_total_tdp_3sem_5yr_male'];
+                $grand_total_tdp_3sem_6yr_male = $row['grand_total_tdp_3sem_6yr_male'];
+
+                $grand_total_tdp_sum_mid_1yr_male = $row['grand_total_tdp_sum_mid_1yr_male'];
+                $grand_total_tdp_sum_mid_2yr_male = $row['grand_total_tdp_sum_mid_2yr_male'];
+                $grand_total_tdp_sum_mid_3yr_male = $row['grand_total_tdp_sum_mid_3yr_male'];
+                $grand_total_tdp_sum_mid_4yr_male = $row['grand_total_tdp_sum_mid_4yr_male'];
+                $grand_total_tdp_sum_mid_5yr_male = $row['grand_total_tdp_sum_mid_5yr_male'];
+                $grand_total_tdp_sum_mid_6yr_male = $row['grand_total_tdp_sum_mid_6yr_male'];
+
+                $grand_total_tdp_1sem_1yr_female = $row['grand_total_tdp_1sem_1yr_female'];
+                $grand_total_tdp_1sem_2yr_female = $row['grand_total_tdp_1sem_2yr_female'];
+                $grand_total_tdp_1sem_3yr_female = $row['grand_total_tdp_1sem_3yr_female'];
+                $grand_total_tdp_1sem_4yr_female = $row['grand_total_tdp_1sem_4yr_female'];
+                $grand_total_tdp_1sem_5yr_female = $row['grand_total_tdp_1sem_5yr_female'];
+                $grand_total_tdp_1sem_6yr_female = $row['grand_total_tdp_1sem_6yr_female'];
+
+                $grand_total_tdp_2sem_1yr_female = $row['grand_total_tdp_2sem_1yr_female'];
+                $grand_total_tdp_2sem_2yr_female = $row['grand_total_tdp_2sem_2yr_female'];
+                $grand_total_tdp_2sem_3yr_female = $row['grand_total_tdp_2sem_3yr_female'];
+                $grand_total_tdp_2sem_4yr_female = $row['grand_total_tdp_2sem_4yr_female'];
+                $grand_total_tdp_2sem_5yr_female = $row['grand_total_tdp_2sem_5yr_female'];
+                $grand_total_tdp_2sem_6yr_female = $row['grand_total_tdp_2sem_6yr_female'];
+
+                $grand_total_tdp_3sem_1yr_female = $row['grand_total_tdp_3sem_1yr_female'];
+                $grand_total_tdp_3sem_2yr_female = $row['grand_total_tdp_3sem_2yr_female'];
+                $grand_total_tdp_3sem_3yr_female = $row['grand_total_tdp_3sem_3yr_female'];
+                $grand_total_tdp_3sem_4yr_female = $row['grand_total_tdp_3sem_4yr_female'];
+                $grand_total_tdp_3sem_5yr_female = $row['grand_total_tdp_3sem_5yr_female'];
+                $grand_total_tdp_3sem_6yr_female = $row['grand_total_tdp_3sem_6yr_female'];
+
+                $grand_total_tdp_sum_mid_1yr_female = $row['grand_total_tdp_sum_mid_1yr_female'];
+                $grand_total_tdp_sum_mid_2yr_female = $row['grand_total_tdp_sum_mid_2yr_female'];
+                $grand_total_tdp_sum_mid_3yr_female = $row['grand_total_tdp_sum_mid_3yr_female'];
+                $grand_total_tdp_sum_mid_4yr_female = $row['grand_total_tdp_sum_mid_4yr_female'];
+                $grand_total_tdp_sum_mid_5yr_female = $row['grand_total_tdp_sum_mid_5yr_female'];
+                $grand_total_tdp_sum_mid_6yr_female = $row['grand_total_tdp_sum_mid_6yr_female'];
+            }
+            //FIRST ROW
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(214, 234, 248);
+            $pdf->Cell(336, 5, 'GRAND TOTAL', 1, 0, 'L', true);
+            $pdf->Ln();
+
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_6yr_male, 1, 0, 'C', true);
+
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_6yr_male, 1, 0, 'C', true);
+
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_6yr_male, 1, 0, 'C', true);
+
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_6yr_male, 1, 0, 'C', true);
+
+            $pdf->Ln();
+
+            $pdf->SetFont('Arial', 'B', 9);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_6yr_female, 1, 0, 'C', true);
+
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_6yr_female, 1, 0, 'C', true);
+
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_6yr_female, 1, 0, 'C', true);
+
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_6yr_female, 1, 0, 'C', true);
+
+            $pdf->Ln();
+
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_1yr_male + $grand_total_tdp_1sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_2yr_male + $grand_total_tdp_1sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_3yr_male + $grand_total_tdp_1sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_4yr_male + $grand_total_tdp_1sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_5yr_male + $grand_total_tdp_1sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_6yr_male + $grand_total_tdp_1sem_6yr_female, 1, 0, 'C', true);
+
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_1yr_male + $grand_total_tdp_2sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_2yr_male + $grand_total_tdp_2sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_3yr_male + $grand_total_tdp_2sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_4yr_male + $grand_total_tdp_2sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_5yr_male + $grand_total_tdp_2sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_6yr_male + $grand_total_tdp_2sem_6yr_female, 1, 0, 'C', true);
+
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_1yr_male + $grand_total_tdp_3sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_2yr_male + $grand_total_tdp_3sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_3yr_male + $grand_total_tdp_3sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_4yr_male + $grand_total_tdp_3sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_5yr_male + $grand_total_tdp_3sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_6yr_male + $grand_total_tdp_3sem_6yr_female, 1, 0, 'C', true);
+
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_1yr_male + $grand_total_tdp_sum_mid_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_2yr_male + $grand_total_tdp_sum_mid_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_3yr_male + $grand_total_tdp_sum_mid_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_4yr_male + $grand_total_tdp_sum_mid_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_5yr_male + $grand_total_tdp_sum_mid_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_6yr_male + $grand_total_tdp_sum_mid_6yr_female, 1, 0, 'C', true);
+
+            $pdf->Ln();
+            //END
+        }
+    }
+    $pdf->addPage();
+    //No. of TDP Grantees Graduated and Exceeded the maximum MRR
+    //DEGREE PROGRAM
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(156, 10, 'DEGREE PROGRAM', 1, 0, 'C', true);
+    $pdf->Cell(90, 5, 'GRADUATED GRANTEES', 1, 0, 'C', true);
+    $pdf->Cell(90, 5, 'NO. OF TDP GRANTEES WHO EXCEEDED THE MRR', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(156, 0, '', 0, 0, 'C', true);
+    $pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
+    //END
+    $pdf->Ln();
+
+    $sql = "SELECT * 
+FROM tbl_degree_programs 
+WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_exceeded_mrr_male > 0 OR total_tdp_exceeded_mrr_female > 0) ";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-            $grand_total_tdp_1sem_1yr_male = $row['grand_total_tdp_1sem_1yr_male'];
-            $grand_total_tdp_1sem_2yr_male = $row['grand_total_tdp_1sem_2yr_male'];
-            $grand_total_tdp_1sem_3yr_male = $row['grand_total_tdp_1sem_3yr_male'];
-            $grand_total_tdp_1sem_4yr_male = $row['grand_total_tdp_1sem_4yr_male'];
-            $grand_total_tdp_1sem_5yr_male = $row['grand_total_tdp_1sem_5yr_male'];
-            $grand_total_tdp_1sem_6yr_male = $row['grand_total_tdp_1sem_6yr_male'];
+            $uid = $row['uid'];
+            $ac_year = $row['ac_year'];
+            $program_name_tdp = $row['program_name'];
+            $total_tdp_exceeded_mrr_male = $row['total_tdp_exceeded_mrr_male'];
+            $total_tdp_exceeded_mrr_female = $row['total_tdp_exceeded_mrr_female'];
+            $total_tdp_graduated_male = $row['total_tdp_graduated_male'];
+            $total_tdp_graduated_female = $row['total_tdp_graduated_female'];
 
-            $grand_total_tdp_2sem_1yr_male = $row['grand_total_tdp_2sem_1yr_male'];
-            $grand_total_tdp_2sem_2yr_male = $row['grand_total_tdp_2sem_2yr_male'];
-            $grand_total_tdp_2sem_3yr_male = $row['grand_total_tdp_2sem_3yr_male'];
-            $grand_total_tdp_2sem_4yr_male = $row['grand_total_tdp_2sem_4yr_male'];
-            $grand_total_tdp_2sem_5yr_male = $row['grand_total_tdp_2sem_5yr_male'];
-            $grand_total_tdp_2sem_6yr_male = $row['grand_total_tdp_2sem_6yr_male'];
-
-            $grand_total_tdp_3sem_1yr_male = $row['grand_total_tdp_3sem_1yr_male'];
-            $grand_total_tdp_3sem_2yr_male = $row['grand_total_tdp_3sem_2yr_male'];
-            $grand_total_tdp_3sem_3yr_male = $row['grand_total_tdp_3sem_3yr_male'];
-            $grand_total_tdp_3sem_4yr_male = $row['grand_total_tdp_3sem_4yr_male'];
-            $grand_total_tdp_3sem_5yr_male = $row['grand_total_tdp_3sem_5yr_male'];
-            $grand_total_tdp_3sem_6yr_male = $row['grand_total_tdp_3sem_6yr_male'];
-
-            $grand_total_tdp_sum_mid_1yr_male = $row['grand_total_tdp_sum_mid_1yr_male'];
-            $grand_total_tdp_sum_mid_2yr_male = $row['grand_total_tdp_sum_mid_2yr_male'];
-            $grand_total_tdp_sum_mid_3yr_male = $row['grand_total_tdp_sum_mid_3yr_male'];
-            $grand_total_tdp_sum_mid_4yr_male = $row['grand_total_tdp_sum_mid_4yr_male'];
-            $grand_total_tdp_sum_mid_5yr_male = $row['grand_total_tdp_sum_mid_5yr_male'];
-            $grand_total_tdp_sum_mid_6yr_male = $row['grand_total_tdp_sum_mid_6yr_male'];
-
-            $grand_total_tdp_1sem_1yr_female = $row['grand_total_tdp_1sem_1yr_female'];
-            $grand_total_tdp_1sem_2yr_female = $row['grand_total_tdp_1sem_2yr_female'];
-            $grand_total_tdp_1sem_3yr_female = $row['grand_total_tdp_1sem_3yr_female'];
-            $grand_total_tdp_1sem_4yr_female = $row['grand_total_tdp_1sem_4yr_female'];
-            $grand_total_tdp_1sem_5yr_female = $row['grand_total_tdp_1sem_5yr_female'];
-            $grand_total_tdp_1sem_6yr_female = $row['grand_total_tdp_1sem_6yr_female'];
-
-            $grand_total_tdp_2sem_1yr_female = $row['grand_total_tdp_2sem_1yr_female'];
-            $grand_total_tdp_2sem_2yr_female = $row['grand_total_tdp_2sem_2yr_female'];
-            $grand_total_tdp_2sem_3yr_female = $row['grand_total_tdp_2sem_3yr_female'];
-            $grand_total_tdp_2sem_4yr_female = $row['grand_total_tdp_2sem_4yr_female'];
-            $grand_total_tdp_2sem_5yr_female = $row['grand_total_tdp_2sem_5yr_female'];
-            $grand_total_tdp_2sem_6yr_female = $row['grand_total_tdp_2sem_6yr_female'];
-
-            $grand_total_tdp_3sem_1yr_female = $row['grand_total_tdp_3sem_1yr_female'];
-            $grand_total_tdp_3sem_2yr_female = $row['grand_total_tdp_3sem_2yr_female'];
-            $grand_total_tdp_3sem_3yr_female = $row['grand_total_tdp_3sem_3yr_female'];
-            $grand_total_tdp_3sem_4yr_female = $row['grand_total_tdp_3sem_4yr_female'];
-            $grand_total_tdp_3sem_5yr_female = $row['grand_total_tdp_3sem_5yr_female'];
-            $grand_total_tdp_3sem_6yr_female = $row['grand_total_tdp_3sem_6yr_female'];
-
-            $grand_total_tdp_sum_mid_1yr_female = $row['grand_total_tdp_sum_mid_1yr_female'];
-            $grand_total_tdp_sum_mid_2yr_female = $row['grand_total_tdp_sum_mid_2yr_female'];
-            $grand_total_tdp_sum_mid_3yr_female = $row['grand_total_tdp_sum_mid_3yr_female'];
-            $grand_total_tdp_sum_mid_4yr_female = $row['grand_total_tdp_sum_mid_4yr_female'];
-            $grand_total_tdp_sum_mid_5yr_female = $row['grand_total_tdp_sum_mid_5yr_female'];
-            $grand_total_tdp_sum_mid_6yr_female = $row['grand_total_tdp_sum_mid_6yr_female'];
+            //FIRST ROW
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->Cell(156, 5, $program_name_tdp, 1, 0, 'L', true);
+            $pdf->SetFont('Arial', '', 10);
+            $pdf->Cell(45, 5, $total_tdp_graduated_male, 1, 0, 'C', true);
+            $pdf->Cell(45, 5, $total_tdp_graduated_female, 1, 0, 'C', true);
+            $pdf->Cell(45, 5, $total_tdp_exceeded_mrr_male, 1, 0, 'C', true);
+            $pdf->Cell(45, 5, $total_tdp_exceeded_mrr_female, 1, 0, 'C', true);
+            //END
+            $pdf->Ln();
         }
-        //FIRST ROW
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(214, 234, 248);
-        $pdf->Cell(336, 5, 'GRAND TOTAL', 1, 0, 'L', true);
-        $pdf->Ln();
-
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(15, 5, 'MALE', 1, 0, 'L', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_6yr_male, 1, 0, 'C', true);
-
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_6yr_male, 1, 0, 'C', true);
-
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_6yr_male, 1, 0, 'C', true);
-
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_6yr_male, 1, 0, 'C', true);
-
-        $pdf->Ln();
-
-        $pdf->SetFont('Arial', 'B', 9);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(15, 5, 'FEMALE', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_6yr_female, 1, 0, 'C', true);
-
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_6yr_female, 1, 0, 'C', true);
-
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_6yr_female, 1, 0, 'C', true);
-
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_6yr_female, 1, 0, 'C', true);
-
-        $pdf->Ln();
-
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_1yr_male + $grand_total_tdp_1sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_2yr_male + $grand_total_tdp_1sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_3yr_male + $grand_total_tdp_1sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_4yr_male + $grand_total_tdp_1sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_5yr_male + $grand_total_tdp_1sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_1sem_6yr_male + $grand_total_tdp_1sem_6yr_female, 1, 0, 'C', true);
-
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_1yr_male + $grand_total_tdp_2sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_2yr_male + $grand_total_tdp_2sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_3yr_male + $grand_total_tdp_2sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_4yr_male + $grand_total_tdp_2sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_5yr_male + $grand_total_tdp_2sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_2sem_6yr_male + $grand_total_tdp_2sem_6yr_female, 1, 0, 'C', true);
-
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_1yr_male + $grand_total_tdp_3sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_2yr_male + $grand_total_tdp_3sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_3yr_male + $grand_total_tdp_3sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_4yr_male + $grand_total_tdp_3sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_5yr_male + $grand_total_tdp_3sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_3sem_6yr_male + $grand_total_tdp_3sem_6yr_female, 1, 0, 'C', true);
-
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_1yr_male + $grand_total_tdp_sum_mid_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_2yr_male + $grand_total_tdp_sum_mid_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_3yr_male + $grand_total_tdp_sum_mid_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_4yr_male + $grand_total_tdp_sum_mid_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_5yr_male + $grand_total_tdp_sum_mid_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_tdp_sum_mid_6yr_male + $grand_total_tdp_sum_mid_6yr_female, 1, 0, 'C', true);
-
-        $pdf->Ln();
-        //END
-    }
-}
-$pdf->addPage();
-//No. of TDP Grantees Graduated and Exceeded the maximum MRR
-//DEGREE PROGRAM
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(156, 10, 'DEGREE PROGRAM', 1, 0, 'C', true);
-$pdf->Cell(90, 5, 'GRADUATED GRANTEES', 1, 0, 'C', true);
-$pdf->Cell(90, 5, 'NO. OF TDP GRANTEES WHO EXCEEDED THE MRR', 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(156, 0, '', 0, 0, 'C', true);
-$pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
-//END
-$pdf->Ln();
-
-$sql = "SELECT * 
-FROM tbl_degree_programs 
-WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_exceeded_mrr_male > 0 OR total_tdp_exceeded_mrr_female > 0) ";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $uid = $row['uid'];
-        $ac_year = $row['ac_year'];
-        $program_name_tdp = $row['program_name'];
-        $total_tdp_exceeded_mrr_male = $row['total_tdp_exceeded_mrr_male'];
-        $total_tdp_exceeded_mrr_female = $row['total_tdp_exceeded_mrr_female'];
-        $total_tdp_graduated_male = $row['total_tdp_graduated_male'];
-        $total_tdp_graduated_female = $row['total_tdp_graduated_female'];
-
-        //FIRST ROW
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(156, 5, $program_name_tdp, 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(45, 5, $total_tdp_graduated_male, 1, 0, 'C', true);
-        $pdf->Cell(45, 5, $total_tdp_graduated_female, 1, 0, 'C', true);
-        $pdf->Cell(45, 5, $total_tdp_exceeded_mrr_male, 1, 0, 'C', true);
-        $pdf->Cell(45, 5, $total_tdp_exceeded_mrr_female, 1, 0, 'C', true);
-        //END
-        $pdf->Ln();
-    }
-    $sql = "SELECT *,
+        $sql = "SELECT *,
     SUM(total_tdp_exceeded_mrr_male) AS grand_total_tdp_exceeded_mrr_male,
     SUM(total_tdp_exceeded_mrr_female) AS grand_total_tdp_exceeded_mrr_female,
     SUM(total_tdp_graduated_male) AS grand_total_tdp_graduated_male,
@@ -2932,208 +2931,208 @@ if ($resultCheck > 0) {
 
     FROM tbl_degree_programs 
     WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_exceeded_mrr_male > 0 OR total_tdp_exceeded_mrr_female > 0) ";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $grand_total_tdp_exceeded_mrr_male = $row['grand_total_tdp_exceeded_mrr_male'];
-            $grand_total_tdp_exceeded_mrr_female = $row['grand_total_tdp_exceeded_mrr_female'];
-            $grand_total_tdp_graduated_male = $row['grand_total_tdp_graduated_male'];
-            $grand_total_tdp_graduated_female = $row['grand_total_tdp_graduated_female'];
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $grand_total_tdp_exceeded_mrr_male = $row['grand_total_tdp_exceeded_mrr_male'];
+                $grand_total_tdp_exceeded_mrr_female = $row['grand_total_tdp_exceeded_mrr_female'];
+                $grand_total_tdp_graduated_male = $row['grand_total_tdp_graduated_male'];
+                $grand_total_tdp_graduated_female = $row['grand_total_tdp_graduated_female'];
+            }
         }
-    }
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetFillColor(255, 255, 255);
         $pdf->Cell(156, 5, 'TOTAL', 1, 0, 'L', true);
-    
+
         $pdf->Cell(45, 5, $grand_total_tdp_graduated_male, 1, 0, 'C', true);
         $pdf->Cell(45, 5, $grand_total_tdp_graduated_female, 1, 0, 'C', true);
         $pdf->Cell(45, 5, $grand_total_tdp_exceeded_mrr_male, 1, 0, 'C', true);
         $pdf->Cell(45, 5, $grand_total_tdp_exceeded_mrr_female, 1, 0, 'C', true);
-}
-
-$pdf->addPage();
-
-// REASONS FOR DROPPING
-
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(190, 5, 'NO. OF TDP BENEFICIARIES WHO DROPPED', 0, 0, 'L', true);
-$pdf->Ln();
-
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetTextColor(0, 0, 0);
-
-$pdf->Cell(176, 10, 'REASONS FOR DROPPING', 1, 0, 'C', true);
-
-$pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(176, 0, '', 0, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Ln();
-
-$sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP' ORDER BY reason ASC";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $reason = $row['reason'];
-        $total_dropout_1st_male = $row['total_dropout_1st_male'];
-        $total_dropout_1st_female = $row['total_dropout_1st_female'];
-        $total_dropout_2nd_male = $row['total_dropout_2nd_male'];
-        $total_dropout_2nd_female = $row['total_dropout_2nd_female'];
-        $total_dropout_3rd_male = $row['total_dropout_3rd_male'];
-        $total_dropout_3rd_female = $row['total_dropout_3rd_female'];
-        $total_dropout_sum_mid_male = $row['total_dropout_sum_mid_male'];
-        $total_dropout_sum_mid_female = $row['total_dropout_sum_mid_female'];
-
-        $pdf->SetFillColor(255, 255, 255);
-        //FIRST ROW
-        $pdf->Cell(176, 5, $reason, 1, 0, 'L', true);
-        $pdf->Cell(20, 5, $total_dropout_1st_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_2nd_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_sum_mid_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_dropout_sum_mid_female, 1, 0, 'C', true);
-
-        //END
-        $pdf->Ln();
     }
-}
 
-//END
-$sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
+    $pdf->addPage();
+
+    // REASONS FOR DROPPING
+
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(190, 5, 'NO. OF TDP BENEFICIARIES WHO DROPPED', 0, 0, 'L', true);
+    $pdf->Ln();
+
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetTextColor(0, 0, 0);
+
+    $pdf->Cell(176, 10, 'REASONS FOR DROPPING', 1, 0, 'C', true);
+
+    $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(176, 0, '', 0, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Ln();
+
+    $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP' ORDER BY reason ASC";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $reason = $row['reason'];
+            $total_dropout_1st_male = $row['total_dropout_1st_male'];
+            $total_dropout_1st_female = $row['total_dropout_1st_female'];
+            $total_dropout_2nd_male = $row['total_dropout_2nd_male'];
+            $total_dropout_2nd_female = $row['total_dropout_2nd_female'];
+            $total_dropout_3rd_male = $row['total_dropout_3rd_male'];
+            $total_dropout_3rd_female = $row['total_dropout_3rd_female'];
+            $total_dropout_sum_mid_male = $row['total_dropout_sum_mid_male'];
+            $total_dropout_sum_mid_female = $row['total_dropout_sum_mid_female'];
+
+            $pdf->SetFillColor(255, 255, 255);
+            //FIRST ROW
+            $pdf->Cell(176, 5, $reason, 1, 0, 'L', true);
+            $pdf->Cell(20, 5, $total_dropout_1st_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_1st_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_2nd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_3rd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_sum_mid_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_dropout_sum_mid_female, 1, 0, 'C', true);
+
+            //END
+            $pdf->Ln();
+        }
+    }
+
+    //END
+    $sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
 FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP'";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $total_1st_male = $row['total_1st_male'];
-        $total_1st_female = $row['total_1st_female'];
-        $total_2nd_male = $row['total_2nd_male'];
-        $total_2nd_female = $row['total_2nd_female'];
-        $total_3rd_male = $row['total_3rd_male'];
-        $total_3rd_female = $row['total_3rd_female'];
-        $total_sum_mid_male = $row['total_sum_mid_male'];
-        $total_sum_mid_female = $row['total_sum_mid_female'];
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $total_1st_male = $row['total_1st_male'];
+            $total_1st_female = $row['total_1st_female'];
+            $total_2nd_male = $row['total_2nd_male'];
+            $total_2nd_female = $row['total_2nd_female'];
+            $total_3rd_male = $row['total_3rd_male'];
+            $total_3rd_female = $row['total_3rd_female'];
+            $total_sum_mid_male = $row['total_sum_mid_male'];
+            $total_sum_mid_female = $row['total_sum_mid_female'];
+        }
     }
-}
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
-$pdf->Cell(20, 5, $total_1st_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_1st_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_2nd_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_2nd_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_3rd_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
+    $pdf->Cell(20, 5, $total_1st_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_1st_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_2nd_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_2nd_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_3rd_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
 
-//END
-$pdf->Ln();
-$pdf->Ln();
+    //END
+    $pdf->Ln();
+    $pdf->Ln();
 
-// REASONS FOR LEAVE OF ABSENCE (LOA)
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(190, 5, 'NO. OF TDP BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
-$pdf->Ln();
+    // REASONS FOR LEAVE OF ABSENCE (LOA)
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(190, 5, 'NO. OF TDP BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
+    $pdf->Ln();
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->Cell(176, 10, 'REASONS FOR LEAVE OF ABSENCE (LOA)', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
-$pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(176, 0, '', 0, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-$pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->Cell(176, 10, 'REASONS FOR LEAVE OF ABSENCE (LOA)', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
+    $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(176, 0, '', 0, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+    $pdf->Ln();
 
-$sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP' ORDER BY reason ASC";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $reason = $row['reason'];
-        $total_loa_1st_male = $row['total_loa_1st_male'];
-        $total_loa_1st_female = $row['total_loa_1st_female'];
-        $total_loa_2nd_male = $row['total_loa_2nd_male'];
-        $total_loa_2nd_female = $row['total_loa_2nd_female'];
-        $total_loa_3rd_male = $row['total_loa_3rd_male'];
-        $total_loa_3rd_female = $row['total_loa_3rd_female'];
-        $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
-        $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
+    $sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP' ORDER BY reason ASC";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $reason = $row['reason'];
+            $total_loa_1st_male = $row['total_loa_1st_male'];
+            $total_loa_1st_female = $row['total_loa_1st_female'];
+            $total_loa_2nd_male = $row['total_loa_2nd_male'];
+            $total_loa_2nd_female = $row['total_loa_2nd_female'];
+            $total_loa_3rd_male = $row['total_loa_3rd_male'];
+            $total_loa_3rd_female = $row['total_loa_3rd_female'];
+            $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
+            $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
 
-        $pdf->SetFillColor(255, 255, 255);
-        //FIRST ROW
-        $pdf->Cell(176, 5, $reason, 1, 0, 'L', true);
-        $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
+            $pdf->SetFillColor(255, 255, 255);
+            //FIRST ROW
+            $pdf->Cell(176, 5, $reason, 1, 0, 'L', true);
+            $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
 
-        //END
-        $pdf->Ln();
+            //END
+            $pdf->Ln();
+        }
     }
-}
 
-$sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
+    $sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
 FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP'";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $total_loa_1st_male = $row['total_loa_1st_male'];
-        $total_loa_1st_female = $row['total_loa_1st_female'];
-        $total_loa_2nd_male = $row['total_loa_2nd_male'];
-        $total_loa_2nd_female = $row['total_loa_2nd_female'];
-        $total_loa_3rd_male = $row['total_loa_3rd_male'];
-        $total_loa_3rd_female = $row['total_loa_3rd_female'];
-        $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
-        $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $total_loa_1st_male = $row['total_loa_1st_male'];
+            $total_loa_1st_female = $row['total_loa_1st_female'];
+            $total_loa_2nd_male = $row['total_loa_2nd_male'];
+            $total_loa_2nd_female = $row['total_loa_2nd_female'];
+            $total_loa_3rd_male = $row['total_loa_3rd_male'];
+            $total_loa_3rd_female = $row['total_loa_3rd_female'];
+            $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
+            $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
+        }
     }
-}
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
-$pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
-$pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
+    $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
+    $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
 }
 //END
 $pdf->AddPage();
@@ -3205,26 +3204,26 @@ $pdf->Cell(321, 5, $cnt++ . '. Submitted to the UniFAST the list of qualified st
 $pdf->Cell(15, 5, $question_8, 1, 1, 'C', true);
 $pdf->Cell(321, 5, $cnt++ . '. Implemented a voluntary opt-out and/or voluntary contribution mechanism for FHE', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_9, 1, 1, 'C', true);
-if($_SESSION['hei_it']=='SUC' OR $_SESSION['hei_it']=='LUC'){
-$oldx = $pdf->GetX();
-$oldy = $pdf->GetY();
-$pdf->Cell(321, 5, $cnt++ . '. Submitted to the UniFAST on time the list of students who voluntarily opted out from FHE', 1, 0, 'L');
-$pdf->Cell(15, 5, $question_10, 1, 1, 'C', true);
-$pdf->SetTextColor(255, 0, 0);
-$pdf->SetXY($oldx + 146, $oldy);
-$pdf->Write(5, "(if applicable)");
-$pdf->SetTextColor(0, 0, 0);
-$pdf->Ln();
+if ($_SESSION['hei_it'] == 'SUC' or $_SESSION['hei_it'] == 'LUC') {
+    $oldx = $pdf->GetX();
+    $oldy = $pdf->GetY();
+    $pdf->Cell(321, 5, $cnt++ . '. Submitted to the UniFAST on time the list of students who voluntarily opted out from FHE', 1, 0, 'L');
+    $pdf->Cell(15, 5, $question_10, 1, 1, 'C', true);
+    $pdf->SetTextColor(255, 0, 0);
+    $pdf->SetXY($oldx + 146, $oldy);
+    $pdf->Write(5, "(if applicable)");
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->Ln();
 
-$oldx = $pdf->GetX();
-$oldy = $pdf->GetY();
-$pdf->Cell(321, 5, $cnt++ . '. Submitted to the UniFAST on time the list of students who voluntarily contributed to the SUC/LUC', 1, 0, 'L');
-$pdf->Cell(15, 5, $question_11, 1, 1, 'C', true);
-$pdf->SetTextColor(255, 0, 0);
-$pdf->SetXY($oldx + 159, $oldy);
-$pdf->Write(5, "(if applicable)");
-$pdf->SetTextColor(0, 0, 0);
-$pdf->Ln();
+    $oldx = $pdf->GetX();
+    $oldy = $pdf->GetY();
+    $pdf->Cell(321, 5, $cnt++ . '. Submitted to the UniFAST on time the list of students who voluntarily contributed to the SUC/LUC', 1, 0, 'L');
+    $pdf->Cell(15, 5, $question_11, 1, 1, 'C', true);
+    $pdf->SetTextColor(255, 0, 0);
+    $pdf->SetXY($oldx + 159, $oldy);
+    $pdf->Write(5, "(if applicable)");
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->Ln();
 }
 $pdf->Cell(321, 5, $cnt++ . '. Signed the TES Sharing Agreement between the HEI and TES grantees', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_12, 1, 1, 'C', true);
@@ -3245,131 +3244,131 @@ $pdf->Cell(15, 5, $question_19, 1, 1, 'C', true);
 $pdf->Ln();
 
 $pdf->addPage();
-if($tes=='yes'){
-$cnt2 = 1;
+if ($tes == 'yes') {
+    $cnt2 = 1;
 
-$pdf->SetFont('Arial', 'B', 11);
-$pdf->SetFillColor(192, 192, 192);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->Cell(336, 5, 'III.B COMPLIANCE TO TES SHARING AGREEMENT', 0, 0, 'L', true);
-$pdf->Ln();
-//SPACING
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
-$pdf->Ln();
-//END
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 5, 'The HEI certifies its compliance/noncompliance with the following information:', 0, 0, 'L', true);
-$pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 11);
+    $pdf->SetFillColor(192, 192, 192);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->Cell(336, 5, 'III.B COMPLIANCE TO TES SHARING AGREEMENT', 0, 0, 'L', true);
+    $pdf->Ln();
+    //SPACING
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
+    $pdf->Ln();
+    //END
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 5, 'The HEI certifies its compliance/noncompliance with the following information:', 0, 0, 'L', true);
+    $pdf->Ln();
 
-$pdf->SetFont('Arial', '', 10);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(321, 5, $cnt2++ . '. Received from the UniFAST the exact amount of TES for the term', 1, 0, 'L', true);
-$pdf->Cell(15, 5, $question_20, 1, 1, 'C', true);
-$pdf->Cell(321, 5, $cnt2++ . '. Released the amount intended for the TES grantees', 1, 0, 'L', true);
-$pdf->Cell(15, 5, $question_21, 1, 1, 'C', true);
+    $pdf->SetFont('Arial', '', 10);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(321, 5, $cnt2++ . '. Received from the UniFAST the exact amount of TES for the term', 1, 0, 'L', true);
+    $pdf->Cell(15, 5, $question_20, 1, 1, 'C', true);
+    $pdf->Cell(321, 5, $cnt2++ . '. Released the amount intended for the TES grantees', 1, 0, 'L', true);
+    $pdf->Cell(15, 5, $question_21, 1, 1, 'C', true);
 
-if ($_SESSION['hei_it'] == 'Private HEI') {
-$pdf->SetFont('Arial', '', 10);
-$oldx = $pdf->GetX();
-$oldy = $pdf->GetY();
-$pdf->Cell(321, 5, $cnt2++ . '. Released to the grantees the difference in TES amount if the share of the private HEI is greater than the actual TOSF of the grantees', 1, 0, 'L');
-$pdf->Cell(15, 5, $question_22, 1, 1, 'C', true);
-$pdf->SetTextColor(255, 0, 0);
-$pdf->SetXY($oldx + 213, $oldy);
-$pdf->Write(5, "(if applicable)");
-$pdf->SetTextColor(0, 0, 0);
-$pdf->Ln();
+    if ($_SESSION['hei_it'] == 'Private HEI') {
+        $pdf->SetFont('Arial', '', 10);
+        $oldx = $pdf->GetX();
+        $oldy = $pdf->GetY();
+        $pdf->Cell(321, 5, $cnt2++ . '. Released to the grantees the difference in TES amount if the share of the private HEI is greater than the actual TOSF of the grantees', 1, 0, 'L');
+        $pdf->Cell(15, 5, $question_22, 1, 1, 'C', true);
+        $pdf->SetTextColor(255, 0, 0);
+        $pdf->SetXY($oldx + 213, $oldy);
+        $pdf->Write(5, "(if applicable)");
+        $pdf->SetTextColor(0, 0, 0);
+        $pdf->Ln();
 
-$oldx = $pdf->GetX();
-$oldy = $pdf->GetY();
-$pdf->Cell(321, 5, $cnt2++ . '. Obliged the grantees to pay the difference in TES amount if the share of the private HEI is less than the actual TOSF of the grantees', 1, 0, 'L');
-$pdf->Cell(15, 5, $question_23, 1, 1, 'C', true);
-$pdf->SetTextColor(255, 0, 0);
-$pdf->SetXY($oldx + 212, $oldy);
-$pdf->Write(5, "(if applicable)");
-$pdf->SetTextColor(0, 0, 0);
-$pdf->Ln();
-$pdf->SetFont('Arial', '', 10);
-$pdf->Cell(321, 5, $cnt2++ . '. Released the full amount of the TES to the grantees who have fully paid the TOSF for the term', 1, 0, 'L', true);
-$pdf->Cell(15, 5, $question_24, 1, 1, 'C', true);
-}
-$pdf->Cell(321, 5, $cnt2++ . '. Released to the grantees their share within two (2) weeks upon the receipt of fund transfer for TES', 1, 0, 'L', true);
-$pdf->Cell(15, 5, $question_25, 1, 1, 'C', true);
-$pdf->Ln();
+        $oldx = $pdf->GetX();
+        $oldy = $pdf->GetY();
+        $pdf->Cell(321, 5, $cnt2++ . '. Obliged the grantees to pay the difference in TES amount if the share of the private HEI is less than the actual TOSF of the grantees', 1, 0, 'L');
+        $pdf->Cell(15, 5, $question_23, 1, 1, 'C', true);
+        $pdf->SetTextColor(255, 0, 0);
+        $pdf->SetXY($oldx + 212, $oldy);
+        $pdf->Write(5, "(if applicable)");
+        $pdf->SetTextColor(0, 0, 0);
+        $pdf->Ln();
+        $pdf->SetFont('Arial', '', 10);
+        $pdf->Cell(321, 5, $cnt2++ . '. Released the full amount of the TES to the grantees who have fully paid the TOSF for the term', 1, 0, 'L', true);
+        $pdf->Cell(15, 5, $question_24, 1, 1, 'C', true);
+    }
+    $pdf->Cell(321, 5, $cnt2++ . '. Released to the grantees their share within two (2) weeks upon the receipt of fund transfer for TES', 1, 0, 'L', true);
+    $pdf->Cell(15, 5, $question_25, 1, 1, 'C', true);
+    $pdf->Ln();
 }
 //End
-if($_SESSION['ac_year']=='2022-2023'){
-$pdf->AddPage();
-//PART IV. UNIFAST EXPERIENCE
-$pdf->SetFont('Arial', 'B', 12);
-$pdf->SetWidths(array(95, 95));
-$pdf->SetAligns(array('L', 'L'));
-$pdf->SetFillColor(0, 0, 128);
-$pdf->SetTextColor(255, 255, 255);
-$pdf->Cell(336, 8, "PART IV. UNIFAST STAKEHOLDERS' EXPERIENCE", 0, 0, 'C', true);
-$pdf->Ln();
-$pdf->Ln();
-//SPACING
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
-$pdf->Ln();
-//END
-$pdf->SetFont('Arial', 'B', 13);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 5, '1. Best Practices in the Implementation of RA No. 10931 Programs', 0, 0, 'L', true);
-$pdf->Ln();
-$pdf->SetFont('Arial', '', 11);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(26, 25, '', 0, 0, 'L', true);
-$pdf->Cell(310, 25, $question_26, 0, 0, 'L', true);
-$pdf->Ln();
-//SPACING
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
-$pdf->Ln();
-//END
-$pdf->SetFont('Arial', 'B', 13);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 5, '2. Challenges/Concerns in the Implementation of RA No. 10931', 0, 0, 'L', true);
-$pdf->Ln();
-$pdf->SetFont('Arial', '', 11);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->Cell(26, 25, '', 0, 0, 'L', true);
-$pdf->Cell(310, 25, $question_27, 0, 0, 'L', true);
-$pdf->Ln();
-//SPACING
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
-$pdf->Ln();
-//END
-$pdf->SetFont('Arial', 'B', 13);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 5, '3. Recommendations for the Improvement of Program Implementation', 0, 0, 'L', true);
-$pdf->Ln();
-$pdf->SetFont('Arial', '', 11);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(26, 25, '', 0, 0, 'L', true);
-$pdf->Cell(310, 25, $question_28, 0, 0, 'L', true);
+if ($_SESSION['ac_year'] == '2022-2023') {
+    $pdf->AddPage();
+    //PART IV. UNIFAST EXPERIENCE
+    $pdf->SetFont('Arial', 'B', 12);
+    $pdf->SetWidths(array(95, 95));
+    $pdf->SetAligns(array('L', 'L'));
+    $pdf->SetFillColor(0, 0, 128);
+    $pdf->SetTextColor(255, 255, 255);
+    $pdf->Cell(336, 8, "PART IV. UNIFAST STAKEHOLDERS' EXPERIENCE", 0, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->Ln();
+    //SPACING
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
+    $pdf->Ln();
+    //END
+    $pdf->SetFont('Arial', 'B', 13);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 5, '1. Best Practices in the Implementation of RA No. 10931 Programs', 0, 0, 'L', true);
+    $pdf->Ln();
+    $pdf->SetFont('Arial', '', 11);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(26, 25, '', 0, 0, 'L', true);
+    $pdf->Cell(310, 25, $question_26, 0, 0, 'L', true);
+    $pdf->Ln();
+    //SPACING
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
+    $pdf->Ln();
+    //END
+    $pdf->SetFont('Arial', 'B', 13);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 5, '2. Challenges/Concerns in the Implementation of RA No. 10931', 0, 0, 'L', true);
+    $pdf->Ln();
+    $pdf->SetFont('Arial', '', 11);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->Cell(26, 25, '', 0, 0, 'L', true);
+    $pdf->Cell(310, 25, $question_27, 0, 0, 'L', true);
+    $pdf->Ln();
+    //SPACING
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
+    $pdf->Ln();
+    //END
+    $pdf->SetFont('Arial', 'B', 13);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 5, '3. Recommendations for the Improvement of Program Implementation', 0, 0, 'L', true);
+    $pdf->Ln();
+    $pdf->SetFont('Arial', '', 11);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(26, 25, '', 0, 0, 'L', true);
+    $pdf->Cell(310, 25, $question_28, 0, 0, 'L', true);
 }
 
 //end of data rows
-    if (file_exists('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf')){
-        unlink('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
-        $pdf->Output('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
-        header("Location: final.php");
-    }else{
-        $pdf->Output('assets/pdf/'.$_SESSION['ac_year'].'/'. $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
-        header("Location: final.php");
-    }
+if (file_exists('assets/pdf/' . $_SESSION['ac_year'] . '/' . $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf')) {
+    unlink('assets/pdf/' . $_SESSION['ac_year'] . '/' . $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
+    $pdf->Output('assets/pdf/' . $_SESSION['ac_year'] . '/' . $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
+    header("Location: final.php");
+} else {
+    $pdf->Output('assets/pdf/' . $_SESSION['ac_year'] . '/' . $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf', 'F');
+    header("Location: final.php");
+}
 
 // header('Content-type: application/pdf');
 // header('Content-disposition: attachment; filename =' . $_SESSION['hei_name'] . "-" . $_SESSION['ac_year'] . '.pdf');
