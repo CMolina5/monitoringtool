@@ -778,10 +778,7 @@ if ($resultCheck > 0) {
 
     //END
     $pdf->AddPage();
-}else{
-    
 }
-
 
 //Part2 STUFAP
 $pdf->SetFont('Arial', 'B', 12);
