@@ -1438,198 +1438,52 @@ if ($resultCheck > 0) {
         $pdf->Cell(37, 5, $total_fhe_sum_mid_female, 1, 0, 'C', true);
 
         $pdf->Ln();
-      
-
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(20, 5, 'TOTAL', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(19.75, 5, $total_tes_1st_male + $total_tes_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_1st_male + $total_pwd_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_1st_male + $total_ip_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_1st_male + $total_with_board_1st_female, 1, 0, 'C', true);
-
-        $pdf->Cell(19.75, 5, $total_tes_2nd_male + $total_tes_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_2nd_male + $total_pwd_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_2nd_male + $total_ip_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_2nd_male + $total_with_board_2nd_female, 1, 0, 'C', true);
-
-        $pdf->Cell(19.75, 5, $total_tes_3rd_male + $total_tes_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_3rd_male + $total_pwd_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_3rd_male + $total_ip_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_3rd_male + $total_with_board_3rd_female, 1, 0, 'C', true);
-
-        $pdf->Cell(19.75, 5, $total_tes_summer_midyear_male + $total_tes_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_summer_midyear_male + $total_pwd_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_summer_midyear_male + $total_ip_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_summer_midyear_male + $total_with_board_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Ln();
-        
     }
     $sql = "SELECT *,
-    SUM(total_tes_1st_male) AS grand_total_tes_1st_male, 
-    SUM(total_tes_1st_female) AS grand_total_tes_1st_female,
-    SUM(total_tes_2nd_male) AS grand_total_tes_2nd_male, 
-    SUM(total_tes_2nd_female) AS grand_total_tes_2nd_female,
-    SUM(total_tes_3rd_male) AS grand_total_tes_3rd_male, 
-    SUM(total_tes_3rd_female) AS grand_total_tes_3rd_female,
-    SUM(total_tes_summer_midyear_male) AS grand_total_tes_summer_midyear_male, 
-    SUM(total_tes_summer_midyear_female) AS grand_total_tes_summer_midyear_female,
-
-    SUM(total_pwd_1st_male) AS grand_total_pwd_1st_male,
-    SUM(total_pwd_1st_female) AS grand_total_pwd_1st_female,
-    SUM(total_pwd_2nd_male) AS grand_total_pwd_2nd_male,
-    SUM(total_pwd_2nd_female) AS grand_total_pwd_2nd_female,
-    SUM(total_pwd_3rd_male) AS grand_total_pwd_3rd_male,
-    SUM(total_pwd_3rd_female) AS grand_total_pwd_3rd_female,
-    SUM(total_pwd_summer_midyear_male) AS grand_total_pwd_summer_midyear_male,
-    SUM(total_pwd_summer_midyear_female) AS grand_total_pwd_summer_midyear_female,
-
-    SUM(total_ip_1st_male) AS grand_total_ip_1st_male,
-    SUM(total_ip_1st_female) AS grand_total_ip_1st_female,
-    SUM(total_ip_2nd_male) AS grand_total_ip_2nd_male,
-    SUM(total_ip_2nd_female) AS grand_total_ip_2nd_female,
-    SUM(total_ip_3rd_male) AS grand_total_ip_3rd_male,
-    SUM(total_ip_3rd_female) AS grand_total_ip_3rd_female,
-    SUM(total_ip_summer_midyear_male) AS grand_total_ip_summer_midyear_male,
-    SUM(total_ip_summer_midyear_female) AS grand_total_ip_summer_midyear_female,
-
-    SUM(total_with_board_1st_male) AS grand_total_with_board_1st_male,
-    SUM(total_with_board_1st_female) AS grand_total_with_board_1st_female,
-    SUM(total_with_board_2nd_male) AS grand_total_with_board_2nd_male,
-    SUM(total_with_board_2nd_female) AS grand_total_with_board_2nd_female,
-    SUM(total_with_board_3rd_male) AS grand_total_with_board_3rd_male,
-    SUM(total_with_board_3rd_female) AS grand_total_with_board_3rd_female,
-    SUM(total_with_board_summer_midyear_male) AS grand_total_with_board_summer_midyear_male,
-    SUM(total_with_board_summer_midyear_female) AS grand_total_with_board_summer_midyear_female
-    
-    FROM tbl_tes_category 
+    SUM(total_fhe_1st_male) AS grand_total_fhe_1st_male, 
+    SUM(total_fhe_1st_female) AS grand_total_fhe_1st_female,
+    SUM(total_fhe_2nd_male) AS grand_total_fhe_2nd_male, 
+    SUM(total_fhe_2nd_female) AS grand_total_fhe_2nd_female,
+    SUM(total_fhe_3rd_male) AS grand_total_fhe_3rd_male, 
+    SUM(total_fhe_3rd_female) AS grand_total_fhe_3rd_female,
+    SUM(total_fhe_sum_mid_male) AS grand_total_fhe_sum_mid_male, 
+    SUM(total_fhe_sum_mid_female) AS grand_total_fhe_sum_mid_female
+    FROM tbl_fhe_category 
     WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-              //1st Semester
-        $grand_total_tes_1st_male = $row['grand_total_tes_1st_male'];
-        $grand_total_pwd_1st_male = $row['grand_total_pwd_1st_male'];
-        $grand_total_ip_1st_male = $row['grand_total_ip_1st_male'];
-        $grand_total_with_board_1st_male = $row['grand_total_with_board_1st_male'];
-
-        $grand_total_tes_1st_female = $row['grand_total_tes_1st_female'];
-        $grand_total_pwd_1st_female = $row['grand_total_pwd_1st_female'];
-        $grand_total_ip_1st_female = $row['grand_total_ip_1st_female'];
-        $grand_total_with_board_1st_female = $row['grand_total_with_board_1st_female'];
+        //1st Semester
+        $grand_total_fhe_1st_male = $row['grand_total_fhe_1st_male'];
+        $grand_total_fhe_1st_female = $row['grand_total_fhe_1st_female'];
 
         //2nd Semester
-        $grand_total_tes_2nd_male = $row['grand_total_tes_2nd_male'];
-        $grand_total_pwd_2nd_male = $row['grand_total_pwd_2nd_male'];
-        $grand_total_ip_2nd_male = $row['grand_total_ip_2nd_male'];
-        $grand_total_with_board_2nd_male = $row['grand_total_with_board_2nd_male'];
-
-        $grand_total_tes_2nd_female = $row['grand_total_tes_2nd_female'];
-        $grand_total_pwd_2nd_female = $row['grand_total_pwd_2nd_female'];
-        $grand_total_ip_2nd_female = $row['grand_total_ip_2nd_female'];
-        $grand_total_with_board_2nd_female = $row['grand_total_with_board_2nd_female'];
+        $grand_total_fhe_2nd_male = $row['grand_total_fhe_2nd_male'];
+        $grand_total_fhe_2nd_female = $row['grand_total_fhe_2nd_female'];
 
         //3rd Semester
-        $grand_total_tes_3rd_male = $row['grand_total_tes_3rd_male'];
-        $grand_total_pwd_3rd_male = $row['grand_total_pwd_3rd_male'];
-        $grand_total_ip_3rd_male = $row['grand_total_ip_3rd_male'];
-        $grand_total_with_board_3rd_male = $row['grand_total_with_board_3rd_male'];
+        $grand_total_fhe_3rd_male = $row['grand_total_fhe_3rd_male'];
+        $grand_total_fhe_3rd_female = $row['grand_total_fhe_3rd_female'];
 
-        $grand_total_tes_3rd_female = $row['grand_total_tes_3rd_female'];
-        $grand_total_pwd_3rd_female = $row['grand_total_pwd_3rd_female'];
-        $grand_total_ip_3rd_female = $row['grand_total_ip_3rd_female'];
-        $grand_total_with_board_3rd_female = $row['grand_total_with_board_3rd_female'];
-
-        //2nd Semester
-        $grand_total_tes_summer_midyear_male = $row['grand_total_tes_summer_midyear_male'];
-        $grand_total_pwd_summer_midyear_male = $row['grand_total_pwd_summer_midyear_male'];
-        $grand_total_ip_summer_midyear_male = $row['grand_total_ip_summer_midyear_male'];
-        $grand_total_with_board_summer_midyear_male = $row['grand_total_with_board_summer_midyear_male'];
-
-        $grand_total_tes_summer_midyear_female = $row['grand_total_tes_summer_midyear_female'];
-        $grand_total_pwd_summer_midyear_female = $row['grand_total_pwd_summer_midyear_female'];
-        $grand_total_ip_summer_midyear_female = $row['grand_total_ip_summer_midyear_female'];
-        $grand_total_with_board_summer_midyear_female = $row['grand_total_with_board_summer_midyear_female'];
+        //Summer Midyear
+        $grand_total_fhe_sum_mid_male = $row['grand_total_fhe_sum_mid_male'];
+        $grand_total_fhe_sum_mid_female = $row['grand_total_fhe_sum_mid_female'];
         }
     }
     //FIRST ROW
     $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(214, 234, 248);
-    $pdf->Cell(336, 5, 'GRAND TOTAL', 1, 0, 'L', true);
-    $pdf->Ln();
-
-    $pdf->SetFont('Arial', 'B', 10);
     $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'L', true);
-    $pdf->Cell(19.75, 5, $grand_total_tes_1st_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_1st_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_1st_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_1st_male, 1, 0, 'C', true);
+    $pdf->Cell(40, 5, 'TOTAL', 1, 0, 'L', true);
+    $pdf->Cell(37, 5, $grand_total_fhe_1st_male, 1, 0, 'C', true);
+    $pdf->Cell(37, 5, $grand_total_fhe_1st_female, 1, 0, 'C', true);
+    $pdf->Cell(37, 5, $grand_total_fhe_2nd_male, 1, 0, 'C', true);
+    $pdf->Cell(37, 5, $grand_total_fhe_2nd_female, 1, 0, 'C', true);
+    $pdf->Cell(37, 5, $grand_total_fhe_3rd_male, 1, 0, 'C', true);
+    $pdf->Cell(37, 5, $grand_total_fhe_3rd_female, 1, 0, 'C', true);
+    $pdf->Cell(37, 5, $grand_total_fhe_sum_mid_male, 1, 0, 'C', true);
+    $pdf->Cell(37, 5, $grand_total_fhe_sum_mid_female, 1, 0, 'C', true);
 
-    $pdf->Cell(19.75, 5, $grand_total_tes_2nd_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_2nd_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_2nd_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_2nd_male, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_3rd_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_3rd_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_3rd_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_3rd_male, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_summer_midyear_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_summer_midyear_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_summer_midyear_male, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_summer_midyear_male, 1, 0, 'C', true);
-    $pdf->Ln();
-
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'L', true);
-    $pdf->Cell(19.75, 5, $grand_total_tes_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_1st_female, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_2nd_female, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_3rd_female, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Ln();
-
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(20, 5, 'TOTAL', 1, 0, 'L', true);
-    $pdf->Cell(19.75, 5, $grand_total_tes_1st_male + $grand_total_tes_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_1st_male + $grand_total_pwd_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_1st_male + $grand_total_ip_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_1st_male + $grand_total_with_board_1st_female, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_2nd_male + $grand_total_tes_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_2nd_male + $grand_total_pwd_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_2nd_male + $grand_total_ip_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_2nd_male + $grand_total_with_board_2nd_female, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_3rd_male + $grand_total_tes_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_3rd_male + $grand_total_pwd_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_3rd_male + $grand_total_ip_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_3rd_male + $grand_total_with_board_3rd_female, 1, 0, 'C', true);
-
-    $pdf->Cell(19.75, 5, $grand_total_tes_summer_midyear_male + $grand_total_tes_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_pwd_summer_midyear_male + $grand_total_pwd_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_ip_summer_midyear_male + $grand_total_ip_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Cell(19.75, 5, $grand_total_with_board_summer_midyear_male + $grand_total_with_board_summer_midyear_female, 1, 0, 'C', true);
-    $pdf->Ln();
 }
 
 $pdf->addPage();
