@@ -1423,7 +1423,7 @@ if ($resultCheck > 0) {
         //FIRST ROW
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(40, 5, $fhe_category, 1, 0, 'L', true);
+        $pdf->Cell(40, 5, $fhe_category, 1, 0, 'C', true);
         $pdf->SetFont('Arial', '', 10);
         $pdf->Cell(37, 5, $total_fhe_1st_male, 1, 0, 'C', true);
         $pdf->Cell(37, 5, $total_fhe_1st_female, 1, 0, 'C', true);
@@ -1474,7 +1474,7 @@ if ($resultCheck > 0) {
     //FIRST ROW
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(40, 5, 'TOTAL', 1, 0, 'L', true);
+    $pdf->Cell(40, 5, 'TOTAL', 1, 0, 'C', true);
     $pdf->Cell(37, 5, $grand_total_fhe_1st_male, 1, 0, 'C', true);
     $pdf->Cell(37, 5, $grand_total_fhe_1st_female, 1, 0, 'C', true);
     $pdf->Cell(37, 5, $grand_total_fhe_2nd_male, 1, 0, 'C', true);
