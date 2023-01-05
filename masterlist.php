@@ -1434,8 +1434,8 @@ if ($resultCheck > 0) {
         $pdf->Cell(19.75, 5, $total_fhe_3rd_male, 1, 0, 'C', true);
         $pdf->Cell(19.75, 5, $total_fhe_3rd_female, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_fhe_summer_midyear_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_fhe_summer_midyear_female, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $total_fhe_sum_mid_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $total_fhe_sum_mid_female, 1, 0, 'C', true);
 
         $pdf->Ln();
       
