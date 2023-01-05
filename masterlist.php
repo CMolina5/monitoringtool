@@ -1417,8 +1417,8 @@ if ($resultCheck > 0) {
         $total_fhe_3rd_female = $row['total_fhe_3rd_female'];
 
         //2nd Semester
-        $total_fhe_summer_midyear_male = $row['total_fhe_summer_midyear_male'];
-        $total_fhe_summer_midyear_female = $row['total_fhe_summer_midyear_female'];
+        $total_fhe_sum_mid_male = $row['total_fhe_sum_mid_male'];
+        $total_fhe_sum_mid_female = $row['total_fhe_sum_mid_female'];
 
         //FIRST ROW
         $pdf->SetFont('Arial', 'B', 10);
