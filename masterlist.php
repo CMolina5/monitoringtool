@@ -711,7 +711,74 @@ if ($resultCheck > 0) {
 $pdf->addPage();
 //End
 
+//I.E OTHER LOCALLY AND NATIONALLY-FUNDED STUFAPS
+$pdf->SetFont('Arial', 'B', 11);
+$pdf->SetFillColor(192, 192, 192);
+$pdf->Cell(336, 5, 'I.E OTHER LOCALLY- AND NATIONALLY-FUNDED STUFAPS', 0, 0, 'L', true);
+$pdf->Ln();
+//SPACING
+$pdf->SetFillColor(255, 255, 255);
+$pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
+$pdf->Ln();
+//END
+$pdf->SetFont('Arial', 'I', 8);
+$pdf->SetTextColor(0, 0, 0);
+$pdf->SetFillColor(255, 255, 255);
+$pdf->Cell(336, 5, 'List of all locally- and nationally-funded StuFAPs availed in the institution, and number of beneficiaries per year level', 0, 0, 'L', true);
+$pdf->Ln();
 
+$pdf->SetFont('Arial', 'B', 10);
+$pdf->SetFillColor(236, 240, 241);
+$pdf->Cell(42, 10, 'STUFAP', 1, 0, 'C', true);
+$pdf->Cell(42, 10, 'LOCAL/NATIONAL', 1, 0, 'C', true);
+$pdf->Cell(252, 5, 'YEAR LEVEL', 1, 0, 'C', true);
+$pdf->Ln();
+$pdf->Cell(84, 0, '', 0, 0, 'C', true);
+$pdf->Cell(42, 5, '1ST', 1, 0, 'C', true);
+$pdf->Cell(42, 5, '2ND', 1, 0, 'C', true);
+$pdf->Cell(42, 5, '3RD', 1, 0, 'C', true);
+$pdf->Cell(42, 5, '4TH', 1, 0, 'C', true);
+$pdf->Cell(42, 5, '5TH', 1, 0, 'C', true);
+$pdf->Cell(42, 5, '6TH', 1, 0, 'C', true);
+$pdf->Ln();
+
+//Other StuFAPs
+$pdf->SetFont('Arial', '', 10);
+$pdf->SetWidths(array(42, 42, 42, 42, 42, 42, 42, 42));
+$pdf->SetAligns(array('C', 'C', 'C', 'C', 'C', 'C', 'C', 'C'));
+$sql = "SELECT *, SUM(total_stufap_1st) AS grand_total_stufap_1st, SUM(total_stufap_2nd) AS grand_total_stufap_2nd, SUM(total_stufap_3rd) AS grand_total_stufap_3rd, SUM(total_stufap_4th) AS grand_total_stufap_4th, SUM(total_stufap_5th) AS grand_total_stufap_5th, SUM(total_stufap_6th) AS grand_total_stufap_6th 
+FROM tbl_hei_other_funded_stufaps 
+WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'
+ORDER BY stufap_name ASC";
+$result = mysqli_query($conn, $sql);
+$resultCheck = mysqli_num_rows($result);
+if ($resultCheck > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $stufap_name = $row['stufap_name'];
+        $stufap_type = $row['stufap_type'];
+        $total_stufap_1st = $row['total_stufap_1st'];
+        $total_stufap_2nd = $row['total_stufap_2nd'];
+        $total_stufap_3rd = $row['total_stufap_3rd'];
+        $total_stufap_4th = $row['total_stufap_4th'];
+        $total_stufap_5th = $row['total_stufap_5th'];
+        $total_stufap_6th = $row['total_stufap_6th'];
+        $grand_total_stufap_1st = $row['grand_total_stufap_1st'];
+        $grand_total_stufap_2nd = $row['grand_total_stufap_2nd'];
+        $grand_total_stufap_3rd = $row['grand_total_stufap_3rd'];
+        $grand_total_stufap_4th = $row['grand_total_stufap_4th'];
+        $grand_total_stufap_5th = $row['grand_total_stufap_5th'];
+        $grand_total_stufap_6th = $row['grand_total_stufap_6th'];
+
+        $pdf->row(array(strtoUpper($stufap_name), strtoUpper($stufap_type), $total_stufap_1st, $total_stufap_2nd, $total_stufap_3rd, $total_stufap_4th, $total_stufap_5th, $total_stufap_6th));
+    }
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetWidths(array(84, 42, 42, 42, 42, 42, 42));
+    $pdf->SetAligns(array('C', 'C', 'C', 'C', 'C', 'C', 'C'));
+    $pdf->row(array('TOTAL', $grand_total_stufap_1st, $grand_total_stufap_2nd, $grand_total_stufap_3rd, $grand_total_stufap_4th, $grand_total_stufap_5th, $grand_total_stufap_6th));
+}
+
+//END
+$pdf->AddPage();
 
 //Part2 STUFAP
 $pdf->SetFont('Arial', 'B', 12);
