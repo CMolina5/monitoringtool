@@ -1375,133 +1375,70 @@ $pdf->SetTextColor(0, 0, 0);
 
 $pdf->Cell(336, 5, 'TOTAL NO. OF FHE GRANTEES WHO ARE UNDER 4PS-SWDI AND/OR LISTAHANAN BENEFICIARIES', 1, 0, 'C', true);
 $pdf->Ln();
-$pdf->Cell(20, 10, 'SEX', 1, 0, 'C', true);
-$pdf->Cell(79, 5, '1ST TERM', 1, 0, 'C', true);
-$pdf->Cell(79, 5, '2ND TERM', 1, 0, 'C', true);
-$pdf->Cell(79, 5, '3RD TERM', 1, 0, 'C', true);
-$pdf->Cell(79, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+$pdf->Cell(40, 10, 'FHE CATEGORY', 1, 0, 'C', true);
+$pdf->Cell(74, 5, '1ST TERM', 1, 0, 'C', true);
+$pdf->Cell(74, 5, '2ND TERM', 1, 0, 'C', true);
+$pdf->Cell(74, 5, '3RD TERM', 1, 0, 'C', true);
+$pdf->Cell(74, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
 
 $pdf->Ln();
 $pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(20, 0, '', 0, 0, 'C', true);
-$pdf->Cell(39.5, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(39.5, 5, 'FEMALE', 1, 0, 'C', true);
+$pdf->Cell(40, 0, '', 0, 0, 'C', true);
+$pdf->Cell(34, 5, 'MALE', 1, 0, 'C', true);
+$pdf->Cell(34, 5, 'FEMALE', 1, 0, 'C', true);
 
-$pdf->Cell(39.5, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(39.5, 5, 'FEMALE', 1, 0, 'C', true);
+$pdf->Cell(34, 5, 'MALE', 1, 0, 'C', true);
+$pdf->Cell(34, 5, 'FEMALE', 1, 0, 'C', true);
 
-$pdf->Cell(39.5, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(39.5, 5, 'FEMALE', 1, 0, 'C', true);
+$pdf->Cell(34, 5, 'MALE', 1, 0, 'C', true);
+$pdf->Cell(34, 5, 'FEMALE', 1, 0, 'C', true);
 
-$pdf->Cell(39.5, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(39.5, 5, 'FEMALE', 1, 0, 'C', true);
+$pdf->Cell(34, 5, 'MALE', 1, 0, 'C', true);
+$pdf->Cell(34, 5, 'FEMALE', 1, 0, 'C', true);
 $pdf->Ln();
 
-$sql = "SELECT * FROM tbl_tes_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
+$sql = "SELECT * FROM tbl_fhe_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 if ($resultCheck > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
-        $tes_category = $row['tes_category'];
+        $fhe_category = $row['fhe_category'];
 
         //1st Semester
-        $total_tes_1st_male = $row['total_tes_1st_male'];
-        $total_pwd_1st_male = $row['total_pwd_1st_male'];
-        $total_ip_1st_male = $row['total_ip_1st_male'];
-        $total_with_board_1st_male = $row['total_with_board_1st_male'];
-
-        $total_tes_1st_female = $row['total_tes_1st_female'];
-        $total_pwd_1st_female = $row['total_pwd_1st_female'];
-        $total_ip_1st_female = $row['total_ip_1st_female'];
-        $total_with_board_1st_female = $row['total_with_board_1st_female'];
-
+        $total_fhe_1st_male = $row['total_fhe_1st_male'];
+        $total_fhe_1st_female = $row['total_fhe_1st_female'];
+       
         //2nd Semester
-        $total_tes_2nd_male = $row['total_tes_2nd_male'];
-        $total_pwd_2nd_male = $row['total_pwd_2nd_male'];
-        $total_ip_2nd_male = $row['total_ip_2nd_male'];
-        $total_with_board_2nd_male = $row['total_with_board_2nd_male'];
-
-        $total_tes_2nd_female = $row['total_tes_2nd_female'];
-        $total_pwd_2nd_female = $row['total_pwd_2nd_female'];
-        $total_ip_2nd_female = $row['total_ip_2nd_female'];
-        $total_with_board_2nd_female = $row['total_with_board_2nd_female'];
+        $total_fhe_2nd_male = $row['total_fhe_2nd_male'];
+        $total_fhe_2nd_female = $row['total_fhe_2nd_female'];
 
         //3rd Semester
-        $total_tes_3rd_male = $row['total_tes_3rd_male'];
-        $total_pwd_3rd_male = $row['total_pwd_3rd_male'];
-        $total_ip_3rd_male = $row['total_ip_3rd_male'];
-        $total_with_board_3rd_male = $row['total_with_board_3rd_male'];
-
-        $total_tes_3rd_female = $row['total_tes_3rd_female'];
-        $total_pwd_3rd_female = $row['total_pwd_3rd_female'];
-        $total_ip_3rd_female = $row['total_ip_3rd_female'];
-        $total_with_board_3rd_female = $row['total_with_board_3rd_female'];
+        $total_fhe_3rd_male = $row['total_fhe_3rd_male'];
+        $total_fhe_3rd_female = $row['total_fhe_3rd_female'];
 
         //2nd Semester
-        $total_tes_summer_midyear_male = $row['total_tes_summer_midyear_male'];
-        $total_pwd_summer_midyear_male = $row['total_pwd_summer_midyear_male'];
-        $total_ip_summer_midyear_male = $row['total_ip_summer_midyear_male'];
-        $total_with_board_summer_midyear_male = $row['total_with_board_summer_midyear_male'];
-
-        $total_tes_summer_midyear_female = $row['total_tes_summer_midyear_female'];
-        $total_pwd_summer_midyear_female = $row['total_pwd_summer_midyear_female'];
-        $total_ip_summer_midyear_female = $row['total_ip_summer_midyear_female'];
-        $total_with_board_summer_midyear_female = $row['total_with_board_summer_midyear_female'];
+        $total_fhe_summer_midyear_male = $row['total_fhe_summer_midyear_male'];
+        $total_fhe_summer_midyear_female = $row['total_fhe_summer_midyear_female'];
 
         //FIRST ROW
         $pdf->SetFont('Arial', 'B', 10);
-        $pdf->SetFillColor(214, 234, 248);
-        $pdf->Cell(336, 5, $tes_category, 1, 0, 'L', true);
-        $pdf->Ln();
-
-        $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetFillColor(255, 255, 255);
-        $pdf->Cell(20, 5, 'MALE', 1, 0, 'L', true);
+        $pdf->Cell(40, 5, $fhe_category, 1, 0, 'L', true);
         $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(19.75, 5, $total_tes_1st_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_1st_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_1st_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_1st_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $total_fhe_1st_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $total_fhe_1st_female, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_tes_2nd_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_2nd_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_2nd_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_2nd_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $total_fhe_2nd_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $total_fhe_2nd_female, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_tes_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_3rd_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $total_fhe_3rd_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $total_fhe_3rd_female, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_tes_summer_midyear_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_summer_midyear_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_summer_midyear_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_summer_midyear_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $total_fhe_summer_midyear_male, 1, 0, 'C', true);
+        $pdf->Cell(19.75, 5, $total_fhe_summer_midyear_female, 1, 0, 'C', true);
+
         $pdf->Ln();
-
-        $pdf->SetFont('Arial', 'B', 10);
-        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'L', true);
-        $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(19.75, 5, $total_tes_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_1st_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_1st_female, 1, 0, 'C', true);
-
-        $pdf->Cell(19.75, 5, $total_tes_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_2nd_female, 1, 0, 'C', true);
-
-        $pdf->Cell(19.75, 5, $total_tes_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_3rd_female, 1, 0, 'C', true);
-
-        $pdf->Cell(19.75, 5, $total_tes_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_pwd_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_ip_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_with_board_summer_midyear_female, 1, 0, 'C', true);
-        $pdf->Ln();
+      
 
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetFillColor(255, 255, 255);
