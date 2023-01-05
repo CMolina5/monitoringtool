@@ -1384,17 +1384,17 @@ $pdf->Cell(74, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
 $pdf->Ln();
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(40, 0, '', 0, 0, 'C', true);
-$pdf->Cell(34, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(34, 5, 'FEMALE', 1, 0, 'C', true);
+$pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
+$pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
 
-$pdf->Cell(34, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(34, 5, 'FEMALE', 1, 0, 'C', true);
+$pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
+$pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
 
-$pdf->Cell(34, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(34, 5, 'FEMALE', 1, 0, 'C', true);
+$pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
+$pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
 
-$pdf->Cell(34, 5, 'MALE', 1, 0, 'C', true);
-$pdf->Cell(34, 5, 'FEMALE', 1, 0, 'C', true);
+$pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
+$pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
 $pdf->Ln();
 
 $sql = "SELECT * FROM tbl_fhe_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
@@ -1425,17 +1425,17 @@ if ($resultCheck > 0) {
         $pdf->SetFillColor(255, 255, 255);
         $pdf->Cell(40, 5, $fhe_category, 1, 0, 'L', true);
         $pdf->SetFont('Arial', '', 10);
-        $pdf->Cell(19.75, 5, $total_fhe_1st_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_fhe_1st_female, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $total_fhe_1st_male, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $total_fhe_1st_female, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_fhe_2nd_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_fhe_2nd_female, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $total_fhe_2nd_male, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $total_fhe_2nd_female, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_fhe_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_fhe_3rd_female, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $total_fhe_3rd_male, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $total_fhe_3rd_female, 1, 0, 'C', true);
 
-        $pdf->Cell(19.75, 5, $total_fhe_sum_mid_male, 1, 0, 'C', true);
-        $pdf->Cell(19.75, 5, $total_fhe_sum_mid_female, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $total_fhe_sum_mid_male, 1, 0, 'C', true);
+        $pdf->Cell(37, 5, $total_fhe_sum_mid_female, 1, 0, 'C', true);
 
         $pdf->Ln();
       
