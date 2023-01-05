@@ -778,6 +778,8 @@ if ($resultCheck > 0) {
 
     //END
     $pdf->AddPage();
+}else{
+    
 }
 
 
