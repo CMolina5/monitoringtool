@@ -1753,9 +1753,7 @@ $pdf->Ln();
         //END
         $pdf->Ln();
     }
-}
-
-$sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
+    $sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
 FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE'";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
@@ -1783,10 +1781,11 @@ $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
 $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
 $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
 }
+}
+
 //END
 if($tes=='yes'){
 $pdf->addPage();
-
 
 //I.B TERTIARY EDUCATION SUBSIDY
 $pdf->SetFont('Arial', 'B', 11);
