@@ -1695,7 +1695,11 @@ $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
 $pdf->Ln();
 $pdf->Ln();
 
-// REASONS FOR LEAVE OF ABSENCE (LOA)
+$sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE' ORDER BY reason ASC";
+$result = mysqli_query($conn, $sql);
+$resultCheck = mysqli_num_rows($result);
+if ($resultCheck > 0) {
+    // REASONS FOR LEAVE OF ABSENCE (LOA)
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(190, 5, 'NO. OF FHE BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
@@ -1721,11 +1725,6 @@ $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
 $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
 $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
 $pdf->Ln();
-
-$sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE' ORDER BY reason ASC";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $reason = $row['reason'];
         $total_loa_1st_male = $row['total_loa_1st_male'];
