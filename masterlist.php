@@ -711,14 +711,12 @@ if ($resultCheck > 0) {
 $pdf->addPage();
 //End
 
-$sql = "SELECT *, SUM(total_stufap_1st) AS grand_total_stufap_1st, SUM(total_stufap_2nd) AS grand_total_stufap_2nd, SUM(total_stufap_3rd) AS grand_total_stufap_3rd, SUM(total_stufap_4th) AS grand_total_stufap_4th, SUM(total_stufap_5th) AS grand_total_stufap_5th, SUM(total_stufap_6th) AS grand_total_stufap_6th 
-FROM tbl_hei_other_funded_stufaps 
+$sql = "SELECT *
 WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'
 ORDER BY stufap_name ASC";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 if ($resultCheck > 0) {
-
     //I.E OTHER LOCALLY AND NATIONALLY-FUNDED STUFAPS
 $pdf->SetFont('Arial', 'B', 11);
 $pdf->SetFillColor(192, 192, 192);
