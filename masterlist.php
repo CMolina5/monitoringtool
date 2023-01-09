@@ -712,6 +712,7 @@ $pdf->addPage();
 //End
 
 $sql = "SELECT *
+FROM tbl_hei_other_funded_stufaps 
 WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'
 ORDER BY stufap_name ASC";
 $result = mysqli_query($conn, $sql);
