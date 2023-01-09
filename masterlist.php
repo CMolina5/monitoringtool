@@ -708,8 +708,7 @@ if ($resultCheck > 0) {
         $pdf->row(array($program_code, strtoUpper($program_name), $gr_no, $copc_no, strtoUpper($in_the_portal)));
     }
 }
-$pdf->addPage();
-//End
+
 
 $sql = "SELECT *
 FROM tbl_hei_other_funded_stufaps 
@@ -718,6 +717,9 @@ ORDER BY stufap_name ASC";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 if ($resultCheck > 0) {
+    $pdf->addPage();
+//End
+
     //I.E OTHER LOCALLY AND NATIONALLY-FUNDED STUFAPS
 $pdf->SetFont('Arial', 'B', 11);
 $pdf->SetFillColor(192, 192, 192);
@@ -772,10 +774,26 @@ $pdf->SetAligns(array('C', 'C', 'C', 'C', 'C', 'C', 'C', 'C'));
 
         $pdf->row(array(strtoUpper($stufap_name), strtoUpper($stufap_type), $total_stufap_1st, $total_stufap_2nd, $total_stufap_3rd, $total_stufap_4th, $total_stufap_5th, $total_stufap_6th));
     }
+    $sql = "SELECT SUM(total_stufap_1st) AS grand_total_stufap_1st, SUM(total_stufap_2nd) AS grand_total_stufap_2nd, SUM(total_stufap_3rd) AS grand_total_stufap_3rd, SUM(total_stufap_4th) AS grand_total_stufap_4th, SUM(total_stufap_5th) AS grand_total_stufap_5th, SUM(total_stufap_6th) AS grand_total_stufap_6th 
+FROM tbl_hei_other_funded_stufaps 
+WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'
+ORDER BY stufap_name ASC";
+$result = mysqli_query($conn, $sql);
+$resultCheck = mysqli_num_rows($result);
+if ($resultCheck > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $grand_total_stufap_1st = $row['grand_total_stufap_1st'];
+        $grand_total_stufap_2nd = $row['grand_total_stufap_2nd'];
+        $grand_total_stufap_3rd = $row['grand_total_stufap_3rd'];
+        $grand_total_stufap_4th = $row['grand_total_stufap_4th'];
+        $grand_total_stufap_5th = $row['grand_total_stufap_5th'];
+        $grand_total_stufap_6th = $row['grand_total_stufap_6th'];
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->SetWidths(array(84, 42, 42, 42, 42, 42, 42));
     $pdf->SetAligns(array('C', 'C', 'C', 'C', 'C', 'C', 'C'));
     $pdf->row(array('TOTAL', $grand_total_stufap_1st, $grand_total_stufap_2nd, $grand_total_stufap_3rd, $grand_total_stufap_4th, $grand_total_stufap_5th, $grand_total_stufap_6th));
+}
+}
 }
 
 //END
