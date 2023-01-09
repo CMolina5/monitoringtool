@@ -718,43 +718,43 @@ $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 if ($resultCheck > 0) {
     $pdf->addPage();
-//End
+    //End
 
     //I.E OTHER LOCALLY AND NATIONALLY-FUNDED STUFAPS
-$pdf->SetFont('Arial', 'B', 11);
-$pdf->SetFillColor(192, 192, 192);
-$pdf->Cell(336, 5, 'I.E OTHER LOCALLY- AND NATIONALLY-FUNDED STUFAPS', 0, 0, 'L', true);
-$pdf->Ln();
-//SPACING
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
-$pdf->Ln();
-//END
-$pdf->SetFont('Arial', 'I', 8);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetFillColor(255, 255, 255);
-$pdf->Cell(336, 5, 'List of all locally- and nationally-funded StuFAPs availed in the institution, and number of beneficiaries per year level', 0, 0, 'L', true);
-$pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 11);
+    $pdf->SetFillColor(192, 192, 192);
+    $pdf->Cell(336, 5, 'I.E OTHER LOCALLY- AND NATIONALLY-FUNDED STUFAPS', 0, 0, 'L', true);
+    $pdf->Ln();
+    //SPACING
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
+    $pdf->Ln();
+    //END
+    $pdf->SetFont('Arial', 'I', 8);
+    $pdf->SetTextColor(0, 0, 0);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->Cell(336, 5, 'List of all locally- and nationally-funded StuFAPs availed in the institution, and number of beneficiaries per year level', 0, 0, 'L', true);
+    $pdf->Ln();
 
-$pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(42, 10, 'STUFAP', 1, 0, 'C', true);
-$pdf->Cell(42, 10, 'LOCAL/NATIONAL', 1, 0, 'C', true);
-$pdf->Cell(252, 5, 'YEAR LEVEL', 1, 0, 'C', true);
-$pdf->Ln();
-$pdf->Cell(84, 0, '', 0, 0, 'C', true);
-$pdf->Cell(42, 5, '1ST', 1, 0, 'C', true);
-$pdf->Cell(42, 5, '2ND', 1, 0, 'C', true);
-$pdf->Cell(42, 5, '3RD', 1, 0, 'C', true);
-$pdf->Cell(42, 5, '4TH', 1, 0, 'C', true);
-$pdf->Cell(42, 5, '5TH', 1, 0, 'C', true);
-$pdf->Cell(42, 5, '6TH', 1, 0, 'C', true);
-$pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 10);
+    $pdf->SetFillColor(236, 240, 241);
+    $pdf->Cell(42, 10, 'STUFAP', 1, 0, 'C', true);
+    $pdf->Cell(42, 10, 'LOCAL/NATIONAL', 1, 0, 'C', true);
+    $pdf->Cell(252, 5, 'YEAR LEVEL', 1, 0, 'C', true);
+    $pdf->Ln();
+    $pdf->Cell(84, 0, '', 0, 0, 'C', true);
+    $pdf->Cell(42, 5, '1ST', 1, 0, 'C', true);
+    $pdf->Cell(42, 5, '2ND', 1, 0, 'C', true);
+    $pdf->Cell(42, 5, '3RD', 1, 0, 'C', true);
+    $pdf->Cell(42, 5, '4TH', 1, 0, 'C', true);
+    $pdf->Cell(42, 5, '5TH', 1, 0, 'C', true);
+    $pdf->Cell(42, 5, '6TH', 1, 0, 'C', true);
+    $pdf->Ln();
 
-//Other StuFAPs
-$pdf->SetFont('Arial', '', 10);
-$pdf->SetWidths(array(42, 42, 42, 42, 42, 42, 42, 42));
-$pdf->SetAligns(array('C', 'C', 'C', 'C', 'C', 'C', 'C', 'C'));
+    //Other StuFAPs
+    $pdf->SetFont('Arial', '', 10);
+    $pdf->SetWidths(array(42, 42, 42, 42, 42, 42, 42, 42));
+    $pdf->SetAligns(array('C', 'C', 'C', 'C', 'C', 'C', 'C', 'C'));
 
     while ($row = mysqli_fetch_assoc($result)) {
         $stufap_name = $row['stufap_name'];
@@ -778,22 +778,22 @@ $pdf->SetAligns(array('C', 'C', 'C', 'C', 'C', 'C', 'C', 'C'));
 FROM tbl_hei_other_funded_stufaps 
 WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'
 ORDER BY stufap_name ASC";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $grand_total_stufap_1st = $row['grand_total_stufap_1st'];
-        $grand_total_stufap_2nd = $row['grand_total_stufap_2nd'];
-        $grand_total_stufap_3rd = $row['grand_total_stufap_3rd'];
-        $grand_total_stufap_4th = $row['grand_total_stufap_4th'];
-        $grand_total_stufap_5th = $row['grand_total_stufap_5th'];
-        $grand_total_stufap_6th = $row['grand_total_stufap_6th'];
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetWidths(array(84, 42, 42, 42, 42, 42, 42));
-    $pdf->SetAligns(array('C', 'C', 'C', 'C', 'C', 'C', 'C'));
-    $pdf->row(array('TOTAL', $grand_total_stufap_1st, $grand_total_stufap_2nd, $grand_total_stufap_3rd, $grand_total_stufap_4th, $grand_total_stufap_5th, $grand_total_stufap_6th));
-}
-}
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $grand_total_stufap_1st = $row['grand_total_stufap_1st'];
+            $grand_total_stufap_2nd = $row['grand_total_stufap_2nd'];
+            $grand_total_stufap_3rd = $row['grand_total_stufap_3rd'];
+            $grand_total_stufap_4th = $row['grand_total_stufap_4th'];
+            $grand_total_stufap_5th = $row['grand_total_stufap_5th'];
+            $grand_total_stufap_6th = $row['grand_total_stufap_6th'];
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetWidths(array(84, 42, 42, 42, 42, 42, 42));
+            $pdf->SetAligns(array('C', 'C', 'C', 'C', 'C', 'C', 'C'));
+            $pdf->row(array('TOTAL', $grand_total_stufap_1st, $grand_total_stufap_2nd, $grand_total_stufap_3rd, $grand_total_stufap_4th, $grand_total_stufap_5th, $grand_total_stufap_6th));
+        }
+    }
 }
 
 //END
@@ -1387,40 +1387,40 @@ ORDER BY program_name ASC";
 
     $pdf->addPage();
 
-   
+
 
     $sql = "SELECT * FROM tbl_fhe_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
-         //TES CATEGORY
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->SetTextColor(0, 0, 0);
+        //TES CATEGORY
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->SetTextColor(0, 0, 0);
 
-    $pdf->Cell(336, 5, 'TOTAL NO. OF FHE GRANTEES WHO ARE UNDER 4PS-SWDI AND/OR LISTAHANAN BENEFICIARIES', 1, 0, 'C', true);
-    $pdf->Ln();
-    $pdf->Cell(40, 10, 'FHE CATEGORY', 1, 0, 'C', true);
-    $pdf->Cell(74, 5, '1ST TERM', 1, 0, 'C', true);
-    $pdf->Cell(74, 5, '2ND TERM', 1, 0, 'C', true);
-    $pdf->Cell(74, 5, '3RD TERM', 1, 0, 'C', true);
-    $pdf->Cell(74, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+        $pdf->Cell(336, 5, 'TOTAL NO. OF FHE GRANTEES WHO ARE UNDER 4PS-SWDI AND/OR LISTAHANAN BENEFICIARIES', 1, 0, 'C', true);
+        $pdf->Ln();
+        $pdf->Cell(40, 10, 'FHE CATEGORY', 1, 0, 'C', true);
+        $pdf->Cell(74, 5, '1ST TERM', 1, 0, 'C', true);
+        $pdf->Cell(74, 5, '2ND TERM', 1, 0, 'C', true);
+        $pdf->Cell(74, 5, '3RD TERM', 1, 0, 'C', true);
+        $pdf->Cell(74, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
 
-    $pdf->Ln();
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(40, 0, '', 0, 0, 'C', true);
-    $pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Ln();
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->Cell(40, 0, '', 0, 0, 'C', true);
+        $pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
 
-    $pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
 
-    $pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
 
-    $pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Ln();
+        $pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Ln();
         while ($row = mysqli_fetch_assoc($result)) {
             $fhe_category = $row['fhe_category'];
 
@@ -1507,7 +1507,7 @@ ORDER BY program_name ASC";
         $pdf->addPage();
     }
 
-    
+
 
     // NO. OF FHE BENEFICIARIES WHO OPTED OUT OF FHE
     $pdf->SetFont('Arial', 'B', 10);
@@ -1618,42 +1618,42 @@ ORDER BY program_name ASC";
     //end
 
 
-   
+
 
     $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE' ORDER BY reason ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
-         // REASONS FOR DROPPING
+        // REASONS FOR DROPPING
 
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetTextColor(0, 0, 0);
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(190, 5, 'NO. OF FHE BENEFICIARIES WHO DROPPED', 0, 0, 'L', true);
-    $pdf->Ln();
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetTextColor(0, 0, 0);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(190, 5, 'NO. OF FHE BENEFICIARIES WHO DROPPED', 0, 0, 'L', true);
+        $pdf->Ln();
 
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->SetTextColor(0, 0, 0);
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->SetTextColor(0, 0, 0);
 
-    $pdf->Cell(176, 10, 'REASONS FOR DROPPING', 1, 0, 'C', true);
+        $pdf->Cell(176, 10, 'REASONS FOR DROPPING', 1, 0, 'C', true);
 
-    $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-    $pdf->Ln();
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->Cell(176, 0, '', 0, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Ln();
+        $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+        $pdf->Ln();
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->Cell(176, 0, '', 0, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Ln();
         while ($row = mysqli_fetch_assoc($result)) {
             $reason = $row['reason'];
             $total_dropout_1st_male = $row['total_dropout_1st_male'];
@@ -1683,7 +1683,7 @@ ORDER BY program_name ASC";
             $pdf->Ln();
         }
         //END
-    $sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
+        $sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
     FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE'";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
@@ -1710,13 +1710,13 @@ ORDER BY program_name ASC";
         $pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
         $pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
         $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
-    
+
         //END
         $pdf->Ln();
         $pdf->Ln();
     }
 
-    
+
 
     $sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE' ORDER BY reason ASC";
     $result = mysqli_query($conn, $sql);
@@ -2245,44 +2245,40 @@ if ($tes == 'yes') {
         $pdf->Cell(45, 5, $grand_total_tes_est_grad_female, 1, 0, 'C', true);
     }
 
-    $pdf->addPage();
-
-    
-
     $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES' ORDER BY reason ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         // REASONS FOR DROPPING
 
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetTextColor(0, 0, 0);
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(190, 5, 'NO. OF TES BENEFICIARIES WHO DROPPED', 0, 0, 'L', true);
-    $pdf->Ln();
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetTextColor(0, 0, 0);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(190, 5, 'NO. OF TES BENEFICIARIES WHO DROPPED', 0, 0, 'L', true);
+        $pdf->Ln();
 
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->SetTextColor(0, 0, 0);
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->SetTextColor(0, 0, 0);
 
-    $pdf->Cell(176, 10, 'REASONS FOR DROPPING', 1, 0, 'C', true);
+        $pdf->Cell(176, 10, 'REASONS FOR DROPPING', 1, 0, 'C', true);
 
-    $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-    $pdf->Ln();
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->Cell(176, 0, '', 0, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Ln();
+        $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+        $pdf->Ln();
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->Cell(176, 0, '', 0, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Ln();
         while ($row = mysqli_fetch_assoc($result)) {
             $reason = $row['reason'];
             $total_dropout_1st_male = $row['total_dropout_1st_male'];
@@ -2312,7 +2308,7 @@ if ($tes == 'yes') {
             $pdf->Ln();
         }
         //END
-    $sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
+        $sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
     FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES'";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
@@ -2339,44 +2335,44 @@ if ($tes == 'yes') {
         $pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
         $pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
         $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
-    
+
         //END
         $pdf->Ln();
         $pdf->Ln();
     }
 
-    
+
 
     $sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES' ORDER BY reason ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         // REASONS FOR LEAVE OF ABSENCE (LOA)
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(190, 5, 'NO. OF TES BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
-    $pdf->Ln();
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(190, 5, 'NO. OF TES BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
+        $pdf->Ln();
 
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->SetTextColor(0, 0, 0);
-    $pdf->Cell(176, 10, 'REASONS FOR LEAVE OF ABSENCE (LOA)', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-    $pdf->Ln();
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->Cell(176, 0, '', 0, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Ln();
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->SetTextColor(0, 0, 0);
+        $pdf->Cell(176, 10, 'REASONS FOR LEAVE OF ABSENCE (LOA)', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+        $pdf->Ln();
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->Cell(176, 0, '', 0, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Ln();
         while ($row = mysqli_fetch_assoc($result)) {
             $reason = $row['reason'];
             $total_loa_1st_male = $row['total_loa_1st_male'];
@@ -2407,36 +2403,36 @@ if ($tes == 'yes') {
         }
         $sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
         FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES'";
-            $result = mysqli_query($conn, $sql);
-            $resultCheck = mysqli_num_rows($result);
-            if ($resultCheck > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $total_loa_1st_male = $row['total_loa_1st_male'];
-                    $total_loa_1st_female = $row['total_loa_1st_female'];
-                    $total_loa_2nd_male = $row['total_loa_2nd_male'];
-                    $total_loa_2nd_female = $row['total_loa_2nd_female'];
-                    $total_loa_3rd_male = $row['total_loa_3rd_male'];
-                    $total_loa_3rd_female = $row['total_loa_3rd_female'];
-                    $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
-                    $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
-                }
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $total_loa_1st_male = $row['total_loa_1st_male'];
+                $total_loa_1st_female = $row['total_loa_1st_female'];
+                $total_loa_2nd_male = $row['total_loa_2nd_male'];
+                $total_loa_2nd_female = $row['total_loa_2nd_female'];
+                $total_loa_3rd_male = $row['total_loa_3rd_male'];
+                $total_loa_3rd_female = $row['total_loa_3rd_female'];
+                $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
+                $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
             }
-            $pdf->SetFillColor(255, 255, 255);
-            $pdf->SetFont('Arial', 'B', 10);
-            $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
-            $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
         }
-        //END
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
+        $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
     }
+    //END
+}
 
-  
+
 if ($tdp == 'yes') {
     $pdf->addPage();
 
@@ -2974,43 +2970,41 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
         $pdf->Cell(45, 5, $grand_total_tdp_exceeded_mrr_female, 1, 0, 'C', true);
     }
 
-    $pdf->addPage();
 
-   
     $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP' ORDER BY reason ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
-         // REASONS FOR DROPPING
+        // REASONS FOR DROPPING
 
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetTextColor(0, 0, 0);
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(190, 5, 'NO. OF TDP BENEFICIARIES WHO DROPPED', 0, 0, 'L', true);
-    $pdf->Ln();
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetTextColor(0, 0, 0);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(190, 5, 'NO. OF TDP BENEFICIARIES WHO DROPPED', 0, 0, 'L', true);
+        $pdf->Ln();
 
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->SetTextColor(0, 0, 0);
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->SetTextColor(0, 0, 0);
 
-    $pdf->Cell(176, 10, 'REASONS FOR DROPPING', 1, 0, 'C', true);
+        $pdf->Cell(176, 10, 'REASONS FOR DROPPING', 1, 0, 'C', true);
 
-    $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-    $pdf->Ln();
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->Cell(176, 0, '', 0, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Ln();
+        $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+        $pdf->Ln();
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->Cell(176, 0, '', 0, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Ln();
 
         while ($row = mysqli_fetch_assoc($result)) {
             $reason = $row['reason'];
@@ -3038,8 +3032,8 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
             //END
             $pdf->Ln();
         }
-          //END
-    $sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
+        //END
+        $sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
     FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP'";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
@@ -3065,7 +3059,7 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
         $pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
         $pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
         $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
-    
+
         //END
         $pdf->Ln();
         $pdf->Ln();
@@ -3076,31 +3070,31 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         // REASONS FOR LEAVE OF ABSENCE (LOA)
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(190, 5, 'NO. OF TDP BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
-    $pdf->Ln();
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(190, 5, 'NO. OF TDP BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
+        $pdf->Ln();
 
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->SetTextColor(0, 0, 0);
-    $pdf->Cell(176, 10, 'REASONS FOR LEAVE OF ABSENCE (LOA)', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
-    $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-    $pdf->Ln();
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->Cell(176, 0, '', 0, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Ln();
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->SetTextColor(0, 0, 0);
+        $pdf->Cell(176, 10, 'REASONS FOR LEAVE OF ABSENCE (LOA)', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, '1ST TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, '2ND TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, '3RD TERM', 1, 0, 'C', true);
+        $pdf->Cell(40, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+        $pdf->Ln();
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->Cell(176, 0, '', 0, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Ln(); 
         while ($row = mysqli_fetch_assoc($result)) {
             $reason = $row['reason'];
             $total_loa_1st_male = $row['total_loa_1st_male'];
@@ -3128,36 +3122,36 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
             $pdf->Ln();
         }
         $sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
-FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP'";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $total_loa_1st_male = $row['total_loa_1st_male'];
-            $total_loa_1st_female = $row['total_loa_1st_female'];
-            $total_loa_2nd_male = $row['total_loa_2nd_male'];
-            $total_loa_2nd_female = $row['total_loa_2nd_female'];
-            $total_loa_3rd_male = $row['total_loa_3rd_male'];
-            $total_loa_3rd_female = $row['total_loa_3rd_female'];
-            $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
-            $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
+        FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP'";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $total_loa_1st_male = $row['total_loa_1st_male'];
+                $total_loa_1st_female = $row['total_loa_1st_female'];
+                $total_loa_2nd_male = $row['total_loa_2nd_male'];
+                $total_loa_2nd_female = $row['total_loa_2nd_female'];
+                $total_loa_3rd_male = $row['total_loa_3rd_male'];
+                $total_loa_3rd_female = $row['total_loa_3rd_female'];
+                $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
+                $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
+            }
         }
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
+        $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
     }
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
-    $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
+    //END
 }
-//END
-    }
 
-    
+
 $pdf->AddPage();
 
 //PART3 COMPLIANCE TO GUIDELINES AND MOA
