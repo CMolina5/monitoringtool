@@ -1387,7 +1387,13 @@ ORDER BY program_name ASC";
 
     $pdf->addPage();
 
-    //TES CATEGORY
+   
+
+    $sql = "SELECT * FROM tbl_fhe_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+         //TES CATEGORY
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->SetFillColor(236, 240, 241);
     $pdf->SetTextColor(0, 0, 0);
@@ -1415,11 +1421,6 @@ ORDER BY program_name ASC";
     $pdf->Cell(37, 5, 'MALE', 1, 0, 'C', true);
     $pdf->Cell(37, 5, 'FEMALE', 1, 0, 'C', true);
     $pdf->Ln();
-
-    $sql = "SELECT * FROM tbl_fhe_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $fhe_category = $row['fhe_category'];
 
@@ -1502,9 +1503,11 @@ ORDER BY program_name ASC";
         $pdf->Cell(37, 5, $grand_total_fhe_3rd_female, 1, 0, 'C', true);
         $pdf->Cell(37, 5, $grand_total_fhe_sum_mid_male, 1, 0, 'C', true);
         $pdf->Cell(37, 5, $grand_total_fhe_sum_mid_female, 1, 0, 'C', true);
+
+        $pdf->addPage();
     }
 
-    $pdf->addPage();
+    
 
     // NO. OF FHE BENEFICIARIES WHO OPTED OUT OF FHE
     $pdf->SetFont('Arial', 'B', 10);
@@ -1615,7 +1618,13 @@ ORDER BY program_name ASC";
     //end
 
 
-    // REASONS FOR DROPPING
+   
+
+    $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE' ORDER BY reason ASC";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+         // REASONS FOR DROPPING
 
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->SetTextColor(0, 0, 0);
@@ -1645,11 +1654,6 @@ ORDER BY program_name ASC";
     $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
     $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
     $pdf->Ln();
-
-    $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE' ORDER BY reason ASC";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $reason = $row['reason'];
             $total_dropout_1st_male = $row['total_dropout_1st_male'];
@@ -1678,40 +1682,41 @@ ORDER BY program_name ASC";
             //END
             $pdf->Ln();
         }
-    }
-
-    //END
+        //END
     $sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
-FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE'";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $total_1st_male = $row['total_1st_male'];
-            $total_1st_female = $row['total_1st_female'];
-            $total_2nd_male = $row['total_2nd_male'];
-            $total_2nd_female = $row['total_2nd_female'];
-            $total_3rd_male = $row['total_3rd_male'];
-            $total_3rd_female = $row['total_3rd_female'];
-            $total_sum_mid_male = $row['total_sum_mid_male'];
-            $total_sum_mid_female = $row['total_sum_mid_female'];
+    FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE'";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $total_1st_male = $row['total_1st_male'];
+                $total_1st_female = $row['total_1st_female'];
+                $total_2nd_male = $row['total_2nd_male'];
+                $total_2nd_female = $row['total_2nd_female'];
+                $total_3rd_male = $row['total_3rd_male'];
+                $total_3rd_female = $row['total_3rd_female'];
+                $total_sum_mid_male = $row['total_sum_mid_male'];
+                $total_sum_mid_female = $row['total_sum_mid_female'];
+            }
         }
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
+        $pdf->Cell(20, 5, $total_1st_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_1st_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_2nd_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_2nd_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_3rd_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
+    
+        //END
+        $pdf->Ln();
+        $pdf->Ln();
     }
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
-    $pdf->Cell(20, 5, $total_1st_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_2nd_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_3rd_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
 
-    //END
-    $pdf->Ln();
-    $pdf->Ln();
+    
 
     $sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE' ORDER BY reason ASC";
     $result = mysqli_query($conn, $sql);
@@ -2242,7 +2247,13 @@ if ($tes == 'yes') {
 
     $pdf->addPage();
 
-    // REASONS FOR DROPPING
+    
+
+    $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES' ORDER BY reason ASC";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+        // REASONS FOR DROPPING
 
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->SetTextColor(0, 0, 0);
@@ -2272,11 +2283,6 @@ if ($tes == 'yes') {
     $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
     $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
     $pdf->Ln();
-
-    $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES' ORDER BY reason ASC";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $reason = $row['reason'];
             $total_dropout_1st_male = $row['total_dropout_1st_male'];
@@ -2305,42 +2311,47 @@ if ($tes == 'yes') {
             //END
             $pdf->Ln();
         }
+        //END
+    $sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
+    FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES'";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $total_1st_male = $row['total_1st_male'];
+                $total_1st_female = $row['total_1st_female'];
+                $total_2nd_male = $row['total_2nd_male'];
+                $total_2nd_female = $row['total_2nd_female'];
+                $total_3rd_male = $row['total_3rd_male'];
+                $total_3rd_female = $row['total_3rd_female'];
+                $total_sum_mid_male = $row['total_sum_mid_male'];
+                $total_sum_mid_female = $row['total_sum_mid_female'];
+            }
+        }
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
+        $pdf->Cell(20, 5, $total_1st_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_1st_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_2nd_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_2nd_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_3rd_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
+    
+        //END
+        $pdf->Ln();
+        $pdf->Ln();
     }
 
-    //END
-    $sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
-FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES'";
+    
+
+    $sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES' ORDER BY reason ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $total_1st_male = $row['total_1st_male'];
-            $total_1st_female = $row['total_1st_female'];
-            $total_2nd_male = $row['total_2nd_male'];
-            $total_2nd_female = $row['total_2nd_female'];
-            $total_3rd_male = $row['total_3rd_male'];
-            $total_3rd_female = $row['total_3rd_female'];
-            $total_sum_mid_male = $row['total_sum_mid_male'];
-            $total_sum_mid_female = $row['total_sum_mid_female'];
-        }
-    }
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
-    $pdf->Cell(20, 5, $total_1st_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_2nd_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_3rd_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
-
-    //END
-    $pdf->Ln();
-    $pdf->Ln();
-
-    // REASONS FOR LEAVE OF ABSENCE (LOA)
+        // REASONS FOR LEAVE OF ABSENCE (LOA)
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->SetFillColor(255, 255, 255);
     $pdf->Cell(190, 5, 'NO. OF TES BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
@@ -2366,11 +2377,6 @@ FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_
     $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
     $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
     $pdf->Ln();
-
-    $sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES' ORDER BY reason ASC";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $reason = $row['reason'];
             $total_loa_1st_male = $row['total_loa_1st_male'];
@@ -2399,37 +2405,38 @@ FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_
             //END
             $pdf->Ln();
         }
+        $sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
+        FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES'";
+            $result = mysqli_query($conn, $sql);
+            $resultCheck = mysqli_num_rows($result);
+            if ($resultCheck > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $total_loa_1st_male = $row['total_loa_1st_male'];
+                    $total_loa_1st_female = $row['total_loa_1st_female'];
+                    $total_loa_2nd_male = $row['total_loa_2nd_male'];
+                    $total_loa_2nd_female = $row['total_loa_2nd_female'];
+                    $total_loa_3rd_male = $row['total_loa_3rd_male'];
+                    $total_loa_3rd_female = $row['total_loa_3rd_female'];
+                    $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
+                    $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
+                }
+            }
+            $pdf->SetFillColor(255, 255, 255);
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
+            $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
+        }
+        //END
     }
 
-    $sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
-FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES'";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $total_loa_1st_male = $row['total_loa_1st_male'];
-            $total_loa_1st_female = $row['total_loa_1st_female'];
-            $total_loa_2nd_male = $row['total_loa_2nd_male'];
-            $total_loa_2nd_female = $row['total_loa_2nd_female'];
-            $total_loa_3rd_male = $row['total_loa_3rd_male'];
-            $total_loa_3rd_female = $row['total_loa_3rd_female'];
-            $total_loa_summer_midyear_male = $row['total_loa_summer_midyear_male'];
-            $total_loa_summer_midyear_female = $row['total_loa_summer_midyear_female'];
-        }
-    }
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
-    $pdf->Cell(20, 5, $total_loa_1st_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
-}
-//END
+  
 if ($tdp == 'yes') {
     $pdf->addPage();
 
@@ -2969,7 +2976,12 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
 
     $pdf->addPage();
 
-    // REASONS FOR DROPPING
+   
+    $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP' ORDER BY reason ASC";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+         // REASONS FOR DROPPING
 
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->SetTextColor(0, 0, 0);
@@ -3000,10 +3012,6 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
     $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
     $pdf->Ln();
 
-    $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP' ORDER BY reason ASC";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $reason = $row['reason'];
             $total_dropout_1st_male = $row['total_dropout_1st_male'];
@@ -3030,41 +3038,44 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
             //END
             $pdf->Ln();
         }
+          //END
+    $sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
+    FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP'";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $total_1st_male = $row['total_1st_male'];
+                $total_1st_female = $row['total_1st_female'];
+                $total_2nd_male = $row['total_2nd_male'];
+                $total_2nd_female = $row['total_2nd_female'];
+                $total_3rd_male = $row['total_3rd_male'];
+                $total_3rd_female = $row['total_3rd_female'];
+                $total_sum_mid_male = $row['total_sum_mid_male'];
+                $total_sum_mid_female = $row['total_sum_mid_female'];
+            }
+        }
+        $pdf->SetFillColor(255, 255, 255);
+        $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
+        $pdf->Cell(20, 5, $total_1st_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_1st_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_2nd_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_2nd_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_3rd_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
+        $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
+    
+        //END
+        $pdf->Ln();
+        $pdf->Ln();
     }
 
-    //END
-    $sql = "SELECT SUM(total_dropout_1st_male) AS total_1st_male, SUM(total_dropout_1st_female) AS total_1st_female, SUM(total_dropout_2nd_male) AS total_2nd_male ,SUM(total_dropout_2nd_female) AS total_2nd_female, SUM(total_dropout_3rd_male) AS total_3rd_male, SUM(total_dropout_3rd_female) AS total_3rd_female, SUM(total_dropout_sum_mid_male) AS total_sum_mid_male, SUM(total_dropout_sum_mid_female) AS total_sum_mid_female
-FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP'";
+    $sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP' ORDER BY reason ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $total_1st_male = $row['total_1st_male'];
-            $total_1st_female = $row['total_1st_female'];
-            $total_2nd_male = $row['total_2nd_male'];
-            $total_2nd_female = $row['total_2nd_female'];
-            $total_3rd_male = $row['total_3rd_male'];
-            $total_3rd_female = $row['total_3rd_female'];
-            $total_sum_mid_male = $row['total_sum_mid_male'];
-            $total_sum_mid_female = $row['total_sum_mid_female'];
-        }
-    }
-    $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(176, 5, 'TOTAL', 1, 0, 'L', true);
-    $pdf->Cell(20, 5, $total_1st_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_1st_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_2nd_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_3rd_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
-    $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
-
-    //END
-    $pdf->Ln();
-    $pdf->Ln();
-
-    // REASONS FOR LEAVE OF ABSENCE (LOA)
+        // REASONS FOR LEAVE OF ABSENCE (LOA)
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->SetFillColor(255, 255, 255);
     $pdf->Cell(190, 5, 'NO. OF TDP BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
@@ -3090,11 +3101,6 @@ FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_
     $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
     $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
     $pdf->Ln();
-
-    $sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP' ORDER BY reason ASC";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $reason = $row['reason'];
             $total_loa_1st_male = $row['total_loa_1st_male'];
@@ -3121,9 +3127,7 @@ FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_
             //END
             $pdf->Ln();
         }
-    }
-
-    $sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
+        $sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
 FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP'";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
@@ -3151,6 +3155,9 @@ FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'
     $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
 }
 //END
+    }
+
+    
 $pdf->AddPage();
 
 //PART3 COMPLIANCE TO GUIDELINES AND MOA
