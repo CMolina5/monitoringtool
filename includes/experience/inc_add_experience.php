@@ -12,7 +12,8 @@ $resultCheck = mysqli_num_rows($result);
 
 if ($resultCheck > 0) {
     $sql = "UPDATE tbl_hei_experience 
-    SET question_1='$answer1', question_2='$answer2', question_3='$answer3'";
+    SET question_1='$answer1', question_2='$answer2', question_3='$answer3'
+    WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
     $result = mysqli_query($conn, $sql);
 
     if (!$result) {
