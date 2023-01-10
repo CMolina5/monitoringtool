@@ -8,7 +8,7 @@ $(document).ready(function () {
             method: "POST",
             data: $('#add_degree_program').serialize(),
             success: function (data) {
-                console.log(data);
+                console.log(data.gr_no);
                 // $('#tbl_programs').html(data);
                 // $('#add_degree_program')[0].reset();
                 // $('#addprogram').modal('hide');
