@@ -3,6 +3,14 @@ $(document).ready(function () {
     //add new degree program to the table
     $('#addprogram').on('submit', function (event) {
         event.preventDefault();
+        if($('#gr_no').val() === "" && $('#copc_no').val() === ""){
+            // console.log($('#gr_no').val() + $('#copc_no').val());
+            Swal.fire(
+                'You missed something!',
+                'Please enter Goverment Recognition No. or Certificate of Program Compliance No. to continue!',
+                'warning'
+              )
+            }else{
         $.ajax({
             url: "includes/heiprofile/inc_add_degree_programs.php",
             method: "POST",
@@ -59,6 +67,7 @@ $(document).ready(function () {
                 }
             }
         });
+    }
     });
 
 
