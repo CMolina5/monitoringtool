@@ -1153,7 +1153,7 @@ if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Su
             <div class="col">
                 <p class="text-right">
                 <div role="group" class="btn-group">
-                    <button class="btn btn-success" data-toggle="modal" id="btn-add-program" type="button" data-target="#addprogram">ADD PROGRAM</button>
+                    <button class="btn btn-success" data-toggle="modal" id="btn-add-program" data-backdrop="static" data-keyboard="false" type="button" data-target="#addprogram">ADD PROGRAM</button>
                     <button class="btn btn-danger d-none" data-toggle="modal" id="btn-delete-program" name="btn-delete-program" type="button" data-target="#removeprogram">REMOVE PROGRAM</button>
                 </div>
                 </p>
