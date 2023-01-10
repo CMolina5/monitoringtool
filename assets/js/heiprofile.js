@@ -16,6 +16,11 @@ $(document).ready(function () {
                         'warning'
                       )
                 }else{
+                    Swal.fire(
+                        'Success!',
+                        'You added a degree program!',
+                        'success'
+                    )
                     // console.log($('#gr_no').val() + $('#copc_no').val());
                     // alert("goodtits");
                     $('#tbl_programs').html(data);
