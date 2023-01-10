@@ -8,7 +8,7 @@ $(document).ready(function () {
             method: "POST",
             data: $('#add_degree_program').serialize(),
             success: function (data) {
-                if($('#gr_no').val() === "" || $('#copc_no').val() === ""){
+                if($('#gr_no').val() === "" && $('#copc_no').val() === ""){
                     // console.log($('#gr_no').val() + $('#copc_no').val());
                     Swal.fire(
                         'You missed something!',
