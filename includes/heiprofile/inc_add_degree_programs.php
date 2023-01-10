@@ -20,14 +20,25 @@ if ($resultCheck > 0) {
             'success'
           )
           </script>";
+    }else{
+        $sql = "INSERT INTO tbl_degree_programs_temp (ac_year, hei_psg_region, hei_uii, hei_name, program_code, program_name, gr_no, copc_no, in_the_portal)
+        VALUES ('$_SESSION[ac_year]', '$_SESSION[hei_psg_region]', '$_SESSION[hei_uii]', '$_SESSION[hei_name]', '$program_code','$program_name','$gr_no','$copc_no', 'No')";
+        $result = mysqli_query($conn, $sql);
     }
-    $sql = "INSERT INTO tbl_degree_programs_temp (ac_year, hei_psg_region, hei_uii, hei_name, program_code, program_name, gr_no, copc_no, in_the_portal)
-    VALUES ('$_SESSION[ac_year]', '$_SESSION[hei_psg_region]', '$_SESSION[hei_uii]', '$_SESSION[hei_name]', '$program_code','$program_name','$gr_no','$copc_no', 'No')";
-    $result = mysqli_query($conn, $sql);
 } else {
+    if(empty($gr_no) || empty($copc_no)){
+        echo"<script>
+        Swal.fire(
+            'Good job!',
+            'You clicked the button!',
+            'success'
+          )
+          </script>";
+    }else{
     $sql = "INSERT INTO tbl_degree_programs (ac_year, hei_psg_region, hei_uii, hei_name, program_code, program_name, gr_no, copc_no, in_the_portal)
     VALUES ('$_SESSION[ac_year]', '$_SESSION[hei_psg_region]', '$_SESSION[hei_uii]', '$_SESSION[hei_name]', '$program_code','$program_name','$gr_no','$copc_no', 'No')";
     $result = mysqli_query($conn, $sql);
+    }
 }
 
 if (!$result) {
