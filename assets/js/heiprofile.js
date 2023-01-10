@@ -10,8 +10,10 @@ $(document).ready(function () {
             success: function (data) {
                 if($('#gr_no').val() === "" || $('#copc_no').val() === ""){
                     console.log($('#gr_no').val() + $('#copc_no').val());
+                    alert("badtits");
                 }else{
                     console.log($('#gr_no').val() + $('#copc_no').val());
+                    alert("goodtits");
                     // $('#tbl_programs').html(data);
                     // $('#add_degree_program')[0].reset();
                     // $('#addprogram').modal('hide');
