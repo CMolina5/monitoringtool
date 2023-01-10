@@ -10,7 +10,7 @@ $(document).ready(function () {
                 'Please enter Goverment Recognition No. or Certificate of Program Compliance No. to continue!',
                 'warning'
               )
-            }else{
+        }else{
         $.ajax({
             url: "includes/heiprofile/inc_add_degree_programs.php",
             method: "POST",
@@ -148,6 +148,14 @@ $(document).ready(function () {
     //add new other stufap info
     $('#addstufap').on('submit', function (event) {
         event.preventDefault();
+        if($('#total_other_stufap_beneficiaries_1st').val() === "" && $('#total_other_stufap_beneficiaries_2nd').val() === "" && $('#total_other_stufap_beneficiaries_3rd').val() === "" && $('#total_other_stufap_beneficiaries_4th').val() === "" && $('#total_other_stufap_beneficiaries_5th').val() === "" && $('#total_other_stufap_beneficiaries_6th').val() === ""){
+            // console.log($('#gr_no').val() + $('#copc_no').val());
+            Swal.fire(
+                'You missed something!',
+                'Please enter the total beneficiaries!',
+                'warning'
+              )
+        }else{
         $.ajax({
             url: "includes/heiprofile/inc_add_other_stufap.php",
             method: "POST",
@@ -235,6 +243,7 @@ $(document).ready(function () {
                 });
             }
         });
+    }
     });
 
     //delete stufap to the table
