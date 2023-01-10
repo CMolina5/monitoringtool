@@ -34,7 +34,8 @@ $resultCheck = mysqli_num_rows($result);
 
 if ($resultCheck > 0) {
     $sql = "UPDATE tbl_hei_compliance
-    SET question_1='$answer', question_2='$answer1', question_3='$answer2', question_4='$answer3', question_5='$answer4', question_6='$answer5', question_7='$answer6', question_8='$answer7', question_9='$answer8', question_10='$answer9', question_11='$answer10', question_12='$answer11', question_13='$answer12', question_14='$answer13', question_15='$answer14', question_16='$answer15', question_17='$answer16', question_18='$answer17', question_19='$answer18', question_20='$answer19', question_21='$answer20', question_22='$answer21', question_23='$answer22', question_24='$answer23', question_25='$answer24'";
+    SET question_1='$answer', question_2='$answer1', question_3='$answer2', question_4='$answer3', question_5='$answer4', question_6='$answer5', question_7='$answer6', question_8='$answer7', question_9='$answer8', question_10='$answer9', question_11='$answer10', question_12='$answer11', question_13='$answer12', question_14='$answer13', question_15='$answer14', question_16='$answer15', question_17='$answer16', question_18='$answer17', question_19='$answer18', question_20='$answer19', question_21='$answer20', question_22='$answer21', question_23='$answer22', question_24='$answer23', question_25='$answer24'
+    WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
     $result = mysqli_query($conn, $sql);
 
     if (!$result) {
