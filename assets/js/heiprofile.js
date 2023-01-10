@@ -8,40 +8,44 @@ $(document).ready(function () {
             method: "POST",
             data: $('#add_degree_program').serialize(),
             success: function (data) {
-                console.log($('#program_code').val());
-                // $('#tbl_programs').html(data);
-                // $('#add_degree_program')[0].reset();
-                // $('#addprogram').modal('hide');
-
-                // $('#tbl_program_offerings').DataTable({
-                //     "order": [[2, "desc"]],
-                //     orderCellsTop: true,
-                //     fixedHeader: true,
-                //     "columnDefs": [ {
-                //         "targets": 0,
-                //         "orderable": false
-                //         } ]
-                // });
-
-                // $('#tbl_program_offerings').editable({
-                //     mode: 'inline',
-                //     container: 'body',
-                //     selector: 'td.degree_programs',
-                //     // title: 'Total Beneficiaries',
-                //     url: "includes/heiprofile/inc_update_degree_programs.php",
-                //     type: "POST",
-                //     // min: 0,
-                //     // placeholder: 'No. of Beneficiaries',
-                //     // showbuttons: false,
-                //     // defaultValue: 0,
-                //     toggle: 'dblclick',
-                //     //dataType: 'json',
-                //     validate: function (value) {
-                //         if ($.trim(value) == '') {
-                //             return 'This field is required';
-                //         }
-                //     }
-                // });
+                if($('#gr_no').val() === "" || $('#copc_no').val() === ""){
+                    console.log($('#gr_no').val() + $('#copc_no').val());
+                }else{
+                    console.log($('#gr_no').val() + $('#copc_no').val());
+                    // $('#tbl_programs').html(data);
+                    // $('#add_degree_program')[0].reset();
+                    // $('#addprogram').modal('hide');
+    
+                    // $('#tbl_program_offerings').DataTable({
+                    //     "order": [[2, "desc"]],
+                    //     orderCellsTop: true,
+                    //     fixedHeader: true,
+                    //     "columnDefs": [ {
+                    //         "targets": 0,
+                    //         "orderable": false
+                    //         } ]
+                    // });
+    
+                    // $('#tbl_program_offerings').editable({
+                    //     mode: 'inline',
+                    //     container: 'body',
+                    //     selector: 'td.degree_programs',
+                    //     // title: 'Total Beneficiaries',
+                    //     url: "includes/heiprofile/inc_update_degree_programs.php",
+                    //     type: "POST",
+                    //     // min: 0,
+                    //     // placeholder: 'No. of Beneficiaries',
+                    //     // showbuttons: false,
+                    //     // defaultValue: 0,
+                    //     toggle: 'dblclick',
+                    //     //dataType: 'json',
+                    //     validate: function (value) {
+                    //         if ($.trim(value) == '') {
+                    //             return 'This field is required';
+                    //         }
+                    //     }
+                    // });
+                }
             }
         });
     });
