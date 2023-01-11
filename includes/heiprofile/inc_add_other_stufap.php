@@ -30,7 +30,7 @@ if(empty($total_other_stufap_beneficiaries_6th)){
     $total_other_stufap_beneficiaries_6th=0;
 }
 
-$sql = "SELECT * FROM tbl_hei_other_funded_stufaps WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND stufap_name=$stufap_name";
+$sql = "SELECT * FROM tbl_hei_other_funded_stufaps WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND stufap_name='$stufap_name'";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 
