@@ -24,13 +24,8 @@ $(document).ready(function () {
                         'warning'
                       )
                 }else{
-                    Swal.fire(
-                        'Success!',
-                        'You added a degree program!',
-                        'success'
-                    )
+                    
                     // console.log($('#gr_no').val() + $('#copc_no').val());
-                    // alert("goodtits");
                     $('#tbl_programs').html(data);
                     $('#add_degree_program')[0].reset();
                     $('#addprogram').modal('hide');
@@ -64,6 +59,12 @@ $(document).ready(function () {
                             }
                         }
                     });
+
+                    Swal.fire(
+                        'Success!',
+                        'You added a degree program!',
+                        'success'
+                    )
                 }
             }
         });
@@ -161,12 +162,6 @@ $(document).ready(function () {
             method: "POST",
             data: $('#add_other_stufap').serialize(),
             success: function (data) {
-                Swal.fire(
-                    'Success!',
-                    'You added a record!',
-                    'success'
-                )
-
                 $('#tbl_stufaps').html(data);
                 $('#add_other_stufap')[0].reset();
                 $('#addstufap').modal('hide');
@@ -246,6 +241,13 @@ $(document).ready(function () {
                         }
                     }
                 });
+
+                Swal.fire(
+                    'Success!',
+                    'You added a record!',
+                    'success'
+                )
+                
             }
         });
     }
