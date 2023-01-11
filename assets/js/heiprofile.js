@@ -161,6 +161,11 @@ $(document).ready(function () {
             method: "POST",
             data: $('#add_other_stufap').serialize(),
             success: function (data) {
+                Swal.fire(
+                    'Success!',
+                    'You added a record!',
+                    'success'
+                )
 
                 $('#tbl_stufaps').html(data);
                 $('#add_other_stufap')[0].reset();
