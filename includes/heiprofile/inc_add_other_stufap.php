@@ -49,9 +49,9 @@ if ($resultCheck > 0) {
     echo"
     <script>
     Swal.fire(
-        'Success!',
-        'You added a record!',
-        'success'
+        'Warning!',
+        'Duplicate Record Found!',
+        'warning'
     )
     </script>";
 }
