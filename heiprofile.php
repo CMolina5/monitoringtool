@@ -1154,7 +1154,7 @@ if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Su
                 <p class="text-right">
                 <div role="group" class="btn-group">
                     <button class="btn btn-success" data-toggle="modal" id="btn-add-program" data-backdrop="static" data-keyboard="false" type="button" data-target="#addprogram">ADD PROGRAM</button>
-                    <button class="btn btn-danger d-none" data-toggle="modal" id="btn-delete-program" name="btn-delete-program" type="button" data-target="#removeprogram">REMOVE PROGRAM</button>
+                    <button class="btn btn-danger d-none" data-toggle="modal" id="btn-delete-program" data-backdrop='static' data-keyboard='false' name="btn-delete-program" type="button" data-target="#removeprogram">REMOVE PROGRAM</button>
                 </div>
                 </p>
             </div>
@@ -1176,8 +1176,8 @@ if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Su
             <div class="col">
                 <p class="text-right">
                 <div role="group" class="btn-group">
-                    <button class="btn btn-success" data-toggle="modal" id="btn-add-stufap" type="button" data-target="#addstufap">ADD STUFAP</button>
-                    <button class="btn btn-danger d-none" data-toggle="modal" id="btn-delete-other-stufap" name="btn-delete-other-stufap" type="button" data-target="#removestufap">REMOVE STUFAP</button>
+                    <button class="btn btn-success" data-toggle="modal" id="btn-add-stufap" data-backdrop="static" data-keyboard="false" type="button" data-target="#addstufap">ADD STUFAP</button>
+                    <button class="btn btn-danger d-none" data-toggle="modal" id="btn-delete-other-stufap" data-backdrop='static' data-keyboard='false' name="btn-delete-other-stufap" type="button" data-target="#removestufap">REMOVE STUFAP</button>
                 </div>
                 </p>
             </div>

@@ -32,8 +32,8 @@ include 'includes/stufap/inc_template.php';
                     <div class='col'>
                     <p class='text-right'>
                         <div role='group' class='btn-group'>
-                        <button class='btn btn-success' id='btn-add-fhe-category' type='button' data-toggle='modal' data-target='#add_fhe_category_modal'>ADD FHE CATEGORY</button>
-                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-fhe-category' name='btn-delete-fhe-category' type='button' data-target='#remove_fhe_category_modal'>REMOVE CATEGORY</button>
+                        <button class='btn btn-success' id='btn-add-fhe-category' type='button' data-toggle='modal' data-backdrop='static' data-keyboard='false' data-target='#add_fhe_category_modal'>ADD FHE CATEGORY</button>
+                            <button class='btn btn-danger d-none' data-backdrop='static' data-keyboard='false' data-toggle='modal' data-backdrop='static' data-keyboard='false' id='btn-delete-fhe-category' name='btn-delete-fhe-category' type='button' data-target='#remove_fhe_category_modal'>REMOVE CATEGORY</button>
                         </div>
                     </p>
                     </div>
@@ -360,8 +360,8 @@ include 'includes/stufap/inc_template.php';
                     <div class='col'>
                     <p class='text-right'>
                         <div role='group' class='btn-group'>
-                        <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_dropouts_fhe'>Add reason for dropping</button>
-                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-fhe-dropouts' name='btn-delete-fhe-dropouts' type='button' data-target='#remove_fhe_dropouts_modal'>REMOVE DROP OUTS</button>
+                        <button class='btn btn-success' id='btn-add-program' data-backdrop='static' data-keyboard='false' type='button' data-toggle='modal' data-target='#add_dropouts_fhe'>Add reason for dropping</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' data-backdrop='static' data-keyboard='false' id='btn-delete-fhe-dropouts' name='btn-delete-fhe-dropouts' type='button' data-target='#remove_fhe_dropouts_modal'>REMOVE DROP OUTS</button>
                         </div>
                     </p>
                     </div>
@@ -385,8 +385,8 @@ include 'includes/stufap/inc_template.php';
                     <div class='col'>
                     <p class='text-right'>
                         <div role='group' class='btn-group'>
-                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_loa_fhe'>Add reason for loa</button>
-                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-fhe-loa' name='btn-delete-fhe-loa' type='button' data-target='#remove_fhe_loa_modal'>REMOVE LOA</button>
+                            <button class='btn btn-success' id='btn-add-program' type='button' data-backdrop='static' data-keyboard='false' data-toggle='modal' data-target='#add_loa_fhe'>Add reason for loa</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' data-backdrop='static' data-keyboard='false' id='btn-delete-fhe-loa' name='btn-delete-fhe-loa' type='button' data-target='#remove_fhe_loa_modal'>REMOVE LOA</button>
                         </div>
                     </p>
                     </div>
@@ -432,8 +432,8 @@ include 'includes/stufap/inc_template.php';
                         <div class='col'>
                             <p class='text-right'>
                                 <div role='group' class='btn-group'>
-                                    <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_tes_category_modal'>ADD TES CATEGORY</button>
-                                    <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tes-category' name='btn-delete-tes-category' type='button' data-target='#remove_tes_category_modal'>REMOVE CATEGORY</button>
+                                    <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-backdrop='static' data-keyboard='false' data-target='#add_tes_category_modal'>ADD TES CATEGORY</button>
+                                    <button class='btn btn-danger d-none' data-toggle='modal' data-backdrop='static' data-keyboard='false' id='btn-delete-tes-category' name='btn-delete-tes-category' type='button' data-target='#remove_tes_category_modal'>REMOVE CATEGORY</button>
                                 </div>
                             </p>
                         </div>
@@ -452,8 +452,8 @@ include 'includes/stufap/inc_template.php';
                     <div class='col'>
                         <p class='text-right'>
                             <div role='group' class='btn-group'>
-                                <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_program_tes_modal'>ADD PROGRAM</button>
-                                <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tes-programs' name='btn-delete-tes-programs' type='button' data-target='#remove_tes_program_modal'>REMOVE DEGREE PROGRAM</button>
+                                <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-backdrop='static' data-keyboard='false' data-target='#add_program_tes_modal'>ADD PROGRAM</button>
+                                <button class='btn btn-danger d-none' data-toggle='modal' data-backdrop='static' data-keyboard='false' id='btn-delete-tes-programs' name='btn-delete-tes-programs' type='button' data-target='#remove_tes_program_modal'>REMOVE DEGREE PROGRAM</button>
                             </div>
                         </p>
                     </div>
@@ -503,8 +503,8 @@ include 'includes/stufap/inc_template.php';
                     <div class='col'>
                     <p class='text-right'>
                         <div role='group' class='btn-group'>
-                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_dropouts_tes_modal'>ADD REASON FOR DROPPING</button>
-                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tes-dropouts' name='btn-delete-tes-dropouts' type='button' data-target='#remove_tes_dropouts_modal'>REMOVE DROP OUTS</button>
+                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-backdrop='static' data-keyboard='false' data-target='#add_dropouts_tes_modal'>ADD REASON FOR DROPPING</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' data-backdrop='static' data-keyboard='false' id='btn-delete-tes-dropouts' name='btn-delete-tes-dropouts' type='button' data-target='#remove_tes_dropouts_modal'>REMOVE DROP OUTS</button>
                         </div>
                     </p>
                     </div>
@@ -528,8 +528,8 @@ include 'includes/stufap/inc_template.php';
                     <div class='col'>
                     <p class='text-right'>
                         <div role='group' class='btn-group'>
-                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_loa_tes'>ADD REASON FOR LOA</button>
-                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tes-loa' name='btn-delete-tes-loa' type='button' data-target='#remove_tes_loa_modal'>REMOVE DROP OUTS</button>
+                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-backdrop='static' data-keyboard='false' data-target='#add_loa_tes'>ADD REASON FOR LOA</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' data-backdrop='static' data-keyboard='false' id='btn-delete-tes-loa' name='btn-delete-tes-loa' type='button' data-target='#remove_tes_loa_modal'>REMOVE DROP OUTS</button>
                         </div>
                     </p>
                     </div>
@@ -560,8 +560,8 @@ include 'includes/stufap/inc_template.php';
                     <div class='col'>
                     <p class='text-right'>
                         <div role='group' class='btn-group'>
-                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_program_tdp_modal'>ADD program</button>
-                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tdp-programs' name='btn-delete-tdp-programs' type='button' data-target='#remove_tdp_program_modal'>REMOVE DEGREE PROGRAM</button>
+                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-backdrop='static' data-keyboard='false' data-target='#add_program_tdp_modal'>ADD program</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' data-backdrop='static' data-keyboard='false' id='btn-delete-tdp-programs' name='btn-delete-tdp-programs' type='button' data-target='#remove_tdp_program_modal'>REMOVE DEGREE PROGRAM</button>
                         </div>
                     </p>
                     </div>
@@ -611,8 +611,8 @@ include 'includes/stufap/inc_template.php';
                     <div class='col'>
                     <p class='text-right'>
                         <div role='group' class='btn-group'>
-                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_dropouts_tdp_modal'>ADD REASON FOR DROPPING</button>
-                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tdp-dropouts' name='btn-delete-tdp-dropouts' type='button' data-target='#remove_tdp_dropouts_modal'>REMOVE DROP OUTS</button>
+                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-backdrop='static' data-keyboard='false' data-target='#add_dropouts_tdp_modal'>ADD REASON FOR DROPPING</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' data-backdrop='static' data-keyboard='false' id='btn-delete-tdp-dropouts' name='btn-delete-tdp-dropouts' type='button' data-target='#remove_tdp_dropouts_modal'>REMOVE DROP OUTS</button>
                         </div>
                     </p>
                     </div>
@@ -636,8 +636,8 @@ include 'includes/stufap/inc_template.php';
                     <div class='col'>
                     <p class='text-right'>
                         <div role='group' class='btn-group'>
-                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-target='#add_loa_tdp'>ADD REASON FOR LOA</button>
-                            <button class='btn btn-danger d-none' data-toggle='modal' id='btn-delete-tdp-loa' name='btn-delete-tdp-loa' type='button' data-target='#remove_tdp_loa_modal'>REMOVE DROP OUTS</button>
+                            <button class='btn btn-success' id='btn-add-program' type='button' data-toggle='modal' data-backdrop='static' data-keyboard='false' data-target='#add_loa_tdp'>ADD REASON FOR LOA</button>
+                            <button class='btn btn-danger d-none' data-toggle='modal' data-backdrop='static' data-keyboard='false' id='btn-delete-tdp-loa' name='btn-delete-tdp-loa' type='button' data-target='#remove_tdp_loa_modal'>REMOVE DROP OUTS</button>
                         </div>
                     </p>
                     </div>
