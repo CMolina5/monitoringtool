@@ -139,6 +139,14 @@ $(document).ready(function () {
     //add fhe category to the table
     $('#add_fhe_category_modal').on('submit', function (event) {//modal id
         event.preventDefault();
+        if($('#gr_no').val() === "" && $('#copc_no').val() === ""){
+            // console.log($('#gr_no').val() + $('#copc_no').val());
+            Swal.fire(
+                'You missed something!',
+                'Please enter Goverment Recognition No. or Certificate of Program Compliance No. to continue!',
+                'warning'
+              )
+        }else{
         $.ajax({
             url: "includes/stufap/inc_fhe_add_category.php",//php file
             method: "POST",
@@ -182,6 +190,7 @@ $(document).ready(function () {
 
             }
         });
+    }
     });
 
     //FHE Add Dropouts
