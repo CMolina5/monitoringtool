@@ -125,7 +125,13 @@ $(document).ready(function () {
                     }
                 });
                 
+                Swal.fire(
+                    'Success!',
+                    'You updated a record!',
+                    'success'
+                )
             }
+            
         });
     });
 

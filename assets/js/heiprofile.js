@@ -16,14 +16,6 @@ $(document).ready(function () {
             method: "POST",
             data: $('#add_degree_program').serialize(),
             success: function (data) {
-                if($('#gr_no').val() === "" && $('#copc_no').val() === ""){
-                    // console.log($('#gr_no').val() + $('#copc_no').val());
-                    Swal.fire(
-                        'You missed something!',
-                        'Please enter Goverment Recognition No. or Certificate of Program Compliance No. to continue!',
-                        'warning'
-                      )
-                }else{
                     
                     // console.log($('#gr_no').val() + $('#copc_no').val());
                     $('#tbl_programs').html(data);
@@ -65,7 +57,7 @@ $(document).ready(function () {
                         'You added a degree program!',
                         'success'
                     )
-                }
+                
             }
         });
     }
