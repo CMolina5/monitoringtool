@@ -153,6 +153,7 @@ $(document).ready(function () {
             data: $('#add_fhe_category_form').serialize(),//modal form id
             success: function (data) {
                 alert($('#fhe_category').val());
+                alert($('#total_fhe_1st_male').val());
                 console.log($('#fhe_category').val());
                 $('#tbl_fhe_category_div').html(data);//table div id
                 $('#add_fhe_category_form')[0].reset();//modal form id
