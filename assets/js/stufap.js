@@ -143,7 +143,7 @@ $(document).ready(function () {
             // console.log($('#gr_no').val() + $('#copc_no').val());
             Swal.fire(
                 'You missed something!',
-                'Please enter a category and the no. of beneficiaries to continue!',
+                'Please select a category and the no. of beneficiaries to continue!',
                 'warning'
               )
         }else{
@@ -152,9 +152,9 @@ $(document).ready(function () {
             method: "POST",
             data: $('#add_fhe_category_form').serialize(),//modal form id
             success: function (data) {
-                alert($('#fhe_category').val());
-                alert($('#total_fhe_1st_male').val());
-                console.log($('#fhe_category').val());
+                // alert($('#fhe_category').val());
+                // alert($('#total_fhe_1st_male').val());
+                // console.log($('#fhe_category').val());
                 $('#tbl_fhe_category_div').html(data);//table div id
                 $('#add_fhe_category_form')[0].reset();//modal form id
                 $('#add_fhe_category_modal_body').load(' #add_fhe_category_modal_body');//modal content id
@@ -204,6 +204,14 @@ $(document).ready(function () {
     //add reason for dropouts to the table
     $('#add_dropouts_fhe').on('submit', function (event) {//modal id
         event.preventDefault();
+        if(($('#fhe_drop_reason').val() === null || $('#fhe_drop_reason').val() === "") || (($('#fhe_drop_1st_male').val() === "" || $('#fhe_drop_1st_male').val() === null) && ($('#fhe_drop_2nd_male').val() === "" || $('#fhe_drop_2nd_male').val() === null) && ($('#fhe_drop_3rd_male').val() === "" || $('#fhe_drop_3rd_male').val() === null) && ($('#fhe_drop_sum_mid_male').val() === "" || $('#fhe_drop_sum_mid_male').val() === null) && ($('#fhe_drop_1st_female').val() === "" || $('#fhe_drop_1st_female').val() === null) && ($('#fhe_drop_2nd_female').val() === "" || $('#fhe_drop_2nd_female').val() === null) && ($('#fhe_drop_3rd_female').val() === "" || $('#fhe_drop_3rd_female').val() === null) && ($('#fhe_drop_sum_mid_female').val() === "" || $('#fhe_drop_sum_mid_female').val() === null) )){
+            // console.log($('#gr_no').val() + $('#copc_no').val());
+            Swal.fire(
+                'You missed something!',
+                'Please select a reason for dropping and the no. of beneficiaries to continue!',
+                'warning'
+              )
+        }else{
         $.ajax({
             url: "includes/stufap/inc_fhe_add_dropouts.php",//php file
             method: "POST",
@@ -245,6 +253,7 @@ $(document).ready(function () {
 
             }
         });
+    }
     });
 
     //FHE Add LOA
