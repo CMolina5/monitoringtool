@@ -956,6 +956,16 @@
                                     echo' 
                                         <option selected disabled value="">ALL CATEGORY HAS BEEN USED</option>
                                     >';
+                                    echo
+                                    '<script>
+                                    $(document).ready(function () {
+
+                                    if($("#fhe_category").val() == ""){
+                                    $("#fhe_category").addClass("d-none");
+                                    }
+
+                                    });
+                                    </script>';
                                 }
                             } else {
                                 foreach ($fhe_category_array as $value) {
