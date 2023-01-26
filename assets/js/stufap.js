@@ -204,7 +204,7 @@ $(document).ready(function () {
     //add reason for dropouts to the table
     $('#add_dropouts_fhe').on('submit', function (event) {//modal id
         event.preventDefault();
-        if(($('#fhe_drop_reason').val() === null || $('#fhe_drop_reason').val() === "") || (($('#fhe_drop_1st_male').val() === "" || $('#fhe_drop_1st_male').val() === null) )){
+        if(($('#fhe_drop_reason').val() === null || $('#fhe_drop_reason').val() === "") || (($('#fhe_drop_1st_male').val() === "" || $('#fhe_drop_1st_male').val() === null) && ($('#fhe_drop_2nd_male').val() === "" || $('#fhe_drop_2nd_male').val() === null) && ($('#fhe_drop_3rd_male').val() === "" || $('#fhe_drop_3rd_male').val() === null) && ($('#fhe_drop_summer_midyear_male').val() === "" || $('#fhe_drop_summer_midyear_male').val() === null) && ($('#fhe_drop_1st_female').val() === "" || $('#fhe_drop_1st_female').val() === null) && ($('#fhe_drop_2nd_female').val() === "" || $('#fhe_drop_2nd_female').val() === null) && ($('#fhe_drop_3rd_female').val() === "" || $('#fhe_drop_3rd_female').val() === null) && ($('#fhe_drop_summer_midyear_female').val() === "" || $('#fhe_drop_summer_midyear_female').val() === null) )){
             // console.log($('#gr_no').val() + $('#copc_no').val());
             Swal.fire(
                 'You missed something!',
