@@ -958,13 +958,11 @@
                                     >';
                                     echo
                                     '<script>
-                                    $(document).ready(function () {
 
                                     if($("#fhe_category").val() == ""){
                                     $("#fhe_category").addClass("d-none");
                                     }
 
-                                    });
                                     </script>';
                                 }
                             } else {
