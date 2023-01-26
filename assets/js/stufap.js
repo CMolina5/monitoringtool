@@ -143,7 +143,7 @@ $(document).ready(function () {
             // console.log($('#gr_no').val() + $('#copc_no').val());
             Swal.fire(
                 'You missed something!',
-                'Please enter a category to continue!',
+                'Please enter a category and the no. of beneficiaries to continue!',
                 'warning'
               )
         }else{
