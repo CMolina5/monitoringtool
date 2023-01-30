@@ -56,7 +56,11 @@ if ($resultCheck > 0) {
             $result = mysqli_query($conn, $sql);
         } else if ($fhe_drop_reason == 'Others' && empty($fhe_drop_other)) {
             echo "<script>
-            alert('Please specify reason for dropping.')
+            Swal.fire(
+                'Warning!',
+                'Please specify reason for dropping.',
+                'warning'
+            )
             </script>";
         }else {
             $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_3rd_male, total_dropout_3rd_female)
@@ -92,7 +96,11 @@ if ($resultCheck > 0) {
             $result = mysqli_query($conn, $sql);
         } else if ($fhe_drop_reason == 'Others' && empty($fhe_drop_other)) {
             echo "<script>
-            alert('Please specify reason for dropping.')
+            Swal.fire(
+                'Warning!',
+                'Please specify reason for dropping.',
+                'warning'
+            )
             </script>";
         } else {
             $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_3rd_male, total_dropout_3rd_female, total_dropout_sum_mid_male, total_dropout_sum_mid_female)
@@ -118,7 +126,11 @@ if ($resultCheck > 0) {
             $result = mysqli_query($conn, $sql);
         } else if ($fhe_drop_reason == 'Others' && empty($fhe_drop_other)) {
             echo "<script>
-            alert('Please specify reason for dropping.')
+            Swal.fire(
+                'Warning!',
+                'Please specify reason for dropping.',
+                'warning'
+            )
             </script>";
         } else {
             $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_sum_mid_male, total_dropout_sum_mid_female)
@@ -136,7 +148,11 @@ if ($resultCheck > 0) {
             $result = mysqli_query($conn, $sql);
         } else if ($fhe_drop_reason == 'Others' && empty($fhe_drop_other)) {
             echo "<script>
-            alert('Please specify reason for dropping.')
+            Swal.fire(
+                'Warning!',
+                'Please specify reason for dropping.',
+                'warning'
+            )
             </script>";
         } else {
             $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female)
