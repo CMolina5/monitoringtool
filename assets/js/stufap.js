@@ -211,7 +211,14 @@ $(document).ready(function () {
                 'Please select a reason for dropping and the no. of beneficiaries to continue!',
                 'warning'
               )
-        }else{
+        }else if($('#fhe_drop_reason').val() === "Others" && $('#fhe_drop_other').val() === ""){
+            Swal.fire(
+                'You missed something!',
+                'Please specify reason for dropping.',
+                'warning'
+            )
+        }
+        else{
         $.ajax({
             url: "includes/stufap/inc_fhe_add_dropouts.php",//php file
             method: "POST",
