@@ -211,7 +211,7 @@ $(document).ready(function () {
                 'Please select a reason for dropping and the no. of beneficiaries to continue!',
                 'warning'
               )
-        }else if($('#fhe_drop_reason').val() === "Others" && $('#fhe_drop_other').val() === ""){
+        }else if(($('#fhe_drop_reason').val() === "Others" && $('#fhe_drop_other').val() === "") && ($('#fhe_drop_2nd_male').val() === "" || $('#fhe_drop_2nd_male').val() === null) && ($('#fhe_drop_3rd_male').val() === "" || $('#fhe_drop_3rd_male').val() === null) && ($('#fhe_drop_summer_midyear_male').val() === "" || $('#fhe_drop_summer_midyear_male').val() === null) && ($('#fhe_drop_1st_female').val() === "" || $('#fhe_drop_1st_female').val() === null) && ($('#fhe_drop_2nd_female').val() === "" || $('#fhe_drop_2nd_female').val() === null) && ($('#fhe_drop_3rd_female').val() === "" || $('#fhe_drop_3rd_female').val() === null) && ($('#fhe_drop_summer_midyear_female').val() === "" || $('#fhe_drop_summer_midyear_female').val() === null)) {
             Swal.fire(
                 'You missed something!',
                 'Please specify reason for dropping.',
