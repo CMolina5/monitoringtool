@@ -34,7 +34,11 @@ $resultCheck = mysqli_num_rows($result);
 
 if ($resultCheck > 0) {
     echo "<script>
-        alert('Same data already exist! You may edit it in the table.')
+        Swal.fire(
+            'Data already exist!',
+            'Please select the data in the table to update!',
+            'warning'
+        )
     </script>";
 } else {
     if ($ac_calendar == 'Trimester') {
