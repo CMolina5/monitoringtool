@@ -462,11 +462,11 @@ $(document).on('change', '#fhe_drop_reason', function () {
         var value = e.value;
     if (value === 'Others') {
         $('#div_fhe_others').removeClass('d-none');
-        alert(value);
+        alert(value+5);
         
     } else {
         $('#div_fhe_others').addClass('d-none');
-        alert(value);
+        alert(value+10);
     }
 });
 
