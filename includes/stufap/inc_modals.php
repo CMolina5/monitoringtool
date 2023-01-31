@@ -65,8 +65,8 @@
                             <option value="Others">Others</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label>If other reason please specify:</label><input id="fhe_drop_other" name="fhe_drop_other" class="form-control d-none" type="text">
+                    <div id="div_fhe_others" name="div_fhe_others" class="form-group d-none">
+                        <label>If other reason please specify:</label><input id="fhe_drop_other" name="fhe_drop_other" class="form-control" type="text">
                     </div>
                     <hr>
                     <div class="form-group"><label>No. of Dropouts</label></div>
