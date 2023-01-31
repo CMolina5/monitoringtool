@@ -460,10 +460,10 @@ $(document).on('click', 'input[name=main_tdp_programs_checkbox]', function () {
 $(document).on('change', '#fhe_drop_reason', function () {
     if ($('fhe_drop_reason').val() === 'Others') {
         $('#div_fhe_others').removeClass('d-none');
-        alert("now showing");
+        alert($('fhe_drop_reason').val());
     } else {
         $('#div_fhe_others').addClass('d-none');
-        alert("not showing");
+        alert($('fhe_drop_reason').val());
     }
 });
 
