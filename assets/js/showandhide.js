@@ -458,12 +458,15 @@ $(document).on('click', 'input[name=main_tdp_programs_checkbox]', function () {
 });
 
 $(document).on('change', '#fhe_drop_reason', function () {
-    if ($('fhe_drop_reason').val() === 'Others') {
+        var e = document.getElementById("fhe_drop_reason");
+        var value = e.value;
+    if (value === 'Others') {
         $('#div_fhe_others').removeClass('d-none');
-        alert($('fhe_drop_reason').val());
+        alert(value);
+        
     } else {
         $('#div_fhe_others').addClass('d-none');
-        alert($('fhe_drop_reason').val());
+        alert(value);
     }
 });
 
