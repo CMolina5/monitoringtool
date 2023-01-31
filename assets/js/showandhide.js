@@ -457,4 +457,14 @@ $(document).on('click', 'input[name=main_tdp_programs_checkbox]', function () {
     btnDeleteTDPPrograms();
 });
 
+$(document).on('change', '#fhe_drop_reason', function () {
+    if ($('fhe_drop_reason').val() === 'Others') {
+        $('#div_fhe_others').removeClass('d-none');
+        alert("now showing");
+    } else {
+        $('#div_fhe_others').addClass('d-none');
+        alert("not showing");
+    }
+});
+
 });
