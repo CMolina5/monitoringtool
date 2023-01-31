@@ -15,17 +15,17 @@ $fhe_drop_1st_female = mysqli_real_escape_string($conn, $_POST['fhe_drop_1st_fem
 $fhe_drop_2nd_male = mysqli_real_escape_string($conn, $_POST['fhe_drop_2nd_male']);
 $fhe_drop_2nd_female = mysqli_real_escape_string($conn, $_POST['fhe_drop_2nd_female']);
 
-if(empty($fhe_drop_1st_male)){
-    $fhe_drop_1st_male=0;
+if (empty($fhe_drop_1st_male)) {
+    $fhe_drop_1st_male = 0;
 }
-if(empty($fhe_drop_1st_female)){
-    $fhe_drop_1st_female=0;
+if (empty($fhe_drop_1st_female)) {
+    $fhe_drop_1st_female = 0;
 }
-if(empty($fhe_drop_2nd_male)){
-    $fhe_drop_2nd_male=0;
+if (empty($fhe_drop_2nd_male)) {
+    $fhe_drop_2nd_male = 0;
 }
-if(empty($fhe_drop_2nd_female)){
-    $fhe_drop_2nd_female=0;
+if (empty($fhe_drop_2nd_female)) {
+    $fhe_drop_2nd_female = 0;
 }
 
 $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (reason ='$fhe_drop_reason' OR reason ='$fhe_drop_other') AND program='FHE'";
@@ -44,23 +44,27 @@ if ($resultCheck > 0) {
     if ($ac_calendar == 'Trimester') {
         $fhe_drop_3rd_male = mysqli_real_escape_string($conn, $_POST['fhe_drop_3rd_male']);
         $fhe_drop_3rd_female = mysqli_real_escape_string($conn, $_POST['fhe_drop_3rd_female']);
-        if(empty($fhe_drop_3rd_male)){
-            $fhe_drop_3rd_male=0;
+        if (empty($fhe_drop_3rd_male)) {
+            $fhe_drop_3rd_male = 0;
         }
-        if(empty($fhe_drop_3rd_female)){
-            $fhe_drop_3rd_female=0;
+        if (empty($fhe_drop_3rd_female)) {
+            $fhe_drop_3rd_female = 0;
         }
         if ($fhe_drop_reason == 'Others' && !empty($fhe_drop_other)) {
             $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_3rd_male, total_dropout_3rd_female)
             VALUES ('$ac_year', '$hei_psg_region', '$hei_uii', '$hei_name', '$program', '$fhe_drop_other', '$fhe_drop_1st_male', '$fhe_drop_1st_female', '$fhe_drop_2nd_male','$fhe_drop_2nd_female', '$fhe_drop_3rd_male', '$fhe_drop_3rd_female')";
             $result = mysqli_query($conn, $sql);
-        }else {
+        } else {
             $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_3rd_male, total_dropout_3rd_female)
             VALUES ('$ac_year', '$hei_psg_region', '$hei_uii', '$hei_name', '$program', '$fhe_drop_reason', '$fhe_drop_1st_male', '$fhe_drop_1st_female', '$fhe_drop_2nd_male','$fhe_drop_2nd_female', '$fhe_drop_3rd_male', '$fhe_drop_3rd_female')";
             $result = mysqli_query($conn, $sql);
 
             echo "<script>
-                alert('biggy')
+            Swal.fire(
+                'Success!',
+                'You added a record!',
+                'success'
+            )
             </script>";
         }
     } else if ($ac_calendar == 'Trimester with Summer') {
@@ -69,19 +73,19 @@ if ($resultCheck > 0) {
         $fhe_drop_summer_midyear_male = mysqli_real_escape_string($conn, $_POST['fhe_drop_summer_midyear_male']);
         $fhe_drop_summer_midyear_female = mysqli_real_escape_string($conn, $_POST['fhe_drop_summer_midyear_female']);
 
-        if(empty($fhe_drop_3rd_male)){
-            $fhe_drop_3rd_male=0;
+        if (empty($fhe_drop_3rd_male)) {
+            $fhe_drop_3rd_male = 0;
         }
-        if(empty($fhe_drop_3rd_female)){
-            $fhe_drop_3rd_female=0;
+        if (empty($fhe_drop_3rd_female)) {
+            $fhe_drop_3rd_female = 0;
         }
-        if(empty($fhe_drop_summer_midyear_male)){
-            $fhe_drop_summer_midyear_male=0;
+        if (empty($fhe_drop_summer_midyear_male)) {
+            $fhe_drop_summer_midyear_male = 0;
         }
-        if(empty($fhe_drop_summer_midyear_female)){
-            $fhe_drop_summer_midyear_female=0;
+        if (empty($fhe_drop_summer_midyear_female)) {
+            $fhe_drop_summer_midyear_female = 0;
         }
-        
+
         if ($fhe_drop_reason == 'Others' && !empty($fhe_drop_other)) {
             $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_3rd_male, total_dropout_3rd_female, total_dropout_sum_mid_male, total_dropout_sum_mid_female)
             VALUES ('$ac_year', '$hei_psg_region', '$hei_uii', '$hei_name', '$program', '$fhe_drop_other', '$fhe_drop_1st_male', '$fhe_drop_1st_female', '$fhe_drop_2nd_male','$fhe_drop_2nd_female', '$fhe_drop_3rd_male', '$fhe_drop_3rd_female', '$fhe_drop_summer_midyear_male', '$fhe_drop_summer_midyear_female')";
@@ -92,17 +96,21 @@ if ($resultCheck > 0) {
             $result = mysqli_query($conn, $sql);
 
             echo "<script>
-                alert('biggy')
+            Swal.fire(
+                'Success!',
+                'You added a record!',
+                'success'
+            )
             </script>";
         }
     } else if ($ac_calendar == 'Semester with Summer') {
         $fhe_drop_summer_midyear_male = mysqli_real_escape_string($conn, $_POST['fhe_drop_summer_midyear_male']);
         $fhe_drop_summer_midyear_female = mysqli_real_escape_string($conn, $_POST['fhe_drop_summer_midyear_female']);
-        if(empty($fhe_drop_summer_midyear_male)){
-            $fhe_drop_summer_midyear_male=0;
+        if (empty($fhe_drop_summer_midyear_male)) {
+            $fhe_drop_summer_midyear_male = 0;
         }
-        if(empty($fhe_drop_summer_midyear_female)){
-            $fhe_drop_summer_midyear_female=0;
+        if (empty($fhe_drop_summer_midyear_female)) {
+            $fhe_drop_summer_midyear_female = 0;
         }
         if ($fhe_drop_reason == 'Others' && !empty($fhe_drop_other)) {
             $sql = "INSERT INTO tbl_drop_outs (ac_year, hei_psg_region, hei_uii, hei_name, program, reason, total_dropout_1st_male, total_dropout_1st_female, total_dropout_2nd_male, total_dropout_2nd_female, total_dropout_sum_mid_male, total_dropout_sum_mid_female)
@@ -114,7 +122,11 @@ if ($resultCheck > 0) {
             $result = mysqli_query($conn, $sql);
 
             echo "<script>
-                alert('biggy')
+            Swal.fire(
+                'Success!',
+                'You added a record!',
+                'success'
+            )
             </script>";
         }
     } else if ($ac_calendar == 'Semester') {
@@ -128,7 +140,11 @@ if ($resultCheck > 0) {
             $result = mysqli_query($conn, $sql);
 
             echo "<script>
-                alert('biggy')
+            Swal.fire(
+                'Success!',
+                'You added a record!',
+                'success'
+            )
             </script>";
         }
     }
