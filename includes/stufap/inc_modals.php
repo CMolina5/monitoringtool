@@ -280,7 +280,7 @@
                             <option value="Others">Others</option>
                         </select>
                     </div>
-                    <div class="form-group">
+                    <div id="div_tes_others_loa" name="div_tes_others_loa" class="form-group d-none">
                         <label>If other reason please specify:</label><input id="tes_loa_other" name="tes_loa_other" class="form-control" type="text">
                     </div>
                     <hr>
@@ -523,7 +523,10 @@
                             <option value="Others">Others</option>
                         </select>
                     </div>
-                    <div class="form-group"><label>If other reason please specify:</label><input id="tes_drop_other" name="tes_drop_other" class="form-control" type="text"></div>
+                    <div id="div_tes_others" name="div_tes_others" class="form-group d-none">
+                        <label>If other reason please specify:</label>
+                        <input id="tes_drop_other" name="tes_drop_other" class="form-control" type="text">
+                    </div>
                     <hr>
                     <div class="form-group"><label>No. of Dropouts</label></div>
                     <div class="form-group">
