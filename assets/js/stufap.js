@@ -388,6 +388,21 @@ $(document).ready(function () {
     //add reason for loa to the table
     $('#add_loa_tdp').on('submit', function (event) {//modal id
         event.preventDefault();
+        if(($('#tdp_loa_reason').val() === null || $('#tdp_loa_reason').val() === "") || (($('#tdp_loa_1st_male').val() === "" || $('#tdp_loa_1st_male').val() === null) && ($('#tdp_loa_2nd_male').val() === "" || $('#tdp_loa_2nd_male').val() === null) && ($('#tdp_loa_3rd_male').val() === "" || $('#tdp_loa_3rd_male').val() === null) && ($('#tdp_loa_summer_midyear_male').val() === "" || $('#tdp_loa_summer_midyear_male').val() === null) && ($('#tdp_loa_1st_female').val() === "" || $('#tdp_loa_1st_female').val() === null) && ($('#tdp_loa_2nd_female').val() === "" || $('#tdp_loa_2nd_female').val() === null) && ($('#tdp_loa_3rd_female').val() === "" || $('#tdp_loa_3rd_female').val() === null) && ($('#tdp_loa_summer_midyear_female').val() === "" || $('#tdp_loa_summer_midyear_female').val() === null) )){
+            // console.log($('#gr_no').val() + $('#copc_no').val());
+            Swal.fire(
+                'You missed something!',
+                'Please select a reason for loa and the no. of beneficiaries to continue!',
+                'warning'
+              )
+        }else if(($('#tdp_loa_reason').val() === "Others" && $('#tdp_loa_other').val() === "") && ($('#tdp_loa_2nd_male').val() === "" || $('#tdp_loa_2nd_male').val() === null) && ($('#tdp_loa_3rd_male').val() === "" || $('#tdp_loa_3rd_male').val() === null) && ($('#tdp_loa_summer_midyear_male').val() === "" || $('#tdp_loa_summer_midyear_male').val() === null) && ($('#tdp_loa_1st_female').val() === "" || $('#tdp_loa_1st_female').val() === null) && ($('#tdp_loa_2nd_female').val() === "" || $('#tdp_loa_2nd_female').val() === null) && ($('#tdp_loa_3rd_female').val() === "" || $('#tdp_loa_3rd_female').val() === null) && ($('#tdp_loa_summer_midyear_female').val() === "" || $('#tdp_loa_summer_midyear_female').val() === null)) {
+            Swal.fire(
+                'You missed something!',
+                'Please specify reason for loa.',
+                'warning'
+            )
+        }
+        else{
         $.ajax({
             url: "includes/stufap/inc_tdp_add_loa.php",//php file
             method: "POST",
@@ -429,6 +444,7 @@ $(document).ready(function () {
 
             }
         });
+    }
     });
 
 
@@ -651,6 +667,21 @@ $(document).ready(function () {
     //add reason for tdp dropouts
     $('#add_dropouts_tdp_modal').on('submit', function (event) {//modal id
         event.preventDefault();
+        if(($('#tdp_drop_reason').val() === null || $('#tdp_drop_reason').val() === "") || (($('#tdp_drop_1st_male').val() === "" || $('#tdp_drop_1st_male').val() === null) && ($('#tdp_drop_2nd_male').val() === "" || $('#tdp_drop_2nd_male').val() === null) && ($('#tdp_drop_3rd_male').val() === "" || $('#tdp_drop_3rd_male').val() === null) && ($('#tdp_drop_summer_midyear_male').val() === "" || $('#tdp_drop_summer_midyear_male').val() === null) && ($('#tdp_drop_1st_female').val() === "" || $('#tdp_drop_1st_female').val() === null) && ($('#tdp_drop_2nd_female').val() === "" || $('#tdp_drop_2nd_female').val() === null) && ($('#tdp_drop_3rd_female').val() === "" || $('#tdp_drop_3rd_female').val() === null) && ($('#tdp_drop_summer_midyear_female').val() === "" || $('#tdp_drop_summer_midyear_female').val() === null) )){
+            // console.log($('#gr_no').val() + $('#copc_no').val());
+            Swal.fire(
+                'You missed something!',
+                'Please select a reason for dropping and the no. of beneficiaries to continue!',
+                'warning'
+              )
+        }else if(($('#tdp_drop_reason').val() === "Others" && $('#tdp_drop_other').val() === "") && ($('#tdp_drop_2nd_male').val() === "" || $('#tdp_drop_2nd_male').val() === null) && ($('#tdp_drop_3rd_male').val() === "" || $('#tdp_drop_3rd_male').val() === null) && ($('#tdp_drop_summer_midyear_male').val() === "" || $('#tdp_drop_summer_midyear_male').val() === null) && ($('#tdp_drop_1st_female').val() === "" || $('#tdp_drop_1st_female').val() === null) && ($('#tdp_drop_2nd_female').val() === "" || $('#tdp_drop_2nd_female').val() === null) && ($('#tdp_drop_3rd_female').val() === "" || $('#tdp_drop_3rd_female').val() === null) && ($('#tdp_drop_summer_midyear_female').val() === "" || $('#tdp_drop_summer_midyear_female').val() === null)) {
+            Swal.fire(
+                'You missed something!',
+                'Please specify reason for dropping.',
+                'warning'
+            )
+        }
+        else{
         $.ajax({
             url: "includes/stufap/inc_tdp_add_dropouts.php",//php file
             method: "POST",
@@ -692,6 +723,7 @@ $(document).ready(function () {
 
             }
         });
+    }
     });
     
     //tes dropouts part
