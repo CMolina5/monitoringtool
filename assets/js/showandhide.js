@@ -468,4 +468,15 @@ $(document).on('change', '#fhe_drop_reason', function () {
     }
 });
 
+$(document).on('change', '#fhe_loa_reason', function () {
+    var e = document.getElementById("fhe_loa_reason");
+    var value = e.value;
+    if (value === 'Others') {
+        $('#div_fhe_others_loa').removeClass('d-none');
+        
+    } else {
+        $('#div_fhe_others_loa').addClass('d-none');
+    }
+});
+
 });

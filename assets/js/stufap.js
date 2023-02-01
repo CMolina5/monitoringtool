@@ -262,6 +262,21 @@ $(document).ready(function () {
     //add reason for loa to the table
     $('#add_loa_fhe').on('submit', function (event) {//modal id
         event.preventDefault();
+        if(($('#fhe_loa_reason').val() === null || $('#fhe_loa_reason').val() === "") || (($('#fhe_loa_1st_male').val() === "" || $('#fhe_loa_1st_male').val() === null) && ($('#fhe_loa_2nd_male').val() === "" || $('#fhe_loa_2nd_male').val() === null) && ($('#fhe_loa_3rd_male').val() === "" || $('#fhe_loa_3rd_male').val() === null) && ($('#fhe_loa_summer_midyear_male').val() === "" || $('#fhe_loa_summer_midyear_male').val() === null) && ($('#fhe_loa_1st_female').val() === "" || $('#fhe_loa_1st_female').val() === null) && ($('#fhe_loa_2nd_female').val() === "" || $('#fhe_loa_2nd_female').val() === null) && ($('#fhe_loa_3rd_female').val() === "" || $('#fhe_loa_3rd_female').val() === null) && ($('#fhe_loa_summer_midyear_female').val() === "" || $('#fhe_loa_summer_midyear_female').val() === null) )){
+            // console.log($('#gr_no').val() + $('#copc_no').val());
+            Swal.fire(
+                'You missed something!',
+                'Please select a reason for loa and the no. of beneficiaries to continue!',
+                'warning'
+              )
+        }else if(($('#fhe_loa_reason').val() === "Others" && $('#fhe_loa_other').val() === "") && ($('#fhe_loa_2nd_male').val() === "" || $('#fhe_loa_2nd_male').val() === null) && ($('#fhe_loa_3rd_male').val() === "" || $('#fhe_loa_3rd_male').val() === null) && ($('#fhe_loa_summer_midyear_male').val() === "" || $('#fhe_loa_summer_midyear_male').val() === null) && ($('#fhe_loa_1st_female').val() === "" || $('#fhe_loa_1st_female').val() === null) && ($('#fhe_loa_2nd_female').val() === "" || $('#fhe_loa_2nd_female').val() === null) && ($('#fhe_loa_3rd_female').val() === "" || $('#fhe_loa_3rd_female').val() === null) && ($('#fhe_loa_summer_midyear_female').val() === "" || $('#fhe_loa_summer_midyear_female').val() === null)) {
+            Swal.fire(
+                'You missed something!',
+                'Please specify reason for loa.',
+                'warning'
+            )
+        }
+        else{
         $.ajax({
             url: "includes/stufap/inc_fhe_add_loa.php",//php file
             method: "POST",
@@ -303,6 +318,7 @@ $(document).ready(function () {
 
             }
         });
+    }
     });
 
     //TES Add LOA
