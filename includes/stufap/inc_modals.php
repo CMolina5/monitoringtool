@@ -173,7 +173,7 @@
                             <option value="Others">Others</option>
                         </select>
                     </div>
-                    <div class="form-group">
+                    <div id="div_fhe_others_loa" name="div_fhe_others_loa" class="form-group d-none">
                         <label>If other reason please specify:</label><input id="fhe_loa_other" name="fhe_loa_other" class="form-control" type="text">
                     </div>
                     <hr>
