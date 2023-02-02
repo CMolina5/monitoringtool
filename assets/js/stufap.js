@@ -143,11 +143,11 @@ $(document).ready(function () {
         var value = e.value;
         alert(value);
         alert(e);
-        if(value === '' || value === null){
-            document.getElementById("btn_fhe_category_save").disabled = true;
-        }else{
-            document.getElementById("btn_fhe_category_save").disabled = false;
-        }
+        // if(value === '' || value === null){
+        //     document.getElementById("btn_fhe_category_save").disabled = true;
+        // }else{
+        //     document.getElementById("btn_fhe_category_save").disabled = false;
+        // }
     })
     
     $('#add_fhe_category_modal').on('submit', function (event) {//modal id
