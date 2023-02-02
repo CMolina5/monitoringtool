@@ -1041,7 +1041,7 @@
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-light" type="button" data-dismiss="modal">Close</button>
-                    <button class="btn btn-primary" type="submit">Save</button>
+                    <button id="btn_fhe_category_save" class="btn btn-primary" type="submit">Save</button>
                 </div>
             </form>
         </div>
