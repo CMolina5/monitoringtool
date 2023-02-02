@@ -137,6 +137,17 @@ $(document).ready(function () {
 
     //FHE Category Part
     //add fhe category to the table
+
+    $('#add_fhe_category_modal').on('show.bs.modal', function (event) {
+        var e = document.getElementById("#fhe_category");
+        var value = e.value;
+        if(value === '' || value === null){
+            document.getElementById("btn_fhe_category_save").disabled = true;
+        }else{
+            document.getElementById("btn_fhe_category_save").disabled = false;
+        }
+    })
+    
     $('#add_fhe_category_modal').on('submit', function (event) {//modal id
         event.preventDefault();
         if(($('#fhe_category').val() === null || $('#fhe_category').val() === "") || (($('#total_fhe_1st_male').val() === "" || $('#total_fhe_1st_male').val() === null) && ($('#total_fhe_2nd_male').val() === "" || $('#total_fhe_2nd_male').val() === null) && ($('#total_fhe_3rd_male').val() === "" || $('#total_fhe_3rd_male').val() === null) && ($('#total_fhe_sum_mid_male').val() === "" || $('#total_fhe_sum_mid_male').val() === null) && ($('#total_fhe_1st_female').val() === "" || $('#total_fhe_1st_female').val() === null) && ($('#total_fhe_2nd_female').val() === "" || $('#total_fhe_2nd_female').val() === null) && ($('#total_fhe_3rd_female').val() === "" || $('#total_fhe_3rd_female').val() === null) && ($('#total_fhe_sum_mid_female').val() === "" || $('#total_fhe_sum_mid_female').val() === null) )){
