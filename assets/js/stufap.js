@@ -140,7 +140,7 @@ $(document).ready(function () {
 
     $('#add_fhe_category_modal').on('shown.bs.modal', function (event) {
         var es = document.getElementById("#fhe_category");
-        var values = e.values;
+        var values = es.values;
         alert(values);
         alert(es);
         // if(value === '' || value === null){
