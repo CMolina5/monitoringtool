@@ -139,10 +139,10 @@ $(document).ready(function () {
     //add fhe category to the table
 
     $('#add_fhe_category_modal').on('shown.bs.modal', function (event) {
-        var e = document.getElementById("#fhe_category");
-        var value = e.value;
-        alert(value);
-        alert(e);
+        var es = document.getElementById("#fhe_category");
+        var values = e.values;
+        alert(values);
+        alert(es);
         // if(value === '' || value === null){
         //     document.getElementById("btn_fhe_category_save").disabled = true;
         // }else{
