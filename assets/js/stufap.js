@@ -138,7 +138,7 @@ $(document).ready(function () {
     //FHE Category Part
     //add fhe category to the table
 
-    $('#add_fhe_category_modal').on('show.bs.modal', function (event) {
+    $('#add_fhe_category_modal').on('shown.bs.modal', function (event) {
         var e = document.getElementById("#fhe_category");
         var value = e.value;
         if(value === '' || value === null){
