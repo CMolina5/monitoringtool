@@ -26,6 +26,8 @@ if ($resultCheck > 0) {
                 'warning'
             )
         </script>";
+
+        include "./inc_degree_programs.php";
     } else {
 
         $sql = "INSERT INTO tbl_degree_programs_temp (ac_year, hei_psg_region, hei_uii, hei_name, program_code, program_name, gr_no, copc_no, in_the_portal)
@@ -54,6 +56,8 @@ if ($resultCheck > 0) {
                 'warning'
             )
         </script>";
+
+        include "./inc_degree_programs.php";
     } else {
 
         $sql = "INSERT INTO tbl_degree_programs (ac_year, hei_psg_region, hei_uii, hei_name, program_code, program_name, gr_no, copc_no, in_the_portal)
