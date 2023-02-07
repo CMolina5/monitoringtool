@@ -234,11 +234,11 @@ $(document).ready(function () {
                     }
                 });
 
-                Swal.fire(
-                    'Success!',
-                    'You added a record!',
-                    'success'
-                )
+                // Swal.fire(
+                //     'Success!',
+                //     'You added a record!',
+                //     'success'
+                // )
                 
             }
         });
