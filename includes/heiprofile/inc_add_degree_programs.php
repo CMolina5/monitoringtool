@@ -68,10 +68,3 @@ if ($resultCheck > 0) {
         }
     }
 }
-
-if (!$result) {
-    echo mysqli_error($conn);
-    die();
-} else {
-    include "./inc_degree_programs.php";
-}
