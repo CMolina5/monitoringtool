@@ -52,11 +52,11 @@ $(document).ready(function () {
                         }
                     });
 
-                    Swal.fire(
-                        'Success!',
-                        'You added a degree program!',
-                        'success'
-                    )
+                    // Swal.fire(
+                    //     'Success!',
+                    //     'You added a degree program!',
+                    //     'success'
+                    // )
                 
             }
         });
