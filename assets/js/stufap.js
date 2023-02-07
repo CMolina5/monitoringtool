@@ -138,17 +138,17 @@ $(document).ready(function () {
     //FHE Category Part
     //add fhe category to the table
 
-    $('#add_fhe_category_modal').on('shown.bs.modal', function (event) {
-        var es = document.getElementById("#fhe_category");
-        var values = es.values;
-        alert(values);
-        alert(es);
-        // if(value === '' || value === null){
-        //     document.getElementById("btn_fhe_category_save").disabled = true;
-        // }else{
-        //     document.getElementById("btn_fhe_category_save").disabled = false;
-        // }
-    })
+    // $('#add_fhe_category_modal').on('shown.bs.modal', function (event) {
+    //     var es = document.getElementById("#fhe_category");
+    //     var values = es.values;
+    //     alert(values);
+    //     alert(es);
+    //     // if(value === '' || value === null){
+    //     //     document.getElementById("btn_fhe_category_save").disabled = true;
+    //     // }else{
+    //     //     document.getElementById("btn_fhe_category_save").disabled = false;
+    //     // }
+    // })
     
     $('#add_fhe_category_modal').on('submit', function (event) {//modal id
         event.preventDefault();
