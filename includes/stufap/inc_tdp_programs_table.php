@@ -1,7 +1,10 @@
 <?php
 include 'inc_template.php';
 
-$sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_1sem_1yr_male > 0 OR total_tdp_1sem_1yr_female > 0 OR total_tdp_2sem_1yr_male > 0 OR total_tdp_2sem_1yr_female > 0)";
+$sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_1sem_1yr_male > 0 OR total_tdp_1sem_1yr_female > 0 OR total_tdp_1sem_2yr_male > 0 OR total_tdp_1sem_2yr_female > 0 OR total_tdp_1sem_3yr_male > 0 OR total_tdp_1sem_3yr_female > 0 OR total_tdp_1sem_4yr_male > 0 OR total_tdp_1sem_4yr_female > 0 OR total_tdp_1sem_5yr_male > 0 OR total_tdp_1sem_5yr_female > 0 OR total_tdp_1sem_6yr_male > 0 OR total_tdp_1sem_6yr_female > 0 OR
+total_tdp_2sem_1yr_male > 0 OR total_tdp_2sem_1yr_female > 0 OR total_tdp_2sem_2yr_male > 0 OR total_tdp_2sem_2yr_female > 0 OR total_tdp_2sem_3yr_male > 0 OR total_tdp_2sem_3yr_female > 0 OR total_tdp_2sem_4yr_male > 0 OR total_tdp_2sem_4yr_female > 0 OR total_tdp_2sem_5yr_male > 0 OR total_tdp_2sem_5yr_female > 0 OR total_tdp_2sem_6yr_male > 0 OR total_tdp_2sem_6yr_female > 0 OR
+total_tdp_3sem_1yr_male > 0 OR total_tdp_3sem_1yr_female > 0 OR total_tdp_3sem_2yr_male > 0 OR total_tdp_3sem_2yr_female > 0 OR total_tdp_3sem_3yr_male > 0 OR total_tdp_3sem_3yr_female > 0 OR total_tdp_3sem_4yr_male > 0 OR total_tdp_3sem_4yr_female > 0 OR total_tdp_3sem_5yr_male > 0 OR total_tdp_3sem_5yr_female > 0 OR total_tdp_3sem_6yr_male > 0 OR total_tdp_3sem_6yr_female > 0 OR
+total_tdp_sum_mid_1yr_male > 0 OR total_tdp_sum_mid_1yr_female > 0 OR total_tdp_sum_mid_2yr_male > 0 OR total_tdp_sum_mid_2yr_female > 0 OR total_tdp_sum_mid_3yr_male > 0 OR total_tdp_sum_mid_3yr_female > 0 OR total_tdp_sum_mid_4yr_male > 0 OR total_tdp_sum_mid_4yr_female > 0 OR total_tdp_sum_mid_5yr_male > 0 OR total_tdp_sum_mid_5yr_female > 0 OR total_tdp_sum_mid_6yr_male > 0 OR total_tdp_sum_mid_6yr_female > 0) ";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 
