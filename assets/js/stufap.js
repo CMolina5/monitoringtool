@@ -473,7 +473,7 @@ $(document).ready(function () {
             // console.log($('#gr_no').val() + $('#copc_no').val());
             Swal.fire(
                 'You missed something!',
-                'Please select a category and the no. of beneficiaries to continue!',
+                'Please select a category and the no. of grantees to continue!',
                 'warning'
               )
         }else{
@@ -535,6 +535,14 @@ $(document).ready(function () {
     //add tes program to the table**
     $('#add_program_tes_modal').on('submit', function (event) {//modal id
         event.preventDefault();
+        if(($('#tes_program_name').val() === null || $('#tes_program_name').val() === "") || (($('#total_tes_mrr_male').val() === "" || $('#total_tes_mrr_male').val() === null) && ($('#total_tes_mrr_female').val() === "" || $('#total_tes_mrr_female').val() === null) && ($('#total_tes_est_grad_male').val() === "" || $('#total_tes_est_grad_male').val() === null) && ($('#total_tes_est_grad_female').val() === "" || $('#total_tes_est_grad_female').val() === null))){
+            // console.log($('#gr_no').val() + $('#copc_no').val());
+            Swal.fire(
+                'You missed something!',
+                'Please select a category and the no. of grantees to continue!',
+                'warning'
+              )
+        }else{
         $.ajax({
             url: "includes/stufap/inc_tes_update_program.php",//php file
             method: "POST",
@@ -577,6 +585,7 @@ $(document).ready(function () {
 
             }
         });
+    }
     });
 
     //update tes program to the table tes

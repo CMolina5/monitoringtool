@@ -28,4 +28,12 @@ total_tes_est_grad_male='$total_tes_est_grad_male', total_tes_est_grad_female='$
 WHERE uid='$uid' ";
 $result = mysqli_query($conn, $sql);
 
+echo "<script>
+Swal.fire(
+    'Success!',
+    'You added a record!',
+    'success'
+)
+</script>";
+
 include "./inc_tes_programs_table.php";
