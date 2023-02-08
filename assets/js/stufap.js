@@ -466,6 +466,17 @@ $(document).ready(function () {
     //add tes category to the table
     $('#add_tes_category_modal').on('submit', function (event) {//modal id
         event.preventDefault();
+        if(($('#tes_category').val() === null || $('#tes_category').val() === "") || (($('#total_tes_1st_male').val() === "" || $('#total_tes_1st_male').val() === null) && ($('#total_tes_1st_female').val() === "" || $('#total_tes_1st_female').val() === null) || ($('#total_tes_2nd_male').val() === "" || $('#total_tes_2nd_male').val() === null) && ($('#total_tes_2nd_female').val() === "" || $('#total_tes_2nd_female').val() === null) || ($('#total_tes_3rd_male').val() === "" || $('#total_tes_3rd_male').val() === null) && ($('#total_tes_3rd_female').val() === "" || $('#total_tes_3rd_female').val() === null) || ($('#total_tes_summer_midyear_male').val() === "" || $('#total_tes_summer_midyear_male').val() === null) && ($('#total_tes_summer_midyear_female').val() === "" || $('#total_tes_summer_midyear_female').val() === null) ||
+        ($('#total_pwd_1st_male').val() === "" || $('#total_pwd_1st_male').val() === null) && ($('#total_pwd_1st_female').val() === "" || $('#total_pwd_1st_female').val() === null) || ($('#total_pwd_2nd_male').val() === "" || $('#total_pwd_2nd_male').val() === null) && ($('#total_pwd_2nd_female').val() === "" || $('#total_pwd_2nd_female').val() === null) || ($('#total_pwd_3rd_male').val() === "" || $('#total_pwd_3rd_male').val() === null) && ($('#total_pwd_3rd_female').val() === "" || $('#total_pwd_3rd_female').val() === null) || ($('#total_pwd_summer_midyear_male').val() === "" || $('#total_pwd_summer_midyear_male').val() === null) && ($('#total_pwd_summer_midyear_female').val() === "" || $('#total_pwd_summer_midyear_female').val() === null) ||
+        ($('#total_ip_1st_male').val() === "" || $('#total_ip_1st_male').val() === null) && ($('#total_ip_1st_female').val() === "" || $('#total_ip_1st_female').val() === null) || ($('#total_ip_2nd_male').val() === "" || $('#total_ip_2nd_male').val() === null) && ($('#total_ip_2nd_female').val() === "" || $('#total_ip_2nd_female').val() === null) || ($('#total_ip_3rd_male').val() === "" || $('#total_ip_3rd_male').val() === null) && ($('#total_ip_3rd_female').val() === "" || $('#total_ip_3rd_female').val() === null) || ($('#total_ip_summer_midyear_male').val() === "" || $('#total_ip_summer_midyear_male').val() === null) && ($('#total_ip_summer_midyear_female').val() === "" || $('#total_ip_summer_midyear_female').val() === null) ||
+        ($('#total_with_board_1st_male').val() === "" || $('#total_with_board_1st_male').val() === null) && ($('#total_with_board_1st_female').val() === "" || $('#total_with_board_1st_female').val() === null) || ($('#total_with_board_2nd_male').val() === "" || $('#total_with_board_2nd_male').val() === null) && ($('#total_with_board_2nd_female').val() === "" || $('#total_with_board_2nd_female').val() === null) || ($('#total_with_board_3rd_male').val() === "" || $('#total_with_board_3rd_male').val() === null) && ($('#total_with_board_3rd_female').val() === "" || $('#total_with_board_3rd_female').val() === null) || ($('#total_with_board_summer_midyear_male').val() === "" || $('#total_with_board_summer_midyear_male').val() === null) && ($('#total_with_board_summer_midyear_female').val() === "" || $('#total_with_board_summer_midyear_female').val() === null) )){
+            // console.log($('#gr_no').val() + $('#copc_no').val());
+            Swal.fire(
+                'You missed something!',
+                'Please select a category and the no. of beneficiaries to continue!',
+                'warning'
+              )
+        }else{
         $.ajax({
             url: "includes/stufap/inc_tes_add_category.php",//php file
             method: "POST",
@@ -516,6 +527,7 @@ $(document).ready(function () {
 
             }
         });
+    }
     });
 
     /*--------------------------------------------------------------------------------------------*/
