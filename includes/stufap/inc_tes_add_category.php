@@ -144,21 +144,9 @@ if (empty($total_with_board_summer_midyear_female)) {
     $total_with_board_summer_midyear_female = 0;
 }
 
-$sql = "SELECT * FROM tbl_tes_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND tes_category ='$tes_category' ";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
 
-if ($resultCheck > 0) {
-    echo "<script>
-        Swal.fire(
-            'Data already exist!',
-            'Please select the data in the table to update!',
-            'warning'
-        )
-    </script>";
-} else {
 
-    $sql = "INSERT INTO tbl_tes_category (ac_year, 
+$sql = "INSERT INTO tbl_tes_category (ac_year, 
 hei_psg_region, 
 hei_uii, 
 hei_name, 
@@ -211,12 +199,12 @@ VALUES ('$ac_year',
 '$total_with_board_summer_midyear_male', '$total_with_board_summer_midyear_female')";
 $result = mysqli_query($conn, $sql);
 
-    echo "<script>
+echo "<script>
             Swal.fire(
                 'Success!',
                 'You added a record!',
                 'success'
             )
             </script>";
-}
+
 include "./inc_tes_category_table.php";

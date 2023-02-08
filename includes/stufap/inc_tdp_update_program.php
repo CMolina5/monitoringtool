@@ -255,4 +255,12 @@ total_tdp_graduated_male='$total_tdp_graduated_male', total_tdp_graduated_female
 WHERE uid='$uid' ";
 $result = mysqli_query($conn, $sql);
 
+echo "<script>
+Swal.fire(
+    'Success!',
+    'You added a record!',
+    'success'
+)
+</script>";
+
 include "./inc_tdp_programs_table.php";

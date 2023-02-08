@@ -1658,7 +1658,7 @@
                         <select name="tdp_program_name" id="tdp_program_name" class="form-control" required>
                             <option selected disabled value="">--- Select Degree Program ---</option>
                             <?php
-                            $sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_graduated_male = 0 OR total_tdp_graduated_female = 0) AND (total_tdp_exceeded_mrr_male = 0 OR total_tdp_exceeded_mrr_female = 0)";
+                            $sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_graduated_male = 0 AND total_tdp_graduated_female = 0) AND (total_tdp_exceeded_mrr_male = 0 AND total_tdp_exceeded_mrr_female = 0)";
                             $result = mysqli_query($conn, $sql);
                             $resultCheck = mysqli_num_rows($result);
 
