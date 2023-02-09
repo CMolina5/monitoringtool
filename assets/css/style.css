@@ -1,10 +1,10 @@
 #form {
   padding-top: 30px;
 }
-
+/* 
 #hei-profile {
   padding-top: 120px;
-}
+} */
 
 .text-center.header-1 {
   padding-top: 20px;
@@ -45,7 +45,7 @@ hr.star-dark {
   outline: none !important;
 }
 
-#stufap-all {
+/* #stufap-all {
   padding-top: 120px;
 }
 
@@ -55,7 +55,7 @@ hr.star-dark {
 
 #hei-experience {
   padding-top: 120px;
-}
+} */
 
 .text-center.text-white.bg-style {
   background-color: #ff0000;
