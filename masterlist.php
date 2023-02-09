@@ -2243,6 +2243,10 @@ if ($tes == 'yes') {
         $pdf->Cell(45, 5, $grand_total_tes_exceeded_mrr_female, 1, 0, 'C', true);
         $pdf->Cell(45, 5, $grand_total_tes_est_grad_male, 1, 0, 'C', true);
         $pdf->Cell(45, 5, $grand_total_tes_est_grad_female, 1, 0, 'C', true);
+
+        //END
+        $pdf->Ln();
+        $pdf->Ln();
     }
 
     $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES' ORDER BY reason ASC";
@@ -2968,6 +2972,10 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
         $pdf->Cell(45, 5, $grand_total_tdp_graduated_female, 1, 0, 'C', true);
         $pdf->Cell(45, 5, $grand_total_tdp_exceeded_mrr_male, 1, 0, 'C', true);
         $pdf->Cell(45, 5, $grand_total_tdp_exceeded_mrr_female, 1, 0, 'C', true);
+
+        //END
+        $pdf->Ln();
+        $pdf->Ln();
     }
 
 
