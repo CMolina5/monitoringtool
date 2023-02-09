@@ -193,19 +193,19 @@ if ($ac_calendar == 'Trimester with Summer') {
             $ac_year = $row['ac_year'];
             $program = $row['program'];
             $reason = $row['reason'];
-            $total_fhe_1st_male = $row['total_fhe_1st_male'];
-            $total_fhe_1st_female = $row['total_fhe_1st_female'];
-            $total_fhe_2nd_male = $row['total_fhe_2nd_male'];
-            $total_fhe_2nd_female = $row['total_fhe_2nd_female'];
+            $total_loa_1st_male = $row['total_loa_1st_male'];
+            $total_loa_1st_female = $row['total_loa_1st_female'];
+            $total_loa_2nd_male = $row['total_loa_2nd_male'];
+            $total_loa_2nd_female = $row['total_loa_2nd_female'];
 
             echo "
                     <tr>
-                        <td class='text-center'><input type='checkbox' id='$uid' name='tdp_fhe_checkbox' value='$uid'></td>
+                        <td class='text-center'><input type='checkbox' id='$uid' name='fhe_loa_checkbox' value='$uid'></td>
                         <td>" . strtoUpper($reason) . "</td>
-                        <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_male</td>
-                        <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_female</td>
-                        <td data-name='total_fhe_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_male</td>
-                        <td data-name='total_fhe_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_female</td>
+                        <td data-name='total_loa_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_male</td>
+                        <td data-name='total_loa_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_female</td>
+                        <td data-name='total_loa_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_2nd_male</td>
+                        <td data-name='total_loa_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_2nd_female</td>
                     </tr>
                         ";
         }
