@@ -167,4 +167,51 @@ if ($ac_calendar == 'Trimester with Summer') {
             </tbody>
         </table>
         ";
+} else {
+    echo "
+            <table id='tbl_tdp_loa' class='table-bordered tbl-style stripe' style='width: 100%;'>
+                <thead>
+                    <tr>
+                        <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'><input type='checkbox' name='main_fhe_loa_checkbox'></th>
+                        <th class='text-center' rowspan='2' style='background-color: #3C70AB; color:#ffff;'>REASONS FOR LOA</th>
+                        <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>1ST TERM</th>
+                        <th class='text-center' colspan='2' style='background-color: #3C70AB; color:#ffff;'>2ND TERM</th>
+                    </tr>
+                    <tr>
+                        <th class='text-center' style='background-color: #668EBD;'>MALE</th>
+                        <th class='text-center' style='background-color: #668EBD;'>FEMALE</th>
+                        <th class='text-center' style='background-color: #668EBD;'>MALE</th>
+                        <th class='text-center' style='background-color: #668EBD;'>FEMALE</th>
+                    </tr>
+                </thead>
+                <tbody>
+            ";
+
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $uid = $row['uid'];
+            $ac_year = $row['ac_year'];
+            $program = $row['program'];
+            $reason = $row['reason'];
+            $total_fhe_1st_male = $row['total_fhe_1st_male'];
+            $total_fhe_1st_female = $row['total_fhe_1st_female'];
+            $total_fhe_2nd_male = $row['total_fhe_2nd_male'];
+            $total_fhe_2nd_female = $row['total_fhe_2nd_female'];
+
+            echo "
+                    <tr>
+                        <td class='text-center'><input type='checkbox' id='$uid' name='tdp_fhe_checkbox' value='$uid'></td>
+                        <td>" . strtoUpper($reason) . "</td>
+                        <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_male</td>
+                        <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_female</td>
+                        <td data-name='total_fhe_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_male</td>
+                        <td data-name='total_fhe_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_female</td>
+                    </tr>
+                        ";
+        }
+    }
+    echo "
+                </tbody>
+            </table>
+            ";
 }
