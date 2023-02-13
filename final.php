@@ -39,9 +39,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />   
    
 </head>
-<style type="text/css" media="print">
+<!-- <style type="text/css" media="print">
 BODY {display:none;visibility:hidden;}
-</style>
+</style> -->
 <body id="review-form">
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav">
         <div class="container">
