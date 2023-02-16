@@ -3352,7 +3352,7 @@ if ($_SESSION['ac_year'] == '2022-2023') {
     $pdf->SetFillColor(255, 255, 255);
     $pdf->SetWidths(array(336));
     $pdf->SetAligns(array('L'));
-    $pdf->row(array($question_26));
+    $pdf->RowNoBorder(array($question_26));
     $pdf->Ln();
     $pdf->SetFont('Arial', 'B', 9);
     //SPACING
@@ -3364,6 +3364,7 @@ if ($_SESSION['ac_year'] == '2022-2023') {
     $pdf->SetTextColor(0, 0, 0);
     $pdf->SetFillColor(255, 255, 255);
     $pdf->Cell(336, 5, '2. Challenges/Concerns in the Implementation of RA No. 10931', 0, 0, 'L', true);
+    $pdf->Ln();
     $pdf->Ln();
     $pdf->SetFont('Arial', '', 11);
     $pdf->SetTextColor(0, 0, 0);
