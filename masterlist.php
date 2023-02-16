@@ -3347,6 +3347,7 @@ if ($_SESSION['ac_year'] == '2022-2023') {
     $pdf->SetFillColor(255, 255, 255);
     $pdf->Cell(336, 5, '1. Best Practices in the Implementation of RA No. 10931 Programs', 0, 0, 'L', true);
     $pdf->Ln();
+    $pdf->Ln();
     $pdf->SetFont('Arial', '', 11);
     $pdf->SetTextColor(0, 0, 0);
     $pdf->SetFillColor(255, 255, 255);
@@ -3368,8 +3369,10 @@ if ($_SESSION['ac_year'] == '2022-2023') {
     $pdf->Ln();
     $pdf->SetFont('Arial', '', 11);
     $pdf->SetTextColor(0, 0, 0);
-    $pdf->Cell(26, 25, '', 0, 0, 'L', true);
-    $pdf->Cell(310, 25, $question_27, 0, 0, 'L', true);
+    $pdf->SetFillColor(255, 255, 255);
+    $pdf->SetWidths(array(336));
+    $pdf->SetAligns(array('L'));
+    $pdf->RowNoBorder(array($question_27));
     $pdf->Ln();
     //SPACING
     $pdf->SetFillColor(255, 255, 255);
@@ -3381,11 +3384,13 @@ if ($_SESSION['ac_year'] == '2022-2023') {
     $pdf->SetFillColor(255, 255, 255);
     $pdf->Cell(336, 5, '3. Recommendations for the Improvement of Program Implementation', 0, 0, 'L', true);
     $pdf->Ln();
+    $pdf->Ln();
     $pdf->SetFont('Arial', '', 11);
     $pdf->SetTextColor(0, 0, 0);
     $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(26, 25, '', 0, 0, 'L', true);
-    $pdf->Cell(310, 25, $question_28, 0, 0, 'L', true);
+    $pdf->SetWidths(array(336));
+    $pdf->SetAligns(array('L'));
+    $pdf->RowNoBorder(array($question_28));
 }
 
 //end of data rows
