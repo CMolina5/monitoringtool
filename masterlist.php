@@ -3350,9 +3350,11 @@ if ($_SESSION['ac_year'] == '2022-2023') {
     $pdf->SetFont('Arial', '', 11);
     $pdf->SetTextColor(0, 0, 0);
     $pdf->SetFillColor(255, 255, 255);
-    $pdf->Cell(26, 25, '', 0, 0, 'L', true);
-    $pdf->Cell(310, 25, $question_26, 0, 0, 'L', true);
+    $pdf->SetWidths(array(190));
+    $pdf->SetAligns(array('L'));
+    $pdf->row(array($question_26));
     $pdf->Ln();
+    $pdf->SetFont('Arial', 'B', 9);
     //SPACING
     $pdf->SetFillColor(255, 255, 255);
     $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
