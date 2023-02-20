@@ -1245,12 +1245,14 @@
                                     <input id="total_tes_2nd_female" name="total_tes_2nd_female" class="form-control" type="number" min="0">
                                 </div>
                             </div>
-
-                            <div class="col" data-toggle="tooltip" title="male">
+                            <?php
+                            if ($ac_calendar == 'Trimester' or $ac_calendar == 'Trimester with Summer') {
+	                            echo '
+                                <div class="col" data-toggle="tooltip" title="male">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text icon-container">
-                                            <i class='fas fa-male' style='font-size:20px; color:#1a5676'></i>
+                                            <i class="fas fa-male" style="font-size:20px; color:#1a5676"></i>
                                         </span>
                                     </div>
                                     <input id="total_tes_3rd_male" name="total_tes_3rd_male" class="form-control" type="number" min="0">
@@ -1260,18 +1262,20 @@
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text icon-container">
-                                            <i class='fas fa-female' style='font-size:20px; color:#9a0694'></i>
+                                            <i class="fas fa-female" style="font-size:20px; color:#9a0694"></i>
                                         </span>
                                     </div>
                                     <input id="total_tes_3rd_female" name="total_tes_3rd_female" class="form-control" type="number" min="0">
                                 </div>
-                            </div>
-
+                            </div>';
+                        }
+                        if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Summer') {
+                            echo '
                             <div class="col" data-toggle="tooltip" title="male">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text icon-container">
-                                            <i class='fas fa-male' style='font-size:20px; color:#1a5676'></i>
+                                            <i class="fas fa-male" style="font-size:20px; color:#1a5676"></i>
                                         </span>
                                     </div>
                                     <input id="total_tes_summer_midyear_male" name="total_tes_summer_midyear_male" class="form-control" type="number" min="0">
@@ -1281,7 +1285,7 @@
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text icon-container">
-                                            <i class='fas fa-female' style='font-size:20px; color:#9a0694'></i>
+                                            <i class="fas fa-female" style="font-size:20px; color:#9a0694"></i>
                                         </span>
                                     </div>
                                     <input id="total_tes_summer_midyear_female" name="total_tes_summer_midyear_female" class="form-control" type="number" min="0">
@@ -1289,6 +1293,9 @@
                             </div>
                         </div>
                     </div>
+                    ';
+                    }
+                    ?>
                     <hr>
                     <div class="form-group"><label>Persons with Disability (PWDs)</label>
                         <div class="form-row">
