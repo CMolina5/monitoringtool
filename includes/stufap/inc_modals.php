@@ -2343,9 +2343,6 @@
                         <label>Degree Program</label>
                         <input id="program_name" class="form-control" type="text" disabled="">
                     </div>
-                    <?php
-                    if ($ac_calendar == 'Trimester' or $ac_calendar == 'Trimester with Summer') {
-                        echo"
                         <hr>
                         <div class='form-group'><label>Total FHE Grantees</label>
                             <div class='form-group'><label>1st Term</label>
@@ -2651,7 +2648,9 @@
     
                                 </div>
                             </div>
-                            
+                            <?php
+                    if ($ac_calendar == 'Trimester' or $ac_calendar == 'Trimester with Summer') {
+                        echo"
                             <hr>
                             <div class='form-group'><label>3rd Term</label>
                                 <div class='form-row'>
