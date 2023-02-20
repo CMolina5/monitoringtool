@@ -1378,7 +1378,7 @@
                                     </div>
                                     <input id="total_pwd_3rd_male" name="total_pwd_3rd_male" class="form-control" type="number" min="0">
                                 </div>
-                            </div>'
+                            </div>';
                             }
                             if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Summer') {
                                 echo '
