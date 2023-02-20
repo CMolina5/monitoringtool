@@ -1292,10 +1292,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    ';
+                        ';
                     }
                     ?>
+                    </div>
                     <hr>
                     <div class="form-group"><label>Persons with Disability (PWDs)</label>
                         <div class="form-row">
