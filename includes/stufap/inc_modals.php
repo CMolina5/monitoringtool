@@ -1390,7 +1390,7 @@
                                     <input id="total_pwd_3rd_female" name="total_pwd_3rd_female" class="form-control" type="number" min="0">
                                 </div>
                             </div>';
-                          
+                            }
                             if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Summer') {
                                 echo '
                             <div class="col" data-toggle="tooltip" title="male">
@@ -1412,7 +1412,7 @@
                                     </div>
                                     <input id="total_pwd_summer_midyear_female" name="total_pwd_summer_midyear_female" class="form-control" type="number" min="0">
                                 </div>
-                            </div>
+                            </div>';
                         }
                         ?>
                         </div>
