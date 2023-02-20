@@ -1301,10 +1301,10 @@
                                     <input id="total_tes_summer_midyear_female" name="total_tes_summer_midyear_female" class="form-control" type="number" min="0">
                                 </div>
                             </div>
-                        </div>
-                        ';
+                            ';
                     }
                     ?>
+                        </div>
                     </div>
                     <hr>
                     <div class="form-group"><label>Persons with Disability (PWDs)</label>
