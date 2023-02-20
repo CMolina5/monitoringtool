@@ -1199,8 +1199,18 @@
                         <div class="form-row">
                             <div class="col text-center border-right"><label class="col-form-label">1st Term</label></div>
                             <div class="col text-center border-right"><label class="col-form-label">2nd Term</label></div>
+                            <?php
+                            if ($ac_calendar == 'Trimester' or $ac_calendar == 'Trimester with Summer') {
+	                        echo '
                             <div class="col text-center border-right"><label class="col-form-label">3rd Term</label></div>
+                            ';
+                            }
+                            if ($ac_calendar == 'Semester with Summer' or $ac_calendar == 'Trimester with Summer') {
+                                echo '
                             <div class="col text-center"><label class="col-form-label">Summer/Midyear</label></div>
+                            ';
+                            }
+                            ?>
                         </div>
                         <div class="form-row">
 
