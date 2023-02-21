@@ -183,7 +183,7 @@ if ($_SESSION['hei_it'] == 'Private HEI') {
 }
 
 $pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(47, 5, 'Alternative Email Address:', 0, 0, 'L', true);
+$pdf->Cell(24, 5, 'Alternative Email Address:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
 $pdf->Cell(121, 5, $hei_alt_email, 0, 0, 'L', true);
 $pdf->Ln();
