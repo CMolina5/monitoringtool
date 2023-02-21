@@ -192,7 +192,7 @@ include 'includes/heiprofile/inc_template.php'
                 <div class="form-group"><label class="label-parts">I.B PROGRAM ADMINISTRATION</label></div>
                 <div class="form-group"><label>Name of the Head of HEI</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user icons-input"></i></span></div><input name="hei_head_name" class="form-control" type="text" placeholder="Firstname   Middlename   Lastname" value="<?php echo iconv("UTF-8", "ISO-8859-1//IGNORE",$hei_head_name) ?>" required>
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user icons-input"></i></span></div><input name="hei_head_name" class="form-control" type="text" placeholder="Firstname   Middlename   Lastname" value="<?php echo $hei_head_name ?>" required>
                     </div>
                     <div class="invalid-feedback">
                         Please enter the name of HEI head/president.
