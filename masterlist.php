@@ -791,52 +791,6 @@ if ($fhe == 'yes') {
     $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
     $pdf->Ln();
     //END
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->Cell(336, 5, 'TOTAL FHE BENEFICIARIES', 1, 1, 'C', true);
-
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->SetTextColor(0, 0, 0);
-    $pdf->Cell(15, 10, 'SEX', 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-
-    $pdf->Ln();
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(15, 0, '', 0, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-
-
-    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-
-    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-
-
-    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-    $pdf->Ln();
 
     $sql = "SELECT *
 FROM tbl_degree_programs 
@@ -911,6 +865,54 @@ ORDER BY program_name ASC";
             $total_fhe_sum_mid_4yr_female = $row['total_fhe_sum_mid_4yr_female'];
             $total_fhe_sum_mid_5yr_female = $row['total_fhe_sum_mid_5yr_female'];
             $total_fhe_sum_mid_6yr_female = $row['total_fhe_sum_mid_6yr_female'];
+
+            //Header
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(236, 240, 241);
+            $pdf->Cell(336, 5, 'TOTAL FHE BENEFICIARIES', 1, 1, 'C', true);
+        
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(236, 240, 241);
+            $pdf->SetTextColor(0, 0, 0);
+            $pdf->Cell(15, 10, 'SEX', 1, 0, 'C', true);
+            $pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
+            $pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
+            $pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
+            $pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+        
+            $pdf->Ln();
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->Cell(15, 0, '', 0, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+        
+        
+            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+        
+            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+        
+        
+            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+            $pdf->Ln();
 
             //FIRST ROW
             $pdf->SetFont('Arial', 'B', 10);
@@ -1248,21 +1250,12 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
         $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_female + $grand_total_fhe_sum_mid_6yr_male, 1, 0, 'C', true);
 
         $pdf->Ln();
+
+        //END
+        $pdf->addPage();
     }
 
-    //END
-    $pdf->addPage();
-
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->Cell(336, 5, 'TOTAL FHE BENEFICIARIES', 1, 1, 'C', true);
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->SetTextColor(0, 0, 0);
-    $pdf->Cell(15, 5, 'SEX', 1, 0, 'C', true);
-    $pdf->Cell(160.5, 5, 'GRADUATED BENEFICIARIES', 1, 0, 'C', true);
-    $pdf->Cell(160.5, 5, 'EXCEEDED THE MAXIMUM RESIDENCY RULE', 1, 0, 'C', true);
-    $pdf->Ln();
+    
 
     $sql = "SELECT * FROM tbl_degree_programs 
 WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_fhe_graduated_male != 0 AND total_fhe_graduated_female != 0 AND total_fhe_exceeded_mrr_male != 0 AND total_fhe_exceeded_mrr_female != 0)
@@ -1276,6 +1269,18 @@ ORDER BY program_name ASC";
             $total_fhe_graduated_female = $row['total_fhe_graduated_female'];
             $total_fhe_exceeded_mrr_male = $row['total_fhe_exceeded_mrr_male'];
             $total_fhe_exceeded_mrr_female = $row['total_fhe_exceeded_mrr_female'];
+
+            //Header
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(236, 240, 241);
+            $pdf->Cell(336, 5, 'TOTAL FHE BENEFICIARIES', 1, 1, 'C', true);
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(236, 240, 241);
+            $pdf->SetTextColor(0, 0, 0);
+            $pdf->Cell(15, 5, 'SEX', 1, 0, 'C', true);
+            $pdf->Cell(160.5, 5, 'GRADUATED BENEFICIARIES', 1, 0, 'C', true);
+            $pdf->Cell(160.5, 5, 'EXCEEDED THE MAXIMUM RESIDENCY RULE', 1, 0, 'C', true);
+            $pdf->Ln();
 
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(214, 234, 248);
@@ -1350,13 +1355,11 @@ ORDER BY program_name ASC";
         $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
         $pdf->SetFillColor(255, 255, 255);
         $pdf->Cell(160.5, 5, $grand_total_fhe_graduated_male + $grand_total_fhe_graduated_female, 1, 0, 'C', true);
-        $pdf->Cell(160.5, 5, $grand_total_fhe_exceeded_mrr_male + $grand_total_fhe_exceeded_mrr_female, 1, 0, 'C', true);;
+        $pdf->Cell(160.5, 5, $grand_total_fhe_exceeded_mrr_male + $grand_total_fhe_exceeded_mrr_female, 1, 0, 'C', true);
         $pdf->Ln();
+
+        $pdf->addPage();
     }
-
-    $pdf->addPage();
-
-
 
     $sql = "SELECT * FROM tbl_fhe_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
     $result = mysqli_query($conn, $sql);
@@ -1586,7 +1589,7 @@ ORDER BY program_name ASC";
 
     //end
 
-
+    $pdf->addPage();
 
 
     $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE' ORDER BY reason ASC";
@@ -1594,7 +1597,7 @@ ORDER BY program_name ASC";
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         // REASONS FOR DROPPING
-
+        
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetTextColor(0, 0, 0);
         $pdf->SetFillColor(255, 255, 255);
@@ -1681,8 +1684,7 @@ ORDER BY program_name ASC";
         $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
 
         //END
-        $pdf->Ln();
-        $pdf->Ln();
+        $pdf->addPage();
     }
 
 
@@ -2144,23 +2146,6 @@ if ($tes == 'yes') {
 
     $pdf->addPage();
 
-    //DEGREE PROGRAM
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->Cell(156, 10, 'DEGREE PROGRAM', 1, 0, 'C', true);
-    $pdf->Cell(90, 5, 'NO. OF TES GRANTEES WHO EXCEEDED THE MRR', 1, 0, 'C', true);
-    $pdf->Cell(90, 5, 'ESTIMATED NUMBER OF GRADUATING STUDENTS', 1, 0, 'C', true);
-    $pdf->Ln();
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->Cell(156, 0, '', 0, 0, 'C', true);
-    $pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
-    $pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
-    $pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
-    //END
-    $pdf->Ln();
-
     $sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tes_exceeded_mrr_male > 0 OR total_tes_exceeded_mrr_female > 0) ";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
@@ -2174,6 +2159,22 @@ if ($tes == 'yes') {
             $total_tes_est_grad_male = $row['total_tes_est_grad_male'];
             $total_tes_est_grad_female = $row['total_tes_est_grad_female'];
 
+            //Header
+            //DEGREE PROGRAM
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(236, 240, 241);
+            $pdf->Cell(156, 10, 'DEGREE PROGRAM', 1, 0, 'C', true);
+            $pdf->Cell(90, 5, 'NO. OF TES GRANTEES WHO EXCEEDED THE MRR', 1, 0, 'C', true);
+            $pdf->Cell(90, 5, 'ESTIMATED NUMBER OF GRADUATING STUDENTS', 1, 0, 'C', true);
+            $pdf->Ln();
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(236, 240, 241);
+            $pdf->Cell(156, 0, '', 0, 0, 'C', true);
+            $pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
+            $pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
+            $pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
+            $pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
+            $pdf->Ln();
             //FIRST ROW
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(255, 255, 255);
@@ -2214,8 +2215,6 @@ if ($tes == 'yes') {
         $pdf->Cell(45, 5, $grand_total_tes_est_grad_female, 1, 0, 'C', true);
 
         //END
-        $pdf->Ln();
-        $pdf->Ln();
     }
 
     $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TES' ORDER BY reason ASC";
@@ -2223,7 +2222,7 @@ if ($tes == 'yes') {
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         // REASONS FOR DROPPING
-
+        $pdf->addPage();
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetTextColor(0, 0, 0);
         $pdf->SetFillColor(255, 255, 255);
@@ -2310,8 +2309,6 @@ if ($tes == 'yes') {
         $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
 
         //END
-        $pdf->Ln();
-        $pdf->Ln();
     }
 
 
@@ -2321,6 +2318,7 @@ if ($tes == 'yes') {
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         // REASONS FOR LEAVE OF ABSENCE (LOA)
+        $pdf->addPage();
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetFillColor(255, 255, 255);
         $pdf->Cell(190, 5, 'NO. OF TES BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
@@ -2421,55 +2419,7 @@ if ($tdp == 'yes') {
     $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
     $pdf->Ln();
     //END
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->SetTextColor(0, 0, 0);
-
-    $pdf->Cell(336, 5, 'TOTAL TDP GRANTEES', 1, 1, 'C', true);
-
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->SetFillColor(236, 240, 241);
-    $pdf->SetTextColor(0, 0, 0);
-
-    $pdf->Cell(15, 10, 'SEX', 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-
-    $pdf->Ln();
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(15, 0, '', 0, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-
-
-    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-
-    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-
-
-    $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-    $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-    $pdf->Ln();
+    
 
 
     $sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_1sem_1yr_male > 0 OR total_tdp_2sem_1yr_female > 0 OR total_tdp_2sem_1yr_male > 0 OR total_tdp_2sem_1yr_female > 0) ";
@@ -2536,6 +2486,57 @@ if ($tdp == 'yes') {
             $total_tdp_sum_mid_4yr_female = $row['total_tdp_sum_mid_4yr_female'];
             $total_tdp_sum_mid_5yr_female = $row['total_tdp_sum_mid_5yr_female'];
             $total_tdp_sum_mid_6yr_female = $row['total_tdp_sum_mid_6yr_female'];
+
+            //Header
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(236, 240, 241);
+            $pdf->SetTextColor(0, 0, 0);
+
+            $pdf->Cell(336, 5, 'TOTAL TDP GRANTEES', 1, 1, 'C', true);
+
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(236, 240, 241);
+            $pdf->SetTextColor(0, 0, 0);
+
+            $pdf->Cell(15, 10, 'SEX', 1, 0, 'C', true);
+            $pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
+            $pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
+            $pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
+            $pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+
+            $pdf->Ln();
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->Cell(15, 0, '', 0, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+
+
+            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+
+            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+
+
+            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+            $pdf->Ln();
 
             //FIRST ROW
             $pdf->SetFont('Arial', 'B', 10);
@@ -2943,8 +2944,6 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
         $pdf->Cell(45, 5, $grand_total_tdp_exceeded_mrr_female, 1, 0, 'C', true);
 
         //END
-        $pdf->Ln();
-        $pdf->Ln(); 
     }
 
 
@@ -2953,7 +2952,7 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         // REASONS FOR DROPPING
-
+        $pdf->addPage();
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetTextColor(0, 0, 0);
         $pdf->SetFillColor(255, 255, 255);
@@ -3038,8 +3037,6 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
         $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
 
         //END
-        $pdf->Ln();
-        $pdf->Ln();
     }
 
     $sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='TDP' ORDER BY reason ASC";
@@ -3047,6 +3044,7 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         // REASONS FOR LEAVE OF ABSENCE (LOA)
+        $pdf->addPage();
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->SetFillColor(255, 255, 255);
         $pdf->Cell(190, 5, 'NO. OF TDP BENEFICIARIES ON LEAVE OF ABSENCE (LOA)', 0, 0, 'L', true);
