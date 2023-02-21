@@ -37,10 +37,10 @@ if ($resultCheck > 0) {
         <tr>
             <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tes_programs_checkbox' value='$uid'></td>
             <td class='text-left'>$program_name</td>
-            <td data-name='total_tes_exceeded_mrr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_exceeded_mrr_male</td>
-            <td data-name='total_tes_exceeded_mrr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_exceeded_mrr_female</td>
-            <td data-name='total_tes_est_grad_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_est_grad_male</td>
-            <td data-name='total_tes_est_grad_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_est_grad_female</td>
+            <td data-name='total_tes_exceeded_mrr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_exceeded_mrr_male</td>
+            <td data-name='total_tes_exceeded_mrr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_exceeded_mrr_female</td>
+            <td data-name='total_tes_est_grad_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_est_grad_male</td>
+            <td data-name='total_tes_est_grad_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_est_grad_female</td>
         </tr>";
     }
 }

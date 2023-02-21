@@ -123,41 +123,41 @@ if ($ac_calendar == 'Trimester with Summer') {
             echo "<tr>
         <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tes_category_checkbox' value='$uid'></td>
         <td>$tes_category</td>
-        <td data-name='total_tes_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_1st_male</td>
+        <td data-name='total_tes_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_1st_male</td>
         <td data-name='total_tes_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_1st_female</td>
-        <td data-name='total_pwd_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_1st_male</td>
+        <td data-name='total_pwd_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_1st_male</td>
         <td data-name='total_pwd_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_1st_female</td>
-        <td data-name='total_ip_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_1st_male</td>
-        <td data-name='total_ip_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_1st_female</td>
-        <td data-name='total_with_board_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_1st_male</td>
-        <td data-name='total_with_board_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_1st_female</td>
+        <td data-name='total_ip_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_1st_male</td>
+        <td data-name='total_ip_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_1st_female</td>
+        <td data-name='total_with_board_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_1st_male</td>
+        <td data-name='total_with_board_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_1st_female</td>
 
-        <td data-name='total_tes_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_2nd_male</td>
-        <td data-name='total_tes_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_2nd_female</td>
-        <td data-name='total_pwd_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_2nd_male</td>
-        <td data-name='total_pwd_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_2nd_female</td>
-        <td data-name='total_ip_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_2nd_male</td>
-        <td data-name='total_ip_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_2nd_female</td>
-        <td data-name='total_with_board_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_2nd_male</td>
-        <td data-name='total_with_board_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_2nd_female</td>
+        <td data-name='total_tes_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_2nd_male</td>
+        <td data-name='total_tes_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_2nd_female</td>
+        <td data-name='total_pwd_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_2nd_male</td>
+        <td data-name='total_pwd_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_2nd_female</td>
+        <td data-name='total_ip_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_2nd_male</td>
+        <td data-name='total_ip_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_2nd_female</td>
+        <td data-name='total_with_board_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_2nd_male</td>
+        <td data-name='total_with_board_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_2nd_female</td>
 
-        <td data-name='total_tes_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_3rd_male</td>
-        <td data-name='total_tes_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_3rd_female</td>
-        <td data-name='total_pwd_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_3rd_male</td>
+        <td data-name='total_tes_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_3rd_male</td>
+        <td data-name='total_tes_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_3rd_female</td>
+        <td data-name='total_pwd_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_3rd_male</td>
         <td data-name='total_pwd_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_3rd_female</td>
-        <td data-name='total_ip_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_3rd_male</td>
-        <td data-name='total_ip_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_3rd_female</td>
-        <td data-name='total_with_board_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_3rd_male</td>
-        <td data-name='total_with_board_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_3rd_female</td>
+        <td data-name='total_ip_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_3rd_male</td>
+        <td data-name='total_ip_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_3rd_female</td>
+        <td data-name='total_with_board_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_3rd_male</td>
+        <td data-name='total_with_board_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_3rd_female</td>
 
-        <td data-name='total_tes_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_summer_midyear_male</td>
-        <td data-name='total_tes_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_summer_midyear_female</td>
-        <td data-name='total_pwd_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_summer_midyear_male</td>
-        <td data-name='total_pwd_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_summer_midyear_female</td>
-        <td data-name='total_ip_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_summer_midyear_male</td>
-        <td data-name='total_ip_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_summer_midyear_female</td>
-        <td data-name='total_with_board_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_summer_midyear_male</td>
-        <td data-name='total_with_board_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_summer_midyear_female</td>
+        <td data-name='total_tes_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_summer_midyear_male</td>
+        <td data-name='total_tes_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_summer_midyear_female</td>
+        <td data-name='total_pwd_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_summer_midyear_male</td>
+        <td data-name='total_pwd_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_summer_midyear_female</td>
+        <td data-name='total_ip_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_summer_midyear_male</td>
+        <td data-name='total_ip_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_summer_midyear_female</td>
+        <td data-name='total_with_board_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_summer_midyear_male</td>
+        <td data-name='total_with_board_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_summer_midyear_female</td>
 
     </tr>";
         }
@@ -259,32 +259,32 @@ if ($ac_calendar == 'Trimester with Summer') {
             echo "<tr>
             <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tes_category_checkbox' value='$uid'></td>
             <td>$tes_category</td>
-            <td data-name='total_tes_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_1st_male</td>
-            <td data-name='total_tes_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_1st_female</td>
-            <td data-name='total_pwd_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_1st_male</td>
-            <td data-name='total_pwd_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_1st_female</td>
-            <td data-name='total_ip_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_1st_male</td>
-            <td data-name='total_ip_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_1st_female</td>
-            <td data-name='total_with_board_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_1st_male</td>
-            <td data-name='total_with_board_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_1st_female</td>
+            <td data-name='total_tes_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_1st_male</td>
+            <td data-name='total_tes_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_1st_female</td>
+            <td data-name='total_pwd_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_1st_male</td>
+            <td data-name='total_pwd_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_1st_female</td>
+            <td data-name='total_ip_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_1st_male</td>
+            <td data-name='total_ip_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_1st_female</td>
+            <td data-name='total_with_board_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_1st_male</td>
+            <td data-name='total_with_board_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_1st_female</td>
     
-            <td data-name='total_tes_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_2nd_male</td>
-            <td data-name='total_tes_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_2nd_female</td>
-            <td data-name='total_pwd_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_2nd_male</td>
-            <td data-name='total_pwd_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_2nd_female</td>
-            <td data-name='total_ip_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_2nd_male</td>
-            <td data-name='total_ip_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_2nd_female</td>
-            <td data-name='total_with_board_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_2nd_male</td>
-            <td data-name='total_with_board_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_2nd_female</td>
+            <td data-name='total_tes_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_2nd_male</td>
+            <td data-name='total_tes_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_2nd_female</td>
+            <td data-name='total_pwd_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_2nd_male</td>
+            <td data-name='total_pwd_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_2nd_female</td>
+            <td data-name='total_ip_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_2nd_male</td>
+            <td data-name='total_ip_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_2nd_female</td>
+            <td data-name='total_with_board_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_2nd_male</td>
+            <td data-name='total_with_board_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_2nd_female</td>
     
-            <td data-name='total_tes_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_3rd_male</td>
-            <td data-name='total_tes_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_3rd_female</td>
-            <td data-name='total_pwd_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_3rd_male</td>
-            <td data-name='total_pwd_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_3rd_female</td>
-            <td data-name='total_ip_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_3rd_male</td>
-            <td data-name='total_ip_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_3rd_female</td>
-            <td data-name='total_with_board_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_3rd_male</td>
-            <td data-name='total_with_board_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_3rd_female</td>
+            <td data-name='total_tes_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_3rd_male</td>
+            <td data-name='total_tes_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_3rd_female</td>
+            <td data-name='total_pwd_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_3rd_male</td>
+            <td data-name='total_pwd_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_3rd_female</td>
+            <td data-name='total_ip_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_3rd_male</td>
+            <td data-name='total_ip_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_3rd_female</td>
+            <td data-name='total_with_board_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_3rd_male</td>
+            <td data-name='total_with_board_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_3rd_female</td>
     
         </tr>";
         }
@@ -386,32 +386,32 @@ if ($ac_calendar == 'Trimester with Summer') {
             echo "<tr>
                 <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tes_category_checkbox' value='$uid'></td>
                 <td>$tes_category</td>
-                <td data-name='total_tes_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_1st_male</td>
-                <td data-name='total_tes_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_1st_female</td>
-                <td data-name='total_pwd_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_1st_male</td>
-                <td data-name='total_pwd_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_1st_female</td>
-                <td data-name='total_ip_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_1st_male</td>
-                <td data-name='total_ip_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_1st_female</td>
-                <td data-name='total_with_board_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_1st_male</td>
-                <td data-name='total_with_board_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_1st_female</td>
+                <td data-name='total_tes_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_1st_male</td>
+                <td data-name='total_tes_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_1st_female</td>
+                <td data-name='total_pwd_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_1st_male</td>
+                <td data-name='total_pwd_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_1st_female</td>
+                <td data-name='total_ip_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_1st_male</td>
+                <td data-name='total_ip_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_1st_female</td>
+                <td data-name='total_with_board_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_1st_male</td>
+                <td data-name='total_with_board_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_1st_female</td>
         
-                <td data-name='total_tes_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_2nd_male</td>
-                <td data-name='total_tes_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_2nd_female</td>
-                <td data-name='total_pwd_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_2nd_male</td>
-                <td data-name='total_pwd_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_2nd_female</td>
-                <td data-name='total_ip_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_2nd_male</td>
-                <td data-name='total_ip_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_2nd_female</td>
-                <td data-name='total_with_board_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_2nd_male</td>
-                <td data-name='total_with_board_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_2nd_female</td>
+                <td data-name='total_tes_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_2nd_male</td>
+                <td data-name='total_tes_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_2nd_female</td>
+                <td data-name='total_pwd_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_2nd_male</td>
+                <td data-name='total_pwd_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_2nd_female</td>
+                <td data-name='total_ip_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_2nd_male</td>
+                <td data-name='total_ip_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_2nd_female</td>
+                <td data-name='total_with_board_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_2nd_male</td>
+                <td data-name='total_with_board_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_2nd_female</td>
         
-                <td data-name='total_tes_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_summer_midyear_male</td>
-                <td data-name='total_tes_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_summer_midyear_female</td>
-                <td data-name='total_pwd_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_summer_midyear_male</td>
-                <td data-name='total_pwd_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_summer_midyear_female</td>
-                <td data-name='total_ip_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_summer_midyear_male</td>
-                <td data-name='total_ip_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_summer_midyear_female</td>
-                <td data-name='total_with_board_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_summer_midyear_male</td>
-                <td data-name='total_with_board_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_summer_midyear_female</td>
+                <td data-name='total_tes_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_summer_midyear_male</td>
+                <td data-name='total_tes_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_summer_midyear_female</td>
+                <td data-name='total_pwd_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_summer_midyear_male</td>
+                <td data-name='total_pwd_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_summer_midyear_female</td>
+                <td data-name='total_ip_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_summer_midyear_male</td>
+                <td data-name='total_ip_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_summer_midyear_female</td>
+                <td data-name='total_with_board_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_summer_midyear_male</td>
+                <td data-name='total_with_board_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_summer_midyear_female</td>
         
             </tr>";
         }
@@ -489,23 +489,23 @@ if ($ac_calendar == 'Trimester with Summer') {
             echo "<tr>
                     <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tes_category_checkbox' value='$uid'></td>
                     <td>$tes_category</td>
-                    <td data-name='total_tes_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_1st_male</td>
-                    <td data-name='total_tes_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_1st_female</td>
-                    <td data-name='total_pwd_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_1st_male</td>
-                    <td data-name='total_pwd_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_1st_female</td>
-                    <td data-name='total_ip_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_1st_male</td>
-                    <td data-name='total_ip_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_1st_female</td>
-                    <td data-name='total_with_board_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_1st_male</td>
-                    <td data-name='total_with_board_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_1st_female</td>
+                    <td data-name='total_tes_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_1st_male</td>
+                    <td data-name='total_tes_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_1st_female</td>
+                    <td data-name='total_pwd_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_1st_male</td>
+                    <td data-name='total_pwd_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_1st_female</td>
+                    <td data-name='total_ip_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_1st_male</td>
+                    <td data-name='total_ip_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_1st_female</td>
+                    <td data-name='total_with_board_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_1st_male</td>
+                    <td data-name='total_with_board_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_1st_female</td>
             
-                    <td data-name='total_tes_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_2nd_male</td>
-                    <td data-name='total_tes_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tes_2nd_female</td>
-                    <td data-name='total_pwd_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_2nd_male</td>
-                    <td data-name='total_pwd_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_pwd_2nd_female</td>
-                    <td data-name='total_ip_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_2nd_male</td>
-                    <td data-name='total_ip_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_ip_2nd_female</td>
-                    <td data-name='total_with_board_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_2nd_male</td>
-                    <td data-name='total_with_board_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_with_board_2nd_female</td>
+                    <td data-name='total_tes_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_2nd_male</td>
+                    <td data-name='total_tes_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tes_2nd_female</td>
+                    <td data-name='total_pwd_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_2nd_male</td>
+                    <td data-name='total_pwd_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_pwd_2nd_female</td>
+                    <td data-name='total_ip_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_2nd_male</td>
+                    <td data-name='total_ip_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_ip_2nd_female</td>
+                    <td data-name='total_with_board_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_2nd_male</td>
+                    <td data-name='total_with_board_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_with_board_2nd_female</td>
             
                 </tr>";
         }

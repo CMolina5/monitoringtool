@@ -50,14 +50,14 @@ if ($ac_calendar == 'Trimester with Summer') {
         <tr>
             <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tes_loa_checkbox' value='$uid'></td>
             <td>" . strtoUpper($reason) . "</td>
-            <td data-name='total_loa_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_male</td>
-            <td data-name='total_loa_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_female</td>
-            <td data-name='total_loa_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_2nd_male</td>
-            <td data-name='total_loa_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_2nd_female</td>
-            <td data-name='total_loa_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_3rd_male</td>
-            <td data-name='total_loa_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_3rd_female</td>
-            <td data-name='total_loa_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_summer_midyear_male</td>
-            <td data-name='total_loa_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_summer_midyear_female</td>
+            <td data-name='total_loa_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_1st_male</td>
+            <td data-name='total_loa_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_1st_female</td>
+            <td data-name='total_loa_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_2nd_male</td>
+            <td data-name='total_loa_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_2nd_female</td>
+            <td data-name='total_loa_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_3rd_male</td>
+            <td data-name='total_loa_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_3rd_female</td>
+            <td data-name='total_loa_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_summer_midyear_male</td>
+            <td data-name='total_loa_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_summer_midyear_female</td>
         </tr>
             ";
         }
@@ -106,12 +106,12 @@ if ($ac_calendar == 'Trimester with Summer') {
             <tr>
                 <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tes_loa_checkbox' value='$uid'></td>
                 <td>" . strtoUpper($reason) . "</td>
-                <td data-name='total_loa_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_male</td>
-                <td data-name='total_loa_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_female</td>
-                <td data-name='total_loa_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_2nd_male</td>
-                <td data-name='total_loa_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_2nd_female</td>
-                <td data-name='total_loa_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_3rd_male</td>
-                <td data-name='total_loa_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_3rd_female</td>
+                <td data-name='total_loa_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_1st_male</td>
+                <td data-name='total_loa_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_1st_female</td>
+                <td data-name='total_loa_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_2nd_male</td>
+                <td data-name='total_loa_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_2nd_female</td>
+                <td data-name='total_loa_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_3rd_male</td>
+                <td data-name='total_loa_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_3rd_female</td>
             </tr>
                 ";
         }
@@ -161,12 +161,12 @@ else if ($ac_calendar == 'Semester with Summer') {
                 <tr>
                     <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tes_loa_checkbox' value='$uid'></td>
                     <td>" . strtoUpper($reason) . "</td>
-                    <td data-name='total_loa_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_male</td>
-                    <td data-name='total_loa_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_female</td>
-                    <td data-name='total_loa_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_2nd_male</td>
-                    <td data-name='total_loa_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_2nd_female</td>
-                    <td data-name='total_loa_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_summer_midyear_male</td>
-                    <td data-name='total_loa_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_summer_midyear_female</td>
+                    <td data-name='total_loa_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_1st_male</td>
+                    <td data-name='total_loa_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_1st_female</td>
+                    <td data-name='total_loa_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_2nd_male</td>
+                    <td data-name='total_loa_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_2nd_female</td>
+                    <td data-name='total_loa_summer_midyear_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_summer_midyear_male</td>
+                    <td data-name='total_loa_summer_midyear_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_summer_midyear_female</td>
                 </tr>
                     ";
         }
@@ -210,10 +210,10 @@ else if ($ac_calendar == 'Semester with Summer') {
                     <tr>
                         <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tes_loa_checkbox' value='$uid'></td>
                         <td>" . strtoUpper($reason) . "</td>
-                        <td data-name='total_loa_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_male</td>
-                        <td data-name='total_loa_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_1st_female</td>
-                        <td data-name='total_loa_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_2nd_male</td>
-                        <td data-name='total_loa_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_loa_2nd_female</td>
+                        <td data-name='total_loa_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_1st_male</td>
+                        <td data-name='total_loa_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_1st_female</td>
+                        <td data-name='total_loa_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_2nd_male</td>
+                        <td data-name='total_loa_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_loa_2nd_female</td>
                     </tr>
                         ";
         }
