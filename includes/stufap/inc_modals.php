@@ -177,7 +177,7 @@
                         <label>If other reason please specify:</label><input id="fhe_loa_other" name="fhe_loa_other" class="form-control" type="text">
                     </div>
                     <hr>
-                    <div class="form-group"><label>No. of Dropouts</label></div>
+                    <div class="form-group"><label>No. of LOA</label></div>
 
                     <div class="form-group">
                         <label>1st Term</label>
