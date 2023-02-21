@@ -41,14 +41,14 @@ if ($resultCheck > 0) {
         echo "
         <tr>
             <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='other_stufap_checkbox' value='$uid'></td>
-            <td data-name='stufap_name' class='other_stufap_name text-center' data-type='text' data-pk='$uid'>".strtoUpper($stufap_name)."</td>
-            <td data-name='stufap_type' class='select_type text-center' data-type='select' data-inputclass='table-select' data-pk='$uid'>$stufap_type</td>
-            <td data-name='total_stufap_1st' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_stufap_1st</td>
-            <td data-name='total_stufap_2nd' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_stufap_2nd</td>
-            <td data-name='total_stufap_3rd' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_stufap_3rd</td>
-            <td data-name='total_stufap_4th' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_stufap_4th</td>
-            <td data-name='total_stufap_5th' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_stufap_5th</td>
-            <td data-name='total_stufap_6th' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_stufap_6th</td>
+            <td data-name='stufap_name' class='other_stufap_name text-center' data-type='text' data-pk='$uid' title='double-click to edit'>".strtoUpper($stufap_name)."</td>
+            <td data-name='stufap_type' class='select_type text-center' data-type='select' data-inputclass='table-select' data-pk='$uid' title='double-click to edit'>$stufap_type</td>
+            <td data-name='total_stufap_1st' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_stufap_1st</td>
+            <td data-name='total_stufap_2nd' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_stufap_2nd</td>
+            <td data-name='total_stufap_3rd' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_stufap_3rd</td>
+            <td data-name='total_stufap_4th' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_stufap_4th</td>
+            <td data-name='total_stufap_5th' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_stufap_5th</td>
+            <td data-name='total_stufap_6th' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_stufap_6th</td>
            
         </tr>
             ";
