@@ -60,7 +60,7 @@ if ($resultCheck > 0) {
                 <td class='text-center'><input type='checkbox' id='$uid' name='degree_program_checkbox' value='$uid'></td>
                 <td data-name='program_code' class='degree_programs text-center' data-type='text' data-pk='$uid' title='double-click to edit'>$program_code</td>
                 <td data-name='program_name' class='degree_programs text-left' data-type='text' data-pk='$uid' title='double-click to edit'>".strtoUpper($program_name)."</td>
-                <td data-name='gr_no' class='degree_programs text-center' data-type='text' data-pk='$uid' title='double-click to edit'>$gr_no</td>
+                <td data-name='gr_no' class='degree_programs text-center' data-type='text' data-pk='$uid' title='double-click to edit' placeholder='Lele'>$gr_no</td>
                 <td data-name='copc_no' class='degree_programs text-center' data-type='text' data-pk='$uid' title='double-click to edit'>$copc_no</td>
                 <td class='d-none'>".strtoUpper($in_the_portal)."</td>
             </tr>
