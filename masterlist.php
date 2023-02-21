@@ -177,9 +177,9 @@ $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(95, 5, 'Private HEI located in city/municipality w/ no SUC/LUC?', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
 if ($_SESSION['hei_it'] == 'Private HEI') {
-    $pdf->Cell(73, 5, $_SESSION['hei_pnsl'], 0, 0, 'L', true);
+    $pdf->Cell(123, 5, $_SESSION['hei_pnsl'], 0, 0, 'L', true);
 }else{
-    $pdf->Cell(168, 5, 'N/A', 0, 0, 'L', true);
+    $pdf->Cell(127, 5, 'N/A', 0, 0, 'L', true);
 }
 
 $pdf->SetFont('Arial', 'B', 10);
