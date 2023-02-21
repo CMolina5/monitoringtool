@@ -50,14 +50,14 @@ if ($ac_calendar == 'Trimester with Summer') {
         <tr>
             <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tdp_dropouts_checkbox' value='$uid'></td>
             <td>" . strtoUpper($reason) . "</td>
-            <td data-name='total_dropout_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_1st_male</td>
-            <td data-name='total_dropout_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_1st_female</td>
-            <td data-name='total_dropout_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_2nd_male</td>
-            <td data-name='total_dropout_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_2nd_female</td>
-            <td data-name='total_dropout_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_3rd_male</td>
-            <td data-name='total_dropout_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_3rd_female</td>
-            <td data-name='total_dropout_sum_mid_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_sum_mid_male</td>
-            <td data-name='total_dropout_sum_mid_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_sum_mid_female</td>
+            <td data-name='total_dropout_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_1st_male</td>
+            <td data-name='total_dropout_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_1st_female</td>
+            <td data-name='total_dropout_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_2nd_male</td>
+            <td data-name='total_dropout_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_2nd_female</td>
+            <td data-name='total_dropout_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_3rd_male</td>
+            <td data-name='total_dropout_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_3rd_female</td>
+            <td data-name='total_dropout_sum_mid_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_sum_mid_male</td>
+            <td data-name='total_dropout_sum_mid_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_sum_mid_female</td>
         </tr>
     ";
         }
@@ -106,12 +106,12 @@ if ($ac_calendar == 'Trimester with Summer') {
             <tr>
                 <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tdp_dropouts_checkbox' value='$uid'></td>
                 <td>" . strtoUpper($reason) . "</td>
-                <td data-name='total_dropout_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_1st_male</td>
-                <td data-name='total_dropout_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_1st_female</td>
-                <td data-name='total_dropout_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_2nd_male</td>
-                <td data-name='total_dropout_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_2nd_female</td>
-                <td data-name='total_dropout_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_3rd_male</td>
-                <td data-name='total_dropout_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_3rd_female</td>
+                <td data-name='total_dropout_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit' title='double-click to edit'>$total_dropout_1st_male</td>
+                <td data-name='total_dropout_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit' title='double-click to edit'>$total_dropout_1st_female</td>
+                <td data-name='total_dropout_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit' title='double-click to edit'>$total_dropout_2nd_male</td>
+                <td data-name='total_dropout_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit' title='double-click to edit'>$total_dropout_2nd_female</td>
+                <td data-name='total_dropout_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit' title='double-click to edit'>$total_dropout_3rd_male</td>
+                <td data-name='total_dropout_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit' title='double-click to edit'>$total_dropout_3rd_female</td>
             </tr>
         ";
         }
@@ -160,12 +160,12 @@ if ($ac_calendar == 'Trimester with Summer') {
                 <tr>
                     <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tdp_dropouts_checkbox' value='$uid'></td>
                     <td>" . strtoUpper($reason) . "</td>
-                    <td data-name='total_dropout_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_1st_male</td>
-                    <td data-name='total_dropout_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_1st_female</td>
-                    <td data-name='total_dropout_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_2nd_male</td>
-                    <td data-name='total_dropout_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_2nd_female</td>
-                    <td data-name='total_dropout_sum_mid_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_sum_mid_male</td>
-                    <td data-name='total_dropout_sum_mid_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_sum_mid_female</td>
+                    <td data-name='total_dropout_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_1st_male</td>
+                    <td data-name='total_dropout_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_1st_female</td>
+                    <td data-name='total_dropout_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_2nd_male</td>
+                    <td data-name='total_dropout_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_2nd_female</td>
+                    <td data-name='total_dropout_sum_mid_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_sum_mid_male</td>
+                    <td data-name='total_dropout_sum_mid_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_sum_mid_female</td>
                 </tr>
             ";
         }
@@ -209,10 +209,10 @@ if ($ac_calendar == 'Trimester with Summer') {
                     <tr>
                         <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tdp_dropouts_checkbox' value='$uid'></td>
                         <td>" . strtoUpper($reason) . "</td>
-                        <td data-name='total_dropout_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_1st_male</td>
-                        <td data-name='total_dropout_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_1st_female</td>
-                        <td data-name='total_dropout_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_2nd_male</td>
-                        <td data-name='total_dropout_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_dropout_2nd_female</td>
+                        <td data-name='total_dropout_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_1st_male</td>
+                        <td data-name='total_dropout_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_1st_female</td>
+                        <td data-name='total_dropout_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_2nd_male</td>
+                        <td data-name='total_dropout_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_dropout_2nd_female</td>
                     </tr>
                 ";
         }

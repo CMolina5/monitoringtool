@@ -186,62 +186,62 @@ if ($ac_calendar == 'Trimester with Summer') {
             <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tdp_programs_checkbox' value='$uid'></td>
             <td class='text-left'>$program_name</td>
 
-            <td data-name='total_tdp_1sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_1yr_male</td>
-            <td data-name='total_tdp_1sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_1yr_female</td>
-            <td data-name='total_tdp_1sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_2yr_male</td>
-            <td data-name='total_tdp_1sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_2yr_female</td>
-            <td data-name='total_tdp_1sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_3yr_male</td>
-            <td data-name='total_tdp_1sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_3yr_female</td>
-            <td data-name='total_tdp_1sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_4yr_male</td>
-            <td data-name='total_tdp_1sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_4yr_female</td>
-            <td data-name='total_tdp_1sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_5yr_male</td>
-            <td data-name='total_tdp_1sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_5yr_female</td>
-            <td data-name='total_tdp_1sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_6yr_male</td>
-            <td data-name='total_tdp_1sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_6yr_female</td>
+            <td data-name='total_tdp_1sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_1yr_male</td>
+            <td data-name='total_tdp_1sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_1yr_female</td>
+            <td data-name='total_tdp_1sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_2yr_male</td>
+            <td data-name='total_tdp_1sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_2yr_female</td>
+            <td data-name='total_tdp_1sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_3yr_male</td>
+            <td data-name='total_tdp_1sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_3yr_female</td>
+            <td data-name='total_tdp_1sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_4yr_male</td>
+            <td data-name='total_tdp_1sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_4yr_female</td>
+            <td data-name='total_tdp_1sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_5yr_male</td>
+            <td data-name='total_tdp_1sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_5yr_female</td>
+            <td data-name='total_tdp_1sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_6yr_male</td>
+            <td data-name='total_tdp_1sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_6yr_female</td>
 
-            <td data-name='total_tdp_2sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_1yr_male</td>
-            <td data-name='total_tdp_2sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_1yr_female</td>
-            <td data-name='total_tdp_2sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_2yr_male</td>
-            <td data-name='total_tdp_2sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_2yr_female</td>
-            <td data-name='total_tdp_2sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_3yr_male</td>
-            <td data-name='total_tdp_2sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_3yr_female</td>
-            <td data-name='total_tdp_2sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_4yr_male</td>
-            <td data-name='total_tdp_2sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_4yr_female</td>
-            <td data-name='total_tdp_2sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_5yr_male</td>
-            <td data-name='total_tdp_2sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_5yr_female</td>
-            <td data-name='total_tdp_2sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_6yr_male</td>
-            <td data-name='total_tdp_2sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_6yr_female</td>
+            <td data-name='total_tdp_2sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_1yr_male</td>
+            <td data-name='total_tdp_2sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_1yr_female</td>
+            <td data-name='total_tdp_2sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_2yr_male</td>
+            <td data-name='total_tdp_2sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_2yr_female</td>
+            <td data-name='total_tdp_2sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_3yr_male</td>
+            <td data-name='total_tdp_2sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_3yr_female</td>
+            <td data-name='total_tdp_2sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_4yr_male</td>
+            <td data-name='total_tdp_2sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_4yr_female</td>
+            <td data-name='total_tdp_2sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_5yr_male</td>
+            <td data-name='total_tdp_2sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_5yr_female</td>
+            <td data-name='total_tdp_2sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_6yr_male</td>
+            <td data-name='total_tdp_2sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_6yr_female</td>
 
-            <td data-name='total_tdp_3sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_1yr_male</td>
-            <td data-name='total_tdp_3sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_1yr_female</td>
-            <td data-name='total_tdp_3sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_2yr_male</td>
-            <td data-name='total_tdp_3sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_2yr_female</td>
-            <td data-name='total_tdp_3sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_3yr_male</td>
-            <td data-name='total_tdp_3sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_3yr_female</td>
-            <td data-name='total_tdp_3sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_4yr_male</td>
-            <td data-name='total_tdp_3sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_4yr_female</td>
-            <td data-name='total_tdp_3sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_5yr_male</td>
-            <td data-name='total_tdp_3sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_5yr_female</td>
-            <td data-name='total_tdp_3sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_6yr_male</td>
-            <td data-name='total_tdp_3sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_6yr_female</td>
+            <td data-name='total_tdp_3sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_1yr_male</td>
+            <td data-name='total_tdp_3sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_1yr_female</td>
+            <td data-name='total_tdp_3sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_2yr_male</td>
+            <td data-name='total_tdp_3sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_2yr_female</td>
+            <td data-name='total_tdp_3sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_3yr_male</td>
+            <td data-name='total_tdp_3sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_3yr_female</td>
+            <td data-name='total_tdp_3sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_4yr_male</td>
+            <td data-name='total_tdp_3sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_4yr_female</td>
+            <td data-name='total_tdp_3sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_5yr_male</td>
+            <td data-name='total_tdp_3sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_5yr_female</td>
+            <td data-name='total_tdp_3sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_6yr_male</td>
+            <td data-name='total_tdp_3sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_6yr_female</td>
 
-            <td data-name='total_tdp_sum_mid_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_1yr_male</td>
-            <td data-name='total_tdp_sum_mid_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_1yr_female</td>
-            <td data-name='total_tdp_sum_mid_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_2yr_male</td>
-            <td data-name='total_tdp_sum_mid_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_2yr_female</td>
-            <td data-name='total_tdp_sum_mid_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_3yr_male</td>
-            <td data-name='total_tdp_sum_mid_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_3yr_female</td>
-            <td data-name='total_tdp_sum_mid_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_4yr_male</td>
-            <td data-name='total_tdp_sum_mid_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_4yr_female</td>
-            <td data-name='total_tdp_sum_mid_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_5yr_male</td>
-            <td data-name='total_tdp_sum_mid_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_5yr_female</td>
-            <td data-name='total_tdp_sum_mid_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_6yr_male</td>
-            <td data-name='total_tdp_sum_mid_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_6yr_female</td>
+            <td data-name='total_tdp_sum_mid_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_1yr_male</td>
+            <td data-name='total_tdp_sum_mid_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_1yr_female</td>
+            <td data-name='total_tdp_sum_mid_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_2yr_male</td>
+            <td data-name='total_tdp_sum_mid_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_2yr_female</td>
+            <td data-name='total_tdp_sum_mid_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_3yr_male</td>
+            <td data-name='total_tdp_sum_mid_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_3yr_female</td>
+            <td data-name='total_tdp_sum_mid_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_4yr_male</td>
+            <td data-name='total_tdp_sum_mid_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_4yr_female</td>
+            <td data-name='total_tdp_sum_mid_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_5yr_male</td>
+            <td data-name='total_tdp_sum_mid_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_5yr_female</td>
+            <td data-name='total_tdp_sum_mid_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_6yr_male</td>
+            <td data-name='total_tdp_sum_mid_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_6yr_female</td>
 
-            <td data-name='total_tdp_graduated_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_graduated_male</td>
-            <td data-name='total_tdp_graduated_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_graduated_female</td>
-            <td data-name='total_tdp_exceeded_mrr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_exceeded_mrr_male</td>
-            <td data-name='total_tdp_exceeded_mrr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_exceeded_mrr_female</td>
+            <td data-name='total_tdp_graduated_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_graduated_male</td>
+            <td data-name='total_tdp_graduated_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_graduated_female</td>
+            <td data-name='total_tdp_exceeded_mrr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_exceeded_mrr_male</td>
+            <td data-name='total_tdp_exceeded_mrr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_exceeded_mrr_female</td>
 
         </tr>";
         }
@@ -391,49 +391,49 @@ if ($ac_calendar == 'Trimester with Summer') {
                 <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tdp_programs_checkbox' value='$uid'></td>
                 <td class='text-left'>$program_name</td>
     
-                <td data-name='total_tdp_1sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_1yr_male</td>
-                <td data-name='total_tdp_1sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_1yr_female</td>
-                <td data-name='total_tdp_1sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_2yr_male</td>
-                <td data-name='total_tdp_1sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_2yr_female</td>
-                <td data-name='total_tdp_1sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_3yr_male</td>
-                <td data-name='total_tdp_1sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_3yr_female</td>
-                <td data-name='total_tdp_1sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_4yr_male</td>
-                <td data-name='total_tdp_1sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_4yr_female</td>
-                <td data-name='total_tdp_1sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_5yr_male</td>
-                <td data-name='total_tdp_1sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_5yr_female</td>
-                <td data-name='total_tdp_1sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_6yr_male</td>
-                <td data-name='total_tdp_1sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_6yr_female</td>
+                <td data-name='total_tdp_1sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_1yr_male</td>
+                <td data-name='total_tdp_1sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_1yr_female</td>
+                <td data-name='total_tdp_1sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_2yr_male</td>
+                <td data-name='total_tdp_1sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_2yr_female</td>
+                <td data-name='total_tdp_1sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_3yr_male</td>
+                <td data-name='total_tdp_1sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_3yr_female</td>
+                <td data-name='total_tdp_1sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_4yr_male</td>
+                <td data-name='total_tdp_1sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_4yr_female</td>
+                <td data-name='total_tdp_1sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_5yr_male</td>
+                <td data-name='total_tdp_1sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_5yr_female</td>
+                <td data-name='total_tdp_1sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_6yr_male</td>
+                <td data-name='total_tdp_1sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_6yr_female</td>
     
-                <td data-name='total_tdp_2sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_1yr_male</td>
-                <td data-name='total_tdp_2sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_1yr_female</td>
-                <td data-name='total_tdp_2sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_2yr_male</td>
-                <td data-name='total_tdp_2sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_2yr_female</td>
-                <td data-name='total_tdp_2sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_3yr_male</td>
-                <td data-name='total_tdp_2sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_3yr_female</td>
-                <td data-name='total_tdp_2sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_4yr_male</td>
-                <td data-name='total_tdp_2sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_4yr_female</td>
-                <td data-name='total_tdp_2sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_5yr_male</td>
-                <td data-name='total_tdp_2sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_5yr_female</td>
-                <td data-name='total_tdp_2sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_6yr_male</td>
-                <td data-name='total_tdp_2sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_6yr_female</td>
+                <td data-name='total_tdp_2sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_1yr_male</td>
+                <td data-name='total_tdp_2sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_1yr_female</td>
+                <td data-name='total_tdp_2sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_2yr_male</td>
+                <td data-name='total_tdp_2sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_2yr_female</td>
+                <td data-name='total_tdp_2sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_3yr_male</td>
+                <td data-name='total_tdp_2sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_3yr_female</td>
+                <td data-name='total_tdp_2sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_4yr_male</td>
+                <td data-name='total_tdp_2sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_4yr_female</td>
+                <td data-name='total_tdp_2sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_5yr_male</td>
+                <td data-name='total_tdp_2sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_5yr_female</td>
+                <td data-name='total_tdp_2sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_6yr_male</td>
+                <td data-name='total_tdp_2sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_6yr_female</td>
     
-                <td data-name='total_tdp_3sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_1yr_male</td>
-                <td data-name='total_tdp_3sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_1yr_female</td>
-                <td data-name='total_tdp_3sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_2yr_male</td>
-                <td data-name='total_tdp_3sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_2yr_female</td>
-                <td data-name='total_tdp_3sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_3yr_male</td>
-                <td data-name='total_tdp_3sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_3yr_female</td>
-                <td data-name='total_tdp_3sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_4yr_male</td>
-                <td data-name='total_tdp_3sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_4yr_female</td>
-                <td data-name='total_tdp_3sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_5yr_male</td>
-                <td data-name='total_tdp_3sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_5yr_female</td>
-                <td data-name='total_tdp_3sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_6yr_male</td>
-                <td data-name='total_tdp_3sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_3sem_6yr_female</td>
+                <td data-name='total_tdp_3sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_1yr_male</td>
+                <td data-name='total_tdp_3sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_1yr_female</td>
+                <td data-name='total_tdp_3sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_2yr_male</td>
+                <td data-name='total_tdp_3sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_2yr_female</td>
+                <td data-name='total_tdp_3sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_3yr_male</td>
+                <td data-name='total_tdp_3sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_3yr_female</td>
+                <td data-name='total_tdp_3sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_4yr_male</td>
+                <td data-name='total_tdp_3sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_4yr_female</td>
+                <td data-name='total_tdp_3sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_5yr_male</td>
+                <td data-name='total_tdp_3sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_5yr_female</td>
+                <td data-name='total_tdp_3sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_6yr_male</td>
+                <td data-name='total_tdp_3sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_3sem_6yr_female</td>
     
-                <td data-name='total_tdp_graduated_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_graduated_male</td>
-                <td data-name='total_tdp_graduated_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_graduated_female</td>
-                <td data-name='total_tdp_exceeded_mrr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_exceeded_mrr_male</td>
-                <td data-name='total_tdp_exceeded_mrr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_exceeded_mrr_female</td>
+                <td data-name='total_tdp_graduated_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_graduated_male</td>
+                <td data-name='total_tdp_graduated_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_graduated_female</td>
+                <td data-name='total_tdp_exceeded_mrr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_exceeded_mrr_male</td>
+                <td data-name='total_tdp_exceeded_mrr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_exceeded_mrr_female</td>
     
             </tr>";
         }
@@ -583,49 +583,49 @@ if ($ac_calendar == 'Trimester with Summer') {
                     <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tdp_programs_checkbox' value='$uid'></td>
                     <td class='text-left'>$program_name</td>
         
-                    <td data-name='total_tdp_1sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_1yr_male</td>
-                    <td data-name='total_tdp_1sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_1yr_female</td>
-                    <td data-name='total_tdp_1sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_2yr_male</td>
-                    <td data-name='total_tdp_1sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_2yr_female</td>
-                    <td data-name='total_tdp_1sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_3yr_male</td>
-                    <td data-name='total_tdp_1sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_3yr_female</td>
-                    <td data-name='total_tdp_1sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_4yr_male</td>
-                    <td data-name='total_tdp_1sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_4yr_female</td>
-                    <td data-name='total_tdp_1sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_5yr_male</td>
-                    <td data-name='total_tdp_1sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_5yr_female</td>
-                    <td data-name='total_tdp_1sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_6yr_male</td>
-                    <td data-name='total_tdp_1sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_6yr_female</td>
+                    <td data-name='total_tdp_1sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_1yr_male</td>
+                    <td data-name='total_tdp_1sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_1yr_female</td>
+                    <td data-name='total_tdp_1sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_2yr_male</td>
+                    <td data-name='total_tdp_1sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_2yr_female</td>
+                    <td data-name='total_tdp_1sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_3yr_male</td>
+                    <td data-name='total_tdp_1sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_3yr_female</td>
+                    <td data-name='total_tdp_1sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_4yr_male</td>
+                    <td data-name='total_tdp_1sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_4yr_female</td>
+                    <td data-name='total_tdp_1sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_5yr_male</td>
+                    <td data-name='total_tdp_1sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_5yr_female</td>
+                    <td data-name='total_tdp_1sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_6yr_male</td>
+                    <td data-name='total_tdp_1sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_6yr_female</td>
         
-                    <td data-name='total_tdp_2sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_1yr_male</td>
-                    <td data-name='total_tdp_2sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_1yr_female</td>
-                    <td data-name='total_tdp_2sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_2yr_male</td>
-                    <td data-name='total_tdp_2sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_2yr_female</td>
-                    <td data-name='total_tdp_2sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_3yr_male</td>
-                    <td data-name='total_tdp_2sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_3yr_female</td>
-                    <td data-name='total_tdp_2sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_4yr_male</td>
-                    <td data-name='total_tdp_2sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_4yr_female</td>
-                    <td data-name='total_tdp_2sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_5yr_male</td>
-                    <td data-name='total_tdp_2sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_5yr_female</td>
-                    <td data-name='total_tdp_2sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_6yr_male</td>
-                    <td data-name='total_tdp_2sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_6yr_female</td>
+                    <td data-name='total_tdp_2sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_1yr_male</td>
+                    <td data-name='total_tdp_2sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_1yr_female</td>
+                    <td data-name='total_tdp_2sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_2yr_male</td>
+                    <td data-name='total_tdp_2sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_2yr_female</td>
+                    <td data-name='total_tdp_2sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_3yr_male</td>
+                    <td data-name='total_tdp_2sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_3yr_female</td>
+                    <td data-name='total_tdp_2sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_4yr_male</td>
+                    <td data-name='total_tdp_2sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_4yr_female</td>
+                    <td data-name='total_tdp_2sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_5yr_male</td>
+                    <td data-name='total_tdp_2sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_5yr_female</td>
+                    <td data-name='total_tdp_2sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_6yr_male</td>
+                    <td data-name='total_tdp_2sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_6yr_female</td>
         
-                    <td data-name='total_tdp_sum_mid_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_1yr_male</td>
-                    <td data-name='total_tdp_sum_mid_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_1yr_female</td>
-                    <td data-name='total_tdp_sum_mid_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_2yr_male</td>
-                    <td data-name='total_tdp_sum_mid_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_2yr_female</td>
-                    <td data-name='total_tdp_sum_mid_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_3yr_male</td>
-                    <td data-name='total_tdp_sum_mid_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_3yr_female</td>
-                    <td data-name='total_tdp_sum_mid_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_4yr_male</td>
-                    <td data-name='total_tdp_sum_mid_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_4yr_female</td>
-                    <td data-name='total_tdp_sum_mid_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_5yr_male</td>
-                    <td data-name='total_tdp_sum_mid_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_5yr_female</td>
-                    <td data-name='total_tdp_sum_mid_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_6yr_male</td>
-                    <td data-name='total_tdp_sum_mid_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_sum_mid_6yr_female</td>
+                    <td data-name='total_tdp_sum_mid_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_1yr_male</td>
+                    <td data-name='total_tdp_sum_mid_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_1yr_female</td>
+                    <td data-name='total_tdp_sum_mid_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_2yr_male</td>
+                    <td data-name='total_tdp_sum_mid_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_2yr_female</td>
+                    <td data-name='total_tdp_sum_mid_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_3yr_male</td>
+                    <td data-name='total_tdp_sum_mid_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_3yr_female</td>
+                    <td data-name='total_tdp_sum_mid_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_4yr_male</td>
+                    <td data-name='total_tdp_sum_mid_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_4yr_female</td>
+                    <td data-name='total_tdp_sum_mid_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_5yr_male</td>
+                    <td data-name='total_tdp_sum_mid_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_5yr_female</td>
+                    <td data-name='total_tdp_sum_mid_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_6yr_male</td>
+                    <td data-name='total_tdp_sum_mid_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_sum_mid_6yr_female</td>
         
-                    <td data-name='total_tdp_graduated_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_graduated_male</td>
-                    <td data-name='total_tdp_graduated_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_graduated_female</td>
-                    <td data-name='total_tdp_exceeded_mrr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_exceeded_mrr_male</td>
-                    <td data-name='total_tdp_exceeded_mrr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_exceeded_mrr_female</td>
+                    <td data-name='total_tdp_graduated_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_graduated_male</td>
+                    <td data-name='total_tdp_graduated_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_graduated_female</td>
+                    <td data-name='total_tdp_exceeded_mrr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_exceeded_mrr_male</td>
+                    <td data-name='total_tdp_exceeded_mrr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_exceeded_mrr_female</td>
         
                 </tr>";
         }
@@ -741,36 +741,36 @@ if ($ac_calendar == 'Trimester with Summer') {
                         <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='tdp_programs_checkbox' value='$uid'></td>
                         <td class='text-left'>$program_name</td>
             
-                        <td data-name='total_tdp_1sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_1yr_male</td>
-                        <td data-name='total_tdp_1sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_1yr_female</td>
-                        <td data-name='total_tdp_1sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_2yr_male</td>
-                        <td data-name='total_tdp_1sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_2yr_female</td>
-                        <td data-name='total_tdp_1sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_3yr_male</td>
-                        <td data-name='total_tdp_1sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_3yr_female</td>
-                        <td data-name='total_tdp_1sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_4yr_male</td>
-                        <td data-name='total_tdp_1sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_4yr_female</td>
-                        <td data-name='total_tdp_1sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_5yr_male</td>
-                        <td data-name='total_tdp_1sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_5yr_female</td>
-                        <td data-name='total_tdp_1sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_6yr_male</td>
-                        <td data-name='total_tdp_1sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_1sem_6yr_female</td>
+                        <td data-name='total_tdp_1sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_1yr_male</td>
+                        <td data-name='total_tdp_1sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_1yr_female</td>
+                        <td data-name='total_tdp_1sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_2yr_male</td>
+                        <td data-name='total_tdp_1sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_2yr_female</td>
+                        <td data-name='total_tdp_1sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_3yr_male</td>
+                        <td data-name='total_tdp_1sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_3yr_female</td>
+                        <td data-name='total_tdp_1sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_4yr_male</td>
+                        <td data-name='total_tdp_1sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_4yr_female</td>
+                        <td data-name='total_tdp_1sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_5yr_male</td>
+                        <td data-name='total_tdp_1sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_5yr_female</td>
+                        <td data-name='total_tdp_1sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_6yr_male</td>
+                        <td data-name='total_tdp_1sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_1sem_6yr_female</td>
             
-                        <td data-name='total_tdp_2sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_1yr_male</td>
-                        <td data-name='total_tdp_2sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_1yr_female</td>
-                        <td data-name='total_tdp_2sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_2yr_male</td>
-                        <td data-name='total_tdp_2sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_2yr_female</td>
-                        <td data-name='total_tdp_2sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_3yr_male</td>
-                        <td data-name='total_tdp_2sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_3yr_female</td>
-                        <td data-name='total_tdp_2sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_4yr_male</td>
-                        <td data-name='total_tdp_2sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_4yr_female</td>
-                        <td data-name='total_tdp_2sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_5yr_male</td>
-                        <td data-name='total_tdp_2sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_5yr_female</td>
-                        <td data-name='total_tdp_2sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_6yr_male</td>
-                        <td data-name='total_tdp_2sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_2sem_6yr_female</td>
+                        <td data-name='total_tdp_2sem_1yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_1yr_male</td>
+                        <td data-name='total_tdp_2sem_1yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_1yr_female</td>
+                        <td data-name='total_tdp_2sem_2yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_2yr_male</td>
+                        <td data-name='total_tdp_2sem_2yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_2yr_female</td>
+                        <td data-name='total_tdp_2sem_3yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_3yr_male</td>
+                        <td data-name='total_tdp_2sem_3yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_3yr_female</td>
+                        <td data-name='total_tdp_2sem_4yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_4yr_male</td>
+                        <td data-name='total_tdp_2sem_4yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_4yr_female</td>
+                        <td data-name='total_tdp_2sem_5yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_5yr_male</td>
+                        <td data-name='total_tdp_2sem_5yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_5yr_female</td>
+                        <td data-name='total_tdp_2sem_6yr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_6yr_male</td>
+                        <td data-name='total_tdp_2sem_6yr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_2sem_6yr_female</td>
 
-                        <td data-name='total_tdp_graduated_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_graduated_male</td>
-                        <td data-name='total_tdp_graduated_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_graduated_female</td>
-                        <td data-name='total_tdp_exceeded_mrr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_exceeded_mrr_male</td>
-                        <td data-name='total_tdp_exceeded_mrr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_tdp_exceeded_mrr_female</td>
+                        <td data-name='total_tdp_graduated_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_graduated_male</td>
+                        <td data-name='total_tdp_graduated_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_graduated_female</td>
+                        <td data-name='total_tdp_exceeded_mrr_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_exceeded_mrr_male</td>
+                        <td data-name='total_tdp_exceeded_mrr_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_tdp_exceeded_mrr_female</td>
             
                     </tr>";
         }
