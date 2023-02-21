@@ -47,14 +47,14 @@ if ($ac_calendar == 'Trimester with Summer') {
             echo "<tr>
         <td class='text-center'><input type='checkbox' id='$uid' name='fhe_category_checkbox' value='$uid' data-toggle='tooltip' title='Select'></td>
         <td>$fhe_category</td>
-        <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_male</td>
-        <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_female</td>
-        <td data-name='total_fhe_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_male</td>
-        <td data-name='total_fhe_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_female</td>
-        <td data-name='total_fhe_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_3rd_male</td>
-        <td data-name='total_fhe_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_3rd_female</td>
-        <td data-name='total_fhe_sum_mid_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_sum_mid_male</td>
-        <td data-name='total_fhe_sum_mid_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_sum_mid_female</td>
+        <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_1st_male</td>
+        <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_1st_female</td>
+        <td data-name='total_fhe_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_2nd_male</td>
+        <td data-name='total_fhe_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_2nd_female</td>
+        <td data-name='total_fhe_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_3rd_male</td>
+        <td data-name='total_fhe_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_3rd_female</td>
+        <td data-name='total_fhe_sum_mid_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_sum_mid_male</td>
+        <td data-name='total_fhe_sum_mid_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_sum_mid_female</td>
         </tr>";
         }
     }
@@ -98,12 +98,12 @@ if ($ac_calendar == 'Trimester with Summer') {
             echo "<tr>
             <td class='text-center'><input type='checkbox' id='$uid' name='fhe_category_checkbox' value='$uid' data-toggle='tooltip' title='Select'></td>
             <td>$fhe_category</td>
-            <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_male</td>
-            <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_female</td>
-            <td data-name='total_fhe_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_male</td>
-            <td data-name='total_fhe_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_female</td>
-            <td data-name='total_fhe_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_3rd_male</td>
-            <td data-name='total_fhe_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_3rd_female</td>
+            <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_1st_male</td>
+            <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_1st_female</td>
+            <td data-name='total_fhe_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_2nd_male</td>
+            <td data-name='total_fhe_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_2nd_female</td>
+            <td data-name='total_fhe_3rd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_3rd_male</td>
+            <td data-name='total_fhe_3rd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_3rd_female</td>
             </tr>";
         }
     }
@@ -147,12 +147,12 @@ if ($ac_calendar == 'Trimester with Summer') {
             echo "<tr>
                 <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='fhe_category_checkbox' value='$uid'></td>
                 <td>$fhe_category</td>
-                <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_male</td>
-                <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_female</td>
-                <td data-name='total_fhe_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_male</td>
-                <td data-name='total_fhe_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_female</td>
-                <td data-name='total_fhe_sum_mid_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_sum_mid_male</td>
-                <td data-name='total_fhe_sum_mid_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_sum_mid_female</td>
+                <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_1st_male</td>
+                <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_1st_female</td>
+                <td data-name='total_fhe_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_2nd_male</td>
+                <td data-name='total_fhe_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_2nd_female</td>
+                <td data-name='total_fhe_sum_mid_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_sum_mid_male</td>
+                <td data-name='total_fhe_sum_mid_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_sum_mid_female</td>
                 </tr>";
         }
     }
@@ -191,10 +191,10 @@ if ($ac_calendar == 'Trimester with Summer') {
             echo "<tr>
             <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='fhe_category_checkbox' value='$uid'></td>
             <td>$fhe_category</td>
-            <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_male</td>
-            <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_1st_female</td>
-            <td data-name='total_fhe_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_male</td>
-            <td data-name='total_fhe_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid'>$total_fhe_2nd_female</td>
+            <td data-name='total_fhe_1st_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_1st_male</td>
+            <td data-name='total_fhe_1st_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_1st_female</td>
+            <td data-name='total_fhe_2nd_male' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_2nd_male</td>
+            <td data-name='total_fhe_2nd_female' class='beneficiaries text-center' data-type='number' data-pk='$uid' title='double-click to edit'>$total_fhe_2nd_female</td>
             </tr>";
         }
     }
