@@ -143,8 +143,6 @@ $pdf->SetTextColor(0, 0, 0);
 $pdf->Cell(336, 5, 'I.A BASIC INFORMATION', 0, 0, 'L', true);
 $pdf->Ln();
 
-
-
 //SPACING
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
@@ -178,7 +176,7 @@ $pdf->Cell(95, 5, 'Private HEI located in city/municipality w/ no SUC/LUC?', 0, 
 $pdf->SetFont('Arial', '', 9);
 if ($_SESSION['hei_it'] == 'Private HEI') {
     $pdf->Cell(73, 5, $_SESSION['hei_pnsl'], 0, 0, 'L', true);
-}else{
+} else {
     $pdf->Cell(73, 5, 'N/A', 0, 0, 'L', true);
 }
 
@@ -678,7 +676,6 @@ if ($resultCheck > 0) {
     }
 }
 
-
 $sql = "SELECT *
 FROM tbl_hei_other_funded_stufaps 
 WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'
@@ -870,7 +867,7 @@ ORDER BY program_name ASC";
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(236, 240, 241);
             $pdf->Cell(336, 5, 'TOTAL FHE BENEFICIARIES', 1, 1, 'C', true);
-        
+
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(236, 240, 241);
             $pdf->SetTextColor(0, 0, 0);
@@ -879,7 +876,7 @@ ORDER BY program_name ASC";
             $pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
             $pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
             $pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-        
+
             $pdf->Ln();
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->Cell(15, 0, '', 0, 0, 'C', true);
@@ -889,23 +886,23 @@ ORDER BY program_name ASC";
             $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-        
-        
+
+
             $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-        
+
             $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-        
-        
+
+
             $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
@@ -1255,8 +1252,6 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
         $pdf->addPage();
     }
 
-    
-
     $sql = "SELECT * FROM tbl_degree_programs 
 WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_fhe_graduated_male != 0 AND total_fhe_graduated_female != 0 AND total_fhe_exceeded_mrr_male != 0 AND total_fhe_exceeded_mrr_female != 0)
 ORDER BY program_name ASC";
@@ -1589,9 +1584,6 @@ ORDER BY program_name ASC";
 
     //end
 
-    
-
-
     $sql = "SELECT * FROM tbl_drop_outs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE' ORDER BY reason ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
@@ -1684,10 +1676,8 @@ ORDER BY program_name ASC";
         $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
 
         //END
-        
+
     }
-
-
 
     $sql = "SELECT * FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE' ORDER BY reason ASC";
     $result = mysqli_query($conn, $sql);
@@ -1811,7 +1801,7 @@ if ($tes == 'yes') {
     $pdf->Ln();
     //END
 
-    
+
 
     $sql = "SELECT * FROM tbl_tes_category WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
     $result = mysqli_query($conn, $sql);
@@ -2422,7 +2412,7 @@ if ($tdp == 'yes') {
     $pdf->Cell(336, 2.5, '', 0, 0, 'C', true);
     $pdf->Ln();
     //END
-    
+
 
 
     $sql = "SELECT * FROM tbl_degree_programs WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_tdp_1sem_1yr_male > 0 OR total_tdp_2sem_1yr_female > 0 OR total_tdp_2sem_1yr_male > 0 OR total_tdp_2sem_1yr_female > 0) ";
@@ -2873,8 +2863,6 @@ if ($tdp == 'yes') {
             //END
         }
     }
-    
-    
 
     $sql = "SELECT * 
 FROM tbl_degree_programs 
@@ -3075,7 +3063,7 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
         $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
         $pdf->Cell(20, 5, 'MALE', 1, 0, 'C', true);
         $pdf->Cell(20, 5, 'FEMALE', 1, 0, 'C', true);
-        $pdf->Ln(); 
+        $pdf->Ln();
         while ($row = mysqli_fetch_assoc($result)) {
             $reason = $row['reason'];
             $total_loa_1st_male = $row['total_loa_1st_male'];
