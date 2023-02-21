@@ -172,47 +172,16 @@ $pdf->SetFont('Arial', '', 9);
 $pdf->Cell(127, 5, $hei_email, 0, 0, 'L', true);
 $pdf->Ln();
 
+
+$pdf->SetFont('Arial', 'B', 10);
+$pdf->Cell(95, 5, 'Private HEI located in city/municipality w/ no SUC/LUC?', 0, 0, 'L', true);
+$pdf->SetFont('Arial', '', 9);
 if ($_SESSION['hei_it'] == 'Private HEI') {
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(95, 5, 'Private HEI located in city/municipality w/ no SUC/LUC?', 0, 0, 'L', true);
-    $pdf->SetFont('Arial', '', 9);
     $pdf->Cell(73, 5, $_SESSION['hei_pnsl'], 0, 0, 'L', true);
-
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(47, 5, 'Alternative Email Address:', 0, 0, 'L', true);
-    $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(121, 5, $hei_alt_email, 0, 0, 'L', true);
-    $pdf->Ln();
-
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(24, 5, 'HEI Campus:', 0, 0, 'L', true);
-    $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(144, 5, $_SESSION['hei_ct'], 0, 0, 'L', true);
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(23, 5, 'Contact No.:', 0, 0, 'L', true);
-    $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(145, 5, $hei_contact_no, 0, 0, 'L', true);
-    $pdf->Ln();
-
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(24, 5, 'HEI Address:', 0, 0, 'L', true);
-    $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(144, 5, $_SESSION['hei_address'], 0, 0, 'L', true);
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(42, 5, 'Alternative Contact No.:', 0, 0, 'L', true);
-    $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(126, 5, $hei_alt_contact_no, 0, 0, 'L', true);
-    $pdf->Ln();
-
-    $pdf->SetFont('Arial', 'B', 10);
-    $pdf->Cell(15, 5, 'Region:', 0, 0, 'L', true);
-    $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(153, 5, $_SESSION['hei_region_nir'], 0, 0, 'L', true);
-    $pdf->Cell(168, 5, '', 0, 0, 'L', true);
-    $pdf->Ln();
-} else {
-    $pdf->Cell(168, 5, '', 0, 0, 'L', true);
+}else{
+    $pdf->Cell(168, 5, 'N/A', 0, 0, 'L', true);
 }
+
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(47, 5, 'Alternative Email Address:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
