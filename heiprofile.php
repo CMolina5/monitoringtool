@@ -18,7 +18,7 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class="form-group"><label>Name of Higher Education Institution (HEI)</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-school icons-input"></i></span></div><input name="hei_name" class="form-control" type="text" value="<?php echo utf8_encode($_SESSION['hei_name']); ?>" readonly>
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-school icons-input"></i></span></div><input name="hei_name" class="form-control" type="text" value="<?php echo iconv("UTF-8", "ISO-8859-1",$_SESSION['hei_name']); ?>" readonly>
                     </div>
                 </div>
                 <div class="form-group"><label>Type of HEI</label>
@@ -140,7 +140,7 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class="form-group"><label>HEI Address</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-map-marked-alt icons-input"></i></span></div><input name="hei_address" class="form-control" type="text" value="<?php echo utf8_encode($_SESSION['hei_address']); ?>" readonly>
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-map-marked-alt icons-input"></i></span></div><input name="hei_address" class="form-control" type="text" value="<?php echo iconv("UTF-8", "ISO-8859-1",$_SESSION['hei_address']); ?>" readonly>
                     </div>
                 </div>
                 <div class="form-group">
@@ -149,11 +149,11 @@ include 'includes/heiprofile/inc_template.php'
                 </div>
                 <div class="form-group">
                     <label>Province</label>
-                    <input name="hei_prov_name" class="form-control" type="text" required="" value="<?php echo utf8_encode($_SESSION['hei_prov_name']); ?>" readonly>
+                    <input name="hei_prov_name" class="form-control" type="text" required="" value="<?php echo iconv("UTF-8", "ISO-8859-1",$_SESSION['hei_prov_name']); ?>" readonly>
                 </div>
                 <div class="form-group"><label>Official Email Address</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="material-icons icons-input">email</i></span></div><input name="hei_email_add" class="form-control" type="email" value="<?php echo utf8_encode($hei_email) ?>" required="">
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="material-icons icons-input">email</i></span></div><input name="hei_email_add" class="form-control" type="email" value="<?php echo iconv("UTF-8", "ISO-8859-1",$hei_email) ?>" required="">
                         <div class="input-group-prepend"></div>
                         <div class="invalid-feedback">
                             Please enter a valid email address.
@@ -192,7 +192,7 @@ include 'includes/heiprofile/inc_template.php'
                 <div class="form-group"><label class="label-parts">I.B PROGRAM ADMINISTRATION</label></div>
                 <div class="form-group"><label>Name of the Head of HEI</label><label class="text-danger" title="required">&nbsp;*</label>
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user icons-input"></i></span></div><input name="hei_head_name" class="form-control" type="text" placeholder="Firstname   Middlename   Lastname" value="<?php echo utf8_encode($hei_head_name) ?>" required>
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user icons-input"></i></span></div><input name="hei_head_name" class="form-control" type="text" placeholder="Firstname   Middlename   Lastname" value="<?php echo iconv("UTF-8", "ISO-8859-1",$hei_head_name) ?>" required>
                     </div>
                     <div class="invalid-feedback">
                         Please enter the name of HEI head/president.
@@ -248,7 +248,7 @@ include 'includes/heiprofile/inc_template.php'
                 echo "<div class='card card-style'>
                 <div class='form-group'><label>Name of Personnel In-charge of FHE</label><label class='text-danger' title='required'>&nbsp;*</label>
                     <div class='input-group'>
-                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='fhe_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='" . utf8_encode($fhe_focal_name) . "' required=''>
+                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='fhe_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='" . iconv("UTF-8", "ISO-8859-1",$fhe_focal_name) . "' required=''>
                     </div>
                     <div class='invalid-feedback'>
                             Please enter the name of personnel in-charge of FHE.
@@ -304,7 +304,7 @@ include 'includes/heiprofile/inc_template.php'
                 echo "<div class='card card-style'>
                 <div class='form-group'><label>Name of TES Focal Person</label><label class='text-danger' title='required'>&nbsp;*</label>
                     <div class='input-group'>
-                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='tes_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='" . utf8_encode($tes_focal_name) . "' required=''>
+                        <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='tes_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='" . iconv("UTF-8", "ISO-8859-1",$tes_focal_name) . "' required=''>
                     </div>
                     <div class='invalid-feedback'>
                         Please enter the name of TES focal person.
@@ -360,7 +360,7 @@ include 'includes/heiprofile/inc_template.php'
                 echo "<div class='card card-style'>
                     <div class='form-group'><label>Name of Personnel In-charge of TDP</label><label class='text-danger' title='required'>&nbsp;*</label>
                         <div class='input-group'>
-                            <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='tdp_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='" . utf8_encode($tdp_focal_name) . "' required=''>
+                            <div class='input-group-prepend'><span class='input-group-text'><i class='fas fa-user icons-input'></i></span></div><input name='tdp_focal_name' class='form-control' type='text' placeholder='Firstname   Middlename   Lastname' value='" . iconv("UTF-8", "ISO-8859-1",$tdp_focal_name) . "' required=''>
                         </div>
                         <div class='invalid-feedback'>
                             Please enter the name of personnel in-charge of TDP.
