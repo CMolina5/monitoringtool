@@ -1,6 +1,6 @@
 <?php
 
-$sql = "SELECT *, SUM(total_stufap_1st) AS grand_total_stufap_1st, SUM(total_stufap_2nd) AS grand_total_stufap_2nd, SUM(total_stufap_3rd) AS grand_total_stufap_3rd, SUM(total_stufap_4th) AS grand_total_stufap_4th, SUM(total_stufap_5th) AS grand_total_stufap_5th, SUM(total_stufap_6th) AS grand_total_stufap_6th FROM tbl_hei_other_funded_stufaps WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
+$sql = "SELECT * FROM tbl_hei_other_funded_stufaps WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
 
@@ -38,13 +38,6 @@ if ($resultCheck > 0) {
         $total_stufap_5th = $row['total_stufap_5th'];
         $total_stufap_6th = $row['total_stufap_6th'];
 
-        $grand_total_stufap_1st = $row['grand_total_stufap_1st'];
-        $grand_total_stufap_2nd = $row['grand_total_stufap_2nd'];
-        $grand_total_stufap_3rd = $row['grand_total_stufap_3rd'];
-        $grand_total_stufap_4th = $row['grand_total_stufap_4th'];
-        $grand_total_stufap_5th = $row['grand_total_stufap_5th'];
-        $grand_total_stufap_6th = $row['grand_total_stufap_6th'];
-
         echo "
         <tr>
             <td class='text-center' data-toggle='tooltip' title='Select'><input type='checkbox' id='$uid' name='other_stufap_checkbox' value='$uid'></td>
@@ -61,6 +54,22 @@ if ($resultCheck > 0) {
             ";
     }
 }
+
+$sql = "SELECT SUM(total_stufap_1st) AS grand_total_stufap_1st, SUM(total_stufap_2nd) AS grand_total_stufap_2nd, SUM(total_stufap_3rd) AS grand_total_stufap_3rd, SUM(total_stufap_4th) AS grand_total_stufap_4th, SUM(total_stufap_5th) AS grand_total_stufap_5th, SUM(total_stufap_6th) AS grand_total_stufap_6th FROM tbl_hei_other_funded_stufaps WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
+$result = mysqli_query($conn, $sql);
+$resultCheck = mysqli_num_rows($result);
+
+if ($resultCheck > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $grand_total_stufap_1st = $row['grand_total_stufap_1st'];
+        $grand_total_stufap_2nd = $row['grand_total_stufap_2nd'];
+        $grand_total_stufap_3rd = $row['grand_total_stufap_3rd'];
+        $grand_total_stufap_4th = $row['grand_total_stufap_4th'];
+        $grand_total_stufap_5th = $row['grand_total_stufap_5th'];
+        $grand_total_stufap_6th = $row['grand_total_stufap_6th'];
+    }
+}
+
 echo "
 </tbody>
 <tfoot>
