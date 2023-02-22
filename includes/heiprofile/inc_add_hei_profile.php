@@ -337,7 +337,11 @@ if (isset($_POST['save_hei_profile'])) {
             }
         } else{
             echo "<script>
-           alert();
+            Swal.fire(
+                'Data already exist!',
+                'Please select the data in the table to update!',
+                'warning'
+            )
             </script>";
         }
     } 
