@@ -39,11 +39,11 @@ if ($resultCheck > 0) {
         $total_stufap_6th = $row['total_stufap_6th'];
 
         $grand_total_stufap_1st = $row['grand_total_stufap_1st'];
-        $grand_total_stufap_1st = $row['grand_total_stufap_2nd'];
-        $grand_total_stufap_1st = $row['grand_total_stufap_3rd'];
-        $grand_total_stufap_1st = $row['grand_total_stufap_4th'];
-        $grand_total_stufap_1st = $row['grand_total_stufap_5th'];
-        $grand_total_stufap_1st = $row['grand_total_stufap_6th'];
+        $grand_total_stufap_2nd = $row['grand_total_stufap_2nd'];
+        $grand_total_stufap_3rd = $row['grand_total_stufap_3rd'];
+        $grand_total_stufap_4th = $row['grand_total_stufap_4th'];
+        $grand_total_stufap_5th = $row['grand_total_stufap_5th'];
+        $grand_total_stufap_6th = $row['grand_total_stufap_6th'];
 
         echo "
         <tr>
@@ -60,19 +60,19 @@ if ($resultCheck > 0) {
         </tr>
             ";
     }
-    echo "
-        <tr>
-            <td colspan='3'></td>
-            <td>$grand_total_stufap_1st</td>
-            <td>$grand_total_stufap_2nd</td>
-            <td>$grand_total_stufap_3rd</td>
-            <td>$grand_total_stufap_4th</td>
-            <td>$grand_total_stufap_5th</td>
-            <td>$grand_total_stufap_6th</td>
-        </tr>
-            ";
 }
 echo "
 </tbody>
+<tfoot>
+    <tr>
+        <td class='text-center' colspan='3'>TOTAL</td>
+        <td>$grand_total_stufap_1st</td>
+        <td>$grand_total_stufap_2nd</td>
+        <td>$grand_total_stufap_3rd</td>
+        <td>$grand_total_stufap_4th</td>
+        <td>$grand_total_stufap_5th</td>
+        <td>$grand_total_stufap_6th</td>
+    </tr>
+  </tfoot>
 </table>
 ";
