@@ -1377,7 +1377,12 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
             $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_female, 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_female, 1, 0, 'C', true);
         }else{
-            
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
         }
         if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
             $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_female, 1, 0, 'C', true);
