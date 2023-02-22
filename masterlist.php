@@ -1774,7 +1774,9 @@ FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'
 
 //END
 if ($tes == 'yes') {
-    $pdf->addPage();
+    if($fhe == 'yes'){
+        $pdf->addPage();
+    }
 
     //I.B TERTIARY EDUCATION SUBSIDY
     $pdf->SetFont('Arial', 'B', 11);
@@ -2402,7 +2404,9 @@ if ($tes == 'yes') {
 
 
 if ($tdp == 'yes') {
-    $pdf->addPage();
+    if($tes == 'yes' || $fhe == 'yes'){
+        $pdf->addPage();
+    }
 
     //I.C TULONG DUNONG PROGRAM
     $pdf->SetFont('Arial', 'B', 11);
