@@ -460,16 +460,24 @@ $pdf->SetFont('Arial', 'B', 10);
 $pdf->SetFillColor(236, 240, 241);
 $pdf->Cell(84, 5, '1ST TERM', 1, 0, 'C', true);
 $pdf->Cell(84, 5, '2ND TERM', 1, 0, 'C', true);
+if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
 $pdf->Cell(84, 5, '3RD TERM', 1, 0, 'C', true);
+}
+if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
 $pdf->Cell(84, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+}
 $pdf->Ln();
 
 $pdf->SetFont('Arial', '', 10);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(84, 5, $opening_of_classes_1st, 1, 0, 'C', true);
 $pdf->Cell(84, 5, $opening_of_classes_2nd, 1, 0, 'C', true);
+if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
 $pdf->Cell(84, 5, $opening_of_classes_3rd, 1, 0, 'C', true);
+}
+if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
 $pdf->Cell(84, 5, $opening_of_classes_summer_midyear, 1, 0, 'C', true);
+}
 $pdf->Ln();
 $pdf->Ln();
 
@@ -483,11 +491,14 @@ $pdf->Ln();
 
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->SetFillColor(236, 240, 241);
-$pdf->Cell(15, 5, '', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
-$pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+$pdf->Cell(84, 5, '1ST TERM', 1, 0, 'C', true);
+$pdf->Cell(84, 5, '2ND TERM', 1, 0, 'C', true);
+if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+$pdf->Cell(84, 5, '3RD TERM', 1, 0, 'C', true);
+}
+if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+$pdf->Cell(84, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+}
 $pdf->Ln();
 
 $pdf->SetFillColor(236, 240, 241);
@@ -496,8 +507,12 @@ $pdf->SetFillColor(255, 255, 255);
 $pdf->SetFont('Arial', '', 10);
 $pdf->Cell(80.25, 5, $total_undergraduate_1st_male, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_undergraduate_2nd_male, 1, 0, 'C', true);
+if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
 $pdf->Cell(80.25, 5, $total_undergraduate_3rd_male, 1, 0, 'C', true);
+}
+if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
 $pdf->Cell(80.25, 5, $total_undergraduate_summer_midyear_male, 1, 0, 'C', true);
+}
 $pdf->Ln();
 
 $pdf->SetFillColor(236, 240, 241);
