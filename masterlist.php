@@ -3256,8 +3256,9 @@ $pdf->Cell(15, 5, $question_19, 1, 1, 'C', true);
 $pdf->Ln();
 }
 
-$pdf->addPage();
 if ($tes == 'yes') {
+    $pdf->addPage();
+    
     $cnt2 = 1;
 
     $pdf->SetFont('Arial', 'B', 11);
