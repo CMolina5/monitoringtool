@@ -185,7 +185,19 @@ $(document).ready(function () {
                         if ($.trim(value) == '') {
                             return 'This field is required';
                         }
+                    },
+                    success: function(response, newValue) {
+                        $('#tbl_other_stufaps').DataTable({
+                            "order": [[1, "desc"]],
+                            orderCellsTop: true,
+                            fixedHeader: true,
+                            "columnDefs": [ {
+                                "targets": 0,
+                                "orderable": false
+                                } ]
+                        });
                     }
+                   
                 });
 
                 $('#tbl_other_stufaps').editable({
