@@ -578,8 +578,16 @@ $pdf->SetFont('Arial', '', 10);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(80.25, 5, $total_foreign_1st_male, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_foreign_2nd_male, 1, 0, 'C', true);
+if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
 $pdf->Cell(80.25, 5, $total_foreign_3rd_male, 1, 0, 'C', true);
+}else{
+    $pdf->Cell(80.25, 5,  'N/A', 1, 0, 'C', true);
+}
+if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
 $pdf->Cell(80.25, 5, $total_foreign_summer_midyear_male, 1, 0, 'C', true);
+}else{
+    $pdf->Cell(80.25, 5,  'N/A', 1, 0, 'C', true);
+}
 $pdf->Ln();
 
 $pdf->SetFillColor(236, 240, 241);
@@ -589,8 +597,16 @@ $pdf->SetFont('Arial', '', 10);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(80.25, 5, $total_foreign_1st_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_foreign_2nd_female, 1, 0, 'C', true);
+if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
 $pdf->Cell(80.25, 5, $total_foreign_3rd_female, 1, 0, 'C', true);
+}else{
+    $pdf->Cell(80.25, 5,  'N/A', 1, 0, 'C', true);
+}
+if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
 $pdf->Cell(80.25, 5, $total_foreign_summer_midyear_female, 1, 0, 'C', true);
+}else{
+    $pdf->Cell(80.25, 5,  'N/A', 1, 0, 'C', true);
+}
 $pdf->Ln();
 
 $pdf->SetFillColor(236, 240, 241);
@@ -599,9 +615,16 @@ $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(80.25, 5, $total_foreign_1st_male + $total_foreign_1st_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_foreign_2nd_male + $total_foreign_2nd_female, 1, 0, 'C', true);
+if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
 $pdf->Cell(80.25, 5, $total_foreign_3rd_male + $total_foreign_3rd_female, 1, 0, 'C', true);
+}else{
+    $pdf->Cell(80.25, 5,  'N/A', 1, 0, 'C', true);
+}
+if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
 $pdf->Cell(80.25, 5, $total_foreign_summer_midyear_male + $total_foreign_summer_midyear_female, 1, 0, 'C', true);
-
+}else{
+    $pdf->Cell(80.25, 5,  'N/A', 1, 0, 'C', true);
+}
 $pdf->Ln();
 $pdf->Ln();
 //end
@@ -627,8 +650,16 @@ $pdf->SetFont('Arial', '', 10);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(80.25, 5, $total_second_courser_1st_male, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_second_courser_2nd_male, 1, 0, 'C', true);
+if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
 $pdf->Cell(80.25, 5, $total_second_courser_3rd_male, 1, 0, 'C', true);
+}else{
+    $pdf->Cell(80.25, 5,  'N/A', 1, 0, 'C', true);
+}
+if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
 $pdf->Cell(80.25, 5, $total_second_courser_summer_midyear_male, 1, 0, 'C', true);
+}else{
+    $pdf->Cell(80.25, 5,  'N/A', 1, 0, 'C', true);
+}
 $pdf->Ln();
 
 $pdf->SetFillColor(236, 240, 241);
@@ -638,8 +669,16 @@ $pdf->SetFont('Arial', '', 10);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(80.25, 5, $total_second_courser_1st_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_second_courser_2nd_female, 1, 0, 'C', true);
+if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
 $pdf->Cell(80.25, 5, $total_second_courser_3rd_female, 1, 0, 'C', true);
+}else{
+    $pdf->Cell(80.25, 5,  'N/A', 1, 0, 'C', true);
+}
+if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
 $pdf->Cell(80.25, 5, $total_second_courser_summer_midyear_female, 1, 0, 'C', true);
+}else{
+    $pdf->Cell(80.25, 5,  'N/A', 1, 0, 'C', true);
+}
 $pdf->Ln();
 
 $pdf->SetFillColor(236, 240, 241);
@@ -648,8 +687,16 @@ $pdf->Cell(15, 5, 'TOTAL', 1, 0, 'L', true);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(80.25, 5, $total_second_courser_1st_male + $total_second_courser_1st_female, 1, 0, 'C', true);
 $pdf->Cell(80.25, 5, $total_second_courser_2nd_male + $total_second_courser_2nd_female, 1, 0, 'C', true);
+if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
 $pdf->Cell(80.25, 5, $total_second_courser_3rd_male + $total_second_courser_3rd_female, 1, 0, 'C', true);
+}else{
+    $pdf->Cell(80.25, 5,  'N/A', 1, 0, 'C', true);
+}
+if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
 $pdf->Cell(80.25, 5, $total_second_courser_summer_midyear_male + $total_second_courser_summer_midyear_female, 1, 0, 'C', true);
+}else{
+    $pdf->Cell(80.25, 5,  'N/A', 1, 0, 'C', true);
+}
 //end
 $pdf->addPage();
 //I.D PROGRAM OFFERINGS
