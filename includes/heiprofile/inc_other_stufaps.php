@@ -54,34 +54,7 @@ if ($resultCheck > 0) {
             ";
     }
 }
-
-$sql = "SELECT SUM(total_stufap_1st) AS grand_total_stufap_1st, SUM(total_stufap_2nd) AS grand_total_stufap_2nd, SUM(total_stufap_3rd) AS grand_total_stufap_3rd, SUM(total_stufap_4th) AS grand_total_stufap_4th, SUM(total_stufap_5th) AS grand_total_stufap_5th, SUM(total_stufap_6th) AS grand_total_stufap_6th FROM tbl_hei_other_funded_stufaps WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-
-if ($resultCheck > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $grand_total_stufap_1st = $row['grand_total_stufap_1st'];
-        $grand_total_stufap_2nd = $row['grand_total_stufap_2nd'];
-        $grand_total_stufap_3rd = $row['grand_total_stufap_3rd'];
-        $grand_total_stufap_4th = $row['grand_total_stufap_4th'];
-        $grand_total_stufap_5th = $row['grand_total_stufap_5th'];
-        $grand_total_stufap_6th = $row['grand_total_stufap_6th'];
-    }
-}
-
 echo "
 </tbody>
-<tfoot>
-    <tr>
-        <td class='text-center font-weight-bold' colspan='3'>TOTAL</td>
-        <td class='text-center font-weight-bold'>$grand_total_stufap_1st</td>
-        <td class='text-center font-weight-bold'>$grand_total_stufap_2nd</td>
-        <td class='text-center font-weight-bold'>$grand_total_stufap_3rd</td>
-        <td class='text-center font-weight-bold'>$grand_total_stufap_4th</td>
-        <td class='text-center font-weight-bold'>$grand_total_stufap_5th</td>
-        <td class='text-center font-weight-bold'>$grand_total_stufap_6th</td>
-    </tr>
-  </tfoot>
 </table>
 ";
