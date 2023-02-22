@@ -157,7 +157,7 @@ $pdf->Cell(91, 5, $_SESSION['hei_uii'], 0, 0, 'L', true);
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(18, 5, 'Province:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
-$pdf->Cell(150, 5, $_SESSION['hei_prov_name'], 0, 0, 'L', true);
+$pdf->Cell(150, 5, iconv("UTF-8", "ISO-8859-1", $_SESSION['hei_prov_name']), 0, 0, 'L', true);
 $pdf->Ln();
 
 $pdf->SetFont('Arial', 'B', 10);
@@ -167,7 +167,7 @@ $pdf->Cell(146, 5, $_SESSION['hei_it'], 0, 0, 'L', true);
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(41, 5, 'Official Email Address:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
-$pdf->Cell(127, 5, $hei_email, 0, 0, 'L', true);
+$pdf->Cell(127, 5, iconv("UTF-8", "ISO-8859-1", $hei_email), 0, 0, 'L', true);
 $pdf->Ln();
 
 
@@ -187,7 +187,7 @@ if ($_SESSION['hei_it'] == 'Private HEI') {
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(47, 5, 'Alternative Email Address:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
-$pdf->Cell(121, 5, $hei_alt_email, 0, 0, 'L', true);
+$pdf->Cell(121, 5, iconv("UTF-8", "ISO-8859-1", $hei_alt_email), 0, 0, 'L', true);
 $pdf->Ln();
 
 $pdf->SetFont('Arial', 'B', 10);
@@ -203,7 +203,7 @@ $pdf->Ln();
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(24, 5, 'HEI Address:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
-$pdf->Cell(144, 5, $_SESSION['hei_address'], 0, 0, 'L', true);
+$pdf->Cell(144, 5, iconv("UTF-8", "ISO-8859-1", $_SESSION['hei_address']), 0, 0, 'L', true);
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(42, 5, 'Alternative Contact No.:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
@@ -227,7 +227,7 @@ $pdf->SetFillColor(236, 240, 241);
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(43, 5, 'Name of the Head of HEI:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
-$pdf->Cell(125, 5, $hei_head_name, 0, 0, 'L', true);
+$pdf->Cell(125, 5, iconv("UTF-8", "ISO-8859-1", $hei_head_name), 0, 0, 'L', true);
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(29, 5, 'Full Designation:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
@@ -238,11 +238,11 @@ $pdf->SetFillColor(236, 240, 241);
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(27, 5, 'Email Address:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
-$pdf->Cell(141, 5, $hei_head_email_add, 0, 0, 'L', true);
+$pdf->Cell(141, 5, iconv("UTF-8", "ISO-8859-1", $hei_head_email_add), 0, 0, 'L', true);
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(46, 5, 'Alternative Email Address:', 0, 0, 'L', true);
 $pdf->SetFont('Arial', '', 9);
-$pdf->Cell(122, 5, $hei_head_alt_email_add, 0, 0, 'L', true);
+$pdf->Cell(122, 5, iconv("UTF-8", "ISO-8859-1", $hei_head_alt_email_add), 0, 0, 'L', true);
 $pdf->Ln();
 
 $pdf->SetFillColor(236, 240, 241);
@@ -274,7 +274,7 @@ if ($fhe == 'yes') {
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->Cell(63, 5, 'Name of Personnel In-charge of FHE:', 0, 0, 'L', true);
     $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(105, 5, $fhe_focal_name, 0, 0, 'L', true);
+    $pdf->Cell(105, 5, iconv("UTF-8", "ISO-8859-1", $fhe_focal_name), 0, 0, 'L', true);
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->Cell(30, 5, 'Full Designation:', 0, 0, 'L', true);
     $pdf->SetFont('Arial', '', 9);
@@ -284,11 +284,11 @@ if ($fhe == 'yes') {
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->Cell(27, 5, 'Email Address:', 0, 0, 'L', true);
     $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(141, 5, $fhe_focal_email_add, 0, 0, 'L', true);
+    $pdf->Cell(141, 5, iconv("UTF-8", "ISO-8859-1", $fhe_focal_email_add), 0, 0, 'L', true);
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->Cell(46, 5, 'Alternative Email Address:', 0, 0, 'L', true);
     $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(122, 5, $fhe_focal_alt_email_add, 0, 0, 'L', true);
+    $pdf->Cell(122, 5, iconv("UTF-8", "ISO-8859-1", $fhe_focal_alt_email_add), 0, 0, 'L', true);
     $pdf->Ln();
 
     $pdf->SetFont('Arial', 'B', 10);
@@ -313,7 +313,7 @@ if ($tes == 'yes') {
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->Cell(47, 5, 'Name of TES Focal Person:', 0, 0, 'L', true);
     $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(121, 5, $tes_focal_name, 0, 0, 'L', true);
+    $pdf->Cell(121, 5, iconv("UTF-8", "ISO-8859-1", $tes_focal_name), 0, 0, 'L', true);
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->Cell(30, 5, 'Full Designation:', 0, 0, 'L', true);
     $pdf->SetFont('Arial', '', 9);
@@ -323,11 +323,11 @@ if ($tes == 'yes') {
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->Cell(27, 5, 'Email Address:', 0, 0, 'L', true);
     $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(141, 5, $tes_focal_email_add, 0, 0, 'L', true);
+    $pdf->Cell(141, 5, iconv("UTF-8", "ISO-8859-1", $tes_focal_email_add), 0, 0, 'L', true);
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->Cell(46, 5, 'Alternative Email Address:', 0, 0, 'L', true);
     $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(122, 5, $tes_focal_alt_email_add, 0, 0, 'L', true);
+    $pdf->Cell(122, 5, iconv("UTF-8", "ISO-8859-1", $tes_focal_alt_email_add), 0, 0, 'L', true);
     $pdf->Ln();
 
     $pdf->SetFont('Arial', 'B', 10);
@@ -352,7 +352,7 @@ if ($tdp == 'yes') {
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->Cell(63, 5, 'Name of Personnel In-charge of TDP:', 0, 0, 'L', true);
     $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(105, 5, $tdp_focal_name, 0, 0, 'L', true);
+    $pdf->Cell(105, 5, iconv("UTF-8", "ISO-8859-1", $tdp_focal_name), 0, 0, 'L', true);
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->Cell(30, 5, 'Full Designation:', 0, 0, 'L', true);
     $pdf->SetFont('Arial', '', 9);
@@ -362,11 +362,11 @@ if ($tdp == 'yes') {
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->Cell(27, 5, 'Email Address:', 0, 0, 'L', true);
     $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(141, 5, $tdp_focal_email_add, 0, 0, 'L', true);
+    $pdf->Cell(141, 5, iconv("UTF-8", "ISO-8859-1", $tdp_focal_email_add), 0, 0, 'L', true);
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->Cell(46, 5, 'Alternative Email Address:', 0, 0, 'L', true);
     $pdf->SetFont('Arial', '', 9);
-    $pdf->Cell(122, 5, $tdp_focal_alt_email_add, 0, 0, 'L', true);
+    $pdf->Cell(122, 5, iconv("UTF-8", "ISO-8859-1", $tdp_focal_alt_email_add), 0, 0, 'L', true);
     $pdf->Ln();
 
     $pdf->SetFont('Arial', 'B', 10);
@@ -622,7 +622,7 @@ $pdf->SetFont('Arial', 'B', 10);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(111, 5, "No. of Bachelor Degree Programs Offered in the Academic Year:", 0, 0, 'L', true);
 $pdf->SetFont('Arial', 'I', 9);
-$pdf->Cell(225, 5, $total_programs_offered, 0, 0, 'L', true);
+$pdf->Cell(225, 5, iconv("UTF-8", "ISO-8859-1", $total_programs_offered), 0, 0, 'L', true);
 $pdf->Ln();
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(152, 5, 'No. of Programs Issued with Government Recognition/Certificate of Program Compliance:', 0, 0, 'L', true);
@@ -676,7 +676,7 @@ if ($resultCheck > 0) {
         $copc_no = $row['copc_no'];
         $in_the_portal = $row['in_the_portal'];
 
-        $pdf->row(array($program_code, strtoUpper($program_name), $gr_no, $copc_no, strtoUpper($in_the_portal)));
+        $pdf->row(array($program_code, strtoUpper(iconv("UTF-8", "ISO-8859-1",$program_name)), $gr_no, $copc_no, strtoUpper($in_the_portal)));
     }
 }
 
@@ -742,7 +742,7 @@ if ($resultCheck > 0) {
         $grand_total_stufap_5th = $row['grand_total_stufap_5th'];
         $grand_total_stufap_6th = $row['grand_total_stufap_6th'];
 
-        $pdf->row(array(strtoUpper($stufap_name), strtoUpper($stufap_type), $total_stufap_1st, $total_stufap_2nd, $total_stufap_3rd, $total_stufap_4th, $total_stufap_5th, $total_stufap_6th));
+        $pdf->row(array(strtoUpper(iconv("UTF-8", "ISO-8859-1", $stufap_name)), strtoUpper($stufap_type), $total_stufap_1st, $total_stufap_2nd, $total_stufap_3rd, $total_stufap_4th, $total_stufap_5th, $total_stufap_6th));
     }
     $sql = "SELECT SUM(total_stufap_1st) AS grand_total_stufap_1st, SUM(total_stufap_2nd) AS grand_total_stufap_2nd, SUM(total_stufap_3rd) AS grand_total_stufap_3rd, SUM(total_stufap_4th) AS grand_total_stufap_4th, SUM(total_stufap_5th) AS grand_total_stufap_5th, SUM(total_stufap_6th) AS grand_total_stufap_6th 
 FROM tbl_hei_other_funded_stufaps 
@@ -918,7 +918,7 @@ ORDER BY program_name ASC";
             //FIRST ROW
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(214, 234, 248);
-            $pdf->Cell(336, 5, strtoUpper($program_name), 1, 0, 'L', true);
+            $pdf->Cell(336, 5, strtoUpper(iconv("UTF-8", "ISO-8859-1", $program_name)), 1, 0, 'L', true);
             $pdf->Ln();
 
             $pdf->SetFont('Arial', 'B', 10);
@@ -1283,7 +1283,7 @@ ORDER BY program_name ASC";
 
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(214, 234, 248);
-            $pdf->Cell(336, 5, strtoUpper($program_name), 1, 0, 'L', true);
+            $pdf->Cell(336, 5, strtoUpper(iconv("UTF-8", "ISO-8859-1", $program_name)), 1, 0, 'L', true);
             $pdf->Ln();
 
             $pdf->SetFillColor(236, 240, 241);
@@ -1414,7 +1414,7 @@ ORDER BY program_name ASC";
             //FIRST ROW
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(255, 255, 255);
-            $pdf->Cell(40, 5, $fhe_category, 1, 0, 'C', true);
+            $pdf->Cell(40, 5, iconv("UTF-8", "ISO-8859-1", $fhe_category), 1, 0, 'C', true);
             $pdf->SetFont('Arial', '', 10);
             $pdf->Cell(37, 5, $total_fhe_1st_male, 1, 0, 'C', true);
             $pdf->Cell(37, 5, $total_fhe_1st_female, 1, 0, 'C', true);
@@ -1900,7 +1900,7 @@ if ($tes == 'yes') {
             //FIRST ROW
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(214, 234, 248);
-            $pdf->Cell(336, 5, $tes_category, 1, 0, 'L', true);
+            $pdf->Cell(336, 5, iconv("UTF-8", "ISO-8859-1", $tes_category), 1, 0, 'L', true);
             $pdf->Ln();
 
             $pdf->SetFont('Arial', 'B', 10);
@@ -2177,7 +2177,7 @@ if ($tes == 'yes') {
             //FIRST ROW
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(255, 255, 255);
-            $pdf->Cell(156, 5, $program_name_tes, 1, 0, 'L', true);
+            $pdf->Cell(156, 5, iconv("UTF-8", "ISO-8859-1", $program_name_tes), 1, 0, 'L', true);
             $pdf->SetFont('Arial', '', 10);
             $pdf->Cell(45, 5, $total_tes_exceeded_mrr_male, 1, 0, 'C', true);
             $pdf->Cell(45, 5, $total_tes_exceeded_mrr_female, 1, 0, 'C', true);
@@ -2542,7 +2542,7 @@ if ($tdp == 'yes') {
             //FIRST ROW
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(214, 234, 248);
-            $pdf->Cell(336, 5, $program_name_tdp, 1, 0, 'L', true);
+            $pdf->Cell(336, 5, iconv("UTF-8", "ISO-8859-1", $program_name_tdp), 1, 0, 'L', true);
             $pdf->Ln();
 
             $pdf->SetFont('Arial', 'B', 10);
@@ -2909,7 +2909,7 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
             //FIRST ROW
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(255, 255, 255);
-            $pdf->Cell(156, 5, $program_name_tdp, 1, 0, 'L', true);
+            $pdf->Cell(156, 5, iconv("UTF-8", "ISO-8859-1", $program_name_tdp), 1, 0, 'L', true);
             $pdf->SetFont('Arial', '', 10);
             $pdf->Cell(45, 5, $total_tdp_graduated_male, 1, 0, 'C', true);
             $pdf->Cell(45, 5, $total_tdp_graduated_female, 1, 0, 'C', true);
@@ -3334,7 +3334,7 @@ if ($_SESSION['ac_year'] == '2022-2023') {
     $pdf->SetFillColor(255, 255, 255);
     $pdf->SetWidths(array(336));
     $pdf->SetAligns(array('L'));
-    $pdf->RowNoBorder(array($question_26));
+    $pdf->RowNoBorder(array(iconv("UTF-8", "ISO-8859-1", $question_26)));
     $pdf->Ln();
     $pdf->SetFont('Arial', 'B', 9);
     //SPACING
@@ -3353,7 +3353,7 @@ if ($_SESSION['ac_year'] == '2022-2023') {
     $pdf->SetFillColor(255, 255, 255);
     $pdf->SetWidths(array(336));
     $pdf->SetAligns(array('L'));
-    $pdf->RowNoBorder(array($question_27));
+    $pdf->RowNoBorder(array(iconv("UTF-8", "ISO-8859-1", $question_27)));
     $pdf->Ln();
     //SPACING
     $pdf->SetFillColor(255, 255, 255);
