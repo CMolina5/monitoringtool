@@ -3239,8 +3239,10 @@ $pdf->Cell(321, 5, $cnt++ . '. Submitted TES liquidation reports within the pres
 $pdf->Cell(15, 5, $question_14, 1, 1, 'C', true);
 }
 
+if($tes == 'yes' || $tdp == 'yes'){
 $pdf->Cell(321, 5, $cnt++ . '. Returned excess or unutilized Administrative Support Cost (ASC) to the UniFAST', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_15, 1, 1, 'C', true);
+}
 
 if($tdp == 'yes'){
 $pdf->Cell(321, 5, $cnt++ . '. Issued individual Notice of Award (NOA) to qualified TDP-TES applicants', 1, 0, 'L', true);
