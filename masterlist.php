@@ -3188,13 +3188,17 @@ $pdf->Write(5, "(if applicable)");
 $pdf->SetTextColor(0, 0, 0);
 $pdf->Ln();
 
+if($fhe == 'yes'){
 $pdf->Cell(321, 5, $cnt++ . '. Submitted reports on time regarding the implementation of FHE, TES, and/or TDP as required', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_7, 1, 1, 'C', true);
 $pdf->Cell(321, 5, $cnt++ . '. Submitted to the UniFAST the list of qualified students and FHE beneficiaries on time', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_8, 1, 1, 'C', true);
 $pdf->Cell(321, 5, $cnt++ . '. Implemented a voluntary opt-out and/or voluntary contribution mechanism for FHE', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_9, 1, 1, 'C', true);
+}
+
 if ($_SESSION['hei_it'] == 'SUC' or $_SESSION['hei_it'] == 'LUC') {
+    if($fhe == 'yes'){
     $oldx = $pdf->GetX();
     $oldy = $pdf->GetY();
     $pdf->Cell(321, 5, $cnt++ . '. Submitted to the UniFAST on time the list of students who voluntarily opted out from FHE', 1, 0, 'L');
@@ -3204,6 +3208,7 @@ if ($_SESSION['hei_it'] == 'SUC' or $_SESSION['hei_it'] == 'LUC') {
     $pdf->Write(5, "(if applicable)");
     $pdf->SetTextColor(0, 0, 0);
     $pdf->Ln();
+    }
 
     $oldx = $pdf->GetX();
     $oldy = $pdf->GetY();
@@ -3215,14 +3220,20 @@ if ($_SESSION['hei_it'] == 'SUC' or $_SESSION['hei_it'] == 'LUC') {
     $pdf->SetTextColor(0, 0, 0);
     $pdf->Ln();
 }
+
+if($tes == 'yes'){
 $pdf->Cell(321, 5, $cnt++ . '. Signed the TES Sharing Agreement between the HEI and TES grantees', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_12, 1, 1, 'C', true);
 $pdf->Cell(321, 5, $cnt++ . '. Disseminated continuously information to qualified TES grantees', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_13, 1, 1, 'C', true);
 $pdf->Cell(321, 5, $cnt++ . '. Submitted TES liquidation reports within the prescribed period', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_14, 1, 1, 'C', true);
+}
+
 $pdf->Cell(321, 5, $cnt++ . '. Returned excess or unutilized Administrative Support Cost (ASC) to the UniFAST', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_15, 1, 1, 'C', true);
+
+if($tes == 'yes'){
 $pdf->Cell(321, 5, $cnt++ . '. Issued individual Notice of Award (NOA) to qualified TDP-TES applicants', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_16, 1, 1, 'C', true);
 $pdf->Cell(321, 5, $cnt++ . '. Submitted to the CHED Regional Office (RO) the signed NOA of qualified TDP-TES grantees and other billing requirements', 1, 0, 'L', true);
@@ -3232,6 +3243,7 @@ $pdf->Cell(15, 5, $question_18, 1, 1, 'C', true);
 $pdf->Cell(321, 5, $cnt++ . '. Submitted TDP-TES liquidation reports within the prescribed period', 1, 0, 'L', true);
 $pdf->Cell(15, 5, $question_19, 1, 1, 'C', true);
 $pdf->Ln();
+}
 
 $pdf->addPage();
 if ($tes == 'yes') {
