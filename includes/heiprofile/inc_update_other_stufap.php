@@ -7,3 +7,5 @@ include_once '../db_connection.php';
     ".$_POST["name"]." = '".$_POST["value"]."' 
     WHERE uid = '".$_POST["pk"]."'";
     $result = mysqli_query($conn, $sql);
+
+    include "./inc_other_stufaps.php";
