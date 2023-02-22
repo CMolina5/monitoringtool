@@ -1724,8 +1724,18 @@ ORDER BY program_name ASC";
     $pdf->SetFillColor(255, 255, 255);
     $pdf->Cell(80.25, 5, $total_fhe_opt_out_1st_male, 1, 0, 'C', true);
     $pdf->Cell(80.25, 5, $total_fhe_opt_out_2nd_male, 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_male, 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_male, 1, 0, 'C', true);
+
+    if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+        $pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_male, 1, 0, 'C', true);
+    }else{
+        $pdf->Cell(80.25, 5, 'N/A', 1, 0, 'C', true);
+    }
+    if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+        $pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_male, 1, 0, 'C', true);
+    }else{
+        $pdf->Cell(80.25, 5, 'N/A', 1, 0, 'C', true);
+    }
+
     $pdf->Ln();
     $pdf->SetFillColor(236, 240, 241);
     $pdf->SetFont('Arial', 'B', 9);
@@ -1734,8 +1744,16 @@ ORDER BY program_name ASC";
     $pdf->SetFillColor(255, 255, 255);
     $pdf->Cell(80.25, 5, $total_fhe_opt_out_1st_female, 1, 0, 'C', true);
     $pdf->Cell(80.25, 5, $total_fhe_opt_out_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_female, 1, 0, 'C', true);
+    if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+        $pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_female, 1, 0, 'C', true);
+    }else{
+        $pdf->Cell(80.25, 5, 'N/A', 1, 0, 'C', true);
+    }
+    if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+        $pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_female, 1, 0, 'C', true);
+    }else{
+        $pdf->Cell(80.25, 5, 'N/A', 1, 0, 'C', true);
+    }
     $pdf->Ln();
 
     $pdf->SetFillColor(236, 240, 241);
@@ -1745,8 +1763,16 @@ ORDER BY program_name ASC";
     $pdf->SetFillColor(255, 255, 255);
     $pdf->Cell(80.25, 5, $total_fhe_opt_out_1st_male + $total_fhe_opt_out_1st_female, 1, 0, 'C', true);
     $pdf->Cell(80.25, 5, $total_fhe_opt_out_2nd_male + $total_fhe_opt_out_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_male + $total_fhe_opt_out_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_male + $total_fhe_opt_out_summer_midyear_female, 1, 0, 'C', true);
+    if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+        $pdf->Cell(80.25, 5, $total_fhe_opt_out_3rd_male + $total_fhe_opt_out_3rd_female, 1, 0, 'C', true);
+    }else{
+        $pdf->Cell(80.25, 5, 'N/A', 1, 0, 'C', true);
+    }
+    if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+        $pdf->Cell(80.25, 5, $total_fhe_opt_out_summer_midyear_male + $total_fhe_opt_out_summer_midyear_female, 1, 0, 'C', true);
+    }else{
+        $pdf->Cell(80.25, 5, 'N/A', 1, 0, 'C', true);
+    }
     $pdf->Ln();
     $pdf->Ln();
 
@@ -1776,8 +1802,16 @@ ORDER BY program_name ASC";
     $pdf->SetFillColor(255, 255, 255);
     $pdf->Cell(80.25, 5, $total_fhe_vol_cont_1st_male, 1, 0, 'C', true);
     $pdf->Cell(80.25, 5, $total_fhe_vol_cont_2nd_male, 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_3rd_male, 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_summer_midyear_male, 1, 0, 'C', true);
+    if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+        $pdf->Cell(80.25, 5, $total_fhe_vol_cont_3rd_male, 1, 0, 'C', true);
+    }else{
+        $pdf->Cell(80.25, 5, 'N/A', 1, 0, 'C', true);
+    }
+    if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+        $pdf->Cell(80.25, 5, $total_fhe_vol_cont_summer_midyear_male, 1, 0, 'C', true);
+    }else{
+        $pdf->Cell(80.25, 5, 'N/A', 1, 0, 'C', true);
+    }
     $pdf->Ln();
 
     $pdf->SetFillColor(236, 240, 241);
@@ -1787,8 +1821,16 @@ ORDER BY program_name ASC";
     $pdf->SetFillColor(255, 255, 255);
     $pdf->Cell(80.25, 5, $total_fhe_vol_cont_1st_female, 1, 0, 'C', true);
     $pdf->Cell(80.25, 5, $total_fhe_vol_cont_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_summer_midyear_female, 1, 0, 'C', true);
+    if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+        $pdf->Cell(80.25, 5, $total_fhe_vol_cont_3rd_female, 1, 0, 'C', true);
+    }else{
+        $pdf->Cell(80.25, 5, 'N/A', 1, 0, 'C', true);
+    }
+    if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+        $pdf->Cell(80.25, 5, $total_fhe_vol_cont_summer_midyear_female, 1, 0, 'C', true);
+    }else{
+        $pdf->Cell(80.25, 5, 'N/A', 1, 0, 'C', true);
+    }
     $pdf->Ln();
 
     $pdf->SetFillColor(236, 240, 241);
@@ -1798,8 +1840,16 @@ ORDER BY program_name ASC";
     $pdf->SetFillColor(255, 255, 255);
     $pdf->Cell(80.25, 5, $total_fhe_vol_cont_1st_male + $total_fhe_vol_cont_1st_female, 1, 0, 'C', true);
     $pdf->Cell(80.25, 5, $total_fhe_vol_cont_2nd_male + $total_fhe_vol_cont_2nd_female, 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_3rd_male + $total_fhe_vol_cont_3rd_female, 1, 0, 'C', true);
-    $pdf->Cell(80.25, 5, $total_fhe_vol_cont_summer_midyear_male + $total_fhe_vol_cont_summer_midyear_female, 1, 0, 'C', true);
+    if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+        $pdf->Cell(80.25, 5, $total_fhe_vol_cont_3rd_male + $total_fhe_vol_cont_3rd_female, 1, 0, 'C', true);
+    }else{
+        $pdf->Cell(80.25, 5, 'N/A', 1, 0, 'C', true);
+    }
+    if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+        $pdf->Cell(80.25, 5, $total_fhe_vol_cont_summer_midyear_male + $total_fhe_vol_cont_summer_midyear_female, 1, 0, 'C', true);
+    }else{
+        $pdf->Cell(80.25, 5, 'N/A', 1, 0, 'C', true);
+    }
     $pdf->Ln();
     $pdf->Ln();
 
@@ -1859,11 +1909,20 @@ ORDER BY program_name ASC";
             $pdf->Cell(20, 5, $total_dropout_1st_female, 1, 0, 'C', true);
             $pdf->Cell(20, 5, $total_dropout_2nd_male, 1, 0, 'C', true);
             $pdf->Cell(20, 5, $total_dropout_2nd_female, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_dropout_3rd_male, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_dropout_3rd_female, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_dropout_sum_mid_male, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_dropout_sum_mid_female, 1, 0, 'C', true);
-
+            if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+                $pdf->Cell(20, 5, $total_dropout_3rd_male, 1, 0, 'C', true);
+                $pdf->Cell(20, 5, $total_dropout_3rd_female, 1, 0, 'C', true);
+            }else{
+                $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+            }
+            if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+                $pdf->Cell(20, 5, $total_dropout_sum_mid_male, 1, 0, 'C', true);
+                $pdf->Cell(20, 5, $total_dropout_sum_mid_female, 1, 0, 'C', true);
+            }else{
+                $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+            }
             //END
             $pdf->Ln();
         }
@@ -1891,11 +1950,20 @@ ORDER BY program_name ASC";
         $pdf->Cell(20, 5, $total_1st_female, 1, 0, 'C', true);
         $pdf->Cell(20, 5, $total_2nd_male, 1, 0, 'C', true);
         $pdf->Cell(20, 5, $total_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
-
+        if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+            $pdf->Cell(20, 5, $total_3rd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_3rd_female, 1, 0, 'C', true);
+        }else{
+            $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+        }
+        if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+            $pdf->Cell(20, 5, $total_sum_mid_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_sum_mid_female, 1, 0, 'C', true);
+        }else{
+            $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+        }
         //END
 
     }
@@ -1951,16 +2019,25 @@ ORDER BY program_name ASC";
             $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
             $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
             $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
-            $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
-
+            if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+                $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
+                $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
+            }else{
+                $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+            }
+            if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+                $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
+                $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
+            }else{
+                $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+            }
             //END
             $pdf->Ln();
         }
         $sql = "SELECT SUM(total_loa_1st_male) AS total_loa_1st_male, SUM(total_loa_1st_female) AS total_loa_1st_female, SUM(total_loa_2nd_male) AS total_loa_2nd_male ,SUM(total_loa_2nd_female) AS total_loa_2nd_female, SUM(total_loa_3rd_male) AS total_loa_3rd_male, SUM(total_loa_3rd_female) AS total_loa_3rd_female, SUM(total_loa_summer_midyear_male) AS total_loa_summer_midyear_male, SUM(total_loa_summer_midyear_female) AS total_loa_summer_midyear_female
-FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE'";
+        FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND program='FHE'";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
         if ($resultCheck > 0) {
@@ -1982,10 +2059,20 @@ FROM tbl_loa WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'
         $pdf->Cell(20, 5, $total_loa_1st_female, 1, 0, 'C', true);
         $pdf->Cell(20, 5, $total_loa_2nd_male, 1, 0, 'C', true);
         $pdf->Cell(20, 5, $total_loa_2nd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
-        $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
+        if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+            $pdf->Cell(20, 5, $total_loa_3rd_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_3rd_female, 1, 0, 'C', true);
+        }else{
+            $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+        }
+        if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+            $pdf->Cell(20, 5, $total_loa_summer_midyear_male, 1, 0, 'C', true);
+            $pdf->Cell(20, 5, $total_loa_summer_midyear_female, 1, 0, 'C', true);
+        }else{
+            $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(20, 5, 'N/A', 1, 0, 'C', true);
+        }
     }
 }
 
