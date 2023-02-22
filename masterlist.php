@@ -426,16 +426,24 @@ $pdf->SetFont('Arial', 'B', 10);
 $pdf->SetFillColor(236, 240, 241);
 $pdf->Cell(84, 5, '1ST TERM', 1, 0, 'C', true);
 $pdf->Cell(84, 5, '2ND TERM', 1, 0, 'C', true);
+if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
 $pdf->Cell(84, 5, '3RD TERM', 1, 0, 'C', true);
+}
+if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
 $pdf->Cell(84, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+}
 $pdf->Ln();
 
 $pdf->SetFont('Arial', '', 10);
 $pdf->SetFillColor(255, 255, 255);
 $pdf->Cell(84, 5, $enrollment_period_1st, 1, 0, 'C', true);
 $pdf->Cell(84, 5, $enrollment_period_2nd, 1, 0, 'C', true);
+if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
 $pdf->Cell(84, 5,  $enrollment_period_3rd, 1, 0, 'C', true);
+}
+if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
 $pdf->Cell(84, 5, $enrollment_period_summer_midyear, 1, 0, 'C', true);
+}
 $pdf->Ln();
 $pdf->Ln();
 //end
@@ -3258,7 +3266,7 @@ $pdf->Ln();
 
 if ($tes == 'yes') {
     $pdf->addPage();
-    
+
     $cnt2 = 1;
 
     $pdf->SetFont('Arial', 'B', 11);
