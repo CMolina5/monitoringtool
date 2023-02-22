@@ -343,6 +343,9 @@ if (isset($_POST['save_hei_profile'])) {
                 'warning'
             )
             </script>";
+
+            header("Location:../../heiprofile.php");
+            exit();
         }
     } 
 }
