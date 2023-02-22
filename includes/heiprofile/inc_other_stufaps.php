@@ -65,13 +65,13 @@ echo "
 </tbody>
 <tfoot>
     <tr>
-        <td class='text-center' colspan='3'>TOTAL</td>
-        <td>$grand_total_stufap_1st</td>
-        <td>$grand_total_stufap_2nd</td>
-        <td>$grand_total_stufap_3rd</td>
-        <td>$grand_total_stufap_4th</td>
-        <td>$grand_total_stufap_5th</td>
-        <td>$grand_total_stufap_6th</td>
+        <td class='text-center font-weight-bold' colspan='3'>TOTAL</td>
+        <td class='text-center font-weight-bold'>$grand_total_stufap_1st</td>
+        <td class='text-center font-weight-bold'>$grand_total_stufap_2nd</td>
+        <td class='text-center font-weight-bold'>$grand_total_stufap_3rd</td>
+        <td class='text-center font-weight-bold'>$grand_total_stufap_4th</td>
+        <td class='text-center font-weight-bold'>$grand_total_stufap_5th</td>
+        <td class='text-center font-weight-bold'>$grand_total_stufap_6th</td>
     </tr>
   </tfoot>
 </table>
