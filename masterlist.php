@@ -1033,21 +1033,42 @@ ORDER BY program_name ASC";
             $pdf->Cell(13.375, 5, $total_fhe_2sem_5yr_male, 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, $total_fhe_2sem_6yr_male, 1, 0, 'C', true);
 
-            //3rd Term Male
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_2yr_male, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_3yr_male, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_4yr_male, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_5yr_male, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_6yr_male, 1, 0, 'C', true);
-
-            //Summer Midyear Term Male
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_1yr_male, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_2yr_male, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_3yr_male, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_4yr_male, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_5yr_male, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_6yr_male, 1, 0, 'C', true);
+            if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+                //3rd Term Male
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_2yr_male, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_3yr_male, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_4yr_male, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_5yr_male, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_6yr_male, 1, 0, 'C', true);
+            }else{
+                //3rd Term Male
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            }
+            
+            if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+                //Summer Midyear Term Male
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_1yr_male, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_2yr_male, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_3yr_male, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_4yr_male, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_5yr_male, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_6yr_male, 1, 0, 'C', true);
+            }else{
+                //Summer Midyear Term Male
+                $pdf->Cell(13.375, 5,'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5,'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5,'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5,'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5,'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5,'N/A', 1, 0, 'C', true);
+            }
+           
             $pdf->Ln();
 
             $pdf->SetFont('Arial', 'B', 9);
@@ -1069,20 +1090,37 @@ ORDER BY program_name ASC";
             $pdf->Cell(13.375, 5, $total_fhe_2sem_5yr_female, 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, $total_fhe_2sem_6yr_female, 1, 0, 'C', true);
 
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_1yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_2yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_3yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_4yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_5yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_6yr_female, 1, 0, 'C', true);
-
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_1yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_2yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_3yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_4yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_5yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_6yr_female, 1, 0, 'C', true);
-
+            if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_1yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_2yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_3yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_4yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_5yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_6yr_female, 1, 0, 'C', true);
+            }else{
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            }
+            if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_1yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_2yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_3yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_4yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_5yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_6yr_female, 1, 0, 'C', true);
+            }else{
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            }
+        
             $pdf->Ln();
 
             $pdf->SetFont('Arial', 'B', 10);
@@ -1104,19 +1142,37 @@ ORDER BY program_name ASC";
             $pdf->Cell(13.375, 5, $total_fhe_2sem_5yr_male + $total_fhe_2sem_5yr_female, 1, 0, 'C', true);
             $pdf->Cell(13.375, 5, $total_fhe_2sem_6yr_male + $total_fhe_2sem_6yr_female, 1, 0, 'C', true);
 
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_1yr_male + $total_fhe_3sem_1yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_2yr_male + $total_fhe_3sem_2yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_3yr_male + $total_fhe_3sem_3yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_4yr_male + $total_fhe_3sem_4yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_5yr_male + $total_fhe_3sem_5yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_3sem_6yr_male + $total_fhe_3sem_6yr_female, 1, 0, 'C', true);
+            if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_1yr_male + $total_fhe_3sem_1yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_2yr_male + $total_fhe_3sem_2yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_3yr_male + $total_fhe_3sem_3yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_4yr_male + $total_fhe_3sem_4yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_5yr_male + $total_fhe_3sem_5yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_3sem_6yr_male + $total_fhe_3sem_6yr_female, 1, 0, 'C', true);
+            }else{
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            }
 
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_1yr_male + $total_fhe_sum_mid_1yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_2yr_male + $total_fhe_sum_mid_2yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_3yr_male + $total_fhe_sum_mid_3yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_4yr_male + $total_fhe_sum_mid_4yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_5yr_male + $total_fhe_sum_mid_5yr_female, 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, $total_fhe_sum_mid_6yr_male + $total_fhe_sum_mid_6yr_female, 1, 0, 'C', true);
+            if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_1yr_male + $total_fhe_sum_mid_1yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_2yr_male + $total_fhe_sum_mid_2yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_3yr_male + $total_fhe_sum_mid_3yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_4yr_male + $total_fhe_sum_mid_4yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_5yr_male + $total_fhe_sum_mid_5yr_female, 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, $total_fhe_sum_mid_6yr_male + $total_fhe_sum_mid_6yr_female, 1, 0, 'C', true);
+            }else{
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+                $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            }
 
             $pdf->Ln();
         }
@@ -1260,21 +1316,39 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
         $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_5yr_male, 1, 0, 'C', true);
         $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_6yr_male, 1, 0, 'C', true);
 
-        //3rd Term Male
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_male, 1, 0, 'C', true);
+        if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+            //3rd Term Male
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_male, 1, 0, 'C', true);
+        }else{
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+        }
+        if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+            //Summer Midyear Term Male
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_male, 1, 0, 'C', true);
+        }else{
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+        }
 
-        //Summer Midyear Term Male
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_male, 1, 0, 'C', true);
         $pdf->Ln();
 
         $pdf->SetFont('Arial', 'B', 9);
@@ -1295,19 +1369,31 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
         $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_5yr_female, 1, 0, 'C', true);
         $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_6yr_female, 1, 0, 'C', true);
 
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_female, 1, 0, 'C', true);
-
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_2yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_3yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_4yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_5yr_female, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_female, 1, 0, 'C', true);
+        if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_female, 1, 0, 'C', true);
+        }else{
+            
+        }
+        if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_2yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_3yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_4yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_5yr_female, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_female, 1, 0, 'C', true);
+        }else{
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+        }
 
         $pdf->Ln();
         //Grand Total
@@ -1328,20 +1414,37 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]'";
         $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_5yr_female + $grand_total_fhe_2sem_5yr_male, 1, 0, 'C', true);
         $pdf->Cell(13.375, 5, $grand_total_fhe_2sem_6yr_female + $grand_total_fhe_2sem_6yr_male, 1, 0, 'C', true);
 
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_1yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_2yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_3yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_4yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
-
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_female + $grand_total_fhe_sum_mid_1yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_2yr_female + $grand_total_fhe_sum_mid_2yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_3yr_female + $grand_total_fhe_sum_mid_3yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_4yr_female + $grand_total_fhe_sum_mid_4yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_5yr_female + $grand_total_fhe_sum_mid_5yr_male, 1, 0, 'C', true);
-        $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_female + $grand_total_fhe_sum_mid_6yr_male, 1, 0, 'C', true);
-
+        if ($ac_calendar == 'Trimester' || $ac_calendar == 'Trimester with Summer') {
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_1yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_2yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_3yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_4yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_5yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_3sem_6yr_female + $grand_total_fhe_3sem_1yr_male, 1, 0, 'C', true);
+    
+        }else{
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+        }
+        if($ac_calendar == 'Semester with Summer' || $ac_calendar == 'Trimester with Summer'){
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_1yr_female + $grand_total_fhe_sum_mid_1yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_2yr_female + $grand_total_fhe_sum_mid_2yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_3yr_female + $grand_total_fhe_sum_mid_3yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_4yr_female + $grand_total_fhe_sum_mid_4yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_5yr_female + $grand_total_fhe_sum_mid_5yr_male, 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, $grand_total_fhe_sum_mid_6yr_female + $grand_total_fhe_sum_mid_6yr_male, 1, 0, 'C', true);
+        }else{
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, 'N/A', 1, 0, 'C', true);
+        }
         $pdf->Ln();
 
         //END
