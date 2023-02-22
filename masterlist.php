@@ -118,6 +118,11 @@ if ($fhe == 'yes' and $tes == 'yes' and $tdp == 'yes') {
     $tes1 = 'Tertiary Education Subsidy';
     $tdp1 = 'Tulong Dunong Program';
     $pdf->Cell(281, 5, $tdp1, 0, 0, 'L', true);
+} else if ($fhe == 'no' and $tes == 'yes' and $tdp == 'yes') {
+    $fhe1 = 'Free Higher Education';
+    $tes1 = 'Tertiary Education Subsidy';
+    $tdp1 = 'Tulong Dunong Program';
+    $pdf->Cell(281, 5, $tes1 . " ," . $tdp1, 0, 0, 'L', true);
 }
 $pdf->Ln();
 
