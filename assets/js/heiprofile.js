@@ -186,7 +186,7 @@ $(document).ready(function () {
                             return 'This field is required';
                         }
                     },
-                    success: function(response, newValue) {
+                    success: function() {
                         $('#tbl_other_stufaps').DataTable({
                             "order": [[1, "desc"]],
                             orderCellsTop: true,
