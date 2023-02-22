@@ -3371,7 +3371,7 @@ if ($_SESSION['ac_year'] == '2022-2023') {
     $pdf->SetFillColor(255, 255, 255);
     $pdf->SetWidths(array(336));
     $pdf->SetAligns(array('L'));
-    $pdf->RowNoBorder(array($question_28));
+    $pdf->RowNoBorder(array(iconv("UTF-8", "ISO-8859-1", $question_28)));
 }
 
 //end of data rows
