@@ -2847,6 +2847,57 @@ if ($tdp == 'yes') {
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
+            //Header
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(236, 240, 241);
+            $pdf->SetTextColor(0, 0, 0);
+
+            $pdf->Cell(336, 5, 'TOTAL TDP GRANTEES', 1, 1, 'C', true);
+
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->SetFillColor(236, 240, 241);
+            $pdf->SetTextColor(0, 0, 0);
+
+            $pdf->Cell(15, 10, 'SEX', 1, 0, 'C', true);
+            $pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
+            $pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
+            $pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
+            $pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
+
+            $pdf->Ln();
+            $pdf->SetFont('Arial', 'B', 10);
+            $pdf->Cell(15, 0, '', 0, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+
+
+            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+
+            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+
+
+            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
+            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
+            $pdf->Ln();
+
         while ($row = mysqli_fetch_assoc($result)) {
             $uid = $row['uid'];
             $ac_year = $row['ac_year'];
@@ -2907,57 +2958,6 @@ if ($tdp == 'yes') {
             $total_tdp_sum_mid_4yr_female = $row['total_tdp_sum_mid_4yr_female'];
             $total_tdp_sum_mid_5yr_female = $row['total_tdp_sum_mid_5yr_female'];
             $total_tdp_sum_mid_6yr_female = $row['total_tdp_sum_mid_6yr_female'];
-
-            //Header
-            $pdf->SetFont('Arial', 'B', 10);
-            $pdf->SetFillColor(236, 240, 241);
-            $pdf->SetTextColor(0, 0, 0);
-
-            $pdf->Cell(336, 5, 'TOTAL TDP GRANTEES', 1, 1, 'C', true);
-
-            $pdf->SetFont('Arial', 'B', 10);
-            $pdf->SetFillColor(236, 240, 241);
-            $pdf->SetTextColor(0, 0, 0);
-
-            $pdf->Cell(15, 10, 'SEX', 1, 0, 'C', true);
-            $pdf->Cell(80.25, 5, '1ST TERM', 1, 0, 'C', true);
-            $pdf->Cell(80.25, 5, '2ND TERM', 1, 0, 'C', true);
-            $pdf->Cell(80.25, 5, '3RD TERM', 1, 0, 'C', true);
-            $pdf->Cell(80.25, 5, 'SUMMER/MIDYEAR', 1, 0, 'C', true);
-
-            $pdf->Ln();
-            $pdf->SetFont('Arial', 'B', 10);
-            $pdf->Cell(15, 0, '', 0, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-
-
-            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-
-            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-
-
-            $pdf->Cell(13.375, 5, '1ST', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '2ND', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '3RD', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '4TH', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '5TH', 1, 0, 'C', true);
-            $pdf->Cell(13.375, 5, '6TH', 1, 0, 'C', true);
-            $pdf->Ln();
 
             //FIRST ROW
             $pdf->SetFont('Arial', 'B', 10);
