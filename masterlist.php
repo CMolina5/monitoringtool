@@ -3399,6 +3399,23 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         $pdf->addPage();
+        //No. of TDP Grantees Graduated and Exceeded the maximum MRR
+        //DEGREE PROGRAM
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->Cell(156, 10, 'DEGREE PROGRAM', 1, 0, 'C', true);
+        $pdf->Cell(90, 5, 'GRADUATED GRANTEES', 1, 0, 'C', true);
+        $pdf->Cell(90, 5, 'NO. OF TDP GRANTEES WHO EXCEEDED THE MRR', 1, 0, 'C', true);
+        $pdf->Ln();
+        $pdf->SetFont('Arial', 'B', 10);
+        $pdf->SetFillColor(236, 240, 241);
+        $pdf->Cell(156, 0, '', 0, 0, 'C', true);
+        $pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
+        $pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
+        $pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
+        //END
+        $pdf->Ln();
         while ($row = mysqli_fetch_assoc($result)) {
             $uid = $row['uid'];
             $ac_year = $row['ac_year'];
@@ -3407,24 +3424,6 @@ WHERE hei_uii='$_SESSION[hei_uii]' AND ac_year='$_SESSION[ac_year]' AND (total_t
             $total_tdp_exceeded_mrr_female = $row['total_tdp_exceeded_mrr_female'];
             $total_tdp_graduated_male = $row['total_tdp_graduated_male'];
             $total_tdp_graduated_female = $row['total_tdp_graduated_female'];
-
-            //No. of TDP Grantees Graduated and Exceeded the maximum MRR
-            //DEGREE PROGRAM
-            $pdf->SetFont('Arial', 'B', 10);
-            $pdf->SetFillColor(236, 240, 241);
-            $pdf->Cell(156, 10, 'DEGREE PROGRAM', 1, 0, 'C', true);
-            $pdf->Cell(90, 5, 'GRADUATED GRANTEES', 1, 0, 'C', true);
-            $pdf->Cell(90, 5, 'NO. OF TDP GRANTEES WHO EXCEEDED THE MRR', 1, 0, 'C', true);
-            $pdf->Ln();
-            $pdf->SetFont('Arial', 'B', 10);
-            $pdf->SetFillColor(236, 240, 241);
-            $pdf->Cell(156, 0, '', 0, 0, 'C', true);
-            $pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
-            $pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
-            $pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
-            $pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
-            //END
-            $pdf->Ln();
 
             //FIRST ROW
             $pdf->SetFont('Arial', 'B', 10);
