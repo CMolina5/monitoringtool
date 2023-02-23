@@ -2535,16 +2535,8 @@ if ($tes == 'yes') {
     $resultCheck = mysqli_num_rows($result);
     if ($resultCheck > 0) {
         $pdf->addPage();
-        while ($row = mysqli_fetch_assoc($result)) {
-            $uid = $row['uid'];
-            $ac_year = $row['ac_year'];
-            $program_name_tes = $row['program_name'];
-            $total_tes_exceeded_mrr_male = $row['total_tes_exceeded_mrr_male'];
-            $total_tes_exceeded_mrr_female = $row['total_tes_exceeded_mrr_female'];
-            $total_tes_est_grad_male = $row['total_tes_est_grad_male'];
-            $total_tes_est_grad_female = $row['total_tes_est_grad_female'];
 
-            //Header
+          //Header
             //DEGREE PROGRAM
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(236, 240, 241);
@@ -2560,6 +2552,15 @@ if ($tes == 'yes') {
             $pdf->Cell(45, 5, 'MALE', 1, 0, 'C', true);
             $pdf->Cell(45, 5, 'FEMALE', 1, 0, 'C', true);
             $pdf->Ln();
+        while ($row = mysqli_fetch_assoc($result)) {
+            $uid = $row['uid'];
+            $ac_year = $row['ac_year'];
+            $program_name_tes = $row['program_name'];
+            $total_tes_exceeded_mrr_male = $row['total_tes_exceeded_mrr_male'];
+            $total_tes_exceeded_mrr_female = $row['total_tes_exceeded_mrr_female'];
+            $total_tes_est_grad_male = $row['total_tes_est_grad_male'];
+            $total_tes_est_grad_female = $row['total_tes_est_grad_female'];
+          
             //FIRST ROW
             $pdf->SetFont('Arial', 'B', 10);
             $pdf->SetFillColor(255, 255, 255);
