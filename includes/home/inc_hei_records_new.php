@@ -35,10 +35,11 @@ $resultCheck= mysqli_num_rows($result);
                 $programs_covered= "TDP";
             }
 
-            echo'
-            <div class="card mt-2" style>
+          
+        echo'
+            <div class="card mt-2">
             <div class="card-body">
-                <div class="form-row" style="font-size: 15px;">
+                <div class="form-row">
                     <div class="col-9 col-sm-11 col-md-11 col-lg-11">';
                     if($status=='For Review of Regional Coordinator'){
                         echo'<span class="badge badge-warning">For Review</span>';
@@ -51,69 +52,43 @@ $resultCheck= mysqli_num_rows($result);
                     }
                     echo'
                     </div>
-                    <div class="col-3 col-sm-1 col-md-1 col-lg-1 col-xl-1 text-right">';
-                    if($status=='Saved' || $status=='ongoing'){
-                        echo'<button style="font-size: 15px;" class="btn btn-outline btn-table-margin edit_record"  type="button" title="Edit Form Structure" name="edit" value="edit" id="'.$uid.'"><i class="far fa-edit"></i></button>';
-                    }
-                    echo'
+                <div class="form-row">
+                    <div class="col-xl-5 text-center">
+                        <h1 class="text-center text-info mt-4">'.$ac_year.'</h1>
                     </div>
-                </div>
-                <div class="form-row" style="height: 99px;">
-                    <div class="col">
-                        <h3 class="text-primary">'.$ac_year.'</h3>
-                        <h6 class="mb-2">'.$ac_calendar.'</h6>
-                        <p>'.$programs_covered.'</p>
+                    <div class="col-xl-5 p-3 border rounded" style="background-color: #f5f5f5;">
+                        <div class="form-row">
+                            <div class="col-xl-9">
+                                <h6 class="mt-2">'.$ac_calendar.'</h6>
+                            </div>
+                            <div class="col">
+                                <h6 class="text-right mb-2"><button class="btn btn-outline-secondary btn-sm text-center border rounded edit_record" id="'.$uid.'" type="button" style="font-size: 20px;">edit</button></h6>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <p>'.$programs_covered.'</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="form-row" style="height: 31px;">
-                    <div class="col">';
+
+                    <div class="col text-center">';
                     if($status=='For Review of Regional Coordinator' OR $status=='Approved' OR $status=='Saved'){
                         echo"<p class='text-right'><button class='btn btn-primary btn-table-margin view_record_final' type='button' title='View Form' name='view_form' value='view_form' id='$uid'>VIEW</button><p>";
                     }else{
                         echo"<p class='text-right'><button class='btn btn-primary btn-table-margin view_record' type='button' title='Edit Form' name='edit_form' value='edit_form' id='$uid'>FILL-UP</button><p>";
                     }
+                    // <i class="fas fa-pencil-alt mt-4" style="font-size: 50px;" title="Fill-up Form"></i>
                     echo'
                     </div>
                 </div>
-            </div>
-        </div>  
-        <div class="card mt-2">
-        <div class="card-body">
-            <div class="form-row">
-                <div class="col-9 col-sm-11 col-md-11 col-lg-11"><span class="badge badge-success" style="font-size: 16px;">ONGOING</span>
-                    <p></p>
-                </div>
-                <div class="col-3 col-sm-1 col-md-1 col-lg-1 col-xl-1 text-right"><a class="text-muted" href="#"></a></div>
-            </div>
-            <div class="form-row">
-                <div class="col-xl-5 text-center">
-                    <h1 class="text-center text-info mt-4">2020-2021</h1>
-                </div>
-                <div class="col-xl-5 p-3 border rounded" style="background-color: #f5f5f5;">
-                    <div class="form-row">
-                        <div class="col-xl-9">
-                            <h6 class="mt-2">Trimester with Semester</h6>
-                        </div>
-                        <div class="col">
-                            <h6 class="text-right mb-2"><button class="btn btn-outline-secondary btn-sm text-center border rounded" id="btn-new-form" type="button" style="font-size: 20p;">edit</button></h6>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col">
-                            <p>FHE, TES, TDP</p>
-                        </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p class="text-right"></p>
                     </div>
                 </div>
-                <div class="col text-center"><i class="fas fa-pencil-alt mt-4" style="font-size: 50px;" title="Fill-up Form"></i></div>
             </div>
-            <div class="form-row">
-                <div class="col">
-                    <p class="text-right"></p>
-                </div>
-            </div>
-        </div>
-    </div>  
-            ';
+        </div>';
         }
     }
 
