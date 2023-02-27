@@ -3994,36 +3994,36 @@ $pdf->Ln();
 $pdf->Cell(336, 5, 'Prepared by:', 0, 1, 'L', true);
 $pdf->Ln();
 $pdf->Ln();
-// if($fhe=='yes'){
+if($fhe=='yes'){
 $pdf->Cell(63.33, 5, strtoUpper($_POST['fhe_focal_name']), 0, 0, 'L', true);
-// }
-// if($tes=='yes'){
+}
+if($tes=='yes'){
 $pdf->Cell(63.33, 5, strtoUpper($_POST['tes_focal_name']), 0, 0, 'L', true);
-// }
-// if($tdp=='yes'){
+}
+if($tdp=='yes'){
 $pdf->Cell(63.33, 5, strtoUpper($_POST['tdp_focal_name']), 0, 0, 'L', true);
-// }
+}
 $pdf->Ln();
 $pdf->SetFont('Arial', '', 9);
-// if($fhe=='yes'){
+if($fhe=='yes'){
 $pdf->Cell(63.33, 5, 'Personnel In-charge of FHE', 0, 0, 'L', true);
-// }
-// if($tes=='yes'){
+}
+if($tes=='yes'){
 $pdf->Cell(63.33, 5, 'TES Focal Person', 0, 0, 'L', true);
-// }
-// if($tdp=='yes'){
+}
+if($tdp=='yes'){
 $pdf->Cell(63.33, 5, 'Personnel In-charge of TDP', 0, 0, 'L', true);
-// }
+}
 $pdf->Ln();
-// if($fhe=='yes'){
+if($fhe=='yes'){
 $pdf->Cell(63.33, 5, 'Date:', 0, 0, 'L', true);
-// }
-// if($tes=='yes'){
+}
+if($tes=='yes'){
 $pdf->Cell(63.33, 5, 'Date:', 0, 0, 'L', true);
-// }
-// if($tdp=='yes'){
+}
+if($tdp=='yes'){
 $pdf->Cell(63.33, 5, 'Date:', 0, 0, 'L', true);
-// }
+}
 $pdf->Ln();
 $pdf->Ln();
 $pdf->SetFont('Arial', 'B', 10);
