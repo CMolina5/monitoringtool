@@ -35,7 +35,6 @@ $resultCheck= mysqli_num_rows($result);
                 $programs_covered= "TDP";
             }
 
-
             echo'
             <div class="card mt-2">
                 <div class="card-body">
@@ -89,10 +88,10 @@ $resultCheck= mysqli_num_rows($result);
 
                         if($status=='For Review of Regional Coordinator' OR $status=='Approved' OR $status=='Saved'){
                             echo'
-                            <button class="btn btn-primary view_record_final" type="button" style="font-size: 20px;" title="View Form" name="view_form" value="view_form" id="$uid">view form</button>';
+                            <button class="btn btn-primary view_record_final" type="button" style="font-size: 20px;" title="View Form" name="view_form" value="view_form" id="'.$uid.'">view form</button>';
                         }else{
                             echo'
-                            <button class="btn btn-primary view_record" type="button" style="font-size: 20px;" type="button" title="Edit Form" name="edit_form" value="edit_form" id="$uid">fill-up form</button>';
+                            <button class="btn btn-primary view_record" type="button" style="font-size: 20px;" type="button" title="Edit Form" name="edit_form" value="edit_form" id="'.$uid.'">fill-up form</button>';
                         }
                        
                         echo'
