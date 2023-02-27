@@ -35,50 +35,6 @@ $resultCheck= mysqli_num_rows($result);
                 $programs_covered= "TDP";
             }
 
-            echo'
-            <div class="card mt-2" style>
-            <div class="card-body">
-                <div class="form-row" style="font-size: 15px;">
-                    <div class="col-9 col-sm-11 col-md-11 col-lg-11">';
-                    if($status=='For Review of Regional Coordinator'){
-                        echo'<span class="badge badge-warning">For Review</span>';
-                    }else if($status=='Approved'){
-                        echo'<span class="badge badge-success">Approved</span>';
-                    }else if($status=='Saved'){
-                        echo'<span class="badge badge-info">Saved</span>';
-                    }else{
-                        echo'<span class="badge badge-secondary">Ongoing</span>';
-                    }
-                    echo'
-                    </div>
-                    <div class="col-3 col-sm-1 col-md-1 col-lg-1 col-xl-1 text-right">';
-                    if($status=='Saved' || $status=='ongoing'){
-                        echo'<button style="font-size: 15px;" class="btn btn-outline btn-table-margin edit_record"  type="button" title="Edit Form Structure" name="edit" value="edit" id="'.$uid.'"><i class="far fa-edit"></i></button>';
-                    }
-                    echo'
-                    </div>
-                </div>
-                <div class="form-row" style="height: 99px;">
-                    <div class="col">
-                        <h3 class="text-primary">'.$ac_year.'</h3>
-                        <h6 class="mb-2">'.$ac_calendar.'</h6>
-                        <p>'.$programs_covered.'</p>
-                    </div>
-                </div>
-                <div class="form-row" style="height: 31px;">
-                    <div class="col">';
-                    if($status=='For Review of Regional Coordinator' OR $status=='Approved' OR $status=='Saved'){
-                        echo"<p class='text-right'><button class='btn btn-primary btn-table-margin view_record_final' type='button' title='View Form' name='view_form' value='view_form' id='$uid'>VIEW</button><p>";
-                    }else{
-                        echo"<p class='text-right'><button class='btn btn-primary btn-table-margin view_record' type='button' title='Edit Form' name='edit_form' value='edit_form' id='$uid'>FILL-UP</button><p>";
-                    }
-                    echo'
-                    </div>
-                </div>
-            </div>
-        </div>    
-            ';
-
 
             echo'
             <div class="card mt-2">
