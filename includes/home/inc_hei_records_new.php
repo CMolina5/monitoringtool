@@ -35,7 +35,6 @@ $resultCheck= mysqli_num_rows($result);
                 $programs_covered= "TDP";
             }
 
-           
 
             echo'
             <div class="card mt-2">
@@ -70,7 +69,7 @@ $resultCheck= mysqli_num_rows($result);
                                 if($status=='Saved' || $status=='ongoing'){
                                     echo'
                                     <h6 class="text-right mb-2">
-                                    <button class="btn btn-outline-secondary btn-sm text-center border rounded" id="btn-new-form" type="button"><i class="fas fa-cogs"></i></button>
+                                    <button class="btn btn-outline-secondary btn-sm text-center border rounded edit_record"  type="button" title="Edit Form Structure" name="edit" value="edit" id="'.$uid.'"><i class="fas fa-cogs"></i></button>
                                     </h6>';
                                 }
 
