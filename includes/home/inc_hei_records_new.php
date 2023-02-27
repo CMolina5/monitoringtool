@@ -35,60 +35,72 @@ $resultCheck= mysqli_num_rows($result);
                 $programs_covered= "TDP";
             }
 
-          
-        echo'
-            <div class="card mt-2">
-            <div class="card-body">
-                <div class="form-row">
-                    <div class="col-9 col-sm-11 col-md-11 col-lg-11">';
-                    if($status=='For Review of Regional Coordinator'){
-                        echo'<span class="badge badge-warning">For Review</span>';
-                    }else if($status=='Approved'){
-                        echo'<span class="badge badge-success">Approved</span>';
-                    }else if($status=='Saved'){
-                        echo'<span class="badge badge-info">Saved</span>';
-                    }else{
-                        echo'<span class="badge badge-secondary">Ongoing</span>';
-                    }
-                    echo'
-                    </div>
-                <div class="form-row">
-                    <div class="col-xl-5 text-center">
-                        <h1 class="text-center text-info mt-4">'.$ac_year.'</h1>
-                    </div>
-                    <div class="col-xl-5 p-3 border rounded" style="background-color: #f5f5f5;">
-                        <div class="form-row">
-                            <div class="col-xl-9">
-                                <h6 class="mt-2">'.$ac_calendar.'</h6>
-                            </div>
-                            <div class="col">
-                                <h6 class="text-right mb-2"><button class="btn btn-outline-secondary btn-sm text-center border rounded edit_record" id="'.$uid.'" type="button" style="font-size: 20px;">edit</button></h6>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col">
-                                <p>'.$programs_covered.'</p>
-                            </div>
-                        </div>
-                    </div>
+           
 
-                    <div class="col text-center">';
-                    if($status=='For Review of Regional Coordinator' OR $status=='Approved' OR $status=='Saved'){
-                        echo"<p class='text-right'><button class='btn btn-primary btn-table-margin view_record_final' type='button' title='View Form' name='view_form' value='view_form' id='$uid'>VIEW</button><p>";
-                    }else{
-                        echo"<p class='text-right'><button class='btn btn-primary btn-table-margin view_record' type='button' title='Edit Form' name='edit_form' value='edit_form' id='$uid'>FILL-UP</button><p>";
-                    }
-                    // <i class="fas fa-pencil-alt mt-4" style="font-size: 50px;" title="Fill-up Form"></i>
+            echo'
+            <div class="card mt-2">
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="col-9 col-sm-11 col-md-11 col-lg-12">';
+
+                        if($status=='For Review of Regional Coordinator'){
+                            echo'<span class="badge badge-warning" style="font-size: 15px;">For Review</span>';
+                        }else if($status=='Approved'){
+                            echo'<span class="badge badge-success" style="font-size: 15px;">Approved</span>';
+                        }else if($status=='Saved'){
+                            echo'<span class="badge badge-info" style="font-size: 15px;">Saved</span>';
+                        }else{
+                            echo'<span class="badge badge-secondary" style="font-size: 15px;">Ongoing</span>';
+                        }
+
+                        echo'
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-5 col-lg-4 col-xl-5 text-center">
+                            <h1 class="text-center text-info mt-4">'.$ac_year.'</h1>
+                        </div>
+                        <div class="col-md-7 col-lg-8 col-xl-7 p-3 border rounded" style="background-color: #f5f5f5;">
+                            <div class="form-row">
+                                <div class="col-sm-10 col-md-10 col-lg-10 col-xl-9">
+                                    <h6 class="mt-2">'.$ac_calendar.'</h6>
+                                </div>
+                                <div class="col-sm-2 col-xl-3">';
+
+                                if($status=='Saved' || $status=='ongoing'){
+                                    echo'
+                                    <h6 class="text-right mb-2">
+                                    <button class="btn btn-outline-secondary btn-sm text-center border rounded" id="btn-new-form" type="button"><i class="fas fa-cogs"></i></button>
+                                    </h6>';
+                                }
+
+                                echo'</div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <p>'.$programs_covered.'</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
+
                     echo'
+                    <div class="form-row mt-3">
+                        <div class="col text-center">';
+
+                        if($status=='For Review of Regional Coordinator' OR $status=='Approved' OR $status=='Saved'){
+                            echo'
+                        <button class="btn btn-primary view_record" type="button" style="font-size: 20px;" type="button" title="Edit Form" name="edit_form" value="edit_form" id="$uid">fill-up form</button>';
+                        }else{
+                            echo'
+                            <button class="btn btn-primary view_record_final" type="button" style="font-size: 20px;" title="View Form" name="view_form" value="view_form" id="$uid">view form</button>';
+                        }
+
+                        echo'
+                        </div>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="col">
-                        <p class="text-right"></p>
-                    </div>
-                </div>
-            </div>
-        </div>';
+            </div>';
         }
     }
 
