@@ -76,7 +76,43 @@ $resultCheck= mysqli_num_rows($result);
                     </div>
                 </div>
             </div>
-        </div>    
+        </div>  
+        <div class="card mt-2">
+        <div class="card-body">
+            <div class="form-row">
+                <div class="col-9 col-sm-11 col-md-11 col-lg-11"><span class="badge badge-success" style="font-size: 16px;">ONGOING</span>
+                    <p></p>
+                </div>
+                <div class="col-3 col-sm-1 col-md-1 col-lg-1 col-xl-1 text-right"><a class="text-muted" href="#"></a></div>
+            </div>
+            <div class="form-row">
+                <div class="col-xl-5 text-center">
+                    <h1 class="text-center text-info mt-4">2020-2021</h1>
+                </div>
+                <div class="col-xl-5 p-3 border rounded" style="background-color: #f5f5f5;">
+                    <div class="form-row">
+                        <div class="col-xl-9">
+                            <h6 class="mt-2">Trimester with Semester</h6>
+                        </div>
+                        <div class="col">
+                            <h6 class="text-right mb-2"><button class="btn btn-outline-secondary btn-sm text-center border rounded" id="btn-new-form" type="button" style="font-size: 20p;">edit</button></h6>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <p>FHE, TES, TDP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col text-center"><i class="fas fa-pencil-alt mt-4" style="font-size: 50px;" title="Fill-up Form"></i></div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <p class="text-right"></p>
+                </div>
+            </div>
+        </div>
+    </div>  
             ';
         }
     }
